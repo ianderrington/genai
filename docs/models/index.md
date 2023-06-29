@@ -42,6 +42,28 @@ Below we provide references to concepts that extend beyond transformer-based mod
 - ‼️ [A cookbook of self-supervised Learning](https://arxiv.org/pdf/2304.12210.pdf) 
 
 ## Leaderboards and comparisons
+
 - [Hugging Face LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) An essential chart for documenting the model peformance across multiple models.
 - [lmsys.org leader board](lmsys.org/blog/2023-05-10-leaderboard)
 - [Foundation model Providers EU AI compliance](https://crfm.stanford.edu/2023/06/15/eu-ai-act.html)
+
+
+## TO SORT
+
+  
+  * Token Embedding: Mapping to a vector space. 
+  * Positional Embedding: Learned or hard-coded mapping to position of sequence to a vector space
+  * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information. 
+  * Bi-directional / unmasked
+  * Unidirectional / masked self attetion
+  * Cross attention applies attention to the primary sequence and treates the second token sequence the context. 
+  * Multi-head attention. Multiple attention heads in parallel.
+  * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`. 
+  * Unembedding: Learns to convert vector intot he vocuabulary elements. 
+  
+  **Architectures:**
+
+  * Encoder-Decoder (EDT), is also sequence-to-sequence. 
+  * Encoder-only: (BERT)
+  * Decoder-only (GPT) Next-token 
+  * Multi-domain decoder-only transformer (Gato)
