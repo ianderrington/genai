@@ -43,5 +43,5 @@ Below we provide references to concepts that extend beyond transformer-based mod
 
 ## Leaderboards and comparisons
 - [Hugging Face LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) An essential chart for documenting the model peformance across multiple models.
-- [lmsys.org leader board](lmsys.org/blog/2023-05-10-leaderboard)
+- [lmsys.org leader board](https://lmsys.org/blog/2023-06-22-leaderboard/)
 - [Foundation model Providers EU AI compliance](https://crfm.stanford.edu/2023/06/15/eu-ai-act.html)
