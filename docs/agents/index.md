@@ -37,8 +37,8 @@ The ability to call programs, APIs, software, cursors, robots, or other non-lang
 ### Security Features
 
 - ‼️[Semantic Kernel]([https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb](https://github.com/microsoft/semantic-kernel/tree/main))
-- ‼️[Rebuff](https://github.com/woop/rebuff) a prompt injection detection service.
-- ‼️[Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts.
+- ‼️ [Rebuff](https://github.com/woop/rebuff) a prompt injection detection service.
+- ‼️ [Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts.
 - [Native function calls](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_call_functions_with_chat_models.ipynb) and [json support with OpenAI](https://yonom.substack.com/p/native-json-output-from-gpt-4) 
 - [AutoLabel](https://github.com/refuel-ai/autolabel) A nice pythonic system for generating semantic labels repeatedly for use in downstream datasets
 
