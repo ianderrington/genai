@@ -5,7 +5,7 @@ nav:
     - models
     - training
     - agents
-    - engineering.md
-    - open_source_frameworks.md 
-    - ecosystem.md
-    - miscellaneous.md
+    - engineering
+    - open_source_frameworks
+    - ecosystem
+    - miscellaneous

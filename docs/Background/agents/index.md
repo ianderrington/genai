@@ -138,4 +138,6 @@ https://arxiv.org/pdf/2306.08640.pdf
 ## Agentic
 - [smolai](https://github.com/ThomasEwing04/SMOL_AI) https://www.youtube.com/watch?v=zsxyqz6SYp8&t=1s
 
+## Chatbots
 
+- [LAION-AI](https://github.com/LAION-AI/Open-Assistant) An attempt an open-version of ChatGPT
