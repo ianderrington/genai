@@ -13,9 +13,6 @@ Books
 Arxiv
 StackExchange
 
-
-- [Llama Index Data framework](https://github.com/jerryjliu/llama_index)
-
 - [unarXive 2022: All arXiv Publications Pre-Processed for NLP](https://arxiv.org/pdf/2303.14957.pdf)
 
 - [Redpajama](https://www.together.xyz/blog/redpajama)
