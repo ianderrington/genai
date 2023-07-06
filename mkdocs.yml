@@ -62,9 +62,9 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  # favicon: assets/favicon.png
+  favicon: assets/genai_logo_edited.svg
   #icon:
-    #logo: 
+    # logo: genai_logo_edited
 
 # Plugins
 plugins:

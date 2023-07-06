@@ -1,11 +1,10 @@
 nav:
     - overview
-    - datasets.md
-    - representations.md
+    - data
     - models
     - training
     - agents
     - engineering
-    - open_source_frameworks
+    - open_source_frameworks.md
     - ecosystem
     - miscellaneous
