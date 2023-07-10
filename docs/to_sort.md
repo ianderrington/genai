@@ -11,3 +11,12 @@ build your own data https://arxiv.org/abs/2306.13651v1?utm_source=tldrai self su
 
 https://styledrop.github.io/
 https://www.youtube.com/watch?v=Ff4fRgnuFgQ&t=9s
+
+https://github.com/langchain-ai/streamlit-agent
+https://github.com/smol-ai/developer
+https://github.com/vinayprabhu/X-is-all-you-need
+https://github.com/ThomasEwing04/SMOL_AI
+https://github.com/kyrolabs/awesome-langchain
+https://cameronrwolfe.substack.com/p/teaching-language-models-to-use-tools?r=2bjtip&utm_medium=ios&utm_campaign=post
+
+https://www.quivr.app/chat
