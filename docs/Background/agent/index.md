@@ -12,9 +12,9 @@ Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond 
 * Memory access
 * Tool Access
 * Chains and flows
-* Security Featurs
+* Security Features
 * Output formatting
-* Agent Networks
+* [Systems of Agents](systems.md)
 
 
 
@@ -131,8 +131,7 @@ https://arxiv.org/pdf/2306.08640.pdf
 <img width="1012" alt="image" src="https://github.com/ianderrington/general/assets/76016868/81b88f7e-af2e-424e-9cb8-0e377bc141c0">
 
 
-### Multi-Agentic Systems
-- [Can Language Models Teach Weaker Agents? Teacher Explanations Improve Students via Theory of Mind](https://arxiv.org/pdf/2306.09299.pdf) Uses Theory fo Mind to try to improve student performance. [Github](https://github.com/swarnaHub/ExplanationIntervention)
+
 
 
 ## Agentic
