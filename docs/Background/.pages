@@ -3,6 +3,6 @@ nav:
     - data
     - models
     - training
-    - agents
+    - agent
     - engineering
     - miscellaneous
