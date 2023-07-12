@@ -14,11 +14,6 @@
 
 - [Pyprompt chatgpt](http://morganlancer.com/en/portfolio/pyprompt_chatgpt)
 
-## Robotics
-
-- [CLAIRIFY](https://ac-rad.github.io/clairify/) Translates English to domain-specific languages like robots. 
-  - https://arxiv.org/abs/2303.14100
-
 - [Motion GPT](https://github.com/openmotionlab/motiongpt)
 
 ## Science and Tech
@@ -26,9 +21,22 @@
 - [Emergent autonomous scientific research](https://arxiv.org/pdf/2304.05332.pdf)
 <img width="658" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656">
 
+
+### Robotics
+
+- [CLAIRIFY](https://ac-rad.github.io/clairify/) Translates English to domain-specific languages like robots. 
+  - https://arxiv.org/abs/2303.14100
+
+
 ### Healthcare
 
 - [Health system-scale language models are all-purpose prediction engines](https://www.nature.com/articles/s41586-023-06160-y) Uses LLM based system to integrate real time clinical workflows with note-writing and electronic ordering. Generally quite-performant and. a great indication of how they could be used to predict things such as readmission rates, and many other applications. 
+
+### Chemistry
+
+- [Grammar-Induced Geometry for Data-Efficient Molecular Property Prediction](https://openreview.net/pdf?id=SGQi3LgFnqj) A quality framework using heirarchichal metagraphs to stitch-together molecular nodes resulting in leaves that are 'actual' molecules. Using graph neural-diffusion, it does amazingly well even with minimal data-sets (100 examples).
+<img width="1052" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/50894091-fdc9-4a8f-9836-90cec4a147d0"> 
+
 
 ### Biology
 
