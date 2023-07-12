@@ -51,11 +51,6 @@ According to {some_reputable_source} ...
 
 ### Automatic
 
-- [Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291) [Github](https://github.com/jieyilong/tree-of-thought-puzzle-solver)
-- ‼️[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601) [Github](https://github.com/ysymyth/tree-of-thought-llm)
-IDEA: Write Tree of Thoughts into Langchain?
-- ‼️[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)
-- \\
 #### Prompt compression
 
 - [Learning to Compress Prompts with Gist Tokens](https://arxiv.org/pdf/2304.08467.pdf). Can enable 26x compression and 40% FLOP reduction and improvements. Trains 'gist tokens' to summarize information. 
