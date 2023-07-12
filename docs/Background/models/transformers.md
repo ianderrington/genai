@@ -1,5 +1,11 @@
 ## Transformers
 
+## Components
+
+TODO: Describe transformers and components
+
+## References and Research
+
 - [Amazing Presentation on Transformers](https://docs.google.com/presentation/d/1ZXFIhYczos679r70Yu8vV9uO6B1J0ztzeDxbnBxD1S0/mobilepresent?fbclid=IwAR18pR_Mf46mkZ1_E3NFOwYY2wVx0aATficgfh_GWZd29c_lWNRa4vK5zy8&slide=id.g31364026ad_3_2)
 
 
@@ -8,12 +14,17 @@
 - [Attention Is All you Need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) Initial paper indicating that attention is very powerful and potential replacement of LLM architectures. 
 - [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473.pdf) First paper indicating the notion of 'attention' sort of mechanism.
 
+### Positional Encoding
+
+This component helps to remove the impilcit position-independence that 'vanilla' attention methods have.  
+
+- [A Gentle Introduction to Positional Encoding in Transformer Models, pt1]( https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/)
 
 
 
 ### Improvements
 
-- [Infinite former](https://arxiv.org/pdf/2109.00301.pdf) <img width="302" alt="image" src="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80"> Uses a representation of input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration [Github](https://github.com/deep-spin/infinite-former)
+
 
 
 ### GPT
@@ -27,14 +38,15 @@ Important discussion revealing the components of Transformers.
 
 ## Improvements and Optimizations
 
-### To improve length:
+### Focusing on context-windows
 
 - [Scaling Transformer to 1M tokens and beyond with RMT](https://arxiv.org/abs/2304.11062) [Github](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. 
 
 - ‼️[MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185.pdf) MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches
 
 - [Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf) Uses inspiration from FFT to create a drop in replacement for Transformer models. Quite complex and maybe overhyped.
-  
+
+- [Infinite former](https://arxiv.org/pdf/2109.00301.pdf) <img width="302" alt="image" src="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80"> Uses a representation of input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration [Github](https://github.com/deep-spin/infinite-former)
 
 ### To reduce compute
 
@@ -46,6 +58,17 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
 - [Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)
 <img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5">
+
+
+## Modality variations
+
+### Vision
+
+### Graphs
+
+- [Transformers Meet Directed Graphs](https://arxiv.org/pdf/2302.00049.pdf) An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.
+<img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc">
+
 
 
 ### Fairness Enablement
