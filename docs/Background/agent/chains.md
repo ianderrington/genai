@@ -7,6 +7,8 @@ Done well, they can be built up to form reasoning systems that can enable more s
 
 - [Chain of thought hub](https://github.com/FranxYao/chain-of-thought-hub)
 
+## Concepts
+
 ### Tree of Thought
 
 - [Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291) [Github](https://github.com/jieyilong/tree-of-thought-puzzle-solver)
@@ -19,3 +21,29 @@ IDEA: Write Tree of Thoughts into Langchain?
 
 
 - [Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031) A 'logical guide' tool that an LLM can use. It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
+
+
+## Implementation
+### Langchain
+
+- ‼️[Langchain](https://python.langchain.com/en/latest/#) A primative python or javascript based primitive 'LLM' language that enables planned and agentic AI.
+  - ‼️[Langflow](https://github.com/logspace-ai/langflow) 
+  - ‼️[Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
+  -   - ‼️[Toolkit](https://www.toolkit.club/) Generates LangChain plugins
+
+#### Tutorials
+
+  - https://www.pinecone.io/learn/langchain-prompt-templates/
+  - https://learn.deeplearning.ai/langchain/lesson/3/memory
+
+## Llama index
+- [llama index](https://www.llamaindex.ai/) and [Github](https://github.com/jerryjliu/llama_index) for integrating data ingestion and models. 
+- [LlamaHub (community library of data loaders)](https://llamahub.ai)
+- [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
+
+ 
+## Others
+- ‼️[Flowise](https://github.com/FlowiseAI/Flowise)
+- ！[Chain Forge](https://github.com/ianarawjo/ChainForge) A data flow prompt engineering environment for evaluating ana analyzing LLM responses
+- ‼️ [EmbedChain](https://github.com/embedchain/embedchain) Creates embeddings for bots to be used. 
+- ‼️[llm-chain](https://docs.llm-chain.xyz/docs/introduction) ChatGPT and Alpaca support. Agentic with bash commands.
