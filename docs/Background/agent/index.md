@@ -1,9 +1,28 @@
 # Agents Gen(erative) AI
 Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to generate text or image based responses to the input data. They rely on several important concepts:
 
+
+
+```mermaid
+graph TB
+    Agent((Agent)) -->|makes| decision((Decision))
+    decision -->|attempts| action((Action))
+    action -->|passes| execution((Execution))
+    execution -->|affects| environment((Environment))
+    execution -->|generates| agentMemory((Agent's Memory))
+    agentMemory -->|informs and effects| Agent
+    environment -->|provides| observations((Observations))
+    observations -->|informs and effects| Agent
+    execution -->|queries| environment
+    AgentManager((Agent Manager)) -->|affects| execution
+    Agent --> |informs and effects| AgentManager
+    AgentManager --> |informs and effects| Agent
+```
+
 ## Lists and websites
 - [Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent)
 - [Awesome AGents](https://github.com/e2b-dev/awesome-ai-agents) of nicely curated AGents that helps to understand the differences they might contain.
+
 
 ## Basic Concepts
 

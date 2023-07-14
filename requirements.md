@@ -18,3 +18,5 @@ google-api-core
 google-auth-oauthlib
 google-api-python-client
 mkdocs-exclude
+pillow
+cairosvg

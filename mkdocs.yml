@@ -1,15 +1,17 @@
 # Project information
 site_name:  "Gen()AI"
-site_url: "https://tbd"
+site_url: "https://managen.ai"
 site_author: Ian Derrington
 site_description: Focusing on Gen(erative) AI 
 
 # Repository
 repo_name: genai 
-repo_url: "https://github.com/ian-derrington/genai"
-edit_uri: "https://github.com/ian-derrington/genai/reader_edits/docs/"
+repo_url: "https://github.com/ianderrington/genai"
+edit_uri: "https://github.com/ianderrington/genai/reader_edits/docs/"
 # Copyright
-copyright: Copyright &copy; None
+copyright: >
+  Copyright © Ian Derrington; 
+  <a href="#__consent">Change cookie settings</a>
 
 # Configuration
 theme:
@@ -48,14 +50,14 @@ theme:
 
   palette:
     - scheme: default
-      primary: indigo
+      primary: blue grey
       accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - scheme: slate
-      primary: red
-      accent: red
+      primary: blue grey
+      accent: indigo
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
@@ -92,10 +94,44 @@ plugins:
   - table-reader:
       data_path: "docs"
   - macros
-
+  - social:
+      cards_layout: default
 
 use_directory_urls: false
 # Customization
+extra:
+  cookies:
+      analytics:
+        name: Google Analytics
+        checked: false
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - reject
+      - manage 
+  analytics: 
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 # extra:
 #   #analytics:
 #   #  provider: google
@@ -177,12 +213,15 @@ markdown_extensions:
   #     clickable_checkbox: true
   #     custom_checkbox: true
 
-  # - pymdownx.superfences:
-  #     custom_fences:
-  #       - name: mermaid
-  #         class: mermaid
-  #         format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tilde
 
+extra_css:
+  - stylesheets/extra.css
