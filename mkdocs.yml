@@ -79,7 +79,6 @@ plugins:
         #sponsorship.md: insiders/index.md
   ## Allows for linking like this: This works the same as [a normal link to that heading](../doc1.md#hello-world).
   - autorefs
-
   - minify:
       minify_html: false
   - include_dir_to_nav
@@ -96,6 +95,8 @@ plugins:
   - macros
   - social:
       cards_layout: default
+  - glightbox
+
 
 use_directory_urls: false
 # Customization
@@ -161,21 +162,7 @@ extra:
   #   provider: custom
   #   # property: foobar #
   #
-  # analytics: #
-  #   feedback:
-  #     title: Was this page helpful?
-  #     ratings:
-  #       - icon: material/emoticon-happy-outline
-  #         name: This page was helpful
-  #         data: 1
-  #         note: >-
-  #           Thanks for your feedback!
-  #       - icon: material/emoticon-sad-outline
-  #         name: This page could be improved
-  #         data: 0
-  #         note: >- #
-  #           Thanks for your feedback! Help us improve this page by
-  #           using our <a href="..." target=_blank>feedback form</a>.
+
 
 
 # Extensions

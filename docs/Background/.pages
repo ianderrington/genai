@@ -1,8 +1,7 @@
 nav:
     - overview
     - data
-    - models
-    - training
+    - model_creation
     - agent
     - engineering
     - ethics_and_regulation

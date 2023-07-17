@@ -47,6 +47,10 @@ Below we provide references to concepts that extend beyond transformer-based mod
 - [lmsys.org leader board](https://lmsys.org/blog/2023-06-22-leaderboard/)
 - [Foundation model Providers EU AI compliance](https://crfm.stanford.edu/2023/06/15/eu-ai-act.html)
 
+## (potentially) model agnostic improvements
+
+- [Learning to Compress Prompts with Gist Tokens](https://arxiv.org/pdf/2304.08467.pdf). Can enable 26x compression and 40% FLOP reduction and improvements. Trains 'gist tokens' to summarize information. 
+
 
 ## TO SORT
 

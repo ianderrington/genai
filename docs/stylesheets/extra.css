@@ -3,4 +3,10 @@
     --md-primary-fg-color--light: #ECB7B7;
     --md-primary-fg-color--dark:  #90030C;
   }
+ 
   
+  [data-md-color-scheme="managen-dark"] {
+    --md-primary-fg-color:        #3d46ee;
+    --md-primary-fg-color--light: #ECB7B7;
+    --md-primary-fg-color--dark:  #039084;
+  }

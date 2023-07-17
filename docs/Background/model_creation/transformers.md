@@ -46,7 +46,11 @@ Important discussion revealing the components of Transformers.
 
 - [Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf) Uses inspiration from FFT to create a drop in replacement for Transformer models. Quite complex and maybe overhyped.
 
-- [Infinite former](https://arxiv.org/pdf/2109.00301.pdf) <img width="302" alt="image" src="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80"> Uses a representation of input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration [Github](https://github.com/deep-spin/infinite-former)
+
+
+- [Infinite former](https://arxiv.org/pdf/2109.00301.pdf) 
+ Uses a representation of input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration 
+ [Github](https://github.com/deep-spin/infinite-former) ![Infinity Former](https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80){ align=left width="300"  loading=lazy }
 
 ### To reduce compute
 

@@ -20,3 +20,4 @@ google-api-python-client
 mkdocs-exclude
 pillow
 cairosvg
+mkdocs-glightbox
