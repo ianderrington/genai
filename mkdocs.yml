@@ -93,8 +93,8 @@ plugins:
   - table-reader:
       data_path: "docs"
   - macros
-  - social:
-      cards_layout: default
+  # - social:
+  #     cards_layout: default
   - glightbox
 
 

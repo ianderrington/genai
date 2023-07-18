@@ -3,22 +3,6 @@ Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond 
 
 
 
-```mermaid
-graph TB
-    Agent((Agent)) -->|makes| decision((Decision))
-    decision -->|attempts| action((Action))
-    action -->|passes| execution((Execution))
-    execution -->|affects| environment((Environment))
-    execution -->|generates| agentMemory((Agent's Memory))
-    agentMemory -->|informs and effects| Agent
-    environment -->|provides| observations((Observations))
-    observations -->|informs and effects| Agent
-    execution -->|queries| environment
-    AgentManager((Agent Manager)) -->|affects| execution
-    Agent --> |informs and effects| AgentManager
-    AgentManager --> |informs and effects| Agent
-```
-
 ## Lists and websites
 - [Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent)
 - [Awesome AGents](https://github.com/e2b-dev/awesome-ai-agents) of nicely curated AGents that helps to understand the differences they might contain.
@@ -26,8 +10,8 @@ graph TB
 
 ## Basic Concepts
 
-* [(LLM) model](../models/index.md): The 'intelligent' component returns an output for a given input. 
-* Inceptions: The [prompt](../models/prompting.md) that orient's and agent's response. 
+* [(LLM) model](../model_creation/index.md): The 'intelligent' component returns an output for a given input. 
+* Inceptions: The [prompt](../prompt_engineering/prompting.md) that orient's and agent's response. 
 * Memory access
 * Tool Access
 * Chains and flows

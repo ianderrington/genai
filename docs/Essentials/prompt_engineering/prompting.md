@@ -51,9 +51,7 @@ According to {some_reputable_source} ...
 
 ### Automatic
 
-#### Prompt compression
 
-- [Learning to Compress Prompts with Gist Tokens](https://arxiv.org/pdf/2304.08467.pdf). Can enable 26x compression and 40% FLOP reduction and improvements. Trains 'gist tokens' to summarize information. 
 
 ### Resources
 
