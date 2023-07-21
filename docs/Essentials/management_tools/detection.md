@@ -1,1 +1,0 @@
-- [Sapling AI content detector](https://sapling.ai/ai-content-detector)

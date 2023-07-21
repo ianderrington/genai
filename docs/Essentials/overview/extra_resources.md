@@ -16,7 +16,7 @@
 -  
 
 ## Whole system
-- ‼️[Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A very nice high overview of the component market for LLM architectures.
+- ‼️ [Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A very nice high overview of the component market for LLM architectures.
 
 ### LLMs
 - [A Survey of Large Language Models](https://arxiv.org/pdf/2303.18223.pdf) A very comprehensive paper discussing LLM technology. 
@@ -39,3 +39,7 @@
 - [AI Explained](https://www.youtube.com/@ai-explained-)
 - [Yannic Kilcher](https://www.youtube.com/@YannicKilcher)
 - [State of GPT by Andrej Karpathy](https://build.microsoft.com/en-US/sessions/db3f4859-cd30-4445-a0cd-553c3304f8e2)
+
+## Overview Research
+
+- [Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/abs/2307.10169]

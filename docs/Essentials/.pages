@@ -4,6 +4,5 @@ nav:
     - model_creation
     - prompt_engineering
     - working_with_agents
-    - applied_engineering
-    - management_tools
+    - engineering_and_management
     - ethics_and_regulation

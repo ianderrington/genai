@@ -1,9 +1,25 @@
 The base components of GENAI
 
+1. [The Ten Thousand Foot Perspective](#available-models)
+1. [Applications](applications.md)
+1. [Challenges](challenges.md)
+1. [Extra Resources](extra_resources.md)
+
+## Gen AI from a high level perspectives
+
+
+## Basic Components
+1. [Data](data/index.md)
+2. [Models](models/index.md)
+
+
+
+## Basic engineering. 
+
+
 ## Available models
 
 There are both open and closed-source models, that can be used. Because of computation requirements, more-powerful hardware may be needed to run these models, so they are often run with cloud-based services. We share an incomplete list [here](../applied_engineering/models.md)
-
 
 ### Model Overviews
 
