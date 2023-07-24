@@ -131,17 +131,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://managen.ai/Understanding/model_creation/index.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://managen.ai/Understanding/model_creation/alignment.html</loc>
          <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://managen.ai/Understanding/model_creation/evaluation.html</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://managen.ai/Understanding/model_creation/model_creation.html</loc>
          <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -156,7 +156,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Understanding/model_creation/transformers.html</loc>
+         <loc>https://managen.ai/Understanding/model_creation/classes/diffusers.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/model_creation/classes/transformers.html</loc>
          <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>

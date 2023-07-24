@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://managen.ai/Understanding/model_creation/alignment.html">
       
       
-        <link rel="prev" href="model_creation.html">
+        <link rel="prev" href="index.html">
       
       
         <link rel="next" href="evaluation.html">
@@ -632,6 +632,12 @@
           
         
           
+            
+          
+        
+          
+        
+          
         
           
         
@@ -644,7 +650,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="model_creation.html">Model creation</a>
+          <a href="index.html">Model creation</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -658,6 +664,22 @@
           Model creation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model_creation.md" class="md-nav__link">
+        Models
+      </a>
+    </li>
+  
+
+            
+          
+            
           
             
               
@@ -728,10 +750,54 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_7" >
+      
+      
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="classes/diffusers.html">Classes</a>
+          
+            <label for="__nav_1_3_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Classes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="transformers.html" class="md-nav__link">
+      <a href="classes/transformers.html" class="md-nav__link">
         Transformers
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1273,7 +1339,18 @@
 
   <h1>Alignment</h1>
 
-
+<p>Raw generative models do not generally produce globally accurate outputs given input prompts. <sup id="fnref:n1"><a class="footnote-ref" href="#fn:n1">1</a></sup> </p>
+<p>Global alignment </p>
+<p>Ensuring the output of models are appropriately capable of </p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:n1">
+<p>We will be describing text-focused models in this discussion though variations can be appropriately considered for other domains and datatypes
+This is due to the manner of training and next-word-prediction (or more arbitrary masked-word prediction) is probabilistically 'greedy'. Namely, within a sampling of outputs, the next-prediction will be sampled based on their <em>immediate</em> likelihood. To improve the outputs, the models are further refined using various approaches. These approaches 'align' the output to accurately considered&#160;<a class="footnote-backref" href="#fnref:n1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
   

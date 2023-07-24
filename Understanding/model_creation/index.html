@@ -12,20 +12,20 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/model_creation/transformers.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/model_creation/index.html">
       
       
-        <link rel="prev" href="training.html">
+        <link rel="prev" href="../data/tokens_and_embeddings.html">
       
       
-        <link rel="next" href="../prompt_engineering/prompting.html">
+        <link rel="next" href="alignment.html">
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Transformers - Gen()AI</title>
+        <title>Index - Gen()AI</title>
       
     
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#transformers" class="md-skip">
+        <a href="#models-for-genai" class="md-skip">
           Skip to content
         </a>
       
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Transformers
+              Index
             
           </span>
         </div>
@@ -637,6 +637,12 @@
           
         
           
+            
+          
+        
+          
+        
+          
         
           
         
@@ -648,8 +654,8 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="model_creation.html">Model creation</a>
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="index.html">Model creation</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -663,6 +669,22 @@
           Model creation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model_creation.md" class="md-nav__link">
+        Models
+      </a>
+    </li>
+  
+
+            
+          
+            
           
             
               
@@ -724,185 +746,55 @@
               
   
   
+  
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Transformers
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_7" >
+      
+      
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="classes/diffusers.html">Classes</a>
+          
+            <label for="__nav_1_3_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3_7">
           <span class="md-nav__icon md-icon"></span>
+          Classes
         </label>
-      
-      <a href="transformers.html" class="md-nav__link md-nav__link--active">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/transformers.html" class="md-nav__link">
         Transformers
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#transformers" class="md-nav__link">
-    Transformers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references-and-research" class="md-nav__link">
-    References and Research
-  </a>
-  
-    <nav class="md-nav" aria-label="References and Research">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-transformer-information" class="md-nav__link">
-    Basic Transformer information
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#positional-encoding" class="md-nav__link">
-    Positional Encoding
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#improvements" class="md-nav__link">
-    Improvements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpt" class="md-nav__link">
-    GPT
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#improvements-and-optimizations" class="md-nav__link">
-    Improvements and Optimizations
-  </a>
-  
-    <nav class="md-nav" aria-label="Improvements and Optimizations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#focusing-on-context-windows" class="md-nav__link">
-    Focusing on context-windows
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-reduce-compute" class="md-nav__link">
-    To reduce compute
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fine-tuning" class="md-nav__link">
-    Fine Tuning
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modality-variations" class="md-nav__link">
-    Modality variations
-  </a>
-  
-    <nav class="md-nav" aria-label="Modality variations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vision" class="md-nav__link">
-    Vision
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#graphs" class="md-nav__link">
-    Graphs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fairness-enablement" class="md-nav__link">
-    Fairness Enablement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#training-variations" class="md-nav__link">
-    Training variations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multimodal" class="md-nav__link">
-    Multimodal
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#abstractions" class="md-nav__link">
-    Abstractions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1433,145 +1325,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#transformers" class="md-nav__link">
-    Transformers
+  <a href="#models-for-genai" class="md-nav__link">
+    Models for Gen()AI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    Components
+  <a href="#potentially-model-agnostic-improvements" class="md-nav__link">
+    (potentially) model agnostic improvements
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references-and-research" class="md-nav__link">
-    References and Research
-  </a>
-  
-    <nav class="md-nav" aria-label="References and Research">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-transformer-information" class="md-nav__link">
-    Basic Transformer information
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#positional-encoding" class="md-nav__link">
-    Positional Encoding
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#improvements" class="md-nav__link">
-    Improvements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpt" class="md-nav__link">
-    GPT
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#improvements-and-optimizations" class="md-nav__link">
-    Improvements and Optimizations
-  </a>
-  
-    <nav class="md-nav" aria-label="Improvements and Optimizations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#focusing-on-context-windows" class="md-nav__link">
-    Focusing on context-windows
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-reduce-compute" class="md-nav__link">
-    To reduce compute
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fine-tuning" class="md-nav__link">
-    Fine Tuning
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modality-variations" class="md-nav__link">
-    Modality variations
-  </a>
-  
-    <nav class="md-nav" aria-label="Modality variations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vision" class="md-nav__link">
-    Vision
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#graphs" class="md-nav__link">
-    Graphs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fairness-enablement" class="md-nav__link">
-    Fairness Enablement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#training-variations" class="md-nav__link">
-    Training variations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multimodal" class="md-nav__link">
-    Multimodal
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#abstractions" class="md-nav__link">
-    Abstractions
+  <a href="#to-sort" class="md-nav__link">
+    TO SORT
   </a>
   
 </li>
@@ -1594,85 +1363,35 @@
   
 
 
-  <h1>Transformers</h1>
+  <h1>Index</h1>
 
-<h2 id="transformers">Transformers<a class="headerlink" href="#transformers" title="Permanent link">&para;</a></h2>
-<h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
-<p>TODO: Describe transformers and components</p>
-<h2 id="references-and-research">References and Research<a class="headerlink" href="#references-and-research" title="Permanent link">&para;</a></h2>
+<h2 id="models-for-genai">Models for Gen()AI<a class="headerlink" href="#models-for-genai" title="Permanent link">&para;</a></h2>
+<p>Here we will discuss the models essential components of Gen()AI. </p>
+<p>There are two primary domains of Generative AI, text-oriented or image-oriented, though there is great indication that many other (multi-)modalities will be very important for the future. </p>
+<p>We discuss the general complete models used in creating Generative AI. Initial incarnations of this will focus on the most observably promising core-models, transformers. </p>
+<p>Because we generally call Gen()AI with language inputs, there are different ways to use language to achieve the appropriately desired results. These inputs, <a href="../prompt_engineering/prompting.html">prompts</a> will be model-specific, but may share commonalities for more-optimal usage and we discuss that more thoroughly <a href="../prompt_engineering/prompting.html">here</a></p>
+<h2 id="potentially-model-agnostic-improvements">(potentially) model agnostic improvements<a class="headerlink" href="#potentially-model-agnostic-improvements" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://docs.google.com/presentation/d/1ZXFIhYczos679r70Yu8vV9uO6B1J0ztzeDxbnBxD1S0/mobilepresent?fbclid=IwAR18pR_Mf46mkZ1_E3NFOwYY2wVx0aATficgfh_GWZd29c_lWNRa4vK5zy8&amp;slide=id.g31364026ad_3_2">Amazing Presentation on Transformers</a></li>
+<li><a href="https://arxiv.org/pdf/2304.08467.pdf">Learning to Compress Prompts with Gist Tokens</a>. Can enable 26x compression and 40% FLOP reduction and improvements. Trains 'gist tokens' to summarize information. </li>
 </ul>
-<h3 id="basic-transformer-information">Basic Transformer information<a class="headerlink" href="#basic-transformer-information" title="Permanent link">&para;</a></h3>
+<h2 id="to-sort">TO SORT<a class="headerlink" href="#to-sort" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Attention Is All you Need</a> Initial paper indicating that attention is very powerful and potential replacement of LLM architectures. </li>
-<li><a href="https://arxiv.org/pdf/1409.0473.pdf">Neural Machine Translation by Jointly Learning to Align and Translate</a> First paper indicating the notion of 'attention' sort of mechanism.</li>
+<li>Token Embedding: Mapping to a vector space. </li>
+<li>Positional Embedding: Learned or hard-coded mapping to position of sequence to a vector space</li>
+<li>Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information. </li>
+<li>Bi-directional / unmasked</li>
+<li>Unidirectional / masked self attetion</li>
+<li>Cross attention applies attention to the primary sequence and treates the second token sequence the context. </li>
+<li>Multi-head attention. Multiple attention heads in parallel.</li>
+<li>Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or <code>RMSnorm</code>. </li>
+<li>Unembedding: Learns to convert vector intot he vocuabulary elements. </li>
 </ul>
-<h3 id="positional-encoding">Positional Encoding<a class="headerlink" href="#positional-encoding" title="Permanent link">&para;</a></h3>
-<p>This component helps to remove the impilcit position-independence that 'vanilla' attention methods have.  </p>
+<p><strong>Architectures:</strong></p>
 <ul>
-<li><a href="https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/">A Gentle Introduction to Positional Encoding in Transformer Models, pt1</a></li>
-</ul>
-<h3 id="improvements">Improvements<a class="headerlink" href="#improvements" title="Permanent link">&para;</a></h3>
-<h3 id="gpt">GPT<a class="headerlink" href="#gpt" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="http://jalammar.github.io/illustrated-gpt2/">Illustrated GPT</a></li>
-<li><a href="https://jalammar.github.io/how-gpt3-works-visualizations-animations/">How GPT3 works</a></li>
-<li><a href="https://finbarrtimbers.substack.com/p/five-years-of-progress-in-gpts?utm_source=substack&amp;utm_medium=email">Five years of progress in GPTs</a>
-Excellent summary of the progress of GPT over time, revealing core components, optimizations, and essential variations to the major Foundation model architectures.</li>
-<li><a href="https://arxiv.org/pdf/2207.09238.pdf">Formal Algorithms for Transformers in 2023</a>
-Important discussion revealing the components of Transformers.</li>
-</ul>
-<h2 id="improvements-and-optimizations">Improvements and Optimizations<a class="headerlink" href="#improvements-and-optimizations" title="Permanent link">&para;</a></h2>
-<h3 id="focusing-on-context-windows">Focusing on context-windows<a class="headerlink" href="#focusing-on-context-windows" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><a href="https://arxiv.org/abs/2304.11062">Scaling Transformer to 1M tokens and beyond with RMT</a> <a href="https://github.com/booydar/t5-experiments/tree/scaling-report">Github</a> Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. </p>
-</li>
-<li>
-<p>‼️<a href="https://arxiv.org/pdf/2305.07185.pdf">MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers</a> MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches</p>
-</li>
-<li>
-<p><a href="https://arxiv.org/pdf/2302.10866.pdf">Hyena Architecture</a> Uses inspiration from FFT to create a drop in replacement for Transformer models. Quite complex and maybe overhyped.</p>
-</li>
-<li>
-<p><a href="https://arxiv.org/pdf/2109.00301.pdf">Infinite former</a> 
- Uses a representation of input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration 
- <a href="https://github.com/deep-spin/infinite-former">Github</a> <a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="left" alt="Infinity Former" loading="lazy" src="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" width="300" /></a></p>
-</li>
-</ul>
-<h3 id="to-reduce-compute">To reduce compute<a class="headerlink" href="#to-reduce-compute" title="Permanent link">&para;</a></h3>
-<p><a href="https://arxiv.org/pdf/2306.03078v1.pdf">SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression</a></p>
-<h3 id="fine-tuning">Fine Tuning<a class="headerlink" href="#fine-tuning" title="Permanent link">&para;</a></h3>
-<p>Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.</p>
-<ul>
-<li><a href="https://arxiv.org/pdf/2305.08298.pdf">Symbol Tuning Improves in-context learning in Language Models</a>
-<a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5"></a></li>
-</ul>
-<h2 id="modality-variations">Modality variations<a class="headerlink" href="#modality-variations" title="Permanent link">&para;</a></h2>
-<h3 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">&para;</a></h3>
-<h3 id="graphs">Graphs<a class="headerlink" href="#graphs" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://arxiv.org/pdf/2302.00049.pdf">Transformers Meet Directed Graphs</a> An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc"></a></li>
-</ul>
-<h3 id="fairness-enablement">Fairness Enablement<a class="headerlink" href="#fairness-enablement" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://arxiv.org/pdf/2306.03819.pdf">Concept Erasure</a></li>
-</ul>
-<h3 id="training-variations">Training variations<a class="headerlink" href="#training-variations" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/michiyasunaga/LinkBERT">LinkBERT</a> places in the context window hyperlinked references to achieve better performance.  </li>
-</ul>
-<h3 id="multimodal">Multimodal<a class="headerlink" href="#multimodal" title="Permanent link">&para;</a></h3>
-<ul>
-<li>‼️ <a href="https://arxiv.org/pdf/2303.04671.pdf">Visual GPT</a></li>
-<li>‼️ <a href="https://arxiv.org/pdf/2302.14045.pdf">Language is not all you need</a></li>
-</ul>
-<h2 id="abstractions">Abstractions<a class="headerlink" href="#abstractions" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://arxiv.org/pdf/2301.13196.pdf">Looped Transformers and Programmable Computers</a> Understanding that transformer networks can simulate complex algorithms when hardcoded with specific weights and made intoa  loop. 'Machine Learning' 'Machine code'. "We demonstrate that
-a constant number of encoder layers can emulate basic computing blocks, including embedding edit operations, non-linear functions, function calls, program counters, and conditional branches. Using these building blocks, we emulate a small instruction-set computer."</li>
+<li>Encoder-Decoder (EDT), is also sequence-to-sequence. </li>
+<li>Encoder-only: (BERT)</li>
+<li>Decoder-only (GPT) Next-token </li>
+<li>Multi-domain decoder-only transformer (Gato)</li>
 </ul>
 
 
