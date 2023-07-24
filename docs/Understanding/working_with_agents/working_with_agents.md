@@ -10,7 +10,7 @@ Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond 
 
 ## Basic Concepts
 
-* [(LLM) model](../model_creation/model_creation.md): The 'intelligent' component returns an output for a given input. 
+* [(LLM) model](../model_creation/index.md): The 'intelligent' component returns an output for a given input. 
 * Inceptions: The [prompt](../prompt_engineering/prompting.md) that orient's and agent's response. 
 * Memory access
 * Tool Access

@@ -1,25 +1,23 @@
 
+## Models
+## Text Oriented
+* [Bard](https://bard.google.com/)
+* [Claud]()
+* [ChatGPT](https://openai.com/blog/chatgpt)
+* [Medpalm](https://arxiv.org/abs/2212.13138)
+* [Llama](https://github.com/facebookresearch/llama) (Non-commercial ??)
+* [Open Llama](https://github.com/openlm-research/open_llama) (Non-commercial ??)
+* [UAE Falcon](https://www.tii.ae/news/uaes-falcon-40b-now-royalty-free) (Apache License)
 
 
-## Operational Toolkits for LLMops
-- ‼️[Hugging Face Transformers](https://huggingface.co/transformers/v4.0.1/index.html)
-- ‼️[Adapters for Hugging Face](https://adapterhub.ml/)
-- ‼️[Open LLM](https://github.com/bentoml/OpenLLM)
+* [MosaicML](https://www.mosaicml.com/blog/long-context-mpt-7b-8k)
 
 
+## Image Oriented
 
-- [Chatall](https://github.com/sunner/ChatALL) To interact with multiple chatbots at the same time.
-- ‼️ [LocalAI](https://github.com/go-skynet/LocalAI) drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
+- [StableLM: Stability AI Language Models](https://github.com/stability-AI/stableLM/)  CC BY-SA-4.0
 
-### Llama
+## Open Source
 
-Llama is Meta's now open-source model. Llama 2 is MIT and free for commercial use. 
+- [GPT4all](https://gpt4all.io/index.html)
 
-- [Ollama.ai](https://ollama.ai/) A very nice command-line wrapper for running Llama models on your computer. 
-- [Llama from Meta](https://ai.meta.com/llama/) Direct from the source 
-- [For Llama](https://github.com/Lightning-AI/lit-llama)
-- [MedAlpaca](https://github.com/kbressem/medAlpaca)
-
-##
-
-- [Auto Chain](https://github.com/Forethought-Technologies/AutoChain)
