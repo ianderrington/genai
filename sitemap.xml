@@ -2,162 +2,237 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://managen.ai/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://managen.ai/to_sort.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Managing/contributing.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/agent/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Managing/managing.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/agent/actions_and_tools.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/index.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/agent/chains.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/data/augmentation.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/agent/environments.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/data/data.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/agent/implementation.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/data/embeddings.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/agent/memory.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/data/preprocessing.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/agent/systems.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/data/privacy.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/agent/types.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/data/quality.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/computation/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/data/sources.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/data/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/data/tokens_and_embeddings.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/data/representations.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/engineering_and_management/commercial_products.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/deployment/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/engineering_and_management/computation.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/engineering/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/engineering_and_management/deployment.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/engineering/ecosystem.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/engineering_and_management/engineering_and_management.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/engineering/open_source_frameworks.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/engineering_and_management/frameworks.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/ethics_and_regulation/ethics.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/engineering_and_management/genai_detection.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/interfaces_and_plugins/plugins.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/engineering_and_management/models.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/miscellaneous/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/engineering_and_management/plugins.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/miscellaneous/detection.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/ethics_and_regulation/alignment_and_exential_concerns.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/models/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/ethics_and_regulation/ethics.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/models/metrics.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/ethics_and_regulation/ethics_and_regulation.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/models/prompting.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/ethics_and_regulation/fairness.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/models/transformers.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/ethics_and_regulation/transparency.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/overview/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/model_creation/alignment.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/overview/applications.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/model_creation/evaluation.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/overview/extra_resources.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/model_creation/model_creation.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Background/training/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/model_creation/models.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/this_project/index.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/model_creation/training.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/this_project/contributing.html</loc>
-         <lastmod>2023-07-14</lastmod>
+         <loc>https://managen.ai/Understanding/model_creation/transformers.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/overview/ai_in_general.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/overview/applications.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/overview/challenges.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/overview/extra_resources.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/overview/overview.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/prompt_engineering/prompting.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/studies/studies.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/working_with_agents/actions_and_tools.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/working_with_agents/chains.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/working_with_agents/environments.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/working_with_agents/implementation.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/working_with_agents/memory.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/working_with_agents/systems.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/working_with_agents/types.html</loc>
+         <lastmod>2023-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/working_with_agents/working_with_agents.html</loc>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

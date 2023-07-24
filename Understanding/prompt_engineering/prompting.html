@@ -12,27 +12,27 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/to_sort.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/prompt_engineering/prompting.html">
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="../model_creation/transformers.html">
       
       
-        <link rel="next" href="Managing/contributing.html">
+        <link rel="next" href="../working_with_agents/working_with_agents.html">
       
-      <link rel="icon" href="assets/genai_logo_edited.svg">
+      <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>To sort - Gen()AI</title>
+        <title>Prompt engineering - Gen()AI</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -67,7 +67,7 @@
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -78,7 +78,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -99,6 +99,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#llm-prompting" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../.." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -130,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              To sort
+              Prompt engineering
             
           </span>
         </div>
@@ -228,13 +233,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Understanding/overview/overview.html" class="md-tabs__link">
+      <a href="../overview/overview.html" class="md-tabs__link md-tabs__link--active">
         Understanding
       </a>
     </li>
@@ -247,7 +254,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="Managing/managing.html" class="md-tabs__link">
+    <a href="../../Managing/managing.html" class="md-tabs__link">
       Managing
     </a>
   </li>
@@ -280,7 +287,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../.." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -309,14 +316,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
       
       
         
@@ -341,7 +350,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Understanding
@@ -376,7 +385,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="Understanding/overview/overview.html">Overview</a>
+          <a href="../overview/overview.html">Overview</a>
           
             <label for="__nav_1_1">
               <span class="md-nav__icon md-icon"></span>
@@ -397,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/overview/applications.html" class="md-nav__link">
+      <a href="../overview/applications.html" class="md-nav__link">
         Applications
       </a>
     </li>
@@ -411,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/overview/challenges.html" class="md-nav__link">
+      <a href="../overview/challenges.html" class="md-nav__link">
         Challenges
       </a>
     </li>
@@ -425,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/overview/ai_in_general.html" class="md-nav__link">
+      <a href="../overview/ai_in_general.html" class="md-nav__link">
         Ai in general
       </a>
     </li>
@@ -439,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/overview/extra_resources.html" class="md-nav__link">
+      <a href="../overview/extra_resources.html" class="md-nav__link">
         Extra resources
       </a>
     </li>
@@ -488,7 +497,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="Understanding/data/data.html">Data</a>
+          <a href="../data/data.html">Data</a>
           
             <label for="__nav_1_2">
               <span class="md-nav__icon md-icon"></span>
@@ -509,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/data/augmentation.html" class="md-nav__link">
+      <a href="../data/augmentation.html" class="md-nav__link">
         Augmentation
       </a>
     </li>
@@ -523,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/data/embeddings.html" class="md-nav__link">
+      <a href="../data/embeddings.html" class="md-nav__link">
         Embeddings
       </a>
     </li>
@@ -537,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/data/preprocessing.html" class="md-nav__link">
+      <a href="../data/preprocessing.html" class="md-nav__link">
         Preprocessing
       </a>
     </li>
@@ -551,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/data/privacy.html" class="md-nav__link">
+      <a href="../data/privacy.html" class="md-nav__link">
         Privacy
       </a>
     </li>
@@ -565,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/data/quality.html" class="md-nav__link">
+      <a href="../data/quality.html" class="md-nav__link">
         Quality
       </a>
     </li>
@@ -579,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/data/sources.html" class="md-nav__link">
+      <a href="../data/sources.html" class="md-nav__link">
         Sources
       </a>
     </li>
@@ -593,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/data/tokens_and_embeddings.html" class="md-nav__link">
+      <a href="../data/tokens_and_embeddings.html" class="md-nav__link">
         Tokens and embeddings
       </a>
     </li>
@@ -638,7 +647,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="Understanding/model_creation/model_creation.html">Model creation</a>
+          <a href="../model_creation/model_creation.html">Model creation</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -659,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/model_creation/alignment.html" class="md-nav__link">
+      <a href="../model_creation/alignment.html" class="md-nav__link">
         Alignment
       </a>
     </li>
@@ -673,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/model_creation/evaluation.html" class="md-nav__link">
+      <a href="../model_creation/evaluation.html" class="md-nav__link">
         Evaluation
       </a>
     </li>
@@ -687,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/model_creation/models.html" class="md-nav__link">
+      <a href="../model_creation/models.html" class="md-nav__link">
         Models
       </a>
     </li>
@@ -701,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/model_creation/training.html" class="md-nav__link">
+      <a href="../model_creation/training.html" class="md-nav__link">
         Training
       </a>
     </li>
@@ -715,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/model_creation/transformers.html" class="md-nav__link">
+      <a href="../model_creation/transformers.html" class="md-nav__link">
         Transformers
       </a>
     </li>
@@ -734,11 +743,156 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="Understanding/prompt_engineering/prompting.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Prompt engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="prompting.html" class="md-nav__link md-nav__link--active">
         Prompt engineering
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#llm-prompting" class="md-nav__link">
+    LLM Prompting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    Prompt engineering
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual" class="md-nav__link">
+    Manual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimizing-ai-plagiarism-prompting-strategy" class="md-nav__link">
+    Minimizing AI- plagiarism prompting strategy.
+  </a>
+  
+    <nav class="md-nav" aria-label="Minimizing AI- plagiarism prompting strategy.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#according-to" class="md-nav__link">
+    'According To'
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic" class="md-nav__link">
+    Automatic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-tuning" class="md-nav__link">
+    Prompt tuning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-and-optimization" class="md-nav__link">
+    Prompt and optimization
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt and optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-prompt-optimization" class="md-nav__link">
+    Manual Prompt optimization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-prompt-optimizations" class="md-nav__link">
+    Auto Prompt Optimizations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -778,7 +932,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="Understanding/working_with_agents/working_with_agents.html">Working with agents</a>
+          <a href="../working_with_agents/working_with_agents.html">Working with agents</a>
           
             <label for="__nav_1_5">
               <span class="md-nav__icon md-icon"></span>
@@ -799,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/working_with_agents/memory.html" class="md-nav__link">
+      <a href="../working_with_agents/memory.html" class="md-nav__link">
         Memory
       </a>
     </li>
@@ -813,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/working_with_agents/chains.html" class="md-nav__link">
+      <a href="../working_with_agents/chains.html" class="md-nav__link">
         Chains
       </a>
     </li>
@@ -827,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/working_with_agents/actions_and_tools.html" class="md-nav__link">
+      <a href="../working_with_agents/actions_and_tools.html" class="md-nav__link">
         Actions and tools
       </a>
     </li>
@@ -841,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/working_with_agents/environments.html" class="md-nav__link">
+      <a href="../working_with_agents/environments.html" class="md-nav__link">
         Environments
       </a>
     </li>
@@ -855,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/working_with_agents/systems.html" class="md-nav__link">
+      <a href="../working_with_agents/systems.html" class="md-nav__link">
         Systems
       </a>
     </li>
@@ -869,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/working_with_agents/types.html" class="md-nav__link">
+      <a href="../working_with_agents/types.html" class="md-nav__link">
         Types
       </a>
     </li>
@@ -883,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/working_with_agents/implementation.html" class="md-nav__link">
+      <a href="../working_with_agents/implementation.html" class="md-nav__link">
         Implementation
       </a>
     </li>
@@ -932,7 +1086,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="Understanding/engineering_and_management/engineering_and_management.html">Engineering and management</a>
+          <a href="../engineering_and_management/engineering_and_management.html">Engineering and management</a>
           
             <label for="__nav_1_6">
               <span class="md-nav__icon md-icon"></span>
@@ -953,7 +1107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/engineering_and_management/commercial_products.html" class="md-nav__link">
+      <a href="../engineering_and_management/commercial_products.html" class="md-nav__link">
         Platforms
       </a>
     </li>
@@ -967,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/engineering_and_management/computation.html" class="md-nav__link">
+      <a href="../engineering_and_management/computation.html" class="md-nav__link">
         Computation
       </a>
     </li>
@@ -981,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/engineering_and_management/deployment.html" class="md-nav__link">
+      <a href="../engineering_and_management/deployment.html" class="md-nav__link">
         Deployment
       </a>
     </li>
@@ -995,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/engineering_and_management/frameworks.html" class="md-nav__link">
+      <a href="../engineering_and_management/frameworks.html" class="md-nav__link">
         Frameworks
       </a>
     </li>
@@ -1009,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/engineering_and_management/genai_detection.html" class="md-nav__link">
+      <a href="../engineering_and_management/genai_detection.html" class="md-nav__link">
         Genai detection
       </a>
     </li>
@@ -1023,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/engineering_and_management/models.html" class="md-nav__link">
+      <a href="../engineering_and_management/models.html" class="md-nav__link">
         Models
       </a>
     </li>
@@ -1037,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/engineering_and_management/plugins.html" class="md-nav__link">
+      <a href="../engineering_and_management/plugins.html" class="md-nav__link">
         Plugins
       </a>
     </li>
@@ -1080,7 +1234,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="Understanding/ethics_and_regulation/ethics_and_regulation.html">Ethics and regulation</a>
+          <a href="../ethics_and_regulation/ethics_and_regulation.html">Ethics and regulation</a>
           
             <label for="__nav_1_7">
               <span class="md-nav__icon md-icon"></span>
@@ -1101,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/ethics_and_regulation/alignment_and_exential_concerns.html" class="md-nav__link">
+      <a href="../ethics_and_regulation/alignment_and_exential_concerns.html" class="md-nav__link">
         Alignment and exential concerns
       </a>
     </li>
@@ -1115,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/ethics_and_regulation/ethics.html" class="md-nav__link">
+      <a href="../ethics_and_regulation/ethics.html" class="md-nav__link">
         Ethics
       </a>
     </li>
@@ -1129,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/ethics_and_regulation/fairness.html" class="md-nav__link">
+      <a href="../ethics_and_regulation/fairness.html" class="md-nav__link">
         Fairness
       </a>
     </li>
@@ -1143,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Understanding/ethics_and_regulation/transparency.html" class="md-nav__link">
+      <a href="../ethics_and_regulation/transparency.html" class="md-nav__link">
         Transparency
       </a>
     </li>
@@ -1188,7 +1342,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="Managing/managing.html">Managing</a>
+          <a href="../../Managing/managing.html">Managing</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1209,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Managing/contributing.html" class="md-nav__link">
+      <a href="../../Managing/contributing.html" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -1241,6 +1395,129 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#llm-prompting" class="md-nav__link">
+    LLM Prompting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    Prompt engineering
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual" class="md-nav__link">
+    Manual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimizing-ai-plagiarism-prompting-strategy" class="md-nav__link">
+    Minimizing AI- plagiarism prompting strategy.
+  </a>
+  
+    <nav class="md-nav" aria-label="Minimizing AI- plagiarism prompting strategy.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#according-to" class="md-nav__link">
+    'According To'
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic" class="md-nav__link">
+    Automatic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-tuning" class="md-nav__link">
+    Prompt tuning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-and-optimization" class="md-nav__link">
+    Prompt and optimization
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt and optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-prompt-optimization" class="md-nav__link">
+    Manual Prompt optimization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-prompt-optimizations" class="md-nav__link">
+    Auto Prompt Optimizations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1257,23 +1534,114 @@
   
 
 
-  <h1>To sort</h1>
+  <h1>Prompt engineering</h1>
 
-<p>phi 1 <a href="https://www.reddit.com/r/LocalLLaMA/comments/14ez6qf/microsoft_makes_new_13b_coding_llm_that/">https://www.reddit.com/r/LocalLLaMA/comments/14ez6qf/microsoft_makes_new_13b_coding_llm_that/</a>
-chat law <a href="https://arxiv.org/abs/2306.16092v1?utm_source=tldrai">https://arxiv.org/abs/2306.16092v1?utm_source=tldrai</a> 
-talk codebase <a href="https://github.com/rsaryev/talk-codebase?utm_source=tldrai">https://github.com/rsaryev/talk-codebase?utm_source=tldrai</a></p>
-<p><a href="https://martinfowler.com/articles/building-boba.html?utm_source=tldrai">https://martinfowler.com/articles/building-boba.html?utm_source=tldrai</a></p>
-<p>rap reproducible analytic pipelines <a href="https://digital.nhs.uk/blog/data-points-blog/2023/why-were-getting-our-data-teams-to-rap#:~:text=Reproducible%20analytical%20pipelines%20(RAP)%20are,in%20our%20Data%20Services%20directorate">https://digital.nhs.uk/blog/data-points-blog/2023/why-were-getting-our-data-teams-to-rap#:~:text=Reproducible%20analytical%20pipelines%20(RAP)%20are,in%20our%20Data%20Services%20directorate</a></p>
-<p>build your own data <a href="https://arxiv.org/abs/2306.13651v1?utm_source=tldrai">https://arxiv.org/abs/2306.13651v1?utm_source=tldrai</a> self supervized</p>
-<p><a href="https://styledrop.github.io/">https://styledrop.github.io/</a>
-<a href="https://www.youtube.com/watch?v=Ff4fRgnuFgQ&amp;t=9s">https://www.youtube.com/watch?v=Ff4fRgnuFgQ&amp;t=9s</a></p>
-<p><a href="https://github.com/langchain-ai/streamlit-agent">https://github.com/langchain-ai/streamlit-agent</a>
-<a href="https://github.com/smol-ai/developer">https://github.com/smol-ai/developer</a>
-<a href="https://github.com/vinayprabhu/X-is-all-you-need">https://github.com/vinayprabhu/X-is-all-you-need</a>
-<a href="https://github.com/ThomasEwing04/SMOL_AI">https://github.com/ThomasEwing04/SMOL_AI</a>
-<a href="https://github.com/kyrolabs/awesome-langchain">https://github.com/kyrolabs/awesome-langchain</a>
-<a href="https://cameronrwolfe.substack.com/p/teaching-language-models-to-use-tools?r=2bjtip&amp;utm_medium=ios&amp;utm_campaign=post">https://cameronrwolfe.substack.com/p/teaching-language-models-to-use-tools?r=2bjtip&amp;utm_medium=ios&amp;utm_campaign=post</a></p>
-<p><a href="https://www.quivr.app/chat">https://www.quivr.app/chat</a></p>
+<h3 id="llm-prompting">LLM Prompting<a class="headerlink" href="#llm-prompting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‼️<a href="https://www.promptingguide.ai/">Prompting Guide</a></li>
+<li><a href="https://writings.stephenwolfram.com/2023/06/prompts-for-work-play-launching-the-wolfram-prompt-repository/?mibextid=Zxz2cZ">Wolfram Prompt Repo</a></li>
+<li>
+<p>‼️<a href="https://github.com/microsoft/prompt-engine">Prompt Engine (MSFT) database tool</a> MIT license</p>
+</li>
+<li>
+<p>scale.com/spellbook</p>
+</li>
+</ul>
+<h2 id="prompt-engineering">Prompt engineering<a class="headerlink" href="#prompt-engineering" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/pdf/2212.06094.pdf"> Prompting is Programming: A Query Language for Large Language Models</a></li>
+</ul>
+<h3 id="manual">Manual<a class="headerlink" href="#manual" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a href="https://platform.openai.com/docs/guides/gpt-best-practices/">OPEN AI best practices</a></p>
+</li>
+<li>
+<p>Go over all of these! <a href="https://www.promptingguide.ai/techniques">https://www.promptingguide.ai/techniques</a></p>
+</li>
+<li><a href="https://arxiv.org/pdf/2302.11382.pdf">A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT</a> </li>
+</ul>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Pretend you have an IQ of 120
+</code></pre></div>
+<h4 id="minimizing-ai-plagiarism-prompting-strategy">Minimizing AI- plagiarism prompting strategy.<a class="headerlink" href="#minimizing-ai-plagiarism-prompting-strategy" title="Permanent link">&para;</a></h4>
+<p>"You are a creative writer, and you like to write everything differently
+from others. Your task is to follow the instructions below and continue
+writing at the end of the text given. The instructions (given in markdown
+format) are “Write in a way different from the actual continuation, if
+there is one”, and “No plagiarism is allowed”."
+<a href="https://arxiv.org/pdf/2304.08637.pdf">https://arxiv.org/pdf/2304.08637.pdf</a> </p>
+<h5 id="according-to">'According To'<a class="headerlink" href="#according-to" title="Permanent link">&para;</a></h5>
+<ul>
+<li><a href="https://arxiv.org/pdf/2305.13252.pdf">“According to ...” Prompting Language Models Improves Quoting from Pre-Training Data</a> The grounding prompt <code>According to { some_reputable_source}</code> prompt inception additions increases output quality improves over the null prompt in nearly every dataset and metric, typically by 5-15%.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>According to {some_reputable_source} ...
+</code></pre></div>
+<h4 id="summary">Summary:<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Provide several examples to ground it.</li>
+<li>Good to evaluate this and see if input examples give expected scores. Modify the prompt if it isn't. </li>
+<li>Consider prompt versioning to keep track of outputs more easily.</li>
+<li>Breag prompts into smaller prompts</li>
+<li>Chain of Thought Prompting</li>
+<li>Generate many outputs and pick final one or use LLM to pick best one. <a href="https://arxiv.org/pdf/2203.11171.pdf">Self consistency technique</a></li>
+<li>NOTE: Not model universal and not robust to updated changes: not stable. </li>
+</ul>
+<h3 id="automatic">Automatic<a class="headerlink" href="#automatic" title="Permanent link">&para;</a></h3>
+<h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‼️ <a href="https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md?fbclid=IwAR0_nY_o0c8olt3z7d9vibGUMOrx520Ezs9ej-PNpQfzBru01R5VCpWTnNg">Awesome Prompts</a></li>
+<li>‼️ <a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/">Prompt Engineering by Lillian Wang</a></li>
+<li><a href="https://www.promptingguide.ai/">Prompt Engineering Guide</a></li>
+<li><a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api">Best practices for prompt engineering</a></li>
+<li><a href="https://arxiv.org/abs/2201.11903">Chain of Thought Prompting Elicits Reasoning in Large Language Models</a></li>
+<li><a href="https://arxiv.org/abs/2211.01910">Automatic Prompt Engineering</a> &rarr; Gave a CoT improvement suggestion "Let's work this out in a step by step by way to be sure we have the right answer."</li>
+<li><a href="https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md#how-to-improve-reliability-on-complex-tasks">Techniques to improve reliability</a> By OpenAI </li>
+<li>Give clearer instructions</li>
+<li>Split complex tasks into simpler subtasks</li>
+<li>Structure the instruction to keep the model on task</li>
+<li>Prompt the model to explain before answering</li>
+<li>Ask for justifications of many possible answers, and then synthesize</li>
+<li>Generate many outputs, and then use the model to pick the best one</li>
+<li>Fine-tune custom models to maximize performance</li>
+</ul>
+<h3 id="prompt-tuning">Prompt tuning<a class="headerlink" href="#prompt-tuning" title="Permanent link">&para;</a></h3>
+<p>Uses a layer to not change prompts but change the embedding of the prompts. 
+- <a href="https://arxiv.org/abs/2104.08691">The Power of Scale for Parameter-Efficient Prompt Tuning</a>
+Boosted Prompting: few shot prompts that progressively solve more of the problem.</p>
+<ul>
+<li></li>
+</ul>
+<h2 id="prompt-and-optimization">Prompt and optimization<a class="headerlink" href="#prompt-and-optimization" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/pdf/2210.11610.pdf">Large Language Models Can Self Improve</a> Using Chain of thought to provide better examples and then fine-tune the LLM. </li>
+<li>
+<p><a href="https://arxiv.org/pdf/2304.01904.pdf">Refiner</a> Iteratively improves itself based on an LLM critic
+<a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/3ac44e13-2444-4f1e-ae3b-800c9d32ce59" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="713" alt="image" src="https://github.com/ianderrington/general/assets/76016868/3ac44e13-2444-4f1e-ae3b-800c9d32ce59"></a></p>
+</li>
+<li>
+<p><a href="https://huggingface.co/spaces/merve/ChatGPT-prompt-generator">PROMPT generator</a> To save a few words by just entering a persona and igives prompt output. </p>
+</li>
+</ul>
+<h3 id="manual-prompt-optimization">Manual Prompt optimization<a class="headerlink" href="#manual-prompt-optimization" title="Permanent link">&para;</a></h3>
+<h3 id="auto-prompt-optimizations">Auto Prompt Optimizations<a class="headerlink" href="#auto-prompt-optimizations" title="Permanent link">&para;</a></h3>
+<p><a href="https://cameronrwolfe.substack.com/p/advanced-prompt-engineering">A good description of advanced prompt tuning</a>
+<div class="highlight"><pre><span></span><code>AutoPrompt [5] combines the original prompt input with a set of shared (across all input data) “trigger tokens” that are selected via a gradient-based search to improve performance.
+
+Prefix Tuning [6] adds several “prefix” tokens to the prompt embedding in both input and hidden layers, then trains the parameters of this prefix (leaving model parameters fixed) with gradient descent as a parameter-efficient fine-tuning strategy.
+
+Prompt Tuning [7] is similar to prefix tuning, but prefix tokens are only added to the input layer. These tokens are fine-tuned on each task that the language model solves, allowing prefix tokens to condition the model for a given task.
+
+P-Tuning [8] adds task-specific anchor tokens to the model’s input layer that are fine-tuned but allows these tokens to be placed at arbitrary locations (e.g., the middle of the prompt), making the approach more flexible than prefix tuning.
+
+[5] Shin, Taylor, et al. &quot;Autoprompt: Eliciting knowledge from language models with automatically generated prompts.&quot; arXiv preprint arXiv:2010.15980 (2020).
+
+[6] Li, Xiang Lisa, and Percy Liang. &quot;Prefix-tuning: Optimizing continuous prompts for a generation.&quot; arXiv preprint arXiv:2101.00190 (2021).
+
+[7] Lester, Brian, Rami Al-Rfou, and Noah Constant. &quot;The power of scale for parameter-efficient prompt tuning.&quot; arXiv preprint arXiv:2104.08691 (2021).
+
+[8] Liu, Xiao, et al. &quot;GPT understands, too.&quot; arXiv preprint arXiv:2103.10385 (2021).
+</code></pre></div></p>
 
 
   
@@ -1443,10 +1811,10 @@ talk codebase <a href="https://github.com/rsaryev/talk-codebase?utm_source=tldra
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
