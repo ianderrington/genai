@@ -86,10 +86,13 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
 * [Visual GPT](https://arxiv.org/pdf/2303.04671.pdf)
 * [Language is not all you need](https://arxiv.org/pdf/2302.14045.pdf)
+
 * [Meta-Transformer: A Unified Framework for Multimodal Learning](https://arxiv.org/abs/2307.10802) The first framework to perform unified learning across 12 modalities with unpaired data. It does so by learning an embedding that can be shared across the modalities. [Github](https://kxgong.github.io/meta_transformer/)
+<img width="849" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5d2e257-847e-4e48-b5b4-9899806eb8cf">
+
 
 ## Abstractions
-- [Looped Transformers and Programmable Computers](https://arxiv.org/pdf/2301.13196.pdf) Understanding that transformer networks can simulate complex algorithms when hardcoded with specific weights and made intoa  loop. 'Machine Learning' 'Machine code'. "We demonstrate that
+- [Looped Transformers and Programmable Computers](https://arxiv.org/pdf/2301.13196.pdf) Understanding that transformer networks can simulate complex algorithms when hardcoded with specific weights and made into a loop. 'Machine Learning' 'Machine code'. "We demonstrate that
 a constant number of encoder layers can emulate basic computing blocks, including embedding edit operations, non-linear functions, function calls, program counters, and conditional branches. Using these building blocks, we emulate a small instruction-set computer."
 
 
