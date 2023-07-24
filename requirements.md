@@ -21,3 +21,5 @@ mkdocs-exclude
 pillow
 cairosvg
 mkdocs-glightbox
+pypdf
+tiktoken

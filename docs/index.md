@@ -13,7 +13,8 @@ One of our main goals is to have this project written by **GenAI itself** 🚀, 
 We are aware this is an ambitious task, but we believe in the power of GenAI to **explain itself** in a way that everyone can understand and benefit from 💪. If you share our vision and would like to contribute, we warmly welcome your input. P
 
 
-lease follow these [**guidelines**](this_project/contributing.md) to create a PR. Together, let's push the boundaries of what we can do with GenAI! 🌍
+lease follow these [**guidelines**](Managing/contributing.md)
+to create a PR. Together, let's push the boundaries of what we can do with GenAI! 🌍
 
 !!! hint "Quick navigation"
     You can type `,` or `.` to go forward/backwards. You can also press `/` at any time and start searching for what you're looking for~
