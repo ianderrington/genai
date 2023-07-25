@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://managen.ai/Understanding/model_creation/classes/transformers.html">
       
       
-        <link rel="prev" href="diffusers.html">
+        <link rel="prev" href="gans.html">
       
       
         <link rel="next" href="../../prompt_engineering/prompting.html">
@@ -328,6 +328,8 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
       
       
+        
+          
         
           
         
@@ -761,6 +763,8 @@
         
           
         
+          
+        
       
       
         
@@ -780,6 +784,20 @@
           Classes
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gans.html" class="md-nav__link">
+        Gans
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -828,33 +846,19 @@
     Components
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references-and-research" class="md-nav__link">
-    References and Research
-  </a>
-  
-    <nav class="md-nav" aria-label="References and Research">
+    <nav class="md-nav" aria-label="Components">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-transformer-information" class="md-nav__link">
-    Basic Transformer information
+  <a href="#attention-models" class="md-nav__link">
+    Attention Models
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#positional-encoding" class="md-nav__link">
-    Positional Encoding
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#improvements" class="md-nav__link">
-    Improvements
+  <a href="#softmax" class="md-nav__link">
+    Softmax?
   </a>
   
 </li>
@@ -872,23 +876,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#improvements-and-optimizations" class="md-nav__link">
-    Improvements and Optimizations
+  <a href="#useful-references-and-research" class="md-nav__link">
+    Useful References and Research
   </a>
   
-    <nav class="md-nav" aria-label="Improvements and Optimizations">
+    <nav class="md-nav" aria-label="Useful References and Research">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#focusing-on-context-windows" class="md-nav__link">
-    Focusing on context-windows
+  <a href="#general-introductions" class="md-nav__link">
+    General Introductions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-reduce-compute" class="md-nav__link">
-    To reduce compute
+  <a href="#seminal-documents" class="md-nav__link">
+    Seminal documents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#positional-encoding" class="md-nav__link">
+    Positional Encoding
+  </a>
+  
+    <nav class="md-nav" aria-label="Positional Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modifications" class="md-nav__link">
+    Modifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improvements-optimizations-and-variations" class="md-nav__link">
+    Improvements, Optimizations, and variations.
+  </a>
+  
+    <nav class="md-nav" aria-label="Improvements, Optimizations, and variations.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computation-reduction" class="md-nav__link">
+    Computation Reduction
   </a>
   
 </li>
@@ -906,11 +950,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modality-variations" class="md-nav__link">
-    Modality variations
+  <a href="#other-modalities" class="md-nav__link">
+    Other modalities
   </a>
   
-    <nav class="md-nav" aria-label="Modality variations">
+    <nav class="md-nav" aria-label="Other modalities">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -927,6 +971,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-variations" class="md-nav__link">
+    Training variations
+  </a>
+  
+    <nav class="md-nav" aria-label="Training variations">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#fairness-enablement" class="md-nav__link">
     Fairness Enablement
@@ -935,8 +992,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#training-variations" class="md-nav__link">
-    Training variations
+  <a href="#using-knowledge-links" class="md-nav__link">
+    Using Knowledge Links
   </a>
   
 </li>
@@ -1011,8 +1068,6 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
       
       
-        
-          
         
           
         
@@ -1130,20 +1185,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../working_with_agents/implementation.html" class="md-nav__link">
-        Implementation
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -1165,6 +1206,12 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
       
       
+        
+          
+        
+          
+        
+          
         
           
         
@@ -1248,6 +1295,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../engineering_and_management/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../engineering_and_management/frameworks.html" class="md-nav__link">
         Frameworks
       </a>
@@ -1290,8 +1351,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../engineering_and_management/observability.html" class="md-nav__link">
+        Observability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../engineering_and_management/plugins.html" class="md-nav__link">
         Plugins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engineering_and_management/regulation.html" class="md-nav__link">
+        Regulation
       </a>
     </li>
   
@@ -1326,14 +1415,12 @@
         
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../ethics_and_regulation/ethics_and_regulation.html">Ethics and regulation</a>
+          <a href="../../ethics/ethics.html">Ethics</a>
           
             <label for="__nav_1_7">
               <span class="md-nav__icon md-icon"></span>
@@ -1344,7 +1431,7 @@
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7">
           <span class="md-nav__icon md-icon"></span>
-          Ethics and regulation
+          Ethics
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1354,7 +1441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ethics_and_regulation/alignment_and_exential_concerns.html" class="md-nav__link">
+      <a href="../../ethics/alignment_and_exential_concerns.html" class="md-nav__link">
         Alignment and exential concerns
       </a>
     </li>
@@ -1368,21 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ethics_and_regulation/ethics.html" class="md-nav__link">
-        Ethics
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ethics_and_regulation/fairness.html" class="md-nav__link">
+      <a href="../../ethics/fairness.html" class="md-nav__link">
         Fairness
       </a>
     </li>
@@ -1396,7 +1469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ethics_and_regulation/transparency.html" class="md-nav__link">
+      <a href="../../ethics/transparency.html" class="md-nav__link">
         Transparency
       </a>
     </li>
@@ -1406,6 +1479,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studies/studies.html" class="md-nav__link">
+        Studies
+      </a>
     </li>
   
 
@@ -1436,6 +1523,8 @@
         
           
         
+          
+        
       
       
         
@@ -1455,6 +1544,20 @@
           Managing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Managing/build_plan.html" class="md-nav__link">
+        Build plan
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1512,33 +1615,19 @@
     Components
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references-and-research" class="md-nav__link">
-    References and Research
-  </a>
-  
-    <nav class="md-nav" aria-label="References and Research">
+    <nav class="md-nav" aria-label="Components">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-transformer-information" class="md-nav__link">
-    Basic Transformer information
+  <a href="#attention-models" class="md-nav__link">
+    Attention Models
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#positional-encoding" class="md-nav__link">
-    Positional Encoding
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#improvements" class="md-nav__link">
-    Improvements
+  <a href="#softmax" class="md-nav__link">
+    Softmax?
   </a>
   
 </li>
@@ -1556,23 +1645,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#improvements-and-optimizations" class="md-nav__link">
-    Improvements and Optimizations
+  <a href="#useful-references-and-research" class="md-nav__link">
+    Useful References and Research
   </a>
   
-    <nav class="md-nav" aria-label="Improvements and Optimizations">
+    <nav class="md-nav" aria-label="Useful References and Research">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#focusing-on-context-windows" class="md-nav__link">
-    Focusing on context-windows
+  <a href="#general-introductions" class="md-nav__link">
+    General Introductions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-reduce-compute" class="md-nav__link">
-    To reduce compute
+  <a href="#seminal-documents" class="md-nav__link">
+    Seminal documents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#positional-encoding" class="md-nav__link">
+    Positional Encoding
+  </a>
+  
+    <nav class="md-nav" aria-label="Positional Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modifications" class="md-nav__link">
+    Modifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improvements-optimizations-and-variations" class="md-nav__link">
+    Improvements, Optimizations, and variations.
+  </a>
+  
+    <nav class="md-nav" aria-label="Improvements, Optimizations, and variations.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computation-reduction" class="md-nav__link">
+    Computation Reduction
   </a>
   
 </li>
@@ -1590,11 +1719,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modality-variations" class="md-nav__link">
-    Modality variations
+  <a href="#other-modalities" class="md-nav__link">
+    Other modalities
   </a>
   
-    <nav class="md-nav" aria-label="Modality variations">
+    <nav class="md-nav" aria-label="Other modalities">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1611,6 +1740,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-variations" class="md-nav__link">
+    Training variations
+  </a>
+  
+    <nav class="md-nav" aria-label="Training variations">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#fairness-enablement" class="md-nav__link">
     Fairness Enablement
@@ -1619,8 +1761,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#training-variations" class="md-nav__link">
-    Training variations
+  <a href="#using-knowledge-links" class="md-nav__link">
+    Using Knowledge Links
   </a>
   
 </li>
@@ -1665,40 +1807,70 @@
   <h1>Transformers</h1>
 
 <h2 id="transformers">Transformers<a class="headerlink" href="#transformers" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a></li>
+</ul>
 <h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
 <p>TODO: Describe transformers and components</p>
-<h2 id="references-and-research">References and Research<a class="headerlink" href="#references-and-research" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Attention: Query, Key, Vectors</li>
+<li>Positional Encoding</li>
+<li>Layer Normalization</li>
+</ol>
+<h3 id="attention-models">Attention Models<a class="headerlink" href="#attention-models" title="Permanent link">&para;</a></h3>
+<p>Layer normalization observaly improves results <a href="http://proceedings.mlr.press/v119/xiong20b/xiong20b.pdf">On Layer Normalization in the Transformer Architecture</a></p>
+<h3 id="softmax">Softmax?<a class="headerlink" href="#softmax" title="Permanent link">&para;</a></h3>
+<p>The softmax is dominantly researched activation function. There may be other activation functions that are better, such as the </p>
+<h3 id="gpt">GPT<a class="headerlink" href="#gpt" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://docs.google.com/presentation/d/1ZXFIhYczos679r70Yu8vV9uO6B1J0ztzeDxbnBxD1S0/mobilepresent?fbclid=IwAR18pR_Mf46mkZ1_E3NFOwYY2wVx0aATficgfh_GWZd29c_lWNRa4vK5zy8&amp;slide=id.g31364026ad_3_2">Amazing Presentation on Transformers</a></li>
+<li><a href="http://jalammar.github.io/illustrated-gpt2/">Illustrated GPT</a></li>
+<li><a href="https://jalammar.github.io/how-gpt3-works-visualizations-animations/">How GPT3 works</a>
+Excellent summary of the progress of GPT over time, revealing core components, optimizations, and essential variations to the major Foundation model architectures.</li>
 </ul>
-<h3 id="basic-transformer-information">Basic Transformer information<a class="headerlink" href="#basic-transformer-information" title="Permanent link">&para;</a></h3>
+<h2 id="useful-references-and-research">Useful References and Research<a class="headerlink" href="#useful-references-and-research" title="Permanent link">&para;</a></h2>
+<h3 id="general-introductions">General Introductions<a class="headerlink" href="#general-introductions" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Attention Is All you Need</a> Initial paper indicating that attention is very powerful and potential replacement of LLM architectures. </li>
-<li><a href="https://arxiv.org/pdf/1409.0473.pdf">Neural Machine Translation by Jointly Learning to Align and Translate</a> First paper indicating the notion of 'attention' sort of mechanism.</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1ZXFIhYczos679r70Yu8vV9uO6B1J0ztzeDxbnBxD1S0/mobilepresent?fbclid=IwAR18pR_Mf46mkZ1_E3NFOwYY2wVx0aATficgfh_GWZd29c_lWNRa4vK5zy8&amp;slide=id.g31364026ad_3_2">Transformers by Lucas Beyer (presentation)</a></p>
+</li>
+<li>
+<p><a href="https://finbarrtimbers.substack.com/p/five-years-of-progress-in-gpts?utm_source=substack&amp;utm_medium=email">Five years of progress in GPTs</a></p>
+</li>
+</ul>
+<h3 id="seminal-documents">Seminal documents<a class="headerlink" href="#seminal-documents" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a href="https://arxiv.org/pdf/1409.0473.pdf">Neural Machine Translation by Jointly Learning to Align and Translate</a> First paper indicating the notion of 'attention' sort of mechanism.</p>
+</li>
+<li>
+<p><a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Attention Is All you Need</a> Initial paper indicating that attention is very powerful and potential replacement of LLM architectures. </p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2207.09238.pdf">Formal Algorithms for Transformers in 2023</a>
+Important discussion revealing the components of Transformers.</p>
+</li>
 </ul>
 <h3 id="positional-encoding">Positional Encoding<a class="headerlink" href="#positional-encoding" title="Permanent link">&para;</a></h3>
 <p>This component helps to remove the impilcit position-independence that 'vanilla' attention methods have.  </p>
 <ul>
-<li><a href="https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/">A Gentle Introduction to Positional Encoding in Transformer Models, pt1</a></li>
+<li>
+<p><a href="https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/">A Gentle Introduction to Positional Encoding in Transformer Models, pt1</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2203.16634">Transformer Language Models without POsitional Encodings STill Learn Positional Information</a> Indications that causal LMS may derive positional awareness from more than the positional embeddings: they learn it from the causal mask. </p>
+</li>
 </ul>
-<h3 id="improvements">Improvements<a class="headerlink" href="#improvements" title="Permanent link">&para;</a></h3>
-<h3 id="gpt">GPT<a class="headerlink" href="#gpt" title="Permanent link">&para;</a></h3>
+<h4 id="modifications">Modifications<a class="headerlink" href="#modifications" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="http://jalammar.github.io/illustrated-gpt2/">Illustrated GPT</a></li>
-<li><a href="https://jalammar.github.io/how-gpt3-works-visualizations-animations/">How GPT3 works</a></li>
-<li><a href="https://finbarrtimbers.substack.com/p/five-years-of-progress-in-gpts?utm_source=substack&amp;utm_medium=email">Five years of progress in GPTs</a>
-Excellent summary of the progress of GPT over time, revealing core components, optimizations, and essential variations to the major Foundation model architectures.</li>
-<li><a href="https://arxiv.org/pdf/2207.09238.pdf">Formal Algorithms for Transformers in 2023</a>
-Important discussion revealing the components of Transformers.</li>
+<li><a href="https://aclanthology.org/2022.findings-aacl.42.pdf">A Simple yet Effective Learnable Positional Encoding Method for Improving Document Transformer Model</a> They introduce a learnable sinusoidal positional encoding feed forward network. Demonstrates significant improvements over other datasets. </li>
 </ul>
-<h2 id="improvements-and-optimizations">Improvements and Optimizations<a class="headerlink" href="#improvements-and-optimizations" title="Permanent link">&para;</a></h2>
-<h3 id="focusing-on-context-windows">Focusing on context-windows<a class="headerlink" href="#focusing-on-context-windows" title="Permanent link">&para;</a></h3>
+<h2 id="improvements-optimizations-and-variations">Improvements, Optimizations, and variations.<a class="headerlink" href="#improvements-optimizations-and-variations" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><a href="https://github.com/neuro-inc/ml-recipe-hier-attention"></a></p>
 </li>
 <li>
-<p><a href="https://arxiv.org/abs/2304.11062">Scaling Transformer to 1M tokens and beyond with RMT</a> <a href="https://github.com/booydar/t5-experiments/tree/scaling-report">Github</a> Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. </p>
+<p><a href="https://arxiv.or dsvg/abs/2304.11062">Scaling Transformer to 1M tokens and beyond with RMT</a> <a href="https://github.com/booydar/t5-experiments/tree/scaling-report">Github</a> Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. </p>
 </li>
 <li>
 <p>‼️<a href="https://arxiv.org/pdf/2305.07185.pdf">MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers</a> MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches</p>
@@ -1712,7 +1884,7 @@ Important discussion revealing the components of Transformers.</li>
  <a href="https://github.com/deep-spin/infinite-former">Github</a> <a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="left" alt="Infinity Former" loading="lazy" src="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" width="300" /></a></p>
 </li>
 </ul>
-<h3 id="to-reduce-compute">To reduce compute<a class="headerlink" href="#to-reduce-compute" title="Permanent link">&para;</a></h3>
+<h3 id="computation-reduction">Computation Reduction<a class="headerlink" href="#computation-reduction" title="Permanent link">&para;</a></h3>
 <p><a href="https://arxiv.org/pdf/2306.03078v1.pdf">SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression</a></p>
 <h3 id="fine-tuning">Fine Tuning<a class="headerlink" href="#fine-tuning" title="Permanent link">&para;</a></h3>
 <p>Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.</p>
@@ -1720,26 +1892,27 @@ Important discussion revealing the components of Transformers.</li>
 <li><a href="https://arxiv.org/pdf/2305.08298.pdf">Symbol Tuning Improves in-context learning in Language Models</a>
 <a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5"></a></li>
 </ul>
-<h2 id="modality-variations">Modality variations<a class="headerlink" href="#modality-variations" title="Permanent link">&para;</a></h2>
+<h2 id="other-modalities">Other modalities<a class="headerlink" href="#other-modalities" title="Permanent link">&para;</a></h2>
 <h3 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">&para;</a></h3>
 <h3 id="graphs">Graphs<a class="headerlink" href="#graphs" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://arxiv.org/pdf/2302.00049.pdf">Transformers Meet Directed Graphs</a> An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc"></a></li>
 </ul>
+<h2 id="training-variations">Training variations<a class="headerlink" href="#training-variations" title="Permanent link">&para;</a></h2>
 <h3 id="fairness-enablement">Fairness Enablement<a class="headerlink" href="#fairness-enablement" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://arxiv.org/pdf/2306.03819.pdf">Concept Erasure</a></li>
 </ul>
-<h3 id="training-variations">Training variations<a class="headerlink" href="#training-variations" title="Permanent link">&para;</a></h3>
+<h3 id="using-knowledge-links">Using Knowledge Links<a class="headerlink" href="#using-knowledge-links" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://github.com/michiyasunaga/LinkBERT">LinkBERT</a> places in the context window hyperlinked references to achieve better performance.  </li>
+<li><a href="https://github.com/michiyasunaga/LinkBERT">LinkBERT</a> places in the context window hyperlinked references to achieve better performance and is a drop-in replacement for BERT models. </li>
 </ul>
 <h3 id="multimodal">Multimodal<a class="headerlink" href="#multimodal" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://arxiv.org/pdf/2303.04671.pdf">Visual GPT</a></li>
 <li><a href="https://arxiv.org/pdf/2302.14045.pdf">Language is not all you need</a></li>
-<li><a href="https://arxiv.org/abs/2307.10802">Meta-Transformer: A Unified Framework for Multimodal Learning</a> The first framework to perform unified learning across 12 modalities with unpaired data. It does so by learning an embedding that can be shared across the modalities. <a href="https://kxgong.github.io/meta_transformer/">Github</a></li>
+<li><a href="https://arxiv.org/abs/2307.10802">Meta-Transformer: A Unified Framework for Multimodal Learning</a> The first framework to perform unified learning across 12 modalities with unpaired data. It does so by learning an embedding that can be shared across the modalities. <a href="https://kxgong.github.io/meta_transformer/">Github</a> </li>
 </ul>
 <h2 id="abstractions">Abstractions<a class="headerlink" href="#abstractions" title="Permanent link">&para;</a></h2>
 <ul>

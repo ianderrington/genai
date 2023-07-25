@@ -12,20 +12,20 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/engineering_and_management/deployment.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/engineering_and_management/observability.html">
       
       
-        <link rel="prev" href="computation.html">
+        <link rel="prev" href="models.html">
       
       
-        <link rel="next" href="examples.html">
+        <link rel="next" href="plugins.html">
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Deployment - Gen()AI</title>
+        <title>Observability - Gen()AI</title>
       
     
     
@@ -99,11 +99,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#front-end-interfaces" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -135,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deployment
+              Observability
             
           </span>
         </div>
@@ -1064,75 +1059,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Deployment
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="deployment.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="deployment.html" class="md-nav__link">
         Deployment
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#front-end-interfaces" class="md-nav__link">
-    Front End Interfaces
-  </a>
-  
-    <nav class="md-nav" aria-label="Front End Interfaces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#open-source-methods" class="md-nav__link">
-    Open source methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
-    Plugins
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#back-end" class="md-nav__link">
-    Back-End
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1198,11 +1129,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="observability.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="observability.html" class="md-nav__link md-nav__link--active">
         Observability
       </a>
+      
     </li>
   
 
@@ -1446,48 +1385,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#front-end-interfaces" class="md-nav__link">
-    Front End Interfaces
-  </a>
-  
-    <nav class="md-nav" aria-label="Front End Interfaces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#open-source-methods" class="md-nav__link">
-    Open source methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
-    Plugins
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#back-end" class="md-nav__link">
-    Back-End
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1504,32 +1401,17 @@
   
 
 
-  <h1>Deployment</h1>
+  <h1>Observability</h1>
 
-<h2 id="front-end-interfaces">Front End Interfaces<a class="headerlink" href="#front-end-interfaces" title="Permanent link">&para;</a></h2>
-<p>People have to access it to be useful</p>
-<h3 id="open-source-methods">Open source methods<a class="headerlink" href="#open-source-methods" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://blog.streamlit.io/langchain-streamlit/">Streamlit</a></li>
-<li><a href="https://github.com/melih-unsal/DemoGPT">DemoGPT</a> Connects Langchain and streamlit to create dynamic apps that can be repeatedly used for interacting with Chat- GPTs. </li>
-</ul>
-<h3 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h3>
-<p>Plugins are can enable connection of GenAI with input media, often via web interfaces</p>
-<ul>
-<li>
-<p><a href="http://miniwob.farama.org/">Mini Wob++</a> For web interactive environments for accomplishing different tasks. Quite useful.</p>
-</li>
-<li>
-<p>️<a href="https://chrome.google.com/webstore/detail/chatgpt-prompt-genius/jjdnakkfjnnbbckhifcfchagnpofjffo">Prompt Genius</a></p>
-</li>
-<li>
-<p><a href="https://github.com/lm-sys/FastChat/blob/main/fastchat/conversation.py">FastChat Conversation</a> This very nice 'multi model' chat interface class allows for effective translation between different models.</p>
-</li>
-</ul>
-<h2 id="back-end">Back-End<a class="headerlink" href="#back-end" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://app.maxai.me/my-plan">MaxAI.me</a> A nice chrome pluging + eventual system  that makes your openAI connect to data more directly.</li>
-</ul>
+<p>🚧 This section is under construction 🏗️</p>
+<p>GenAI observability is essential to monitoring the quality of the output. </p>
+<p>Observability aims to track:</p>
+<ol>
+<li>Models, Functions, and utilized software+hardware infrastructure. </li>
+<li>Inputs</li>
+<li>Outputs</li>
+<li>Inference costs and speeds</li>
+</ol>
 
 
   
