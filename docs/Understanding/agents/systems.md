@@ -6,7 +6,9 @@ When an agent (or model) interacts with a different agent in some way, it become
 !!! example "Multi-body system (bidirectional calling)"
     A group of agents discussing their daily affairs and getting periodic environmental updates, like [this paper](https://arxiv.org/pdf/2304.03442.pdf)
 
-### Multi-Agentic Systems
+## Examples
+
+- [Self-play GPT](https://arxiv.org/pdf/2305.10142.pdf) Uses different LLMs and different roles to provide feedback on how to improve and enable autonomous improvement while game playing. 
 
 - [Can Language Models Teach Weaker Agents? Teacher Explanations Improve Students via Theory of Mind](https://arxiv.org/pdf/2306.09299.pdf) Uses Theory fo Mind to try to improve student performance. [Github](https://github.com/swarnaHub/ExplanationIntervention)
 
@@ -23,7 +25,14 @@ When an agent (or model) interacts with a different agent in some way, it become
 
     _Recursive Planning_ used to generate the day into several chunks of goals. These are then broken down to smaller timespaces. Plans can change based on interactions. (perhaps present status, planned and past) 
 
-#### Optimizations
 
 - [Multi-Agent Collaboration via Reward Attribution Decomposition](https://arxiv.org/abs/2010.08531)
     Describes optimization of multi agent with distributed reward systems to get SOA performance. It is a joint optimization allowing decentralized Q-function that relies on _self_ and _interactive_ terms. 
+
+
+- ‼️ (Open source + product) [Super-AGI](https://github.com/TransformerOptimus/SuperAGI)  --> Seemingly better than SuperAGI because more tools accessible and GUI. Allows multiple agents (no communication though)
+
+
+- [GPT-Bargaining](https://github.com/FranxYao/GPT-Bargaining) Uses multiple rounds to improve negotiation tactics based on external feedback. (Manager-like)
+- ‼️[RL4L Allen ai](https://arxiv.org/pdf/2305.08844.pdf) Uses smaller critique model feedback to improve larger model output with a policy gradient to fine-tune the critique model while allowing reasonable performance gains. [Github](https://github.com/allenai/RL4LMs)
+

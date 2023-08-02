@@ -31,6 +31,7 @@ Multi-model chains.
 
 
 
+
 ## Resources
 
 - [Chain of thought hub](https://github.com/FranxYao/chain-of-thought-hub)
@@ -38,7 +39,7 @@ Multi-model chains.
 ## Concepts
 
 ### Thought Structures
-
+- [Skeleton of Thought](https://huggingface.co/papers/2307.15337) A fun structure that resembles thoughtful creation of answers allowing for parallelization and hence speedup, with comparable or better results in answer generation. 
 - [Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291) [Github](https://github.com/jieyilong/tree-of-thought-puzzle-solver)
 - ‼️[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601) [Github](https://github.com/ysymyth/tree-of-thought-llm)
 IDEA: Write Tree of Thoughts into Langchain?

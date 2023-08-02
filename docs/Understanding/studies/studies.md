@@ -8,4 +8,4 @@ It is debated that sufficiently large models exhibit 'emergence'. While not alwa
 ## References
 
 
-[Transformers learn through gradual rank increase](https://huggingface.co/papers/2306.07042) They "identify incremental learning dynamics in transformers, where the difference between trained and initial weights progressively increases in rank. We rigorously prove this occurs under the simplifying assumptions of diagonal weight matrices and small initialization. Our experiments support the theory and also show that phenomenon can occur in practice without the simplifying assumptions."
+- [Transformers learn through gradual rank increase](https://huggingface.co/papers/2306.07042) They "identify incremental learning dynamics in transformers, where the difference between trained and initial weights progressively increases in rank. We rigorously prove this occurs under the simplifying assumptions of diagonal weight matrices and small initialization. Our experiments support the theory and also show that phenomenon can occur in practice without the simplifying assumptions."

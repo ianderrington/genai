@@ -3,6 +3,7 @@ nav:
     - data
     - model_creation
     - prompt_engineering
-    - working_with_agents
+    - agents
     - engineering_and_management
-    - ethics_and_regulation
+    - ethics
+    - studies

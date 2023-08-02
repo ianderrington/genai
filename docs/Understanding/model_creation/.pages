@@ -1,3 +1,9 @@
 nav:
-    - Models: model_creation.md
-    - ...
+    - index.md
+    - models.md
+    - training.md
+    - distillation.md
+    - evaluation.md
+    - alignment.md
+    - classes
+

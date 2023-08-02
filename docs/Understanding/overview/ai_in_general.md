@@ -1,4 +1,5 @@
-## Here we provide selected references to frameworks and solutions surrounding AI in general
+
+Here we provide selected references to frameworks and solutions surrounding AI in general
 
 ## Frameworks
 - [Catalyst](https://github.com/catalyst-team/catalyst) Framework for boiler-plate minimal ML calling using pytorch. Enabled [heirarchichal Attention networks](https://github.com/neuro-inc/ml-recipe-hier-attention)

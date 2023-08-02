@@ -18,4 +18,7 @@ Llama is Meta's now open-source model. Llama 2 is MIT and free for commercial us
 - [For Llama](https://github.com/Lightning-AI/lit-llama)
 - [MedAlpaca](https://github.com/kbressem/medAlpaca)
 
+- [Llama-2 on a CPU](https://towardsdatascience.com/running-llama-2-on-cpu-inference-for-document-q-a-3d636037a3d8) and [Github](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
+
 ##
+
