@@ -2,16 +2,13 @@ Data is the most important part of training any model.
 
 Data can be 'real' or 'simulated', though there is general consensus that simulated data can lead to worse models. 
 
-
-
-
 ## Simulated
 
 - [“Textbooks are all you need”](https://arxiv.org/pdf/2306.11644.pdf) A to-be opensourced high-quality model by Microsoft revealing the importance of high-quality input data. only used 4 days on 8 A-100s to train to reach out-performing results. (It also uses a lot of simulated data). Coding-focused model. 
 
 ## LLM-extraction
 
-- ‼️[Kor](https://github.com/eyurtsev/kor) For extracting strucutred data using LLMs.
+- ‼️[Kor](https://github.com/eyurtsev/kor) For extracting structured data using LLMs.
 
 
 ### Scaling Laws

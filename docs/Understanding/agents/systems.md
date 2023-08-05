@@ -30,9 +30,10 @@ When an agent (or model) interacts with a different agent in some way, it become
     Describes optimization of multi agent with distributed reward systems to get SOA performance. It is a joint optimization allowing decentralized Q-function that relies on _self_ and _interactive_ terms. 
 
 
-- ‼️ (Open source + product) [Super-AGI](https://github.com/TransformerOptimus/SuperAGI)  --> Seemingly better than SuperAGI because more tools accessible and GUI. Allows multiple agents (no communication though)
+- [Super-AGI](https://github.com/TransformerOptimus/SuperAGI)  Allows multiple agents (no communication though)
 
 
-- [GPT-Bargaining](https://github.com/FranxYao/GPT-Bargaining) Uses multiple rounds to improve negotiation tactics based on external feedback. (Manager-like)
-- ‼️[RL4L Allen ai](https://arxiv.org/pdf/2305.08844.pdf) Uses smaller critique model feedback to improve larger model output with a policy gradient to fine-tune the critique model while allowing reasonable performance gains. [Github](https://github.com/allenai/RL4LMs)
+- [GPT-Bargaining](https://github.com/FranxYao/GPT-Bargaining) Uses multiple rounds to improve negotiation tactics based on external feedback. 
+
+- [RL4L Allen ai](https://arxiv.org/pdf/2305.08844.pdf) Uses smaller critique model feedback to improve larger model output with a policy gradient to fine-tune the critique model while allowing reasonable performance gains. [Github](https://github.com/allenai/RL4LMs)
 

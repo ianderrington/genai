@@ -53,10 +53,12 @@ IDEA: Write Tree of Thoughts into Langchain?
 - [Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031) A 'logical guide' tool that an LLM can use. It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
 
 ## Enhancements
+
 - ‼️ [EmbedChain](https://github.com/embedchain/embedchain) Creates embeddings for bots to be used. 
 
 
 ## Implementation Frameworks
+
 ### Langchain
 - ‼️[Langchain](https://python.langchain.com/en/latest/#) A primative python or javascript based primitive 'LLM' language that enables planned and agentic AI.
   - ‼️[Langflow](https://github.com/logspace-ai/langflow) 
