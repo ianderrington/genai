@@ -1,0 +1,9 @@
+nav:
+    - data.md
+    - sources.md
+    - preprocessing.md
+    - tokenizing.md
+    - embedding.md
+    - quality.md
+    - privacy.md
+    - ...
