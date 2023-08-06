@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://managen.ai/Understanding/data/tokenizing.html">
       
       
-        <link rel="prev" href="sources.html">
+        <link rel="prev" href="preprocessing.html">
       
       
-        <link rel="next" href="../model_creation/index.html">
+        <link rel="next" href="embedding.html">
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
@@ -346,7 +346,11 @@
           
         
           
+            
+          
         
+          
+            
           
         
           
@@ -534,22 +538,8 @@
   
   
     <li class="md-nav__item">
-      <a href="augmentation.html" class="md-nav__link">
-        Augmentation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="embeddings.html" class="md-nav__link">
-        Embeddings
+      <a href="sources.html" class="md-nav__link">
+        Sources
       </a>
     </li>
   
@@ -564,48 +554,6 @@
     <li class="md-nav__item">
       <a href="preprocessing.html" class="md-nav__link">
         Preprocessing
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="privacy.html" class="md-nav__link">
-        Privacy
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="quality.html" class="md-nav__link">
-        Quality
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="sources.html" class="md-nav__link">
-        Sources
       </a>
     </li>
   
@@ -682,13 +630,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#significance-of-embeddings" class="md-nav__link">
-    Significance of Embeddings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tools" class="md-nav__link">
     Tools
   </a>
@@ -696,8 +637,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#essential-references" class="md-nav__link">
-    Essential References
+  <a href="#open-source-tokenizers" class="md-nav__link">
+    Open Source Tokenizers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -706,6 +654,62 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="embedding.html" class="md-nav__link">
+        Embedding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quality.html" class="md-nav__link">
+        Quality
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="privacy.html" class="md-nav__link">
+        Privacy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="augmentation.html" class="md-nav__link">
+        Augmentation
+      </a>
     </li>
   
 
@@ -805,6 +809,8 @@
         
           
         
+          
+        
       
       
         
@@ -887,6 +893,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../agents/interpreters.html" class="md-nav__link">
+        Interpreters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../agents/environments.html" class="md-nav__link">
         Environments
       </a>
@@ -956,7 +976,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../engineering_and_management/engineering_and_management.html">Engineering and management</a>
+          <a href="../enablement/index.html">Enablement</a>
           
             <label for="__nav_1_6">
               <span class="md-nav__icon md-icon"></span>
@@ -967,7 +987,7 @@
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_6">
           <span class="md-nav__icon md-icon"></span>
-          Engineering and management
+          Enablement
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -977,91 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../engineering_and_management/commercial_products.html" class="md-nav__link">
-        Platforms
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../engineering_and_management/computation.html" class="md-nav__link">
-        Computation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../engineering_and_management/deployment.html" class="md-nav__link">
-        Deployment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../engineering_and_management/examples.html" class="md-nav__link">
-        Examples
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../engineering_and_management/frameworks.html" class="md-nav__link">
-        Frameworks
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../engineering_and_management/genai_detection.html" class="md-nav__link">
-        Genai detection
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../engineering_and_management/models.html" class="md-nav__link">
+      <a href="../enablement/models.html" class="md-nav__link">
         Models
       </a>
     </li>
@@ -1075,7 +1011,77 @@
   
   
     <li class="md-nav__item">
-      <a href="../engineering_and_management/observability.html" class="md-nav__link">
+      <a href="../enablement/frameworks.html" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enablement/deployment.html" class="md-nav__link">
+        Deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enablement/commercial_products.html" class="md-nav__link">
+        Platforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enablement/computation.html" class="md-nav__link">
+        Computation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enablement/marking_and_detecting.html" class="md-nav__link">
+        Marking and detecting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enablement/observability.html" class="md-nav__link">
         Observability
       </a>
     </li>
@@ -1089,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../engineering_and_management/plugins.html" class="md-nav__link">
+      <a href="../enablement/plugins.html" class="md-nav__link">
         Plugins
       </a>
     </li>
@@ -1103,8 +1109,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../engineering_and_management/regulation.html" class="md-nav__link">
+      <a href="../enablement/regulation.html" class="md-nav__link">
         Regulation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enablement/examples.html" class="md-nav__link">
+        Examples
       </a>
     </li>
   
@@ -1144,7 +1164,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../ethics/ethics.html">Ethics</a>
+          <a href="../ethical_concerns/index.html">Ethical concerns</a>
           
             <label for="__nav_1_7">
               <span class="md-nav__icon md-icon"></span>
@@ -1155,7 +1175,7 @@
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7">
           <span class="md-nav__icon md-icon"></span>
-          Ethics
+          Ethical concerns
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1165,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ethics/alignment_and_exential_concerns.html" class="md-nav__link">
+      <a href="../ethical_concerns/alignment_and_exential_concerns.html" class="md-nav__link">
         Alignment and exential concerns
       </a>
     </li>
@@ -1179,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ethics/fairness.html" class="md-nav__link">
+      <a href="../ethical_concerns/fairness.html" class="md-nav__link">
         Fairness
       </a>
     </li>
@@ -1193,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ethics/transparency.html" class="md-nav__link">
+      <a href="../ethical_concerns/transparency.html" class="md-nav__link">
         Transparency
       </a>
     </li>
@@ -1378,13 +1398,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#significance-of-embeddings" class="md-nav__link">
-    Significance of Embeddings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tools" class="md-nav__link">
     Tools
   </a>
@@ -1392,8 +1405,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#essential-references" class="md-nav__link">
-    Essential References
+  <a href="#open-source-tokenizers" class="md-nav__link">
+    Open Source Tokenizers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -1453,20 +1473,33 @@
 </table>
 <h2 id="multimodal-tokenization">Multimodal Tokenization<a class="headerlink" href="#multimodal-tokenization" title="Permanent link">&para;</a></h2>
 <p>Multimodal tokenization is an area of tokenization that focuses on incorporating multiple data forms or modes. This facet of tokenization has seen remarkable strides. <a href="https://arxiv.org/pdf/2306.00238.pdf">Bytes are all you need</a>—a study utilizing transformer technology to input file bytes directly—demonstrates that multimodal tokenization can assist in improving the AI's performance accuracy. The researchers in the study developed ByteFormer, a model based on their study’s findings that can be accessed <a href="https://github.com/apple/ml-cvnets/tree/main/examples/byteformer">here</a>.</p>
-<h2 id="significance-of-embeddings">Significance of Embeddings<a class="headerlink" href="#significance-of-embeddings" title="Permanent link">&para;</a></h2>
-<p>Embeddings play a key role in AI as they translate tokens into numerical representation that can be processed by the AI. 'What are Embeddings' is an essential <a href="http://vickiboykis.com/what_are_embeddings/">read</a> that elucidates the concept of embeddings in a digestible manner. For a deeper dive, check the accompanied <a href="https://github.com/veekaybee/what_are_embeddings/blob/main/README.md">Github</a> page.</p>
 <h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
-<p>Examples of coding tools that facilitate tokenization include <a href="https://github.com/openai/tiktoken">Tiktoken</a> which utilizes Byte Pair Encoding (BPE) for tokenization and is purportedly used in GPT models. An alternative tool is <a href="https://github.com/alasdairforsythe/tokenmonster">Token Monster</a>, which takes a unique top-down approach and results in almost 35% less tokens as opposed to the standard bottom-up approach.</p>
-<h2 id="essential-references">Essential References<a class="headerlink" href="#essential-references" title="Permanent link">&para;</a></h2>
+<p>Examples of coding tools that facilitate tokenization include <a href="https://github.com/openai/tiktoken">Tiktoken</a> which utilizes Byte Pair Encoding (BPE) for tokenization and is purportedly used in GPT models. An alternative tool is <sup id="fnref:n1"><a class="footnote-ref" href="#fn:n1">2</a></sup>, which takes a unique top-down approach and results in almost 35% less tokens as opposed to the standard bottom-up approach.</p>
+<h2 id="open-source-tokenizers">Open Source Tokenizers<a class="headerlink" href="#open-source-tokenizers" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/google/sentencepiece">Sentence Piece</a> implements subword units (e.g., byte-pair-encoding (BPE) ) and unigram language model <sup id="fnref:kudo"><a class="footnote-ref" href="#fn:kudo">1</a></sup></li>
+<li><a href="https://github.com/openai/tiktoken">Tiktoken</a></li>
+<li><a href="https://github.com/alasdairforsythe/tokenmonster">Token Monster</a></li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://arxiv.org/abs/1508.07909">Neural Machine Translation of Rare Words with Subword Units</a></li>
 <li><a href="https://arxiv.org/pdf/2306.00238.pdf">Bytes are all you need</a></li>
-<li><a href="https://github.com/openai/tiktoken">Tiktoken</a></li>
-<li><a href="https://github.com/apple/ml-cvnets/tree/main/examples/byteformer">ByteFormer Github</a></li>
-<li><a href="https://github.com/alasdairforsythe/tokenmonster">Token Monster</a></li>
-<li>️<a href="http://vickiboykis.com/what_are_embeddings/">What are Embeddings</a><a href="https://github.com/veekaybee/what_are_embeddings/blob/main/README.md">Github</a></li>
-<li><a href="https://github.com/veekaybee/what_are_embeddings/blob/main/README.md">Github page on Embeddings</a></li>
+<li><a href="https://github.com/apple/ml-cvnets/tree/main/examples/byteformer">ByteFormer Github</a>
+<a href="http://vickiboykis.com/what_are_embeddings/">What are Embeddings</a><a href="https://github.com/veekaybee/what_are_embeddings/blob/main/README.md">Github</a></li>
 </ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:kudo">
+<p><a href="https://arxiv.org/pdf/1804.10959.pdf">Kudo</a> "subword regularization,
+which trains the model with multiple subword segmentations probabilistically sampled during training". Effectively, this takes aliasing-like effects that cause different tokenization. It is more effective because it breaks it down in different ways.&#160;<a class="footnote-backref" href="#fnref:kudo" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:n1">
+<p><a href="https://github.com/alasdairforsythe/tokenmonster">Token Monster</a>&#160;<a class="footnote-backref" href="#fnref:n1" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
   
