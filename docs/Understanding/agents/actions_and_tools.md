@@ -25,5 +25,7 @@ Toolkits consist of tool pearings that often work together well. For instance, b
 
 !!! references
     - [Langchain Toolkits](https://github.com/langchain-ai/langchain/tree/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent_toolkits)
-    - [Tool LLM](https://huggingface.co/papers/2307.16789) Which describes a novel approach enabling over 16000 API's to be called through an intelligent routing mechanism. [Github](https://github.com/OpenBMB/ToolBench)
+    - [Tool LLM](https://huggingface.co/papers/2307.16789) This describes a novel approach enabling over 16000 API's to be called through an intelligent routing mechanism. [Github](https://github.com/OpenBMB/ToolBench) Uses RapidAPI connector to do so. 
+    <img width="971" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/65e22011-f815-4f19-8d78-24bc2c731b08">
     - [Gorilla](https://github.com/ShishirPatil/gorilla) A Llama-focused high-quality API calling methods. 
+    

@@ -14,13 +14,12 @@ This needs to be cleaned up and expanded. It needs to be made into a table. It n
 ## Text Oriented
 * [Bard](https://bard.google.com/)
 * [Claud]()
-* [ChatGPT](https://openai.com/blog/chatgpt)
+* [ChatGPT (OpenAI)](https://openai.com/blog/chatgpt)
 * [Medpalm](https://arxiv.org/abs/2212.13138)
-* [Llama](https://github.com/facebookresearch/llama) (Non-commercial ??)
+* [Llama2](https://ai.meta.com/llama/)(Not completely open source.)
 * [Open Llama](https://github.com/openlm-research/open_llama) (Non-commercial ??)
 * [UAE Falcon](https://www.tii.ae/news/uaes-falcon-40b-now-royalty-free) (Apache License)
-
-
+* [Orca (Microsoft)](https://arxiv.org/pdf/2306.02707.pdf) (Not yet released)
 * [MosaicML](https://www.mosaicml.com/blog/long-context-mpt-7b-8k)
 
 
