@@ -5,8 +5,6 @@ Such efforts can be used to reduce input complexity, token-count, to detect pote
 !!! example "Link Routing"
     A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output. 
 
-## References
-
 ### Input Interpreters
 
 - [Strategic Reasoning with Language Models](https://arxiv.org/abs/2305.19165?utm_source=substack&utm_medium=email) Uses game trees and observed and inferred beliefs to achieve closer to optimal results. Powerful to consider for inferred beliefs and interacting in situations where negotiation or games are being played.

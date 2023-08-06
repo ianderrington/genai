@@ -14,3 +14,6 @@ Data can be 'real' or 'simulated', though there is general consensus that simula
 ### Scaling Laws
 - [The 'Chinchilla' paper of 2022](https://arxiv.org/abs/2203.15556) This paper identifies scaling laws that help to understand the volume of data that is needed to obtain 'optimal' performance for a given LLM models size. Use of it in other areas, such as for Llama reveals that the models may have been under-trained.
   - Primary takeaway: **"All three approaches suggest that as compute budget increases, model size and the amount of training data should be increased in approximately equal proportions." **
+
+!!! references
+    - [Github page on Embeddings](https://github.com/veekaybee/what_are_embeddings/blob/main/README.md)

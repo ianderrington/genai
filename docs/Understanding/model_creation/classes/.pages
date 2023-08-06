@@ -1,0 +1,4 @@
+nav:
+    - transformers.md
+    - diffusers.md
+    - gans.md

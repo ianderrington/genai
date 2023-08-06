@@ -8,7 +8,7 @@ Similar to bots, or other computerized automota, they may have the ability to ru
 * [Models](../model_creation/index.md): The 'intelligent' component returns an output for a given input. 
 * Input [prompts](../prompt_engineering/prompting.md) that orient's and agent's response. 
 * [Memory](./memory.md) to enable writing and reading information that may be of use. 
-* [Tools](./tools.md) that enable more than text (or images) to be returned or otherwise acted upon. 
+* [Tools](./actions_and_tools.md) that enable more than text (or images) to be returned or otherwise acted upon. 
 * [Interpreters](./interpreters.md) that are used to process input or output. 
 * [Chains](./chains.md) which enable continuous flow of information, including memory, to downstream tasks. 
 * Agents can be quite different! Here are some [examples](./examples.md) of agents made both in academic and commercial settings. 
@@ -25,7 +25,7 @@ Before we go on, there are several references that are of high merit that you ma
 
 Models provide the computational core of Agents. Acting like a 'brain' that atakes in input [prompts](#prompts) they return outputs. Generally the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation as with [distillation](../model_creation/distillation.md) 
 
-We describe models thoroughly in an educational manner [here](../model_creation/index.md) and in an applied manner [here](../engineering_and_management/models.md). 
+We describe models thoroughly in an educational manner [here](../model_creation/index.md) and in an applied manner [here](../enablement/models.md). 
 
 ## [Prompts](../prompt_engineering/prompting.md)
 
@@ -38,7 +38,7 @@ Because of the importance and breadth of details involved with prompting, please
 
 Like people, agents can be better enabled when they have access to memory.  We discuss memory thoroughly [here](./memory.md).
 
-## [Tools](./tools.md)
+## [Tools](./actions_and_tools.md)
 
 ## [Interpreters](./interpreters.md)
 

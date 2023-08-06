@@ -90,7 +90,7 @@ def save_content(url, save_path, overwrite=False, reclone=False):
 
 
 def is_local_file(link):
-    """Check if the link is a local file or an endpoint"""
+    """Check if the link is a local file or an endpoint""" 
     return bool(urlparse(link).netloc)
 
 

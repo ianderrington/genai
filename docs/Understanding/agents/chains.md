@@ -61,12 +61,11 @@ IDEA: Write Tree of Thoughts into Langchain?
 
 ### Langchain
 - ‼️[Langchain](https://python.langchain.com/en/latest/#) A primative python or javascript based primitive 'LLM' language that enables planned and agentic AI.
-  - ‼️[Langflow](https://github.com/logspace-ai/langflow) 
-  - ‼️[Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
-  -   - ‼️[Toolkit](https://www.toolkit.club/) Generates LangChain plugins
+- ‼️[Langflow](https://github.com/logspace-ai/langflow) 
+- ‼️[Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
+- ‼️[Toolkit](https://www.toolkit.club/) Generates LangChain plugins
 
 #### Tutorials
-
   - https://www.pinecone.io/learn/langchain-prompt-templates/
   - https://learn.deeplearning.ai/langchain/lesson/3/memory
 

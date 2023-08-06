@@ -1,4 +1,4 @@
-Here we discuss models / architecture, and not models that are trained and released. Please see the [Available Models](../engineering_and_management/models.md) for specific maners of both using or creating models. 
+Here we discuss models / architecture, and not models that are trained and released. Please see the [Available Models](../enablement/models.md) for specific maners of both using or creating models. 
 
 Genrative AI models are of two general categories. Self-supervised, and Externally-supervised, and hybrid models. Often times self-supervised models then pass into external-supervision to improve the quality of the output.
 

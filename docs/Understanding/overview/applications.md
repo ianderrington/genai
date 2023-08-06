@@ -14,11 +14,11 @@ This is important for memory recall with imperfect inputs, and for action routin
 
 ### Knowledge graph building
 
-Codebases:
+
 - [GPT for knowledge graphs](https://medium.com/@m-elbably/gpt-graph-a-simple-tool-for-knowledge-graph-exploration-70e0e3861716) and [Github](https://github.com/m-elbably/gpt-graph)
 
+- [Ontology mapping](https://medium.com/@peter.lawrence_47665/encouraging-results-for-knowledge-graph-extraction-by-llm-ontology-prompting-60a7e5dcaf0a)
 
-- [Learning to Walk with Dual Agents for Knowledge Graph Reasoning]
 
 ### Prose Generation
 
@@ -73,12 +73,14 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 
 - [CLAIRIFY](https://ac-rad.github.io/clairify/) Translates English to domain-specific languages like robots. 
   - https://arxiv.org/abs/2303.14100
+- [RT-2](https://robotics-transformer2.github.io/assets/rt2.pdf) An impressive demonstration of multi-step fusing (PaLI-X) and Pathways Language model Embodied (PaLM-E) as components of it. 
 
 
 ### Healthcare
 
 - [Health system-scale language models are all-purpose prediction engines](https://www.nature.com/articles/s41586-023-06160-y) Uses LLM based system to integrate real time clinical workflows with note-writing and electronic ordering. Generally quite-performant and. a great indication of how they could be used to predict things such as readmission rates, and many other applications. 
 
+- [LLMs encode clinical knowledge](https://www.nature.com/articles/s41586-023-06291-2)
 ### Chemistry
 
 - [Grammar-Induced Geometry for Data-Efficient Molecular Property Prediction](https://openreview.net/pdf?id=SGQi3LgFnqj) A quality framework using heirarchichal metagraphs to stitch-together molecular nodes resulting in leaves that are 'actual' molecules. Using graph neural-diffusion, it does amazingly well even with minimal data-sets (100 examples).

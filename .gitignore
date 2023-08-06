@@ -8,4 +8,4 @@ site/
 *__pycache__*
 *lib*
 */output*
-
+*.obsidian*
