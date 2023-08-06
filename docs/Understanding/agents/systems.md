@@ -7,7 +7,7 @@ When an agent (or model) interacts with a different agent in some way, it become
     A group of agents discussing their daily affairs and getting periodic environmental updates, like [this paper](https://arxiv.org/pdf/2304.03442.pdf)
 
 ## Examples
-- [MetaGPT](https://github.com/geekan/MetaGPT) An amazing solution that allows for interacting agents. 
+- [MetaGPT](https://github.com/geekan/MetaGPT) An solid partial solution that allows for interacting agents to construct reasonable output based on different persona and tasks. Look into the code for this one!
 
 - [Self-play GPT](https://arxiv.org/pdf/2305.10142.pdf) Uses different LLMs and different roles to provide feedback on how to improve and enable autonomous improvement while game playing. 
 

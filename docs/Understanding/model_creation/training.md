@@ -2,7 +2,8 @@ Basics: [Distributed Training](https://neptune.ai/blog/distributed-training)
 https://neptune.ai/blog/distributed-training-frameworks-and-tools
 
 - [LLM Engineering by Huyen Chip](https://huyenchip.com/2023/04/11/llm-engineering.html)
-- [The whole training process by Huyen Chip](https://huyenchip.com/2023/05/02/rlhf.html)
+
+## RLHF
 
 ## Frameworks
 
@@ -29,8 +30,8 @@ Adapters are efficient and performant layers that can optimize performance witho
 
 
 ## RLHF
-
-- ‼️ [RLHF basics by hugging face](https://huggingface.co/blog/rlhf) A realy good intro to parse again.
+- [The whole training process by Huyen Chip](https://huyenchip.com/2023/05/02/rlhf.html)
+- [RLHF basics by hugging face](https://huggingface.co/blog/rlhf) A realy good intro to parse again.
 - [RLHF for Palm in Pytorch](https://github.com/lucidrains/PaLM-rlhf-pytorch)
 - [AligningLargeLanguageModelsthroughSyntheticFeedback](https://arxiv.org/abs/2305.13735) Using a heirarchy of systems to 
 

@@ -29,6 +29,8 @@ Multimodal tokenization is an area of tokenization that focuses on incorporating
 
 It is regarded that tokenizing is a bit arbitrary and has disadvantages. THere are promising results using methods without tokenization [MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185) that "show that MEGABYTE allows byte-level models to perform competitively with subword models on long context language modeling"
 
+IDEA: Combine Kudo + MegaByte?
+
 ## Tools
 Examples of coding tools that facilitate tokenization include [Tiktoken](https://github.com/openai/tiktoken) which utilizes Byte Pair Encoding (BPE) for tokenization and is purportedly used in GPT models. An alternative tool is [^n1], which takes a unique top-down approach and results in almost 35% less tokens as opposed to the standard bottom-up approach.
 
