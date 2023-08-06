@@ -38,4 +38,5 @@ When an agent (or model) interacts with a different agent in some way, it become
 
 - [RL4L Allen ai](https://arxiv.org/pdf/2305.08844.pdf) Uses smaller critique model feedback to improve larger model output with a policy gradient to fine-tune the critique model while allowing reasonable performance gains. [Github](https://github.com/allenai/RL4LMs)
 
-- [Showrunner Agents](https://fablestudio.github.io/showrunner-agents/) Uses LLMs to generate episodic content. 
+- [Showrunner Agents](https://fablestudio.github.io/showrunner-agents/) Uses LLMs to generate episodic content. Multimodal and multi-stage creation with a deal of potential. 
+![image](https://github.com/ianderrington/genai/assets/76016868/9820f2c4-5779-4bc9-b501-4e9b455212ff)
