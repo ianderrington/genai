@@ -63,6 +63,14 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 
 - [Motion GPT](https://github.com/openmotionlab/motiongpt)
 
+## Sound and Music Generation
+
+- [AudioCraft (Meta)](https://ai.meta.com/blog/audiocraft-musicgen-audiogen-encodec-generative-ai-audio/)
+
+## Audio Visual Generation
+
+- [Showrunner Agents](https://fablestudio.github.io/showrunner-agents/)
+
 ## Science and Tech
 
 - [Emergent autonomous scientific research](https://arxiv.org/pdf/2304.05332.pdf)
@@ -81,12 +89,13 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 - [Health system-scale language models are all-purpose prediction engines](https://www.nature.com/articles/s41586-023-06160-y) Uses LLM based system to integrate real time clinical workflows with note-writing and electronic ordering. Generally quite-performant and. a great indication of how they could be used to predict things such as readmission rates, and many other applications. 
 
 - [LLMs encode clinical knowledge](https://www.nature.com/articles/s41586-023-06291-2)
+
 ### Chemistry
 
 - [Grammar-Induced Geometry for Data-Efficient Molecular Property Prediction](https://openreview.net/pdf?id=SGQi3LgFnqj) A quality framework using heirarchichal metagraphs to stitch-together molecular nodes resulting in leaves that are 'actual' molecules. Using graph neural-diffusion, it does amazingly well even with minimal data-sets (100 examples).
 <img width="1052" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/50894091-fdc9-4a8f-9836-90cec4a147d0"> 
 
-
+i
 ### Biology
 
 - [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end. 
