@@ -1546,7 +1546,8 @@ Important discussion revealing the components of Transformers.</p>
 <p><a href="https://arxiv.or dsvg/abs/2304.11062">Scaling Transformer to 1M tokens and beyond with RMT</a> <a href="https://github.com/booydar/t5-experiments/tree/scaling-report">Github</a> Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. </p>
 </li>
 <li>
-<p>‼️<a href="https://arxiv.org/pdf/2305.07185.pdf">MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers</a> MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches</p>
+<p><a href="https://arxiv.org/pdf/2305.07185.pdf">MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers</a> MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration hat allows for <span class="arithmatex">\(O(N^{4/3}\)</span> scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356"></a></p>
 </li>
 <li>
 <p><a href="https://arxiv.org/pdf/2302.10866.pdf">Hyena Architecture</a> Uses inspiration from FFT to create a drop in replacement for Transformer models. </p>
