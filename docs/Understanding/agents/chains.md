@@ -23,7 +23,7 @@ jStarting from an input, an input may first analyzed with another algorithm, suc
 - Routing Chain
 
 Chain with memory storage and retrieval
-Chain with memory retrival 
+Chain with memory retrieval 
 Multi-model chains.
 
 (Other chains from lang-chain)
@@ -39,9 +39,13 @@ Multi-model chains.
 ## Concepts
 
 ### Thought Structures
+Thought structures are chain patterns used by singular (or even multiple agents in [systems](./systems.md) that enable more robust responses.  They can be executed automatically with the given frameworks and sometimes done manually in a chat setting. 
+
+Here are some known thought structures that are improving agentic output.
+
 <div class="result" markdown>
 !!! tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)" 
-    A nice structure that resembles thoughtful creation of answers allowing for parallelization and hence speedup, with comparable or better results in answer generation. 
+    A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation. 
     <img width="408" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd">
 
 ??? example "Example prompt"
@@ -75,19 +79,64 @@ Multi-model chains.
         Skeleton:
         [Assistant:] 1.
     ```
+    ```markdown  title="Point expanding prompt template"
+        [User:] You’re responsible for continuing the writing of one and only one point in the overall answer to the following
+        question.
+        {question}
+        The skeleton of the answer is
+        {skeleton}
+        Continue and only continue the writing of point {point index}. Write it **very shortly** in 1∼2 sentence and
+        do not continue with other points!
+        [Assistant:] {point index}. {point skeleton}
+    ```
 </div>
+
 <div class="result" markdown>
 !!! tip "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)" 
     [Github](https://github.com/jieyilong/tree-of-thought-puzzle-solver)
 </div>
+
 <div class="result" markdown>
-!!! tip "‼[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601)"
+!!! tip "‼[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf)"
+    A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage.  
+    ![image](https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28)
     [Github](https://github.com/ysymyth/tree-of-thought-llm)
 IDEA: Write Tree of Thoughts into Langchain?
+
+!!! example "[Prompts compared](https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py)
+    ```python
+        standard_prompt = '''
+        Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: {input}
+        '''
+        
+        cot_prompt = '''
+        Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: {input}
+        
+        Make a plan then write. Your output should be of the following format:
+        
+        Plan:
+        Your plan here.
+        
+        Passage:
+        Your passage here.
+        '''
+        
+        
+        vote_prompt = '''Given an instruction and several choices, decide which choice is most promising. Analyze each choice in detail, then conclude in the last line "The best choice is {s}", where s the integer id of the choice.
+        '''
+        
+        compare_prompt = '''Briefly analyze the coherency of the following two passages. Conclude in the last line "The more coherent passage is 1", "The more coherent passage is 2", or "The two passages are similarly coherent".
+        '''
+        
+        score_prompt = '''Analyze the following passage, then at the last line conclude "Thus the coherency score is {s}", where s is an integer from 1 to 10.
+  '''
+  
 </div>
+
 <div class="result" markdown>
 !!! tip "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
 </div>
+
 <div class="result" markdown>
 !!! tip "[Graph of Thought](https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/)" 
     An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.
@@ -100,10 +149,11 @@ IDEA: Write Tree of Thoughts into Langchain?
 <div class="result" markdown>
 !!! tip "[UNLEASHING COGNITIVE SYNERGY IN LARGE LANGUAGE MODELS: A TASK-SOLVING AGENT THROUGH MULTI-PERSONA SELF-COLLABORATION](https://arxiv.org/pdf/2307.05300.pdf)"
 
-    Uses a prompt that initiates a group of personas to be used withing the same LLM call to facilitate collaborative analysis and creation of the final output. Solid improvement but comparisons to other techniques uncertain
+    Uses a prompt that initiates a group of personas to be used within the same LLM call to facilitate collaborative analysis and creation of the final output. Solid improvement but comparisons to other techniques are potentially uncertain.
+
 ??? example "[Example prompt](https://github.com/MikeWangWZHL/Solo-Performance-Prompting/blob/main/prompts/trivia_creative_writing.py)" 
    
-    ```python
+    ```python title="Trivia writing SPP'
 
         spp_prompt = '''When faced with a task, begin by identifying the participants who will contribute to solving the task. Then, initiate a multi-round collaboration process until a final solution is reached. The participants will give critical comments and detailed suggestions whenever necessary.
 
@@ -144,25 +194,30 @@ IDEA: Write Tree of Thoughts into Langchain?
 ## Implementation Frameworks
 
 ### Langchain
-- ‼️[Langchain](https://python.langchain.com/en/latest/#) A primative python or javascript based primitive 'LLM' language that enables planned and agentic AI.
-- ‼️[Langflow](https://github.com/logspace-ai/langflow) 
-- ‼️[Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
-- ‼️[Toolkit](https://www.toolkit.club/) Generates LangChain plugins
+
+- [Langchain](https://python.langchain.com/en/latest/#) A primitive python or javascript-based primitive 'LLM' language that enables planned and agentic AI.
+- [Langflow](https://github.com/logspace-ai/langflow) 
+- [Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
+- [Toolkit](https://www.toolkit.club/) Generates LangChain plugins
 
 #### Tutorials
-  - https://www.pinecone.io/learn/langchain-prompt-templates/
-  - https://learn.deeplearning.ai/langchain/lesson/3/memory
 
-## Llama index
+- https://www.pinecone.io/learn/langchain-prompt-templates/
+- https://learn.deeplearning.ai/langchain/lesson/3/memory
+
+### Llama index
+
 - [llama index](https://www.llamaindex.ai/) and [Github](https://github.com/jerryjliu/llama_index) for integrating data ingestion and models. 
 - [LlamaHub (community library of data loaders)](https://llamahub.ai)
 - [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
-
+- [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
  
-## Others
-- ‼️[Flowise](https://github.com/FlowiseAI/Flowise)
-- ！[Chain Forge](https://github.com/ianarawjo/ChainForge) A data flow prompt engineering environment for evaluating ana analyzing LLM responses
-- ‼️[llm-chain](https://docs.llm-chain.xyz/docs/introduction) ChatGPT and Alpaca support. Agentic with bash commands.
+### Others
+
+- [Flowise](https://github.com/FlowiseAI/Flowise)
+- [Chain Forge](https://github.com/ianarawjo/ChainForge) A data flow prompt engineering environment for evaluating ana analyzing LLM responses
+- [llm-chain](https://docs.llm-chain.xyz/docs/introduction) ChatGPT and Alpaca support. Agentic with bash commands.
+- [Agent Flow](https://github.com/simonmesmith/agentflow)
 - [Auto Chain](https://github.com/Forethought-Technologies/AutoChain) 
-- ‼️[Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
+
 
