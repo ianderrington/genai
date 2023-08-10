@@ -1,12 +1,12 @@
 nav:
     - index.md
     - models.md
-    - frameworks.md
+    - frameworks_and_tools.md
     - deployment.md
     - commercial_products.md
     - computation.md
     - marking_and_detecting.md
     - observability.md
-    - plugins.md
+    - web_plugins.md
     - regulation.md
     - ...
