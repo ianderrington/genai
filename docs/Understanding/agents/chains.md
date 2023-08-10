@@ -103,7 +103,7 @@ Here are some known thought structures that are improving agentic output.
     [Github](https://github.com/ysymyth/tree-of-thought-llm)
 IDEA: Write Tree of Thoughts into Langchain?
 
-!!! example "[Prompts compared](https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py)
+??? example "[Prompts compared](https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py)"
     ```python
         standard_prompt = '''
         Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: {input}
@@ -129,12 +129,15 @@ IDEA: Write Tree of Thoughts into Langchain?
         '''
         
         score_prompt = '''Analyze the following passage, then at the last line conclude "Thus the coherency score is {s}", where s is an integer from 1 to 10.
-  '''
+        ''' 
+      ```
   
 </div>
 
 <div class="result" markdown>
 !!! tip "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
+
+
 </div>
 
 <div class="result" markdown>
