@@ -42,7 +42,39 @@ Multi-model chains.
 <div class="result" markdown>
 !!! tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)" 
     A nice structure that resembles thoughtful creation of answers allowing for parallelization and hence speedup, with comparable or better results in answer generation. 
-    
+    <img width="408" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd">
+
+??? example "Example prompt"
+    ```markdown  title="Skeleton prompt template"
+        [User:] You’re an organizer responsible for only giving the skeleton (not the full content) for answering the question.
+        Provide the skeleton in a list of points (numbered 1., 2., 3., etc.) to answer the question. Instead of writing a full
+        sentence, each skeleton point should be very short with only 3∼5 words. Generally, the skeleton should have 3∼10
+        points.
+        Question:
+        What are the typical types of Chinese dishes?
+        Skeleton:
+        1. Dumplings.
+        2. Noodles.
+        3. Dim Sum.
+        4. Hot Pot.
+        5. Wonton.
+        6. Ma Po Tofu.
+        7. Char Siu.
+        8. Fried Rice.
+        Question:
+        What are some practical tips for individuals to reduce their carbon emissions?
+        Skeleton:
+        1. Energy conservation.
+        2. Efficient transportation.
+        3. Home energy efficiency.
+        4. Reduce water consumption.
+        5. Sustainable diet.
+        6. Sustainable travel.
+        Now, please provide the skeleton for the following question.
+        {question}
+        Skeleton:
+        [Assistant:] 1.
+    ```
 </div>
 <div class="result" markdown>
 !!! tip "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)" 
