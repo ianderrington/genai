@@ -60,8 +60,6 @@
   
 
 
-  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-MPQ831MCNS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-MPQ831MCNS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MPQ831MCNS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
-
   
     <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
   
@@ -102,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#frameworks" class="md-skip">
+        <a href="#rlhf" class="md-skip">
           Skip to content
         </a>
       
@@ -1277,6 +1275,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#rlhf" class="md-nav__link">
+    RLHF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#frameworks" class="md-nav__link">
     Frameworks
   </a>
@@ -1313,7 +1318,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rlhf" class="md-nav__link">
+  <a href="#rlhf_1" class="md-nav__link">
     RLHF
   </a>
   
@@ -1375,10 +1380,18 @@
   
 
 
+<p>Training GenAI will generally be domain/modality specific.</p>
+<ol>
+<li>Self-supervised pretraining: Predicts next token. </li>
+<li>Supervised pretrainign: Trains to give generally expected output.</li>
+<li>Reinforcement Learning with Human Feedback: Trains a reward model that is used with Proximal Policy Optimization (PPO) to produce aligned output. </li>
+</ol>
+<p>Basics: <a href="https://neptune.ai/blog/distributed-training">Distributed Training</a>
+<a href="https://neptune.ai/blog/distributed-training-frameworks-and-tools">https://neptune.ai/blog/distributed-training-frameworks-and-tools</a></p>
 <ul>
 <li><a href="https://huyenchip.com/2023/04/11/llm-engineering.html">LLM Engineering by Huyen Chip</a></li>
-<li><a href="https://huyenchip.com/2023/05/02/rlhf.html">The whole training process by Huyen Chip</a></li>
 </ul>
+<h2 id="rlhf">RLHF<a class="headerlink" href="#rlhf" title="Permanent link">&para;</a></h2>
 <h2 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html">Levanter (not just LLMS) </a> Codebase for training FMs with JAX. Using Haliax for naming tensors field-names instead of indexes. (for example Batch, Feature....). Full sharding and distributable / parallelizable. </li>
@@ -1402,9 +1415,15 @@
 <li><a href="https://arxiv.org/pdf/2007.07779.pdf">AdapterHub: A Framework for Adapting Transformers</a> <a href="https://adapterhub.ml/">Website</a>
 Adapters are efficient and performant layers that can optimize performance without needing to do inefficient fine-tuning. </li>
 </ul>
-<h2 id="rlhf">RLHF<a class="headerlink" href="#rlhf" title="Permanent link">&para;</a></h2>
+<h2 id="rlhf_1">RLHF<a class="headerlink" href="#rlhf_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>‼️ <a href="https://huggingface.co/blog/rlhf">RLHF basics by hugging face</a> A realy good intro to parse again.</li>
+<li>
+<p><a href="https://huyenchip.com/2023/05/02/rlhf.html">RLHF: Reinforcement Learning from Human Feedback</a> A splendid summary of the RLHF system.
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2fb5b4d5-ecc9-45b3-9d16-63fab4ab6db0" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="751" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2fb5b4d5-ecc9-45b3-9d16-63fab4ab6db0"></a></p>
+</li>
+<li>
+<p><a href="https://huggingface.co/blog/rlhf">RLHF basics by hugging face</a> A realy good intro to parse again.</p>
+</li>
 <li><a href="https://github.com/lucidrains/PaLM-rlhf-pytorch">RLHF for Palm in Pytorch</a></li>
 <li><a href="https://arxiv.org/abs/2305.13735">AligningLargeLanguageModelsthroughSyntheticFeedback</a> Using a heirarchy of systems to </li>
 </ul>
