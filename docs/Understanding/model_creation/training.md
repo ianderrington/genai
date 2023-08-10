@@ -1,3 +1,10 @@
+Training GenAI will generally be domain/modality specific.
+
+
+1. Self-supervised pretraining: Predicts next token. 
+2. Supervised pretrainign: Trains to give generally expected output.
+3. Reinforcement Learning with Human Feedback: Trains a reward model that is used with Proximal Policy Optimization (PPO) to produce aligned output. 
+
 Basics: [Distributed Training](https://neptune.ai/blog/distributed-training)
 https://neptune.ai/blog/distributed-training-frameworks-and-tools
 
