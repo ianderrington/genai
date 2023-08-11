@@ -66,7 +66,7 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 
 - [Infinite former](https://arxiv.org/pdf/2109.00301.pdf) 
  Uses a representation of input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration 
- [Github](https://github.com/deep-spin/infinite-former) ![Infinity Former](https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80){ align=left width="300"  loading=lazy }
+- [Github](https://github.com/deep-spin/infinite-former) ![Infinity Former](https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80){ align=left width="300"  loading=lazy }
 
 ### Computation Reduction
 
@@ -76,8 +76,11 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 
 Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.
 
-- [Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)
-<img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5">
+<div class="reult" markdown>
+!!! tip "[Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)"
+ 
+??? note
+    <img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5">
 
 
 ## Other modalities
@@ -86,9 +89,13 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
 ### Graphs
 
-- [Transformers Meet Directed Graphs](https://arxiv.org/pdf/2302.00049.pdf) An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.
-<img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc">
+<div class="result" markdown>
+!!! tip "[Transformers Meet Directed Graphs](https://arxiv.org/pdf/2302.00049.pdf)"
+    An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.
 
+??? note
+    <img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc">
+</adiv>
 
 ## Training variations
 ### Fairness Enablement
