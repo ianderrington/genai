@@ -101,6 +101,7 @@ Here are some known thought structures that are improving agentic output.
     A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage.  
     ![image](https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28)
     [Github](https://github.com/ysymyth/tree-of-thought-llm)
+  
 IDEA: Write Tree of Thoughts into Langchain?
 
 ??? example "[Prompts compared](https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py)"
@@ -108,7 +109,6 @@ IDEA: Write Tree of Thoughts into Langchain?
         standard_prompt = '''
         Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: {input}
         '''
-        
         cot_prompt = '''
         Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: {input}
         
@@ -130,7 +130,7 @@ IDEA: Write Tree of Thoughts into Langchain?
         
         score_prompt = '''Analyze the following passage, then at the last line conclude "Thus the coherency score is {s}", where s is an integer from 1 to 10.
         ''' 
-      ```
+    ```
   
 </div>
 
