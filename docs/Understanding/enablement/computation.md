@@ -10,6 +10,7 @@ In order to create models, large volumes of matrix multiplication is necessary. 
 
 ## Local computation
 
+- [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
 
 ## References
 ￼
