@@ -1,4 +1,5 @@
 nav:
+    - index.md
     - transformers.md
     - diffusers.md
     - gans.md
