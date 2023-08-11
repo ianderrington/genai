@@ -121,7 +121,6 @@ IDEA: Write Tree of Thoughts into Langchain?
         Your passage here.
         '''
         
-        
         vote_prompt = '''Given an instruction and several choices, decide which choice is most promising. Analyze each choice in detail, then conclude in the last line "The best choice is {s}", where s the integer id of the choice.
         '''
         
@@ -188,7 +187,7 @@ IDEA: Write Tree of Thoughts into Langchain?
         Final answer: 6 * (1 + 1) + 12 = 24
 
         ---
-        ...
+        
         '''
     ```
 </div>
