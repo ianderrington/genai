@@ -1,4 +1,4 @@
-Here we discuss models / architecture, and not models that are trained and released. Please see the [Available Models](../enablement/models.md) for specific maners of both using or creating models. 
+Here we discuss models / architecture, and not models that are trained and released. Please see the [Available Trained Models](../enablement/models.md) for specific access to models. 
 
 Genrative AI models are of two general categories. Self-supervised, and Externally-supervised, and hybrid models. Often times self-supervised models then pass into external-supervision to improve the quality of the output.
 
@@ -24,6 +24,14 @@ Additional models come up all the time.
 
 - ‼️ [Retentive Network: A successor to Transformer for Large Language Models](https://arxiv.org/pdf/2307.08621.pdf) Important LLM-like system using similar components that may help it to be more scaleable than `O(N^2)` memory and `O(N)` inference complexity. 
 
+<div class="result" markdown>
+!!! note "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/abs/2307.09288)
+    A nearly open source set of 7B-70B models with quality performance,
+
+??? info "Training procedure"
+    <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
+
+</div>
 <div class="result" markdown>
 !!! note "[Shepherd: A Critic for Language Model Generation](https://arxiv.org/pdf/2308.04592.pdf)"
     A 7B model trainewd to critique outputs
