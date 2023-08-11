@@ -722,6 +722,8 @@
         
           
         
+          
+        
       
       
         
@@ -778,6 +780,20 @@
     <li class="md-nav__item">
       <a href="../agents/chains.html" class="md-nav__link">
         Chains
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/evaluation.html" class="md-nav__link">
+        Evaluation
       </a>
     </li>
   
@@ -922,8 +938,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../enablement/frameworks.html" class="md-nav__link">
-        Frameworks
+      <a href="../enablement/frameworks_and_tools.html" class="md-nav__link">
+        Frameworks and tools
       </a>
     </li>
   
@@ -1006,8 +1022,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../enablement/plugins.html" class="md-nav__link">
-        Plugins
+      <a href="../enablement/web_plugins.html" class="md-nav__link">
+        Web plugins
       </a>
     </li>
   
@@ -1322,7 +1338,7 @@
 
   <h1>Models</h1>
 
-<p>Here we discuss models / architecture, and not models that are trained and released. Please see the <a href="../enablement/models.html">Available Models</a> for specific maners of both using or creating models. </p>
+<p>Here we discuss models / architecture, and not models that are trained and released. Please see the <a href="../enablement/models.html">Available Trained Models</a> for specific access to models. </p>
 <p>Genrative AI models are of two general categories. Self-supervised, and Externally-supervised, and hybrid models. Often times self-supervised models then pass into external-supervision to improve the quality of the output.</p>
 <p>Self supervision amounts to using a single data-entry itself to train a model, without interacting with other data points. For instance, a model used to predict </p>
 <p>Because of their present degree of quality present model Architectures tend to be transformer-based, or diffusion-based, though they can also be hybrids, or made from any other standard AI method. While Generative Adversarial Networks, <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">GANS</a> were the inititally most successful, the challenges in training them successfully can be challenging. </p>
@@ -1339,6 +1355,24 @@ LLMs</li>
 <ul>
 <li>‼️ <a href="https://arxiv.org/pdf/2307.08621.pdf">Retentive Network: A successor to Transformer for Large Language Models</a> Important LLM-like system using similar components that may help it to be more scaleable than <code>O(N^2)</code> memory and <code>O(N)</code> inference complexity. </li>
 </ul>
+<div class="result">
+<p>!!! note "<a href="https://arxiv.org/abs/2307.09288">Llama 2: Open Foundation and Fine-Tuned Chat Models</a>
+    A nearly open source set of 7B-70B models with quality performance,</p>
+<details class="info">
+<summary>Training procedure</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e"></a></p>
+</details>
+</div>
+<div class="result">
+<div class="admonition note">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2308.04592.pdf">Shepherd: A Critic for Language Model Generation</a></p>
+<p>A 7B model trainewd to critique outputs</p>
+</div>
+<details class="example">
+<summary>Example chat response</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c207939b-9bd7-4a20-b747-ea46d13534f7" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="560" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c207939b-9bd7-4a20-b747-ea46d13534f7"></a></p>
+</details>
+</div>
 <h2 id="mixture-of-experts">Mixture of Experts<a class="headerlink" href="#mixture-of-experts" title="Permanent link">&para;</a></h2>
 <h2 id="multimodal">MultiModal<a class="headerlink" href="#multimodal" title="Permanent link">&para;</a></h2>
 <ul>

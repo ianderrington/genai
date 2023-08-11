@@ -722,6 +722,8 @@
         
           
         
+          
+        
       
       
         
@@ -778,6 +780,20 @@
     <li class="md-nav__item">
       <a href="../agents/chains.html" class="md-nav__link">
         Chains
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/evaluation.html" class="md-nav__link">
+        Evaluation
       </a>
     </li>
   
@@ -922,8 +938,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../enablement/frameworks.html" class="md-nav__link">
-        Frameworks
+      <a href="../enablement/frameworks_and_tools.html" class="md-nav__link">
+        Frameworks and tools
       </a>
     </li>
   
@@ -1006,8 +1022,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../enablement/plugins.html" class="md-nav__link">
-        Plugins
+      <a href="../enablement/web_plugins.html" class="md-nav__link">
+        Web plugins
       </a>
     </li>
   
@@ -1331,15 +1347,32 @@
 <h2 id="available-models">Available models<a class="headerlink" href="#available-models" title="Permanent link">&para;</a></h2>
 <p>There are both open and closed-source models, that can be used. Because of computation requirements, more-powerful hardware may be needed to run these models, so they are often run with cloud-based services. We share an incomplete list <a href="../enablement/models.html">here</a></p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<div class="admonition references">
-<p class="admonition-title">References</p>
+<div class="result">
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://eugeneyan.com/writing/llm-patterns/">LLM Patterns</a></p>
+<p>An impressively thorough and well-written discussion on LLMs and patterns within them</p>
+</div>
+<details class="example">
+<summary>Example</summary>
+<p>Important patterns mentioned (references to discussions herein):
+* <a href="../model_creation/evaluation.html">Evaluation</a>
+* <a href="../model_creation/rag.html">Retreival Augmented Generation (RAG)</a>
+* <a href="../model_creation/alignment.html#finetuning">Fine tuning</a>
+* <a href="../agents/memory.html#caching">Caching</a> to reduce latency. 
+* <a href="../agents/interpreters.html#guardrails">Guardrails</a> to ensure output (and input) quality.
+* Data Flywheel to use data collection and feedback to improve model and experience
+* Cascade Breaking models up into smaller simpler tasks instead of big ones.
+* Monitoring to ensure value is being derived
+* Effective (defensive) UX to ensure the models can be used well. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/fd03db2c-c695-4f52-8306-062fad5c3779" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/fd03db2c-c695-4f52-8306-062fad5c3779" /></a></p>
+</details>
+</div>
 <ul>
 <li><a href="https://arxiv.org/pdf/2303.18223.pdf">A Survey of Large Language Models</a> A very comprehensive paper discussing LLM technology. </li>
 <li><a href="https://arxiv.org/pdf/2304.12210.pdf">A cookbook of self-supervised Learning</a> </li>
 <li><a href="https://github.com/RUCAIBox/LLMSurvey">LLM Survey</a></li>
-<li><a href="https://www.understandingai.org/p/large-language-models-explained-with"></a></li>
+<li><a href="https://www.understandingai.org/p/large-language-models-explained-with">Large Language Models Explained</a></li>
 </ul>
-</div>
 
 
   

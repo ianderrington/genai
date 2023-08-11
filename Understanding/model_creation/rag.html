@@ -12,20 +12,20 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/model_creation/alignment.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/model_creation/rag.html">
       
       
-        <link rel="prev" href="evaluation.html">
+        <link rel="prev" href="classes/gans.html">
       
       
-        <link rel="next" href="classes/transformers.html">
+        <link rel="next" href="../prompt_engineering/prompt_injections.html">
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Alignment - Gen()AI</title>
+        <title>Retrieval-Augmented Generation - Gen()AI</title>
       
     
     
@@ -99,6 +99,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#retrieval-augmented-generation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -130,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Alignment
+              Retrieval-Augmented Generation
             
           </span>
         </div>
@@ -1278,6 +1283,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1295,20 +1302,9 @@
   
 
 
-  <h1>Alignment</h1>
-
-<p>Raw generative models do not generally produce globally accurate outputs given input prompts. <sup id="fnref:n1"><a class="footnote-ref" href="#fn:n1">1</a></sup> </p>
-<p>Global alignment </p>
-<p>Ensuring the output of models are appropriately capable of </p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:n1">
-<p>We will be describing text-focused models in this discussion though variations can be appropriately considered for other domains and datatypes
-This is due to the manner of training and next-word-prediction (or more arbitrary masked-word prediction) is probabilistically 'greedy'. Namely, within a sampling of outputs, the next-prediction will be sampled based on their <em>immediate</em> likelihood. To improve the outputs, the models are further refined using various approaches. These approaches 'align' the output to accurately considered&#160;<a class="footnote-backref" href="#fnref:n1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<h1 id="retrieval-augmented-generation">Retrieval-Augmented Generation<a class="headerlink" href="#retrieval-augmented-generation" title="Permanent link">&para;</a></h1>
+<p>Becuase models are expensive to update it can be easier to get information and then feed that into the model. </p>
+<h1 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
 
 
   

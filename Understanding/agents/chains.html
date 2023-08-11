@@ -18,7 +18,7 @@
         <link rel="prev" href="memory.html">
       
       
-        <link rel="next" href="actions_and_tools.html">
+        <link rel="next" href="evaluation.html">
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
@@ -724,6 +724,8 @@
         
           
         
+          
+        
       
       
         
@@ -930,6 +932,20 @@
   
   
     <li class="md-nav__item">
+      <a href="evaluation.html" class="md-nav__link">
+        Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="actions_and_tools.html" class="md-nav__link">
         Actions and tools
       </a>
@@ -1062,8 +1078,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../enablement/frameworks.html" class="md-nav__link">
-        Frameworks
+      <a href="../enablement/frameworks_and_tools.html" class="md-nav__link">
+        Frameworks and tools
       </a>
     </li>
   
@@ -1146,8 +1162,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../enablement/plugins.html" class="md-nav__link">
-        Plugins
+      <a href="../enablement/web_plugins.html" class="md-nav__link">
+        Web plugins
       </a>
     </li>
   
@@ -1628,7 +1644,7 @@ Multi-model chains.</p>
 </div>
 <div class="result">
 <div class="admonition tip">
-<p class="admonition-title">‼<a href="https://arxiv.org/pdf/2305.10601.pdf">Tree of Thoughts: Deliberate Problem Solving with Large Language Models</a></p>
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2305.10601.pdf">Tree of Thoughts: Deliberate Problem Solving with Large Language Models</a></p>
 <p>A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage.<br />
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28" /></a>
 <a href="https://github.com/ysymyth/tree-of-thought-llm">Github</a></p>
@@ -1636,32 +1652,30 @@ Multi-model chains.</p>
 <p>IDEA: Write Tree of Thoughts into Langchain?</p>
 <details class="example">
 <summary><a href="https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py">Prompts compared</a></summary>
-<p>```python
-    standard_prompt = '''
-    Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: {input}
-    '''</p>
-<div class="highlight"><pre><span></span><code>cot_prompt = &#39;&#39;&#39;
-Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: {input}
+<div class="highlight"><pre><span></span><code>    <span class="n">standard_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: </span><span class="si">{input}</span>
+<span class="s1">    &#39;&#39;&#39;</span>
+    <span class="n">cot_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: </span><span class="si">{input}</span>
 
-Make a plan then write. Your output should be of the following format:
+<span class="s1">    Make a plan then write. Your output should be of the following format:</span>
 
-Plan:
-Your plan here.
+<span class="s1">    Plan:</span>
+<span class="s1">    Your plan here.</span>
 
-Passage:
-Your passage here.
-&#39;&#39;&#39;
+<span class="s1">    Passage:</span>
+<span class="s1">    Your passage here.</span>
+<span class="s1">    &#39;&#39;&#39;</span>
 
-vote_prompt = &#39;&#39;&#39;Given an instruction and several choices, decide which choice is most promising. Analyze each choice in detail, then conclude in the last line &quot;The best choice is {s}&quot;, where s the integer id of the choice.
-&#39;&#39;&#39;
+    <span class="n">vote_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Given an instruction and several choices, decide which choice is most promising. Analyze each choice in detail, then conclude in the last line &quot;The best choice is </span><span class="si">{s}</span><span class="s1">&quot;, where s the integer id of the choice.</span>
+<span class="s1">    &#39;&#39;&#39;</span>
 
-compare_prompt = &#39;&#39;&#39;Briefly analyze the coherency of the following two passages. Conclude in the last line &quot;The more coherent passage is 1&quot;, &quot;The more coherent passage is 2&quot;, or &quot;The two passages are similarly coherent&quot;.
-&#39;&#39;&#39;
+    <span class="n">compare_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Briefly analyze the coherency of the following two passages. Conclude in the last line &quot;The more coherent passage is 1&quot;, &quot;The more coherent passage is 2&quot;, or &quot;The two passages are similarly coherent&quot;.</span>
+<span class="s1">    &#39;&#39;&#39;</span>
 
-score_prompt = &#39;&#39;&#39;Analyze the following passage, then at the last line conclude &quot;Thus the coherency score is {s}&quot;, where s is an integer from 1 to 10.
-&#39;&#39;&#39;
+    <span class="n">score_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Analyze the following passage, then at the last line conclude &quot;Thus the coherency score is </span><span class="si">{s}</span><span class="s1">&quot;, where s is an integer from 1 to 10.</span>
+<span class="s1">    &#39;&#39;&#39;</span> 
 </code></pre></div>
-<p>```</p>
 </details>
 </div>
 <div class="result">
@@ -1672,9 +1686,12 @@ score_prompt = &#39;&#39;&#39;Analyze the following passage, then at the last li
 <div class="result">
 <div class="admonition tip">
 <p class="admonition-title"><a href="https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/">Graph of Thought</a></p>
-<p>An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649" /></a></p>
+<p>An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.</p>
 </div>
+<details class="example">
+<summary>Example</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649" /></a></p>
+</details>
 </div>
 <div class="result">
 <div class="admonition tip">
@@ -1716,16 +1733,38 @@ Finish collaboration!
 Final answer: 6 * (1 + 1) + 12 = 24
 
 ---
-...
+
 &#39;&#39;&#39;
 </code></pre></div>
 <p>```</p>
 </details>
 </div>
 <h2 id="enhancements">Enhancements<a class="headerlink" href="#enhancements" title="Permanent link">&para;</a></h2>
-<ul>
-<li>‼️ <a href="https://github.com/embedchain/embedchain">EmbedChain</a> Creates embeddings for bots to be used. </li>
-</ul>
+<div class="result">
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://github.com/embedchain/embedchain">EmbedChain</a></p>
+<p>"Embedchain is a framework to easily create LLM powered bots over any dataset." OpenAI and Llama2 so far.</p>
+</div>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
+
+    <span class="kn">from</span> <span class="nn">embedchain</span> <span class="kn">import</span> <span class="n">Llama2App</span>
+
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;REPLICATE_API_TOKEN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;REPLICATE API TOKEN&quot;</span>
+
+    <span class="n">zuck_bot</span> <span class="o">=</span> <span class="n">Llama2App</span><span class="p">()</span>
+
+    <span class="c1"># Embed your data</span>
+    <span class="n">zuck_bot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;youtube_video&quot;</span><span class="p">,</span> <span class="s2">&quot;https://www.youtube.com/watch?v=Ff4fRgnuFgQ&quot;</span><span class="p">)</span>
+    <span class="n">zuck_bot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;web_page&quot;</span><span class="p">,</span> <span class="s2">&quot;https://en.wikipedia.org/wiki/Mark_Zuckerberg&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Nice, your bot is ready now. Start asking questions to your bot.</span>
+    <span class="n">zuck_bot</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Who is Mark Zuckerberg?&quot;</span><span class="p">)</span>
+    <span class="c1"># Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook. </span>
+</code></pre></div>
+</details>
+</div>
 <h2 id="implementation-frameworks">Implementation Frameworks<a class="headerlink" href="#implementation-frameworks" title="Permanent link">&para;</a></h2>
 <h3 id="langchain">Langchain<a class="headerlink" href="#langchain" title="Permanent link">&para;</a></h3>
 <ul>
