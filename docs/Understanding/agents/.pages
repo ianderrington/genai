@@ -3,6 +3,7 @@ nav:
     - examples.md
     - memory.md
     - chains.md
+    - evaluation.md
     - actions_and_tools.md
     - interpreters.md
     - environments.md
