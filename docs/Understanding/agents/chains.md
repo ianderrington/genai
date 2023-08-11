@@ -97,7 +97,7 @@ Here are some known thought structures that are improving agentic output.
 </div>
 
 <div class="result" markdown>
-!!! tip "‼[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf)"
+!!! tip "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf)"
     A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage.  
     ![image](https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28)
     [Github](https://github.com/ysymyth/tree-of-thought-llm)
@@ -143,8 +143,12 @@ IDEA: Write Tree of Thoughts into Langchain?
 <div class="result" markdown>
 !!! tip "[Graph of Thought](https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/)" 
     An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.
+  
+??? example
     ![image](https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649)
+
 </div>
+
 <div class="result" markdown>
 !!! tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031)"
     A 'logical guide' tool that an LLM can use. It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
@@ -191,8 +195,29 @@ IDEA: Write Tree of Thoughts into Langchain?
 
 ## Enhancements
 
-- ‼️ [EmbedChain](https://github.com/embedchain/embedchain) Creates embeddings for bots to be used. 
+<div class="result" markdown>
+!!! note "[EmbedChain](https://github.com/embedchain/embedchain)"
+    "Embedchain is a framework to easily create LLM powered bots over any dataset." OpenAI and Llama2 so far.
 
+??? example
+    ```python
+        import os
+
+        from embedchain import Llama2App
+        
+        os.environ['REPLICATE_API_TOKEN'] = "REPLICATE API TOKEN"
+        
+        zuck_bot = Llama2App()
+        
+        # Embed your data
+        zuck_bot.add("youtube_video", "https://www.youtube.com/watch?v=Ff4fRgnuFgQ")
+        zuck_bot.add("web_page", "https://en.wikipedia.org/wiki/Mark_Zuckerberg")
+        
+        # Nice, your bot is ready now. Start asking questions to your bot.
+        zuck_bot.query("Who is Mark Zuckerberg?")
+        # Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook. 
+    ```
+</div>
 
 ## Implementation Frameworks
 
