@@ -196,7 +196,7 @@ IDEA: Write Tree of Thoughts into Langchain?
 ## Enhancements
 
 <div class="result" markdown>
-!!! note "[EmbedChain](https://github.com/embedchain/embedchain)"
+!!! tip "[EmbedChain](https://github.com/embedchain/embedchain)"
     "Embedchain is a framework to easily create LLM powered bots over any dataset." OpenAI and Llama2 so far.
 
 ??? example
