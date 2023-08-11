@@ -54,7 +54,28 @@ According to {some_reputable_source} ...
 
 ### Automatic
 
+<div class="result" markdown>
+!!! note "[GPT Prompt Engineer](https://github.com/mshumer/gpt-prompt-engineer)"
+    A fairly simple automation tool to create the best prompts
 
+??? example
+    ```python
+        description = "Given a prompt, generate a landing page headline." # this style of description tends to work well
+
+        test_cases = [
+            {
+                'prompt': 'Promoting an innovative new fitness app, Smartly',
+            },
+            {
+                'prompt': 'Why a vegan diet is beneficial for your health',
+            },
+            ...
+        ]
+    ```
+    
+    ![image](https://github.com/ianderrington/genai/assets/76016868/f02a9f3e-4f4c-49de-9b35-1702df65d618)
+  
+</div>
 
 ### Resources
 
