@@ -18,6 +18,7 @@ Layer normalization observaly improves results [On Layer Normalization in the Tr
 The softmax is dominantly researched activation function. There may be other activation functions that are better, such as the 
 
 ### GPT
+
 - [Illustrated GPT](http://jalammar.github.io/illustrated-gpt2/)
 - [How GPT3 works](https://jalammar.github.io/how-gpt3-works-visualizations-animations/)
 Excellent summary of the progress of GPT over time, revealing core components, optimizations, and essential variations to the major Foundation model architectures.
@@ -110,3 +111,6 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 a constant number of encoder layers can emulate basic computing blocks, including embedding edit operations, non-linear functions, function calls, program counters, and conditional branches. Using these building blocks, we emulate a small instruction-set computer."
 
 
+## Code 
+- [Hugging Face Transformers](https://huggingface.co/docs/transformers/main/index) An API to access a large number of pre-trained transformers. Pytorch based. 
+- [Fast Transformers](https://github.com/idiap/fast-transformers/tree/master) A quality collection of a number of transformer implementations written in Pytorch. 
