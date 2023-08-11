@@ -59,14 +59,23 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 
 - [Scaling Transformer to 1M tokens and beyond with RMT](https://arxiv.or dsvg/abs/2304.11062) [Github](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. 
 
-- [MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185.pdf) MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration hat allows for $O(N^{4/3}$ scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers. 
-<img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356">
+<div class="result" markdown>
+!!! tip "[MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185.pdf)"
+    MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration that allows for $O(N^{4/3}$ scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers.
+
+??? note 
+    <img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356">
+</div>
 
 - [Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf) Uses inspiration from FFT to create a drop in replacement for Transformer models. 
 
-- [Infinite former](https://arxiv.org/pdf/2109.00301.pdf) 
- Uses a representation of input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration 
-- [Github](https://github.com/deep-spin/infinite-former) ![Infinity Former](https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80){ align=left width="300"  loading=lazy }
+<div class="result" markdown>
+!!! tip "[Infinite former](https://arxiv.org/pdf/2109.00301.pdf)"
+    Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration.
+
+??? note
+    [Github](https://github.com/deep-spin/infinite-former) 
+    ![Infinity Former](https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80){ align=left width="300"  loading=lazy }
 
 ### Computation Reduction
 
