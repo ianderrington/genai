@@ -1,17 +1,14 @@
 
 ## Chains
 
-Chains can be considered linked generative interactions where information can be processed with interepreters, tools, or other agents/GenAIs.
-Done well, they can be built up to form reasoning systems that can enable more successful reasoning, or task completion. 
+Chains can be considered linked generative interactions where information can be processed with interpreters, tools, or other agents/GenAIs.
+Done well, they can be built up to form reasoning systems that can enable more successful reasoning or task completion. 
 
-These cna enable passing concepts or data and re-introducing them directly throughout the database. 
+These can enable passing concepts or data and re-introducing them directly throughout the database. 
 
 
 ## Basic Chains
-
-Break an article up. This concept needs to carry forward in all mentions of items.
-
-jStarting from an input, an input may first analyzed with another algorithm, such as by splitting or substituting for html link for a token representing a variable. This output may then be directed to part of a template. The prompt-template. The prompt-templates then fill in the information. This information is then passed to the LLM. Then the LLM generates the output. This output may then again be processed to re-introduce extracted information removed the original prompt call (like htmls), to use the output to affect the next actions to be taken, such as printing the output for a person, calling programatic functions (tools) or sharing with specific downstream chains (routing).
+Chains start with an input that may first be analyzed with another algorithm, such as by splitting or substituting an HTML link for a token representing a variable. This output may then be directed to part of a template. The prompt-template. The prompt templates then fill in the information. This information is then passed to the LLM. Then the LLM generates the output. This output may then again be processed to re-introduce extracted information removed from the original prompt call (like HTML), to use the output to affect the next actions to be taken, such as printing the output for a person, calling programmatic functions (tools) or sharing with specific downstream chains (routing).
 
 
 ### Examples
