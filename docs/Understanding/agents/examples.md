@@ -50,25 +50,7 @@ graph TB
     <img width="1012" alt="image" src="https://github.com/ianderrington/general/assets/76016868/81b88f7e-af2e-424e-9cb8-0e377bc141c0">
 </div>
 
-<div class="result" markdown>
-??? tip "[ReAct](https://arxiv.org/abs/2210.03629)"
-    - [Github](https://github.com/ysymyth/ReAct) 
-    - Effectively Observe, Think, Act, Repeat. Has limited action space 
-</div>
-<div class="result" markdown>
-??? tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://arxiv.org/abs/2303.11366): "Reflexion, an approach that endows an agent with dynamic memory and self-reflection capabilities to enhance its existing reasoning trace and task-specific action choice abilities"
-    - [Github](https://github.com/noahshinn024/reflexion)
-    - [Inspired github](https://github.com/GammaTauAI/reflexion-human-eval) 
-</div>
-<div class="result" markdown>
-??? tip "[Teaching Large Language Models to Self-Debug](https://arxiv.org/abs/2304.05128) `transcoder`"
-    <img width="865" alt="image" src="https://user-images.githubusercontent.com/76016868/231906559-758d89e4-d22a-4a3a-aa96-1d630e48651d.png">
-</div>
-<div class="result" markdown>
-??? tip "[Language Models can Solve Computer Tasks](https://arxiv.org/pdf/2303.17491.pdf) Uses Recursive Criticism and Improvement."
-    [Website](https://posgnu.github.io/rci-web/), [GitHub](https://github.com/posgnu/rci-agent)  Combining with Chain of Thought it is even better. The method: Plan: Critique, Improve 
-    - Explicit RCI: "Review your previous answer and find problems with your answer." --> "Based on the problems you found, improve your answer." Recursively Criticizes and Improves its output. This sort of prompting outperforms Chain of Thought, and combined it works even better.  
-</div>
+
 <div class="result" markdown>
 ??? tip "[smolai](https://github.com/ThomasEwing04/SMOL_AI) https://www.youtube.com/watch?v=zsxyqz6SYp8&t=1s An interesting example"
 </div>
