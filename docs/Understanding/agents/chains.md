@@ -46,11 +46,10 @@ Here are some known thought structures that are improving agentic output.
 #### Structural Decomposition 
 
 <div class="result" markdown>
-!!! tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)" 
+??? tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)" 
     A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation. 
     <img width="408" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd">
 
-??? example "Example prompt"
     ```markdown  title="Skeleton prompt template"
         [User:] You’re an organizer responsible for only giving the skeleton (not the full content) for answering the question.
         Provide the skeleton in a list of points (numbered 1., 2., 3., etc.) to answer the question. Instead of writing a full
@@ -94,19 +93,18 @@ Here are some known thought structures that are improving agentic output.
 </div>
 
 <div class="result" markdown>
-!!! tip "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)" 
+??? tip "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)" 
     [Github](https://github.com/jieyilong/tree-of-thought-puzzle-solver)
 </div>
 
 <div class="result" markdown>
-!!! tip "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf)"
-    A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage.  
-??? example "The thought flow"
+??? tip "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf)
+    A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage."  
+    **The thought flow**
     ![image](https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28)
     [Github](https://github.com/ysymyth/tree-of-thought-llm)
-
-    IDEA: Write Tree of Thoughts into Langchain?
-??? example "[Prompts compared](https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py)"
+  
+    "[Prompts compared](https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py)"
     ```python
         standard_prompt = '''
         Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: {input}
@@ -136,22 +134,20 @@ Here are some known thought structures that are improving agentic output.
 </div>
 
 <div class="result" markdown>
-!!! tip "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
+??? tip "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
+    <img width="1663" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e516604b-57b2-4d82-b9a9-0168c8eb9f15">
+
 </div>
 
 <div class="result" markdown>
-!!! tip "[Graph of Thought](https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/)" 
+??? tip "[Graph of Thought](https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/)" 
     An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.
-  
-??? example
     ![image](https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649)
-
 </div>
 
 <div class="result" markdown>
-!!! tip "[Strategic Reasoning with Language Models](https://arxiv.org/abs/2305.19165)"
-     Uses game trees and observed and inferred beliefs to achieve closer to optimal results. Powerful to consider for inferred beliefs and interacting in situations where negotiation or games are being played.
-??? example 
+??? tip "[Strategic Reasoning with Language Models](https://arxiv.org/abs/2305.19165) Uses game trees and observed and inferred beliefs to achieve closer to optimal results. "
+     Powerful to consider for inferred beliefs and interacting in situations where negotiation or games are being played.
     <img width="1008" alt="image" src="https://github.com/ianderrington/general/assets/76016868/5ffa0653-a323-44a6-bff5-b49e3be6091a">
 </div>
 
@@ -160,11 +156,9 @@ Here are some known thought structures that are improving agentic output.
 Breaking up the topic by considering different personas, within the _same_ model-call partitions can be quite successful. Often [systems](./systems.md) can be used as well, though the complexity of implementation increases.
 
 <div class="result" markdown>
-!!! tip "[UNLEASHING COGNITIVE SYNERGY IN LARGE LANGUAGE MODELS: A TASK-SOLVING AGENT THROUGH MULTI-PERSONA SELF-COLLABORATION](https://arxiv.org/pdf/2307.05300.pdf)"
-
+??? tip "[Unleashing Cognitive Synergy in Large Language Models: A Task-Solving Agent Through Multi-person Self-Collaboration](https://arxiv.org/pdf/2307.05300.pdf)"
     Uses a prompt that initiates a group of personas to be used within the same LLM call to facilitate collaborative analysis and creation of the final output. Solid improvement but comparisons to other techniques are potentially uncertain.
-
-??? example "[Example prompt](https://github.com/MikeWangWZHL/Solo-Performance-Prompting/blob/main/prompts/trivia_creative_writing.py)" 
+   "[Example prompt](https://github.com/MikeWangWZHL/Solo-Performance-Prompting/blob/main/prompts/trivia_creative_writing.py)" 
    
     ```python title="Trivia writing SPP'
 
@@ -202,8 +196,8 @@ Breaking up the topic by considering different personas, within the _same_ model
 #### Tool requirements
 
 <div class="result" markdown>
-!!! tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031)"
-    A 'logical guide' tool that an LLM can use. It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
+??? tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031) A 'logical guide' tool that an LLM can use." 
+    It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
 </div>
 
 
