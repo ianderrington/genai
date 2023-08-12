@@ -1,6 +1,4 @@
-## Transformers
-- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-
+TODO
 ## Components
 
 TODO: Describe transformers and components
@@ -11,7 +9,17 @@ TODO: Describe transformers and components
 
 ### Attention Models
 
-Layer normalization observaly improves results [On Layer Normalization in the Transformer Architecture](http://proceedings.mlr.press/v119/xiong20b/xiong20b.pdf)
+Layer normalization observably improves results [On Layer Normalization in the Transformer Architecture](http://proceedings.mlr.press/v119/xiong20b/xiong20b.pdf)
+
+## Reviews
+<div class="result" markdown>
+??? tip [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+</div>
+<div class="result" markdown>
+??? tip [The Transformer Blueprint: A Holistic Guide to the Transformer Neural Network Architecture](https://deeprevision.github.io/posts/001-transformer/)
+    A thorough exposition of transformer technology.
+</div>
+
 
 ### Softmax?
 
@@ -53,7 +61,7 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 
 
 
-## Improvements, Optimizations, and variations. 
+## Improvements, Optimizations, and Variations. 
 
 - [](https://github.com/neuro-inc/ml-recipe-hier-attention)
 
