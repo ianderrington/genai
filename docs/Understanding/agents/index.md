@@ -6,13 +6,16 @@ Similar to bots, or other computerized automota, they may have the ability to ru
 ## Basic Concepts
 
 * [Models](../models/index.md): The 'intelligent' component returns an output for a given input. 
-* Input [prompts](../prompt_engineering/prompting.md) that orient's and agent's response. 
+* Input [environments](environments.md) that can and do provide inputs. 
+* Language [prompts](../prompt_engineering/prompting.md) that orient's and agent's response. 
 * [Memory](./memory.md) to enable writing and reading information that may be of use. 
 * [Tools](./actions_and_tools.md) that enable more than text (or images) to be returned or otherwise acted upon. 
 * [Interpreters](./interpreters.md) that are used to process input or output. 
 * [Chains](./chains.md) which enable continuous flow of information, including memory, to downstream tasks. 
 * Agents can be quite different! Here are some [examples](./examples.md) of agents made both in academic and commercial settings. 
 * [Systems of Agents](systems.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
+
+
 
 ## Essential references
 

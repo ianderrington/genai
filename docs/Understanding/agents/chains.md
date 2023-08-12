@@ -1,3 +1,4 @@
+
 ## Chains
 
 Chains can be considered linked generative interactions where information can be processed with interepreters, tools, or other agents/GenAIs.
@@ -42,7 +43,7 @@ Thought structures are chain patterns used by singular (or even multiple agents 
 
 Here are some known thought structures that are improving agentic output.
 
-#### Decomposition
+#### Structural Decomposition 
 
 <div class="result" markdown>
 !!! tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)" 
@@ -105,8 +106,6 @@ Here are some known thought structures that are improving agentic output.
     [Github](https://github.com/ysymyth/tree-of-thought-llm)
 
     IDEA: Write Tree of Thoughts into Langchain?
-
-
 ??? example "[Prompts compared](https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py)"
     ```python
         standard_prompt = '''
@@ -138,8 +137,6 @@ Here are some known thought structures that are improving agentic output.
 
 <div class="result" markdown>
 !!! tip "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
-
-
 </div>
 
 <div class="result" markdown>
@@ -150,6 +147,17 @@ Here are some known thought structures that are improving agentic output.
     ![image](https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649)
 
 </div>
+
+<div class="result" markdown>
+!!! tip "[Strategic Reasoning with Language Models](https://arxiv.org/abs/2305.19165)"
+     Uses game trees and observed and inferred beliefs to achieve closer to optimal results. Powerful to consider for inferred beliefs and interacting in situations where negotiation or games are being played.
+??? example 
+    <img width="1008" alt="image" src="https://github.com/ianderrington/general/assets/76016868/5ffa0653-a323-44a6-bff5-b49e3be6091a">
+</div>
+
+#### Perceptive decomposition
+
+Breaking up the topic by considering different personas, within the _same_ model-call partitions can be quite successful. Often [systems](./systems.md) can be used as well, though the complexity of implementation increases.
 
 <div class="result" markdown>
 !!! tip "[UNLEASHING COGNITIVE SYNERGY IN LARGE LANGUAGE MODELS: A TASK-SOLVING AGENT THROUGH MULTI-PERSONA SELF-COLLABORATION](https://arxiv.org/pdf/2307.05300.pdf)"
@@ -191,7 +199,8 @@ Here are some known thought structures that are improving agentic output.
     ```
 </div>
 
-#### 
+#### Tool requirements
+
 <div class="result" markdown>
 !!! tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031)"
     A 'logical guide' tool that an LLM can use. It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 

@@ -22,6 +22,9 @@ This needs to be cleaned up and expanded. It needs to be made into a table. It n
 * [Orca (Microsoft)](https://arxiv.org/pdf/2306.02707.pdf) (Not yet released)
 * [MosaicML](https://www.mosaicml.com/blog/long-context-mpt-7b-8k)
 
+<div class="result" markdown>
+??? tip "[LAION-AI](https://github.com/LAION-AI/Open-Assistant) An attempt an open-version of ChatGPT"
+</div>
 
 ## Image Oriented
 
