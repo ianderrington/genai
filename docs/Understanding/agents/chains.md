@@ -1,4 +1,3 @@
-<img width="1012" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7ac4076b-e577-47be-b6af-a2429a8a62fa">
 ## Chains
 
 Chains can be considered linked generative interactions where information can be processed with interepreters, tools, or other agents/GenAIs.
