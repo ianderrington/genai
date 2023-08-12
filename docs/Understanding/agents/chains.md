@@ -116,8 +116,7 @@ Here are some known thought structures that are improving agentic output.
 </div>
 
 <div class="result" markdown>
-??? tip "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf)
-    A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage."  
+??? tip "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf) A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage."  
     **The thought flow**
     ![image](https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28)
     [Github](https://github.com/ysymyth/tree-of-thought-llm)
@@ -169,6 +168,11 @@ Here are some known thought structures that are improving agentic output.
     <img width="1008" alt="image" src="https://github.com/ianderrington/general/assets/76016868/5ffa0653-a323-44a6-bff5-b49e3be6091a">
 </div>
 
+<div class="result" markdown>
+??? tip "[Question Decomposition Improves the Faithfulness of Model-Generated Reasoning](https://arxiv.org/pdf/2307.11768.pdf)"
+    [A nice discussion on it](https://www.forbes.com/sites/lanceeliot/2023/07/31/new-prompt-engineering-technique-pumps-up-chain-of-thought-with-factored-decomposition-and-spurs-exciting-uplift-when-using-generative-ai/)
+
+
 #### Perceptive decomposition
 
 Breaking up the topic by considering different personas, within the _same_ model-call partitions can be quite successful. Often [systems](./systems.md) can be used as well, though the complexity of implementation increases.
@@ -176,7 +180,7 @@ Breaking up the topic by considering different personas, within the _same_ model
 <div class="result" markdown>
 ??? tip "[Unleashing Cognitive Synergy in Large Language Models: A Task-Solving Agent Through Multi-person Self-Collaboration](https://arxiv.org/pdf/2307.05300.pdf)"
     Uses a prompt that initiates a group of personas to be used within the same LLM call to facilitate collaborative analysis and creation of the final output. Solid improvement but comparisons to other techniques are potentially uncertain.
-   "[Example prompt](https://github.com/MikeWangWZHL/Solo-Performance-Prompting/blob/main/prompts/trivia_creative_writing.py)" 
+    "[Example prompt](https://github.com/MikeWangWZHL/Solo-Performance-Prompting/blob/main/prompts/trivia_creative_writing.py)" 
    
     ```python title="Trivia writing SPP'
 
@@ -211,42 +215,11 @@ Breaking up the topic by considering different personas, within the _same_ model
     ```
 </div>
 
-#### Tool requirements
+#### Constrained
 
 <div class="result" markdown>
 ??? tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031) A 'logical guide' tool that an LLM can use." 
     It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
 </div>
-
-
-
-## Implementation Frameworks
-
-### Langchain
-
-- [Langchain](https://python.langchain.com/en/latest/#) A primitive python or javascript-based primitive 'LLM' language that enables planned and agentic AI.
-- [Langflow](https://github.com/logspace-ai/langflow) 
-- [Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
-- [Toolkit](https://www.toolkit.club/) Generates LangChain plugins
-
-#### Tutorials
-
-- https://www.pinecone.io/learn/langchain-prompt-templates/
-- https://learn.deeplearning.ai/langchain/lesson/3/memory
-
-### Llama index
-
-- [llama index](https://www.llamaindex.ai/) and [Github](https://github.com/jerryjliu/llama_index) for integrating data ingestion and models. 
-- [LlamaHub (community library of data loaders)](https://llamahub.ai)
-- [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
-- [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
- 
-### Others
-
-- [Flowise](https://github.com/FlowiseAI/Flowise)
-- [Chain Forge](https://github.com/ianarawjo/ChainForge) A data flow prompt engineering environment for evaluating ana analyzing LLM responses
-- [llm-chain](https://docs.llm-chain.xyz/docs/introduction) ChatGPT and Alpaca support. Agentic with bash commands.
-- [Agent Flow](https://github.com/simonmesmith/agentflow)
-- [Auto Chain](https://github.com/Forethought-Technologies/AutoChain) 
 
 
