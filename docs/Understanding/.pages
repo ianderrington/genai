@@ -1,9 +1,8 @@
 nav:
     - overview
     - data
-    - model_creation
+    - models
     - prompt_engineering
     - agents
-    - enablement
     - ethical_concerns
     - studies

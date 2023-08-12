@@ -3,7 +3,7 @@ Using Github to organize our understanding of a fluid field is a notable challen
 Eventually we may shift to other systems (like docusaurus). Before that though, we will be wanting to integrate state-of-the-art updates to understanding while we build our auto-building system. 
 
 ## Content
-
+- [ ] Improve strructure of everything hello OK Obama
 - [ ] Go through content that is already there read it, summarize it, and make it look better.
 
 
@@ -22,7 +22,7 @@ Eventually we may shift to other systems (like docusaurus). Before that though, 
 We can make this easier to read
 
 - [ ] Improve landing page and header bar to be more modern. 
-- [ ] Build interactive graph representation of this site that includes summary information. Check [this out](https://towardsdatascience.com/making-network-graphs-interactive-with-python-and-pyvis-b754c22c270) and the [examples](../Understanding/enablement/examples.md)
+- [ ] Build interactive graph representation of this site that includes summary information. Check [this out](https://towardsdatascience.com/making-network-graphs-interactive-with-python-and-pyvis-b754c22c270) and the [examples](../Engineering/examples.md)
 - [ ] https://melaniewalsh.github.io/Intro-Cultural-Analytics/06-Network-Analysis/02-Making-Network-Viz-with-Bokeh.html
 - [ ] build with https://docusaurus.io/
 - [ ] Integrate example python notebooks and build with https://github.com/outerbounds/nbdoc

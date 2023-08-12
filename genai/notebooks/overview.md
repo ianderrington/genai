@@ -5,7 +5,7 @@ The base components of GENAI
 ## Organization
 
 1. [Data](../data/data.md) is the p
-1. [Models](../model_creation/index.md)
+1. [Models](../models/index.md)
 1. [Prompts](../prompt_engineering/prompting.md)
 1. [Agents](../agents/index.md)
 1. [Engineering and Management](../enablement/index.md.md)

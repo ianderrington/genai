@@ -43,6 +43,8 @@ Thought structures are chain patterns used by singular (or even multiple agents 
 
 Here are some known thought structures that are improving agentic output.
 
+#### Decomposition
+
 <div class="result" markdown>
 !!! tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)" 
     A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation. 
@@ -99,10 +101,12 @@ Here are some known thought structures that are improving agentic output.
 <div class="result" markdown>
 !!! tip "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf)"
     A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage.  
+??? example "The thought flow"
     ![image](https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28)
     [Github](https://github.com/ysymyth/tree-of-thought-llm)
-  
-IDEA: Write Tree of Thoughts into Langchain?
+
+    IDEA: Write Tree of Thoughts into Langchain?
+
 
 ??? example "[Prompts compared](https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py)"
     ```python
@@ -149,10 +153,6 @@ IDEA: Write Tree of Thoughts into Langchain?
 </div>
 
 <div class="result" markdown>
-!!! tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031)"
-    A 'logical guide' tool that an LLM can use. It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
-</div>
-<div class="result" markdown>
 !!! tip "[UNLEASHING COGNITIVE SYNERGY IN LARGE LANGUAGE MODELS: A TASK-SOLVING AGENT THROUGH MULTI-PERSONA SELF-COLLABORATION](https://arxiv.org/pdf/2307.05300.pdf)"
 
     Uses a prompt that initiates a group of personas to be used within the same LLM call to facilitate collaborative analysis and creation of the final output. Solid improvement but comparisons to other techniques are potentially uncertain.
@@ -192,31 +192,13 @@ IDEA: Write Tree of Thoughts into Langchain?
     ```
 </div>
 
-## Enhancements
-
+#### 
 <div class="result" markdown>
-!!! tip "[EmbedChain](https://github.com/embedchain/embedchain)"
-    "Embedchain is a framework to easily create LLM powered bots over any dataset." OpenAI and Llama2 so far.
-
-??? example
-    ```python
-        import os
-
-        from embedchain import Llama2App
-        
-        os.environ['REPLICATE_API_TOKEN'] = "REPLICATE API TOKEN"
-        
-        zuck_bot = Llama2App()
-        
-        # Embed your data
-        zuck_bot.add("youtube_video", "https://www.youtube.com/watch?v=Ff4fRgnuFgQ")
-        zuck_bot.add("web_page", "https://en.wikipedia.org/wiki/Mark_Zuckerberg")
-        
-        # Nice, your bot is ready now. Start asking questions to your bot.
-        zuck_bot.query("Who is Mark Zuckerberg?")
-        # Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook. 
-    ```
+!!! tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031)"
+    A 'logical guide' tool that an LLM can use. It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
 </div>
+
+
 
 ## Implementation Frameworks
 

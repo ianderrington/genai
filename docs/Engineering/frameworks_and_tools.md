@@ -1,3 +1,29 @@
+### Memory Interaction
+
+<div class="result" markdown>
+!!! tip "[EmbedChain](https://github.com/embedchain/embedchain)"
+    "Embedchain is a framework to easily create LLM powered bots over any dataset." OpenAI and Llama2 so far.
+
+??? example
+    ```python
+        import os
+
+        from embedchain import Llama2App
+        
+        os.environ['REPLICATE_API_TOKEN'] = "REPLICATE API TOKEN"
+        
+        zuck_bot = Llama2App()
+        
+        # Embed your data
+        zuck_bot.add("youtube_video", "https://www.youtube.com/watch?v=Ff4fRgnuFgQ")
+        zuck_bot.add("web_page", "https://en.wikipedia.org/wiki/Mark_Zuckerberg")
+        
+        # Nice, your bot is ready now. Start asking questions to your bot.
+        zuck_bot.query("Who is Mark Zuckerberg?")
+        # Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook. 
+    ```
+</div>
+
 
 ## Operational Toolkits for LLMops
 - ‼️[Hugging Face Transformers](https://huggingface.co/transformers/v4.0.1/index.html)
@@ -19,6 +45,7 @@ Llama is Meta's now open-source model. Llama 2 is MIT and free for commercial us
 - [MedAlpaca](https://github.com/kbressem/medAlpaca)
 
 - [Llama-2 on a CPU](https://towardsdatascience.com/running-llama-2-on-cpu-inference-for-document-q-a-3d636037a3d8) and [Github](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
+
 
 ## Python Tools
 

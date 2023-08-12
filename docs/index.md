@@ -1,21 +1,34 @@
-# 🎉 Welcome!
+# 🎉 Welcome to Managing Gen()AI!
 
-Welcome to our **open-source project** on **Generative AI**, or **GenAI** 🤖. The field of GenAI is rapidly expanding and becoming increasingly complex, and our mission is to make this topic more accessible and understandable for everyone.
+**Our Mission**: Simplify and demystify Gen()AI for making it accessible and understandable, and to increase our ability to manage it. 
 
-This project aims to provide comprehensive, full-spectrum knowledge on a range of GenAI topics 📘. We've built this documentation in **Markdown** to encourage collaboration and continuous learning through **GitHub pull requests** 🤝.
+Our **open-source project** on [**Managing Generative AI**](https://www.managen.ai) 🤖 will help us to stay on top of understanding and working with the increasingly complex of world of Generative AI.
 
-One of our main goals is to have this project written by **GenAI itself** 🚀, enabling us to keep up with the complexity of information and advances in the field. To achieve this, we are focusing on:
+## Why is it called Gen() AI?
 
-- 📝 Creating a **useful, base documentation repository** that aids authors in generating self-descriptive repositories.
-- 🔄 Developing an **automated merge and build system** for the website that delivers information in an aesthetic and readable manner.
-- 🔁 Establishing a **self-referential build system** using Langchain and learned information, potentially utilizing AutoPR, among others.
+Generative AI creates. So does will General AI. Depending on their definitions there may be notable differences, the overlap ensures that there will be shared characteristics that warrant writing this ambiguously, such as GenAI or Gen()AI. 
 
-We are aware this is an ambitious task, but we believe in the power of GenAI to **explain itself** in a way that everyone can understand and benefit from 💪. If you share our vision and would like to contribute, we warmly welcome your input. P
+## 📘 What's Inside?
 
+- **Understanding Generative AI**: Delve deep into the mechanics, models, and methodologies of Gen()AI.
+- **Managing Generative AI**: This is the heart of our project, with tools to enable quality, and responsible development of this and other AI-projects.
+- **Collaboration**: Written in **Markdown**, this documentation encourages community collaboration through **GitHub pull requests** 🤝.
 
-lease follow these [**guidelines**](Managing/contributing.md)
-to create a PR. Together, let's push the boundaries of what we can do with GenAI! 🌍
+## 🚀 GenAI Explaining Itself?
 
-!!! hint "Quick navigation"
-    You can type `,` or `.` to go forward/backwards. You can also press `/` at any time and start searching for what you're looking for~
+One of our ambitious goals is to have this documentation written and updated by **GenAI itself**. We aim to:
 
+- 📝 Set up a **base documentation repository** that aids in generating self-descriptive content.
+- 🔄 Implement an **automated merge and build system** for a seamless automation and viewing experience.
+- 🔁 Create a **self-referential models** using tools like Langchain to enable its supervised self-improvement via pull-requests and reviews.
+- 🕸️ Catch the greatest new insights and integrate it into a 'living' document that evolves with the time. 
+
+We believe in Gen()AI's potential to effecively **explain itself** even as the technology grows with extreme complexity. 
+
+If you're as excited as we are and wish to contribute, join us!
+
+!!! hint "Contribute"
+    Interested in contributing? Check out our [**guidelines**](Managing/contributing.md) to get started.
+
+!!! tip "Quick navigation"
+    Navigate with ease! Type `,` or `.` to go forward/backwards. Press `/` to search anytime.

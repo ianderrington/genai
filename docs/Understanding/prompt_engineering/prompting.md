@@ -1,3 +1,9 @@
+### LLM Prompting
+- ‼️[LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide) based on [paper](https://arxiv.org/abs/2304.13712).
+
+- ‼️[Prompting Guide](https://www.promptingguide.ai/)
+- [Wolfram Prompt Repo](https://writings.stephenwolfram.com/2023/06/prompts-for-work-play-launching-the-wolfram-prompt-repository/?mibextid=Zxz2cZ)
+- ‼️[Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
 
 
 

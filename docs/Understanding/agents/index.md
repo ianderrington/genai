@@ -5,7 +5,7 @@ Similar to bots, or other computerized automota, they may have the ability to ru
 
 ## Basic Concepts
 
-* [Models](../model_creation/index.md): The 'intelligent' component returns an output for a given input. 
+* [Models](../models/index.md): The 'intelligent' component returns an output for a given input. 
 * Input [prompts](../prompt_engineering/prompting.md) that orient's and agent's response. 
 * [Memory](./memory.md) to enable writing and reading information that may be of use. 
 * [Tools](./actions_and_tools.md) that enable more than text (or images) to be returned or otherwise acted upon. 
@@ -21,11 +21,11 @@ Before we go on, there are several references that are of high merit that you ma
 - [Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent) As usual, a splendid post by Lilian Weng
 - [Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of nicely curated list of systems using agents
 
-## [Models](../model_creation/models.md)
+## [Models](../models/index.md)
 
-Models provide the computational core of Agents. Acting like a 'brain' that atakes in input [prompts](#prompts) they return outputs. Generally the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation as with [distillation](../model_creation/distillation.md) 
+Models provide the computational core of Agents. Acting like a 'brain' that atakes in input [prompts](#prompts) they return outputs. Generally the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation as with [distillation](../models/distillation.md) 
 
-We describe models thoroughly in an educational manner [here](../model_creation/index.md) and in an applied manner [here](../enablement/models.md). 
+We describe models cational manner [here](../models/index.md) and in an applied manner [here](../../Engineering/models.md). 
 
 ## [Prompts](../prompt_engineering/prompting.md)
 
