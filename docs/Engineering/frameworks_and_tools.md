@@ -113,3 +113,8 @@ Llama is Meta's now open-source model. Llama 2 is MIT and free for commercial us
 ## Data
 
 - [AutoLabel](https://github.com/refuel-ai/autolabel) A nice pythonic system for generating semantic labels repeatedly for use in downstream datasets
+
+## LLM-extraction
+
+- [Kor](https://github.com/eyurtsev/kor) For extracting structured data using LLMs.
+
