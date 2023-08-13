@@ -37,6 +37,18 @@ graph TB
 ### Agent
 
 <div class="result" markdown>
+??? tip "[ReAct](https://arxiv.org/abs/2210.03629)"
+    - [Github](https://github.com/ysymyth/ReAct) 
+    - Effectively Observe, Think, Act, Repeat.
+</div>
+<div class="result" markdown>
+??? tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://arxiv.org/abs/2303.11366) an agent with dynamic memory and self-reflection capabilities"
+    ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
+    - [Github](https://github.com/noahshinn024/reflexion)
+    - [Inspired github](https://github.com/GammaTauAI/reflexion-human-eval) 
+</div>
+
+<div class="result" markdown>
 ??? tip "[Learning to Reason and Memorize with Self-Notes](https://adapterhub.ml/) Allows model to deviate from input context at any time to reason and take notes"
     <img width="685" alt="image" src="https://github.com/ianderrington/general/assets/76016868/e3b9ed66-18a8-451b-b29a-09815d7791d1">
 </div>

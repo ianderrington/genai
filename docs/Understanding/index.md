@@ -20,9 +20,9 @@ Getting into it, you will find the following outline:
 ### What's been done with Gen()AI?
 
 1. [Data](data/data.md) provides the backbone connecting computation to our recorded reality.
-1. [Models](models/index.md) allow the data to bunderstood and used. 
+1. [Models](models/index.md) allow the data to be understood and used. [^n1]
 1. [Prompts](prompt_engineering/prompting.md) govern how we interact with the models.
-1. [Agents](agents/index.md) allow for models to be used in more useful, and complex manners.
+1. [Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners.
 1. [Ethical concerns](ethical_concerns/index.md) help us to temper the responsible use of these powerful technologies.
 1. [Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis. 
 
@@ -45,9 +45,7 @@ And please, whatever you do, be cognisant of the [ethical concerns](ethical_conc
 There is so much quality material, it would be valuable for your time to check some of these out if you got the chance. 
 
 <div class="result" markdown>
-!!! tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/)"
-    An impressively thorough and well-written discussion on LLMs and patterns within them
-??? example 
+??? tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
     Important patterns mentioned (references to discussions herein):
     * [Evaluation](models/evaluation.md)
     * [Retreival Augmented Generation (RAG)](models/rag.md)
@@ -66,4 +64,4 @@ There is so much quality material, it would be valuable for your time to check s
 - [LLM Survey](https://github.com/RUCAIBox/LLMSurvey)
 - [Large Language Models Explained](https://www.understandingai.org/p/large-language-models-explained-with)
 
-[a^1]: This is presently highly [transformer-based LLM](models/classes/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](models/classes/index.md)
+[a^1]: This is presently highly [transformer-based large-language models](models/classes/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](models/classes/index.md)

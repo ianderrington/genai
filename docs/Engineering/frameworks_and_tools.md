@@ -111,3 +111,7 @@ Llama is Meta's now open-source model. Llama 2 is MIT and free for commercial us
     output()
     # 'Preheating to 350 F with mode bake'
     ```
+
+
+
+- [AutoLabel](https://github.com/refuel-ai/autolabel) A nice pythonic system for generating semantic labels repeatedly for use in downstream datasets

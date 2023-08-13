@@ -119,4 +119,4 @@ i
 ### Second Brain
 
 
-- ‼️ ‼️ [Quiver](https://github.com/StanGirard/quiv) A LLM for self Second brain. 
+- ‼[Quiver](https://github.com/StanGirard/quiv) A LLM for self Second brain. 

@@ -40,17 +40,15 @@ Thought structures are chain patterns used by singular (or even multiple agents 
 
 Here are some known thought structures that are improving agentic output.
 
+
+
 <div class="result" markdown>
-??? tip "[ReAct](https://arxiv.org/abs/2210.03629)"
-    - [Github](https://github.com/ysymyth/ReAct) 
-    - Effectively Observe, Think, Act, Repeat.
+??? tip "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf)
+    <img width="537" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4dcb9273-8965-461d-8da7-ae9a0be6debc">
 </div>
-<div class="result" markdown>
-??? tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://arxiv.org/abs/2303.11366) an agent with dynamic memory and self-reflection capabilities"
-    ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
-    - [Github](https://github.com/noahshinn024/reflexion)
-    - [Inspired github](https://github.com/GammaTauAI/reflexion-human-eval) 
-</div>
+
+#### Recurrent
+
 <div class="result" markdown>
 ??? tip "[Teaching Large Language Models to Self-Debug](https://arxiv.org/abs/2304.05128) `transcoder`"
     <img width="865" alt="image" src="https://user-images.githubusercontent.com/76016868/231906559-758d89e4-d22a-4a3a-aa96-1d630e48651d.png">
@@ -60,10 +58,7 @@ Here are some known thought structures that are improving agentic output.
     [Website](https://posgnu.github.io/rci-web/), [GitHub](https://github.com/posgnu/rci-agent)  Combining with Chain of Thought it is even better. The method: Plan: Critique, Improve 
     - Explicit RCI: "Review your previous answer and find problems with your answer." --> "Based on the problems you found, improve your answer." Recursively Criticizes and Improves its output. This sort of prompting outperforms Chain of Thought, and combined it works even better.  
 </div>
-<div class="result" markdown>
-??? tip "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf)
-    <img width="537" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4dcb9273-8965-461d-8da7-ae9a0be6debc">
-</div>
+
 #### Structural Decomposition 
 
 <div class="result" markdown>
