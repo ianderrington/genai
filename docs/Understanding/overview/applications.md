@@ -2,11 +2,6 @@
 
 ### Summarization 
 
-This can be used to summarize documents. 
-
-Codebases:
-- [Summarization with Langchain] https://github.com/EnkrateiaLucca/summarization_with_langchain A splendid view of a quick streamlit app that does PDF summarization. 
-
 ### Semantic Search
 
 Embedding of an input has the niceness that semantic, or 'meaning' nearness can be found via distance calculations. This enables semantic search.
@@ -95,7 +90,7 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 - [Grammar-Induced Geometry for Data-Efficient Molecular Property Prediction](https://openreview.net/pdf?id=SGQi3LgFnqj) A quality framework using heirarchichal metagraphs to stitch-together molecular nodes resulting in leaves that are 'actual' molecules. Using graph neural-diffusion, it does amazingly well even with minimal data-sets (100 examples).
 <img width="1052" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/50894091-fdc9-4a8f-9836-90cec4a147d0"> 
 
-i
+i=
 ### Biology
 
 - [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end. 

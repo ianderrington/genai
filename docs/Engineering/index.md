@@ -2,12 +2,12 @@
 
 ### References
 
-??? tip"[Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A very nice discussion of the components and their interactions via orchestration systems."
+??? tip "[Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A very nice discussion of the components and their interactions via orchestration systems."
     ![image](https://github.com/ianderrington/genai/assets/76016868/f287eaef-6b86-4846-8885-2b3ad3cd614b) [^n1]
 
-!!! tip [Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A very nice high overview of the component market for LLM architectures.
 
-??? tip "[Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/abs/2307.10169)"
+
+??? tip "[Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/abs/2307.10169) Well done and thorough."
 
 
 

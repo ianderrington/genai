@@ -29,8 +29,6 @@
 - [Auto Chain](https://github.com/Forethought-Technologies/AutoChain) 
 
 
-
-
 ## Memory Interaction
 
 <div class="result" markdown>
@@ -112,6 +110,6 @@ Llama is Meta's now open-source model. Llama 2 is MIT and free for commercial us
     # 'Preheating to 350 F with mode bake'
     ```
 
-
+## Data
 
 - [AutoLabel](https://github.com/refuel-ai/autolabel) A nice pythonic system for generating semantic labels repeatedly for use in downstream datasets

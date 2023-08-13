@@ -25,19 +25,19 @@ This needs to be cleaned up and expanded. It needs to be made into a table. It n
 * [Claud]()
 * [ChatGPT (OpenAI)](https://openai.com/blog/chatgpt)
 * [Medpalm](https://arxiv.org/abs/2212.13138)
-* [Llama2](https://ai.meta.com/llama/)(Not completely open source.)
-* [Open Llama](https://github.com/openlm-research/open_llama) (Non-commercial ??)
-* [UAE Falcon](https://www.tii.ae/news/uaes-falcon-40b-now-royalty-free) (Apache License)
-* [Orca (Microsoft)](https://arxiv.org/pdf/2306.02707.pdf) (Not yet released)
+* [Llama2](https://ai.meta.com/llama/)
+* [Open Llama](https://github.com/openlm-research/open_llama) 
+* [UAE Falcon](https://www.tii.ae/news/uaes-falcon-40b-now-royalty-free) 
+* [Orca (Microsoft)](https://arxiv.org/pdf/2306.02707.pdf) 
 * [MosaicML](https://www.mosaicml.com/blog/long-context-mpt-7b-8k)
 
 <div class="result" markdown>
-??? tip "[LAION-AI](https://github.com/LAION-AI/Open-Assistant) An attempt an open-version of ChatGPT"
+??? tip "[LAION-AI](https://github.com/LAION-AI/Open-Assistant) An attempted open-source version of ChatGPT"
 </div>
 
 ## Image Oriented
 
-- [StableLM: Stability AI Language Models](https://github.com/stability-AI/stableLM/)  CC BY-SA-4.0
+- [StableLM: Stability AI Language Models](https://github.com/stability-AI/stableLM/) 
 
 ## Open Source [^n1] Code
 

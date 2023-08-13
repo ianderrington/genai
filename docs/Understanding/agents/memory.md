@@ -47,7 +47,7 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
 Databases that rely on query-languages such as SQL or non-SQL based databases, or even 'csv-type' information stores can be accessed and generated using agents. 
 
-The models may generate queries that can be executed by by [interpreters](./interpreters.md), though it is not guaranteed that the queries will be accurate. [TODO: Find reference](some_reference_on_LLM_SQL)
+The models may generate queries that can be executed by by an interpreter, though it is not guaranteed that the queries will be accurate. [TODO: Find reference](some_reference_on_LLM_SQL)
 
 !!! references 
     For more information on memory implementations and caching, refer to the following resources:
