@@ -6,7 +6,6 @@ Data can be 'real' or 'simulated', though there is general consensus that simula
 
 - [“Textbooks are all you need”](https://arxiv.org/pdf/2306.11644.pdf) A to-be opensourced high-quality model by Microsoft revealing the importance of high-quality input data. only used 4 days on 8 A-100s to train to reach out-performing results. (It also uses a lot of simulated data). Coding-focused model. 
 
-
 ### Scaling Laws
 !!! tip "[Training Compute-Optimal Large Language Models
 ](https://arxiv.org/abs/2203.15556) The 'Chinchilla' paper of 2022, identifies scaling laws that help to understand the volume of data that is needed"
