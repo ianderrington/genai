@@ -10,9 +10,7 @@ Data can be 'real' or 'simulated', though there is general consensus that simula
 ### Scaling Laws
 !!! tip "[Training Compute-Optimal Large Language Models
 ](https://arxiv.org/abs/2203.15556) The 'Chinchilla' paper of 2022, identifies scaling laws that help to understand the volume of data that is needed"
-
     to obtain 'optimal' performance for a given LLM models size. Use of it in other areas, such as for Llama reveals that the models may have been under-trained.
-    - Primary takeaway: **"All three approaches suggest that as compute budget increases, model size and the amount of training data should be increased in approximately equal proportions." **
+    - Primary takeaway: **"All three approaches suggest that as compute budget increases, model size and the amount of training data should be increased in approximately equal proportions." 
+    <img width="538" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d9243085-2db9-4ef2-91d7-83249fdd6c18">
 
-!!! references
-    - [Github page on Embeddings](https://github.com/veekaybee/what_are_embeddings/blob/main/README.md)
