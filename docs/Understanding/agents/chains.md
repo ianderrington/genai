@@ -220,6 +220,9 @@ Breaking up the topic by considering different personas, within the _same_ model
 <div class="result" markdown>
 ??? tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031) A 'logical guide' tool that an LLM can use." 
     It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
+    <img width="956" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bf581eb0-96b1-4175-97d0-98f081a03438">
+    Possible open source implementation [here](https://github.com/kyegomez/LOGICGUIDE/tree/main)
+
 </div>
 
 
