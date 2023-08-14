@@ -85,10 +85,13 @@ graph TB
 
 <div>
 !!! tip "[DevOpsGPT](https://github.com/kuafuai/DevOpsGPT)"
-    Through the above introduction and Demo demonstration, you must be curious about how DevOpsGPT achieves the entire process of automated requirement development in an existing project. Below is a brief overview of the entire process:
-
-
     ```
+    Through the above introduction and Demo demonstration, you must be curious about how DevOpsGPT achieves the entire process of automated requirement development in an existing project. Below is a brief overview of the entire process:
+    ```
+    ![image](https://github.com/ianderrington/genai/assets/76016868/5e60c94c-7c03-4667-ae5f-3a9282cf30c4)
+    ```
+
+    
         Clarify requirement documents: Interact with DevOpsGPT to clarify and confirm details in requirement documents.
         Generate interface documentation: DevOpsGPT can generate interface documentation based on the requirements, facilitating interface design and implementation for developers.
         Write pseudocode based on existing projects: Analyze existing projects to generate corresponding pseudocode, providing developers with references and starting points.
