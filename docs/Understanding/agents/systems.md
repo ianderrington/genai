@@ -78,7 +78,13 @@ When an agent (or model) engages in an interaction with another agent, the resul
     ```
     [Github](https://github.com/composable-models/llm_multiagent_debate)
 
+??? tip "[Council ](https://github.com/chain-ml/council)
+    Very promising initial creation of networks of agents to create full-fledged teams for output products. 
+    ![image](https://github.com/chain-ml/council/raw/main/docs/source/introduction/engine_flow.png)
+
+
 ## Open Source Implementations (unpublished)
 !!! tip "[Swarms](https://medium.com/@kyeg/swarms-of-ai-agents-automating-everything-c554f5be421b )"
     Very thoughtful next-level systems focusing on large-dimensions of swarms. Very initial stages but has a lot of promise. 
     [Github](https://github.com/kyegomez/swarms)
+    
