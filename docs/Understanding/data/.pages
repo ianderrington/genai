@@ -1,9 +1,8 @@
 nav:
     - data.md
-    - sources.md
-    - preprocessing.md
+    - selection.md
     - tokenizing.md
     - embedding.md
-    - quality.md
     - privacy.md
+    - sources.md
     - ...
