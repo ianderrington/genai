@@ -78,3 +78,7 @@ When an agent (or model) engages in an interaction with another agent, the resul
     ```
     [Github](https://github.com/composable-models/llm_multiagent_debate)
 
+## Open Source Implementations (unpublished)
+!!! tip "[Swarms](https://medium.com/@kyeg/swarms-of-ai-agents-automating-everything-c554f5be421b )"
+    Very thoughtful next-level systems focusing on large-dimensions of swarms. Very initial stages but has a lot of promise. 
+    [Github](https://github.com/kyegomez/swarms)

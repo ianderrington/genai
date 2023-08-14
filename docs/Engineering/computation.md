@@ -1,6 +1,4 @@
-🚧 This section is under construction 🏗️
-
-## GPUs
+## GPUS
 
 In order to create models, large volumes of matrix multiplication is necessary. GPUs are designed for this. 
 
@@ -12,5 +10,7 @@ In order to create models, large volumes of matrix multiplication is necessary. 
 
 - [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
 
-## References
-￼
+## API-Access
+
+[Petals](https://github.com/bigscience-workshop/petals)
+[Hugging Face Transformers](https://huggingface.co/docs/transformers/index)
