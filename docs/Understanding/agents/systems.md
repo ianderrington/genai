@@ -61,9 +61,20 @@ When an agent (or model) engages in an interaction with another agent, the resul
 </div> 
 <div class="result" markdown>
 
-!!! tip "[Showrunner Agents](https://fablestudio.github.io/showrunner-agents/)"
-    The Showrunner Agents use Large Language Models (LLMs) to generate episodic content. It's a massively creative and multi-faceted process with a great potential.
-
-??? example "Example workflow"
+??? tip "[Showrunner Agents](https://fablestudio.github.io/showrunner-agents/) The Showrunner Agents use Large Language Models (LLMs) to generate episodic content."
+     It's a massively creative and multi-faceted process with a great potential.
     ![image](https://github.com/ianderrington/genai/assets/76016868/9820f2c4-5779-4bc9-b501-4e9b455212ff)
 </div>
+
+??? tip "[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/pdf/2305.14325.pdf)
+    "multiple language model instances propose and debate their individual responses and reasoning processes over multiple rounds to arrive at a common final answer."
+    They tried both concatenation or _summarization_ of other results. Summarization reduces length and improves quality. 
+    ```python
+        # Debate Length Prompt
+        short_prompt = """ These are the solutions to the problem from other agents: {other_answers}
+            Based off the opinion of other agents, can you give an updated response . . ."""
+        long_prompt = """ These are the solutions to the problem from other agents: {other_answers}
+            Using the opinion of other agents as additional advice, can you give an updated response . . ."""
+    ```
+    [Github](https://github.com/composable-models/llm_multiagent_debate)
+

@@ -51,6 +51,7 @@ Here are some known thought structures that are improving agentic output.
 
 <div class="result" markdown>
 ??? tip "[Teaching Large Language Models to Self-Debug](https://arxiv.org/abs/2304.05128) `transcoder`"
+    Coding focused LLM system to continuously improve self. 
     <img width="865" alt="image" src="https://user-images.githubusercontent.com/76016868/231906559-758d89e4-d22a-4a3a-aa96-1d630e48651d.png">
 </div>
 <div class="result" markdown>
