@@ -2,7 +2,6 @@ nav:
     - overview
     - data
     - models
-    - prompt_engineering
     - agents
     - ethical_concerns
     - studies

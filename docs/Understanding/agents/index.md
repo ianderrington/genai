@@ -7,7 +7,7 @@ Similar to bots, or other computerized automota, they may have the ability to ru
 
 * [Models](../models/index.md): The 'intelligent' component returns an output for a given input. 
 * Input [environments](environments.md) that can and do provide inputs. 
-* Language [prompts](../prompt_engineering/prompting.md) that orient's and agent's response. 
+* Language [prompts](../models/prompt_engineering/prompting.md) that orient's and agent's response. 
 * [Memory](./memory.md) to enable writing and reading information that may be of use. 
 * [Tools](./actions_and_tools.md) that enable more than text (or images) to be returned or otherwise acted upon. 
 * [Interpreters](#interpreters) that are used to process input or output. 
@@ -30,12 +30,12 @@ Models provide the computational core of Agents. Acting like a 'brain' that atak
 
 We describe models cational manner [here](../models/index.md) and in an applied manner [here](../../Engineering/models.md). 
 
-## [Prompts](../prompt_engineering/prompting.md)
+## [Prompts](../models/prompt_engineering/prompting.md)
 
 !!! warning "Garbage In --> Garbage Out"
-    The common realization that bad input will lead to bad outputs becomes more nuanced when considering the degree to which small changes in input prompts can lead to wildly different outcome performance. Consequently, well-chosen [prompts](../prompt_engineering/prompting.md) can functionally enable an agent, or not. 
+    The common realization that bad input will lead to bad outputs becomes more nuanced when considering the degree to which small changes in input prompts can lead to wildly different outcome performance. Consequently, well-chosen prompts can functionally enable an agent, or not. 
 
-Because of the importance and breadth of details involved with prompting, please visit [this section](../prompt_engineering/prompting.md). Note, that prompts will be model-specific, and if the model changes, either completely or with new architecture, the continued performance of a given prompt or prompt strategy is not certain. 
+Because of the importance and breadth of details involved with prompting, please visit [this section](../models/prompt_engineering/prompting.md). Note, that prompts will be model-specific, and if the model changes, either completely or with new architecture, the continued performance of a given prompt or prompt strategy is not certain. 
 
 ## [Memory](./memory.md)
 

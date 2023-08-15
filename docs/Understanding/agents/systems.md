@@ -88,3 +88,8 @@ When an agent (or model) engages in an interaction with another agent, the resul
     Very thoughtful next-level systems focusing on large-dimensions of swarms. Very initial stages but has a lot of promise. 
     [Github](https://github.com/kyegomez/swarms)
     
+## Potentially useful tools
+!!! tip "[Nomadproject.io](https://www.nomadproject.io/) A simple and flexible scheduler and orchestrator to deploy and manage containers and non-containerized applications across on-prem and clouds at scale."
+
+!!! tip "[Firecracker](https://github.com/firecracker-microvm/firecracker) 'Our mission is to enable secure, multi-tenant, minimal-overhead execution of container and function workloads.'"
+

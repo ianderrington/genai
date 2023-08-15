@@ -21,14 +21,14 @@ Getting into it, you will find the following outline:
 
 1. [Data](data/data.md) provides the backbone connecting computation to our recorded reality.
 1. [Models](models/index.md) allow the data to be understood and used. [^n1]
-1. [Prompts](prompt_engineering/prompting.md) govern how we interact with the models.
+1. [Prompts](models/prompt_engineering/prompting.md) govern how we interact with the models.
 1. [Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners.
 1. [Ethical concerns](ethical_concerns/index.md) help us to temper the responsible use of these powerful technologies.
 1. [Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis. 
 
 ### How do you do stuff with Gen()AI?
 
-Of course, there will be some important 'how-to's, particularly in the [data](data/data.md), [models](models/index.md), [prompts](./prompt_engineering/prompting.md) and [agents](./agents/index.md). 
+Of course, there will be some important 'how-to's, particularly in the [data](data/data.md), [models](models/index.md), [prompts](models/prompt_engineering/prompting.md) and [agents](./agents/index.md). 
 
 Still, you'll want ot check out the  [engineering][../Engineering/index.md] section to figure out how to use and engineer Gen()AI for your task at hand. 
 

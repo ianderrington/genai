@@ -6,7 +6,7 @@ There are two primary domains of Generative AI, text-oriented or image-oriented,
 
 We discuss the general complete models used in creating Generative AI. Initial incarnations of this will focus on the most observably promising core-models, transformers. 
 
-Because we generally call Gen()AI with language inputs, there are different ways to use language to achieve the appropriately desired results. These inputs, [prompts](../prompt_engineering/prompting.md) will be model-specific, but may share commonalities for more-optimal usage and we discuss that more thoroughly [here](../prompt_engineering/prompting.md)
+Because we generally call Gen()AI with language inputs, there are different ways to use language to achieve the appropriately desired results. These inputs, [prompts](prompt_engineering/prompting.md) will be model-specific, but may share commonalities for more-optimal usage and we discuss that more thoroughly [here](prompt_engineering/prompting.md)
 
 Here we discuss models / architecture, and not models that are trained and released. Please see the [Available Trained Models](../../Engineering/models.md) for specific access to models. 
 
@@ -61,7 +61,8 @@ Additional models come up all the time.
 
 ## MultiModal 
 
-- [SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs](https://arxiv.org/pdf/2306.17842.pdf) A really cool idea that uses pyramidal representations and compresses information into text-tokens of different levels. It can reconstruct it as needbe. These tokens then could be used in novel image generation via semantic mapping with an LLM. 
+??? tip "[SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs](https://arxiv.org/pdf/2306.17842.pdf) A really cool idea that uses pyramidal representations and compresses information into text-tokens of different levels."
+    It can reconstruct it as need be. These tokens then could be used in novel image generation via semantic mapping with an LLM. 
 
 - [Multimodal Neurons in Pretrained Text-Only Transformers](https://arxiv.org/pdf/2308.01544.pdf) Neat demonstration "finding multimodal neurons in text-only transformer MLPs and show that these neurons consistently translate
 image semantics into language."  

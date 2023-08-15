@@ -13,6 +13,8 @@ Chains start with an input that may first be analyzed with another algorithm, su
 
 ### Examples
 
+TODO
+
 - Basic Chain (Chat) 
   - With human interaction
   - With prompt structuring. 
@@ -24,8 +26,6 @@ Chain with memory retrieval
 Multi-model chains.
 
 (Other chains from lang-chain)
-
-
 
 
 
