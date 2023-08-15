@@ -1,20 +1,19 @@
 How are you
 ## Chains
 
-Chains can be considered linked generative interactions where information can be processed with interepreters, tools, or other agents/GenAIs.
-Done well, they can be built up to form reasoning systems that can enable more successful reasoning, or task completion. 
+Chains can be considered linked generative interactions where information can be processed with interpreters, tools, or other agents/GenAIs.
+Done well, they can be built up to form reasoning systems that can enable more successful reasoning or task completion. 
 
-These cna enable passing concepts or data and re-introducing them directly throughout the database. 
+These can enable passing concepts or data and re-introducing them directly throughout the database. 
 
 
 ## Basic Chains
-
-Break an article up. This concept needs to carry forward in all mentions of items.
-
-Starting from an input, an input may first be analyzed with another algorithm, such as by splitting or substituting for HTML link for a token representing a variable. This output may then be directed to part of a template. The prompt-template. The prompt templates then fill in the information. This information is then passed to the LLM. Then the LLM generates the output. This output may then again be processed to re-introduce extracted information removed from the original prompt call (like HTML), to use the output to affect the next actions to be taken, such as printing the output for a person, calling programmatic functions (tools) or sharing with specific downstream chains (routing).
+'Chains start with an input that may first be analyzed with another algorithm, such as by splitting or substituting an HTML link for a token representing a variable. This output may then be directed to part of a template. The prompt-template. The prompt templates then fill in the information. This information is then passed to the LLM. Then the LLM generates the output. This output may then again be processed to re-introduce extracted information removed from the original prompt call (like HTML), to use the output to affect the next actions to be taken, such as printing the output for a person, calling programmatic functions (tools) or sharing with specific downstream chains (routing).
 
 
 ### Examples
+
+TODO
 
 - Basic Chain (Chat) 
   - With human interaction
@@ -30,8 +29,6 @@ Multi-model chains.
 
 
 
-
-
 ## Resources
 
 - [Chain of thought hub](https://github.com/FranxYao/chain-of-thought-hub)
@@ -43,12 +40,33 @@ Thought structures are chain patterns used by singular (or even multiple agents 
 
 Here are some known thought structures that are improving agentic output.
 
+
+
 <div class="result" markdown>
-!!! tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)" 
+??? tip "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf)
+    <img width="537" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4dcb9273-8965-461d-8da7-ae9a0be6debc">
+</div>
+
+#### Recurrent
+
+<div class="result" markdown>
+??? tip "[Teaching Large Language Models to Self-Debug](https://arxiv.org/abs/2304.05128) `transcoder`"
+    Coding focused LLM system to continuously improve self. 
+    <img width="865" alt="image" src="https://user-images.githubusercontent.com/76016868/231906559-758d89e4-d22a-4a3a-aa96-1d630e48651d.png">
+</div>
+<div class="result" markdown>
+??? tip "[Language Models can Solve Computer Tasks](https://arxiv.org/pdf/2303.17491.pdf) Uses Recursive Criticism and Improvement."
+    [Website](https://posgnu.github.io/rci-web/), [GitHub](https://github.com/posgnu/rci-agent)  Combining with Chain of Thought it is even better. The method: Plan: Critique, Improve 
+    - Explicit RCI: "Review your previous answer and find problems with your answer." --> "Based on the problems you found, improve your answer." Recursively Criticizes and Improves its output. This sort of prompting outperforms Chain of Thought, and combined it works even better.  
+</div>
+
+#### Structural Decomposition 
+
+<div class="result" markdown>
+??? tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)" 
     A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation. 
     <img width="408" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd">
 
-??? example "Example prompt"
     ```markdown  title="Skeleton prompt template"
         [User:] You’re an organizer responsible for only giving the skeleton (not the full content) for answering the question.
         Provide the skeleton in a list of points (numbered 1., 2., 3., etc.) to answer the question. Instead of writing a full
@@ -92,19 +110,17 @@ Here are some known thought structures that are improving agentic output.
 </div>
 
 <div class="result" markdown>
-!!! tip "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)" 
+??? tip "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)" 
     [Github](https://github.com/jieyilong/tree-of-thought-puzzle-solver)
 </div>
 
 <div class="result" markdown>
-!!! tip "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf)"
-    A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage.  
+??? tip "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf) A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage."  
+    **The thought flow**
     ![image](https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28)
     [Github](https://github.com/ysymyth/tree-of-thought-llm)
   
-IDEA: Write Tree of Thoughts into Langchain?
-
-??? example "[Prompts compared](https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py)"
+    "[Prompts compared](https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py)"
     ```python
         standard_prompt = '''
         Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: {input}
@@ -134,30 +150,37 @@ IDEA: Write Tree of Thoughts into Langchain?
 </div>
 
 <div class="result" markdown>
-!!! tip "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
-
+??? tip "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
+    <img width="1663" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e516604b-57b2-4d82-b9a9-0168c8eb9f15">
 
 </div>
 
 <div class="result" markdown>
-!!! tip "[Graph of Thought](https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/)" 
+??? tip "[Graph of Thought](https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/)" 
     An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.
-  
-??? example
     ![image](https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649)
-
 </div>
 
 <div class="result" markdown>
-!!! tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031)"
-    A 'logical guide' tool that an LLM can use. It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
+??? tip "[Strategic Reasoning with Language Models](https://arxiv.org/abs/2305.19165) Uses game trees and observed and inferred beliefs to achieve closer to optimal results. "
+     Powerful to consider for inferred beliefs and interacting in situations where negotiation or games are being played.
+    <img width="1008" alt="image" src="https://github.com/ianderrington/general/assets/76016868/5ffa0653-a323-44a6-bff5-b49e3be6091a">
 </div>
-<div class="result" markdown>
-!!! tip "[UNLEASHING COGNITIVE SYNERGY IN LARGE LANGUAGE MODELS: A TASK-SOLVING AGENT THROUGH MULTI-PERSONA SELF-COLLABORATION](https://arxiv.org/pdf/2307.05300.pdf)"
 
+<div class="result" markdown>
+??? tip "[Question Decomposition Improves the Faithfulness of Model-Generated Reasoning](https://arxiv.org/pdf/2307.11768.pdf)"
+    <img width="1287" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0d51fbcc-8179-46c2-b1dc-37d2e2a6a420">
+    [A nice discussion on it](https://www.forbes.com/sites/lanceeliot/2023/07/31/new-prompt-engineering-technique-pumps-up-chain-of-thought-with-factored-decomposition-and-spurs-exciting-uplift-when-using-generative-ai/)
+
+
+#### Perceptive decomposition
+
+Breaking up the topic by considering different personas, within the _same_ model-call partitions can be quite successful. Often [systems](./systems.md) can be used as well, though the complexity of implementation increases.
+
+<div class="result" markdown>
+??? tip "[Unleashing Cognitive Synergy in Large Language Models: A Task-Solving Agent Through Multi-person Self-Collaboration](https://arxiv.org/pdf/2307.05300.pdf)"
     Uses a prompt that initiates a group of personas to be used within the same LLM call to facilitate collaborative analysis and creation of the final output. Solid improvement but comparisons to other techniques are potentially uncertain.
-
-??? example "[Example prompt](https://github.com/MikeWangWZHL/Solo-Performance-Prompting/blob/main/prompts/trivia_creative_writing.py)" 
+    "[Example prompt](https://github.com/MikeWangWZHL/Solo-Performance-Prompting/blob/main/prompts/trivia_creative_writing.py)" 
    
     ```python title="Trivia writing SPP'
 
@@ -192,59 +215,14 @@ IDEA: Write Tree of Thoughts into Langchain?
     ```
 </div>
 
-## Enhancements
+#### Constrained
 
 <div class="result" markdown>
-!!! tip "[EmbedChain](https://github.com/embedchain/embedchain)"
-    "Embedchain is a framework to easily create LLM powered bots over any dataset." OpenAI and Llama2 so far.
+??? tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031) A 'logical guide' tool that an LLM can use." 
+    It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
+    <img width="956" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bf581eb0-96b1-4175-97d0-98f081a03438">
+    Possible open source implementation [here](https://github.com/kyegomez/LOGICGUIDE/tree/main)
 
-??? example
-    ```python
-        import os
-
-        from embedchain import Llama2App
-        
-        os.environ['REPLICATE_API_TOKEN'] = "REPLICATE API TOKEN"
-        
-        zuck_bot = Llama2App()
-        
-        # Embed your data
-        zuck_bot.add("youtube_video", "https://www.youtube.com/watch?v=Ff4fRgnuFgQ")
-        zuck_bot.add("web_page", "https://en.wikipedia.org/wiki/Mark_Zuckerberg")
-        
-        # Nice, your bot is ready now. Start asking questions to your bot.
-        zuck_bot.query("Who is Mark Zuckerberg?")
-        # Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook. 
-    ```
 </div>
-
-## Implementation Frameworks
-
-### Langchain
-
-- [Langchain](https://python.langchain.com/en/latest/#) A primitive python or javascript-based primitive 'LLM' language that enables planned and agentic AI.
-- [Langflow](https://github.com/logspace-ai/langflow) 
-- [Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
-- [Toolkit](https://www.toolkit.club/) Generates LangChain plugins
-
-#### Tutorials
-
-- https://www.pinecone.io/learn/langchain-prompt-templates/
-- https://learn.deeplearning.ai/langchain/lesson/3/memory
-
-### Llama index
-
-- [llama index](https://www.llamaindex.ai/) and [Github](https://github.com/jerryjliu/llama_index) for integrating data ingestion and models. 
-- [LlamaHub (community library of data loaders)](https://llamahub.ai)
-- [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
-- [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
- 
-### Others
-
-- [Flowise](https://github.com/FlowiseAI/Flowise)
-- [Chain Forge](https://github.com/ianarawjo/ChainForge) A data flow prompt engineering environment for evaluating ana analyzing LLM responses
-- [llm-chain](https://docs.llm-chain.xyz/docs/introduction) ChatGPT and Alpaca support. Agentic with bash commands.
-- [Agent Flow](https://github.com/simonmesmith/agentflow)
-- [Auto Chain](https://github.com/Forethought-Technologies/AutoChain) 
 
 

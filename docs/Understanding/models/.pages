@@ -1,7 +1,7 @@
 nav:
     - index.md
-    - models.md
     - training.md
+    - prompt_engineering
     - distillation.md
     - evaluation.md
     - alignment.md

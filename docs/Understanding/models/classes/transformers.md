@@ -1,6 +1,4 @@
-## Transformers
-- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-
+TODO
 ## Components
 
 TODO: Describe transformers and components
@@ -11,13 +9,24 @@ TODO: Describe transformers and components
 
 ### Attention Models
 
-Layer normalization observaly improves results [On Layer Normalization in the Transformer Architecture](http://proceedings.mlr.press/v119/xiong20b/xiong20b.pdf)
+Layer normalization observably improves results [On Layer Normalization in the Transformer Architecture](http://proceedings.mlr.press/v119/xiong20b/xiong20b.pdf)
+
+## Reviews
+<div class="result" markdown>
+??? tip [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+</div>
+<div class="result" markdown>
+??? tip [The Transformer Blueprint: A Holistic Guide to the Transformer Neural Network Architecture](https://deeprevision.github.io/posts/001-transformer/)
+    A thorough exposition of transformer technology.
+</div>
+
 
 ### Softmax?
 
 The softmax is dominantly researched activation function. There may be other activation functions that are better, such as the 
 
 ### GPT
+
 - [Illustrated GPT](http://jalammar.github.io/illustrated-gpt2/)
 - [How GPT3 works](https://jalammar.github.io/how-gpt3-works-visualizations-animations/)
 Excellent summary of the progress of GPT over time, revealing core components, optimizations, and essential variations to the major Foundation model architectures.
@@ -52,20 +61,29 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 
 
 
-## Improvements, Optimizations, and variations. 
+## Improvements, Optimizations, and Variations. 
 
 - [](https://github.com/neuro-inc/ml-recipe-hier-attention)
 
 - [Scaling Transformer to 1M tokens and beyond with RMT](https://arxiv.or dsvg/abs/2304.11062) [Github](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. 
 
-- [MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185.pdf) MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration hat allows for $O(N^{4/3}$ scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers. 
-<img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356">
+<div class="result" markdown>
+!!! tip "[MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185.pdf)"
+    MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration that allows for $O(N^{4/3}$ scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers.
+
+??? note 
+    <img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356">
+</div>
 
 - [Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf) Uses inspiration from FFT to create a drop in replacement for Transformer models. 
 
-- [Infinite former](https://arxiv.org/pdf/2109.00301.pdf) 
- Uses a representation of input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration 
- [Github](https://github.com/deep-spin/infinite-former) ![Infinity Former](https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80){ align=left width="300"  loading=lazy }
+<div class="result" markdown>
+!!! tip "[Infinite former](https://arxiv.org/pdf/2109.00301.pdf)"
+    Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration.
+
+??? note
+    [Github](https://github.com/deep-spin/infinite-former) 
+    ![Infinity Former](https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80){ align=left width="300"  loading=lazy }
 
 ### Computation Reduction
 
@@ -75,8 +93,11 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 
 Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.
 
-- [Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)
-<img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5">
+<div class="reult" markdown>
+!!! tip "[Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)"
+ 
+??? note
+    <img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5">
 
 
 ## Other modalities
@@ -85,9 +106,13 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
 ### Graphs
 
-- [Transformers Meet Directed Graphs](https://arxiv.org/pdf/2302.00049.pdf) An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.
-<img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc">
+<div class="result" markdown>
+!!! tip "[Transformers Meet Directed Graphs](https://arxiv.org/pdf/2302.00049.pdf)"
+    An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.
 
+??? note
+    <img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc">
+</adiv>
 
 ## Training variations
 ### Fairness Enablement
@@ -110,3 +135,6 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 a constant number of encoder layers can emulate basic computing blocks, including embedding edit operations, non-linear functions, function calls, program counters, and conditional branches. Using these building blocks, we emulate a small instruction-set computer."
 
 
+## Code 
+- [Hugging Face Transformers](https://huggingface.co/docs/transformers/main/index) An API to access a large number of pre-trained transformers. Pytorch based. 
+- [Fast Transformers](https://github.com/idiap/fast-transformers/tree/master) A quality collection of a number of transformer implementations written in Pytorch. 

@@ -4,7 +4,6 @@ nav:
     - memory.md
     - chains.md
     - evaluation.md
-    - actions_and_tools.md
-    - interpreters.md
     - environments.md
     - systems.md
+    - frameworks.md
