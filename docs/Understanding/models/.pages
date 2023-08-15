@@ -1,6 +1,6 @@
 nav:
     - index.md
-    - models
+    - models.md
     - training.md
     - prompt_engineering
     - distillation.md
