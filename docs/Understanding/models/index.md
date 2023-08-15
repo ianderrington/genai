@@ -64,8 +64,7 @@ Additional models come up all the time.
 ??? tip "[SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs](https://arxiv.org/pdf/2306.17842.pdf) A really cool idea that uses pyramidal representations and compresses information into text-tokens of different levels."
     It can reconstruct it as need be. These tokens then could be used in novel image generation via semantic mapping with an LLM. 
 
-- [Multimodal Neurons in Pretrained Text-Only Transformers](https://arxiv.org/pdf/2308.01544.pdf) Neat demonstration "finding multimodal neurons in text-only transformer MLPs and show that these neurons consistently translate
-image semantics into language."  
+
 
 
 
