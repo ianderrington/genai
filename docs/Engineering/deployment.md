@@ -8,6 +8,7 @@ Like other applications, deployment of LLM technologies will rely on front-end a
 
 !!! tip "[Lit-Gpt](https://github.com/Lightning-AI/lit-gpt#setup) Hackable implementation of state-of-the-art open-source large language models released under the Apache 2.0 license."
 
+!!! tip "[Azure-Chat-GPT](https://github.com/davidxw/azurechatgpt) to run GPT on Azure services"
 
 ## Front-End Interfaces
 People have to access it to be useful
