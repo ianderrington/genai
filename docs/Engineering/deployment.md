@@ -2,22 +2,27 @@ The deployment of models enables people to use them for their intended purpose. 
 
 Models of the desired specs must be stored in a file and then loaded for serving. Serving as user inputs that are routed to the served model, optionally batched to improve average request latency, and outputs returned routed appropriately to users. 
 
-Breaking this down, you will need to determine, at least as a first guess, your:
+Breaking this down, you will need to determine, at least as a first guess, at the following:
+
 1. Customer needs
-2. Servable model to service customer
-3. Compute needs to enable service
-4. Budget needed to enable compute
+2. Servable model to appropriately service customer and environmental requirements.
+3. Compute needed to enable service
+4. Budget needed to fund compute
 5. Compute Host that will work with the budget
 6. Visualization needs of the customer
 7. GUI Framework, and visualization service
 
-Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves a data flywheel (which it should!)
+Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves a data flywheel (which it should!).
 
 ##  Customer needs
 < common customer needs and themes>
+<other important topics and sub-bullets
+
 ## Servable model
 < common requirements for servable models>
+<other important topics and sub-bullets
 ## ...
+
 ![image](https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050)
 https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html
 
