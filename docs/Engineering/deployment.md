@@ -45,6 +45,10 @@ https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html
 ??? tip "[Triton Inference Server](https://github.com/triton-inference-server/server) Part of NVIDIA AI Inference" 
     [Tutorial](https://github.com/triton-inference-server/server)
 
+!!! code "[litellm by BerriAI](https://github.com/BerriAI/litellm/blob/main/cookbook/proxy-server/readme.md) provides code to enable railways deployed on railway.app"
+
+!!! website "[Railway.app](https://railway.app/about)
+
 ### Tutorials
 - [](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
 
