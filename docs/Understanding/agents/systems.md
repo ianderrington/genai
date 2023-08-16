@@ -25,20 +25,17 @@ When an agent (or model) engages in an interaction with another agent, the resul
 
 <div class="result" markdown>
 
-!!! tip "[Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf)"
-    This paper discusses a simulation involving different agents exhibiting different personalities. The dynamic environment can be manipulated by these agents. The paper explores various challenges and proposed solutions including:
-
-??? example 
+??? tip "[Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf) in a simulated town!!!"
+    This paper discusses a simulation involving different agents exhibiting different personalities. The dynamic environment, shared in [code](https://github.com/a16z-infra/ai-town) can be manipulated by these agents. The paper explores various challenges and proposed solutions including:
+    ```markdown
     **Remembering**
-    
-    _Observation Memory_ This is a memory stream which maintains a record of past experiences. These experiences are stored in "memory objects", which are described in natural language, and timestamped. The importance of each memory object is determined using metrics such as _recency_, _importance_, and _relevance_. 
-
-    _Reflection Memory_ This memory type allows the agent to generate more abstract thoughts. These thoughts can be included along with reflections. This process is hardcoded to occur when the sum of importance scores exceeds a certain threshold.
-
+        _Observation Memory_ This is a memory stream that maintains a record of past experiences. These experiences are stored in "memory objects", which are described in natural language, and timestamped. The importance of each memory object is determined using metrics such as _recency_, _importance_, and _relevance_. 
+        _Reflection Memory_ This memory type allows the agent to generate more abstract thoughts. These thoughts can be included along with reflections. This process is hardcoded to occur when the sum of importance scores exceeds a certain threshold.
     **Planning and Reacting**
-    
-    _Recursive Planning_ In this process, the agent divides the day into chunks of "goals", which are further broken down into smaller time frames. The ability to adjust these plans based on interactions is a key feature of this mechanism.
+        _Recursive Planning_ In this process, the agent divides the day into chunks of "goals", which are further broken down into smaller time frames. The ability to adjust these plans based on interactions is a key feature of this mechanism.
+    ```
 </div>
+
 <div class="result" markdown>
 
 !!! tip "[Multi-Agent Collaboration via Reward Attribution Decomposition](https://arxiv.org/abs/2010.08531)"
