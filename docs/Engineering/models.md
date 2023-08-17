@@ -47,6 +47,8 @@ This needs to be cleaned up and expanded. It needs to be made into a table. It n
 
 - [GPT4all](https://gpt4all.io/index.html)
 
+- [DoctorGPT](https://github.com/llSourcell/DoctorGPT) LOOK AT THIS
+
 
 
 
