@@ -1,8 +1,10 @@
-<div class="result" markdown>
+
+
 ??? tip "[humanscript](https://github.com/lukechilds/humanscript) A script interpreter that infers the meaning behind commands written in natural language using large language models. Human writeable commands are translated into code that is then executed on the fly."
+    
     <img width="857" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/20157442-988a-4fb0-bf5c-1ddc3698e221">
 
-</div>
+
   
 - [Fully GenAI pharmacist from scripts, images and videos](https://github.com/kennethleungty/Generative-AI-Pharmacist)
 
@@ -15,7 +17,12 @@
 
 ## Summarization
 
-!!! tip "[Summarization with Langchain] https://github.com/EnkrateiaLucca/summarization_with_langchain A splendid view of a quick streamlit app that does PDF summarization."
+### PDF 
+
+??? tip "[Summarization with Langchain] https://github.com/EnkrateiaLucca/summarization_with_langchain A splendid view of a quick streamlit app that does PDF summarization."
+    LOOK AT ME
+
+!!! tip "[Doctor GPT](https://github.com/FeatureBaseDB/DoctorGPT) implements advanced LLM prompting for organizing, indexing and discussing PDFs, and does so without using any type of opinionated prompt processing frameworks "
 
 ## Video 
 
