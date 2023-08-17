@@ -1,6 +1,5 @@
-## How to select what to do
 ![image](https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050)
-https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html
+    https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html
 
 ## Back-End (Model serving)
 
