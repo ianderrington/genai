@@ -109,6 +109,3 @@ graph TB
     https://arxiv.org/pdf/2308.03279.pdf
     https://github.com/universal-ner/universal-ner
 
-??? code "[DoctorGPT}(https://github.com/FeatureBaseDB/DoctorGPT) DoctorGPT implements advanced LLM prompting for organizing, indexing and discussing PDFs"
-    Very cool. Look into this more
-    
