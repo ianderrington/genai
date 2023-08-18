@@ -39,12 +39,3 @@ This needs to be cleaned up and expanded. It needs to be made into a table. It n
 
 
 
-## Comparison tools
-??? "[Arthur.ai Bench](https://github.com/arthur-ai/bench) Bench is a tool for evaluating LLMs for production use cases. "
-    ![image](https://github.com/ianderrington/genai/assets/76016868/377d86c7-9ebf-4828-8e6a-582b86a499f9)
-
-    ![image](https://github.com/ianderrington/genai/assets/76016868/081f14b5-f2b7-47e6-985b-a886ed66eaf1)
-
-
-
-[^n1]: Please look at licenses for appropriate potential for commercial-usage. 
