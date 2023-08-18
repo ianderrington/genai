@@ -27,3 +27,6 @@
 ## Video 
 
 !!! tip "[Youtube URL to text](https://github.com/kyegomez/youtubeURL-to-text)"
+
+## Multiple Use-case examples
+!!! tip "[Langchain Javascript in the Real World](https://github.com/amalshehu/langchain-js-realworld)"
