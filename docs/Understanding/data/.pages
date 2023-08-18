@@ -1,5 +1,5 @@
 nav:
-    - data.md
+    - index.md
     - selection.md
     - tokenizing.md
     - embedding.md

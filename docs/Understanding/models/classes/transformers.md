@@ -39,6 +39,8 @@ Excellent summary of the progress of GPT over time, revealing core components, o
 
 - [Five years of progress in GPTs](https://finbarrtimbers.substack.com/p/five-years-of-progress-in-gpts?utm_source=substack&utm_medium=email)
 
+- [The Transformer Architecture of GPT Models](https://towardsdatascience.com/the-transformer-architecture-of-gpt-models-b8695b48728b)
+
 ### Seminal documents
 
 - [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473.pdf) First paper indicating the notion of 'attention' sort of mechanism.
@@ -138,3 +140,5 @@ a constant number of encoder layers can emulate basic computing blocks, includin
 ## Code 
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers/main/index) An API to access a large number of pre-trained transformers. Pytorch based. 
 - [Fast Transformers](https://github.com/idiap/fast-transformers/tree/master) A quality collection of a number of transformer implementations written in Pytorch. 
+
+## 

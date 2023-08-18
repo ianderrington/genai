@@ -1,3 +1,10 @@
+Tensor math is linear algebra on steroids. Here are some valuable resources to understand it better.
+
+TODO: Add all of the tensor series. 
+
+
+
+
 https://www.kolda.net/publication/TensorReview.pdf
 
 https://arxiv.org/pdf/2308.01814.pdf
@@ -31,3 +38,4 @@ https://arxiv.org/pdf/2308.01814.pdf
     [Micro update](https://github.com/microsoft/mup)
     <img width="317" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/70fca938-0004-4885-a929-d11e06fe6658">
 
+    "We show that optimal hyperparameters become stable across neural network sizes when we parametrize the model in maximal update parametrization (μP). This can be used to tune extremely large neural networks such as large pretrained transformers, as we have done in our work. More generally, μP reduces the fragility and uncertainty when transitioning from exploration to scaling up, which are not often talked about explicitly in the deep learning literature."

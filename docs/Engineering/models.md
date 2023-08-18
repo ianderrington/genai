@@ -21,35 +21,31 @@ This needs to be cleaned up and expanded. It needs to be made into a table. It n
 
 
 ## Text Oriented
-* [Bard](https://bard.google.com/)
-* [Claud]()
-* [ChatGPT (OpenAI)](https://openai.com/blog/chatgpt)
-* [Medpalm](https://arxiv.org/abs/2212.13138)
-* [Llama2](https://ai.meta.com/llama/)
-* [Open Llama](https://github.com/openlm-research/open_llama) 
-* [UAE Falcon](https://www.tii.ae/news/uaes-falcon-40b-now-royalty-free) 
-* [Orca (Microsoft)](https://arxiv.org/pdf/2306.02707.pdf) 
-* [MosaicML](https://www.mosaicml.com/blog/long-context-mpt-7b-8k)
+- [Bard](https://bard.google.com/)
+- [Claud]()
+- [ChatGPT (OpenAI)](https://openai.com/blog/chatgpt)
+- [Medpalm](https://arxiv.org/abs/2212.13138)
+- [Llama2](https://ai.meta.com/llama/)
+- [Open Llama](https://github.com/openlm-research/open_llama) 
+- [UAE Falcon](https://www.tii.ae/news/uaes-falcon-40b-now-royalty-free) 
+- [Orca (Microsoft)](https://arxiv.org/pdf/2306.02707.pdf) 
+- [MosaicML](https://www.mosaicml.com/blog/long-context-mpt-7b-8k)
 
-<div class="result" markdown>
-??? tip "[LAION-AI](https://github.com/LAION-AI/Open-Assistant) An attempted open-source version of ChatGPT"
-</div>
+- [LAION-AI](https://github.com/LAION-AI/Open-Assistant) An attempted open-source version of ChatGPT"
 
-## Image Oriented
-
-- [StableLM: Stability AI Language Models](https://github.com/stability-AI/stableLM/) 
-
-## Open Source [^n1] Code
-
+## Language Models
 - [Unilm](https://github.com/microsoft/unilm) (MSFT)
-
-## Open Source [^n1] Code + Parameters
 
 - [GPT4all](https://gpt4all.io/index.html)
 
 - [DoctorGPT](https://github.com/llSourcell/DoctorGPT) LOOK AT THIS
 
 
+- [Llama2 uncensorred](https://huggingface.co/Tap-M/Luna-AI-Llama2-Uncensored)
+
+## Image Oriented
+
+- [StableLM: Stability AI Language Models](https://github.com/stability-AI/stableLM/) 
 
 
 [^n1]: Please look at licenses for appropriate potential for commercial-usage. 
