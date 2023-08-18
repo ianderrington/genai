@@ -16,7 +16,9 @@
 
 - [Sourcegraph](https://sourcegraph.com/search) and the Cody.ai agent that it uses to help guide developers.
 - [LSIF.dev](https://lsif.dev) A community-driven source of knowledge for Language Server Index Format implementations"
+## Chat Toold
 
+- [Azure Chat](https://github.com/matijagrcic/azurechatgpt)
 
 ## Coding Tools
 
@@ -30,4 +32,4 @@ code completion model
 
 ## Writing
 
-[Sudowrite](https://www.sudowrite.com/)
+- [Sudowrite](https://www.sudowrite.com/)
