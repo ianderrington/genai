@@ -4,10 +4,16 @@
 ## Back-End (Model serving)
 
 
-### Hosting services
-- [GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
-- 
+
+??? code "[vLLM](https://vllm.ai/) utilizes **PagedAttention** to manage attention keys/values to enable 24x throughput than other transformers w/out architecture changes"
+
+    "PagedAttention allows storing continuous keys and values in non-contiguous memory space. Specifically, PagedAttention partitions the KV cache of each sequence into blocks, each block containing the keys and values for a fixed number of tokens. During the attention computation, the PagedAttention kernel identifies and fetches these blocks efficiently."
+    ![Paged Attention](https://vllm.ai/assets/figures/annimation0.gif)
+
+!!! tip [GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
+
 ??? tip "[Text Generation Inference](https://github.com/Preemo-Inc/text-generation-inference) an open-sourced implementation forked from HF"
+
     "A Rust, Python and gRPC server for text generation inference. Used in production at HuggingFace to power LLMs api-inference widgets."    
     ![image](https://github.com/ianderrington/genai/assets/76016868/a3f5ddbf-a2e3-45ae-bca4-200c07c9dd91)
 
@@ -25,7 +31,7 @@
 !!! website "[Railway.app](https://railway.app/about)
 
 ### Tutorials
-- [](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
+- [How to Deploy Large Size Deep Learning Models Into Production](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
 
 
 
