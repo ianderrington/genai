@@ -1,7 +1,7 @@
 # Platforms
 
 ## Building and deploying
-
+- [Arthur](https://www.arthur.ai/)
 - [Fixie](https://www.fixie.ai/)
 
 ## LLM Training + Deployment
