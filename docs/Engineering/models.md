@@ -14,11 +14,8 @@ This needs to be cleaned up and expanded. It needs to be made into a table. It n
 
 
 ## Leaderboards and comparisons
-
-- [Hugging Face LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) An essential chart for documenting the model peformance across multiple models.
+- [Hugging Face LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) An essential chart for documenting the model performance across multiple models.
 - [lmsys.org leader board](https://lmsys.org/blog/2023-06-22-leaderboard/)
-
-
 
 ## Text Oriented
 - [Bard](https://bard.google.com/)
@@ -30,22 +27,24 @@ This needs to be cleaned up and expanded. It needs to be made into a table. It n
 - [UAE Falcon](https://www.tii.ae/news/uaes-falcon-40b-now-royalty-free) 
 - [Orca (Microsoft)](https://arxiv.org/pdf/2306.02707.pdf) 
 - [MosaicML](https://www.mosaicml.com/blog/long-context-mpt-7b-8k)
-
 - [LAION-AI](https://github.com/LAION-AI/Open-Assistant) An attempted open-source version of ChatGPT"
-
-## Language Models
 - [Unilm](https://github.com/microsoft/unilm) (MSFT)
-
 - [GPT4all](https://gpt4all.io/index.html)
-
 - [DoctorGPT](https://github.com/llSourcell/DoctorGPT) LOOK AT THIS
-
-
 - [Llama2 uncensorred](https://huggingface.co/Tap-M/Luna-AI-Llama2-Uncensored)
 
 ## Image Oriented
 
 - [StableLM: Stability AI Language Models](https://github.com/stability-AI/stableLM/) 
+
+
+
+## Comparison tools
+??? "[Arthur.ai Bench](https://github.com/arthur-ai/bench) Bench is a tool for evaluating LLMs for production use cases. "
+    ![image](https://github.com/ianderrington/genai/assets/76016868/377d86c7-9ebf-4828-8e6a-582b86a499f9)
+
+    ![image](https://github.com/ianderrington/genai/assets/76016868/081f14b5-f2b7-47e6-985b-a886ed66eaf1)
+
 
 
 [^n1]: Please look at licenses for appropriate potential for commercial-usage. 
