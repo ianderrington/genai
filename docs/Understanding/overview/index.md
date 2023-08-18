@@ -16,7 +16,7 @@ A good portion of Gen()AI relies on large scale **foundation models** that can b
 
 ## Foundation Models
 
-Foundation models are large-scale models that are pre-trained on vast amounts of data and can be fine-tuned for specific tasks. These models serve as a foundation or base for various applications, reducing the need to train models from scratch. Examples include OpenAI's GPT series, Google's BERT, and many others.
+[Foundation models](https://en.wikipedia.org/wiki/Foundation_models) are large-scale models that are pre-trained with self or semi-supervision on vast amounts of data and can be fine-tuned for specific tasks. These models serve as a foundation or base for various applications, reducing the need to train models from scratch.
 
 ### Basics of Self-Supervised Learning
 
