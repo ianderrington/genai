@@ -9,8 +9,10 @@ Tensorflow
 Higher level frameworks minimize the lines of code needed to make a model and keep track of everything. 
 
 - [Catalyst](https://github.com/catalyst-team/catalyst) Framework for boiler-plate minimal ML calling using pytorch. Enabled [heirarchichal Attention networks](https://github.com/neuro-inc/ml-recipe-hier-attention)
-- [Lightning + Hydra](https://github.com/ashleve/lightning-hydra-template) Uses the [lightning] framework with Hydra-based config management. 
 
+#### Lightning
+- [Lightning + Hydra](https://github.com/ashleve/lightning-hydra-template) Uses the [lightning] framework with Hydra-based config management. 
+- [Lightning Hugging face adapter](https://github.com/mariomeissner/lightning-hydra-transformers/blob/main/src/models/hf_model.py)
 
 ## Must-have knowledge
 
