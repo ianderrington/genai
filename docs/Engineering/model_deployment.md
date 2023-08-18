@@ -9,6 +9,7 @@
 
     "PagedAttention allows storing continuous keys and values in non-contiguous memory space. Specifically, PagedAttention partitions the KV cache of each sequence into blocks, each block containing the keys and values for a fixed number of tokens. During the attention computation, the PagedAttention kernel identifies and fetches these blocks efficiently."
     ![Paged Attention](https://vllm.ai/assets/figures/annimation0.gif)
+    [Github](https://github.com/vllm-project/vllm)
 
 !!! tip [GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
 
