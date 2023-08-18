@@ -23,15 +23,15 @@ There are special tokens that are used by high-level interpreters on what next t
 
 
 ## Multimodal Tokenization
+
 Multimodal tokenization is an area of tokenization that focuses on incorporating multiple data forms or modes. This facet of tokenization has seen remarkable strides. [Bytes are all you need](https://arxiv.org/pdf/2306.00238.pdf)—a study utilizing transformer technology to input file bytes directly—demonstrates that multimodal tokenization can assist in improving the AI's performance accuracy. The researchers in the study developed ByteFormer, a model based on their study’s findings that can be accessed [here](https://github.com/apple/ml-cvnets/tree/main/examples/byteformer).
 
-## Tokenizing might not be necessary?
+## Tokenizing might not be necessary
 
-It is regarded that tokenizing is a bit arbitrary and has disadvantages. THere are promising results using methods without tokenization [MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185) that "show that MEGABYTE allows byte-level models to perform competitively with subword models on long context language modeling"
-
-IDEA: Combine Kudo + MegaByte?
+It is regarded that tokenizing is a bit arbitrary and has disadvantages. There are promising results using methods without tokenization [MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185) that "show that MEGABYTE allows byte-level models to perform competitively with subword models on long context language modeling"
 
 ## Tools
+
 Examples of coding tools that facilitate tokenization include [Tiktoken](https://github.com/openai/tiktoken) which utilizes Byte Pair Encoding (BPE) for tokenization and is purportedly used in GPT models. An alternative tool is [^n1], which takes a unique top-down approach and results in almost 35% less tokens as opposed to the standard bottom-up approach.
 
 ## Open Source Tokenizers
