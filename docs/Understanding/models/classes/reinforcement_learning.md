@@ -1,6 +1,13 @@
-Reinforcement learning based models have a deep history. 
+Reinforcement learning-based models have a colorful history. 
 
-## Outline
+TODO
+
+
+## Reinforcement Learning with Human Feedback (RLHF)
+
+RLFH has been found to be an essential component to enabling GPT based GenAI to be performant. 
+
+TODO
 
 ## Notable research
 
