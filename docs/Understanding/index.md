@@ -13,22 +13,22 @@ In the documents you read here, you will be able to see an increseasingly consis
 
 ## The base components of Gen()AI
 
-If you are new to this area, you may briefly peruse [discussion of AI in general](overview/ai_in_general.md) we describe several [applications](overview/applications.md) and [challenges](overview/challenges.md) associated with Gen()AI. 
+If you are new to this area, you may briefly peruse [applications](overview/applications.md) and [challenges](overview/challenges.md) associated with Gen()AI. 
 
 Getting into it, you will find the following outline: 
 
 ### What's been done with Gen()AI?
 
-1. [Data](data/data.md) provides the backbone connecting computation to our recorded reality.
+1. [Data](data/index.md) provides the backbone connecting computation to our recorded reality.
 1. [Models](models/index.md) allow the data to be understood and used. [^n1]
 1. [Prompts](models/prompt_engineering/prompting.md) govern how we interact with the models.
 1. [Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners.
-1. [Ethical concerns](ethical_concerns/index.md) help us to temper the responsible use of these powerful technologies.
+1. [Ethical concerns](../Using/ethical_concerns/index.md) help us to temper the responsible use of these powerful technologies.
 1. [Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis. 
 
 ### How do you do stuff with Gen()AI?
 
-Of course, there will be some important 'how-to's, particularly in the [data](data/data.md), [models](models/index.md), [prompts](models/prompt_engineering/prompting.md) and [agents](./agents/index.md). 
+Of course, there will be some important 'how-to's, particularly in the [data](data/index.md), [models](models/index.md), [prompts](models/prompt_engineering/prompting.md) and [agents](./agents/index.md). 
 
 Still, you'll want ot check out the  [engineering][../Engineering/index.md] section to figure out how to use and engineer Gen()AI for your task at hand. 
 
@@ -38,7 +38,7 @@ Still, these trained foundation models may be used, with varying degrees of open
 
 If you are working on commercial projects, be sure to look at the Licenses to ensure you are legally compliant. 
 
-And please, whatever you do, be cognisant of the [ethical concerns](ethical_concerns/index.md)
+And please, whatever you do, be cognisant of the [ethical concerns](../Using/ethical_concerns/index.md)
 
 ## Useful References[^a1]
 
@@ -51,7 +51,7 @@ There is so much quality material, it would be valuable for your time to check s
     * [Retreival Augmented Generation (RAG)](models/rag.md)
     * [Fine tuning](models/alignment.md#finetuning)
     * [Caching](agents/memory.md#caching) to reduce latency. 
-    * [Guardrails](agents/interpreters.md#guardrails) to ensure output (and input) quality.
+    * [Guardrails](../Engineering/interpreters.md#guardrails) to ensure output (and input) quality.
     * Data Flywheel to use data collection and feedback to improve model and experience
     * Cascade Breaking models up into smaller simpler tasks instead of big ones.
     * Monitoring to ensure value is being derived

@@ -10,9 +10,10 @@ Generative AI creates. So does will General AI. Depending on their definitions t
 
 ## 📘 What's Inside?
 
-- **Understanding Generative AI**: Delve deep into the mechanics, models, and methodologies of Gen()AI.
-- **Managing Generative AI**: This is the heart of our project, with tools to enable quality, and responsible development of this and other AI-projects.
-- **Collaboration**: Written in **Markdown**, this documentation encourages community collaboration through **GitHub pull requests** 🤝.
+- [**Understanding GenAI**](./Understanding/index.md): Delve deep into the mechanics, models, and methodologies.
+- [**Engineering GenAI**](./Engineering/index.md): Learn how to build and deploy models.
+- [**Using GenAI**](./Using/index.md): Where we describe use cases and applications, commercial tools and applications, and the ethics and regulations surrounding GenAI.
+- [**Managing GenAI**](./Managing/index.md): This is the heart of our project, where we describe the tools that we are building to enable quality, and responsible development of this and other AI-projects.
 
 ## 🚀 GenAI Explaining Itself?
 

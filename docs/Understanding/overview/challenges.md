@@ -1,6 +1,6 @@
 Challenges associated with GenAI.
 
-Apart from [ethical considerations](../ethical_concerns/index.md), there are general challenges associated with the technology.
+Apart from [ethical considerations](../../Using/ethical_concerns/index.md), there are general challenges associated with the technology.
 
 Importantly, applications that rely on the output of these models may have challenges due to
 

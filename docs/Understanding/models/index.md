@@ -14,14 +14,13 @@ Because of their present degree of quality present model Architectures tend to b
 
  
 
-## Prominent Models
+## Models
 
 - [Transformers](./classes/transformers.md)
 - [Diffusers](./classes/diffusers.md)
 - [Generative Adversarial Networks](./classes/gans.md)
-- [Bayesian Flow](./classes/bayesian_flow.md)
 - [Reinforcement Learning](./classes/reinforcement_learning.md)
-
+- [Developing Architectures](./classes/developing_architectures.md)
 
 ### References
 

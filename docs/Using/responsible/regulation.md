@@ -1,4 +1,4 @@
-Because of [challenges](../Understanding/overview/challenges.md) and [ethical considerations](../ethics/) surrounding GenAI, it is essential to know what is being considered and why and how that may impact specific fields and society at large. 
+Because of [challenges](../../Understanding/overview/challenges.md) and [ethical considerations](../ethics/) surrounding GenAI, it is essential to know what is being considered and why and how that may impact specific fields and society at large. 
 The extent of its influence necessitates careful regulation to both maximize its potential benefits and mitigate potential risks.
 
 Here we highlight broad considerations and approaches relevant to the regulation of Generative AI.
