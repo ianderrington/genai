@@ -2,12 +2,22 @@
 In generative AI, the raw data—whether it be in binary, text, or a different form—is divided into individual units termed as *tokens*. These play a crucial role in easing the understanding and manipulation of data for the AI.
 
 ## Understanding Tokenization
-Tokenization is the process of splitting data into these individual units. The choice of a token largely depends on the data type and the expected outcome of the AI. In text data, for instance, tokens often correspond to single words or subwords. 
+Tokenization is the process of splitting data into these individual units. The choice of a token largely depends on the data type and the expected outcome of the AI. In text data, for instance, tokens often correspond to single words or subwords. These tokens are then often represented in one-hot encoding. Research may eventually show that hierarchical tokenization, either trained, guessed, or otherwise constructed, could minimize token use. Use of [bloom filters](https://arxiv.org/pdf/2002.04723.pdf) tokenization 
+
+??? tip "[Superbloom: Bloom filter meets Transformer](https://arxiv.org/pdf/2002.04723.pdf)"
+
+  Wherein a bloom filter is used to create tokens/embeddings. 
+  ![image](https://github.com/ianderrington/genai/assets/76016868/5ba71e69-7eaa-416c-b09a-940e016db145)
+
+
+
+??? idea "Related to Superbloom: Learned Hashing"
+
+    Which if you think of it, the ‘hashing function’ could just be a linear projection onto a hashing layer. A input unit (character or byte string) would be initialized randomly to have a ‘representation vector’, akin to a direct embedding. The challenge would be on inference when reconstructing outputs (it would be a Bloom look up for an output character, and not a simple mapping).
 
 ### Subword Units
+
 A subword unit, or a part of a word, can be a token in itself. The paper titled [Neural Machine Translation of Rare Words with Subword Units](https://arxiv.org/abs/1508.07909) brings to light the effectiveness of subword units in improving results. This type of tokenization was used in a neural machine translation system and it significantly improved the handling of rare words.
-
-
 
 
 ### Special tokens
