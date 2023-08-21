@@ -1,5 +1,17 @@
 We explores different activities and fields that utilize Generative AI's capabilities and provide a few notable references for each. For an overview of applications (and challenges), we highly recommend [Challenges and Applications of Large Language Models](https://arxiv.org/pdf/2307.10169.pdf)
 
+There are many generally distinct domains of Gen()AI application, though many be compositional. Effectively any information that can be recorded onto a computer may be made by Gen()AI.
+
+* Language
+* Visual 2D
+* Visual 3D
+* Visual 2D with time
+* Visual 3D with time
+* Brain recordings
+* Weather patterns
+* Protein folding 
+
+
 ## General Activities
 There are many activities that can be used in many, if not all, fields of applications. We mention a few below:
 
