@@ -1,5 +1,16 @@
 Challenges associated with GenAI.
 
+## Unintentional
+
+### Hallucinations
+
+## Intentional
+
+### Dual Use
+
+
+## 
+
 Apart from [ethical considerations](../../Using/ethically/index.md), there are general challenges associated with the technology.
 
 Importantly, applications that rely on the output of these models may have challenges due to
