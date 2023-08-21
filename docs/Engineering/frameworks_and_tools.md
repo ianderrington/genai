@@ -15,6 +15,7 @@ The excitement about the tooling around Generative AI make it hard to keep up wi
 
     ![image](https://github.com/OpenBMB/ToolBench/blob/master/assets/overview.png)
 
+
 ### Langchain
 
 - [Langchain](https://python.langchain.com/en/latest/#) A primitive python or javascript-based primitive 'LLM' language that enables planned and agentic AI.
@@ -41,7 +42,13 @@ Llama is Meta's now open-source model. Llama 2 is MIT and free for commercial us
 - [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
 - [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
 - [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
+
 ### Others
+
+??? tip "[txtai](https://github.com/neuml/txtai) 'is an all-in-one embeddings database for semantic search, LLM orchestration and language model workflows."
+
+    ![image](https://raw.githubusercontent.com/neuml/txtai/master/docs/images/architecture.png#gh-light-mode-only)
+
 
 - [Flowise](https://github.com/FlowiseAI/Flowise)
 - [Chain Forge](https://github.com/ianarawjo/ChainForge) A data flow prompt engineering environment for evaluating ana analyzing LLM responses
