@@ -10,6 +10,11 @@ While still evolving there is an increasing number of quality frameworks that ar
 
 The excitement about the tooling around Generative AI make it hard to keep up with development and deprecation of powerful frameworks and tools. Some of the mentioned references may not be fully completed, or even nascent repos to build their intended purposes (described here). Please let us know if we are missing anything [here](../Managing/contributing.md). 
 
+### General
+??? code "[Tool Bench](https://github.com/OpenBMB/ToolBench) 'This project (ToolLLM) aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability.'"
+
+    ![image](https://github.com/OpenBMB/ToolBench/blob/master/assets/overview.png)
+
 ### Langchain
 
 - [Langchain](https://python.langchain.com/en/latest/#) A primitive python or javascript-based primitive 'LLM' language that enables planned and agentic AI.
