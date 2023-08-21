@@ -12,27 +12,27 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Using/ethical_concerns/fairness.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/models/classes/reinforcement_learning.html">
       
       
-        <link rel="prev" href="dual_use_concerns.html">
+        <link rel="prev" href="gans.html">
       
       
-        <link rel="next" href="transparency.html">
+        <link rel="next" href="../rag.html">
       
-      <link rel="icon" href="../../assets/genai_logo_edited.svg">
+      <link rel="icon" href="../../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Fairness - Gen()AI</title>
+        <title>Reinforcement learning - Gen()AI</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -67,7 +67,7 @@
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -78,7 +78,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#elements-of-ai-fairness" class="md-skip">
+        <a href="#reinforcement-learning-with-human-feedback-rlhf" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../../.." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fairness
+              Reinforcement learning
             
           </span>
         </div>
@@ -233,13 +233,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../Understanding/overview/index.html" class="md-tabs__link">
+      <a href="../../overview/index.html" class="md-tabs__link md-tabs__link--active">
         Understanding
       </a>
     </li>
@@ -252,7 +254,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../Engineering/index.html" class="md-tabs__link">
+    <a href="../../../Engineering/index.html" class="md-tabs__link">
       Engineering
     </a>
   </li>
@@ -261,12 +263,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="../by_application.html" class="md-tabs__link md-tabs__link--active">
+    <a href="../../../Using/index.html" class="md-tabs__link">
       Using
     </a>
   </li>
@@ -278,7 +278,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../Managing/managing.html" class="md-tabs__link">
+    <a href="../../../Managing/managing.html" class="md-tabs__link">
       Managing
     </a>
   </li>
@@ -311,7 +311,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../../.." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -340,14 +340,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
       
       
         
@@ -374,7 +376,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Understanding/overview/index.html">Understanding</a>
+          <a href="../../overview/index.html">Understanding</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -382,7 +384,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Understanding
@@ -423,7 +425,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Understanding/data/index.html">Data</a>
+          <a href="../../data/index.html">Data</a>
           
             <label for="__nav_1_2">
               <span class="md-nav__icon md-icon"></span>
@@ -444,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/data/selection.html" class="md-nav__link">
+      <a href="../../data/selection.html" class="md-nav__link">
         Selection
       </a>
     </li>
@@ -458,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/data/tokenizing.html" class="md-nav__link">
+      <a href="../../data/tokenizing.html" class="md-nav__link">
         Tokenizing
       </a>
     </li>
@@ -472,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/data/embedding.html" class="md-nav__link">
+      <a href="../../data/embedding.html" class="md-nav__link">
         Embedding
       </a>
     </li>
@@ -486,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/data/privacy.html" class="md-nav__link">
+      <a href="../../data/privacy.html" class="md-nav__link">
         Privacy
       </a>
     </li>
@@ -500,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/data/sources.html" class="md-nav__link">
+      <a href="../../data/sources.html" class="md-nav__link">
         Sources
       </a>
     </li>
@@ -514,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/data/augmentation.html" class="md-nav__link">
+      <a href="../../data/augmentation.html" class="md-nav__link">
         Augmentation
       </a>
     </li>
@@ -533,14 +535,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
       
       
         
@@ -569,7 +573,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Understanding/models/index.html">Models</a>
+          <a href="../index.html">Models</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -577,7 +581,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           Models
@@ -590,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/models.html" class="md-nav__link">
+      <a href="../models.html" class="md-nav__link">
         Models
       </a>
     </li>
@@ -604,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/training.html" class="md-nav__link">
+      <a href="../training.html" class="md-nav__link">
         Training
       </a>
     </li>
@@ -634,7 +638,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Understanding/models/prompt_engineering/prompt_injections.html">Prompt engineering</a>
+          <a href="../prompt_engineering/prompt_injections.html">Prompt engineering</a>
           
             <label for="__nav_1_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -655,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/prompt_engineering/prompting.html" class="md-nav__link">
+      <a href="../prompt_engineering/prompting.html" class="md-nav__link">
         Prompting
       </a>
     </li>
@@ -676,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/distillation.html" class="md-nav__link">
+      <a href="../distillation.html" class="md-nav__link">
         Distillation
       </a>
     </li>
@@ -690,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/evaluation.html" class="md-nav__link">
+      <a href="../evaluation.html" class="md-nav__link">
         Evaluation
       </a>
     </li>
@@ -704,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/alignment.html" class="md-nav__link">
+      <a href="../alignment.html" class="md-nav__link">
         Alignment
       </a>
     </li>
@@ -716,16 +720,22 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_7" checked>
       
       
+        
+          
+        
+          
         
           
         
@@ -738,7 +748,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Understanding/models/classes/index.html">Classes</a>
+          <a href="index.html">Classes</a>
           
             <label for="__nav_1_3_7">
               <span class="md-nav__icon md-icon"></span>
@@ -746,7 +756,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_7_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1_3_7">
           <span class="md-nav__icon md-icon"></span>
           Classes
@@ -759,7 +769,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/classes/transformers.html" class="md-nav__link">
+      <a href="components.html" class="md-nav__link">
+        Components
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="transformers.html" class="md-nav__link">
         Transformers
       </a>
     </li>
@@ -773,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/classes/diffusers.html" class="md-nav__link">
+      <a href="diffusers.html" class="md-nav__link">
         Diffusers
       </a>
     </li>
@@ -787,9 +811,67 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/classes/gans.html" class="md-nav__link">
+      <a href="gans.html" class="md-nav__link">
         Gans
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Reinforcement learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="reinforcement_learning.html" class="md-nav__link md-nav__link--active">
+        Reinforcement learning
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reinforcement-learning-with-human-feedback-rlhf" class="md-nav__link">
+    Reinforcement Learning with Human Feedback (RLHF)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notable-research" class="md-nav__link">
+    Notable research
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -808,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/rag.html" class="md-nav__link">
+      <a href="../rag.html" class="md-nav__link">
         Retrieval-Augmented Generation
       </a>
     </li>
@@ -822,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/models/reinforcement_feedback.html" class="md-nav__link">
+      <a href="../reinforcement_feedback.html" class="md-nav__link">
         Reinforcement feedback
       </a>
     </li>
@@ -871,7 +953,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Understanding/agents/index.html">Agents</a>
+          <a href="../../agents/index.html">Agents</a>
           
             <label for="__nav_1_4">
               <span class="md-nav__icon md-icon"></span>
@@ -892,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/agents/examples.html" class="md-nav__link">
+      <a href="../../agents/examples.html" class="md-nav__link">
         Examples
       </a>
     </li>
@@ -906,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/agents/memory.html" class="md-nav__link">
+      <a href="../../agents/memory.html" class="md-nav__link">
         Memory
       </a>
     </li>
@@ -920,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/agents/chains.html" class="md-nav__link">
+      <a href="../../agents/chains.html" class="md-nav__link">
         Chains
       </a>
     </li>
@@ -934,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/agents/evaluation.html" class="md-nav__link">
+      <a href="../../agents/evaluation.html" class="md-nav__link">
         Evaluation
       </a>
     </li>
@@ -948,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/agents/environments.html" class="md-nav__link">
+      <a href="../../agents/environments.html" class="md-nav__link">
         Environments
       </a>
     </li>
@@ -962,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/agents/systems.html" class="md-nav__link">
+      <a href="../../agents/systems.html" class="md-nav__link">
         Systems
       </a>
     </li>
@@ -976,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/agents/frameworks.html" class="md-nav__link">
+      <a href="../../agents/frameworks.html" class="md-nav__link">
         Frameworks
       </a>
     </li>
@@ -997,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Understanding/studies/studies.html" class="md-nav__link">
+      <a href="../../studies/studies.html" class="md-nav__link">
         Studies
       </a>
     </li>
@@ -1054,14 +1136,12 @@
         
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Engineering/index.html">Engineering</a>
+          <a href="../../../Engineering/index.html">Engineering</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1082,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Engineering/models.html" class="md-nav__link">
+      <a href="../../../Engineering/models.html" class="md-nav__link">
         Models
       </a>
     </li>
@@ -1096,161 +1176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Engineering/model_deployment.html" class="md-nav__link">
-        Model deployment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/front_ends.html" class="md-nav__link">
-        Front ends
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/frameworks_and_tools.html" class="md-nav__link">
-        Frameworks and tools
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/actions_and_tools.html" class="md-nav__link">
-        Actions and tools
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/ai_in_general.html" class="md-nav__link">
-        Ai in general
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/comparison_and_evaluation.html" class="md-nav__link">
-        Comparison and evaluation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/computation.html" class="md-nav__link">
-        Computation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/examples.html" class="md-nav__link">
-        Examples
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/hyper_parameter_optimization.html" class="md-nav__link">
-        Hyper parameter optimization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/implementations.html" class="md-nav__link">
-        Implementations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/interpreters.html" class="md-nav__link">
-        Interpreters
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Engineering/memory.html" class="md-nav__link">
+      <a href="../../../Engineering/memory.html" class="md-nav__link">
         Memory
       </a>
     </li>
@@ -1264,8 +1190,148 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Engineering/overview.html" class="md-nav__link">
-        Overview
+      <a href="../../../Engineering/comparison_and_evaluation.html" class="md-nav__link">
+        Comparison and evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Engineering/hyper_parameter_optimization.html" class="md-nav__link">
+        Hyper parameter optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Engineering/model_deployment.html" class="md-nav__link">
+        Model deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Engineering/model_serving_optimization.html" class="md-nav__link">
+        Model serving optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Engineering/frameworks_and_tools.html" class="md-nav__link">
+        Frameworks and tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Engineering/actions_and_tools.html" class="md-nav__link">
+        Actions and tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Engineering/ai_in_general.html" class="md-nav__link">
+        Ai in general
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Engineering/computation.html" class="md-nav__link">
+        Computation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Engineering/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Engineering/implementations.html" class="md-nav__link">
+        Implementations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Engineering/interpreters.html" class="md-nav__link">
+        Interpreters
       </a>
     </li>
   
@@ -1284,18 +1350,26 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
         
           
         
@@ -1307,14 +1381,12 @@
             
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../by_application.html">Using</a>
+          <a href="../../../Using/index.html">Using</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1322,7 +1394,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Using
@@ -1335,7 +1407,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../commercial_products.html" class="md-nav__link">
+      <a href="../../../Using/by_application.html" class="md-nav__link">
+        By application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/commercial_products.html" class="md-nav__link">
         Platforms
       </a>
     </li>
@@ -1349,7 +1435,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../marking_and_detecting.html" class="md-nav__link">
+      <a href="../../../Using/governing.html" class="md-nav__link">
+        Governing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/marking_and_detecting.html" class="md-nav__link">
         Marking and detecting
       </a>
     </li>
@@ -1363,195 +1463,51 @@
   
   
     <li class="md-nav__item">
-      <a href="../web_plugins.html" class="md-nav__link">
+      <a href="../../../Using/ml_ops.html" class="md-nav__link">
+        Ml ops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/observability.html" class="md-nav__link">
+        Observability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/regulation.html" class="md-nav__link">
+        Regulation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/web_plugins.html" class="md-nav__link">
         Web plugins
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="index.html">Ethical concerns</a>
-          
-            <label for="__nav_3_4">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_4">
-          <span class="md-nav__icon md-icon"></span>
-          Ethical concerns
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="alignment_and_exential_concerns.html" class="md-nav__link">
-        Alignment and exential concerns
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="dual_use_concerns.html" class="md-nav__link">
-        Dual use concerns
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Fairness
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="fairness.html" class="md-nav__link md-nav__link--active">
-        Fairness
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#elements-of-ai-fairness" class="md-nav__link">
-    Elements of AI Fairness
-  </a>
-  
-    <nav class="md-nav" aria-label="Elements of AI Fairness">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-understanding-bias" class="md-nav__link">
-    1. Understanding Bias
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-fairness-metrics" class="md-nav__link">
-    2. Fairness Metrics
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-transparency" class="md-nav__link">
-    3. Transparency
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-accountability" class="md-nav__link">
-    4. Accountability
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-inclusion" class="md-nav__link">
-    5. Inclusion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="transparency.html" class="md-nav__link">
-        Transparency
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1568,9 +1524,15 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
       
       
+        
+          
+        
+          
+        
+          
         
           
         
@@ -1579,18 +1541,18 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../responsible/observability.html">Responsible</a>
+          <a href="../../../Using/ethically/index.html">Ethically</a>
           
-            <label for="__nav_3_5">
+            <label for="__nav_3_9">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_9">
           <span class="md-nav__icon md-icon"></span>
-          Responsible
+          Ethically
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1600,8 +1562,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../responsible/regulation.html" class="md-nav__link">
-        Regulation
+      <a href="../../../Using/ethically/alignment_and_exential_concerns.html" class="md-nav__link">
+        Alignment and exential concerns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/ethically/dual_use_concerns.html" class="md-nav__link">
+        Dual use concerns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/ethically/fairness.html" class="md-nav__link">
+        Fairness
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/ethically/transparency.html" class="md-nav__link">
+        Transparency
       </a>
     </li>
   
@@ -1649,7 +1653,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Managing/managing.html">Managing</a>
+          <a href="../../../Managing/managing.html">Managing</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1670,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Managing/brainstorming.html" class="md-nav__link">
+      <a href="../../../Managing/brainstorming.html" class="md-nav__link">
         Brainstorming
       </a>
     </li>
@@ -1684,7 +1688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Managing/build_plan.html" class="md-nav__link">
+      <a href="../../../Managing/build_plan.html" class="md-nav__link">
         Build plan
       </a>
     </li>
@@ -1698,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Managing/contributing.html" class="md-nav__link">
+      <a href="../../../Managing/contributing.html" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -1737,50 +1741,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#elements-of-ai-fairness" class="md-nav__link">
-    Elements of AI Fairness
-  </a>
-  
-    <nav class="md-nav" aria-label="Elements of AI Fairness">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-understanding-bias" class="md-nav__link">
-    1. Understanding Bias
+  <a href="#reinforcement-learning-with-human-feedback-rlhf" class="md-nav__link">
+    Reinforcement Learning with Human Feedback (RLHF)
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-fairness-metrics" class="md-nav__link">
-    2. Fairness Metrics
+      
+        <li class="md-nav__item">
+  <a href="#notable-research" class="md-nav__link">
+    Notable research
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-transparency" class="md-nav__link">
-    3. Transparency
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-accountability" class="md-nav__link">
-    4. Accountability
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-inclusion" class="md-nav__link">
-    5. Inclusion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1802,31 +1772,19 @@
   
 
 
-  <h1>Fairness</h1>
+  <h1>Reinforcement learning</h1>
 
-<h2 id="elements-of-ai-fairness">Elements of AI Fairness<a class="headerlink" href="#elements-of-ai-fairness" title="Permanent link">&para;</a></h2>
-<p>Understanding AI fairness can be complex, but let's break it down into simple, digestible elements.</p>
-<h3 id="1-understanding-bias">1. Understanding Bias<a class="headerlink" href="#1-understanding-bias" title="Permanent link">&para;</a></h3>
-<p>Bias in AI systems comes from various sources. It could be in the data used to train the AI, the design of the AI algorithms, or the ways AI systems are deployed and used. AI fairness, therefore, needs to address these sources of bias.</p>
-<p>Data Bias: This happens when the data used to train the AI is not representative of the population it will be serving, leading to biased predictions or decisions. An example is if an AI system was trained on data mostly from one demographic group, it might not perform well on other groups.</p>
-<p>Algorithmic Bias: This is when the algorithms that power AI systems inherently favor one outcome over another. They might do this due to design flaws, biased inputs, or even the optimization goals set by their creators.</p>
-<h3 id="2-fairness-metrics">2. Fairness Metrics<a class="headerlink" href="#2-fairness-metrics" title="Permanent link">&para;</a></h3>
-<p>Measuring fairness is a crucial aspect of AI fairness. This involves setting and monitoring fairness metrics that determine how well an AI system is performing in terms of fairness.</p>
-<p>Disparity Metrics: Measures how an AI's decisions or predictions differ among various demographic groups.</p>
-<p>Equality Metrics: Measures how equally an AI system treats individuals, regardless of their demographic group.</p>
-<h3 id="3-transparency">3. Transparency<a class="headerlink" href="#3-transparency" title="Permanent link">&para;</a></h3>
-<p>Transparency is about making sure the workings of an AI system are understandable to people. This includes both the technical side (e.g., how the AI's algorithms work) and the practical side (e.g., how decisions made by the AI impact individuals).</p>
-<p>Explainability: AI systems should be designed to provide explanations about their decisions or predictions. This helps individuals understand how a system came to a certain conclusion.</p>
-<p>Interpretability: This involves designing AI systems in ways that their workings can be understood by humans, even if they don't have technical expertise in AI.</p>
-<h3 id="4-accountability">4. Accountability<a class="headerlink" href="#4-accountability" title="Permanent link">&para;</a></h3>
-<p>Accountability in AI fairness refers to the obligation of AI system developers and operators to answer for the system's effects on individuals and society.</p>
-<p>Auditing: Regular checks on an AI system's decisions and performance to ensure it's upholding fairness standards.</p>
-<p>Redress Mechanisms: Clear pathways for people to challenge decisions made by an AI system, particularly if they believe they've been treated unfairly.</p>
-<h3 id="5-inclusion">5. Inclusion<a class="headerlink" href="#5-inclusion" title="Permanent link">&para;</a></h3>
-<p>Inclusion is about making sure AI systems serve all individuals fairly and equitably, regardless of their demographic characteristics.</p>
-<p>Diversity in Design: This involves ensuring that the teams creating AI systems are diverse, which can help to avoid some forms of bias and make the systems more effective for a wider range of individuals.</p>
-<p>Accessibility: AI systems should be designed in ways that they can be used and understood by people with varying abilities, languages, and cultural contexts.</p>
-<p>NOTE: Generated with GPT-4</p>
+<p>Reinforcement learning-based models have a colorful history. </p>
+<p>TODO</p>
+<h2 id="reinforcement-learning-with-human-feedback-rlhf">Reinforcement Learning with Human Feedback (RLHF)<a class="headerlink" href="#reinforcement-learning-with-human-feedback-rlhf" title="Permanent link">&para;</a></h2>
+<p>RLFH has been found to be an essential component to enabling GPT based GenAI to be performant. </p>
+<p>TODO</p>
+<h2 id="notable-research">Notable research<a class="headerlink" href="#notable-research" title="Permanent link">&para;</a></h2>
+<details class="tip">
+<summary><a href="https://arxiv.org/pdf/2308.01399.pdf">Learning to Model the World with Language</a> Uses multimodal agents to build world models to act in.</summary>
+<p>Also introduces Homegrid evaluation game. Fun continuous multimodal agent. <a href="https://github.com/jlin816/dynalang">Github</a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/7ac4076b-e577-47be-b6af-a2429a8a62fa" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1012" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7ac4076b-e577-47be-b6af-a2429a8a62fa"></a></p>
+</details>
 
 
   
@@ -1996,10 +1954,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

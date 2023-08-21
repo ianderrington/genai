@@ -12,20 +12,20 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/models/distillation.html">
+        <link rel="canonical" href="https://managen.ai/Using/ethically/fairness.html">
       
       
-        <link rel="prev" href="prompt_engineering/prompting.html">
+        <link rel="prev" href="dual_use_concerns.html">
       
       
-        <link rel="next" href="evaluation.html">
+        <link rel="next" href="transparency.html">
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Distillation - Gen()AI</title>
+        <title>Fairness - Gen()AI</title>
       
     
     
@@ -99,6 +99,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#elements-of-ai-fairness" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -130,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Distillation
+              Fairness
             
           </span>
         </div>
@@ -228,15 +233,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../overview/index.html" class="md-tabs__link md-tabs__link--active">
+      <a href="../../Understanding/overview/index.html" class="md-tabs__link">
         Understanding
       </a>
     </li>
@@ -258,10 +261,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../../Using/index.html" class="md-tabs__link">
+    <a href="../index.html" class="md-tabs__link md-tabs__link--active">
       Using
     </a>
   </li>
@@ -335,16 +340,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
         
@@ -371,7 +374,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../overview/index.html">Understanding</a>
+          <a href="../../Understanding/overview/index.html">Understanding</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -379,7 +382,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Understanding
@@ -420,7 +423,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../data/index.html">Data</a>
+          <a href="../../Understanding/data/index.html">Data</a>
           
             <label for="__nav_1_2">
               <span class="md-nav__icon md-icon"></span>
@@ -441,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data/selection.html" class="md-nav__link">
+      <a href="../../Understanding/data/selection.html" class="md-nav__link">
         Selection
       </a>
     </li>
@@ -455,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data/tokenizing.html" class="md-nav__link">
+      <a href="../../Understanding/data/tokenizing.html" class="md-nav__link">
         Tokenizing
       </a>
     </li>
@@ -469,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data/embedding.html" class="md-nav__link">
+      <a href="../../Understanding/data/embedding.html" class="md-nav__link">
         Embedding
       </a>
     </li>
@@ -483,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data/privacy.html" class="md-nav__link">
+      <a href="../../Understanding/data/privacy.html" class="md-nav__link">
         Privacy
       </a>
     </li>
@@ -497,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data/sources.html" class="md-nav__link">
+      <a href="../../Understanding/data/sources.html" class="md-nav__link">
         Sources
       </a>
     </li>
@@ -511,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data/augmentation.html" class="md-nav__link">
+      <a href="../../Understanding/data/augmentation.html" class="md-nav__link">
         Augmentation
       </a>
     </li>
@@ -530,16 +533,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
       
       
         
@@ -568,7 +569,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="index.html">Models</a>
+          <a href="../../Understanding/models/index.html">Models</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -576,7 +577,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           Models
@@ -589,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="models.html" class="md-nav__link">
+      <a href="../../Understanding/models/models.html" class="md-nav__link">
         Models
       </a>
     </li>
@@ -603,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="training.html" class="md-nav__link">
+      <a href="../../Understanding/models/training.html" class="md-nav__link">
         Training
       </a>
     </li>
@@ -633,7 +634,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="prompt_engineering/prompt_injections.html">Prompt engineering</a>
+          <a href="../../Understanding/models/prompt_engineering/prompt_injections.html">Prompt engineering</a>
           
             <label for="__nav_1_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -654,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="prompt_engineering/prompting.html" class="md-nav__link">
+      <a href="../../Understanding/models/prompt_engineering/prompting.html" class="md-nav__link">
         Prompting
       </a>
     </li>
@@ -673,19 +674,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="distillation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Understanding/models/distillation.html" class="md-nav__link">
         Distillation
       </a>
-      
     </li>
   
 
@@ -697,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="evaluation.html" class="md-nav__link">
+      <a href="../../Understanding/models/evaluation.html" class="md-nav__link">
         Evaluation
       </a>
     </li>
@@ -711,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="alignment.html" class="md-nav__link">
+      <a href="../../Understanding/models/alignment.html" class="md-nav__link">
         Alignment
       </a>
     </li>
@@ -749,7 +742,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="classes/index.html">Classes</a>
+          <a href="../../Understanding/models/classes/index.html">Classes</a>
           
             <label for="__nav_1_3_7">
               <span class="md-nav__icon md-icon"></span>
@@ -770,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/components.html" class="md-nav__link">
+      <a href="../../Understanding/models/classes/components.html" class="md-nav__link">
         Components
       </a>
     </li>
@@ -784,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/transformers.html" class="md-nav__link">
+      <a href="../../Understanding/models/classes/transformers.html" class="md-nav__link">
         Transformers
       </a>
     </li>
@@ -798,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/diffusers.html" class="md-nav__link">
+      <a href="../../Understanding/models/classes/diffusers.html" class="md-nav__link">
         Diffusers
       </a>
     </li>
@@ -812,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/gans.html" class="md-nav__link">
+      <a href="../../Understanding/models/classes/gans.html" class="md-nav__link">
         Gans
       </a>
     </li>
@@ -826,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/reinforcement_learning.html" class="md-nav__link">
+      <a href="../../Understanding/models/classes/reinforcement_learning.html" class="md-nav__link">
         Reinforcement learning
       </a>
     </li>
@@ -847,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rag.html" class="md-nav__link">
+      <a href="../../Understanding/models/rag.html" class="md-nav__link">
         Retrieval-Augmented Generation
       </a>
     </li>
@@ -861,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reinforcement_feedback.html" class="md-nav__link">
+      <a href="../../Understanding/models/reinforcement_feedback.html" class="md-nav__link">
         Reinforcement feedback
       </a>
     </li>
@@ -910,7 +903,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../agents/index.html">Agents</a>
+          <a href="../../Understanding/agents/index.html">Agents</a>
           
             <label for="__nav_1_4">
               <span class="md-nav__icon md-icon"></span>
@@ -931,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../agents/examples.html" class="md-nav__link">
+      <a href="../../Understanding/agents/examples.html" class="md-nav__link">
         Examples
       </a>
     </li>
@@ -945,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../agents/memory.html" class="md-nav__link">
+      <a href="../../Understanding/agents/memory.html" class="md-nav__link">
         Memory
       </a>
     </li>
@@ -959,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../agents/chains.html" class="md-nav__link">
+      <a href="../../Understanding/agents/chains.html" class="md-nav__link">
         Chains
       </a>
     </li>
@@ -973,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../agents/evaluation.html" class="md-nav__link">
+      <a href="../../Understanding/agents/evaluation.html" class="md-nav__link">
         Evaluation
       </a>
     </li>
@@ -987,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../agents/environments.html" class="md-nav__link">
+      <a href="../../Understanding/agents/environments.html" class="md-nav__link">
         Environments
       </a>
     </li>
@@ -1001,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../agents/systems.html" class="md-nav__link">
+      <a href="../../Understanding/agents/systems.html" class="md-nav__link">
         Systems
       </a>
     </li>
@@ -1015,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../agents/frameworks.html" class="md-nav__link">
+      <a href="../../Understanding/agents/frameworks.html" class="md-nav__link">
         Frameworks
       </a>
     </li>
@@ -1036,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../studies/studies.html" class="md-nav__link">
+      <a href="../../Understanding/studies/studies.html" class="md-nav__link">
         Studies
       </a>
     </li>
@@ -1307,14 +1300,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
         
@@ -1343,7 +1338,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Using/index.html">Using</a>
+          <a href="../index.html">Using</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1351,7 +1346,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Using
@@ -1364,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/by_application.html" class="md-nav__link">
+      <a href="../by_application.html" class="md-nav__link">
         By application
       </a>
     </li>
@@ -1378,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/commercial_products.html" class="md-nav__link">
+      <a href="../commercial_products.html" class="md-nav__link">
         Platforms
       </a>
     </li>
@@ -1392,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/governing.html" class="md-nav__link">
+      <a href="../governing.html" class="md-nav__link">
         Governing
       </a>
     </li>
@@ -1406,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/marking_and_detecting.html" class="md-nav__link">
+      <a href="../marking_and_detecting.html" class="md-nav__link">
         Marking and detecting
       </a>
     </li>
@@ -1420,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/ml_ops.html" class="md-nav__link">
+      <a href="../ml_ops.html" class="md-nav__link">
         Ml ops
       </a>
     </li>
@@ -1434,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/observability.html" class="md-nav__link">
+      <a href="../observability.html" class="md-nav__link">
         Observability
       </a>
     </li>
@@ -1448,7 +1443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/regulation.html" class="md-nav__link">
+      <a href="../regulation.html" class="md-nav__link">
         Regulation
       </a>
     </li>
@@ -1462,7 +1457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/web_plugins.html" class="md-nav__link">
+      <a href="../web_plugins.html" class="md-nav__link">
         Web plugins
       </a>
     </li>
@@ -1474,14 +1469,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked>
       
       
         
@@ -1498,7 +1495,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Using/ethically/index.html">Ethically</a>
+          <a href="index.html">Ethically</a>
           
             <label for="__nav_3_9">
               <span class="md-nav__icon md-icon"></span>
@@ -1506,7 +1503,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3_9">
           <span class="md-nav__icon md-icon"></span>
           Ethically
@@ -1519,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/ethically/alignment_and_exential_concerns.html" class="md-nav__link">
+      <a href="alignment_and_exential_concerns.html" class="md-nav__link">
         Alignment and exential concerns
       </a>
     </li>
@@ -1533,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/ethically/dual_use_concerns.html" class="md-nav__link">
+      <a href="dual_use_concerns.html" class="md-nav__link">
         Dual use concerns
       </a>
     </li>
@@ -1545,11 +1542,89 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Using/ethically/fairness.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Fairness
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="fairness.html" class="md-nav__link md-nav__link--active">
         Fairness
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elements-of-ai-fairness" class="md-nav__link">
+    Elements of AI Fairness
+  </a>
+  
+    <nav class="md-nav" aria-label="Elements of AI Fairness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-understanding-bias" class="md-nav__link">
+    1. Understanding Bias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fairness-metrics" class="md-nav__link">
+    2. Fairness Metrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-transparency" class="md-nav__link">
+    3. Transparency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-accountability" class="md-nav__link">
+    4. Accountability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-inclusion" class="md-nav__link">
+    5. Inclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1561,7 +1636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/ethically/transparency.html" class="md-nav__link">
+      <a href="transparency.html" class="md-nav__link">
         Transparency
       </a>
     </li>
@@ -1691,6 +1766,62 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elements-of-ai-fairness" class="md-nav__link">
+    Elements of AI Fairness
+  </a>
+  
+    <nav class="md-nav" aria-label="Elements of AI Fairness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-understanding-bias" class="md-nav__link">
+    1. Understanding Bias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fairness-metrics" class="md-nav__link">
+    2. Fairness Metrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-transparency" class="md-nav__link">
+    3. Transparency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-accountability" class="md-nav__link">
+    4. Accountability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-inclusion" class="md-nav__link">
+    5. Inclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1707,9 +1838,31 @@
   
 
 
-  <h1>Distillation</h1>
+  <h1>Fairness</h1>
 
-
+<h2 id="elements-of-ai-fairness">Elements of AI Fairness<a class="headerlink" href="#elements-of-ai-fairness" title="Permanent link">&para;</a></h2>
+<p>Understanding AI fairness can be complex, but let's break it down into simple, digestible elements.</p>
+<h3 id="1-understanding-bias">1. Understanding Bias<a class="headerlink" href="#1-understanding-bias" title="Permanent link">&para;</a></h3>
+<p>Bias in AI systems comes from various sources. It could be in the data used to train the AI, the design of the AI algorithms, or the ways AI systems are deployed and used. AI fairness, therefore, needs to address these sources of bias.</p>
+<p>Data Bias: This happens when the data used to train the AI is not representative of the population it will be serving, leading to biased predictions or decisions. An example is if an AI system was trained on data mostly from one demographic group, it might not perform well on other groups.</p>
+<p>Algorithmic Bias: This is when the algorithms that power AI systems inherently favor one outcome over another. They might do this due to design flaws, biased inputs, or even the optimization goals set by their creators.</p>
+<h3 id="2-fairness-metrics">2. Fairness Metrics<a class="headerlink" href="#2-fairness-metrics" title="Permanent link">&para;</a></h3>
+<p>Measuring fairness is a crucial aspect of AI fairness. This involves setting and monitoring fairness metrics that determine how well an AI system is performing in terms of fairness.</p>
+<p>Disparity Metrics: Measures how an AI's decisions or predictions differ among various demographic groups.</p>
+<p>Equality Metrics: Measures how equally an AI system treats individuals, regardless of their demographic group.</p>
+<h3 id="3-transparency">3. Transparency<a class="headerlink" href="#3-transparency" title="Permanent link">&para;</a></h3>
+<p>Transparency is about making sure the workings of an AI system are understandable to people. This includes both the technical side (e.g., how the AI's algorithms work) and the practical side (e.g., how decisions made by the AI impact individuals).</p>
+<p>Explainability: AI systems should be designed to provide explanations about their decisions or predictions. This helps individuals understand how a system came to a certain conclusion.</p>
+<p>Interpretability: This involves designing AI systems in ways that their workings can be understood by humans, even if they don't have technical expertise in AI.</p>
+<h3 id="4-accountability">4. Accountability<a class="headerlink" href="#4-accountability" title="Permanent link">&para;</a></h3>
+<p>Accountability in AI fairness refers to the obligation of AI system developers and operators to answer for the system's effects on individuals and society.</p>
+<p>Auditing: Regular checks on an AI system's decisions and performance to ensure it's upholding fairness standards.</p>
+<p>Redress Mechanisms: Clear pathways for people to challenge decisions made by an AI system, particularly if they believe they've been treated unfairly.</p>
+<h3 id="5-inclusion">5. Inclusion<a class="headerlink" href="#5-inclusion" title="Permanent link">&para;</a></h3>
+<p>Inclusion is about making sure AI systems serve all individuals fairly and equitably, regardless of their demographic characteristics.</p>
+<p>Diversity in Design: This involves ensuring that the teams creating AI systems are diverse, which can help to avoid some forms of bias and make the systems more effective for a wider range of individuals.</p>
+<p>Accessibility: AI systems should be designed in ways that they can be used and understood by people with varying abilities, languages, and cultural contexts.</p>
+<p>NOTE: Generated with GPT-4</p>
 
 
   

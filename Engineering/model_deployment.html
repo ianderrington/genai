@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://managen.ai/Engineering/model_deployment.html">
       
       
-        <link rel="prev" href="models.html">
+        <link rel="prev" href="hyper_parameter_optimization.html">
       
       
-        <link rel="next" href="front_ends.html">
+        <link rel="next" href="model_serving_optimization.html">
       
       <link rel="icon" href="../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#back-end-model-serving" class="md-skip">
+        <a href="#caller-needs" class="md-skip">
           Skip to content
         </a>
       
@@ -266,7 +266,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../Using/by_application.html" class="md-tabs__link">
+    <a href="../Using/index.html" class="md-tabs__link">
       Using
     </a>
   </li>
@@ -733,6 +733,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -752,6 +756,20 @@
           Classes
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Understanding/models/classes/components.html" class="md-nav__link">
+        Components
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -789,6 +807,20 @@
     <li class="md-nav__item">
       <a href="../Understanding/models/classes/gans.html" class="md-nav__link">
         Gans
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Understanding/models/classes/reinforcement_learning.html" class="md-nav__link">
+        Reinforcement learning
       </a>
     </li>
   
@@ -1056,8 +1088,6 @@
         
           
         
-          
-        
       
       
         
@@ -1086,6 +1116,48 @@
     <li class="md-nav__item">
       <a href="models.html" class="md-nav__link">
         Models
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="memory.html" class="md-nav__link">
+        Memory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="comparison_and_evaluation.html" class="md-nav__link">
+        Comparison and evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hyper_parameter_optimization.html" class="md-nav__link">
+        Hyper parameter optimization
       </a>
     </li>
   
@@ -1128,33 +1200,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#back-end-model-serving" class="md-nav__link">
-    Back-End (Model serving)
-  </a>
-  
-    <nav class="md-nav" aria-label="Back-End (Model serving)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tutorials" class="md-nav__link">
-    Tutorials
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview-lit" class="md-nav__link">
-    Overview Lit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#caller-needs" class="md-nav__link">
     Caller needs
   </a>
@@ -1165,6 +1210,81 @@
   <a href="#servable-model" class="md-nav__link">
     Servable model
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-needs" class="md-nav__link">
+    Compute needs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#budget-available" class="md-nav__link">
+    Budget available
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-back-end" class="md-nav__link">
+    Compute back-end
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization-needs" class="md-nav__link">
+    Visualization needs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#front-ends" class="md-nav__link">
+    Front Ends
+  </a>
+  
+    <nav class="md-nav" aria-label="Front Ends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frameworks-and-tooling" class="md-nav__link">
+    Frameworks and Tooling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-information" class="md-nav__link">
+    Additional information
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    Tutorials
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-lit" class="md-nav__link">
+    Overview Lit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1183,8 +1303,8 @@
   
   
     <li class="md-nav__item">
-      <a href="front_ends.html" class="md-nav__link">
-        Front ends
+      <a href="model_serving_optimization.html" class="md-nav__link">
+        Model serving optimization
       </a>
     </li>
   
@@ -1239,20 +1359,6 @@
   
   
     <li class="md-nav__item">
-      <a href="comparison_and_evaluation.html" class="md-nav__link">
-        Comparison and evaluation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="computation.html" class="md-nav__link">
         Computation
       </a>
@@ -1281,20 +1387,6 @@
   
   
     <li class="md-nav__item">
-      <a href="hyper_parameter_optimization.html" class="md-nav__link">
-        Hyper parameter optimization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="implementations.html" class="md-nav__link">
         Implementations
       </a>
@@ -1311,34 +1403,6 @@
     <li class="md-nav__item">
       <a href="interpreters.html" class="md-nav__link">
         Interpreters
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="memory.html" class="md-nav__link">
-        Memory
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="overview.html" class="md-nav__link">
-        Overview
       </a>
     </li>
   
@@ -1375,9 +1439,17 @@
           
         
           
-            
+        
           
         
+          
+        
+          
+        
+          
+        
+          
+            
           
         
       
@@ -1385,7 +1457,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../Using/by_application.html">Using</a>
+          <a href="../Using/index.html">Using</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1399,6 +1471,20 @@
           Using
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using/by_application.html" class="md-nav__link">
+        By application
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1420,8 +1506,64 @@
   
   
     <li class="md-nav__item">
+      <a href="../Using/governing.html" class="md-nav__link">
+        Governing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Using/marking_and_detecting.html" class="md-nav__link">
         Marking and detecting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using/ml_ops.html" class="md-nav__link">
+        Ml ops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using/observability.html" class="md-nav__link">
+        Observability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using/regulation.html" class="md-nav__link">
+        Regulation
       </a>
     </li>
   
@@ -1453,7 +1595,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
       
       
         
@@ -1470,18 +1612,18 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../Using/ethical_concerns/index.html">Ethical concerns</a>
+          <a href="../Using/ethically/index.html">Ethically</a>
           
-            <label for="__nav_3_4">
+            <label for="__nav_3_9">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_9">
           <span class="md-nav__icon md-icon"></span>
-          Ethical concerns
+          Ethically
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1491,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using/ethical_concerns/alignment_and_exential_concerns.html" class="md-nav__link">
+      <a href="../Using/ethically/alignment_and_exential_concerns.html" class="md-nav__link">
         Alignment and exential concerns
       </a>
     </li>
@@ -1505,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using/ethical_concerns/dual_use_concerns.html" class="md-nav__link">
+      <a href="../Using/ethically/dual_use_concerns.html" class="md-nav__link">
         Dual use concerns
       </a>
     </li>
@@ -1519,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using/ethical_concerns/fairness.html" class="md-nav__link">
+      <a href="../Using/ethically/fairness.html" class="md-nav__link">
         Fairness
       </a>
     </li>
@@ -1533,66 +1675,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using/ethical_concerns/transparency.html" class="md-nav__link">
+      <a href="../Using/ethically/transparency.html" class="md-nav__link">
         Transparency
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
-      
-      
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../Using/responsible/observability.html">Responsible</a>
-          
-            <label for="__nav_3_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5">
-          <span class="md-nav__icon md-icon"></span>
-          Responsible
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/responsible/regulation.html" class="md-nav__link">
-        Regulation
       </a>
     </li>
   
@@ -1728,33 +1812,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#back-end-model-serving" class="md-nav__link">
-    Back-End (Model serving)
-  </a>
-  
-    <nav class="md-nav" aria-label="Back-End (Model serving)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tutorials" class="md-nav__link">
-    Tutorials
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview-lit" class="md-nav__link">
-    Overview Lit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#caller-needs" class="md-nav__link">
     Caller needs
   </a>
@@ -1765,6 +1822,81 @@
   <a href="#servable-model" class="md-nav__link">
     Servable model
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-needs" class="md-nav__link">
+    Compute needs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#budget-available" class="md-nav__link">
+    Budget available
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-back-end" class="md-nav__link">
+    Compute back-end
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization-needs" class="md-nav__link">
+    Visualization needs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#front-ends" class="md-nav__link">
+    Front Ends
+  </a>
+  
+    <nav class="md-nav" aria-label="Front Ends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frameworks-and-tooling" class="md-nav__link">
+    Frameworks and Tooling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-information" class="md-nav__link">
+    Additional information
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    Tutorials
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-lit" class="md-nav__link">
+    Overview Lit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1788,16 +1920,41 @@
 
   <h1>Model deployment</h1>
 
+<p>The deployment of models enables callers, people or other software, to use them. While deployment may initially consist of only 'making a model available for calling'. </p>
+<p>Because the model may be one limiting- consider the deployment of the model to be separate from the deployment of the model's encapsulating project, though they are directly connected.  </p>
+<p>There are many component touchpoints along the way, and more so for customers that have higher requirements.</p>
+<p>Quickly, models of the desired specs must be stored in a file and then loaded for serving. Serving as user inputs that are routed to the served model, optionally batched to improve average request latency, and outputs returned routed appropriately to users. </p>
+<p>As would be done for other AI-enalbed products, you will need to have in mind the following</p>
+<ol>
+<li><a href="#caller-needs">Caller needs</a> (customer requirements)</li>
+<li><a href="#servable-model">Servable model</a> to appropriately service customer and environmental requirements.</li>
+<li><a href="#compute-needs">Compute needed</a> to enable service</li>
+<li><a href="#budget-available">Budget available</a> the compute</li>
+<li><a href="#compute-back-end">Compute back end</a> service or framework that will work with the budget</li>
+<li><a href="#visualization-needs">Visualization needs</a> of the customer in the </li>
+<li><a href="#front-ends">Front End</a> that provides the appropriate visualization</li>
+</ol>
+<p>Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get <em>something</em> that you can iterate from, particularly if your solution involves a <a href="https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business#:~:text=on%20Investment">data flywheel</a>%20ROI-,What%20is%20a%20Data%20Flywheel%3F,where%20it%20becomes%20self%2Dsufficient.) (which it should!).</p>
+<h3 id="caller-needs">Caller needs<a class="headerlink" href="#caller-needs" title="Permanent link">&para;</a></h3>
+<p>What the caller requires will depend on the target audience your offering is provided. Focusing on narrower audiences allow you to have fewer (initial) requirements and may enable MVP generation quickly. These audiences can expand or shift as needed. Often needs will require 'rapid' results that are 'good'. </p>
+<h3 id="servable-model">Servable model<a class="headerlink" href="#servable-model" title="Permanent link">&para;</a></h3>
+<p>The models must be sufficient to provide the content that the model have a sufficiently reasonable latency that it can enable the throughput requirements of your model. </p>
+<p>To enable an properly servable model, it may likely be required to <a href="model_serving_optimization.html">optimize</a> the serving of your models.</p>
+<h3 id="compute-needs">Compute needs<a class="headerlink" href="#compute-needs" title="Permanent link">&para;</a></h3>
+<p>Here are some general considerations (from AWS) regarding how to consider the requirements of model deployment.</p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050" /></a>
     <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html">https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html</a></p>
-<h2 id="back-end-model-serving">Back-End (Model serving)<a class="headerlink" href="#back-end-model-serving" title="Permanent link">&para;</a></h2>
+<h3 id="budget-available">Budget available<a class="headerlink" href="#budget-available" title="Permanent link">&para;</a></h3>
+<p>Your calculated budget will be useful to consider the monetization strategy of your tool. While highly dependant on your business model, knowing when to inspire greater <a href="model_serving_optimization.html">model serving optimization</a> to prevent 'too much compute'. </p>
+<h3 id="compute-back-end">Compute back-end<a class="headerlink" href="#compute-back-end" title="Permanent link">&para;</a></h3>
+<p>Part of determining your back-end will involve selecting the <a href="frameworks_and_tools.html">frameworks and tools</a> that you use. </p>
+<p>!!! tip <a href="https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33">GCP Tutorial</a></p>
 <details class="code">
 <summary><a href="https://vllm.ai/">vLLM</a> utilizes <strong>PagedAttention</strong> to manage attention keys/values to enable 24x throughput than other transformers w/out architecture changes</summary>
 <p>"PagedAttention allows storing continuous keys and values in non-contiguous memory space. Specifically, PagedAttention partitions the KV cache of each sequence into blocks, each block containing the keys and values for a fixed number of tokens. During the attention computation, the PagedAttention kernel identifies and fetches these blocks efficiently."
 <a class="glightbox" href="https://vllm.ai/assets/figures/annimation0.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Paged Attention" src="https://vllm.ai/assets/figures/annimation0.gif" /></a>
 <a href="https://github.com/vllm-project/vllm">Github</a></p>
 </details>
-<p>!!! tip <a href="https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33">GCP Tutorial</a></p>
 <details class="tip">
 <summary><a href="https://github.com/Preemo-Inc/text-generation-inference">Text Generation Inference</a> an open-sourced implementation forked from HF</summary>
 <p>"A Rust, Python and gRPC server for text generation inference. Used in production at HuggingFace to power LLMs api-inference widgets."  <br />
@@ -1818,35 +1975,27 @@
 <p class="admonition-title"><a href="https://github.com/BerriAI/litellm/blob/main/cookbook/proxy-server/readme.md">litellm by BerriAI</a> provides code to enable railways deployed on railway.app</p>
 </div>
 <p>!!! website "<a href="https://railway.app/about">Railway.app</a></p>
+<h3 id="visualization-needs">Visualization needs<a class="headerlink" href="#visualization-needs" title="Permanent link">&para;</a></h3>
+<h3 id="front-ends">Front Ends<a class="headerlink" href="#front-ends" title="Permanent link">&para;</a></h3>
+<p>People have to well-designed access to GPT technology. Here are several popular repos to start your product out with. </p>
+<h4 id="frameworks-and-tooling">Frameworks and Tooling<a class="headerlink" href="#frameworks-and-tooling" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://github.com/oobabooga/text-generation-webui">OobaBooga Text generation WebUI</a></li>
+<li><a href="https://blog.streamlit.io/langchain-streamlit/">Streamlit</a></li>
+<li><a href="https://github.com/melih-unsal/DemoGPT">DemoGPT</a> Connects Langchain and streamlit to create dynamic apps that can be repeatedly used for interacting with Chat- GPTs. </li>
+<li><a href="https://github.com/m-elbably/gpt-graph">GPT Graph</a> Allows for a graphical network representation of chat interactions.</li>
+</ul>
+<h2 id="additional-information">Additional information<a class="headerlink" href="#additional-information" title="Permanent link">&para;</a></h2>
 <h3 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link">&para;</a></h3>
+<h3 id="overview-lit">Overview Lit<a class="headerlink" href="#overview-lit" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33">How to Deploy Large Size Deep Learning Models Into Production</a></li>
+<li>
+<p><a href="https://neptune.ai/blog/nlp-models-infrastructure-cost-optimization#:~:text=Use%20a%20lightweight%20deployment%20framework,serve%20predictions%20over%20a%20network.">Neptune-nlp-models-infrastructure</a></p>
+</li>
+<li>
+<p><a href="https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33">How to Deploy Large Size Deep Learning Models Into Production</a></p>
+</li>
 </ul>
-<h2 id="overview-lit">Overview Lit<a class="headerlink" href="#overview-lit" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://neptune.ai/blog/nlp-models-infrastructure-cost-optimization#:~:text=Use%20a%20lightweight%20deployment%20framework,serve%20predictions%20over%20a%20network.">Neptune-nlp-models-infrastructure</a></li>
-</ul>
-<p>The deployment of models enables callers, people or other software, to use them. While deployment may initially consist of only 'making a model available for calling'. </p>
-<p>Because the model may be one limiting- consider the deployment of the model to be separate from the deployment of the model's encapsulating project, though they are directly connected.  </p>
-<p>There are many component touchpoints along the way, and more so for customers that have higher requirements.</p>
-<p>Quickly, models of the desired specs must be stored in a file and then loaded for serving. Serving as user inputs that are routed to the served model, optionally batched to improve average request latency, and outputs returned routed appropriately to users. </p>
-<p>As would be done for other AI-enalbed products, you will need to have in mind the following</p>
-<ol>
-<li>Caller needs (customer requirements)</li>
-<li>Servable model to appropriately service customer and environmental requirements.</li>
-<li>Compute needed to enable service</li>
-<li>Budget needed to fund compute</li>
-<li>Compute Host that will work with the budget</li>
-<li>Visualization needs of the customer</li>
-<li>GUI Framework, and visualization service</li>
-</ol>
-<p>Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get <em>something</em> that you can iterate from, particularly if your solution involves a data flywheel (which it should!).</p>
-<h2 id="caller-needs">Caller needs<a class="headerlink" href="#caller-needs" title="Permanent link">&para;</a></h2>
-<p>What the caller requires will depend on the target audience your offering is provided. Focusing on narrower audiences allow you to have fewer (initial) requirements and may enable MVP generation quickly. These audiences can expand or shift as needed. Often needs will require 'rapid' results that are 'good'. </p>
-<h2 id="servable-model">Servable model<a class="headerlink" href="#servable-model" title="Permanent link">&para;</a></h2>
-<p>The models must be sufficient to provide the content that the 
-&lt; common requirements for servable models&gt;
-&lt;other important topics and sub-bullets</p>
 
 
   
