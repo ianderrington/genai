@@ -20,9 +20,14 @@ Once build, Gen()AI is generally called with language inputs to create a specifi
 
 [Foundation models](https://en.wikipedia.org/wiki/Foundation_models) are large-scale models that are pre-trained with self or semi-supervision on vast amounts of data and can be fine-tuned for specific tasks. These models serve as a foundation or base for various applications, reducing the need to train models from scratch.
 
-We discuss the general complete models used in creating Generative AI. Initial incarnations of this will focus on the most observably promising core-models, [transformers](./classes/transformers.md) often called `General Pretrained Transformers`.  
-
 ## Model Learning
+
+There are several fundamental ways that models can 'learn' in relation to how data interacts with the model. 
+
+??? tip "[To Compress or Not to Compress](https://arxiv.org/pdf/2304.09355.pdf) provides a coherent understanding of different manners of learning in relation to information theory."
+
+    <img width="1057" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a0bf6426-bd06-4f56-a702-9b3f28a6e5a3">
+
 
 ### Self-supervised learning
 
