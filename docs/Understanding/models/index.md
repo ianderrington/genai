@@ -1,6 +1,7 @@
 Here we will discuss the models essential components of Gen()AI. Please see the [Trained Models](../../Engineering/models.md) for specific manners of implementing, deploying, or otherwise using these models.
 
 !!! tip "**tl;dr**"
+
     - Understand [self-supervised learning](#self-supervised-learning)
     - Learn about [models](./models.md)
     - Work on your [prompting](./prompt_enineering/prompting.md)
@@ -62,13 +63,15 @@ Generative AI models are of two general categories: self-supervised, and Externa
 
 ## Model Classes
 
-Different [model classes](./classes/index.md) of models can often be used with multiple types of model learning. Because of their present degree of quality present model Architectures tend to be transformer-based, or diffusion-based, or made from any other sufficently capable AI method. While Generative Adversarial Networks, [GANS](https://en.wikipedia.org/wiki/Generative_adversarial_network) were the initially most successful, the challenges in training them successfully can be difficult to surmount. 
+Different [model classes](./classes/index.md) of models can often be used with multiple types of model learning. Because of their present degree of quality present model Architectures tend to be transformer-based, or diffusion-based, or made from any other sufficently capable AI method. While Generative Adversarial Networks, [GANS](https://en.wikipedia.org/wiki/Generative_adversarial_network) were the initially most successful, the challenges in training them successfully can be difficult to surmount. Below we describe the model classes in greater detail.
 
+- [Hybrid models like GPT](./classes/hybrid_models.md)
 - [Transformers](./classes/transformers.md)
 - [Diffusers](./classes/diffusers.md)
 - [Generative Adversarial Networks](./classes/gans.md)
 - [Reinforcement Learning](./classes/reinforcement_learning.md)
 - [Developing Architectures](./classes/developing_architectures.md)
+
 
 ## Quality References
 
