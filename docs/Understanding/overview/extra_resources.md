@@ -1,5 +1,8 @@
+### Quality Recordings
 
-## Visualization
 
-Being able to see the 'structure' of some neural networks make it easier to understand, and more aesthetic.  Please see
-[PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet) and a nice [writeup](https://pub.towardsai.net/creating-stunning-neural-network-visualizations-with-chatgpt-and-plotneuralnet-adab37589e5) on how to use it. 
+- [Lex Fridman](https://www.youtube.com/@lexfridman)
+- [David Shapiro](https://www.youtube.com/@DavidShapiroAutomator)
+- [AI Explained](https://www.youtube.com/@ai-explained-)
+- [Yannic Kilcher](https://www.youtube.com/@YannicKilcher)
+  

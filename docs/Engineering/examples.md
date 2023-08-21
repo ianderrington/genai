@@ -4,7 +4,6 @@
     
     <img width="857" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/20157442-988a-4fb0-bf5c-1ddc3698e221">
 
-
   
 !!! tip "[Fully GenAI pharmacist from scripts, images and videos](https://github.com/kennethleungty/Generative-AI-Pharmacist)"
 

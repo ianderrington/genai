@@ -1,8 +1,22 @@
 Generative AI is a subset of machine learning that aim to creates new data samples or information based on an input. This technology has gained significant attention recently because they have been able to produce produce high-quality, realistic data across various domains, from images and videos to text and audio.
 
-Herein, we will mention a few references of historically pivotal papers and code, we will miss much of the rich history of Generative AI until future versions will be able to generate, and validate, that herein. There is also a philosophical overlap with 'predictive' AI where an predictive model could just be said to 'generating' either possible future outcomes, or estimated classifications of data. We will touch upon these concepts as they relate to various [applications](applications.md), as well as how the models may be [trained](../models/index.md).
+!!! important "[tl;dr](#tldr)"
+    - Evaluate your [**application**](./applications.md) and think of the [**challenges**](./challenges.md) 
+    - Understand the [**data**](../data/index.md) and collect data that you need.
+    - [**Understand**](../models/index.md) and [**build**](../../Engineering/models.md) your model
+    - [**Deploy**](../../Engineering/model_deployment.md) your model
+    - [**Manage**](../../Managing/index.md) your model
 
-A good portion of Gen()AI relies on large scale **foundation models** that can be reused. These models are also made with **self-supervision** which enables data to be 'understood' by models, by a manner speech. There are many generally distinct domains of Gen()AI application, though many be compositional. Effectively any information that can be recorded onto a computer may be made by Gen()AI.
+!!! tip "A little more advanced"
+    - [Use Agents](../agents/index.md)
+    - Optimize your model [performance](../../Engineering/hyper_parameter_optimization.md) and [serving](../../Engineering/model_serving_optimization.md)
+    
+
+## Background 
+
+There is a rich history of Generative AI that may be of interest for some.  Until future versions will be able to generate, and validate, that herein. There is also a philosophical overlap with 'predictive' AI where an predictive model could just be said to 'generating' either possible future outcomes, or estimated classifications of data. We will touch upon these concepts as they relate to various [applications](applications.md).
+
+A good portion of Gen()AI relies on large scale [**foundation models**](#foundation-models) that can be reused. These models are also made with [**self-supervised learning**](#self-supervised-learning) which enables data to be 'understood' by models, by a manner speech. There are many generally distinct domains of Gen()AI application, though many be compositional. Effectively any information that can be recorded onto a computer may be made by Gen()AI.
 
 * Language
 * Visual 2D
@@ -12,13 +26,14 @@ A good portion of Gen()AI relies on large scale **foundation models** that can b
 * Brain recordings
 * Weather patterns
 * Protein folding 
-* [... many other applications](applications.md)
 
 ## Foundation Models
 
 [Foundation models](https://en.wikipedia.org/wiki/Foundation_models) are large-scale models that are pre-trained with self or semi-supervision on vast amounts of data and can be fine-tuned for specific tasks. These models serve as a foundation or base for various applications, reducing the need to train models from scratch.
 
-### Basics of Self-Supervised Learning
+## Learning styles
+
+### Self-Supervised Learning
 
 Self-supervised learning is a training paradigm where the model learns by predicting parts of the input data, using other parts of the same data as context. Unlike supervised learning, where labels are provided, self-supervised learning generates its own supervisory signal from the input data. This approach has proven to be highly effective, especially for tasks where labeled data is scarce.
 
@@ -42,11 +57,3 @@ However, it's essential to note that while LLMs are powerful, they are not infal
 
 ## Resources
 
-### Quality Recordings
-
-
-- [Lex Fridman](https://www.youtube.com/@lexfridman)
-- [David Shapiro](https://www.youtube.com/@DavidShapiroAutomator)
-- [AI Explained](https://www.youtube.com/@ai-explained-)
-- [Yannic Kilcher](https://www.youtube.com/@YannicKilcher)
-  

@@ -9,21 +9,21 @@ When an agent (or model) engages in an interaction with another agent, the resul
 
 ## Research
 
-<div class="result" markdown>
+
 !!! tip "[MetaGPT](https://github.com/geekan/MetaGPT)"
     MetaGPT enables different agents to interact and generate meaningful outputs based on varying tasks and personas. It's a reliable partially-formed solution. Check out the code for further knowledge!
-</div>
-<div class="result" markdown>
+
+
     
 !!! tip "[Self-play GPT](https://arxiv.org/pdf/2305.10142.pdf)"
     This model leverages different game-roles and LLMs to provide feedback on how to optimize the model and facilitate autonomous enhancement during gameplay.
 
-<div class="result" markdown>
-</div>
+
+
 !!! tip "[Can Language Models Teach Weaker Agents? Teacher Explanations Improve Students via Theory of Mind](https://arxiv.org/pdf/2306.09299.pdf)"
     In this work, the Theory of Mind (ToM) concept is used to attempt to improve the performance of students. [Github](https://github.com/swarnaHub/ExplanationIntervention)
 
-<div class="result" markdown>
+
 
 ??? tip "[Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf) in a simulated town!!!"
     This paper discusses a simulation involving different agents exhibiting different personalities. The dynamic environment, shared in [code](https://github.com/a16z-infra/ai-town) can be manipulated by these agents. The paper explores various challenges and proposed solutions including:
@@ -34,34 +34,34 @@ When an agent (or model) engages in an interaction with another agent, the resul
     **Planning and Reacting**
         _Recursive Planning_ In this process, the agent divides the day into chunks of "goals", which are further broken down into smaller time frames. The ability to adjust these plans based on interactions is a key feature of this mechanism.
     ```
-</div>
 
-<div class="result" markdown>
+
+
 
 !!! tip "[Multi-Agent Collaboration via Reward Attribution Decomposition](https://arxiv.org/abs/2010.08531)"
     This work illuminates optimization techniques for multi-agents using distributed reward systems to achieve state-of-the-art performance. It introduces a joint optimization approach that depends on _self_ and _interactive_ terms.
-</div> 
-<div class="result" markdown>
+ 
+
 
 !!! tip "[Super-AGI](https://github.com/TransformerOptimus/SuperAGI)"
     Super-AGI is a model that allows multiple agents to function. However, this system doesn't facilitate any communication between the agents.
-</div> 
-<div class="result" markdown>
+ 
+
 
 !!! tip "[GPT-Bargaining](https://github.com/FranxYao/GPT-Bargaining)"
     This model applies several iterations to improve negotiation tactics based on external feedback.
-</div> 
-<div class="result" markdown>
+ 
+
     
 !!! tip "[RL4L Allen ai](https://arxiv.org/pdf/2305.08844.pdf)"
     RL4L AI employs a small critique model to enhance the output from the larger model. It uses a policy gradient to fine-tune the critique model while maintaining reasonable performance gains. [Github](https://github.com/allenai/RL4LMs)
-</div> 
-<div class="result" markdown>
+ 
+
 
 ??? tip "[Showrunner Agents](https://fablestudio.github.io/showrunner-agents/) The Showrunner Agents use Large Language Models (LLMs) to generate episodic content."
      It's a massively creative and multi-faceted process with a great potential.
     ![image](https://github.com/ianderrington/genai/assets/76016868/9820f2c4-5779-4bc9-b501-4e9b455212ff)
-</div>
+
 
 ??? tip "[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/pdf/2305.14325.pdf)
     "multiple language model instances propose and debate their individual responses and reasoning processes over multiple rounds to arrive at a common final answer."

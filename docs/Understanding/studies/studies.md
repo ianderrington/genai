@@ -14,7 +14,7 @@ It is debated that sufficiently large models exhibit 'emergence'. While not alwa
 <div class=markdown>
   !!!tip "[Grokking](https://pair.withgoogle.com/explorables/grokking/)"
       When training, if test loss starts to increase while the training loss continues to go down, it is often considered to be memorization. With hyperparameters (weight decay) extremely long training may result in the test loss eventually going down, allowing for generalization to occur. While not fully understood, it is important to be aware of this phenomenon. 
-</div>
+
 
 
 

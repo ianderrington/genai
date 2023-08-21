@@ -1,16 +1,16 @@
 ### LLM Prompting
-- ‼️[LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide) based on [paper](https://arxiv.org/abs/2304.13712).
+- [LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide) based on [paper](https://arxiv.org/abs/2304.13712).
 
-- ‼️[Prompting Guide](https://www.promptingguide.ai/)
+- [Prompting Guide](https://www.promptingguide.ai/)
 - [Wolfram Prompt Repo](https://writings.stephenwolfram.com/2023/06/prompts-for-work-play-launching-the-wolfram-prompt-repository/?mibextid=Zxz2cZ)
-- ‼️[Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
+- [Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
 
 
 
 ### LLM Prompting
-- ‼️[Prompting Guide](https://www.promptingguide.ai/)
+- [Prompting Guide](https://www.promptingguide.ai/)
 - [Wolfram Prompt Repo](https://writings.stephenwolfram.com/2023/06/prompts-for-work-play-launching-the-wolfram-prompt-repository/?mibextid=Zxz2cZ)
-- ‼️[Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
+- [Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
 
 - scale.com/spellbook
 
@@ -60,7 +60,7 @@ According to {some_reputable_source} ...
 
 ### Automatic
 
-<div class="result" markdown>
+
 !!! note "[GPT Prompt Engineer](https://github.com/mshumer/gpt-prompt-engineer)"
     A fairly simple automation tool to create the best prompts
 
@@ -81,7 +81,7 @@ According to {some_reputable_source} ...
     
     ![image](https://github.com/ianderrington/genai/assets/76016868/f02a9f3e-4f4c-49de-9b35-1702df65d618)
   
-</div>
+
 
 ### Resources
 

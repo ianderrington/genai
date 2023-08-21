@@ -12,13 +12,13 @@ TODO: Describe transformers and components
 Layer normalization observably improves results [On Layer Normalization in the Transformer Architecture](http://proceedings.mlr.press/v119/xiong20b/xiong20b.pdf)
 
 ## Reviews
-<div class="result" markdown>
+
 ??? tip [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-</div>
-<div class="result" markdown>
+
+
 ??? tip [The Transformer Blueprint: A Holistic Guide to the Transformer Neural Network Architecture](https://deeprevision.github.io/posts/001-transformer/)
     A thorough exposition of transformer technology.
-</div>
+
 
 
 ### Softmax?
@@ -69,17 +69,17 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 
 - [Scaling Transformer to 1M tokens and beyond with RMT](https://arxiv.or dsvg/abs/2304.11062) [Github](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. 
 
-<div class="result" markdown>
+
 !!! tip "[MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185.pdf)"
     MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration that allows for $O(N^{4/3}$ scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers.
 
 ??? note 
     <img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356">
-</div>
+
 
 - [Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf) Uses inspiration from FFT to create a drop in replacement for Transformer models. 
 
-<div class="result" markdown>
+
 !!! tip "[Infinite former](https://arxiv.org/pdf/2109.00301.pdf)"
     Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration.
 
@@ -108,7 +108,7 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
 ### Graphs
 
-<div class="result" markdown>
+
 !!! tip "[Transformers Meet Directed Graphs](https://arxiv.org/pdf/2302.00049.pdf)"
     An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.
 

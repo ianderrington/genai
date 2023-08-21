@@ -1,7 +1,6 @@
-## Purpose
 Generative Artificial Intelligence, and related General AI and General Super AI are components of what already is and may be the future of intelligence and computing. We must effectively manage these technologies to use them to their highest potential. 
 
-To manage these technologies we first must understand them. That is a complex task, especially given the speed at which we are generating novel insights, new discoveries, backed by increasingly powerful hardware. 
+To manage these technologies effectively and responsibly _we must understand them_. That is a complex task, especially given the speed at which we are generating novel insights, new discoveries, backed by increasingly powerful hardware. 
 
 That is why we created Mana Gen AI. 
 
@@ -23,7 +22,7 @@ Getting into it, you will find the following outline:
 1. [Models](models/index.md) allow the data to be understood and used. [^n1]
 1. [Prompts](models/prompt_engineering/prompting.md) govern how we interact with the models.
 1. [Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners.
-1. [Ethical concerns](../Using/ethical_concerns/index.md) help us to temper the responsible use of these powerful technologies.
+1. [Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies.
 1. [Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis. 
 
 ### How do you do stuff with Gen()AI?
@@ -38,13 +37,13 @@ Still, these trained foundation models may be used, with varying degrees of open
 
 If you are working on commercial projects, be sure to look at the Licenses to ensure you are legally compliant. 
 
-And please, whatever you do, be cognisant of the [ethical concerns](../Using/ethical_concerns/index.md)
+And please, whatever you do, be cognisant of the [ethical concerns](../Using/ethically/index.md)
 
 ## Useful References[^a1]
 
 There is so much quality material, it would be valuable for your time to check some of these out if you got the chance. 
 
-<div class="result" markdown>
+
 ??? tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
     Important patterns mentioned (references to discussions herein):
     * [Evaluation](models/evaluation.md)
@@ -57,7 +56,7 @@ There is so much quality material, it would be valuable for your time to check s
     * Monitoring to ensure value is being derived
     * Effective (defensive) UX to ensure the models can be used well. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/fd03db2c-c695-4f52-8306-062fad5c3779)
-</div>
+
 
 - [A Survey of Large Language Models](https://arxiv.org/pdf/2303.18223.pdf) A very comprehensive paper discussing LLM technology. 
 - [A cookbook of self-supervised Learning](https://arxiv.org/pdf/2304.12210.pdf) 

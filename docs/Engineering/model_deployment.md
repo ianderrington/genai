@@ -1,17 +1,55 @@
+The deployment of models enables callers, people or other software, to use them. While deployment may initially consist of only 'making a model available for calling'. 
+
+Because the model may be one limiting- consider the deployment of the model to be separate from the deployment of the model's encapsulating project, though they are directly connected.  
+
+There are many component touchpoints along the way, and more so for customers that have higher requirements.
+
+Quickly, models of the desired specs must be stored in a file and then loaded for serving. Serving as user inputs that are routed to the served model, optionally batched to improve average request latency, and outputs returned routed appropriately to users. 
+
+As would be done for other AI-enalbed products, you will need to have in mind the following
+
+1. [Caller needs](#caller-needs) (customer requirements)
+2. [Servable model](#servable-model) to appropriately service customer and environmental requirements.
+3. [Compute needed](#compute-needs) to enable service
+4. [Budget available](#budget-available) the compute
+5. [Compute back end](#compute-back-end) service or framework that will work with the budget
+6. [Visualization needs](#visualization-needs) of the customer in the 
+7. [Front End](#front-ends) that provides the appropriate visualization
+
+Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business#:~:text=on%20Investment)%20ROI-,What%20is%20a%20Data%20Flywheel%3F,where%20it%20becomes%20self%2Dsufficient.) (which it should!).
+
+###  Caller needs
+
+What the caller requires will depend on the target audience your offering is provided. Focusing on narrower audiences allow you to have fewer (initial) requirements and may enable MVP generation quickly. These audiences can expand or shift as needed. Often needs will require 'rapid' results that are 'good'. 
+
+### Servable model
+
+The models must be sufficient to provide the content that the model have a sufficiently reasonable latency that it can enable the throughput requirements of your model. 
+
+To enable an properly servable model, it may likely be required to [optimize](./model_serving_optimization.md) the serving of your models.
+
+### Compute needs
+
+Here are some general considerations (from AWS) regarding how to consider the requirements of model deployment.
+
 ![image](https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050)
     https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html
 
-## Back-End (Model serving)
+### Budget available
 
+Your calculated budget will be useful to consider the monetization strategy of your tool. While highly dependant on your business model, knowing when to inspire greater [model serving optimization](model_serving_optimization.md) to prevent 'too much compute'. 
 
+### Compute back-end
+
+Part of determining your back-end will involve selecting the [frameworks and tools](./frameworks_and_tools.md) that you use. 
+
+!!! tip [GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
 
 ??? code "[vLLM](https://vllm.ai/) utilizes **PagedAttention** to manage attention keys/values to enable 24x throughput than other transformers w/out architecture changes"
 
     "PagedAttention allows storing continuous keys and values in non-contiguous memory space. Specifically, PagedAttention partitions the KV cache of each sequence into blocks, each block containing the keys and values for a fixed number of tokens. During the attention computation, the PagedAttention kernel identifies and fetches these blocks efficiently."
     ![Paged Attention](https://vllm.ai/assets/figures/annimation0.gif)
     [Github](https://github.com/vllm-project/vllm)
-
-!!! tip [GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
 
 ??? tip "[Text Generation Inference](https://github.com/Preemo-Inc/text-generation-inference) an open-sourced implementation forked from HF"
 
@@ -31,44 +69,26 @@
 
 !!! website "[Railway.app](https://railway.app/about)
 
+### Visualization needs
+
+### Front Ends
+
+People have to well-designed access to GPT technology. Here are several popular repos to start your product out with. 
+
+#### Frameworks and Tooling
+
+- [OobaBooga Text generation WebUI](https://github.com/oobabooga/text-generation-webui)
+- [Streamlit](https://blog.streamlit.io/langchain-streamlit/)
+- [DemoGPT](https://github.com/melih-unsal/DemoGPT) Connects Langchain and streamlit to create dynamic apps that can be repeatedly used for interacting with Chat- GPTs. 
+- [GPT Graph](https://github.com/m-elbably/gpt-graph) Allows for a graphical network representation of chat interactions.
+
+## Additional information
+
 ### Tutorials
-- [How to Deploy Large Size Deep Learning Models Into Production](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
 
-
-
-
-
-## Overview Lit
+### Overview Lit
 
 - [Neptune-nlp-models-infrastructure](https://neptune.ai/blog/nlp-models-infrastructure-cost-optimization#:~:text=Use%20a%20lightweight%20deployment%20framework,serve%20predictions%20over%20a%20network.)
 
-
-
-The deployment of models enables callers, people or other software, to use them. While deployment may initially consist of only 'making a model available for calling'. 
-
-Because the model may be one limiting- consider the deployment of the model to be separate from the deployment of the model's encapsulating project, though they are directly connected.  
-
-There are many component touchpoints along the way, and more so for customers that have higher requirements.
-
-Quickly, models of the desired specs must be stored in a file and then loaded for serving. Serving as user inputs that are routed to the served model, optionally batched to improve average request latency, and outputs returned routed appropriately to users. 
-
-As would be done for other AI-enalbed products, you will need to have in mind the following
-
-1. Caller needs (customer requirements)
-2. Servable model to appropriately service customer and environmental requirements.
-3. Compute needed to enable service
-4. Budget needed to fund compute
-5. Compute Host that will work with the budget
-6. Visualization needs of the customer
-7. GUI Framework, and visualization service
-
-Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves a data flywheel (which it should!).
-
-##  Caller needs
-What the caller requires will depend on the target audience your offering is provided. Focusing on narrower audiences allow you to have fewer (initial) requirements and may enable MVP generation quickly. These audiences can expand or shift as needed. Often needs will require 'rapid' results that are 'good'. 
-
-## Servable model
-The models must be sufficient to provide the content that the 
-< common requirements for servable models>
-<other important topics and sub-bullets
+- [How to Deploy Large Size Deep Learning Models Into Production](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
 

@@ -1,7 +1,10 @@
 nav:
     - index.md
     - models.md
+    - memory.md
+    - comparison_and_evaluation.md
+    - hyper_parameter_optimization.md
     - model_deployment.md
-    - front_ends.md
+    - model_serving_optimization.md
     - frameworks_and_tools.md
     - ...

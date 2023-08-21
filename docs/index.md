@@ -2,11 +2,11 @@
 
 **Our Mission**: Simplify and demystify Gen()AI for making it accessible and understandable, and to increase our ability to manage it. 
 
-Our **open-source project** on [**Managing Generative AI**](https://www.managen.ai) 🤖 will help us to stay on top of understanding and working with the increasingly complex of world of Generative AI.
+Our **open-source project** on [**Managing Generative AI**](https://www.managen.ai) 🤖 will help people to stay on top of understanding effectively working with the increasingly complex of world of Generative AI.
 
-## Why is it called Gen() AI?
+!!! important "Why is it called Gen() AI?"
 
-Generative AI creates. So does will General AI. Depending on their definitions there may be notable differences, the overlap ensures that there will be shared characteristics that warrant writing this ambiguously, such as GenAI or Gen()AI. 
+    `Generative AI` creates. So does will `General AI`. Depending on their definitions there may be notable differences, the overlap ensures that there will be shared characteristics that warrant writing this ambiguously, such as GenAI or Gen()AI. 
 
 ## 📘 What's Inside?
 
@@ -31,5 +31,3 @@ If you're as excited as we are and wish to contribute, join us!
 !!! hint "Contribute"
     Interested in contributing? Check out our [**guidelines**](Managing/contributing.md) to get started.
 
-!!! tip "Quick navigation"
-    Navigate with ease! Type `,` or `.` to go forward/backwards. Press `/` to search anytime.
