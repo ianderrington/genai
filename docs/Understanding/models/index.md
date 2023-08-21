@@ -3,7 +3,8 @@ Here we will discuss the models essential components of Gen()AI. Please see the 
 !!! tip "**tl;dr**"
     - Understand [self-supervised learning](#self-supervised-learning)
     - Learn about [models](./models.md)
-    - Learn about [
+    - Work on your [prompting](./prompt_enineering/prompting.md)
+    - Move on to learn about [agents](../agents/index.md)
 
 ## Background 
 
@@ -24,9 +25,8 @@ We discuss the general complete models used in creating Generative AI. Initial i
 ## Model Learning
 
 ### Self-supervised learning
-_Self-supervision_ amounts to using a single data entry to train a model to predict a portion of the data itself. For instance, a model that is used to predict the next word in a string of text or a model that is used to generate a piece of an image that has been blanked out. 
 
-Self-supervised learning is a training paradigm where the model learns by predicting parts of the input data, using other parts of the same data as context. Unlike supervised learning, where labels are provided, self-supervised learning generates its own supervisory signal from the input data. This approach has proven to be highly effective, especially for tasks where labeled data is scarce.
+_Self-supervision_ amounts to using a single data entry to train a model to predict a portion of the data itself. For instance, a model that is used to predict the next word in a string of text or a model that is used to generate a piece of an image that has been blanked out. This approach has proven to be highly effective, especially for tasks where labeled data is expensive to obtain or otherwise scarce.
 
 ### Supervised learning
 
@@ -34,14 +34,15 @@ _Supervised learning_ is a more traditional ML approach that generally involves 
 
 ### Unsupervised learning
 
-_Unsupervised learning_ is often used for discovering insights and patterns in the way data is distributed or related. While not directly or consistenly used in GenAI systems, it can be valuable for filtering and selecting data. 
+_Unsupervised learning_ is often used for discovering insights and patterns in the way data is distributed or related. While not directly or consistently used in GenAI systems, it can be valuable for filtering and selecting data. 
 
 ### Reinforcement learning 
 
-Generally originating from game-play and robotics, _reinforcement learning_ offers the capacity for models to interact with a generally more-complex environment.
-When combined with self-supervision, [reinforcement learning](./classes/reinforcement_learning.md) has proven to to be essential to create powerful [GPT architectures](#gpt-architectures).
+Generally originating from game-play and robotics, _reinforcement learning_ offers the capacity for models to interact with a generally more complex environment.
+When combined with self-supervision, [reinforcement learning](./classes/reinforcement_learning.md) has proven to be essential to create powerful [GPT architectures](#gpt-architectures).
 
 ### Hybrid learning methods
+
 _Hybrid Learning_ methods combine one or several methods above to enable more successful Generative AI. _Semi-supervised learning_ is a form of hybrid learning where supervised and unsupervised learning are used to produce the final outcome. 
 
 #### Language Models and LLMs
@@ -55,6 +56,7 @@ Language models (LMs) are a type of generative model trained to predict the next
 Generative AI models are of two general categories: self-supervised, and Externally-supervised, and hybrid models. 
 
 ## Model Classes
+
 Different [model classes](./classes/index.md) of models can often be used with multiple types of model learning. Because of their present degree of quality present model Architectures tend to be transformer-based, or diffusion-based, or made from any other sufficently capable AI method. While Generative Adversarial Networks, [GANS](https://en.wikipedia.org/wiki/Generative_adversarial_network) were the initially most successful, the challenges in training them successfully can be difficult to surmount. 
 
 - [Transformers](./classes/transformers.md)
@@ -63,44 +65,10 @@ Different [model classes](./classes/index.md) of models can often be used with m
 - [Reinforcement Learning](./classes/reinforcement_learning.md)
 - [Developing Architectures](./classes/developing_architectures.md)
 
-### References
+## Quality References
 
 - [A Survey of Large Language Models](https://arxiv.org/pdf/2303.18223.pdf) A very comprehensive paper discussing LLM technology. 
 - [Understanding Large Language Models](https://magazine.sebastianraschka.com/p/understanding-large-language-models)
 
-### Self-supervised learning.
-
-
-
-## Mixture of Experts
-
-
-
-## MultiModal 
-
-There are two primary domains of Generative AI, text-oriented or image-oriented, though there is great indication that many other (multi-)modalities will be very important for the future. 
-
-??? tip "[SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs](https://arxiv.org/pdf/2306.17842.pdf) A really cool idea that uses pyramidal representations and compresses information into text-tokens of different levels."
-    It can reconstruct it as need be. These tokens then could be used in novel image generation via semantic mapping with an LLM. 
-
-
-
-## Model agnostic improvements
-
-- [Learning to Compress Prompts with Gist Tokens](https://arxiv.org/pdf/2304.08467.pdf). Can enable 26x compression and 40% FLOP reduction and improvements. Trains 'gist tokens' to summarize information. 
-
-
-## TO SORT
-
-  
-  * Token Embedding: Mapping to a vector space. 
-  * Positional Embedding: Learned or hard-coded mapping to position of sequence to a vector space
-  * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information. 
-  * Bi-directional / unmasked
-  * Unidirectional / masked self attetion
-  * Cross attention applies attention to the primary sequence and treates the second token sequence the context. 
-  * Multi-head attention. Multiple attention heads in parallel.
-  * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`. 
-  * Unembedding: Learns to convert vector intot he vocuabulary elements. 
   
 
