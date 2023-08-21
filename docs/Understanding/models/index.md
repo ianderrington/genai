@@ -4,13 +4,7 @@ Here we will discuss the models essential components of Gen()AI. Please see the 
 
 
 ## Background 
-There is a rich history of Generative AI  models that may be of interest, which will be shared in future versions of this code. 
-
-There is a philosophical overlap with 'predictive' AI where a predictive model could just be said to 'generate' either possible future outcomes or estimated classifications of data. 
-
-We will touch upon these concepts as they relate to various [applications](applications.md).
-
-A good portion of Gen()AI relies on large scale [**foundation models**](#foundation-models) that can be reused. These models are also made with [**self-supervised learning**](#self-supervised-learning) which enables data to be 'understood' by models, by a manner speech.
+There is a rich history of Generative AI  models that may be of interest, which will be shared in future versions of this code. A good portion of Gen()AI relies on large scale [**foundation models**](#foundation-models) that can be reused. These models are also made with [**self-supervised learning**](#self-supervised-learning) which enables data to be 'understood' by models, by a manner speech.
 
 ## Foundation Models
 
