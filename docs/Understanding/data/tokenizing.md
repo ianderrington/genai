@@ -2,7 +2,10 @@
 In generative AI, the raw data—whether it be in binary, text, or a different form—is divided into individual units termed as *tokens*. These play a crucial role in easing the understanding and manipulation of data for the AI.
 
 ## Understanding Tokenization
-Tokenization is the process of splitting data into these individual units. The choice of a token largely depends on the data type and the expected outcome of the AI. In text data, for instance, tokens often correspond to single words or subwords. These tokens are then often represented in one-hot encoding. Research may eventually show that hierarchical tokenization, either trained, guessed, or otherwise constructed, could minimize token use. Use of [bloom filters](https://arxiv.org/pdf/2002.04723.pdf) tokenization 
+Tokenization is the process of splitting data into these individual units. The choice of a token largely depends on the data type and the expected outcome of the AI. In text data, for instance, tokens often correspond to single words or subwords. These tokens are then often represented in one-hot encoding. Research may eventually show that [hierarchical tokenization](#heirarchichal-tokenization), either trained, guessed, or otherwise constructed, could minimize token use. 
+
+### Heirarchichal Tokenization
+!!! code "[Floret Vectors](https://explosion.ai/blog/floret-vectors)"
 
 ??? tip "[Superbloom: Bloom filter meets Transformer](https://arxiv.org/pdf/2002.04723.pdf)"
 
