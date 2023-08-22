@@ -13,8 +13,7 @@ As would be done for other AI-enabled products, you will need to have in mind th
 3. [Compute needed](#compute-needs) to enable service
 4. [Budget available](#budget-available) the compute
 5. [Compute back end](#compute-back-end) service or framework that will work with the budget
-6. [Visualization needs](#visualization-needs) of the customer in the 
-7. [Front End](#front-ends) that provides the appropriate visualization
+7. [Front End](./front_end) that provides the appropriate visualization
 
 Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves some form of a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
 
@@ -69,12 +68,11 @@ Part of determining your back-end will involve selecting the [frameworks and too
 
 !!! website "[Railway.app](https://railway.app/about)
 
+### Front end
 
-## Additional information
+At the end of a model that is ready to be deployed, you'll need to get the results to the end-user in a useful manner. Look into the discussion on [front ends](./front_end.md) for some quality solutions and best practices to for your model output.
 
-### Tutorials
-
-### Overview Lit
+### Overview Literature
 
 - [Neptune-nlp-models-infrastructure](https://neptune.ai/blog/nlp-models-infrastructure-cost-optimization#:~:text=Use%20a%20lightweight%20deployment%20framework,serve%20predictions%20over%20a%20network.)
 
