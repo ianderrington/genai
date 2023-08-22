@@ -1,4 +1,4 @@
-The deployment of models enables callers, people or other software, to use them. While deployment may initially consist of only 'making a model available for calling'. 
+The deployment of models enables callers, people, or other software, to use them. While deployment may initially consist of only 'making a model available for calling'. 
 
 Because the model may be one limiting- consider the deployment of the model to be separate from the deployment of the model's encapsulating project, though they are directly connected.  
 
@@ -6,7 +6,7 @@ There are many component touchpoints along the way, and more so for customers th
 
 Quickly, models of the desired specs must be stored in a file and then loaded for serving. Serving as user inputs that are routed to the served model, optionally batched to improve average request latency, and outputs returned routed appropriately to users. 
 
-As would be done for other AI-enalbed products, you will need to have in mind the following
+As would be done for other AI-enabled products, you will need to have in mind the following
 
 1. [Caller needs](#caller-needs) (customer requirements)
 2. [Servable model](#servable-model) to appropriately service customer and environmental requirements.
@@ -16,7 +16,7 @@ As would be done for other AI-enalbed products, you will need to have in mind th
 6. [Visualization needs](#visualization-needs) of the customer in the 
 7. [Front End](#front-ends) that provides the appropriate visualization
 
-Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business#:~:text=on%20Investment)%20ROI-,What%20is%20a%20Data%20Flywheel%3F,where%20it%20becomes%20self%2Dsufficient.) (which it should!).
+Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves some form of a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
 
 ###  Caller needs
 
@@ -26,7 +26,7 @@ What the caller requires will depend on the target audience your offering is pro
 
 The models must be sufficient to provide the content that the model have a sufficiently reasonable latency that it can enable the throughput requirements of your model. 
 
-To enable an properly servable model, it may likely be required to [optimize](./model_serving_optimization.md) the serving of your models.
+To enable a properly servable model, it may likely be required to [optimize](./model_serving_optimization.md) the serving of your models.
 
 ### Compute needs
 
