@@ -64,3 +64,20 @@ There is so much quality material, it would be valuable for your time to check s
 - [Large Language Models Explained](https://www.understandingai.org/p/large-language-models-explained-with)
 
 [a^1]: This is presently highly [transformer-based large-language models](models/classes/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](models/classes/index.md)
+
+
+
+Generative AI is a subset of machine learning that aim to creates new data samples or information based on an input. This technology has gained significant attention recently because they have been able to produce produce high-quality, realistic data across various domains, from images and videos to text and audio.
+
+!!! important "[tl;dr](#tldr)"
+    - Evaluate your [**application**](./overview/applications.md) and think of the [**challenges**](./overview/challenges.md) associated with it
+    - Understand the [**data**](./data/index.md) and collect data that you need.
+    - [**Understand**](models/index.md) and [**build**](../Engineering/models.md) your model
+    - [**Deploy**](../Engineering/model_deployment.md) your model
+    - [**Manage**](../Managing/index.md) your model
+
+!!! tip "A little more advanced"
+    - [Use Agents]/agents/index.md) for increasingly powerful applications
+    - Optimize your model [performance](models/optimizing_hyper_parameters.md) and [serving](models/call_optimization.md)
+
+In this section, we will focus on 'Understanding' the various components of GenAI, [data](./data/index.md), [models](./models/index.md) and [agents](./agents/index.md) including methods and models that are initial or under development. While there will be some directly useful examples, we suggest you explore the [Engineering](../Engineering/index.md) section for practical implementations, methods, frameworks and tools to enable your GenAI application.  

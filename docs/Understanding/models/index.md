@@ -4,7 +4,7 @@ Here we will discuss the models essential components of Gen()AI. Please see the 
 
     - Understand [self-supervised learning](#self-supervised-learning)
     - Learn about [models](./models.md)
-    - Work on your [prompting](./prompt_enineering/prompting.md)
+    - Work on your [prompting](./prompt_engineering/prompting.md)
     - Move on to learn about [agents](../agents/index.md)
 
 ## Background 
