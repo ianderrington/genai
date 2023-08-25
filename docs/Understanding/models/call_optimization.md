@@ -6,9 +6,18 @@ Time is money and the ability to quickly allow your GenAI to create high perform
 
 ## Pruning
 
-## Knowledge distillation
-
-## Quantization
+Eliminate weights that do not produce consistently valuable outputs. 
 
 ## Low Rank Factorization 
+
+Partition the model into smaller models 
+
+## Knowledge distillation
+
+Train a new smaller model using output of bigger models.
+
+## Quantization
+Reduce the precision of the models from fp32 to fp16, int8 and even binary! 
+
+
 
