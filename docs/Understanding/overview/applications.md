@@ -54,6 +54,9 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 - [Ontology mapping](https://medium.com/@peter.lawrence_47665/encouraging-results-for-knowledge-graph-extraction-by-llm-ontology-prompting-60a7e5dcaf0a)
 
+??? tip "[Unifying Large Language Models and Knowledge Graphs: A Roadmap](https://arxiv.org/pdf/2306.08302.pdf)
+    <img width="570" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/63d90af4-6475-4622-9da9-ec90c979d745">
+
 ### Language translation
 Generative AI is inceasingly good at translating between domains. 
 
