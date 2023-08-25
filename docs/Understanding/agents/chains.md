@@ -228,4 +228,8 @@ Breaking up the topic by considering different personas, within the _same_ model
 ??? code "[Outlines](https://github.com/normal-computing/outlines) guides the model generation of next-token logits to guide the generation corresponding to regex / json pydantic schema. compatible with all models."
     Also provides a way to functionalize templates to separate prompt logic.
 
+### Other
+
+??? tip [Teach LLMs to Personalize – An Approach inspired by Writing Education](https://arxiv.org/pdf/2308.07968.pdf)
+    <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2638d727-8fbd-4fc7-84a0-ae2bc0e8b2ab">
 
