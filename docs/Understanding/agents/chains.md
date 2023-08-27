@@ -1,39 +1,10 @@
-How are you
-## Chains
+Language models produce outputs based on their model and input prompts. Chains allow for richer and more valuable outputs by connecting them with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md). Chains can be used to build more complex and integrated systems to enable higher-quality reasoning and results.
 
-Chains can be considered linked generative interactions where information can be processed with interpreters, tools, or other agents/GenAIs.
-Done well, they can be built up to form reasoning systems that can enable more successful reasoning or task completion. 
-
-These can enable passing concepts or data and re-introducing them directly throughout the database. 
-
+Because of their nature, chains can be constructed in a more [basic](#basic-chains) linear fashion, as in the case of the LLM-enabled chats. They can also be constructed more generally with parallel GenAI calls, resulting in tree and graph-like chains that have been shown to increase performance further. 
 
 ## Basic Chains
-'Chains start with an input that may first be analyzed with another algorithm, such as by splitting or substituting an HTML link for a token representing a variable. This output may then be directed to part of a template. The prompt-template. The prompt templates then fill in the information. This information is then passed to the LLM. Then the LLM generates the output. This output may then again be processed to re-introduce extracted information removed from the original prompt call (like HTML), to use the output to affect the next actions to be taken, such as printing the output for a person, calling programmatic functions (tools) or sharing with specific downstream chains (routing).
+Chains start with an input that may first be analyzed with another algorithm, traditional or GenaI-enabled, to parse the information in an effective manner. This output may then be directed to part of a template. The prompt-template. The prompt templates then fill in the information. This information is then passed to the LLM. Then the LLM generates the output. This output may then again be processed to re-introduce extracted information removed from the original prompt call (like HTML), to use the output to affect the next actions to be taken, such as printing the output for a person, calling programmatic functions (tools) or sharing with specific downstream chains (routing).
 
-
-### Examples
-
-TODO
-
-- Basic Chain (Chat) 
-  - With human interaction
-  - With prompt structuring. 
-
-- Routing Chain
-
-Chain with memory storage and retrieval
-Chain with memory retrieval 
-Multi-model chains.
-
-(Other chains from lang-chain)
-
-
-
-## Resources
-
-- [Chain of thought hub](https://github.com/FranxYao/chain-of-thought-hub)
-
-## Concepts
 
 ### Thought Systems
 Thought systems are chain patterns used by single agents and [systems](./systems.md) to enable more robust responses. 
@@ -112,7 +83,6 @@ Here are some known thought structures that are improving agentic output.
 
 ??? tip "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)" 
     [Github](https://github.com/jieyilong/tree-of-thought-puzzle-solver)
-
 
 
 ??? tip "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf) A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage."  
@@ -213,8 +183,7 @@ Breaking up the topic by considering different personas, within the _same_ model
         
         '''
     ```
-
-
+    
 #### Constrained
 
 
@@ -233,3 +202,7 @@ Breaking up the topic by considering different personas, within the _same_ model
 ??? tip [Teach LLMs to Personalize – An Approach inspired by Writing Education](https://arxiv.org/pdf/2308.07968.pdf)
     <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2638d727-8fbd-4fc7-84a0-ae2bc0e8b2ab">
 
+
+## Resources
+
+- [Chain of thought hub](https://github.com/FranxYao/chain-of-thought-hub)
