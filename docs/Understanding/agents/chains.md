@@ -35,11 +35,11 @@ Multi-model chains.
 
 ## Concepts
 
-### Thought Structures
-Thought structures are chain patterns used by singular (or even multiple agents in [systems](./systems.md) that enable more robust responses.  They can be executed automatically with the given frameworks and sometimes done manually in a chat setting. 
+### Thought Systems
+Thought systems are chain patterns used by single agents and [systems](./systems.md) to enable more robust responses. 
+They can be executed programatically given frameworks or sometimes done manually in a chat setting. 
 
 Here are some known thought structures that are improving agentic output.
-
 
 
 
