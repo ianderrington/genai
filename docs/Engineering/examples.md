@@ -1,4 +1,7 @@
+??? tip "[FastWhisper](https://github.com/FamousDirector/FastWhisper) This is an optimized implementation of OpenAI's Whisper" 
 
+    Uses a greedy decode for multilingual transcription. It supports all sizes of the Whisper model (from tiny to large).
+    
 
 ??? tip "[humanscript](https://github.com/lukechilds/humanscript) A script interpreter that infers the meaning behind commands written in natural language using large language models. Human writeable commands are translated into code that is then executed on the fly."
     
