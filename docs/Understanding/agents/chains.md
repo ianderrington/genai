@@ -190,17 +190,19 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
     ```
     
 ??? tip [Teach LLMs to Personalize – An Approach inspired by Writing Education](https://arxiv.org/pdf/2308.07968.pdf)
+
     <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2638d727-8fbd-4fc7-84a0-ae2bc0e8b2ab">
     
 ### Constraining outputs 
 
-
 ??? tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031) A 'logical guide' tool that an LLM can use." 
+
     It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
     <img width="956" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bf581eb0-96b1-4175-97d0-98f081a03438">
     Possible open source implementation [here](https://github.com/kyegomez/LOGICGUIDE/tree/main)
 
-??? code "[Outlines](https://github.com/normal-computing/outlines) guides the model generation of next-token logits to guide the generation corresponding to regex / json pydantic schema. compatible with all models."
+??? code "[Outlines](https://github.com/normal-computing/outlines) guides the model generation of next-token logits to guide the generation corresponding to regex / JSON and pydantic schema. compatible with all models."
+
     Also provides a way to functionalize templates to separate prompt logic.
 
 
