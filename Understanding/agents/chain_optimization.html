@@ -12,27 +12,27 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Engineering/interpreters.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/agents/chain_optimization.html">
       
       
-        <link rel="prev" href="implementations.html">
+        <link rel="prev" href="agents.html">
       
       
-        <link rel="next" href="../Using/index.html">
+        <link rel="next" href="chains.html">
       
-      <link rel="icon" href="../assets/genai_logo_edited.svg">
+      <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Interpreters - Gen()AI</title>
+        <title>Chain optimization - Gen()AI</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -67,7 +67,7 @@
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -78,7 +78,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -99,11 +99,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#tools" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -116,7 +111,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../.." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -135,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Interpreters
+              Chain optimization
             
           </span>
         </div>
@@ -233,29 +228,13 @@
         
   
   
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Understanding/overview/index.html" class="md-tabs__link">
-        Understanding
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
     
   
 
 
   <li class="md-tabs__item">
-    <a href="index.html" class="md-tabs__link md-tabs__link--active">
-      Engineering
+    <a href="../index.html" class="md-tabs__link md-tabs__link--active">
+      Understanding and building
     </a>
   </li>
 
@@ -266,7 +245,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../Using/index.html" class="md-tabs__link">
+    <a href="../../Using/index.html" class="md-tabs__link">
       Using
     </a>
   </li>
@@ -278,7 +257,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../Managing/managing.html" class="md-tabs__link">
+    <a href="../../Managing/managing.html" class="md-tabs__link">
       Managing
     </a>
   </li>
@@ -311,7 +290,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../.." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -340,16 +319,28 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
       
       
+        
+          
+        
+          
+            
+          
+        
+          
+            
+          
         
           
             
@@ -374,7 +365,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../Understanding/overview/index.html">Understanding</a>
+          <a href="../index.html">Understanding and building</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -382,13 +373,85 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
-          Understanding
+          Understanding and building
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../overview/applications.html">Overview</a>
+          
+            <label for="__nav_1_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/challenges.html" class="md-nav__link">
+        Challenges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/extra_resources.html" class="md-nav__link">
+        Extra resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
             
           
             
@@ -423,7 +486,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../Understanding/data/index.html">Data</a>
+          <a href="../data/index.html">Data</a>
           
             <label for="__nav_1_2">
               <span class="md-nav__icon md-icon"></span>
@@ -444,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/data/selection.html" class="md-nav__link">
+      <a href="../data/selection.html" class="md-nav__link">
         Selection
       </a>
     </li>
@@ -458,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/data/tokenizing.html" class="md-nav__link">
+      <a href="../data/tokenizing.html" class="md-nav__link">
         Tokenizing
       </a>
     </li>
@@ -472,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/data/embedding.html" class="md-nav__link">
+      <a href="../data/embedding.html" class="md-nav__link">
         Embedding
       </a>
     </li>
@@ -486,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/data/privacy.html" class="md-nav__link">
+      <a href="../data/privacy.html" class="md-nav__link">
         Privacy
       </a>
     </li>
@@ -500,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/data/sources.html" class="md-nav__link">
+      <a href="../data/sources.html" class="md-nav__link">
         Sources
       </a>
     </li>
@@ -514,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/data/augmentation.html" class="md-nav__link">
+      <a href="../data/augmentation.html" class="md-nav__link">
         Augmentation
       </a>
     </li>
@@ -557,7 +620,13 @@
           
         
           
+        
+          
             
+          
+        
+          
+        
           
         
           
@@ -569,7 +638,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../Understanding/models/index.html">Models</a>
+          <a href="../models/index.html">Models</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -590,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/models.html" class="md-nav__link">
+      <a href="../models/models.html" class="md-nav__link">
         Models
       </a>
     </li>
@@ -604,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/training.html" class="md-nav__link">
+      <a href="../models/training.html" class="md-nav__link">
         Training
       </a>
     </li>
@@ -617,54 +686,24 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_3" >
-      
-      
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../Understanding/models/prompt_engineering/prompt_injections.html">Prompt engineering</a>
-          
-            <label for="__nav_1_3_3">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_1_3_3">
-          <span class="md-nav__icon md-icon"></span>
-          Prompt engineering
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../Understanding/models/prompt_engineering/prompting.html" class="md-nav__link">
-        Prompting
+      <a href="../models/optimizing_hyper_parameters.html" class="md-nav__link">
+        Optimizing hyper parameters
       </a>
     </li>
   
 
             
           
-        </ul>
-      </nav>
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/call_optimization.html" class="md-nav__link">
+        Call optimization
+      </a>
     </li>
   
 
@@ -676,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/distillation.html" class="md-nav__link">
+      <a href="../models/distillation.html" class="md-nav__link">
         Distillation
       </a>
     </li>
@@ -690,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/evaluation.html" class="md-nav__link">
+      <a href="../models/evaluation.html" class="md-nav__link">
         Evaluation
       </a>
     </li>
@@ -704,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/alignment.html" class="md-nav__link">
+      <a href="../models/alignment.html" class="md-nav__link">
         Alignment
       </a>
     </li>
@@ -723,7 +762,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_8" >
       
       
         
@@ -742,16 +781,16 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../Understanding/models/classes/index.html">Classes</a>
+          <a href="../models/classes/index.html">Classes</a>
           
-            <label for="__nav_1_3_7">
+            <label for="__nav_1_3_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_1_3_7">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3_8">
           <span class="md-nav__icon md-icon"></span>
           Classes
         </label>
@@ -763,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/classes/components.html" class="md-nav__link">
+      <a href="../models/classes/components.html" class="md-nav__link">
         Components
       </a>
     </li>
@@ -777,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/classes/transformers.html" class="md-nav__link">
+      <a href="../models/classes/transformers.html" class="md-nav__link">
         Transformers
       </a>
     </li>
@@ -791,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/classes/diffusers.html" class="md-nav__link">
+      <a href="../models/classes/diffusers.html" class="md-nav__link">
         Diffusers
       </a>
     </li>
@@ -805,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/classes/gans.html" class="md-nav__link">
+      <a href="../models/classes/gans.html" class="md-nav__link">
         Gans
       </a>
     </li>
@@ -819,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/classes/reinforcement_learning.html" class="md-nav__link">
+      <a href="../models/classes/reinforcement_learning.html" class="md-nav__link">
         Reinforcement learning
       </a>
     </li>
@@ -840,8 +879,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/rag.html" class="md-nav__link">
-        Retrieval-Augmented Generation
+      <a href="../models/evaluating_and_comparing.html" class="md-nav__link">
+        Evaluating and comparing
       </a>
     </li>
   
@@ -854,7 +893,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/models/reinforcement_feedback.html" class="md-nav__link">
+      <a href="../models/finetuning.html" class="md-nav__link">
+        Finetuning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/pre_trained_models.html" class="md-nav__link">
+        Pre trained models
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/reinforcement_feedback.html" class="md-nav__link">
         Reinforcement feedback
       </a>
     </li>
@@ -886,6 +953,62 @@
         
           
         
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../prompting/index.html">Prompting</a>
+          
+            <label for="__nav_1_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Prompting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompting/prompt_injections.html" class="md-nav__link">
+        Prompt injections
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+      
+      
+        
           
         
           
@@ -903,16 +1026,16 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../Understanding/agents/index.html">Agents</a>
+          <a href="index.html">Agents</a>
           
-            <label for="__nav_1_4">
+            <label for="__nav_1_5">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_1_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
           Agents
         </label>
@@ -924,198 +1047,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding/agents/examples.html" class="md-nav__link">
+      <a href="examples.html" class="md-nav__link">
         Examples
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Understanding/agents/memory.html" class="md-nav__link">
-        Memory
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Understanding/agents/chains.html" class="md-nav__link">
-        Chains
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Understanding/agents/evaluation.html" class="md-nav__link">
-        Evaluation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Understanding/agents/environments.html" class="md-nav__link">
-        Environments
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Understanding/agents/systems.html" class="md-nav__link">
-        Systems
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Understanding/agents/frameworks.html" class="md-nav__link">
-        Frameworks
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Understanding/studies/studies.html" class="md-nav__link">
-        Studies
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="index.html">Engineering</a>
-          
-            <label for="__nav_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Engineering
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="models.html" class="md-nav__link">
-        Models
       </a>
     </li>
   
@@ -1142,8 +1075,8 @@
   
   
     <li class="md-nav__item">
-      <a href="comparison_and_evaluation.html" class="md-nav__link">
-        Comparison and evaluation
+      <a href="chains.html" class="md-nav__link">
+        Chains
       </a>
     </li>
   
@@ -1156,8 +1089,8 @@
   
   
     <li class="md-nav__item">
-      <a href="hyper_parameter_optimization.html" class="md-nav__link">
-        Hyper parameter optimization
+      <a href="evaluation.html" class="md-nav__link">
+        Evaluation
       </a>
     </li>
   
@@ -1170,8 +1103,8 @@
   
   
     <li class="md-nav__item">
-      <a href="model_deployment.html" class="md-nav__link">
-        Model deployment
+      <a href="environments.html" class="md-nav__link">
+        Environments
       </a>
     </li>
   
@@ -1184,9 +1117,16 @@
   
   
     <li class="md-nav__item">
-      <a href="model_serving_optimization.html" class="md-nav__link">
-        Model serving optimization
+      <a href="systems.html" class="md-nav__link">
+        Systems
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1197,14 +1137,43 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="frameworks_and_tools.html" class="md-nav__link">
-        Frameworks and tools
-      </a>
-    </li>
-  
-
-            
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../deploying/index.html">Deploying</a>
+          
+            <label for="__nav_1_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Deploying
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -1212,35 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="actions_and_tools.html" class="md-nav__link">
-        Actions and tools
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ai_in_general.html" class="md-nav__link">
-        Ai in general
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="computation.html" class="md-nav__link">
+      <a href="../deploying/computation.html" class="md-nav__link">
         Computation
       </a>
     </li>
@@ -1254,8 +1195,8 @@
   
   
     <li class="md-nav__item">
-      <a href="examples.html" class="md-nav__link">
-        Examples
+      <a href="../deploying/engineering_index.html" class="md-nav__link">
+        Engineering index
       </a>
     </li>
   
@@ -1268,8 +1209,8 @@
   
   
     <li class="md-nav__item">
-      <a href="implementations.html" class="md-nav__link">
-        Implementations
+      <a href="../deploying/frameworks_and_tools.html" class="md-nav__link">
+        Frameworks and tools
       </a>
     </li>
   
@@ -1280,48 +1221,371 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Interpreters
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="interpreters.html" class="md-nav__link md-nav__link--active">
-        Interpreters
+    <li class="md-nav__item">
+      <a href="../deploying/front_end.html" class="md-nav__link">
+        Front end
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+      
       
         
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../examples/index.html">Examples</a>
+          
+            <label for="__nav_1_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/by_domain.html" class="md-nav__link">
+        By domain
+      </a>
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
+    <li class="md-nav__item">
+      <a href="../studies/studies.html" class="md-nav__link">
+        Studies
+      </a>
+    </li>
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
       
-        <li class="md-nav__item">
-  <a href="#tools" class="md-nav__link">
-    Tools
-  </a>
-  
-</li>
       
-    </ul>
-  
-</nav>
       
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../Using/index.html">Using</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Using
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/by_application.html" class="md-nav__link">
+        By application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/commercial_products.html" class="md-nav__link">
+        Platforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/governing.html" class="md-nav__link">
+        Governing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/marking_and_detecting.html" class="md-nav__link">
+        Marking and detecting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/ml_ops.html" class="md-nav__link">
+        Ml ops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/observability.html" class="md-nav__link">
+        Observability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/regulation.html" class="md-nav__link">
+        Regulation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/web_plugins.html" class="md-nav__link">
+        Web plugins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../Using/ethically/index.html">Ethically</a>
+          
+            <label for="__nav_2_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Ethically
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/ethically/alignment_and_exential_concerns.html" class="md-nav__link">
+        Alignment and exential concerns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/ethically/dual_use_concerns.html" class="md-nav__link">
+        Dual use concerns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/ethically/fairness.html" class="md-nav__link">
+        Fairness
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/ethically/transparency.html" class="md-nav__link">
+        Transparency
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1356,26 +1620,12 @@
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-            
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../Using/index.html">Using</a>
+          <a href="../../Managing/managing.html">Managing</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1385,273 +1635,6 @@
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Using
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/by_application.html" class="md-nav__link">
-        By application
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/commercial_products.html" class="md-nav__link">
-        Platforms
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/governing.html" class="md-nav__link">
-        Governing
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/marking_and_detecting.html" class="md-nav__link">
-        Marking and detecting
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/ml_ops.html" class="md-nav__link">
-        Ml ops
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/observability.html" class="md-nav__link">
-        Observability
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/regulation.html" class="md-nav__link">
-        Regulation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/web_plugins.html" class="md-nav__link">
-        Web plugins
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../Using/ethically/index.html">Ethically</a>
-          
-            <label for="__nav_3_9">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9">
-          <span class="md-nav__icon md-icon"></span>
-          Ethically
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/ethically/alignment_and_exential_concerns.html" class="md-nav__link">
-        Alignment and exential concerns
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/ethically/dual_use_concerns.html" class="md-nav__link">
-        Dual use concerns
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/ethically/fairness.html" class="md-nav__link">
-        Fairness
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using/ethically/transparency.html" class="md-nav__link">
-        Transparency
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../Managing/managing.html">Managing</a>
-          
-            <label for="__nav_4">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Managing
         </label>
@@ -1663,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Managing/brainstorming.html" class="md-nav__link">
+      <a href="../../Managing/brainstorming.html" class="md-nav__link">
         Brainstorming
       </a>
     </li>
@@ -1677,7 +1660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Managing/build_plan.html" class="md-nav__link">
+      <a href="../../Managing/build_plan.html" class="md-nav__link">
         Build plan
       </a>
     </li>
@@ -1691,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Managing/contributing.html" class="md-nav__link">
+      <a href="../../Managing/contributing.html" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -1723,21 +1706,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tools" class="md-nav__link">
-    Tools
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1754,27 +1722,15 @@
   
 
 
-  <h1>Interpreters</h1>
+  <h1>Chain optimization</h1>
 
-<p>Interpreters facilitate model computation by parsing, formatting, or otherwise preparing the data for effective use. They can also be used to interpret output. </p>
-<p>Such efforts can be used to reduce input complexity, token-count, to detect potentially unreasonable inputs or outputs. These interpreters <em>may</em> be agents or models themselves, thought that is not required. </p>
-<div class="admonition example">
-<p class="admonition-title">Link Routing</p>
-<p>A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output. </p>
-</div>
-<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
-<p>Please see the <a href="frameworks_and_tools.html">frameworks and tools</a> for a more comprehensive set, but below are a few examples.</p>
-<ul>
-<li>
-<p><a href="https://shreyar.github.io/guardrails/">Guardrails</a> To help format output and prevent improper prompts.</p>
-</li>
-<li>
-<p><a href="https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb">Semantic Kernel</a>, <a href="https://github.com/microsoft/semantic-kernel/tree/main">Github</a></p>
-</li>
-<li>
-<p>️<a href="https://github.com/microsoft/guidance/">Guidance</a> Interleaving generation, prompting and logical control to single  continuous flow.</p>
-</li>
-</ul>
+<p>HOW TO OPTIMIZE PARAMETERS. </p>
+<p>Problems such as Hallucinations can be mitigated through downstream methods of process. </p>
+<details class="tip">
+<summary><a href="https://arxiv.org/abs/2307.03987">A stitch in time saves Nine</a></summary>
+<p>A process to mitigate model hallucination using RAG. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="602" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30"></a></p>
+</details>
 
 
   
@@ -1944,10 +1900,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

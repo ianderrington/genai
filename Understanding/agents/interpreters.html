@@ -12,27 +12,27 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/models/classes/transformers.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/agents/interpreters.html">
       
       
-        <link rel="prev" href="components.html">
+        <link rel="prev" href="examples.html">
       
       
-        <link rel="next" href="diffusers.html">
+        <link rel="next" href="memory.html">
       
-      <link rel="icon" href="../../../assets/genai_logo_edited.svg">
+      <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Transformers - Gen()AI</title>
+        <title>Interpreters - Gen()AI</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -67,7 +67,7 @@
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -78,7 +78,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#components" class="md-skip">
+        <a href="#tools" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../.." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Transformers
+              Interpreters
             
           </span>
         </div>
@@ -238,7 +238,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../index.html" class="md-tabs__link md-tabs__link--active">
+    <a href="../index.html" class="md-tabs__link md-tabs__link--active">
       Understanding and building
     </a>
   </li>
@@ -250,7 +250,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../Using/index.html" class="md-tabs__link">
+    <a href="../../Using/index.html" class="md-tabs__link">
       Using
     </a>
   </li>
@@ -262,7 +262,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../Managing/managing.html" class="md-tabs__link">
+    <a href="../../Managing/managing.html" class="md-tabs__link">
       Managing
     </a>
   </li>
@@ -295,7 +295,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../.." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -370,7 +370,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../index.html">Understanding and building</a>
+          <a href="../index.html">Understanding and building</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -409,7 +409,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../overview/applications.html">Overview</a>
+          <a href="../overview/applications.html">Overview</a>
           
             <label for="__nav_1_1">
               <span class="md-nav__icon md-icon"></span>
@@ -430,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/challenges.html" class="md-nav__link">
+      <a href="../overview/challenges.html" class="md-nav__link">
         Challenges
       </a>
     </li>
@@ -444,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/extra_resources.html" class="md-nav__link">
+      <a href="../overview/extra_resources.html" class="md-nav__link">
         Extra resources
       </a>
     </li>
@@ -491,7 +491,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../data/index.html">Data</a>
+          <a href="../data/index.html">Data</a>
           
             <label for="__nav_1_2">
               <span class="md-nav__icon md-icon"></span>
@@ -512,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/selection.html" class="md-nav__link">
+      <a href="../data/selection.html" class="md-nav__link">
         Selection
       </a>
     </li>
@@ -526,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/tokenizing.html" class="md-nav__link">
+      <a href="../data/tokenizing.html" class="md-nav__link">
         Tokenizing
       </a>
     </li>
@@ -540,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/embedding.html" class="md-nav__link">
+      <a href="../data/embedding.html" class="md-nav__link">
         Embedding
       </a>
     </li>
@@ -554,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/privacy.html" class="md-nav__link">
+      <a href="../data/privacy.html" class="md-nav__link">
         Privacy
       </a>
     </li>
@@ -568,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/sources.html" class="md-nav__link">
+      <a href="../data/sources.html" class="md-nav__link">
         Sources
       </a>
     </li>
@@ -582,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/augmentation.html" class="md-nav__link">
+      <a href="../data/augmentation.html" class="md-nav__link">
         Augmentation
       </a>
     </li>
@@ -601,16 +601,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
       
       
         
@@ -645,7 +643,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../index.html">Models</a>
+          <a href="../models/index.html">Models</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -653,7 +651,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           Models
@@ -666,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models.html" class="md-nav__link">
+      <a href="../models/models.html" class="md-nav__link">
         Models
       </a>
     </li>
@@ -680,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../training.html" class="md-nav__link">
+      <a href="../models/training.html" class="md-nav__link">
         Training
       </a>
     </li>
@@ -694,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../optimizing_hyper_parameters.html" class="md-nav__link">
+      <a href="../models/optimizing_hyper_parameters.html" class="md-nav__link">
         Optimizing hyper parameters
       </a>
     </li>
@@ -708,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../call_optimization.html" class="md-nav__link">
+      <a href="../models/call_optimization.html" class="md-nav__link">
         Call optimization
       </a>
     </li>
@@ -722,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../distillation.html" class="md-nav__link">
+      <a href="../models/distillation.html" class="md-nav__link">
         Distillation
       </a>
     </li>
@@ -736,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../evaluation.html" class="md-nav__link">
+      <a href="../models/evaluation.html" class="md-nav__link">
         Evaluation
       </a>
     </li>
@@ -750,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../alignment.html" class="md-nav__link">
+      <a href="../models/alignment.html" class="md-nav__link">
         Alignment
       </a>
     </li>
@@ -762,16 +760,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_8" >
       
       
         
@@ -790,7 +786,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="index.html">Classes</a>
+          <a href="../models/classes/index.html">Classes</a>
           
             <label for="__nav_1_3_8">
               <span class="md-nav__icon md-icon"></span>
@@ -798,7 +794,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_8_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3_8">
           <span class="md-nav__icon md-icon"></span>
           Classes
@@ -811,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="components.html" class="md-nav__link">
+      <a href="../models/classes/components.html" class="md-nav__link">
         Components
       </a>
     </li>
@@ -823,244 +819,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Transformers
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="transformers.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../models/classes/transformers.html" class="md-nav__link">
         Transformers
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    Components
-  </a>
-  
-    <nav class="md-nav" aria-label="Components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#attention-models" class="md-nav__link">
-    Attention Models
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reviews" class="md-nav__link">
-    Reviews
-  </a>
-  
-    <nav class="md-nav" aria-label="Reviews">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#softmax" class="md-nav__link">
-    Softmax?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpt" class="md-nav__link">
-    GPT
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-references-and-research" class="md-nav__link">
-    Useful References and Research
-  </a>
-  
-    <nav class="md-nav" aria-label="Useful References and Research">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-introductions" class="md-nav__link">
-    General Introductions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#seminal-documents" class="md-nav__link">
-    Seminal documents
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#positional-encoding" class="md-nav__link">
-    Positional Encoding
-  </a>
-  
-    <nav class="md-nav" aria-label="Positional Encoding">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#modifications" class="md-nav__link">
-    Modifications
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#improvements-optimizations-and-variations" class="md-nav__link">
-    Improvements, Optimizations, and Variations.
-  </a>
-  
-    <nav class="md-nav" aria-label="Improvements, Optimizations, and Variations.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#computation-reduction" class="md-nav__link">
-    Computation Reduction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fine-tuning" class="md-nav__link">
-    Fine Tuning
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-modalities" class="md-nav__link">
-    Other modalities
-  </a>
-  
-    <nav class="md-nav" aria-label="Other modalities">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vision" class="md-nav__link">
-    Vision
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#graphs" class="md-nav__link">
-    Graphs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#training-variations" class="md-nav__link">
-    Training variations
-  </a>
-  
-    <nav class="md-nav" aria-label="Training variations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fairness-enablement" class="md-nav__link">
-    Fairness Enablement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-knowledge-links" class="md-nav__link">
-    Using Knowledge Links
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multimodal" class="md-nav__link">
-    Multimodal
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#abstractions" class="md-nav__link">
-    Abstractions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    Code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1072,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="diffusers.html" class="md-nav__link">
+      <a href="../models/classes/diffusers.html" class="md-nav__link">
         Diffusers
       </a>
     </li>
@@ -1086,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gans.html" class="md-nav__link">
+      <a href="../models/classes/gans.html" class="md-nav__link">
         Gans
       </a>
     </li>
@@ -1100,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reinforcement_learning.html" class="md-nav__link">
+      <a href="../models/classes/reinforcement_learning.html" class="md-nav__link">
         Reinforcement learning
       </a>
     </li>
@@ -1121,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../evaluating_and_comparing.html" class="md-nav__link">
+      <a href="../models/evaluating_and_comparing.html" class="md-nav__link">
         Evaluating and comparing
       </a>
     </li>
@@ -1135,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../finetuning.html" class="md-nav__link">
+      <a href="../models/finetuning.html" class="md-nav__link">
         Finetuning
       </a>
     </li>
@@ -1149,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pre_trained_models.html" class="md-nav__link">
+      <a href="../models/pre_trained_models.html" class="md-nav__link">
         Pre trained models
       </a>
     </li>
@@ -1163,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reinforcement_feedback.html" class="md-nav__link">
+      <a href="../models/reinforcement_feedback.html" class="md-nav__link">
         Reinforcement feedback
       </a>
     </li>
@@ -1200,7 +963,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../prompting/index.html">Prompting</a>
+          <a href="../prompting/index.html">Prompting</a>
           
             <label for="__nav_1_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1221,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prompting/prompt_injections.html" class="md-nav__link">
+      <a href="../prompting/prompt_injections.html" class="md-nav__link">
         Prompt injections
       </a>
     </li>
@@ -1268,7 +1031,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../agents/index.html">Agents</a>
+          <a href="index.html">Agents</a>
           
             <label for="__nav_1_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1289,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/examples.html" class="md-nav__link">
+      <a href="examples.html" class="md-nav__link">
         Examples
       </a>
     </li>
@@ -1303,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/memory.html" class="md-nav__link">
+      <a href="memory.html" class="md-nav__link">
         Memory
       </a>
     </li>
@@ -1317,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/chains.html" class="md-nav__link">
+      <a href="chains.html" class="md-nav__link">
         Chains
       </a>
     </li>
@@ -1331,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/evaluation.html" class="md-nav__link">
+      <a href="evaluation.html" class="md-nav__link">
         Evaluation
       </a>
     </li>
@@ -1345,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/environments.html" class="md-nav__link">
+      <a href="environments.html" class="md-nav__link">
         Environments
       </a>
     </li>
@@ -1359,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/systems.html" class="md-nav__link">
+      <a href="systems.html" class="md-nav__link">
         Systems
       </a>
     </li>
@@ -1402,7 +1165,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../deploying/index.html">Deploying</a>
+          <a href="../deploying/index.html">Deploying</a>
           
             <label for="__nav_1_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1423,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploying/computation.html" class="md-nav__link">
+      <a href="../deploying/computation.html" class="md-nav__link">
         Computation
       </a>
     </li>
@@ -1437,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploying/engineering_index.html" class="md-nav__link">
+      <a href="../deploying/engineering_index.html" class="md-nav__link">
         Engineering index
       </a>
     </li>
@@ -1451,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploying/frameworks_and_tools.html" class="md-nav__link">
+      <a href="../deploying/frameworks_and_tools.html" class="md-nav__link">
         Frameworks and tools
       </a>
     </li>
@@ -1465,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploying/front_end.html" class="md-nav__link">
+      <a href="../deploying/front_end.html" class="md-nav__link">
         Front end
       </a>
     </li>
@@ -1502,7 +1265,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../examples/index.html">Examples</a>
+          <a href="../examples/index.html">Examples</a>
           
             <label for="__nav_1_7">
               <span class="md-nav__icon md-icon"></span>
@@ -1523,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/by_domain.html" class="md-nav__link">
+      <a href="../examples/by_domain.html" class="md-nav__link">
         By domain
       </a>
     </li>
@@ -1544,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../studies/studies.html" class="md-nav__link">
+      <a href="../studies/studies.html" class="md-nav__link">
         Studies
       </a>
     </li>
@@ -1600,7 +1363,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Using/index.html">Using</a>
+          <a href="../../Using/index.html">Using</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1621,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/by_application.html" class="md-nav__link">
+      <a href="../../Using/by_application.html" class="md-nav__link">
         By application
       </a>
     </li>
@@ -1635,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/commercial_products.html" class="md-nav__link">
+      <a href="../../Using/commercial_products.html" class="md-nav__link">
         Platforms
       </a>
     </li>
@@ -1649,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/governing.html" class="md-nav__link">
+      <a href="../../Using/governing.html" class="md-nav__link">
         Governing
       </a>
     </li>
@@ -1663,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/marking_and_detecting.html" class="md-nav__link">
+      <a href="../../Using/marking_and_detecting.html" class="md-nav__link">
         Marking and detecting
       </a>
     </li>
@@ -1677,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/ml_ops.html" class="md-nav__link">
+      <a href="../../Using/ml_ops.html" class="md-nav__link">
         Ml ops
       </a>
     </li>
@@ -1691,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/observability.html" class="md-nav__link">
+      <a href="../../Using/observability.html" class="md-nav__link">
         Observability
       </a>
     </li>
@@ -1705,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/regulation.html" class="md-nav__link">
+      <a href="../../Using/regulation.html" class="md-nav__link">
         Regulation
       </a>
     </li>
@@ -1719,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/web_plugins.html" class="md-nav__link">
+      <a href="../../Using/web_plugins.html" class="md-nav__link">
         Web plugins
       </a>
     </li>
@@ -1755,7 +1518,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Using/ethically/index.html">Ethically</a>
+          <a href="../../Using/ethically/index.html">Ethically</a>
           
             <label for="__nav_2_9">
               <span class="md-nav__icon md-icon"></span>
@@ -1776,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/ethically/alignment_and_exential_concerns.html" class="md-nav__link">
+      <a href="../../Using/ethically/alignment_and_exential_concerns.html" class="md-nav__link">
         Alignment and exential concerns
       </a>
     </li>
@@ -1790,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/ethically/dual_use_concerns.html" class="md-nav__link">
+      <a href="../../Using/ethically/dual_use_concerns.html" class="md-nav__link">
         Dual use concerns
       </a>
     </li>
@@ -1804,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/ethically/fairness.html" class="md-nav__link">
+      <a href="../../Using/ethically/fairness.html" class="md-nav__link">
         Fairness
       </a>
     </li>
@@ -1818,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/ethically/transparency.html" class="md-nav__link">
+      <a href="../../Using/ethically/transparency.html" class="md-nav__link">
         Transparency
       </a>
     </li>
@@ -1867,7 +1630,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Managing/managing.html">Managing</a>
+          <a href="../../Managing/managing.html">Managing</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1888,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Managing/brainstorming.html" class="md-nav__link">
+      <a href="../../Managing/brainstorming.html" class="md-nav__link">
         Brainstorming
       </a>
     </li>
@@ -1902,7 +1665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Managing/build_plan.html" class="md-nav__link">
+      <a href="../../Managing/build_plan.html" class="md-nav__link">
         Build plan
       </a>
     </li>
@@ -1916,7 +1679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Managing/contributing.html" class="md-nav__link">
+      <a href="../../Managing/contributing.html" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -1955,204 +1718,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    Components
-  </a>
-  
-    <nav class="md-nav" aria-label="Components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#attention-models" class="md-nav__link">
-    Attention Models
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reviews" class="md-nav__link">
-    Reviews
-  </a>
-  
-    <nav class="md-nav" aria-label="Reviews">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#softmax" class="md-nav__link">
-    Softmax?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpt" class="md-nav__link">
-    GPT
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-references-and-research" class="md-nav__link">
-    Useful References and Research
-  </a>
-  
-    <nav class="md-nav" aria-label="Useful References and Research">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-introductions" class="md-nav__link">
-    General Introductions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#seminal-documents" class="md-nav__link">
-    Seminal documents
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#positional-encoding" class="md-nav__link">
-    Positional Encoding
-  </a>
-  
-    <nav class="md-nav" aria-label="Positional Encoding">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#modifications" class="md-nav__link">
-    Modifications
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#improvements-optimizations-and-variations" class="md-nav__link">
-    Improvements, Optimizations, and Variations.
-  </a>
-  
-    <nav class="md-nav" aria-label="Improvements, Optimizations, and Variations.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#computation-reduction" class="md-nav__link">
-    Computation Reduction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fine-tuning" class="md-nav__link">
-    Fine Tuning
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-modalities" class="md-nav__link">
-    Other modalities
-  </a>
-  
-    <nav class="md-nav" aria-label="Other modalities">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vision" class="md-nav__link">
-    Vision
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#graphs" class="md-nav__link">
-    Graphs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#training-variations" class="md-nav__link">
-    Training variations
-  </a>
-  
-    <nav class="md-nav" aria-label="Training variations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fairness-enablement" class="md-nav__link">
-    Fairness Enablement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-knowledge-links" class="md-nav__link">
-    Using Knowledge Links
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multimodal" class="md-nav__link">
-    Multimodal
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#abstractions" class="md-nav__link">
-    Abstractions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    Code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
+  <a href="#tools" class="md-nav__link">
+    Tools
   </a>
   
 </li>
@@ -2175,150 +1742,26 @@
   
 
 
-  <h1>Transformers</h1>
+  <h1>Interpreters</h1>
 
-<p>TODO</p>
-<h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
-<p>TODO: Describe transformers and components</p>
-<ol>
-<li>Attention: Query, Key, Vectors</li>
-<li>Positional Encoding</li>
-<li>Layer Normalization</li>
-</ol>
-<h3 id="attention-models">Attention Models<a class="headerlink" href="#attention-models" title="Permanent link">&para;</a></h3>
-<p>Layer normalization observably improves results <a href="http://proceedings.mlr.press/v119/xiong20b/xiong20b.pdf">On Layer Normalization in the Transformer Architecture</a></p>
-<h2 id="reviews">Reviews<a class="headerlink" href="#reviews" title="Permanent link">&para;</a></h2>
-<p>??? tip <a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a></p>
-<p>??? tip <a href="https://deeprevision.github.io/posts/001-transformer/">The Transformer Blueprint: A Holistic Guide to the Transformer Neural Network Architecture</a>
-    A thorough exposition of transformer technology.</p>
-<h3 id="softmax">Softmax?<a class="headerlink" href="#softmax" title="Permanent link">&para;</a></h3>
-<p>The softmax is dominantly researched activation function. There may be other activation functions that are better, such as the </p>
-<h3 id="gpt">GPT<a class="headerlink" href="#gpt" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="http://jalammar.github.io/illustrated-gpt2/">Illustrated GPT</a></li>
-<li><a href="https://jalammar.github.io/how-gpt3-works-visualizations-animations/">How GPT3 works</a>
-Excellent summary of the progress of GPT over time, revealing core components, optimizations, and essential variations to the major Foundation model architectures.</li>
-</ul>
-<h2 id="useful-references-and-research">Useful References and Research<a class="headerlink" href="#useful-references-and-research" title="Permanent link">&para;</a></h2>
-<h3 id="general-introductions">General Introductions<a class="headerlink" href="#general-introductions" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><a href="https://docs.google.com/presentation/d/1ZXFIhYczos679r70Yu8vV9uO6B1J0ztzeDxbnBxD1S0/mobilepresent?fbclid=IwAR18pR_Mf46mkZ1_E3NFOwYY2wVx0aATficgfh_GWZd29c_lWNRa4vK5zy8&amp;slide=id.g31364026ad_3_2">Transformers by Lucas Beyer (presentation)</a></p>
-</li>
-<li>
-<p><a href="https://finbarrtimbers.substack.com/p/five-years-of-progress-in-gpts?utm_source=substack&amp;utm_medium=email">Five years of progress in GPTs</a></p>
-</li>
-<li>
-<p><a href="https://towardsdatascience.com/the-transformer-architecture-of-gpt-models-b8695b48728b">The Transformer Architecture of GPT Models</a></p>
-</li>
-</ul>
-<h3 id="seminal-documents">Seminal documents<a class="headerlink" href="#seminal-documents" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><a href="https://arxiv.org/pdf/1409.0473.pdf">Neural Machine Translation by Jointly Learning to Align and Translate</a> First paper indicating the notion of 'attention' sort of mechanism.</p>
-</li>
-<li>
-<p><a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Attention Is All you Need</a> Initial paper indicating that attention is very powerful and potential replacement of LLM architectures. </p>
-</li>
-<li>
-<p><a href="https://arxiv.org/pdf/2207.09238.pdf">Formal Algorithms for Transformers in 2023</a>
-Important discussion revealing the components of Transformers.</p>
-</li>
-</ul>
-<h3 id="positional-encoding">Positional Encoding<a class="headerlink" href="#positional-encoding" title="Permanent link">&para;</a></h3>
-<p>This component helps to remove the impilcit position-independence that 'vanilla' attention methods have.  </p>
-<ul>
-<li>
-<p><a href="https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/">A Gentle Introduction to Positional Encoding in Transformer Models, pt1</a></p>
-</li>
-<li>
-<p><a href="https://arxiv.org/abs/2203.16634">Transformer Language Models without POsitional Encodings STill Learn Positional Information</a> Indications that causal LMS may derive positional awareness from more than the positional embeddings: they learn it from the causal mask. </p>
-</li>
-</ul>
-<h4 id="modifications">Modifications<a class="headerlink" href="#modifications" title="Permanent link">&para;</a></h4>
-<ul>
-<li><a href="https://aclanthology.org/2022.findings-aacl.42.pdf">A Simple yet Effective Learnable Positional Encoding Method for Improving Document Transformer Model</a> They introduce a learnable sinusoidal positional encoding feed forward network. Demonstrates significant improvements over other datasets. </li>
-</ul>
-<h2 id="improvements-optimizations-and-variations">Improvements, Optimizations, and Variations.<a class="headerlink" href="#improvements-optimizations-and-variations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><a href="https://github.com/neuro-inc/ml-recipe-hier-attention"></a></p>
-</li>
-<li>
-<p><a href="https://arxiv.or dsvg/abs/2304.11062">Scaling Transformer to 1M tokens and beyond with RMT</a> <a href="https://github.com/booydar/t5-experiments/tree/scaling-report">Github</a> Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. </p>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title"><a href="https://arxiv.org/pdf/2305.07185.pdf">MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers</a></p>
-<p>MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration that allows for <span class="arithmatex">\(O(N^{4/3}\)</span> scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers.</p>
+<p>Interpreters facilitate model computation by parsing, formatting, or otherwise preparing the data for effective use. They can also be used to interpret output. </p>
+<p>Such efforts can be used to reduce input complexity, token-count, to detect potentially unreasonable inputs or outputs. These interpreters <em>may</em> be agents or models themselves, thought that is not required. </p>
+<div class="admonition example">
+<p class="admonition-title">Link Routing</p>
+<p>A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output. </p>
 </div>
-<details class="note">
-<summary>Note</summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356"></a></p>
-</details>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://arxiv.org/pdf/2302.10866.pdf">Hyena Architecture</a> Uses inspiration from FFT to create a drop in replacement for Transformer models. </li>
+<li>
+<p><a href="https://shreyar.github.io/guardrails/">Guardrails</a> To help format output and prevent improper prompts.</p>
+</li>
+<li>
+<p><a href="https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb">Semantic Kernel</a>, <a href="https://github.com/microsoft/semantic-kernel/tree/main">Github</a></p>
+</li>
+<li>
+<p>️<a href="https://github.com/microsoft/guidance/">Guidance</a> Interleaving generation, prompting and logical control to single  continuous flow.</p>
+</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title"><a href="https://arxiv.org/pdf/2109.00301.pdf">Infinite former</a></p>
-<p>Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration.</p>
-</div>
-<details class="note">
-<summary>Note</summary>
-<p><a href="https://github.com/deep-spin/infinite-former">Github</a> 
-<a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="left" alt="Infinity Former" loading="lazy" src="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" width="300" /></a></p>
-</details>
-<h3 id="computation-reduction">Computation Reduction<a class="headerlink" href="#computation-reduction" title="Permanent link">&para;</a></h3>
-<p><a href="https://arxiv.org/pdf/2306.03078v1.pdf">SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression</a></p>
-<h3 id="fine-tuning">Fine Tuning<a class="headerlink" href="#fine-tuning" title="Permanent link">&para;</a></h3>
-<p>Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.</p>
-<div class="reult">
-<div class="admonition tip">
-<p class="admonition-title"><a href="https://arxiv.org/pdf/2305.08298.pdf">Symbol Tuning Improves in-context learning in Language Models</a></p>
-</div>
-<details class="note">
-<summary>Note</summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5"></a></p>
-</details>
-<h2 id="other-modalities">Other modalities<a class="headerlink" href="#other-modalities" title="Permanent link">&para;</a></h2>
-<h3 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">&para;</a></h3>
-<h3 id="graphs">Graphs<a class="headerlink" href="#graphs" title="Permanent link">&para;</a></h3>
-<div class="admonition tip">
-<p class="admonition-title"><a href="https://arxiv.org/pdf/2302.00049.pdf">Transformers Meet Directed Graphs</a></p>
-<p>An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.</p>
-</div>
-<details class="note">
-<summary>Note</summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc"></a></p>
-</details>
-<p></adiv></p>
-<h2 id="training-variations">Training variations<a class="headerlink" href="#training-variations" title="Permanent link">&para;</a></h2>
-<h3 id="fairness-enablement">Fairness Enablement<a class="headerlink" href="#fairness-enablement" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://arxiv.org/pdf/2306.03819.pdf">Concept Erasure</a></li>
-</ul>
-<h3 id="using-knowledge-links">Using Knowledge Links<a class="headerlink" href="#using-knowledge-links" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/michiyasunaga/LinkBERT">LinkBERT</a> places in the context window hyperlinked references to achieve better performance and is a drop-in replacement for BERT models. </li>
-</ul>
-<h3 id="multimodal">Multimodal<a class="headerlink" href="#multimodal" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://arxiv.org/pdf/2303.04671.pdf">Visual GPT</a></li>
-<li><a href="https://arxiv.org/pdf/2302.14045.pdf">Language is not all you need</a></li>
-<li><a href="https://arxiv.org/abs/2307.10802">Meta-Transformer: A Unified Framework for Multimodal Learning</a> The first framework to perform unified learning across 12 modalities with unpaired data. It does so by learning an embedding that can be shared across the modalities. <a href="https://kxgong.github.io/meta_transformer/">Github</a> </li>
-</ul>
-<h2 id="abstractions">Abstractions<a class="headerlink" href="#abstractions" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://arxiv.org/pdf/2301.13196.pdf">Looped Transformers and Programmable Computers</a> Understanding that transformer networks can simulate complex algorithms when hardcoded with specific weights and made intoa  loop. 'Machine Learning' 'Machine code'. "We demonstrate that
-a constant number of encoder layers can emulate basic computing blocks, including embedding edit operations, non-linear functions, function calls, program counters, and conditional branches. Using these building blocks, we emulate a small instruction-set computer."</li>
-</ul>
-<h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://huggingface.co/docs/transformers/main/index">Hugging Face Transformers</a> An API to access a large number of pre-trained transformers. Pytorch based. </li>
-<li><a href="https://github.com/idiap/fast-transformers/tree/master">Fast Transformers</a> A quality collection of a number of transformer implementations written in Pytorch. </li>
-</ul>
-<h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-</div>
 
 
   
@@ -2488,10 +1931,10 @@ a constant number of encoder layers can emulate basic computing blocks, includin
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
