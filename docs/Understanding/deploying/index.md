@@ -25,7 +25,7 @@ What the caller requires will depend on the target audience your offering is pro
 
 The models must be sufficient to provide the content that the model have a sufficiently reasonable latency that it can enable the throughput requirements of your model. 
 
-To enable a properly servable model, it may likely be required to [optimize](./../Understanding/models/call_optimization.md) the serving of your models.
+To enable a properly servable model, it may likely be required to [optimize](../models/call_optimization.md) the serving of your models.
 
 ### Compute needs
 
@@ -36,7 +36,7 @@ Here are some general considerations (from AWS) regarding how to consider the re
 
 ### Budget available
 
-Your calculated budget will be useful to consider the monetization strategy of your tool. While highly dependant on your business model, knowing when to inspire greater [model serving optimization](../Understanding/models/call_optimization.md) to prevent 'too much compute'. 
+Your calculated budget will be useful to consider the monetization strategy of your tool. While highly dependant on your business model, knowing when to inspire greater [model serving optimization](../models/call_optimization.md) to prevent 'too much compute'. 
 
 ### Compute back-end
 

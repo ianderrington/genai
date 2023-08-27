@@ -12,7 +12,7 @@ Input to a chain node may be passed directly, embedded into a prompt template, a
 
 ### Prompt templates
 
-The prompt templates are an unresolved string that is completed before passing to a GenAI request.  Basic templates codify general [prompt-engineering](../models/prompt_engineering/prompting.md) patterns to lead to the more desired outputs.
+The prompt templates are an unresolved string that is completed before passing to a GenAI request.  Basic templates codify general [prompt-engineering](../prompting/index.md) patterns to lead to the more desired outputs.
 
 ### Thought Systems
 

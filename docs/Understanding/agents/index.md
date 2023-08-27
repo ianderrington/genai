@@ -7,7 +7,7 @@ Similar to bots, or other computerized automota, they may have the ability to ru
 
 * [Models](../models/index.md): The 'intelligent' component returns an output for a given input. 
 * Input [environments](environments.md) that can and do provide inputs. 
-* Language [prompts](../models/prompt_engineering/prompting.md) that orient's and agent's response. 
+* Language [prompts](../prompting/index.md) that orient's and agent's response. 
 * [Memory](./memory.md) to enable writing and reading information that may be of use. 
 * [Tools](./actions_and_tools.md) that enable more than text (or images) to be returned or otherwise acted upon. 
 * [Interpreters](#interpreters) that are used to process input or output. 
@@ -26,16 +26,16 @@ Before we go on, there are several references that are of high merit that you ma
 
 ## [Models](../models/index.md)
 
-Models provide the computational core of Agents. Acting like a 'brain' that atakes in input [prompts](#prompts) they return outputs. Generally the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation as with [distillation](../models/distillation.md) 
+Models provide the computational core of Agents. Acting like a 'brain' that a takes in input [prompts](#prompts) they return outputs. Generally the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation as with [distillation](../models/distillation.md) 
 
-We describe models cational manner [here](../models/index.md) and in an applied manner [here](../../Engineering/models.md). 
+[Here](../models/index.md) you can learn how to build models, though it is often easier to use [pre-trained models](../models/pre_trained_models.md). 
 
-## [Prompts](../models/prompt_engineering/prompting.md)
+## [Prompts](../prompting/index.md)
 
 !!! warning "Garbage In --> Garbage Out"
     The common realization that bad input will lead to bad outputs becomes more nuanced when considering the degree to which small changes in input prompts can lead to wildly different outcome performance. Consequently, well-chosen prompts can functionally enable an agent, or not. 
 
-Because of the importance and breadth of details involved with prompting, please visit [this section](../models/prompt_engineering/prompting.md). Note, that prompts will be model-specific, and if the model changes, either completely or with new architecture, the continued performance of a given prompt or prompt strategy is not certain. 
+Because of the importance and breadth of details involved with prompting, please visit [this section](../prompting/index.md). Note, that prompts will be model-specific, and if the model changes, either completely or with new architecture, the continued performance of a given prompt or prompt strategy is not certain. 
 
 ## [Memory](./memory.md)
 

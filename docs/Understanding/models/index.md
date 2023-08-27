@@ -1,10 +1,10 @@
-Here we will discuss the models essential components of Gen()AI. Please see the [Trained Models](../../Engineering/models.md) for specific manners of implementing, deploying, or otherwise using these models.
+Here we will discuss the models essential components of building Gen()AI models. While it is often useful or essential to use [pre-trained models](pre_trained_models.md), it is likely that such pre-trained models can be further refined for specific use-cases. 
 
 !!! tip "**tl;dr**"
 
     - Understand [self-supervised learning](#self-supervised-learning)
     - Learn about [models](./models.md)
-    - Work on your [prompting](./prompt_engineering/prompting.md)
+    - Work on your [prompting](../prompting/index.md)
     - Move on to learn about [agents](../agents/index.md)
 
 ## Background 
@@ -15,7 +15,7 @@ Of primary importance is the manner of [model learning](#model-learning), or ada
 
 Presently, the most successful models rely on  [**foundation models**](#foundation-models) that are trained on large corpora of data in a self-supervised manner. These models can then be refined using supervised, semi-supervised, and/or reinforcement learning techniques. 
 
-Once build, Gen()AI is generally called with language inputs to create a specifically desired end-result.  These inputs, known as _prompts_ will generally be model-specific but may sometimes share commonalities for more-optimal usage, which we describe in [prompt engineering](prompt_engineering/prompting.md).
+Once build, Gen()AI is generally called with language inputs to create a specifically desired end-result.  These inputs, known as _prompts_ will generally be model-specific but may sometimes share commonalities for more-optimal usage, which we describe in [prompt engineering](../prompting/index.md).
 
 ## Foundation Models
 

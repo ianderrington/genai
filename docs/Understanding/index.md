@@ -20,20 +20,18 @@ Getting into it, you will find the following outline:
 
 1. [Data](data/index.md) provides the backbone connecting computation to our recorded reality.
 1. [Models](models/index.md) allow the data to be understood and used. [^n1]
-1. [Prompts](models/prompt_engineering/prompting.md) govern how we interact with the models.
+1. [Prompts](prompting/index.md) govern how we interact with the models.
 1. [Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners.
 1. [Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies.
 1. [Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis. 
 
 ### How do you do stuff with Gen()AI?
 
-Of course, there will be some important 'how-to's, particularly in the [data](data/index.md), [models](models/index.md), [prompts](models/prompt_engineering/prompting.md) and [agents](./agents/index.md). 
-
-Still, you'll want ot check out the  [engineering][../Engineering/index.md] section to figure out how to use and engineer Gen()AI for your task at hand. 
+Of course, there will be some important 'how-to's, particularly in the [data](data/index.md), [models](models/index.md), [prompts](prompting/index.md) and [agents](./agents/index.md). 
 
 Competition is fierce to create the 'best' (based on certain metrics) Gen()AI, so much knowledge may not be known to protect IP and other secrets.
 
-Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](../Engineering/models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made. 
+Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](models/pre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made. 
 
 If you are working on commercial projects, be sure to look at the Licenses to ensure you are legally compliant. 
 
@@ -47,10 +45,10 @@ There is so much quality material, it would be valuable for your time to check s
 ??? tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
     Important patterns mentioned (references to discussions herein):
     * [Evaluation](models/evaluation.md)
-    * [Retreival Augmented Generation (RAG)](models/rag.md)
+    * [Retreival Augmented Generation (RAG)](agents/rag.md)
     * [Fine tuning](models/alignment.md#finetuning)
     * [Caching](agents/memory.md#caching) to reduce latency. 
-    * [Guardrails](../Engineering/interpreters.md#guardrails) to ensure output (and input) quality.
+    * [Guardrails](agents/interpreters.md#guardrails) to ensure output (and input) quality.
     * Data Flywheel to use data collection and feedback to improve model and experience
     * Cascade Breaking models up into smaller simpler tasks instead of big ones.
     * Monitoring to ensure value is being derived
@@ -72,12 +70,12 @@ Generative AI is a subset of machine learning that aim to creates new data sampl
 !!! important "[tl;dr](#tldr)"
     - Evaluate your [**application**](./overview/applications.md) and think of the [**challenges**](./overview/challenges.md) associated with it
     - Understand the [**data**](./data/index.md) and collect data that you need.
-    - [**Understand**](models/index.md) and [**build**](../Engineering/models.md) your model
-    - [**Deploy**](../Engineering/model_deployment.md) your model
+    - [**Understandand build**](models/index.md) use [**pre-trained**](models/pre_trained_models.md) models.
+    - [**Deploy**](./deploying/index.md) your model
     - [**Manage**](../Managing/index.md) your model
 
 !!! tip "A little more advanced"
-    - [Use Agents]/agents/index.md) for increasingly powerful applications
+    - [Use Agents](agents/index.md) for increasingly powerful applications
     - Optimize your model [performance](models/optimizing_hyper_parameters.md) and [serving](models/call_optimization.md)
 
-In this section, we will focus on 'Understanding' the various components of GenAI, [data](./data/index.md), [models](./models/index.md) and [agents](./agents/index.md) including methods and models that are initial or under development. While there will be some directly useful examples, we suggest you explore the [Engineering](../Engineering/index.md) section for practical implementations, methods, frameworks and tools to enable your GenAI application.  
+In this section, we will focus on 'Understanding' the various components of GenAI, [data](./data/index.md), [models](./models/index.md) and [agents](./agents/index.md) including methods and models that are initial or under development. 

@@ -1,5 +1,4 @@
 nav:
-    - Understanding
-    - Engineering
+    - "Understanding and building": Understanding
     - Using
     - Managing

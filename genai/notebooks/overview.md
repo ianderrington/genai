@@ -8,7 +8,7 @@ The base components of GENAI
 1. [Models](../models/index.md)
 1. [Prompts](../prompt_engineering/prompting.md)
 1. [Agents](../agents/index.md)
-1. [Engineering and Management](../enablement/index.md.md)
+1. [Engineering and Management](../enablement/index.md)
 1. [Ethics](../ethics/ethics.md)
 1. [Studies](../studies/studies.md)
 

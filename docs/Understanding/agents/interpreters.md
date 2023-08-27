@@ -6,7 +6,6 @@ Such efforts can be used to reduce input complexity, token-count, to detect pote
     A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output. 
 
 ## Tools
-Please see the [frameworks and tools](frameworks_and_tools.md) for a more comprehensive set, but below are a few examples.
  
 - [Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts.
 

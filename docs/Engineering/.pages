@@ -1,8 +1,0 @@
-nav:
-    - index.md
-    - models.md
-    - memory.md
-    - evaluating_and_comparing.md
-    - model_deployment.md
-    - frameworks_and_tools.md
-    - ...

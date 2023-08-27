@@ -4,7 +4,6 @@ nav:
     - training.md
     - optimizing_hyper_parameters.md
     - call_optimization.md
-    - prompt_engineering
     - distillation.md
     - evaluation.md
     - alignment.md

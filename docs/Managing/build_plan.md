@@ -22,7 +22,7 @@ Eventually we may shift to other systems (like docusaurus). Before that though, 
 We can make this easier to read
 
 - [ ] Improve landing page and header bar to be more modern. 
-- [ ] Build interactive graph representation of this site that includes summary information. Check [this out](https://towardsdatascience.com/making-network-graphs-interactive-with-python-and-pyvis-b754c22c270) and the [examples](../Engineering/examples.md)
+- [ ] Build interactive graph representation of this site that includes summary information. Check [this out](https://towardsdatascience.com/making-network-graphs-interactive-with-python-and-pyvis-b754c22c270) and the [examples](../Understanding/examples/index.md)
 - [ ] https://melaniewalsh.github.io/Intro-Cultural-Analytics/06-Network-Analysis/02-Making-Network-Viz-with-Bokeh.html
 - [ ] build with https://docusaurus.io/
 - [ ] Integrate example python notebooks and build with https://github.com/outerbounds/nbdoc

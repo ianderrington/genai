@@ -1,6 +1,10 @@
 nav:
+    - index.md
     - overview
     - data
     - models
+    - prompting
     - agents
+    - deploying
+    - examples
     - studies
