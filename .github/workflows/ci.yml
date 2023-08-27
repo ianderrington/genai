@@ -2,10 +2,6 @@ name: ci
 on:
   push:
     branches:
-name: ci
-on:
-  push:
-    branches:
       - master
       - main
 permissions:
