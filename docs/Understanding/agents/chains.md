@@ -1,25 +1,27 @@
-Language models produce outputs based on their model and input prompts. Chains allow for richer and more valuable outputs by connecting them with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md). Chains can be used to build more complex and integrated systems to enable higher-quality reasoning and results.
+Language models produce outputs based on their model and input prompts. **Chains** allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md). Chains can be used to build more complex and integrated systems to enable higher-quality reasoning and results.
 
-Because of their nature, chains can be constructed in a more [basic](#basic-chains) linear fashion, as in the case of the LLM-enabled chats. They can also be constructed more generally with parallel GenAI calls, resulting in tree and graph-like chains that have been shown to increase performance further. 
+Because of their nature, chains can be constructed in a more [basic](#basic-chains), linear fashion - as in the case of the LLM-enabled chats. They can also be constructed more generally with parallel GenAI calls, resulting in [graph chains](#graph-chains) of varying complexity, which have been shown to increase performance further. 
+
+Each call to GenAI may be considered a _chain node_ with constant parameters, such as [_prompt templates_](#prompt-templates), and variable parameters that are governed by external functions (including other chain/GenAI calls). 
+
+Both [basic](#basic-chains) and [graph](#graph-chain) can rely on [thought systems](#thought-systems) that further improve their performance by using specific prompts that are separated in different calls or combined in a singular prompt, that guide GenAI chained outputs and inputs. 
 
 ## Basic Chains
-Chains start with an input that may first be analyzed with another algorithm, traditional or GenaI-enabled, to parse the information in an effective manner. This output may then be directed to part of a template. The prompt-template. The prompt templates then fill in the information. This information is then passed to the LLM. Then the LLM generates the output. This output may then again be processed to re-introduce extracted information removed from the original prompt call (like HTML), to use the output to affect the next actions to be taken, such as printing the output for a person, calling programmatic functions (tools) or sharing with specific downstream chains (routing).
+Input to a chain node may be passed directly, embedded into a prompt template, and/or processed with traditional algorithms, like regular expressions, before being processed by the GenAI. 
 
+### Prompt templates
+The prompt templates then fill in the information. This information is then passed to the GenAI that generates the output. 
 
-### Thought Systems
+## Thought Systems
 Thought systems are chain patterns used by single agents and [systems](./systems.md) to enable more robust responses. 
-They can be executed programatically given frameworks or sometimes done manually in a chat setting. 
+They can be executed programmatically given frameworks or sometimes done manually in a chat setting. 
 
 Here are some known thought structures that are improving agentic output.
-
-
 
 ??? tip "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf)
     <img width="537" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4dcb9273-8965-461d-8da7-ae9a0be6debc">
 
-
-#### Recurrent
-
+### Recursive
 
 ??? tip "[Teaching Large Language Models to Self-Debug](https://arxiv.org/abs/2304.05128) `transcoder`"
     Coding focused LLM system to continuously improve self. 
@@ -30,10 +32,9 @@ Here are some known thought structures that are improving agentic output.
     [Website](https://posgnu.github.io/rci-web/), [GitHub](https://github.com/posgnu/rci-agent)  Combining with Chain of Thought it is even better. The method: Plan: Critique, Improve 
     - Explicit RCI: "Review your previous answer and find problems with your answer." --> "Based on the problems you found, improve your answer." Recursively Criticizes and Improves its output. This sort of prompting outperforms Chain of Thought, and combined it works even better.  
 
+## Graph chains
 
-#### Structural Decomposition 
-
-
+### Structural Decomposition 
 ??? tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)" 
     A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation. 
     <img width="408" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd">
@@ -79,6 +80,19 @@ Here are some known thought structures that are improving agentic output.
         [Assistant:] {point index}. {point skeleton}
     ```
 
+!!! code "[Graph of Thoughts](https://arxiv.org/pdf/2308.09687.pdf) Generalizes Chain of Thought, Tree of Thoughts, and similar systems of thought"
+    <img width="753" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7edd59b0-d6bb-4d70-9fba-90c8f705fc98">
+
+??? tip "[Graph of Thought](https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/)" 
+    An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.
+    ![image](https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649)
+
+??? tip "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
+    <img width="1663" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e516604b-57b2-4d82-b9a9-0168c8eb9f15">
+
+??? tip "[Strategic Reasoning with Language Models](https://arxiv.org/abs/2305.19165) Uses game trees and observed and inferred beliefs to achieve closer to optimal results. "
+     Powerful to consider for inferred beliefs and interacting in situations where negotiation or games are being played.
+    <img width="1008" alt="image" src="https://github.com/ianderrington/general/assets/76016868/5ffa0653-a323-44a6-bff5-b49e3be6091a">
 
 
 ??? tip "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)" 
@@ -116,37 +130,14 @@ Here are some known thought structures that are improving agentic output.
         score_prompt = '''Analyze the following passage, then at the last line conclude "Thus the coherency score is {s}", where s is an integer from 1 to 10.
         ''' 
     ```
-  
 
+#### Problem decomposition
 
-
-??? tip "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
-    <img width="1663" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e516604b-57b2-4d82-b9a9-0168c8eb9f15">
-
-
-
-
-??? tip "[Graph of Thought](https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/)" 
-    An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.
-    ![image](https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649)
-
-
-
-??? tip "[Strategic Reasoning with Language Models](https://arxiv.org/abs/2305.19165) Uses game trees and observed and inferred beliefs to achieve closer to optimal results. "
-     Powerful to consider for inferred beliefs and interacting in situations where negotiation or games are being played.
-    <img width="1008" alt="image" src="https://github.com/ianderrington/general/assets/76016868/5ffa0653-a323-44a6-bff5-b49e3be6091a">
-
-
+Breaking down the input into a divide-and-conquer approach is a valuable approach to more complex requests. Considering separate perspectives, within the _same_ model, or within separate model calls with different prompt-inceptions as in agent [systems](./systems.md) can improve performance.
 
 ??? tip "[Question Decomposition Improves the Faithfulness of Model-Generated Reasoning](https://arxiv.org/pdf/2307.11768.pdf)"
     <img width="1287" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0d51fbcc-8179-46c2-b1dc-37d2e2a6a420">
     [A nice discussion on it](https://www.forbes.com/sites/lanceeliot/2023/07/31/new-prompt-engineering-technique-pumps-up-chain-of-thought-with-factored-decomposition-and-spurs-exciting-uplift-when-using-generative-ai/)
-
-
-#### Perceptive decomposition
-
-Breaking up the topic by considering different personas, within the _same_ model-call partitions can be quite successful. Often [systems](./systems.md) can be used as well, though the complexity of implementation increases.
-
 
 ??? tip "[Unleashing Cognitive Synergy in Large Language Models: A Task-Solving Agent Through Multi-person Self-Collaboration](https://arxiv.org/pdf/2307.05300.pdf)"
     Uses a prompt that initiates a group of personas to be used within the same LLM call to facilitate collaborative analysis and creation of the final output. Solid improvement but comparisons to other techniques are potentially uncertain.
@@ -184,7 +175,10 @@ Breaking up the topic by considering different personas, within the _same_ model
         '''
     ```
     
-#### Constrained
+??? tip [Teach LLMs to Personalize – An Approach inspired by Writing Education](https://arxiv.org/pdf/2308.07968.pdf)
+    <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2638d727-8fbd-4fc7-84a0-ae2bc0e8b2ab">
+    
+### Constraining outputs 
 
 
 ??? tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031) A 'logical guide' tool that an LLM can use." 
@@ -192,17 +186,7 @@ Breaking up the topic by considering different personas, within the _same_ model
     <img width="956" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bf581eb0-96b1-4175-97d0-98f081a03438">
     Possible open source implementation [here](https://github.com/kyegomez/LOGICGUIDE/tree/main)
 
-
-
 ??? code "[Outlines](https://github.com/normal-computing/outlines) guides the model generation of next-token logits to guide the generation corresponding to regex / json pydantic schema. compatible with all models."
     Also provides a way to functionalize templates to separate prompt logic.
 
-### Other
 
-??? tip [Teach LLMs to Personalize – An Approach inspired by Writing Education](https://arxiv.org/pdf/2308.07968.pdf)
-    <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2638d727-8fbd-4fc7-84a0-ae2bc0e8b2ab">
-
-
-## Resources
-
-- [Chain of thought hub](https://github.com/FranxYao/chain-of-thought-hub)
