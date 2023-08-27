@@ -146,22 +146,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://managen.ai/Understanding/deploying/back_end.html</loc>
+         <lastmod>2023-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://managen.ai/Understanding/deploying/computation.html</loc>
          <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Understanding/deploying/engineering_index.html</loc>
-         <lastmod>2023-08-27</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://managen.ai/Understanding/deploying/frameworks_and_tools.html</loc>
+         <loc>https://managen.ai/Understanding/deploying/frameworks.html</loc>
          <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://managen.ai/Understanding/deploying/front_end.html</loc>
+         <lastmod>2023-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/deploying/libraries_and_tools.html</loc>
          <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>

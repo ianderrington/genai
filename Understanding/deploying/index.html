@@ -15,17 +15,17 @@
         <link rel="canonical" href="https://managen.ai/Understanding/deploying/index.html">
       
       
-        <link rel="prev" href="../agents/systems.html">
+        <link rel="prev" href="../data/tokenizing.html">
       
       
-        <link rel="next" href="computation.html">
+        <link rel="next" href="back_end.html">
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Deploying - Gen()AI</title>
+        <title>Index - Gen()AI</title>
       
     
     
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deploying
+              Index
             
           </span>
         </div>
@@ -233,12 +233,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="../index.html" class="md-tabs__link md-tabs__link--active">
+    <a href="../index.html" class="md-tabs__link">
       Understanding and building
     </a>
   </li>
@@ -324,16 +322,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
         
@@ -355,8 +351,6 @@
             
           
         
-          
-            
           
         
           
@@ -378,7 +372,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Understanding and building
@@ -1141,105 +1135,11 @@
               
   
   
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" checked>
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="index.html">Deploying</a>
-          
-            <label for="__nav_1_6">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_1_6">
-          <span class="md-nav__icon md-icon"></span>
-          Deploying
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
   
     <li class="md-nav__item">
-      <a href="computation.html" class="md-nav__link">
-        Computation
+      <a href="../../deploying/index.md" class="md-nav__link">
+        Deploying to Users
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="engineering_index.html" class="md-nav__link">
-        Engineering index
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="frameworks_and_tools.html" class="md-nav__link">
-        Frameworks and tools
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="front_end.html" class="md-nav__link">
-        Front end
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1749,7 +1649,7 @@
       
         <li class="md-nav__item">
   <a href="#compute-back-end" class="md-nav__link">
-    Compute back-end
+    Compute back end
   </a>
   
 </li>
@@ -1757,6 +1657,20 @@
         <li class="md-nav__item">
   <a href="#front-end" class="md-nav__link">
     Front end
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -1786,7 +1700,7 @@
   
 
 
-  <h1>Deploying</h1>
+  <h1>Index</h1>
 
 <p>The deployment of models enables callers, people, or other software, to use them. While deployment may initially consist of only 'making a model available for calling'. </p>
 <p>Because the model may be one limiting- consider the deployment of the model to be separate from the deployment of the model's encapsulating project, though they are directly connected.  </p>
@@ -1798,7 +1712,7 @@
 <li><a href="#servable-model">Servable model</a> to appropriately service customer and environmental requirements.</li>
 <li><a href="#compute-needs">Compute needed</a> to enable service</li>
 <li><a href="#budget-available">Budget available</a> the compute</li>
-<li><a href="#compute-back-end">Compute back end</a> service or framework that will work with the budget</li>
+<li><a href="#compute-back-end">Compute back end</a> service and framework that will work with the budget you have</li>
 <li><a href="./front_end">Front End</a> that provides the appropriate visualization</li>
 </ol>
 <p>Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get <em>something</em> that you can iterate from, particularly if your solution involves some form of a <a href="https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business">data flywheel</a>.</p>
@@ -1812,44 +1726,29 @@
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050" /></a></p>
 <h3 id="budget-available">Budget available<a class="headerlink" href="#budget-available" title="Permanent link">&para;</a></h3>
 <p>Your calculated budget will be useful to consider the monetization strategy of your tool. While highly dependant on your business model, knowing when to inspire greater <a href="../models/call_optimization.html">model serving optimization</a> to prevent 'too much compute'. </p>
-<h3 id="compute-back-end">Compute back-end<a class="headerlink" href="#compute-back-end" title="Permanent link">&para;</a></h3>
-<p>Part of determining your back-end will involve selecting the <a href="frameworks_and_tools.html">frameworks and tools</a> that you use. </p>
-<p>!!! tip <a href="https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33">GCP Tutorial</a></p>
-<details class="code">
-<summary><a href="https://vllm.ai/">vLLM</a> utilizes <strong>PagedAttention</strong> to manage attention keys/values to enable 24x throughput than other transformers w/out architecture changes</summary>
-<p>"PagedAttention allows storing continuous keys and values in non-contiguous memory space. Specifically, PagedAttention partitions the KV cache of each sequence into blocks, each block containing the keys and values for a fixed number of tokens. During the attention computation, the PagedAttention kernel identifies and fetches these blocks efficiently."
-<a class="glightbox" href="https://vllm.ai/assets/figures/annimation0.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Paged Attention" src="https://vllm.ai/assets/figures/annimation0.gif" /></a>
-<a href="https://github.com/vllm-project/vllm">Github</a></p>
-</details>
-<details class="code">
-<summary><a href="https://github.com/Preemo-Inc/text-generation-inference">Text Generation Inference</a> an open-sourced implementation forked from HF</summary>
-<p>"A Rust, Python and gRPC server for text generation inference. Used in production at HuggingFace to power LLMs api-inference widgets."  <br />
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/a3f5ddbf-a2e3-45ae-bca4-200c07c9dd91" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a3f5ddbf-a2e3-45ae-bca4-200c07c9dd91" /></a></p>
-</details>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/Lightning-AI/lit-gpt#setup">Lit-Gpt</a> Hackable implementation of state-of-the-art open-source large language models released under the Apache 2.0 license.</p>
-</div>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/davidxw/azurechatgpt">Azure-Chat-GPT</a> to run GPT on Azure services</p>
-</div>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://pytorch.org/serve/large_model_inference.html">Torch Serve</a> enable efficient serving.</p>
-</div>
-<details class="tip">
-<summary><a href="https://github.com/triton-inference-server/server">Triton Inference Server</a> Part of NVIDIA AI Inference</summary>
-<p><a href="https://github.com/triton-inference-server/server">Tutorial</a></p>
-</details>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/BerriAI/litellm/blob/main/cookbook/proxy-server/readme.md">litellm by BerriAI</a> provides code to enable railways deployed on railway.app</p>
-<p><a href="https://railway.app/about">Railway.app</a></p>
-</div>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/flexflow/FlexFlow">FlexFlow</a> Low-Latency, High-Performance LLM Serving</p>
-<p>Check this out!    </p>
-</div>
-<h3 id="front-end">Front end<a class="headerlink" href="#front-end" title="Permanent link">&para;</a></h3>
+<h3 id="compute-back-end"><a href="back_end.html">Compute back end</a><a class="headerlink" href="#compute-back-end" title="Permanent link">&para;</a></h3>
+<p>To determining your back-end will involve selecting the <a href="./frameworks_and_tools.md">frameworks and tools</a> that you use. While it is often easy to </p>
+<h3 id="front-end"><a href="front_end.html">Front end</a><a class="headerlink" href="#front-end" title="Permanent link">&para;</a></h3>
 <p>At the end of a model that is ready to be deployed, you'll need to get the results to the end-user in a useful manner. Look into the discussion on <a href="front_end.html">front ends</a> for some quality solutions and best practices to for your model output.</p>
-<h3 id="overview-literature">Overview Literature<a class="headerlink" href="#overview-literature" title="Permanent link">&para;</a></h3>
+<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<details class="tip">
+<summary><a href="https://build.microsoft.com/en-US/sessions/db3f4859-cd30-4445-a0cd-553c3304f8e2">State of GPT by Andrej Karpathy</a> A stellar presentation to update on the general state of Genai enabled by GPT</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/de2d3b33-9e79-407d-b3c7-5b795f330722" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="925" alt="image" src="https://github.com/ianderrington/general/assets/76016868/de2d3b33-9e79-407d-b3c7-5b795f330722" loading="lazy"></a>
+<a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/0ecb56de-966a-40c5-8d14-1df3b4a5a89f" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="918" alt="image" src="https://github.com/ianderrington/general/assets/76016868/0ecb56de-966a-40c5-8d14-1df3b4a5a89f"></a>
+<a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/7cea8be4-26dd-46c3-9001-fcf625e5975d" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="282" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7cea8be4-26dd-46c3-9001-fcf625e5975d"></a>
+<a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/a32295bd-9d88-4b31-bd10-134e11e6c546" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="918" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a32295bd-9d88-4b31-bd10-134e11e6c546"></a>
+<a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/7b1c6c4b-3778-4536-8d10-03696f3624c5" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="886" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7b1c6c4b-3778-4536-8d10-03696f3624c5"></a></p>
+</details>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<details class="tip">
+<summary><a href="https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/">Emerging Architectures for LLM Applications</a> A very nice discussion of the components and their interactions via orchestration systems.</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f287eaef-6b86-4846-8885-2b3ad3cd614b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f287eaef-6b86-4846-8885-2b3ad3cd614b" /></a> [^n1]</p>
+</details>
+<details class="tip">
+<summary><a href="https://arxiv.org/abs/2307.10169">Challenges and Applications of Large Language Models Kaddour et al</a> Well done and thorough.</summary>
+</details>
+<h2 id="overview-literature">Overview Literature<a class="headerlink" href="#overview-literature" title="Permanent link">&para;</a></h2>
+<p>Below are some overviews to help with practical aspects of Generative AI, particularly GPT and LLMs.</p>
 <ul>
 <li>
 <p><a href="https://neptune.ai/blog/nlp-models-infrastructure-cost-optimization#:~:text=Use%20a%20lightweight%20deployment%20framework,serve%20predictions%20over%20a%20network.">Neptune-nlp-models-infrastructure</a></p>

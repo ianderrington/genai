@@ -12,20 +12,20 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/studies/studies.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/deploying/libraries_and_tools.html">
       
       
-        <link rel="prev" href="../examples/by_domain.html">
+        <link rel="prev" href="front_end.html">
       
       
-        <link rel="next" href="../../Using/index.html">
+        <link rel="next" href="../examples/index.html">
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Studies - Gen()AI</title>
+        <title>Libraries and tools - Gen()AI</title>
       
     
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#references" class="md-skip">
+        <a href="#caching" class="md-skip">
           Skip to content
         </a>
       
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Studies
+              Libraries and tools
             
           </span>
         </div>
@@ -233,12 +233,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="../index.html" class="md-tabs__link md-tabs__link--active">
+    <a href="../index.html" class="md-tabs__link">
       Understanding and building
     </a>
   </li>
@@ -324,16 +322,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
         
@@ -376,7 +372,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Understanding and building
@@ -1211,48 +1207,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Studies
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="studies.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../studies/studies.html" class="md-nav__link">
         Studies
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1661,9 +1620,84 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#caching" class="md-nav__link">
+    Caching
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-ops" class="md-nav__link">
+    LLM Ops
+  </a>
+  
+    <nav class="md-nav" aria-label="LLM Ops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributing-methods" class="md-nav__link">
+    Distributing Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-convenience" class="md-nav__link">
+    Programming Convenience
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-creation" class="md-nav__link">
+    Data Creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-enabled-data-extraction" class="md-nav__link">
+    LLM-enabled data-extraction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    Visualization
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-interaction" class="md-nav__link">
+    Memory Interaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1685,26 +1719,97 @@
   
 
 
-  <h1>Studies</h1>
+  <h1>Libraries and tools</h1>
 
-<p>We are in an age of experimental applied mathematics. Often times we do not know what the results of a particular model or method will be until it is programmed and evaluated. Though often times theory-can inform the best ways forward, we are still far from from a unified theory of AI, (or even intelligence for that matter) and we will likely always be learning things. </p>
-<p>For GenAI and LLMs, much of what has been learned has been surmised or known only in the gist. More thorough understanding has occurred through painstaking experiments, and anecdotal and statistical evaluations of models and methods. Still, we don't always know 'how' they are able to do what they do. </p>
-<p>It is debated that sufficiently large models exhibit 'emergence'. While not always defined universally, this can be considered as the ability for the model to perform tasks beyond what they initially were trained to do, or to be 'greater than the individual sum of the parts'. While this distinction may be of merit it remains a popular arena for academic debates. </p>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>??? tip <a href="https://huggingface.co/papers/2306.07042">Transformers learn through gradual rank increase</a> 
-    They "identify incremental learning dynamics in transformers, where the difference between trained and initial weights progressively increases in rank. We rigorously prove this occurs under the simplifying assumptions of diagonal weight matrices and small initialization. Our experiments support the theory and also show that phenomenon can occur in practice without the simplifying assumptions."</p>
-<div class=markdown>
-  !!!tip "[Grokking](https://pair.withgoogle.com/explorables/grokking/)"
-      When training, if test loss starts to increase while the training loss continues to go down, it is often considered to be memorization. With hyperparameters (weight decay) extremely long training may result in the test loss eventually going down, allowing for generalization to occur. While not fully understood, it is important to be aware of this phenomenon. 
+<h2 id="caching">Caching<a class="headerlink" href="#caching" title="Permanent link">&para;</a></h2>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/zilliztech/GPTCache">GPTCache</a></li>
+</ul>
+<h2 id="llm-ops">LLM Ops<a class="headerlink" href="#llm-ops" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/microsoft/lmops">LLM Ops</a></li>
+<li><a href="https://github.com/BerriAI/reliableGPT">Reliable GPT</a> A wrapper that prevents failures due to rate limiting requests. </li>
+</ul>
+<h3 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://huggingface.co/transformers/v4.0.1/index.html">Hugging Face Transformers</a></li>
+<li><a href="https://adapterhub.ml/">Adapters for Hugging Face</a></li>
+<li>
+<p><a href="https://github.com/bentoml/OpenLLM">Open LLM</a></p>
+</li>
+<li>
+<p><a href="https://github.com/sunner/ChatALL">Chatall</a> To interact with multiple chatbots at the same time.</p>
+</li>
+<li>‼️ <a href="https://github.com/go-skynet/LocalAI">LocalAI</a> drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.</li>
+</ul>
+<h3 id="distributing-methods">Distributing Methods<a class="headerlink" href="#distributing-methods" title="Permanent link">&para;</a></h3>
+<p>!!! "<a href="https://github.com/bigscience-workshop/petals">Petals</a> Run large language models at home, BitTorrent-style."</p>
+<div class="highlight"><pre><span></span><code>Generate text with distributed LLaMA 2 (70B), Stable Beluga 2, Guanaco-65B or BLOOM-176B and fine‑tune them for your own tasks — right from your desktop computer or Google Cola
+[Launch your own swarm](https://github.com/bigscience-workshop/petals/wiki/Launch-your-own-swarm)
+</code></pre></div>
+<h3 id="programming-convenience">Programming Convenience<a class="headerlink" href="#programming-convenience" title="Permanent link">&para;</a></h3>
+<p>!!! tip "<a href="https://github.com/jackmpcollins/magentic">Magentic</a>
+    A nice and simple plugin that allows a <code>@prompt</code> decorator to call functions as an llm, including function-choice calls.</p>
+<p>??? example "<a href="https://github.com/jackmpcollins/magentic">their example</a>
+    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Literal</span>
+
+<span class="kn">from</span> <span class="nn">magentic</span> <span class="kn">import</span> <span class="n">prompt</span><span class="p">,</span> <span class="n">FunctionCall</span>
 
 
+<span class="k">def</span> <span class="nf">activate_oven</span><span class="p">(</span><span class="n">temperature</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;broil&quot;</span><span class="p">,</span> <span class="s2">&quot;bake&quot;</span><span class="p">,</span> <span class="s2">&quot;roast&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Turn the oven on with the provided settings.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Preheating to </span><span class="si">{</span><span class="n">temperature</span><span class="si">}</span><span class="s2"> F with mode </span><span class="si">{</span><span class="n">mode</span><span class="si">}</span><span class="s2">&quot;</span>
 
 
-??? [Multimodal Neurons in Pretrained Text-Only Transformers](https://arxiv.org/pdf/2308.01544.pdf) Neat demonstration "finding multimodal neurons in text-only transformer MLPs and show that these neurons consistently translate image semantics into language."  
+<span class="nd">@prompt</span><span class="p">(</span>
+    <span class="s2">&quot;Prepare the oven so I can make </span><span class="si">{food}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">functions</span><span class="o">=</span><span class="p">[</span><span class="n">activate_oven</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">configure_oven</span><span class="p">(</span><span class="n">food</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FunctionCall</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="o">...</span>
 
-??? "[Scaling Data-Constrained Language Models](https://arxiv.org/pdf/2305.16264.pdf) Demonstrations that repeated token use is less valuable than new token use."
-    [Github](https://github.com/huggingface/datablations)
-    <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/ddd534a2-915f-417d-a6e2-6091d425fa02" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="539" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ddd534a2-915f-417d-a6e2-6091d425fa02"></a>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">configure_oven</span><span class="p">(</span><span class="s2">&quot;cookies!&quot;</span><span class="p">)</span>
+<span class="c1"># FunctionCall(&lt;function activate_oven at 0x1105a6200&gt;, temperature=350, mode=&#39;bake&#39;)</span>
+<span class="n">output</span><span class="p">()</span>
+<span class="c1"># &#39;Preheating to 350 F with mode bake&#39;</span>
+</code></pre></div></p>
+<h3 id="data-creation">Data Creation<a class="headerlink" href="#data-creation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/refuel-ai/autolabel">AutoLabel</a> A nice pythonic system for generating semantic labels repeatedly for use in downstream datasets</li>
+</ul>
+<h3 id="llm-enabled-data-extraction">LLM-enabled data-extraction<a class="headerlink" href="#llm-enabled-data-extraction" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/eyurtsev/kor">Kor</a> For extracting structured data using LLMs.</li>
+</ul>
+<h2 id="visualization">Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
+<p>Being able to see the 'structure' of some neural networks make it easier to understand, and more aesthetic.  Please see
+<a href="https://github.com/HarisIqbal88/PlotNeuralNet">PlotNeuralNet</a> and a nice <a href="https://pub.towardsai.net/creating-stunning-neural-network-visualizations-with-chatgpt-and-plotneuralnet-adab37589e5">writeup</a> on how to use it. </p>
+<h3 id="memory-interaction">Memory Interaction<a class="headerlink" href="#memory-interaction" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://github.com/embedchain/embedchain">EmbedChain</a></p>
+<p>"Embedchain is a framework to easily create LLM powered bots over any dataset." OpenAI and Llama2 so far.</p>
+</div>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
+
+    <span class="kn">from</span> <span class="nn">embedchain</span> <span class="kn">import</span> <span class="n">Llama2App</span>
+
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;REPLICATE_API_TOKEN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;REPLICATE API TOKEN&quot;</span>
+
+    <span class="n">zuck_bot</span> <span class="o">=</span> <span class="n">Llama2App</span><span class="p">()</span>
+
+    <span class="c1"># Embed your data</span>
+    <span class="n">zuck_bot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;youtube_video&quot;</span><span class="p">,</span> <span class="s2">&quot;https://www.youtube.com/watch?v=Ff4fRgnuFgQ&quot;</span><span class="p">)</span>
+    <span class="n">zuck_bot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;web_page&quot;</span><span class="p">,</span> <span class="s2">&quot;https://en.wikipedia.org/wiki/Mark_Zuckerberg&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Nice, your bot is ready now. Start asking questions to your bot.</span>
+    <span class="n">zuck_bot</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Who is Mark Zuckerberg?&quot;</span><span class="p">)</span>
+    <span class="c1"># Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook. </span>
+</code></pre></div>
+</details>
 
 
   
