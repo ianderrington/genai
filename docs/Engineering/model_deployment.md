@@ -31,8 +31,8 @@ To enable a properly servable model, it may likely be required to [optimize](./.
 
 Here are some general considerations (from AWS) regarding how to consider the requirements of model deployment.
 
-![image](https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050)
-    https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html
+![[image](https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html)](https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050)
+    
 
 ### Budget available
 
@@ -50,23 +50,23 @@ Part of determining your back-end will involve selecting the [frameworks and too
     ![Paged Attention](https://vllm.ai/assets/figures/annimation0.gif)
     [Github](https://github.com/vllm-project/vllm)
 
-??? tip "[Text Generation Inference](https://github.com/Preemo-Inc/text-generation-inference) an open-sourced implementation forked from HF"
+??? code "[Text Generation Inference](https://github.com/Preemo-Inc/text-generation-inference) an open-sourced implementation forked from HF"
 
     "A Rust, Python and gRPC server for text generation inference. Used in production at HuggingFace to power LLMs api-inference widgets."    
     ![image](https://github.com/ianderrington/genai/assets/76016868/a3f5ddbf-a2e3-45ae-bca4-200c07c9dd91)
 
-!!! tip "[Lit-Gpt](https://github.com/Lightning-AI/lit-gpt#setup) Hackable implementation of state-of-the-art open-source large language models released under the Apache 2.0 license."
+!!! code "[Lit-Gpt](https://github.com/Lightning-AI/lit-gpt#setup) Hackable implementation of state-of-the-art open-source large language models released under the Apache 2.0 license."
 
-!!! tip "[Azure-Chat-GPT](https://github.com/davidxw/azurechatgpt) to run GPT on Azure services"
+!!! code "[Azure-Chat-GPT](https://github.com/davidxw/azurechatgpt) to run GPT on Azure services"
 
-!!! code "[Torch Serve](https://pytorch.org/serve/large_model_inference.html) enable efficient serving.
+!!! code "[Torch Serve](https://pytorch.org/serve/large_model_inference.html) enable efficient serving."
 
 ??? tip "[Triton Inference Server](https://github.com/triton-inference-server/server) Part of NVIDIA AI Inference" 
     [Tutorial](https://github.com/triton-inference-server/server)
 
 !!! code "[litellm by BerriAI](https://github.com/BerriAI/litellm/blob/main/cookbook/proxy-server/readme.md) provides code to enable railways deployed on railway.app"
-
-!!! website "[Railway.app](https://railway.app/about)
+    
+    [Railway.app](https://railway.app/about)
 
 !!! code "[FlexFlow](https://github.com/flexflow/FlexFlow) Low-Latency, High-Performance LLM Serving"
     Check this out!    
