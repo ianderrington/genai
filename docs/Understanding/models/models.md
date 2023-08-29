@@ -88,7 +88,8 @@ There are two primary domains of Generative AI, text-oriented or image-oriented,
 
 ## TO SORT
 
-  
+  - [DeepSpeed-Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
+- 
   * Token Embedding: Mapping to a vector space. 
   * Positional Embedding: Learned or hard-coded mapping to position of sequence to a vector space
   * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information. 
