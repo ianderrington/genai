@@ -1,0 +1,1 @@
+Managing The GenAI amounts to effectively successfully working with the evolving technology in such a way that it creates. 

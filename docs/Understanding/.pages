@@ -5,6 +5,6 @@ nav:
     - models
     - prompting
     - agents
-    - deploying
+    - Deploying to Users: deploying/index.md
     - examples
     - studies

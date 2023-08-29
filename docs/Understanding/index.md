@@ -72,7 +72,7 @@ Generative AI is a subset of machine learning that aim to creates new data sampl
     - Understand the [**data**](./data/index.md) and collect data that you need.
     - [**Understandand build**](models/index.md) use [**pre-trained**](models/pre_trained_models.md) models.
     - [**Deploy**](./deploying/index.md) your model
-    - [**Manage**](../Managing/index.md) your model
+    - [**Manage**](../Managen.ai/index.md) your model
 
 !!! tip "A little more advanced"
     - [Use Agents](agents/index.md) for increasingly powerful applications

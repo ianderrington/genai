@@ -6,6 +6,5 @@ site/
 
 *.ipynb_checkpoints*
 *__pycache__*
-*lib*
 */output*
 *.obsidian*

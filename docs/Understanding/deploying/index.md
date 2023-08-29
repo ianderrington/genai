@@ -12,7 +12,7 @@ As would be done for other AI-enabled products, you will need to have in mind th
 2. [Servable model](#servable-model) to appropriately service customer and environmental requirements.
 3. [Compute needed](#compute-needs) to enable service
 4. [Budget available](#budget-available) the compute
-5. [Compute back end](#compute-back-end) service or framework that will work with the budget
+5. [Compute back end](#compute-back-end) service and framework that will work with the budget you have
 7. [Front End](./front_end) that provides the appropriate visualization
 
 Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves some form of a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
@@ -38,44 +38,36 @@ Here are some general considerations (from AWS) regarding how to consider the re
 
 Your calculated budget will be useful to consider the monetization strategy of your tool. While highly dependant on your business model, knowing when to inspire greater [model serving optimization](../models/call_optimization.md) to prevent 'too much compute'. 
 
-### Compute back-end
+### [Compute back end](back_end.md)
 
-Part of determining your back-end will involve selecting the [frameworks and tools](./frameworks_and_tools.md) that you use. 
+To determining your back-end will involve selecting from both DIY and full-service [frameworks](./frameworks.md) that you use on some compute host solution and perhaps connected with other [tools and libraries](libraries_and_tools.md) that can help your solution. 
 
-!!! tip [GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
 
-??? code "[vLLM](https://vllm.ai/) utilizes **PagedAttention** to manage attention keys/values to enable 24x throughput than other transformers w/out architecture changes"
-
-    "PagedAttention allows storing continuous keys and values in non-contiguous memory space. Specifically, PagedAttention partitions the KV cache of each sequence into blocks, each block containing the keys and values for a fixed number of tokens. During the attention computation, the PagedAttention kernel identifies and fetches these blocks efficiently."
-    ![Paged Attention](https://vllm.ai/assets/figures/annimation0.gif)
-    [Github](https://github.com/vllm-project/vllm)
-
-??? code "[Text Generation Inference](https://github.com/Preemo-Inc/text-generation-inference) an open-sourced implementation forked from HF"
-
-    "A Rust, Python and gRPC server for text generation inference. Used in production at HuggingFace to power LLMs api-inference widgets."    
-    ![image](https://github.com/ianderrington/genai/assets/76016868/a3f5ddbf-a2e3-45ae-bca4-200c07c9dd91)
-
-!!! code "[Lit-Gpt](https://github.com/Lightning-AI/lit-gpt#setup) Hackable implementation of state-of-the-art open-source large language models released under the Apache 2.0 license."
-
-!!! code "[Azure-Chat-GPT](https://github.com/davidxw/azurechatgpt) to run GPT on Azure services"
-
-!!! code "[Torch Serve](https://pytorch.org/serve/large_model_inference.html) enable efficient serving."
-
-??? tip "[Triton Inference Server](https://github.com/triton-inference-server/server) Part of NVIDIA AI Inference" 
-    [Tutorial](https://github.com/triton-inference-server/server)
-
-!!! code "[litellm by BerriAI](https://github.com/BerriAI/litellm/blob/main/cookbook/proxy-server/readme.md) provides code to enable railways deployed on railway.app"
-    
-    [Railway.app](https://railway.app/about)
-
-!!! code "[FlexFlow](https://github.com/flexflow/FlexFlow) Low-Latency, High-Performance LLM Serving"
-    Check this out!    
-
-### Front end
+### [Front end](front_end.md)
 
 At the end of a model that is ready to be deployed, you'll need to get the results to the end-user in a useful manner. Look into the discussion on [front ends](./front_end.md) for some quality solutions and best practices to for your model output.
 
-### Overview Literature
+## Tips 
+
+??? tip "[State of GPT by Andrej Karpathy](https://build.microsoft.com/en-US/sessions/db3f4859-cd30-4445-a0cd-553c3304f8e2) A stellar presentation to update on the general state of Genai enabled by GPT"
+
+    <img width="925" alt="image" src="https://github.com/ianderrington/general/assets/76016868/de2d3b33-9e79-407d-b3c7-5b795f330722" loading="lazy">
+    <img width="918" alt="image" src="https://github.com/ianderrington/general/assets/76016868/0ecb56de-966a-40c5-8d14-1df3b4a5a89f">
+    <img width="282" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7cea8be4-26dd-46c3-9001-fcf625e5975d">
+    <img width="918" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a32295bd-9d88-4b31-bd10-134e11e6c546">
+    <img width="886" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7b1c6c4b-3778-4536-8d10-03696f3624c5">
+
+## References
+
+??? tip "[Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A very nice discussion of the components and their interactions via orchestration systems."
+
+    ![image](https://github.com/ianderrington/genai/assets/76016868/f287eaef-6b86-4846-8885-2b3ad3cd614b) [^n1]
+
+??? tip "[Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/abs/2307.10169) Well done and thorough."
+
+## Overview Literature
+
+Below are some overviews to help with practical aspects of Generative AI, particularly GPT and LLMs.
 
 - [Neptune-nlp-models-infrastructure](https://neptune.ai/blog/nlp-models-infrastructure-cost-optimization#:~:text=Use%20a%20lightweight%20deployment%20framework,serve%20predictions%20over%20a%20network.)
 
