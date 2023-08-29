@@ -1,4 +1,5 @@
 nav:
+    - index.md
     - managing.md
     - brainstorming.md
     - build_plan.md

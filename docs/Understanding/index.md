@@ -1,3 +1,10 @@
+!!! important "[tl;dr](#tldr)"
+    - Evaluate your [**application**](./overview/applications.md) and think of the [**challenges**](./overview/challenges.md) associated with it
+    - Understand the [**data**](./data/index.md) and collect data that you need.
+    - [**Understandand build**](models/index.md) use [**pre-trained**](models/pre_trained_models.md) models.
+    - [**Deploy**](./deploying/index.md) your model
+    - [**Manage**](../Managen.ai/index.md) your model
+
 Generative Artificial Intelligence, and related General AI and General Super AI are components of what already is and may be the future of intelligence and computing. We must effectively manage these technologies to use them to their highest potential. 
 
 To manage these technologies effectively and responsibly _we must understand them_. That is a complex task, especially given the speed at which we are generating novel insights, new discoveries, backed by increasingly powerful hardware. 
@@ -6,7 +13,8 @@ That is why we created Mana Gen AI.
 
 Here we focus on Generative AI, knowing various and changing definitions of these domains have a degree of overlap. With time and support we will be able to help many people understand the technology, lest it become a magician's tool. 
 
-!!! quote "Any sufficiently advanced technology is indistinguishable from magic. --Arthur C. Clark”
+!!! quote "Any sufficiently advanced technology is indistinguishable from magic."
+    - Arthur C. Clark
 
 In the documents you read here, you will be able to see an increseasingly consistent and understandable discussion of Gen()AI technologies, enabled by Gen()AI technologies herein described.  Like most powerful technology, Gen()AI can be a two edged sword and effective use requires responsible and thoughtful understanding. 
 
@@ -37,7 +45,7 @@ If you are working on commercial projects, be sure to look at the Licenses to en
 
 And please, whatever you do, be cognisant of the [ethical concerns](../Using/ethically/index.md)
 
-## Useful References[^a1]
+## Useful References 
 
 There is so much quality material, it would be valuable for your time to check some of these out if you got the chance. 
 
@@ -61,21 +69,14 @@ There is so much quality material, it would be valuable for your time to check s
 - [LLM Survey](https://github.com/RUCAIBox/LLMSurvey)
 - [Large Language Models Explained](https://www.understandingai.org/p/large-language-models-explained-with)
 
-[a^1]: This is presently highly [transformer-based large-language models](models/classes/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](models/classes/index.md)
-
-
 
 Generative AI is a subset of machine learning that aim to creates new data samples or information based on an input. This technology has gained significant attention recently because they have been able to produce produce high-quality, realistic data across various domains, from images and videos to text and audio.
-
-!!! important "[tl;dr](#tldr)"
-    - Evaluate your [**application**](./overview/applications.md) and think of the [**challenges**](./overview/challenges.md) associated with it
-    - Understand the [**data**](./data/index.md) and collect data that you need.
-    - [**Understandand build**](models/index.md) use [**pre-trained**](models/pre_trained_models.md) models.
-    - [**Deploy**](./deploying/index.md) your model
-    - [**Manage**](../Managen.ai/index.md) your model
 
 !!! tip "A little more advanced"
     - [Use Agents](agents/index.md) for increasingly powerful applications
     - Optimize your model [performance](models/optimizing_hyper_parameters.md) and [serving](models/call_optimization.md)
 
 In this section, we will focus on 'Understanding' the various components of GenAI, [data](./data/index.md), [models](./models/index.md) and [agents](./agents/index.md) including methods and models that are initial or under development. 
+
+!!! warning "Presentation bias"
+    This is presently highly [transformer-based large-language models](models/classes/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](models/classes/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managen.ai/contributing.md)

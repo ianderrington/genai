@@ -1,9 +1,9 @@
 
 !!! tip "**Our Mission** is to help people to effectively understand, build, use and manage Generative AI."  
 
-!!! abstract "**Our Method** uses Generative AI itself helping to build the site an dkeep it up to date."
+!!! abstract "**Our Method** uses Generative AI itself helping to build the site and keep it up to date."
 
-!!! info "**Our success** will be found when this site is able to help you to build their own GenAI solutions using the referenced material. 
+!!! info "**Our success** will be found when this site is able to help you to build their own GenAI solutions using the referenced material. "
 
 ## Welcome to [Managen.ai](https://www.managen.ai),
 
