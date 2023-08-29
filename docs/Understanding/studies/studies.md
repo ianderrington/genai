@@ -5,17 +5,18 @@ For GenAI and LLMs, much of what has been learned has been surmised or known onl
 It is debated that sufficiently large models exhibit 'emergence'. While not always defined universally, this can be considered as the ability for the model to perform tasks beyond what they initially were trained to do, or to be 'greater than the individual sum of the parts'. While this distinction may be of merit it remains a popular arena for academic debates. 
 
 
-## References
+##
+
+??? note [SEMANTIC UNCERTAINTY: LINGUISTIC INVARIANCES FOR UNCERTAINTY ESTIMATION IN NATURAL LANGUAGE GENERATION](https://arxiv.org/pdf/2302.09664.pdf)
+
+    <img width="908" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c45f0580-2681-40cf-91c7-57bfde4f929d">
 
 
 ??? tip [Transformers learn through gradual rank increase](https://huggingface.co/papers/2306.07042) 
     They "identify incremental learning dynamics in transformers, where the difference between trained and initial weights progressively increases in rank. We rigorously prove this occurs under the simplifying assumptions of diagonal weight matrices and small initialization. Our experiments support the theory and also show that phenomenon can occur in practice without the simplifying assumptions."
 
-<div class=markdown>
-  !!!tip "[Grokking](https://pair.withgoogle.com/explorables/grokking/)"
-      When training, if test loss starts to increase while the training loss continues to go down, it is often considered to be memorization. With hyperparameters (weight decay) extremely long training may result in the test loss eventually going down, allowing for generalization to occur. While not fully understood, it is important to be aware of this phenomenon. 
-
-
+??? tip "[Grokking](https://pair.withgoogle.com/explorables/grokking/)"
+    When training, if test loss starts to increase while the training loss continues to go down, it is often considered to be memorization. With hyperparameters (weight decay) extremely long training may result in the test loss eventually going down, allowing for generalization to occur. While not fully understood, it is important to be aware of this phenomenon. 
 
 
 ??? [Multimodal Neurons in Pretrained Text-Only Transformers](https://arxiv.org/pdf/2308.01544.pdf) Neat demonstration "finding multimodal neurons in text-only transformer MLPs and show that these neurons consistently translate image semantics into language."  
