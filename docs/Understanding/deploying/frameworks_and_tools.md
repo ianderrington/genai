@@ -1,7 +1,3 @@
-TODO, split this up in other documents up by what it does, not what it is.
-
-While still evolving there is an increasing number of quality frameworks that are suited to successfully enabling Generative AI applications. 
-
 - [Langchain](#langchain) is a early system that has stellar success with a principled design allowing for extensive applications to built on top of it. 
 - [Llama Ecosystem](#llama-ecosystem) is a a community of Llama-focused modelers, based on the Meta model called Llama, Llama-2 and beyond. 
 - [A number of others](#others).
