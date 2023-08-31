@@ -1,5 +1,10 @@
+## Libraries
 
-!!! tip "[GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)"
+!!! code "[FlexFlow](https://github.com/flexflow/FlexFlow) Low-Latency, High-Performance LLM Serving"
+    Check this out!   
+
+!!! code "[llm](https://github.com/simonw/llm) A CLI utility and Python library for interacting with Large Language Models, including OpenAI, PaLM and local models installed on your own machine."
+
 
 ??? code "[vLLM](https://vllm.ai/) utilizes **PagedAttention** to manage attention keys/values to enable 24x throughput than other transformers w/out architecture changes"
 
@@ -14,8 +19,6 @@
 
 !!! code "[Lit-Gpt](https://github.com/Lightning-AI/lit-gpt#setup) Hackable implementation of state-of-the-art open-source large language models released under the Apache 2.0 license."
 
-!!! code "[Azure-Chat-GPT](https://github.com/davidxw/azurechatgpt) to run GPT on Azure services"
-
 !!! code "[Torch Serve](https://pytorch.org/serve/large_model_inference.html) enable efficient serving."
 
 ??? tip "[Triton Inference Server](https://github.com/triton-inference-server/server) Part of NVIDIA AI Inference" 
@@ -25,5 +28,9 @@
     
     [Railway.app](https://railway.app/about)
 
-!!! code "[FlexFlow](https://github.com/flexflow/FlexFlow) Low-Latency, High-Performance LLM Serving"
-    Check this out!    
+## Platforms 
+
+!!! code "[Azure-Chat-GPT](https://github.com/davidxw/azurechatgpt) to run GPT on Azure services"
+
+## Tutorials
+!!! tip "[GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)"
