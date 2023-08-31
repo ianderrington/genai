@@ -83,11 +83,6 @@ TODO: Clip paper
     **Example chat response**
     <img width="560" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c207939b-9bd7-4a20-b747-ea46d13534f7">
 
-??? tip "[Baize: An Open-Source Chat Model with Parameter-Efficient Tuning on Self-Chat Data](https://arxiv.org/pdf/2304.01196.pdf) Parameter efficient LLama Tuning and risk minimization"
-
-    with a new 'Self Distillation' with Feedback to improve itself even more. RESEARCH ONLY
-    <img width="587" alt="image" src="https://github.com/ianderrington/genai
-
   - [DeepSpeed-Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
 
 ## To consider
