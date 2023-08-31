@@ -43,8 +43,16 @@ Vision Language models are among the most prominent.
 TODO: Clip paper
 
 ??? tip "[SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs](https://arxiv.org/pdf/2306.17842.pdf) A really cool idea that uses pyramidal representations and compresses information into text-tokens of different levels."
+
     It can be reconstructed as needed. These tokens then could be used in novel image generation via semantic mapping with an LLM. 
     <img width="1252" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e64de0a0-0e8b-4d2e-9c0e-bb89fcdd67e8">
+
+??? "[Towards Language Models That Can See: Computer Vision Through the LENS of Natural Language](https://arxiv.org/pdf/2306.16410.pdf) Represents images into language and combines them with a Frozen LLM to produce output."
+
+    <img width="843" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/efb3e439-ba1e-45f1-90c3-840b393c45df">
+
+    <img width="853" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/dd327581-60d6-4e2e-a503-5aa1871c903c">
+
 
 ## More than one modal 
 
