@@ -115,5 +115,17 @@ Additional models come up all the time.
   * Multi-head attention. Multiple attention heads in parallel.
   * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`. 
   * Unembedding: Learns to convert vector intot he vocuabulary elements. 
-  
+
+??? tip "[Why you probably don't need to fine tune an LLM](https://www.tidepool.so/2023/08/17/why-you-probably-dont-need-to-fine-tune-an-llm)
+    
+    Summary (with links internal to this project):
+    **Why you shouldn't**
+    1. Few Shot examples and better [prompts](../prompting/index.md) (and [chains](../agents/chains.md) helps a great deal.
+    2. [Retrieval Augmented Generation](../agents/rag.md) will get you all the way there. 
+    
+    
+    **Why you should** 
+    1. High accuracy requirements
+    2. Don't care about speed
+    3. Methods above don't work
 
