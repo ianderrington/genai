@@ -32,17 +32,25 @@ dic>
 
 ## Mixture of Experts
 
-## MultiModal 
+
+## Multi-Modal Models
+
+While there is a great deal in several primary domains of Generative AI, Text, Image, sound, video, there are many other modalities that are of interest. Here we share prominent and interesting methods for these domains. These models will often rely on [tokenization](../data/tokenizing.md) and [embedding](../data/embedding.md) changes, but because they may impact the entire system we mention them here.
+
+### Vision-Language Models
+Vision Language models are among the most prominent. 
+
+TODO: Clip paper
 
 ??? tip "[SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs](https://arxiv.org/pdf/2306.17842.pdf) A really cool idea that uses pyramidal representations and compresses information into text-tokens of different levels."
-    It can reconstruct it as need be. These tokens then could be used in novel image generation via semantic mapping with an LLM. 
+    It can be reconstructed as needed. These tokens then could be used in novel image generation via semantic mapping with an LLM. 
     <img width="1252" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e64de0a0-0e8b-4d2e-9c0e-bb89fcdd67e8">
 
+## More than one modal 
 
-??? tip [Multimodal Neurons in Pretrained Text-Only Transformers](https://arxiv.org/pdf/2308.01544.pdf) Neat demonstration     i    "finding multimodal neurons in text-only transformer MLPs and show that these neurons consistently translate
-image semantics into language."  
-
-
+??? important "[Meta Transformer](https://arxiv.org/pdf/2307.10802.pdf) Combines embedding in from 12 modalities by adjoining individual models and flattening them together."
+    <img width="868" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f366d75d-43fd-4101-84e6-53baa49b64ab">
+    [Github](https://github.com/invictus717/MetaTransformer)
 
 
 ## Model agnostic improvements
@@ -52,7 +60,18 @@ image semantics into language."
 
 ## TO SORT
 
+<img width="868" alt="image" src="https://github.com/ianderrington/genai//assets/76016868/5426c030-96a6-4e85-a37f-d465a7e13ab5">
 
+
+## Model agnostic improvements
+
+!!! tip "[Learning to Compress Prompts with Gist Tokens](https://arxiv.org/pdf/2304.08467.pdf). Can enable 26x compression and 40% FLOP reduction and improvements by training 'gist tokens' to summarize information."
+
+
+## TO SORT
+
+
+!!! tip " [Multimodal Neurons in Pretrained Text-Only Transformers](https://arxiv.org/pdf/2308.01544.pdf) "finding multimodal neurons in text-only transformer MLPs and show that these neurons consistently translate image semantics into language."  
 
 
 ??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/abs/2307.09288) A nearly open source set of 7B-70B models with quality performance"
@@ -67,29 +86,11 @@ image semantics into language."
 ??? tip "[Baize: An Open-Source Chat Model with Parameter-Efficient Tuning on Self-Chat Data](https://arxiv.org/pdf/2304.01196.pdf) Parameter efficient LLama Tuning and risk minimization"
 
     with a new 'Self Distillation' with Feedback to improve itself even more. RESEARCH ONLY
-    <img width="587" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5426c030-96a6-4e85-a37f-d465a7e13ab5">
-
-
-
-
-## MultiModal 
-
-There are two primary domains of Generative AI, text-oriented or image-oriented, though there is great indication that many other (multi-)modalities will be very important for the future. 
-
-??? tip "[SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs](https://arxiv.org/pdf/2306.17842.pdf) A really cool idea that uses pyramidal representations and compresses information into text-tokens of different levels."
-    It can reconstruct it as need be. These tokens then could be used in novel image generation via semantic mapping with an LLM. 
-
-
-
-## Model agnostic improvements
-
-- [Learning to Compress Prompts with Gist Tokens](https://arxiv.org/pdf/2304.08467.pdf). Can enable 26x compression and 40% FLOP reduction and improvements. Trains 'gist tokens' to summarize information. 
-
-
-## TO SORT
+    <img width="587" alt="image" src="https://github.com/ianderrington/genai
 
   - [DeepSpeed-Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
-- 
+
+## To consider
   * Token Embedding: Mapping to a vector space. 
   * Positional Embedding: Learned or hard-coded mapping to position of sequence to a vector space
   * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information. 
@@ -98,10 +99,7 @@ There are two primary domains of Generative AI, text-oriented or image-oriented,
   * Cross attention applies attention to the primary sequence and treates the second token sequence the context. 
   * Multi-head attention. Multiple attention heads in parallel.
   * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`. 
-  * Unembedding: Learns to convert vector intot he vocuabulary elements.
-
-    
-  
+  * Unembedding: Learns to convert vector intot he vocuabulary elements.  
   * Token Embedding: Mapping to a vector space. 
   * Positional Embedding: Learned or hard-coded mapping to position of sequence to a vector space
   * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information. 
