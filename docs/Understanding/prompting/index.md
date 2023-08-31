@@ -4,7 +4,7 @@
 - [Wolfram Prompt Repo](https://writings.stephenwolfram.com/2023/06/prompts-for-work-play-launching-the-wolfram-prompt-repository/?mibextid=Zxz2cZ)
 - [Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
 - scale.com/spellbook
-
+- [Prompt Hub](https://app.prompthub.studio/) For Generating image prompts
 
 ## Prompt engineering
 - [Prompting is Programming: A Query Language for Large Language Models](https://arxiv.org/pdf/2212.06094.pdf)
@@ -76,20 +76,22 @@ According to {some_reputable_source} ...
 
 ### Resources
 
-- ‼️ [Awesome Prompts](https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md?fbclid=IwAR0_nY_o0c8olt3z7d9vibGUMOrx520Ezs9ej-PNpQfzBru01R5VCpWTnNg)
-- ‼️ [Prompt Engineering by Lillian Wang](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)
+- [Awesome Prompts](https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md?fbclid=IwAR0_nY_o0c8olt3z7d9vibGUMOrx520Ezs9ej-PNpQfzBru01R5VCpWTnNg)
+- [Prompt Engineering by Lillian Wang](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)
 - [Prompt Engineering Guide](https://www.promptingguide.ai/)
 - [Best practices for prompt engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)
 - [Chain of Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
 - [Automatic Prompt Engineering](https://arxiv.org/abs/2211.01910) --> Gave a CoT improvement suggestion "Let's work this out in a step by step by way to be sure we have the right answer."
-- [Techniques to improve reliability](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md#how-to-improve-reliability-on-complex-tasks) By OpenAI 
- - Give clearer instructions
- - Split complex tasks into simpler subtasks
- - Structure the instruction to keep the model on task
- - Prompt the model to explain before answering
- - Ask for justifications of many possible answers, and then synthesize
- - Generate many outputs, and then use the model to pick the best one
- - Fine-tune custom models to maximize performance
+
+!!! tip "[Techniques to improve reliability](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md#how-to-improve-reliability-on-complex-tasks) By OpenAI"
+
+   - Give clearer instructions
+   - Split complex tasks into simpler subtasks
+   - Structure the instruction to keep the model on task
+   - Prompt the model to explain before answering
+   - Ask for justifications of many possible answers, and then synthesize
+   - Generate many outputs, and then use the model to pick the best one
+   - Fine-tune custom models to maximize performance
 
 
 
