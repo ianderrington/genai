@@ -99,6 +99,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#libraries" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1461,9 +1466,52 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Back end
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="back_end.html" class="md-nav__link md-nav__link--active">
         Back end
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platforms" class="md-nav__link">
+    Platforms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    Tutorials
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1798,6 +1846,35 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platforms" class="md-nav__link">
+    Platforms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    Tutorials
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1816,7 +1893,14 @@
 
   <h1>Back end</h1>
 
-<p>!!! tip <a href="https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33">GCP Tutorial</a></p>
+<h2 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h2>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/flexflow/FlexFlow">FlexFlow</a> Low-Latency, High-Performance LLM Serving</p>
+<p>Check this out!   </p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/simonw/llm">llm</a> A CLI utility and Python library for interacting with Large Language Models, including OpenAI, PaLM and local models installed on your own machine.</p>
+</div>
 <details class="code">
 <summary><a href="https://vllm.ai/">vLLM</a> utilizes <strong>PagedAttention</strong> to manage attention keys/values to enable 24x throughput than other transformers w/out architecture changes</summary>
 <p>"PagedAttention allows storing continuous keys and values in non-contiguous memory space. Specifically, PagedAttention partitions the KV cache of each sequence into blocks, each block containing the keys and values for a fixed number of tokens. During the attention computation, the PagedAttention kernel identifies and fetches these blocks efficiently."
@@ -1832,9 +1916,6 @@
 <p class="admonition-title"><a href="https://github.com/Lightning-AI/lit-gpt#setup">Lit-Gpt</a> Hackable implementation of state-of-the-art open-source large language models released under the Apache 2.0 license.</p>
 </div>
 <div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/davidxw/azurechatgpt">Azure-Chat-GPT</a> to run GPT on Azure services</p>
-</div>
-<div class="admonition code">
 <p class="admonition-title"><a href="https://pytorch.org/serve/large_model_inference.html">Torch Serve</a> enable efficient serving.</p>
 </div>
 <details class="tip">
@@ -1845,9 +1926,13 @@
 <p class="admonition-title"><a href="https://github.com/BerriAI/litellm/blob/main/cookbook/proxy-server/readme.md">litellm by BerriAI</a> provides code to enable railways deployed on railway.app</p>
 <p><a href="https://railway.app/about">Railway.app</a></p>
 </div>
+<h2 id="platforms">Platforms<a class="headerlink" href="#platforms" title="Permanent link">&para;</a></h2>
 <div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/flexflow/FlexFlow">FlexFlow</a> Low-Latency, High-Performance LLM Serving</p>
-<p>Check this out!    </p>
+<p class="admonition-title"><a href="https://github.com/davidxw/azurechatgpt">Azure-Chat-GPT</a> to run GPT on Azure services</p>
+</div>
+<h2 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33">GCP Tutorial</a></p>
 </div>
 
 
