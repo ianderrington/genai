@@ -87,6 +87,11 @@ Here are some known thought structures that are improving agentic output.
 
 ## Graph chains
 
+!!! tip "[Algorithm of Thoughts](https://arxiv.org/pdf/2308.10379.pdf) A general extension of Chain of Thought, similar to Graph of Thoughts"
+
+    <img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/daca5b24-8ca4-4548-a3b4-1c5eac34017f">
+
+
 !!! code "[Graph of Thoughts](https://arxiv.org/pdf/2308.09687.pdf) Generalizes Chain of Thought, Tree of Thoughts, and similar systems of thought"
 
     <img width="753" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7edd59b0-d6bb-4d70-9fba-90c8f705fc98">
@@ -96,7 +101,7 @@ Here are some known thought structures that are improving agentic output.
     An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.
     ![image](https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649)
 
-??? tip "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
+??? code "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
 
     <img width="1663" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e516604b-57b2-4d82-b9a9-0168c8eb9f15">
 
@@ -105,12 +110,12 @@ Here are some known thought structures that are improving agentic output.
      Powerful to consider for inferred beliefs and interacting in situations where negotiation or games are being played.
     <img width="1008" alt="image" src="https://github.com/ianderrington/general/assets/76016868/5ffa0653-a323-44a6-bff5-b49e3be6091a">
 
-??? tip "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)"
+??? code "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)"
 
     [Github](https://github.com/jieyilong/tree-of-thought-puzzle-solver)
 
 
-??? tip "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf) A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage."  
+??? code "[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf) A method that allows for idea-expansion and selection of the final result output by choosing the best at each stage."  
 
     **The thought flow**
     ![image](https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28)
