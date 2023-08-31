@@ -6,11 +6,18 @@
 - scale.com/spellbook
 - [Prompt Hub](https://app.prompthub.studio/) For Generating image prompts
 
+## Organization
+
+- [Notion.io plugin](https://haonmade.gumroad.com/l/ozuvb)
+
+
 ## Prompt engineering
+
 - [Prompting is Programming: A Query Language for Large Language Models](https://arxiv.org/pdf/2212.06094.pdf)
 
 
 ### Manual 
+
 - [OPEN AI best practices](https://platform.openai.com/docs/guides/gpt-best-practices/)
 
 
