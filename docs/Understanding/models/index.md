@@ -79,4 +79,5 @@ Different [model classes](./classes/index.md) of models can often be used with m
 - [Understanding Large Language Models](https://magazine.sebastianraschka.com/p/understanding-large-language-models)
 
   
-
+- [ What we know about LLMS (primer)](https://willthompson.name/what-we-know-about-llms-primer)
+- [Catching up on the weird world of LLMs](https://simonwillison.net/2023/Aug/3/weird-world-of-llms/)
