@@ -52,7 +52,11 @@ TODO: Clip paper
     <img width="843" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/efb3e439-ba1e-45f1-90c3-840b393c45df">
 
     <img width="853" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/dd327581-60d6-4e2e-a503-5aa1871c903c">
+    [Github](https://github.com/ContextualAI/lens)
+    [Website](https://contextual.ai/introducing-lens/)
 
+### Tabular Models
+- [Challenges in End-to-End Neural Scientific Table Recognitions](https://ieeexplore.ieee.org/abstract/document/8978078)
 
 ## More than one modal 
 
