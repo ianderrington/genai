@@ -54,7 +54,16 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 - [Ontology mapping](https://medium.com/@peter.lawrence_47665/encouraging-results-for-knowledge-graph-extraction-by-llm-ontology-prompting-60a7e5dcaf0a)
 
-??? tip "[Unifying Large Language Models and Knowledge Graphs: A Roadmap](https://arxiv.org/pdf/2306.08302.pdf)
+??? code "[OntoGPT](https://github.com/monarch-initiative/ontogpt) uses two different methods to query knowledge graphs using LLMS"
+
+    Uses [SPIRES: Structured Prompt Interrogation and Recursive Extraction of Semantics](https://arxiv.org/abs/2304.02711 )
+    A Zero-shot learning (ZSL) approach to extracting nested semantic structures from text
+    This approach takes two inputs - 1) LinkML schema 2) free text, and outputs knowledge in a structure conformant with the supplied schema in JSON, YAML, RDF or OWL formats
+    Uses GPT-3.5-turbo, GPT-4, or one of a variety of open LLMs on your local machine
+    [SPINDOCTOR: Structured Prompt Interpolation of Narrative Descriptions Or Controlled Terms for Ontological Reporting](https://arxiv.org/abs/2305.13338)
+
+??? tip "[Unifying Large Language Models and Knowledge Graphs: A Roadmap](https://arxiv.org/pdf/2306.08302.pdf)"
+
     <img width="570" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/63d90af4-6475-4622-9da9-ec90c979d745">
 
 ### Language translation
