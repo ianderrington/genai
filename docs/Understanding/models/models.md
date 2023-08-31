@@ -98,6 +98,7 @@ TODO: Clip paper
   - [DeepSpeed-Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
 
 ## To consider
+  * [HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units](https://ieeexplore.ieee.org/abstract/document/9585401)
   * Token Embedding: Mapping to a vector space. 
   * Positional Embedding: Learned or hard-coded mapping to position of sequence to a vector space
   * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information. 
