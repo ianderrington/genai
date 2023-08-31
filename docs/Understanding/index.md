@@ -2,7 +2,7 @@
     - Evaluate your [**application**](./overview/applications.md) and think of the [**challenges**](./overview/challenges.md) associated with it
     - Understand the [**data**](./data/index.md) and collect data that you need.
     - [**Understandand build**](models/index.md) use [**pre-trained**](models/pre_trained_models.md) models.
-    - [**Deploy**](./deploying/index.md) your model
+    - [**Deploy**](../Using/deploying/index.md) your model
     - [**Manage**](../Managen.ai/index.md) your model
 
 Generative Artificial Intelligence, and related General AI and General Super AI are components of what already is and may be the future of intelligence and computing. We must effectively manage these technologies to use them to their highest potential. 
