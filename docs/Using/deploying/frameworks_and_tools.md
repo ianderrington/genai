@@ -49,6 +49,7 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 - [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
 
 #### Others
+!!! tip "[embed chain](https://github.com/embedchain/embedchain) Embedchain is a python an djsframework to easily create LLM powered bots over any dataset."
 
 ??? tip "[txtai](https://github.com/neuml/txtai) 'is an all-in-one embeddings database for semantic search, LLM orchestration and language model workflows."
 
@@ -62,6 +63,8 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 - [Chatall](https://github.com/sunner/ChatALL) To interact with multiple chatbots at the same time.
 - [LocalAI](https://github.com/go-skynet/LocalAI) drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
 
+??? code "[Open Agent](https://github.com/dot-agent/openagent) Microservices approach to AGI. Modular components for AI apps or AGI agents"
+    
 
 
   
