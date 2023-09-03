@@ -12,10 +12,15 @@ Here we share a selection of repositories, that enable the creation of models.
 
 ### Finetuning
 
-- [Adapters for Hugging Face](https://adapterhub.ml/)
+Please see the [finetuning](../../Understanding/models/finetuning.md) page for more in depth information on this. 
 
+- [Adapters for Hugging Face](https://adapterhub.ml/)
 - [Chatall](https://github.com/sunner/ChatALL) To interact with multiple chatbots at the same time.
 - [LocalAI](https://github.com/go-skynet/LocalAI) drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
+
+??? code "[Tool Bench](https://github.com/OpenBMB/ToolBench) 'This project (ToolLLM) aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability.'"
+
+    ![image](https://github.com/OpenBMB/ToolBench/blob/master/assets/overview.png)
 
 ### Serving
 !!! code "[Open LLM](https://github.com/bentoml/OpenLLM) to run inference with any open-source large-language models, deploy to the cloud or on-premises, and build powerful AI apps."
@@ -61,6 +66,11 @@ Here we share a selection of repositories, that enable the creation of models.
 
 
 ### Memory Interaction
+
+- [Deploying on Azure for Embeddings](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna)
+- [Integrating with Azure Services](https://www.youtube.com/watch?v=tW2EA4aZ_YQ)
+
+
 !!! tip "[EmbedChain](https://github.com/embedchain/embedchain)"
     "Embedchain is a framework to easily create LLM powered bots over any dataset." OpenAI and Llama2 so far.
 
@@ -86,6 +96,7 @@ Here we share a selection of repositories, that enable the creation of models.
 !!! code "[GPTCache](https://github.com/zilliztech/GPTCache) to quickly Cache your results to speed second-time queries."
 
 ###  Executors and Interpeters
+
 Executors are programming levels of abstraction that encourage the execution of any tools or intractions with internal and external memories and states. 
 
 Interpreters are executors that facilitate model computation by parsing, formatting, or otherwise preparing the data for effective use. They can also be used to interpret output to perform routing of actions. 
