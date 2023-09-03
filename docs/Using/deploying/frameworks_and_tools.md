@@ -64,6 +64,8 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 - [LocalAI](https://github.com/go-skynet/LocalAI) drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
 
 ??? code "[Open Agent](https://github.com/dot-agent/openagent) Microservices approach to AGI. Modular components for AI apps or AGI agents"
+    <img width="371" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/127a5949-19c8-4b0b-863a-50c5f1a48398">
+
     
 
 
