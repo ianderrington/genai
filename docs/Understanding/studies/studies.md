@@ -24,3 +24,6 @@ It is debated that sufficiently large models exhibit 'emergence'. While not alwa
 ??? "[Scaling Data-Constrained Language Models](https://arxiv.org/pdf/2305.16264.pdf) Demonstrations that repeated token use is less valuable than new token use."
     [Github](https://github.com/huggingface/datablations)
     <img width="539" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ddd534a2-915f-417d-a6e2-6091d425fa02">
+
+
+??? "[](https://arxiv.org/pdf/2308.03296.pdf)"

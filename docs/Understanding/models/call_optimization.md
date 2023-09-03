@@ -9,7 +9,7 @@ Time is money and the ability to quickly allow your GenAI to create high perform
 Eliminate weights that do not produce consistently valuable outputs. 
 
 
-??? code "[Fast as Chita: Neural network pruning with combinatorial optimization](https://blog.research.google/2023/08/neural-network-pruning-with.html)"
+??? important "[Fast as Chita: Neural network pruning with combinatorial optimization](https://blog.research.google/2023/08/neural-network-pruning-with.html)"
 
     [Arxiv paper](https://arxiv.org/abs/2302.14623)
      "an optimization-based approach for pruning pre-trained neural networks at scale. CHITA (which stands for “Combinatorial Hessian-free Iterative Thresholding Algorithm”) outperforms existing pruning methods in terms of scalability and performance tradeoffs, and it does so by leveraging advances from several fields, including high-dimensional statistics, combinatorial optimization, and neural network pruning."

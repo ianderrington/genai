@@ -71,27 +71,6 @@ Please see the [finetuning](../../Understanding/models/finetuning.md) page for m
 - [Integrating with Azure Services](https://www.youtube.com/watch?v=tW2EA4aZ_YQ)
 
 
-!!! tip "[EmbedChain](https://github.com/embedchain/embedchain)"
-    "Embedchain is a framework to easily create LLM powered bots over any dataset." OpenAI and Llama2 so far.
-
-??? example
-    ```python
-        import os
-
-        from embedchain import Llama2App
-        
-        os.environ['REPLICATE_API_TOKEN'] = "REPLICATE API TOKEN"
-        
-        zuck_bot = Llama2App()
-        
-        # Embed your data
-        zuck_bot.add("youtube_video", "https://www.youtube.com/watch?v=Ff4fRgnuFgQ")
-        zuck_bot.add("web_page", "https://en.wikipedia.org/wiki/Mark_Zuckerberg")
-        
-        # Nice, your bot is ready now. Start asking questions to your bot.
-        zuck_bot.query("Who is Mark Zuckerberg?")
-        # Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook. 
-    ```
 
 !!! code "[GPTCache](https://github.com/zilliztech/GPTCache) to quickly Cache your results to speed second-time queries."
 

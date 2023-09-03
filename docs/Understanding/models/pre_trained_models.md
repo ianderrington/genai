@@ -33,5 +33,4 @@ Here are some notable models
 
 - [StableLM: Stability AI Language Models](https://github.com/stability-AI/stableLM/) 
 
-
-
+- [Stable Diffusion](https://github.com/apple/ml-stable-diffusion)
