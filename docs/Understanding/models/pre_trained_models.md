@@ -20,6 +20,7 @@ Here are some notable models
 - [Medpalm](https://arxiv.org/abs/2212.13138)
 - [Llama2](https://ai.meta.com/llama/)
 - [Llama2 uncensorred](https://huggingface.co/Tap-M/Luna-AI-Llama2-Uncensored)
+- [TinyLlama](https://github.com/jzhang38/TinyLlama)
 - [Open Llama](https://github.com/openlm-research/open_llama) 
 - [UAE Falcon](https://www.tii.ae/news/uaes-falcon-40b-now-royalty-free) 
 - [Orca (Microsoft)](https://arxiv.org/pdf/2306.02707.pdf) 
