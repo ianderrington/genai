@@ -80,7 +80,7 @@ TODO: Clip paper
     **Example chat response**
     <img width="560" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c207939b-9bd7-4a20-b747-ea46d13534f7">
 
-  - [DeepSpeed-Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
+
 
 ## To consider and sort
 
