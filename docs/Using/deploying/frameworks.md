@@ -23,7 +23,11 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 - [Tensorflow](https://tensorflow.org) a popular multi-language eco-system for creating and using AI.
 - [spAcy](https://spacy.io/) is a library for advanced Natural Language Processing in Python and Cython.
 
-### Orchestration-Level software libraries
+#### Fine Tuning
+
+!!! code "[LLM Finetuning Hub](https://github.com/georgian-io/LLM-Finetuning-Hub) is an evolving model finetuning codebase. "
+
+### Complete Orchestration Frameworks
 
 Handling the inputs/outputs to GenAI in a consistent and reliable manner has spurred the creation of software libraries that can work with GenAI that is called as a service, or hosted locally.
 
@@ -96,5 +100,8 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 ??? code "[Open Agent](https://github.com/dot-agent/openagent) IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents"
 
   
-### Training, Tuning and Deployment
+### Specific components
+#### Retrieval Augmented 
+
+??? code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines
 
