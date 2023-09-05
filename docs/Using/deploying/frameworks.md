@@ -23,6 +23,21 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 - [Tensorflow](https://tensorflow.org) a popular multi-language eco-system for creating and using AI.
 - [spAcy](https://spacy.io/) is a library for advanced Natural Language Processing in Python and Cython.
 
+#### Higher level
+
+??? code "[Pytorch Lightning](https://lightning.ai/docs/pytorch/latest/) Enables model training with Pytorch and minimizes the boilerplate"
+
+    [Model parallelism](https://lightning.ai/docs/pytorch/stable/advanced/model_parallel.html)
+
+??? code "[Deep Speed (by MSFT)](https://github.com/microsoft/DeepSpeed) empowers ChatGPT-like model training with a single click, offering 15x speedup over SOTA RLHF systems with unprecedented cost reduction at all scales"
+    [Blog on Deepspeed Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
+    ![image](https://github.com/microsoft/DeepSpeed/raw/master/blogs/assets/images/ds-chat-overview.png)
+    
+    DeepSpeed-Ulysses uses a simple, portable, and effective methodology for enabling highly efficient and scalable LLM training with extremely long sequence lengths
+    "DeepSpeed-Ulysses partitions individual samples along the sequence dimension among participating GPU. Then right before the attention computation, it employs all-to-all communication collective on the partitioned queries, keys and values such that each GPU receives the full sequence but only for a non-overlapping subset of the attention heads. This allows the participating GPUs to compute attention for different attention heads in parallel. Finally, DeepSpeed-Ulysses employs another all-to-all to gather the results along the attention heads while re-partitioning along the sequence dimension."
+    ![Ulysses](https://github.com/microsoft/DeepSpeed/blob/master/blogs/deepspeed-ulysses/media/image3.png)
+    Tutorial [here](https://www.deepspeed.ai/tutorials/ds-sequence/)
+
 #### Fine Tuning
 
 !!! code "[LLM Finetuning Hub](https://github.com/georgian-io/LLM-Finetuning-Hub) is an evolving model finetuning codebase. "
