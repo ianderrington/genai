@@ -11,11 +11,11 @@ Here we will discuss the models essential components of building Gen()AI models.
 
 There is a rich history of Generative AI  models that may be of interest, which will be shared in future versions of this code. 
 
-Of primary importance is the manner of [model learning](#model-learning), or adapting to the input data. There are several fundamental types of model-updating: [supervised learning]() , [unsupervisedlearning](), [semi-supervised learning](), [self-supervised learning](), [reinforcement learning (RL)](), and combinations of thereof. 
+Of primary importance is the manner of [model learning](#model-learning), or adapting to the input data. There are several fundamental types of model-updating: [supervised learning](), [unsupervisedlearning](), [semi-supervised learning](), [self-supervised learning](), [reinforcement learning (RL)](), and combinations of thereof. 
 
 Presently, the most successful models rely on  [**foundation models**](#foundation-models) that are trained on large corpora of data in a self-supervised manner. These models can then be refined using supervised, semi-supervised, and/or reinforcement learning techniques. 
 
-Once build, Gen()AI is generally called with language inputs to create a specifically desired end-result.  These inputs, known as _prompts_ will generally be model-specific but may sometimes share commonalities for more-optimal usage, which we describe in [prompt engineering](../prompting/index.md).
+Once built, Gen()AI is generally called with language inputs to create a specifically desired end result.  These inputs, known as _prompts_ will generally be model-specific but may sometimes share commonalities for more optimal usage, which we describe in [prompt engineering](../prompting/index.md).
 
 ## Foundation Models
 
@@ -50,6 +50,14 @@ When combined with self-supervision, [reinforcement learning](./classes/reinforc
 ### Hybrid learning methods
 
 _Hybrid Learning_ methods combine one or several methods above to enable more successful Generative AI. _Semi-supervised learning_ is a form of hybrid learning where supervised and unsupervised learning are used to produce the final outcome. 
+
+General Pretrained Transformer models (GPT) work this way by first doing unsupervised prediction. Then some supervised training is provided. Then an RL approach is used to create a loss model using [reinforcment Learning with Human Feedback (RLHF)](./classes/reinforcement_learning.md#RLHF) to score multiple potential outputs to provide more effective outputs. 
+
+Particular types of RLHF, like instruction-training of [Instruct GPT](https://arxiv.org/abs/2203.02155) enables models to perform effectively. 
+
+![image](https://github.com/ianderrington/genai/assets/76016868/f9604950-6bd6-4855-85dd-16456a0528e9)
+
+
 
 #### Language Models and LLMs
 
