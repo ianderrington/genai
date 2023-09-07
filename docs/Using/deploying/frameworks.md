@@ -55,6 +55,10 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 - [Toolkit](https://www.toolkit.club/) Generates LangChain plugins
 - [Langflow](https://github.com/logspace-ai/langflow) 
 
+**Their Stack**
+![image](https://github.com/ianderrington/genai/assets/76016868/c66bf027-8556-43e6-8e73-de59c5e58d95)
+
+
 **Tutorials:**
 
 - https://www.pinecone.io/learn/langchain-prompt-templates/
@@ -75,7 +79,7 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 - [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
 - [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
 - [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
-
+- [Llama.cpp](https://github.com/ggerganov/llama.cpp) 4 bit llama on macbooks. 
 #### Others
 
 
