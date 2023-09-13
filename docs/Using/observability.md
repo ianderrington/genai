@@ -24,5 +24,8 @@ Cost of inference forms a significant part of any computation process. A thoroug
 ### Monitoring Inference Speed
 Monitoring the speed at which a model infers results can aid in optimizing its efficiency, thereby cutting down on delays and speeding up operations. It is through a careful track of these speeds that you can identify system bottlenecks and areas of productivity enhancement.
 
-## Real-World Examples
+## Libraries and Tools
+
 !!! example "[E2B's](https://github.com/e2b-dev/e2b) integration in AI agent technology stacks opens up new avenues, where it comfortably sits at the bottom, and is agnostic to the framework it operates in."
+
+!!! example "[llmonitor](https://github.com/llmonitor/llmonitor) provides self-hosted model monitoring for costs/users/requrets, feedback, etc..." 
