@@ -32,5 +32,8 @@
 
 !!! code "[Azure-Chat-GPT](https://github.com/davidxw/azurechatgpt) to run GPT on Azure services"
 
+!!! note "[Amazon Sagemaker](https://aws.amazon.com/sagemaker/) and the AWS suite allows for streamlined running of AI models in various manners"
+
+
 ## Tutorials
 !!! tip "[GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)"
