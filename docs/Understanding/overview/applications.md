@@ -66,8 +66,24 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
     <img width="570" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/63d90af4-6475-4622-9da9-ec90c979d745">
 
-### Language translation
-Generative AI is inceasingly good at translating between domains. 
+??? tip "[Universal Preprocessing Operators for Embedding KNowledge Graphs with Literals](https://arxiv.org/abs/2309.03023
+) proposes a set of preprocessing operators that can transform KGs to be embedded within any method."
+
+    [Github](https://gitlab.com/patryk.preisner/mkga/)
+    <img width="584" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4316fd44-acd3-4cad-81fd-7568c88cb69b">
+
+TODO: This needs to be moved to ai_in_general (and that needs to be made into a sub directory to appropriately handle this) 
+??? warning [Multimodal learning with graphs](https://www.nature.com/articles/s42256-023-00624-6)
+    While strictly GenAI enabled, this introduces a comprehensive manner of combining cross-modal dependencies using geometric relationships. 
+
+    <img width="711" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/51523805-c5f7-40ec-988b-590c2d2f8f81">
+
+??? warning "[PyGraft](https://github.com/nicolas-hbt/pygraft) is an open-source Python library for generating synthetic yet realistic schemas and (KGs) based on user-specified parameters."
+    [Paper](https://arxiv.org/pdf/2309.03685.pdf) 
+
+
+### Language Translation
+Generative AI is increasingly good at translating between domains. 
 
 ### Personal assistants and memory
 - [Quiver](https://github.com/StanGirard/quiv) A LLM for self second brain. 
@@ -82,7 +98,7 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 - [Codium pr-agent](https://github.com/Codium-ai/pr-agent) 
 - [Summarization with Langchain](https://github.com/EnkrateiaLucca/summarization_with_langchain) A splendid view of a quick streamlit app that does PDF summarization. 
 
-### Applicaton and component replacement
+### Application and component replacement
 
 - [GPT as backend](https://github.com/RootbeerComputer/backend-GPT)
 
