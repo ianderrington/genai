@@ -42,7 +42,7 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 
 !!! code "[LLM Finetuning Hub](https://github.com/georgian-io/LLM-Finetuning-Hub) is an evolving model finetuning codebase. "
 
-### Complete Orchestration Frameworks
+### Interaction and Orchestration Frameworks and Languages
 
 Handling the inputs/outputs to GenAI in a consistent and reliable manner has spurred the creation of software libraries that can work with GenAI that is called as a service, or hosted locally.
 
@@ -58,31 +58,48 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 **Their Stack**
 ![image](https://github.com/ianderrington/genai/assets/76016868/c66bf027-8556-43e6-8e73-de59c5e58d95)
 
-
 **Tutorials:**
 
 - https://www.pinecone.io/learn/langchain-prompt-templates/
 - https://learn.deeplearning.ai/langchain/lesson/3/memory
 
+#### LMQL
+[LMQL](https://github.com/eth-sri/lmql) is a query language that enables simplified representations of chats and agents with minimal code. 
+??? example "An example query string."
+    ```
+    "Greet LMQL:[GREETINGS]\n" where stops_at(GREETINGS, ".") and not "\n" in GREETINGS
+
+if "Hi there" in GREETINGS:
+    "Can you reformulate your greeting in the speech of \
+     victorian-era English: [VIC_GREETINGS]\n" where stops_at(VIC_GREETINGS, ".")
+
+"Analyse what part of this response makes it typically victorian:\n"
+
+for i in range(4):
+    "-[THOUGHT]\n" where stops_at(THOUGHT, ".")
+
+"To summarize:[SUMMARY]"
+```
+
 #### Llama ecosystem
 
 [Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model. 
 
-!!! code "[LlamaGPT](https://github.com/getumbrel/llama-gpt A self-hosted, offline, ChatGPT-like chatbot, powered by Llama 2. 100% private, with no data leaving your device."
 
-- [Lit-Llama](https://github.com/Lightning-AI/lit-llama)
-- [MedAlpaca](https://github.com/kbressem/medAlpaca)
-- [Llama-2 on a CPU](https://towardsdatascience.com/running-llama-2-on-cpu-inference-for-document-q-a-3d636037a3d8) and [Github](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
-- [GPT LLM Training](https://github.com/mshumer/gpt-llm-trainer) Generates and trains fine-tuned LLAMA-2 LLMs for specific tasks. 
-- [llama index](https://www.llamaindex.ai/) and [Github](https://github.com/jerryjliu/llama_index) for integrating data ingestion and models. 
-- [LlamaHub (community library of data loaders)](https://llamahub.ai)
-- [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
-- [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
-- [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
-- [Llama.cpp](https://github.com/ggerganov/llama.cpp) 4 bit llama on macbooks. 
+
+??? code "Code and models surrounding Llama"
+    - [LlamaGPT](https://github.com/getumbrel/llama-gpt A self-hosted, offline, ChatGPT-like chatbot, powered by Llama 2. 100% private, with no data leaving your device.
+    - [Lit-Llama](https://github.com/Lightning-AI/lit-llama)
+    - [MedAlpaca](https://github.com/kbressem/medAlpaca)
+    - [Llama-2 on a CPU](https://towardsdatascience.com/running-llama-2-on-cpu-inference-for-document-q-a-3d636037a3d8) and [Github](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
+    - [GPT LLM Training](https://github.com/mshumer/gpt-llm-trainer) Generates and trains fine-tuned LLAMA-2 LLMs for specific tasks. 
+    - [llama index](https://www.llamaindex.ai/) and [Github](https://github.com/jerryjliu/llama_index) for integrating data ingestion and models. 
+    - [LlamaHub (community library of data loaders)](https://llamahub.ai)
+    - [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
+    - [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
+    - [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
+    - [Llama.cpp](https://github.com/ggerganov/llama.cpp) 4 bit llama on macbooks. 
 #### Others
-
-
 
 ??? code "[EmbedChain](https://github.com/embedchain/embedchain)  is a framework to easily create LLM powered bots over any dataset." 
     Example:
