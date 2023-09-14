@@ -21,5 +21,3 @@ Below are some tools that you can use to help with this!
 
 ??? code "[Auto Evaluator](https://autoevaluator.langchain.com/) with [github](https://github.com/rlancemartin/auto-evaluator) to evaluate appropriate components of chains to enable best performance"
     ![image](https://blog.langchain.dev/content/images/size/w1600/2023/04/auto-eval.png)
-
-https://aws.amazon.com/sagemaker/
