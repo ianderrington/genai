@@ -35,6 +35,8 @@
 ??? code "[Amazon Sagemaker](https://aws.amazon.com/sagemaker/) and the AWS suite allows for streamlined running of AI models in various manners"
     [Example Code](https://github.com/aws/amazon-sagemaker-examples)
 
+!!! code "[Lamini](https://www.lamini.ai/) to help you build your AI moat"
+    [Lamini](
 
 ## Tutorials
 !!! tip "[GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)"
