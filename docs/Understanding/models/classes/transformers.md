@@ -13,17 +13,20 @@ Layer normalization observably improves results [On Layer Normalization in the T
 
 ## Reviews
 
-??? tip [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+??? tip "[The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)"
 
 
-??? tip [The Transformer Blueprint: A Holistic Guide to the Transformer Neural Network Architecture](https://deeprevision.github.io/posts/001-transformer/)
-    A thorough exposition of transformer technology.
-
-
+??? tip "[The Transformer Blueprint: A Holistic Guide to the Transformer Neural Network Architecture](https://deeprevision.github.io/posts/001-transformer/)
+    A thorough exposition of transformer technology."
 
 ### Softmax?
 
-The softmax is dominantly researched activation function. There may be other activation functions that are better, such as the 
+{%
+   include-markdown "classes/components.md"
+   start="<!--start-softmax-->"
+   end="<!--stop-softmax-->"
+%}
+%}
 
 ### GPT
 
