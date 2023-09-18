@@ -1,4 +1,11 @@
+## Regulatory Challenges
 
+### Copywrites
+
+[A thorough discussion on copyright issues](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4523551)
+
+
+## Technical Challenges
 !!! [Open challenges in LLM research](LLMhttps://huyenchip.com/2023/08/16/llm-research-open-challenges.html#5_design_a_new_model_architecture)
 Challenges associated with GenAI.
 
@@ -18,7 +25,7 @@ Challenges associated with GenAI.
     ```
     
 
-## Unintentional
+### Unintentional
 
 ### Hallucinations
 
