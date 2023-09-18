@@ -50,6 +50,8 @@ Purpose of quantization
 Train a new smaller model using the output of bigger models.
 (TODO) 
 
+[Knowledge Distillation and Compression Demo.ipynb](https://colab.research.google.com/drive/1A0SWlfcd6ISzsc0gLBIr4N_vECHhUAst#scrollTo=6v59Uu9pb_wM)
+
 ### Low rank and sparsity approximations
 (TODO) 
 
