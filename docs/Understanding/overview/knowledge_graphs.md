@@ -49,10 +49,13 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
     [Github](https://gitlab.com/patryk.preisner/mkga/)
     <img width="584" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4316fd44-acd3-4cad-81fd-7568c88cb69b">
 
-### Other Utilities
+### Other Papers and utilities
 
-??? warning [Multimodal learning with graphs](https://www.nature.com/articles/s42256-023-00624-6)
-    While not strictly GenAI enabled, this introduces a comprehensive manner of combining cross-modal dependencies using geometric relationships. 
+
+??? code [Multimodal learning with graphs](https://yashaektefaie.github.io/mgl/)
+    [Preprint](https://arxiv.org/abs/2209.03299)
+    [Nature](https://www.nature.com/articles/s42256-023-00624-6)
+    While not strictly GenAI focused, this introduces a comprehensive manner of combining cross-modal dependencies using geometric relationships. 
 
     <img width="711" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/51523805-c5f7-40ec-988b-590c2d2f8f81">
 
