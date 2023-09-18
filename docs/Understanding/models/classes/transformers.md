@@ -73,14 +73,15 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 - [Scaling Transformer to 1M tokens and beyond with RMT](https://arxiv.or dsvg/abs/2304.11062) [Github](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. 
 
 
-!!! tip "[MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185.pdf)"
+??? tip "[MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185.pdf)"
+
     MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration that allows for $O(N^{4/3}$ scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers.
 
-??? note 
     <img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356">
 
 
-- [Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf) Uses inspiration from FFT to create a drop in replacement for Transformer models. 
+!!! "[Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf) Uses inspiration from FFT to create a drop in replacement for Transformer models."
+    [Github implementation for PyTorch](https://github.com/lucidrains/MEGABYTE-pytorch)
 
 
 !!! tip "[Infinite former](https://arxiv.org/pdf/2109.00301.pdf)"
@@ -117,7 +118,7 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
 ??? note
     <img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc">
-</adiv>
+
 
 ## Training variations
 ### Fairness Enablement
