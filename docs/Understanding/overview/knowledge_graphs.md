@@ -51,8 +51,10 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 ### Other Papers and utilities
 
+!!! code "[Diffbot + Langchain for KG creation](https://python.langchain.com/docs/use_cases/more/graph/diffbot_graphtransformer)"
+    
 
-??? code [Multimodal learning with graphs](https://yashaektefaie.github.io/mgl/)
+??? code "[Multimodal learning with graphs](https://yashaektefaie.github.io/mgl/)"
     [Preprint](https://arxiv.org/abs/2209.03299)
     [Nature](https://www.nature.com/articles/s42256-023-00624-6)
     While not strictly GenAI focused, this introduces a comprehensive manner of combining cross-modal dependencies using geometric relationships. 
