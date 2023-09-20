@@ -80,6 +80,8 @@ This component helps to remove the impilcit position-independence that 'vanilla'
     <img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356">
 
 
+https://github.com/lucidrains/simple-hierarchical-transformer
+
 !!! "[Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf) Uses inspiration from FFT to create a drop in replacement for Transformer models."
     [Github implementation for PyTorch](https://github.com/lucidrains/MEGABYTE-pytorch)
 
