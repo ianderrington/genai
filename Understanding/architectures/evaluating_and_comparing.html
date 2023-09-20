@@ -12,13 +12,13 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/data/embedding.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/architectures/evaluating_and_comparing.html">
       
       
-        <link rel="prev" href="tokenizing.html">
+        <link rel="prev" href="optimization.html">
       
       
-        <link rel="next" href="privacy.html">
+        <link rel="next" href="alignment.html">
       
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Embedding - Gen()AI</title>
+        <title>Evaluating and comparing - Gen()AI</title>
       
     
     
@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#metrics" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -135,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Embedding
+              Evaluating and comparing
             
           </span>
         </div>
@@ -431,6 +436,10 @@
       
         
       
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -553,6 +562,46 @@
   
   
     <li class="md-nav__item">
+      <a href="../overview/foundation_models.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundation models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/knowledge_graphs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge graphs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../overview/open_source.html" class="md-nav__link">
         
   
@@ -599,8 +648,6 @@
                 
   
   
-    
-  
   
     
     
@@ -617,22 +664,20 @@
       
         
       
-        
-      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../data/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -648,7 +693,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Data
@@ -661,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="selection.html" class="md-nav__link">
+      <a href="../data/selection.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tokenizing.html" class="md-nav__link">
+      <a href="../data/tokenizing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -699,37 +744,9 @@
                 
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="embedding.html" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Embedding
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
     <li class="md-nav__item">
-      <a href="privacy.html" class="md-nav__link">
+      <a href="../data/privacy.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -749,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sources.html" class="md-nav__link">
+      <a href="../data/sources.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -769,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="augmentation.html" class="md-nav__link">
+      <a href="../data/augmentation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation.html" class="md-nav__link">
+      <a href="../data/simulation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -815,23 +832,11 @@
                 
   
   
+    
+  
   
     
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
       
         
           
@@ -847,24 +852,34 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../models/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    Models
+    Architectures
   </span>
   
 
@@ -876,10 +891,10 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
-            Models
+            Architectures
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -888,150 +903,8 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../models/models.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Models
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../models/training.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Training
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../models/optimizing_hyper_parameters.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Optimizing hyper parameters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../models/call_optimization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Call optimization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../models/distillation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Distillation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../models/evaluation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Evaluation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../models/alignment.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Alignment
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
     
     
-      
-        
       
         
       
@@ -1049,31 +922,31 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../models/classes/index.html" class="md-nav__link ">
+            <a href="models/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    Classes
+    Models
   </span>
   
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1_3_8">
+              <label class="md-nav__link " for="__nav_1_3_1">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_8">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_1">
             <span class="md-nav__icon md-icon"></span>
-            Classes
+            Models
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1083,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/classes/components.html" class="md-nav__link">
+      <a href="models/components.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1103,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/classes/transformers.html" class="md-nav__link">
+      <a href="models/transformers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/classes/diffusers.html" class="md-nav__link">
+      <a href="models/diffusers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,31 +1016,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/classes/gans.html" class="md-nav__link">
+      <a href="models/gans.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Gans
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../models/classes/reinforcement_learning.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Reinforcement learning
   </span>
   
 
@@ -1191,11 +1044,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/evaluating_and_comparing.html" class="md-nav__link">
+      <a href="training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Evaluating and comparing
+    Training
   </span>
   
 
@@ -1211,7 +1064,177 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/finetuning.html" class="md-nav__link">
+      <a href="optimizing_hyper_parameters.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimizing hyper parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="optimization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Evaluating and comparing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="evaluating_and_comparing.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Evaluating and comparing
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    Metrics
+  </a>
+  
+    <nav class="md-nav" aria-label="Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-discussions" class="md-nav__link">
+    General Discussions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-tools" class="md-nav__link">
+    Evaluation tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measure-what-matters" class="md-nav__link">
+    Measure what matters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="alignment.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="embedding.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embedding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="finetuning.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/pre_trained_models.html" class="md-nav__link">
+      <a href="pre_trained_models.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1251,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/recurrent_training.html" class="md-nav__link">
+      <a href="recurrent_training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/reinforcement_feedback.html" class="md-nav__link">
+      <a href="reinforcement_feedback.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2414,6 +2437,48 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    Metrics
+  </a>
+  
+    <nav class="md-nav" aria-label="Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-discussions" class="md-nav__link">
+    General Discussions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-tools" class="md-nav__link">
+    Evaluation tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measure-what-matters" class="md-nav__link">
+    Measure what matters
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2430,10 +2495,26 @@
   
 
 
-  <h1>Embedding</h1>
+  <h1>Evaluating and comparing</h1>
 
-<p>Embeddings play a key role in AI as they translate <a href="./tokenizing'">tokens</a> into numerical representation that can be processed by the AI. </p>
-<p>'What are Embeddings' is an essential <a href="http://vickiboykis.com/what_are_embeddings/">read</a> that elucidates the concept of embeddings in a digestible manner. For a deeper dive, check the accompanied <a href="https://github.com/veekaybee/what_are_embeddings/blob/main/README.md">Github</a> page.</p>
+<p>There are many ways that you can evaluate your model, and the manner of evaluation will depend on your use-case. </p>
+<h2 id="metrics">Metrics<a class="headerlink" href="#metrics" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Exact Match (EM) 
+TODO: Finish this</li>
+</ul>
+<p>While single-LLM calls are useful to evaluate, <a href="../agents/evaluating_and_comparing.html">comparing and evaluating</a> system-evaluation will likely be essential to ensure successful <a href="../../Using/deploying/index.html">deployment</a>.</p>
+<h3 id="general-discussions">General Discussions<a class="headerlink" href="#general-discussions" title="Permanent link">&para;</a></h3>
+<details class="tip">
+<summary><a href="https://www.science.org/doi/10.1126/science.adj5957">How do we know how smart AI systems are?</a></summary>
+<p>“AI systems, especially generative language systems like GPT-4, will become increasingly influential in our lives, as will claims about their cognitive capacities. Thus, designing methods to properly assess their intelligence—and associated capabilities and limitations—is an urgent matter. To scientifically evaluate claims of humanlike and even superhuman machine intelligence, we need more transparency on the ways these models are trained, and better experimental methods and benchmarks. Transparency will rely on the development of open-source (rather than closed, commercial) AI models. Better experimental methods and benchmarks will be brought about through collaborations between AI researchers and cognitive scientists who have long investigated how to do robust tests for intelligence, understanding, and other cognitive capabilities in children, animals, and other “alien” intelligences.”</p>
+</details>
+<h2 id="evaluation-tools">Evaluation tools<a class="headerlink" href="#evaluation-tools" title="Permanent link">&para;</a></h2>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/HazyResearch/legalbench/">Legal Bench</a> is an ongoing open science effort to collaboratively curate tasks for evaluating LLM legal reasoning in English.</p>
+</div>
+<p>The evaluation of models helps us to identify which, if any, model to use for a particular task at hand. Directly related to the manner of pre-training, fine-tuning, and any RLHF, the ways that we consider the output can also be used to improve the models. </p>
+<h2 id="measure-what-matters">Measure what matters<a class="headerlink" href="#measure-what-matters" title="Permanent link">&para;</a></h2>
 
 
   

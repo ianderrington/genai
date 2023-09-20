@@ -12,13 +12,13 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/models/classes/components.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/architectures/models/developing_architectures.html">
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="components.html">
       
       
-        <link rel="next" href="transformers.html">
+        <link rel="next" href="diffusers.html">
       
       
       <link rel="icon" href="../../../assets/genai_logo_edited.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Components - Gen()AI</title>
+        <title>Developing architectures - Gen()AI</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#activation-functions" class="md-skip">
+        <a href="#models" class="md-skip">
           Skip to content
         </a>
       
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Components
+              Developing architectures
             
           </span>
         </div>
@@ -436,6 +436,10 @@
       
         
       
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -558,6 +562,46 @@
   
   
     <li class="md-nav__item">
+      <a href="../../overview/foundation_models.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundation models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/knowledge_graphs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge graphs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../overview/open_source.html" class="md-nav__link">
         
   
@@ -607,8 +651,6 @@
   
     
     
-      
-        
       
         
       
@@ -689,26 +731,6 @@
   
   <span class="md-ellipsis">
     Tokenizing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/embedding.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Embedding
   </span>
   
 
@@ -817,21 +839,17 @@
     
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -861,7 +879,7 @@
               
   
   <span class="md-ellipsis">
-    Models
+    Architectures
   </span>
   
 
@@ -876,6 +894,58 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
+            Architectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_1_3_1">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_1">
+            <span class="md-nav__icon md-icon"></span>
             Models
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -886,221 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Models
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../training.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Training
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../optimizing_hyper_parameters.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Optimizing hyper parameters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../call_optimization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Call optimization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../distillation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Distillation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../evaluation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Evaluation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../alignment.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Alignment
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_8" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Classes
-  </span>
-  
-
-            </a>
-            
-              <label class="md-nav__link " for="__nav_1_3_8">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1_3_8">
-            <span class="md-nav__icon md-icon"></span>
-            Classes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Components
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="components.html" class="md-nav__link md-nav__link--active">
+      <a href="components.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1109,57 +965,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#activation-functions" class="md-nav__link">
-    Activation Functions
-  </a>
-  
-    <nav class="md-nav" aria-label="Activation Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#softmax" class="md-nav__link">
-    Softmax
-  </a>
-  
-    <nav class="md-nav" aria-label="Softmax">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#is-softmax-off-by-1" class="md-nav__link">
-    Is softmax Off by 1?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1225,17 +1030,25 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
   
   
     <li class="md-nav__item">
-      <a href="reinforcement_learning.html" class="md-nav__link">
+      <a href="../training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Reinforcement learning
+    Training
   </span>
   
 
@@ -1245,9 +1058,41 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optimizing_hyper_parameters.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimizing hyper parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optimization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimization
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1264,6 +1109,46 @@
   
   <span class="md-ellipsis">
     Evaluating and comparing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alignment.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../embedding.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embedding
   </span>
   
 
@@ -2489,35 +2374,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#activation-functions" class="md-nav__link">
-    Activation Functions
+  <a href="#models" class="md-nav__link">
+    Models
   </a>
-  
-    <nav class="md-nav" aria-label="Activation Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#softmax" class="md-nav__link">
-    Softmax
-  </a>
-  
-    <nav class="md-nav" aria-label="Softmax">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#is-softmax-off-by-1" class="md-nav__link">
-    Is softmax Off by 1?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2539,19 +2398,21 @@
   
 
 
-  <h1>Components</h1>
+  <h1>Developing architectures</h1>
 
-<p>The components of model classes include a number of operations. </p>
-<h2 id="activation-functions">Activation Functions<a class="headerlink" href="#activation-functions" title="Permanent link">&para;</a></h2>
-<h3 id="softmax">Softmax<a class="headerlink" href="#softmax" title="Permanent link">&para;</a></h3>
-<p>Softmax is an activation function that computes a probability-like output for logistic outputs. Generally given in the form</p>
-<p>(softmax(x))𝑖=exp(𝑥𝑖)∑𝑗exp(𝑥𝑗)
-$$
-softmax(x_i) = \exp(x_i)/\sum_j\exp(x_j)
-$$</p>
-<h4 id="is-softmax-off-by-1">Is softmax Off by 1?<a class="headerlink" href="#is-softmax-off-by-1" title="Permanent link">&para;</a></h4>
-<p>Based on some observations by <a href="https://arxiv.org/pdf/2306.12929.pdf">Qualcom</a>, where "97%+ of outlier activations in LLMs occur in whitespace and punctuation positions.”  there was indication that it is important to have 'no attention' given to some tokens.
-Adding a <span class="arithmatex">\(1\)</span> to the demonimator allows for <code>no attention</code> to be had. This is describe <a href="https://www.evanmiller.org/attention-is-off-by-one.html">here</a>, discussed <a href="https://news.ycombinator.com/item?id=36851494">here</a> and already found in the <a href="https://github.com/google/flaxformer/blame/ee62754ebe5a5eeb111493622de5537133822e3e/flaxformer/components/attention/dense_attention.py#L50">flaxformer</a> architecture. A general conclusion is that it is likely more important for highly quantized weights, but 32 and 16 bit dtypes are probably unaffected. </p>
+<p>Here we share novel and promising architectures that may supplement or supplant other presently established models.</p>
+<h2 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h2>
+<p>!!! "<a href="https://arxiv.org/pdf/2302.10866.pdf">Hyena Architecture</a> Uses inspiration from FFT to create a drop in replacement for Transformer models."
+    <a href="https://github.com/lucidrains/MEGABYTE-pytorch">Github implementation for PyTorch</a></p>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2307.08621.pdf">Retentive Network: A successor to Transformer for Large Language Models</a> Important LLM-like system using similar components that may help it to be more scaleable than <code>O(N^2)</code> memory and <code>O(N)</code> inference complexity.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2308.07037.pdf">Bayesian Flow Networks</a> A new class of generative models for discrete and continuous data and generation</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2307.08621.pdf">Retentive Network: A successor to Transformer for Large Language Models</a> Important LLM-like system using similar components that may help it to be more scaleable than <code>O(N^2)</code> memory and <code>O(N)</code> inference complexity.</p>
+</div>
 
 
   

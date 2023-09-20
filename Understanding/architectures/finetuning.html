@@ -12,13 +12,13 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/models/training.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/architectures/finetuning.html">
       
       
-        <link rel="prev" href="models.html">
+        <link rel="prev" href="embedding.html">
       
       
-        <link rel="next" href="optimizing_hyper_parameters.html">
+        <link rel="next" href="pre_trained_models.html">
       
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Training - Gen()AI</title>
+        <title>Finetuning - Gen()AI</title>
       
     
     
@@ -103,11 +103,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#rlhf" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -140,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Training
+              Finetuning
             
           </span>
         </div>
@@ -436,6 +431,10 @@
       
         
       
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -558,6 +557,46 @@
   
   
     <li class="md-nav__item">
+      <a href="../overview/foundation_models.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundation models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/knowledge_graphs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge graphs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../overview/open_source.html" class="md-nav__link">
         
   
@@ -607,8 +646,6 @@
   
     
     
-      
-        
       
         
       
@@ -689,26 +726,6 @@
   
   <span class="md-ellipsis">
     Tokenizing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/embedding.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Embedding
   </span>
   
 
@@ -817,21 +834,17 @@
     
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -861,7 +874,7 @@
               
   
   <span class="md-ellipsis">
-    Models
+    Architectures
   </span>
   
 
@@ -876,6 +889,58 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
+            Architectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="models/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_1_3_1">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_1">
+            <span class="md-nav__icon md-icon"></span>
             Models
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -886,11 +951,11 @@
   
   
     <li class="md-nav__item">
-      <a href="models.html" class="md-nav__link">
+      <a href="models/components.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Models
+    Components
   </span>
   
 
@@ -904,27 +969,77 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
+    <li class="md-nav__item">
+      <a href="models/transformers.html" class="md-nav__link">
+        
   
   <span class="md-ellipsis">
-    Training
+    Transformers
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/diffusers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diffusers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/gans.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gans
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
-      <a href="training.html" class="md-nav__link md-nav__link--active">
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -933,112 +1048,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rlhf" class="md-nav__link">
-    RLHF
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#frameworks" class="md-nav__link">
-    Frameworks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods-and-improvements" class="md-nav__link">
-    Methods and Improvements
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods and Improvements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fine-tuning-using-distillation" class="md-nav__link">
-    Fine Tuning using Distillation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fine-tuning-optimizations" class="md-nav__link">
-    Fine tuning Optimizations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adapter-layers" class="md-nav__link">
-    Adapter layers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rlhf_1" class="md-nav__link">
-    RLHF
-  </a>
-  
-    <nav class="md-nav" aria-label="RLHF">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ai-enabled-ranking" class="md-nav__link">
-    AI-enabled ranking
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mixture-of-experts" class="md-nav__link">
-    Mixture of Experts.
-  </a>
-  
-    <nav class="md-nav" aria-label="Mixture of Experts.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pruning-and-compression" class="md-nav__link">
-    Pruning and compression
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1070,11 +1079,11 @@
   
   
     <li class="md-nav__item">
-      <a href="call_optimization.html" class="md-nav__link">
+      <a href="optimization.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Call optimization
+    Optimization
   </span>
   
 
@@ -1090,31 +1099,11 @@
   
   
     <li class="md-nav__item">
-      <a href="distillation.html" class="md-nav__link">
+      <a href="evaluating_and_comparing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Distillation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="evaluation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Evaluation
+    Evaluating and comparing
   </span>
   
 
@@ -1149,190 +1138,35 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="embedding.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embedding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
-    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
-        
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-        
       
-        
       
-        
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_8" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="classes/index.html" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Classes
-  </span>
-  
-
-            </a>
-            
-              <label class="md-nav__link " for="__nav_1_3_8">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_8">
-            <span class="md-nav__icon md-icon"></span>
-            Classes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="classes/components.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="classes/transformers.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Transformers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="classes/diffusers.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Diffusers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="classes/gans.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Gans
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="classes/reinforcement_learning.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Reinforcement learning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="evaluating_and_comparing.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Evaluating and comparing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="finetuning.html" class="md-nav__link">
+      <a href="finetuning.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1341,6 +1175,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2535,102 +2370,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rlhf" class="md-nav__link">
-    RLHF
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#frameworks" class="md-nav__link">
-    Frameworks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods-and-improvements" class="md-nav__link">
-    Methods and Improvements
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods and Improvements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fine-tuning-using-distillation" class="md-nav__link">
-    Fine Tuning using Distillation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fine-tuning-optimizations" class="md-nav__link">
-    Fine tuning Optimizations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adapter-layers" class="md-nav__link">
-    Adapter layers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rlhf_1" class="md-nav__link">
-    RLHF
-  </a>
-  
-    <nav class="md-nav" aria-label="RLHF">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ai-enabled-ranking" class="md-nav__link">
-    AI-enabled ranking
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mixture-of-experts" class="md-nav__link">
-    Mixture of Experts.
-  </a>
-  
-    <nav class="md-nav" aria-label="Mixture of Experts.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pruning-and-compression" class="md-nav__link">
-    Pruning and compression
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2647,67 +2386,12 @@
   
 
 
-<p>Training GenAI will generally be domain/modality specific.</p>
-<ol>
-<li>Self-supervised pretraining: Predicts next token. </li>
-<li>Supervised pretrainign: Trains to give generally expected output.</li>
-<li>Reinforcement Learning with Human Feedback: Trains a reward model that is used with Proximal Policy Optimization (PPO) to produce aligned output. </li>
-</ol>
-<p>Basics: <a href="https://neptune.ai/blog/distributed-training">Distributed Training</a>
-<a href="https://neptune.ai/blog/distributed-training-frameworks-and-tools">https://neptune.ai/blog/distributed-training-frameworks-and-tools</a></p>
-<ul>
-<li><a href="https://huyenchip.com/2023/04/11/llm-engineering.html">LLM Engineering by Huyen Chip</a></li>
-</ul>
-<h2 id="rlhf">RLHF<a class="headerlink" href="#rlhf" title="Permanent link">&para;</a></h2>
-<h2 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html">Levanter (not just LLMS) </a> Codebase for training FMs with JAX. Using Haliax for naming tensors field-names instead of indexes. (for example Batch, Feature....). Full sharding and distributable / parallelizable. </li>
-<li>
-<p><a href="https://www.microsoft.com/en-us/research/blog/deepspeed-zero-a-leap-in-speed-for-llm-and-chat-model-training-with-4x-less-communication/">DeepSpeed ZeRO++</a> A framework for accelerating model pre-training, finetuning, RLHF updating.  by minimizing communication overhead. A likely essential concept to be very familiar with. </p>
-</li>
-<li>
-<p><a href="https://github.com/allenai/RL4LMs/tree/main">RL4LMs by microsoft</a> A modular RL library to fine-tune language models to human preferences. <a href="https://arxiv.org/pdf/2305.08844.pdf">paper</a></p>
-</li>
-</ul>
-<h1 id="methods-and-improvements">Methods and Improvements<a class="headerlink" href="#methods-and-improvements" title="Permanent link">&para;</a></h1>
-<h3 id="fine-tuning-using-distillation">Fine Tuning using Distillation<a class="headerlink" href="#fine-tuning-using-distillation" title="Permanent link">&para;</a></h3>
-<p>Train on model trains a new model on the output of a new model. 
-- <a href="https://github.com/tatsu-lab/stanford_alpaca">Alpaca </a></p>
-<h3 id="fine-tuning-optimizations">Fine tuning Optimizations<a class="headerlink" href="#fine-tuning-optimizations" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/openlmlab/lomo">Full Parameter Fine-Tuning for Large Language Models with Limited Resources.</a> Introduces LOMO: LOw-Memory Optimization to fuse </li>
-</ul>
-<h3 id="adapter-layers">Adapter layers<a class="headerlink" href="#adapter-layers" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://arxiv.org/pdf/2007.07779.pdf">AdapterHub: A Framework for Adapting Transformers</a> <a href="https://adapterhub.ml/">Website</a>
-Adapters are efficient and performant layers that can optimize performance without needing to do inefficient fine-tuning. </li>
-</ul>
-<h2 id="rlhf_1">RLHF<a class="headerlink" href="#rlhf_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><a href="https://huyenchip.com/2023/05/02/rlhf.html">RLHF: Reinforcement Learning from Human Feedback</a> A splendid summary of the RLHF system.
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2fb5b4d5-ecc9-45b3-9d16-63fab4ab6db0" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="751" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2fb5b4d5-ecc9-45b3-9d16-63fab4ab6db0"></a></p>
-</li>
-<li>
-<p><a href="https://huggingface.co/blog/rlhf">RLHF basics by hugging face</a> A realy good intro to parse again.</p>
-</li>
-<li><a href="https://github.com/lucidrains/PaLM-rlhf-pytorch">RLHF for Palm in Pytorch</a></li>
-<li><a href="https://arxiv.org/abs/2305.13735">AligningLargeLanguageModelsthroughSyntheticFeedback</a> Using a heirarchy of systems to </li>
-</ul>
-<h3 id="ai-enabled-ranking">AI-enabled ranking<a class="headerlink" href="#ai-enabled-ranking" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://huggingface.co/blog/llm-leaderboard">Can foundation models label data like humans?</a> using GPT to review model outputs produced biased results. Changing the prompt doesn't really help to de-bias it. Lots of additional considerations surrounding model evaluation</li>
-</ul>
-<h2 id="mixture-of-experts">Mixture of Experts.<a class="headerlink" href="#mixture-of-experts" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://arxiv.org/pdf/2303.14177.pdf">Scaling Expert Language Models with Unsupervised Domain Discovery</a> "parse language models on arbitrary text corpora. Our method clusters a corpus into sets of related documents, trains a separate expert language model on each cluster, and combines them in a sparse ensemble for inference. This approach generalizes embarrassingly parallel training by automatically discovering the domains for each expert, and eliminates nearly all the communication overhead of existing sparse language models. "</li>
-</ul>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f4ec7e2e-bf27-4fc0-b420-0010e1caef71" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="680" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f4ec7e2e-bf27-4fc0-b420-0010e1caef71"></a></p>
-<h3 id="pruning-and-compression">Pruning and compression<a class="headerlink" href="#pruning-and-compression" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://arxiv.org/abs/2301.00774">SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot</a> Remove up to ~50% parameters preserving </li>
-<li><a href="paper">SqueezeLLM</a> They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' <a href="https://github.com/SqueezeAILab/SqueezeLLM">Github</a></li>
-</ul>
+  <h1>Finetuning</h1>
+
+<details class="code">
+<summary><a href="https://github.com/OpenPipe/OpenPipe">Open Pipe</a> Use powerful but expensive LLMs to fine-tune smaller and cheaper models suited to your exact needs. Evaluate model and prompt combinations in the playground. Query your past requests and export optimized training data.</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e"></a></p>
+</details>
 
 
   

@@ -12,28 +12,28 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/models/classes/gans.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/overview/foundation_models.html">
       
       
-        <link rel="prev" href="diffusers.html">
+        <link rel="prev" href="business.html">
       
       
-        <link rel="next" href="reinforcement_learning.html">
+        <link rel="next" href="knowledge_graphs.html">
       
       
-      <link rel="icon" href="../../../assets/genai_logo_edited.svg">
+      <link rel="icon" href="../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
-        <title>Gans - Gen()AI</title>
+        <title>Foundation models - Gen()AI</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -71,7 +71,7 @@
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -82,7 +82,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#this-page-is-under-construction" class="md-skip">
+        <a href="#by-modality" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../.." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gans
+              Foundation models
             
           </span>
         </div>
@@ -247,7 +247,7 @@
   
   
     <li class="md-tabs__item md-tabs__item--active">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
     
@@ -264,7 +264,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../Using/index.html" class="md-tabs__link">
+      <a href="../../Using/index.html" class="md-tabs__link">
         
   
     
@@ -281,7 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../Managen.ai/index.html" class="md-tabs__link">
+      <a href="../../Managen.ai/index.html" class="md-tabs__link">
         
   
     
@@ -321,7 +321,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../.." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -391,7 +391,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../index.html" class="md-nav__link ">
+            <a href="../index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -418,6 +418,8 @@
                 
   
   
+    
+  
   
     
     
@@ -436,20 +438,24 @@
       
         
       
+        
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../overview/applications.html" class="md-nav__link ">
+            <a href="applications.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -465,7 +471,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_1">
             <span class="md-nav__icon md-icon"></span>
             Overview
@@ -478,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/challenges.html" class="md-nav__link">
+      <a href="challenges.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -518,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/ai_in_general.html" class="md-nav__link">
+      <a href="ai_in_general.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/business.html" class="md-nav__link">
+      <a href="business.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -556,9 +562,125 @@
                 
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Foundation models
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="foundation_models.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Foundation models
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#by-modality" class="md-nav__link">
+    By Modality
+  </a>
+  
+    <nav class="md-nav" aria-label="By Modality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vision" class="md-nav__link">
+    Vision
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#by-domain" class="md-nav__link">
+    By Domain
+  </a>
+  
+    <nav class="md-nav" aria-label="By Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biology-and-healthcare" class="md-nav__link">
+    Biology and Healthcare
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
     <li class="md-nav__item">
-      <a href="../../overview/open_source.html" class="md-nav__link">
+      <a href="knowledge_graphs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge graphs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="open_source.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/extra_resources.html" class="md-nav__link">
+      <a href="extra_resources.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -620,8 +742,6 @@
       
         
       
-        
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -635,7 +755,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../data/index.html" class="md-nav__link ">
+            <a href="../data/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -664,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/selection.html" class="md-nav__link">
+      <a href="../data/selection.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -684,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/tokenizing.html" class="md-nav__link">
+      <a href="../data/tokenizing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,27 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/embedding.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Embedding
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/privacy.html" class="md-nav__link">
+      <a href="../data/privacy.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/sources.html" class="md-nav__link">
+      <a href="../data/sources.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -764,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/augmentation.html" class="md-nav__link">
+      <a href="../data/augmentation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/simulation.html" class="md-nav__link">
+      <a href="../data/simulation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -810,25 +910,9 @@
                 
   
   
-    
-  
   
     
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
       
         
           
@@ -844,24 +928,34 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../architectures/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    Models
+    Architectures
   </span>
   
 
@@ -873,8 +967,60 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Architectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../architectures/models/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_1_3_1">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_1">
             <span class="md-nav__icon md-icon"></span>
             Models
           </label>
@@ -886,203 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../models.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Models
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../training.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Training
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../optimizing_hyper_parameters.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Optimizing hyper parameters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../call_optimization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Call optimization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../distillation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Distillation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../evaluation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Evaluation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../alignment.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Alignment
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_8" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Classes
-  </span>
-  
-
-            </a>
-            
-              <label class="md-nav__link " for="__nav_1_3_8">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1_3_8">
-            <span class="md-nav__icon md-icon"></span>
-            Classes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="components.html" class="md-nav__link">
+      <a href="../architectures/models/components.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1102,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="transformers.html" class="md-nav__link">
+      <a href="../architectures/models/transformers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1122,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="diffusers.html" class="md-nav__link">
+      <a href="../architectures/models/diffusers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1140,76 +1090,13 @@
                 
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Gans
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="gans.html" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Gans
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#this-page-is-under-construction" class="md-nav__link">
-    This page is under construction.
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
     <li class="md-nav__item">
-      <a href="reinforcement_learning.html" class="md-nav__link">
+      <a href="../architectures/models/gans.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Reinforcement learning
+    Gans
   </span>
   
 
@@ -1233,7 +1120,67 @@
   
   
     <li class="md-nav__item">
-      <a href="../evaluating_and_comparing.html" class="md-nav__link">
+      <a href="../architectures/training.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/optimizing_hyper_parameters.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimizing hyper parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/optimization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/evaluating_and_comparing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,7 +1200,47 @@
   
   
     <li class="md-nav__item">
-      <a href="../finetuning.html" class="md-nav__link">
+      <a href="../architectures/alignment.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/embedding.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embedding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/finetuning.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1273,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pre_trained_models.html" class="md-nav__link">
+      <a href="../architectures/pre_trained_models.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1293,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../recurrent_training.html" class="md-nav__link">
+      <a href="../architectures/recurrent_training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1313,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reinforcement_feedback.html" class="md-nav__link">
+      <a href="../architectures/reinforcement_feedback.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1358,7 +1345,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../prompting/index.html" class="md-nav__link ">
+            <a href="../prompting/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1387,7 +1374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prompting/prompt_injections.html" class="md-nav__link">
+      <a href="../prompting/prompt_injections.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1442,7 +1429,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../agents/index.html" class="md-nav__link ">
+            <a href="../agents/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1471,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/examples.html" class="md-nav__link">
+      <a href="../agents/examples.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1491,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/memory.html" class="md-nav__link">
+      <a href="../agents/memory.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/chains.html" class="md-nav__link">
+      <a href="../agents/chains.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1531,7 +1518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/evaluation.html" class="md-nav__link">
+      <a href="../agents/evaluation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1551,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/environments.html" class="md-nav__link">
+      <a href="../agents/environments.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1571,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/systems.html" class="md-nav__link">
+      <a href="../agents/systems.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1616,7 +1603,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../examples/index.html" class="md-nav__link ">
+            <a href="../examples/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1645,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/by_domain.html" class="md-nav__link">
+      <a href="../examples/by_domain.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1673,7 +1660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../studies/studies.html" class="md-nav__link">
+      <a href="../studies/studies.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1745,7 +1732,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Using/index.html" class="md-nav__link ">
+            <a href="../../Using/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1774,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/commercial_products.html" class="md-nav__link">
+      <a href="../../Using/commercial_products.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1794,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/by_application.html" class="md-nav__link">
+      <a href="../../Using/by_application.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1814,7 +1801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/governing.html" class="md-nav__link">
+      <a href="../../Using/governing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1834,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/ml_ops.html" class="md-nav__link">
+      <a href="../../Using/ml_ops.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1854,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/observability.html" class="md-nav__link">
+      <a href="../../Using/observability.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1874,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/regulation.html" class="md-nav__link">
+      <a href="../../Using/regulation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1894,7 +1881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/marking_and_detecting.html" class="md-nav__link">
+      <a href="../../Using/marking_and_detecting.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1914,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/web_plugins.html" class="md-nav__link">
+      <a href="../../Using/web_plugins.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1934,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/using_external_vendors.html" class="md-nav__link">
+      <a href="../../Using/using_external_vendors.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1979,7 +1966,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Using/deploying/index.html" class="md-nav__link ">
+            <a href="../../Using/deploying/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2008,7 +1995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/deploying/back_end.html" class="md-nav__link">
+      <a href="../../Using/deploying/back_end.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2028,7 +2015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/deploying/computation.html" class="md-nav__link">
+      <a href="../../Using/deploying/computation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2048,7 +2035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/deploying/frameworks.html" class="md-nav__link">
+      <a href="../../Using/deploying/frameworks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2068,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/deploying/front_end.html" class="md-nav__link">
+      <a href="../../Using/deploying/front_end.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2088,7 +2075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/deploying/libraries_and_tools.html" class="md-nav__link">
+      <a href="../../Using/deploying/libraries_and_tools.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2139,7 +2126,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Using/ethically/index.html" class="md-nav__link ">
+            <a href="../../Using/ethically/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2168,7 +2155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/ethically/alignment_and_exential_concerns.html" class="md-nav__link">
+      <a href="../../Using/ethically/alignment_and_exential_concerns.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2188,7 +2175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/ethically/dual_use_concerns.html" class="md-nav__link">
+      <a href="../../Using/ethically/dual_use_concerns.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2208,7 +2195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/ethically/fairness.html" class="md-nav__link">
+      <a href="../../Using/ethically/fairness.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2228,7 +2215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/ethically/transparency.html" class="md-nav__link">
+      <a href="../../Using/ethically/transparency.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2256,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Using/responsibly/index.html" class="md-nav__link">
+      <a href="../../Using/responsibly/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2308,7 +2295,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Managen.ai/index.html" class="md-nav__link ">
+            <a href="../../Managen.ai/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2337,7 +2324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Managen.ai/managing.html" class="md-nav__link">
+      <a href="../../Managen.ai/managing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2357,7 +2344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Managen.ai/requirements.html" class="md-nav__link">
+      <a href="../../Managen.ai/requirements.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2377,7 +2364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Managen.ai/brainstorming.html" class="md-nav__link">
+      <a href="../../Managen.ai/brainstorming.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2397,7 +2384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Managen.ai/build_plan.html" class="md-nav__link">
+      <a href="../../Managen.ai/build_plan.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2417,7 +2404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Managen.ai/contributing.html" class="md-nav__link">
+      <a href="../../Managen.ai/contributing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2463,9 +2450,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-page-is-under-construction" class="md-nav__link">
-    This page is under construction.
+  <a href="#by-modality" class="md-nav__link">
+    By Modality
   </a>
+  
+    <nav class="md-nav" aria-label="By Modality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vision" class="md-nav__link">
+    Vision
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#by-domain" class="md-nav__link">
+    By Domain
+  </a>
+  
+    <nav class="md-nav" aria-label="By Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biology-and-healthcare" class="md-nav__link">
+    Biology and Healthcare
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2487,9 +2507,21 @@
   
 
 
-  <h1>Gans</h1>
+  <h1>Foundation models</h1>
 
-<h2 id="this-page-is-under-construction">This page is under construction.<a class="headerlink" href="#this-page-is-under-construction" title="Permanent link">&para;</a></h2>
+<p>By their nature, foundational models will be ever increasing in scope and potential. We share some seminal papers on foundation models here. 
+Continual evolution of models may be found in hubs such as <a href="https://huggingface.co/models?other=foundation+model&amp;sort=trending">Hugging Face</a>. </p>
+<h2 id="by-modality">By Modality<a class="headerlink" href="#by-modality" title="Permanent link">&para;</a></h2>
+<h3 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">&para;</a></h3>
+<details class="code">
+<summary><a href="https://github.com/facebookresearch/segment-anything">Segment anything</a></summary>
+<p><a href="https://segment-anything.com/">Webpage</a></p>
+</details>
+<h2 id="by-domain">By Domain<a class="headerlink" href="#by-domain" title="Permanent link">&para;</a></h2>
+<h3 id="biology-and-healthcare">Biology and Healthcare<a class="headerlink" href="#biology-and-healthcare" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.nature.com/articles/s41586-023-06555-x">Foundation models for Retinas</a></li>
+</ul>
 
 
   
@@ -2660,10 +2692,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
