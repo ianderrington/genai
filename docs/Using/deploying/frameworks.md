@@ -63,23 +63,7 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 - https://www.pinecone.io/learn/langchain-prompt-templates/
 - https://learn.deeplearning.ai/langchain/lesson/3/memory
 
-#### LMQL
-[LMQL](https://github.com/eth-sri/lmql) is a query language that enables simplified representations of chats and agents with minimal code. 
-??? example "An example query string."
-    ```
-    "Greet LMQL:[GREETINGS]\n" where stops_at(GREETINGS, ".") and not "\n" in GREETINGS
 
-if "Hi there" in GREETINGS:
-    "Can you reformulate your greeting in the speech of \
-     victorian-era English: [VIC_GREETINGS]\n" where stops_at(VIC_GREETINGS, ".")
-
-"Analyse what part of this response makes it typically victorian:\n"
-
-for i in range(4):
-    "-[THOUGHT]\n" where stops_at(THOUGHT, ".")
-
-"To summarize:[SUMMARY]"
-```
 
 #### Llama ecosystem
 
@@ -99,6 +83,7 @@ for i in range(4):
     - [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
     - [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
     - [Llama.cpp](https://github.com/ggerganov/llama.cpp) 4 bit llama on macbooks. 
+
 #### Others
 
 ??? code "[EmbedChain](https://github.com/embedchain/embedchain)  is a framework to easily create LLM powered bots over any dataset." 
@@ -133,11 +118,44 @@ for i in range(4):
 - [Chatall](https://github.com/sunner/ChatALL) To interact with multiple chatbots at the same time.
 - [LocalAI](https://github.com/go-skynet/LocalAI) drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
 
-??? code "[Open Agent](https://github.com/dot-agent/openagent) IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents"
+!!! code "[Open Agent](https://github.com/dot-agent/openagent) IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents"
+
+
+??? code "[DSPY](https://github.com/stanfordnlp/dspy) is a framework for solving advanced tasks with language models and retrieval models"
+    Useful for exploring automatic prompt opteimization. 
+
+
+#### Language-like interfaces
+??? code "[LMQL](https://github.com/eth-sri/lmql) is a query language that enables simplified representations of chats and agents with minimal code. "
+
+    ```
+    "Greet LMQL:[GREETINGS]\n" where stops_at(GREETINGS, ".") and not "\n" in GREETINGS
+
+    if "Hi there" in GREETINGS:
+        "Can you reformulate your greeting in the speech of \
+         victorian-era English: [VIC_GREETINGS]\n" where stops_at(VIC_GREETINGS, ".")
+    
+    "Analyse what part of this response makes it typically victorian:\n"
+    
+    for i in range(4):
+        "-[THOUGHT]\n" where stops_at(THOUGHT, ".")
+    
+    "To summarize:[SUMMARY]"
+    ```
+
+
+
+
+### Contorol libraries
+
+* Guidance
+* LMQL
+* RELM
+* Outlines
 
   
-### Specific components
-#### Retrieval Augmented 
+
+### Retrieval Augmentation focus
 
 ??? code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines
 
