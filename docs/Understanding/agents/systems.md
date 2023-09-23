@@ -73,7 +73,7 @@ When an agent (or model) engages in an interaction with another agent, the resul
         long_prompt = """ These are the solutions to the problem from other agents: {other_answers}
             Using the opinion of other agents as additional advice, can you give an updated response . . ."""
     ```
-    [Github](https://github.com/composable-models/llm_multiagent_debate)
+    [Github](https://github.com/composable-architectures/llm_multiagent_debate)
 
 ??? tip "[Council ](https://github.com/chain-ml/council)
     Very promising initial creation of networks of agents to create full-fledged teams for output products. 

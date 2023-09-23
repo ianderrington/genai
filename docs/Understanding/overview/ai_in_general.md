@@ -12,7 +12,7 @@ Higher level frameworks minimize the lines of code needed to make a model and ke
 
 #### Lightning
 - [Lightning + Hydra](https://github.com/ashleve/lightning-hydra-template) Uses the [lightning] framework with Hydra-based config management. 
-- [Lightning Hugging face adapter](https://github.com/mariomeissner/lightning-hydra-transformers/blob/main/src/models/hf_model.py)
+- [Lightning Hugging face adapter](https://github.com/mariomeissner/lightning-hydra-transformers/blob/main/src/architectures/hf_model.py)
 
 ## Must-have knowledge
 

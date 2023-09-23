@@ -5,7 +5,7 @@ Similar to bots, or other computerized automota, they may have the ability to ru
 
 ## Basic Concepts
 
-* [Models](../models/index.md): The 'intelligent' component returns an output for a given input. 
+* [Models](../architectures/index.md): The 'intelligent' component returns an output for a given input. 
 * Input [environments](environments.md) that can and do provide inputs. 
 * Language [prompts](../prompting/index.md) that orient's and agent's response. 
 * [Memory](./memory.md) to enable writing and reading information that may be of use. 
@@ -24,11 +24,11 @@ Before we go on, there are several references that are of high merit that you ma
 - [Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent) As usual, a splendid post by Lilian Weng
 - [Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of nicely curated list of systems using agents
 
-## [Models](../models/index.md)
+## [Models](../architectures/index.md)
 
-Models provide the computational core of Agents. Acting like a 'brain' that a takes in input [prompts](#prompts) they return outputs. Generally the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation as with [distillation](../models/distillation.md) 
+Models provide the computational core of Agents. Acting like a 'brain' that a takes in input [prompts](#prompts) they return outputs. Generally the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation with [recurrent training](../architectures/recurrent_training.md).
 
-[Here](../models/index.md) you can learn how to build models, though it is often easier to use [pre-trained models](../models/pre_trained_models.md). 
+[Here](../architectures/index.md) you can learn how to build models, though it is often easier to use [pre-trained models](../architectures/pre_trained_models.md). 
 
 ## [Prompts](../prompting/index.md)
 

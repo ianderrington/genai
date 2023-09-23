@@ -12,7 +12,7 @@ Here we share a selection of repositories, that enable the creation of models.
 
 ### Finetuning
 
-Please see the [finetuning](../../Understanding/models/finetuning.md) page for more in depth information on this. 
+Please see the [finetuning](../../Understanding/architectures/finetuning.md) page for more in depth information on this. 
 
 - [Adapters for Hugging Face](https://adapterhub.ml/)
 - [Chatall](https://github.com/sunner/ChatALL) To interact with multiple chatbots at the same time.

@@ -1,7 +1,7 @@
 !!! important "[tl;dr](#tldr)"
     - Evaluate your [**application**](./overview/applications.md) and think of the [**challenges**](./overview/challenges.md) associated with it
     - Understand the [**data**](./data/index.md) and collect data that you need.
-    - [**Understandand build**](models/index.md) use [**pre-trained**](models/pre_trained_models.md) models.
+    - [**Understandand build**](architectures/index.md) use [**pre-trained**](architectures/pre_trained_models.md) models.
     - [**Deploy**](../Using/deploying/index.md) your model
     - [**Manage**](../Managen.ai/index.md) your model
 
@@ -27,19 +27,21 @@ Getting into it, you will find the following outline:
 ### What's been done with Gen()AI?
 
 1. [Data](data/index.md) provides the backbone connecting computation to our recorded reality.
-1. [Models](models/index.md) allow the data to be understood and used. [^n1]
+1. [Models](architectures/index.md) allow the data to be understood and used. [^n1]
 1. [Prompts](prompting/index.md) govern how we interact with the models.
 1. [Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners.
 1. [Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies.
 1. [Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis. 
+i
+
 
 ### How do you do stuff with Gen()AI?
 
-Of course, there will be some important 'how-to's, particularly in the [data](data/index.md), [models](models/index.md), [prompts](prompting/index.md) and [agents](./agents/index.md). 
+Of course, there will be some important 'how-to's, particularly in the [data](data/index.md), [models](architectures/index.md), [prompts](prompting/index.md) and [agents](./agents/index.md). 
 
 Competition is fierce to create the 'best' (based on certain metrics) Gen()AI, so much knowledge may not be known to protect IP and other secrets.
 
-Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](models/pre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made. 
+Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](architectures/pre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made. 
 
 If you are working on commercial projects, be sure to look at the Licenses to ensure you are legally compliant. 
 
@@ -52,9 +54,9 @@ There is so much quality material, it would be valuable for your time to check s
 
 ??? tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
     Important patterns mentioned (references to discussions herein):
-    * [Evaluation](models/evaluation.md)
+    * [Evaluating and comparing](architectures/evaluating_and_comparing.md)
     * [Retreival Augmented Generation (RAG)](agents/rag.md)
-    * [Fine tuning](models/alignment.md#finetuning)
+    * [Fine tuning](architectures/alignment.md#finetuning)
     * [Caching](agents/memory.md#caching) to reduce latency. 
     * [Guardrails](agents/interpreters.md#guardrails) to ensure output (and input) quality.
     * Data Flywheel to use data collection and feedback to improve model and experience
@@ -74,9 +76,9 @@ Generative AI is a subset of machine learning that aim to creates new data sampl
 
 !!! tip "A little more advanced"
     - [Use Agents](agents/index.md) for increasingly powerful applications
-    - Optimize your model [performance](models/optimizing_hyper_parameters.md) and [serving](models/call_optimization.md)
+    - Optimize your model [performance](architectures/optimizing_hyper_parameters.md) and [serving](architectures/optimization.md)
 
-In this section, we will focus on 'Understanding' the various components of GenAI, [data](./data/index.md), [models](./models/index.md) and [agents](./agents/index.md) including methods and models that are initial or under development. 
+In this section, we will focus on 'Understanding' the various components of GenAI, [data](./data/index.md), [models](./architectures/index.md) and [agents](./agents/index.md) including methods and models that are initial or under development. 
 
 !!! warning "Presentation bias"
-    This is presently highly [transformer-based large-language models](models/classes/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](models/classes/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managen.ai/contributing.md)
+    This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managen.ai/contributing.md)

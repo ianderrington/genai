@@ -8,44 +8,39 @@ Quickly, models of the desired specs must be stored in a file and then loaded fo
 
 As would be done for other AI-enabled products, you will need to have in mind the following
 
-1. [Caller needs](#caller-needs) (customer requirements)
-2. [Servable model](#servable-model) to appropriately service customer and environmental requirements.
-3. [Compute needed](#compute-needs) to enable service
-4. [Budget available](#budget-available) the compute
-5. [Compute back end](#compute-back-end) service and framework that will work with the budget you have
-7. [Front End](./front_end) that provides the appropriate visualization
-
-Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves some form of a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
-
-###  Caller needs
+### 1. [Caller needs](#caller-needs) (customer requirements)
 
 What the caller requires will depend on the target audience your offering is provided. Focusing on narrower audiences allow you to have fewer (initial) requirements and may enable MVP generation quickly. These audiences can expand or shift as needed. Often needs will require 'rapid' results that are 'good'. 
 
-### Servable model
+### 2. [Servable model](#servable-model) to appropriately service customer and environmental requirements.
+
 
 The models must be sufficient to provide the content that the model have a sufficiently reasonable latency that it can enable the throughput requirements of your model. 
 
-To enable a properly servable model, it may likely be required to [optimize](../../Understanding/models/call_optimization.md) the serving of your models.
+To enable a properly servable model, it may likely be required to [optimize](../../Understanding/architectures/optimization.md) the serving of your models.
 
-### Compute needs
+### [Compute needed](#compute-needs) to enable service
 
 Here are some general considerations (from AWS) regarding how to consider the requirements of model deployment.
 
 ![[image](https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html)](https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050)
     
 
-### Budget available
+### [Budget available](#budget-available) the compute
 
-Your calculated budget will be useful to consider the monetization strategy of your tool. While highly dependant on your business model, knowing when to inspire greater [model serving optimization](../../Understanding/models/call_optimization.md) to prevent 'too much compute'. 
+Your calculated budget will be useful to consider the monetization strategy of your tool. While highly dependant on your business model, knowing when to inspire greater [model serving optimization](../../Understanding/architectures/optimization.md) to prevent 'too much compute'. 
 
-### [Compute back end](back_end.md)
+### [Compute back end](#compute-back-end) service and framework that will work with the budget you have
 
 To determining your back-end will involve selecting from both DIY and full-service [frameworks](./frameworks.md) that you use on some compute host solution and perhaps connected with other [tools and libraries](libraries_and_tools.md) that can help your solution. 
 
-
-### [Front end](front_end.md)
+### [Front End](./front_end.md) that provides the appropriate visualization
 
 At the end of a model that is ready to be deployed, you'll need to get the results to the end-user in a useful manner. Look into the discussion on [front ends](./front_end.md) for some quality solutions and best practices to for your model output.
+
+
+Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves some form of a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
+
 
 ## Tips 
 

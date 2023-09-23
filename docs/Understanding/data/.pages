@@ -2,7 +2,6 @@ nav:
     - index.md
     - selection.md
     - tokenizing.md
-    - embedding.md
     - privacy.md
     - sources.md
     - ...

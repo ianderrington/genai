@@ -53,5 +53,5 @@ The models may generate queries that can be executed by by an interpreter, thoug
     For more information on memory implementations and caching, refer to the following resources:
 
     - [Langchain `memory`](https://python.langchain.com/docs/modules/memory/)
-    - [Langchain `llm_caching`](https://python.langchain.com/docs/modules/model_io/models/llms/integrations/llm_caching)
+    - [Langchain `llm_caching`](https://python.langchain.com/docs/modules/model_io/architectures/llms/integrations/llm_caching)
     - [Improving language models by retrieving from trillions of tokens](https://arxiv.org/pdf/2112.04426.pdf)

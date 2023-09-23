@@ -2,7 +2,7 @@ nav:
     - index.md
     - overview
     - data
-    - models
+    - architectures
     - prompting
     - agents
     - examples
