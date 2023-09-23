@@ -1,0 +1,6 @@
+nav:
+    - index.md
+    - components.md
+    - transformers.md
+    - diffusers.md
+    - gans.md
