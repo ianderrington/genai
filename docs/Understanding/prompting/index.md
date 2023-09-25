@@ -18,8 +18,11 @@
 
 ### Manual 
 
-- [OPEN AI best practices](https://platform.openai.com/docs/guides/gpt-best-practices/)
+- ??? hint "[Language Models as Optimizers](https://arxiv.org/pdf/2309.03409.pdf) reveals that starting with take a deep breath and work on this problem step by step... Yields better result!" 
+    Prompt optimization using language that helps people, helps LLMs too! [Pop Article](https://arstechnica.com/information-technology/2023/09/telling-ai-model-to-take-a-deep-breath-causes-math-scores-to-soar-in-study/amp/)
 
+
+- [OPEN AI best practices](https://platform.openai.com/docs/guides/gpt-best-practices/)
 
 
 - Go over all of these! https://www.promptingguide.ai/techniques
