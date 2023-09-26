@@ -70,9 +70,15 @@ Please see the [finetuning](../../Understanding/architectures/finetuning.md) pag
 - [Deploying on Azure for Embeddings](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna)
 - [Integrating with Azure Services](https://www.youtube.com/watch?v=tW2EA4aZ_YQ)
 
-
-
 !!! code "[GPTCache](https://github.com/zilliztech/GPTCache) to quickly Cache your results to speed second-time queries."
+
+
+!!! code "[AGent Smith AI](https://github.com/monarch-initiative/agent-smith-ai) makes it easy to instantiate AI agents that can safely and easily call APIs and locally defined functions to interact with the world."
+
+!!! code "[Monarch Assistant](https://github.com/monarch-initiative/monarch-assistant) Uses AGent Smith for RAG purposes"
+
+!!! code "[Curage GPT](https://github.com/monarch-initiative/curate-gpt)"
+
 
 ###  Executors and Interpeters
 
