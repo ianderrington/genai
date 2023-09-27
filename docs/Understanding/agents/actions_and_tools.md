@@ -1,6 +1,8 @@
+Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. While potentially minimal distinction. Often relayed by an [interpreter](./interpreter.md) or a perhaps simple syntax-pattern like {{{function_name; values}}}, or more complete json input that can be validated for the function of choice. 
+
+!!! code "[Local LLM Function Calling](https://github.com/rizerphe/local-llm-function-calling) enforces json semantics for calls to functions"
 
 ## Action
-
 
 Actions may be be internal or externally focused.  focused generally related to an agent's '`memory`, or externally focused, with tools, though their distinction may be moot. 
 
@@ -18,8 +20,9 @@ The action that an agent may take is enabled by an `AgentExecutor` or [interpret
 Tools generally consist of single function calls to something that will return value to the end-point destination, be that the agent itself or a person interacting with an agent. 
 
 
-## Toolkits
-Toolkits consist of tool pearings that often work together well. For instance, bash commands for file creation, deletion, naming and movement. Toolkits can be api-calls or 
+
+### Toolkits
+Toolkits consist of tool pairings that often work together well. For instance, bash commands for file creation, deletion, naming and movement. Toolkits can be api-calls or 
 
 
 ??? code "[Langchain Toolkits](https://github.com/langchain-ai/langchain/tree/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent_toolkits)"
