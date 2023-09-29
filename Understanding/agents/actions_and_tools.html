@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-syntax-error" class="md-skip">
+        <a href="#action" class="md-skip">
           Skip to content
         </a>
       
@@ -2364,8 +2364,54 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    Action
+  </a>
+  
+    <nav class="md-nav" aria-label="Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executors" class="md-nav__link">
+    Executors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolkits" class="md-nav__link">
+    Toolkits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2383,11 +2429,38 @@
   
 
 
-<h1 id="macro-syntax-error"><em>Macro Syntax Error</em><a class="headerlink" href="#macro-syntax-error" title="Permanent link">&para;</a></h1>
-<p><em>File</em>: <code>Understanding/agents/actions_and_tools.md</code></p>
-<p><em>Line 1 in Markdown file:</em> <strong>expected token ':', got ';'</strong>
-<div class="highlight"><pre><span></span><code>Actions and tools, also called &#39;plugins&#39;, can be considered function calls to routines external to the LLM. While potentially minimal distinction. Often relayed by an [<span class="nt">interpreter</span>](<span class="na">./interpreter.md</span>) or a perhaps simple syntax-pattern like {{{function_name; values}}}, or more complete json input that can be validated for the function of choice. 
-</code></pre></div></p>
+  <h1>Actions and tools</h1>
+
+<p>Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. While potentially minimal distinction. Often relayed by an <a href="./interpreter.md">interpreter</a> or a perhaps simple jinja syntax-pattern more complete json input that can be validated for the function of choice. </p>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/rizerphe/local-llm-function-calling">Local LLM Function Calling</a> enforces json semantics for calls to functions</p>
+</div>
+<h2 id="action">Action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h2>
+<p>Actions may be be internal or externally focused.  focused generally related to an agent's '<code>memory</code>, or externally focused, with tools, though their distinction may be moot. </p>
+<p><strong>Internal actions</strong> generally relate reading, writing or updating, an agents memory, <a href="memory.html">memory</a> state, such as free-text <code>scratech-pad</code>, an ordered <code>memory-log</code> or a vector database.</p>
+<p><strong>External actions</strong> may be to act on simulated or real environments, or otherwise tracked <code>state</code>, or to use a toolthat an agent may be 'equipped with' to run. These can be API calls or local function calls. </p>
+<h3 id="executors">Executors<a class="headerlink" href="#executors" title="Permanent link">&para;</a></h3>
+<p>The action that an agent may take is enabled by an <code>AgentExecutor</code> or <a href="interpreters.html">interpreter</a> of the LLM output, that coordinates the call to perform the action. </p>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/langchain-ai/langchain/blob/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent.py#L637">Langchain Agent Executor</a></p>
+</div>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<p>Tools generally consist of single function calls to something that will return value to the end-point destination, be that the agent itself or a person interacting with an agent. </p>
+<h3 id="toolkits">Toolkits<a class="headerlink" href="#toolkits" title="Permanent link">&para;</a></h3>
+<p>Toolkits consist of tool pairings that often work together well. For instance, bash commands for file creation, deletion, naming and movement. Toolkits can be api-calls or </p>
+<details class="code">
+<summary><a href="https://github.com/langchain-ai/langchain/tree/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent_toolkits">Langchain Toolkits</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/65e22011-f815-4f19-8d78-24bc2c731b08" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="971" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/65e22011-f815-4f19-8d78-24bc2c731b08"></a></p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://github.com/ShishirPatil/gorilla">Gorilla</a> A Llama-focused high-quality API calling methods.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2308.00675.pdf">Tool Documentation Enables Zero-Shot Tool-Usage with Large Language Models</a> Demonstrates that presenting documentation of tool usage is likely more valuable than providing examples.</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://huggingface.co/papers/2307.16789">Tool LLM</a> This describes a novel approach enabling over 16000 API's to be called through an intelligent routing mechanism. <a href="https://github.com/OpenBMB/ToolBench">Github</a> Uses RapidAPI connector to do so. </p>
+</div>
 
 
   

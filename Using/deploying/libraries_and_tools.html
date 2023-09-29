@@ -2645,15 +2645,17 @@
 <p class="admonition-title"><a href="https://github.com/bentoml/OpenLLM">Open LLM</a> to run inference with any open-source large-language models, deploy to the cloud or on-premises, and build powerful AI apps.</p>
 </div>
 <h4 id="distributed">Distributed<a class="headerlink" href="#distributed" title="Permanent link">&para;</a></h4>
-<p>!!! "<a href="https://github.com/bigscience-workshop/petals">Petals</a> Run large language models at home, BitTorrent-style."</p>
-<div class="highlight"><pre><span></span><code>Generate text with distributed LLaMA 2 (70B), Stable Beluga 2, Guanaco-65B or BLOOM-176B and fine‑tune them for your own tasks — right from your desktop computer or Google Cola
-[Launch your own swarm](https://github.com/bigscience-workshop/petals/wiki/Launch-your-own-swarm)
-</code></pre></div>
+<details class="code">
+<summary><a href="https://github.com/bigscience-workshop/petals">Petals</a> Run large language models at home, BitTorrent-style.</summary>
+<p>Generate text with distributed LLaMA 2 (70B), Stable Beluga 2, Guanaco-65B or BLOOM-176B and fine‑tune them for your own tasks — right from your desktop computer or Google Cola
+<a href="https://github.com/bigscience-workshop/petals/wiki/Launch-your-own-swarm">Launch your own swarm</a></p>
+</details>
 <h3 id="programming-convenience">Programming Convenience<a class="headerlink" href="#programming-convenience" title="Permanent link">&para;</a></h3>
-<p>!!! tip "<a href="https://github.com/jackmpcollins/magentic">Magentic</a>
-    A nice and simple plugin that allows a <code>@prompt</code> decorator to call functions as an llm, including function-choice calls.</p>
-<p>??? example "<a href="https://github.com/jackmpcollins/magentic">their example</a>
-    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Literal</span>
+<details class="code">
+<summary><a href="https://github.com/jackmpcollins/magentic">Magentic</a> for decorators</summary>
+<p>A nice and simple plugin that allows a <code>@prompt</code> decorator to call functions as an llm, including function-choice calls.
+Their example](<a href="https://github.com/jackmpcollins/magentic">https://github.com/jackmpcollins/magentic</a>)
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Literal</span>
 
 <span class="kn">from</span> <span class="nn">magentic</span> <span class="kn">import</span> <span class="n">prompt</span><span class="p">,</span> <span class="n">FunctionCall</span>
 
@@ -2676,11 +2678,14 @@
 <span class="n">output</span><span class="p">()</span>
 <span class="c1"># &#39;Preheating to 350 F with mode bake&#39;</span>
 </code></pre></div></p>
+</details>
 <h3 id="memory-interaction">Memory Interaction<a class="headerlink" href="#memory-interaction" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna">Deploying on Azure for Embeddings</a></li>
-<li><a href="https://www.youtube.com/watch?v=tW2EA4aZ_YQ">Integrating with Azure Services</a></li>
-</ul>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna">Deploying on Azure for Embeddings</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://www.youtube.com/watch?v=tW2EA4aZ_YQ">Integrating with Azure Services</a></p>
+</div>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/zilliztech/GPTCache">GPTCache</a> to quickly Cache your results to speed second-time queries.</p>
 </div>
@@ -2701,17 +2706,16 @@
 <p class="admonition-title">Link Routing</p>
 <p>A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output. </p>
 </div>
-<ul>
-<li>
-<p><a href="https://shreyar.github.io/guardrails/">Guardrails</a> To help format output and prevent improper prompts.</p>
-</li>
-<li>
-<p><a href="https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb">Semantic Kernel</a>, <a href="https://github.com/microsoft/semantic-kernel/tree/main">Github</a></p>
-</li>
-<li>
-<p>️<a href="https://github.com/microsoft/guidance/">Guidance</a> Interleaving generation, prompting and logical control to single  continuous flow.</p>
-</li>
-</ul>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://shreyar.github.io/guardrails/">Guardrails</a> To help format output and prevent improper prompts.</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/microsoft/semantic-kernel/tree/main">Semantic Kernel</a></p>
+<p><a href="https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb">Github</a>, </p>
+</div>
+<div class="admonition code">
+<p class="admonition-title">️<a href="https://github.com/microsoft/guidance/">Guidance</a> Interleaving generation, prompting and logical control to single  continuous flow.</p>
+</div>
 <h2 id="data-creation">Data Creation<a class="headerlink" href="#data-creation" title="Permanent link">&para;</a></h2>
 <p>Generative AI is a splendid use-case for creating data that can be used to train or refine new models. Here are some tools that allow for creation of data for down-stream purposes, always being sure to be consistent with <a href="../../Understanding/overview/challenges.html#dual-use">dual-use concerns</a>.</p>
 <div class="admonition code">
