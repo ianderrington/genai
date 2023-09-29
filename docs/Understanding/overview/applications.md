@@ -54,6 +54,10 @@ Generative AI is increasingly good at translating between domains.
 ### Personal assistants and memory
 - [Quiver](https://github.com/StanGirard/quiv) A LLM for self second brain. 
 
+### Compression
+
+!!! important "[Language Modeling Is Compression](https://arxiv.org/pdf/2309.10668.pdf) demonstrates lossless compression of png, flac, much better than standard approaches"
+
 
 ### Code Generation
 

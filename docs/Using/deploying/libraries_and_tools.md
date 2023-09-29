@@ -27,17 +27,16 @@ Please see the [finetuning](../../Understanding/architectures/finetuning.md) pag
 
 #### Distributed
 
-!!! "[Petals](https://github.com/bigscience-workshop/petals) Run large language models at home, BitTorrent-style."
+??? code "[Petals](https://github.com/bigscience-workshop/petals) Run large language models at home, BitTorrent-style."
 
     Generate text with distributed LLaMA 2 (70B), Stable Beluga 2, Guanaco-65B or BLOOM-176B and fine‑tune them for your own tasks — right from your desktop computer or Google Cola
     [Launch your own swarm](https://github.com/bigscience-workshop/petals/wiki/Launch-your-own-swarm)
 
 ### Programming Convenience
 
-!!! tip "[Magentic](https://github.com/jackmpcollins/magentic)
+??? code "[Magentic](https://github.com/jackmpcollins/magentic) for decorators"
     A nice and simple plugin that allows a `@prompt` decorator to call functions as an llm, including function-choice calls.
-
-??? example "[their example](https://github.com/jackmpcollins/magentic)
+    Their example](https://github.com/jackmpcollins/magentic)
     ```python
     from typing import Literal
 
@@ -67,11 +66,11 @@ Please see the [finetuning](../../Understanding/architectures/finetuning.md) pag
 
 ### Memory Interaction
 
-- [Deploying on Azure for Embeddings](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna)
-- [Integrating with Azure Services](https://www.youtube.com/watch?v=tW2EA4aZ_YQ)
+!!! tip "[Deploying on Azure for Embeddings](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna)"
+
+!!! tip "[Integrating with Azure Services](https://www.youtube.com/watch?v=tW2EA4aZ_YQ)"
 
 !!! code "[GPTCache](https://github.com/zilliztech/GPTCache) to quickly Cache your results to speed second-time queries."
-
 
 !!! code "[AGent Smith AI](https://github.com/monarch-initiative/agent-smith-ai) makes it easy to instantiate AI agents that can safely and easily call APIs and locally defined functions to interact with the world."
 
@@ -91,12 +90,14 @@ Such efforts can be used to reduce input complexity, token-count, to detect pote
 !!! example "Link Routing"
     A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output. 
 
-- [Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts.
+!!! code "[Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts."
 
-- [Semantic Kernel](https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb), [Github](https://github.com/microsoft/semantic-kernel/tree/main)
 
-- ️[Guidance](https://github.com/microsoft/guidance/) Interleaving generation, prompting and logical control to single  continuous flow.
 
+!!! code "[Semantic Kernel](https://github.com/microsoft/semantic-kernel/tree/main)"
+    [Github](https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb), 
+
+!!! code "️[Guidance](https://github.com/microsoft/guidance/) Interleaving generation, prompting and logical control to single  continuous flow."
 
 
 ## Data Creation

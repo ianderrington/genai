@@ -33,7 +33,7 @@ graph TB
     AgentManager --> |informs and effects| Agent
 ```
 ### Langchain focused.
-!!! [GPT and PDFS](https://betterprogramming.pub/talking-to-pdfs-gpt-4-and-langchain-77f44f23505d)
+!!! "[GPT and PDFS](https://betterprogramming.pub/talking-to-pdfs-gpt-4-and-langchain-77f44f23505d)"
 
 ### Agent
 
@@ -98,7 +98,7 @@ graph TB
     ```
 
 
-??? tip "[UniversalNER](https://arxiv.org/pdf/2308.03279.pdf) Used ChatGPT to distill much smaller model for a certain domain, for Universal NER models. Cc-by-4-C distribution"
+??? tip "[UniversalNER](https://arxiv.org/pdf/2308.03279.pdf) Used ChatGPT to distill much smaller model for a certain domain,"
     ```
     "Large language models (LLMs) have demonstrated remarkable generalizability, such as understanding arbitrary entities and relations. Instruction tuning has proven effective for distilling LLMs into more cost-efficient models such as Alpaca and Vicuna. Yet such student models still trail the original LLMs by large margins in downstream applications. In this paper, we explore targeted distillation with mission-focused instruction tuning to train student models that can excel in a broad application class such as open information extraction. Using named entity recognition (NER) for case study, we show how ChatGPT can be distilled into much smaller UniversalNER models for open NER. For evaluation, we assemble the largest NER benchmark to date, comprising 43 datasets across 9 diverse domains such as biomedicine, programming, social media, law, finance. Without using any direct supervision, UniversalNER attains remarkable NER accuracy across tens of thousands of entity types, outperforming general instruction-tuned models such as Alpaca and Vicuna by over 30 absolute F1 points in average. With a tiny fraction of parameters, UniversalNER not only acquires ChatGPT’s capability in recognizing arbitrary entity types, but also outperforms its NER accuracy by 7-9 absolute F1 points in average. Remarkably, UniversalNER even outperforms by a large margin state-of-the-art multi-task instruction-tuned systems such as InstructUIE, which uses supervised NER examples. We also conduct thorough ablation studies to assess the impact of various components in our distillation approach. We will release the distillation recipe, data, and UniversalNER models to facilitate future research on targeted distillation."
     ```
@@ -106,5 +106,10 @@ graph TB
     https://github.com/universal-ner/universal-ner
 
 
-!!! tip ️"[Robo-GPT](https://github.com/rokstrnisa/Robo-GPT)"
+!!! tip ️"[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
+    test
 
+asdf
+
+
+!!! tip "[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)"

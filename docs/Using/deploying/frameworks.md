@@ -47,16 +47,18 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 Handling the inputs/outputs to GenAI in a consistent and reliable manner has spurred the creation of software libraries that can work with GenAI that is called as a service, or hosted locally.
 
 #### LangChain
-[Langchain](https://python.langchain.com/en/latest/#) Is a primitive python or javascript-based primitive 'LLM' language that enables planned and agentic AI.
-
-##### Going deeper
-- [Langchain service deployment](https://github.com/ajndkr/lanarky)
-- [Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
-- [Toolkit](https://www.toolkit.club/) Generates LangChain plugins
-- [Langflow](https://github.com/logspace-ai/langflow) 
+!!! tip "[Langchain](https://python.langchain.com/en/latest/#) Is a primitive python and javascript orchestration language for adaptable, memory and tooling-equipped calls that can enable agentic AI."
 
 **Their Stack**
+
 ![image](https://github.com/ianderrington/genai/assets/76016868/c66bf027-8556-43e6-8e73-de59c5e58d95)
+
+They are building [Lang Smith](https://smith.langchain.com/) for more Low-code solutions for agentic needs.
+
+- [Langchain service deployment](https://github.com/ajndkr/lanarky)
+- [Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
+- [Langflow](https://github.com/logspace-ai/langflow) 
+- [Toolkit](https://www.toolkit.club/) Generates LangChain plugins for javascript. May be deprecated. 
 
 **Tutorials:**
 
@@ -67,12 +69,12 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 
 #### Llama ecosystem
 
-[Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model. 
+!!! tip "[Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model."
 
 
 
 ??? code "Code and models surrounding Llama"
-    - [LlamaGPT](https://github.com/getumbrel/llama-gpt A self-hosted, offline, ChatGPT-like chatbot, powered by Llama 2. 100% private, with no data leaving your device.
+    - [LlamaGPT](https://github.com/getumbrel/llama-gpt) A self-hosted, offline, ChatGPT-like chatbot, powered by Llama 2. 100% private, with no data leaving your device.
     - [Lit-Llama](https://github.com/Lightning-AI/lit-llama)
     - [MedAlpaca](https://github.com/kbressem/medAlpaca)
     - [Llama-2 on a CPU](https://towardsdatascience.com/running-llama-2-on-cpu-inference-for-document-q-a-3d636037a3d8) and [Github](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
@@ -125,9 +127,8 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
     Useful for exploring automatic prompt opteimization. 
 
 
-#### Language-like interfaces
+### Language-like interfaces
 ??? code "[LMQL](https://github.com/eth-sri/lmql) is a query language that enables simplified representations of chats and agents with minimal code. "
-
     ```
     "Greet LMQL:[GREETINGS]\n" where stops_at(GREETINGS, ".") and not "\n" in GREETINGS
 
@@ -146,10 +147,9 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 
 
 
-### Contorol libraries
+### Control libraries
 
 * Guidance
-* LMQL
 * RELM
 * Outlines
 
@@ -157,5 +157,5 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 
 ### Retrieval Augmentation focus
 
-??? code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines
+??? code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
 

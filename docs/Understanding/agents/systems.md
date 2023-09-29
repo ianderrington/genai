@@ -63,8 +63,7 @@ When an agent (or model) engages in an interaction with another agent, the resul
     ![image](https://github.com/ianderrington/genai/assets/76016868/9820f2c4-5779-4bc9-b501-4e9b455212ff)
 
 
-??? tip "[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/pdf/2305.14325.pdf)
-    "multiple language model instances propose and debate their individual responses and reasoning processes over multiple rounds to arrive at a common final answer."
+??? tip "[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/pdf/2305.14325.pdf) where multiple language model instances propose and debate their individual responses and reasoning processes over multiple rounds to arrive at a common final answer."
     They tried both concatenation or _summarization_ of other results. Summarization reduces length and improves quality. 
     ```python
         # Debate Length Prompt
@@ -75,8 +74,7 @@ When an agent (or model) engages in an interaction with another agent, the resul
     ```
     [Github](https://github.com/composable-architectures/llm_multiagent_debate)
 
-??? tip "[Council ](https://github.com/chain-ml/council)
-    Very promising initial creation of networks of agents to create full-fledged teams for output products. 
+??? tip "[Council ](https://github.com/chain-ml/council) Very promising initial creation of networks of agents to create full-fledged teams for output products." 
     ![image](https://github.com/chain-ml/council/raw/main/docs/source/introduction/engine_flow.png)
 
 
