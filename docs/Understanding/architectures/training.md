@@ -58,15 +58,6 @@ Adapters are efficient and performant layers that can optimize performance witho
 
 ## General Training Improvements
 
-??? code "[Dola: Decoding by Contrasting Layers Improves Factuality in Large Language Models](https://github.com/voidism/DoLa) "
-    [Paper](https://arxiv.org/pdf/2309.03883.pdf)
-    <img width="594" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ae1873a8-3d44-4a61-b409-049de25f91c2">
-    ```
-    "(They) amplify the factual knowledge in an LM
-    through a contrastive decoding approach, where the output probability over the next word is obtained from
-    the difference in logits obtained from a higher layer versus a lower layer"
-    ```
-    <img width="930" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/72b72c33-d355-4ee7-966e-72ad67a3b0c1">
 
 
 ### Pruning and compression
