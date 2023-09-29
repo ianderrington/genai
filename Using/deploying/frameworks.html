@@ -2071,13 +2071,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lmql" class="md-nav__link">
-    LMQL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#llama-ecosystem" class="md-nav__link">
     Llama ecosystem
   </a>
@@ -2091,28 +2084,29 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#specific-components" class="md-nav__link">
-    Specific components
-  </a>
-  
-    <nav class="md-nav" aria-label="Specific components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#retrieval-augmented" class="md-nav__link">
-    Retrieval Augmented
+  <a href="#language-like-interfaces" class="md-nav__link">
+    Language-like interfaces
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contorol-libraries" class="md-nav__link">
+    Contorol libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieval-augmentation-focus" class="md-nav__link">
+    Retrieval Augmentation focus
+  </a>
   
 </li>
         
@@ -2601,13 +2595,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lmql" class="md-nav__link">
-    LMQL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#llama-ecosystem" class="md-nav__link">
     Llama ecosystem
   </a>
@@ -2621,28 +2608,29 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#specific-components" class="md-nav__link">
-    Specific components
-  </a>
-  
-    <nav class="md-nav" aria-label="Specific components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#retrieval-augmented" class="md-nav__link">
-    Retrieval Augmented
+  <a href="#language-like-interfaces" class="md-nav__link">
+    Language-like interfaces
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contorol-libraries" class="md-nav__link">
+    Contorol libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieval-augmentation-focus" class="md-nav__link">
+    Retrieval Augmentation focus
+  </a>
   
 </li>
         
@@ -2728,21 +2716,6 @@ Tutorial <a href="https://www.deepspeed.ai/tutorials/ds-sequence/">here</a></p>
 <li><a href="https://www.pinecone.io/learn/langchain-prompt-templates/">https://www.pinecone.io/learn/langchain-prompt-templates/</a></li>
 <li><a href="https://learn.deeplearning.ai/langchain/lesson/3/memory">https://learn.deeplearning.ai/langchain/lesson/3/memory</a></li>
 </ul>
-<h4 id="lmql">LMQL<a class="headerlink" href="#lmql" title="Permanent link">&para;</a></h4>
-<p><a href="https://github.com/eth-sri/lmql">LMQL</a> is a query language that enables simplified representations of chats and agents with minimal code. </p>
-<details class="example">
-<summary>An example query string.</summary>
-<p>```
-"Greet LMQL:[GREETINGS]\n" where stops_at(GREETINGS, ".") and not "\n" in GREETINGS</p>
-</details>
-<p>if "Hi there" in GREETINGS:
-    "Can you reformulate your greeting in the speech of \
-     victorian-era English: [VIC_GREETINGS]\n" where stops_at(VIC_GREETINGS, ".")</p>
-<p>"Analyse what part of this response makes it typically victorian:\n"</p>
-<p>for i in range(4):
-    "-[THOUGHT]\n" where stops_at(THOUGHT, ".")</p>
-<p>"To summarize:[SUMMARY]"
-```</p>
 <h4 id="llama-ecosystem">Llama ecosystem<a class="headerlink" href="#llama-ecosystem" title="Permanent link">&para;</a></h4>
 <p><a href="https://ai.meta.com/llama/">Llama</a> is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model. </p>
 <details class="code">
@@ -2765,23 +2738,22 @@ Tutorial <a href="https://www.deepspeed.ai/tutorials/ds-sequence/">here</a></p>
 <details class="code">
 <summary><a href="https://github.com/embedchain/embedchain">EmbedChain</a>  is a framework to easily create LLM powered bots over any dataset.</summary>
 <p>Example:
-```python
-    import os</p>
-<div class="highlight"><pre><span></span><code>from embedchain import Llama2App
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
 
-os.environ[&#39;REPLICATE_API_TOKEN&#39;] = &quot;REPLICATE API TOKEN&quot;
+    <span class="kn">from</span> <span class="nn">embedchain</span> <span class="kn">import</span> <span class="n">Llama2App</span>
 
-zuck_bot = Llama2App()
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;REPLICATE_API_TOKEN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;REPLICATE API TOKEN&quot;</span>
 
-# Embed your data
-zuck_bot.add(&quot;youtube_video&quot;, &quot;https://www.youtube.com/watch?v=Ff4fRgnuFgQ&quot;)
-zuck_bot.add(&quot;web_page&quot;, &quot;https://en.wikipedia.org/wiki/Mark_Zuckerberg&quot;)
+    <span class="n">zuck_bot</span> <span class="o">=</span> <span class="n">Llama2App</span><span class="p">()</span>
 
-# Nice, your bot is ready now. Start asking questions to your bot.
-zuck_bot.query(&quot;Who is Mark Zuckerberg?&quot;)
-# Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook.
-</code></pre></div>
-<p>```</p>
+    <span class="c1"># Embed your data</span>
+    <span class="n">zuck_bot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;youtube_video&quot;</span><span class="p">,</span> <span class="s2">&quot;https://www.youtube.com/watch?v=Ff4fRgnuFgQ&quot;</span><span class="p">)</span>
+    <span class="n">zuck_bot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;web_page&quot;</span><span class="p">,</span> <span class="s2">&quot;https://en.wikipedia.org/wiki/Mark_Zuckerberg&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Nice, your bot is ready now. Start asking questions to your bot.</span>
+    <span class="n">zuck_bot</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Who is Mark Zuckerberg?&quot;</span><span class="p">)</span>
+    <span class="c1"># Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook. </span>
+</code></pre></div></p>
 </details>
 <details class="tip">
 <summary><a href="https://github.com/neuml/txtai">txtai</a> 'is an all-in-one embeddings database for semantic search, LLM orchestration and language model workflows.</summary>
@@ -2796,11 +2768,38 @@ zuck_bot.query(&quot;Who is Mark Zuckerberg?&quot;)
 <li><a href="https://github.com/sunner/ChatALL">Chatall</a> To interact with multiple chatbots at the same time.</li>
 <li><a href="https://github.com/go-skynet/LocalAI">LocalAI</a> drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.</li>
 </ul>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/dot-agent/openagent">Open Agent</a> IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents</p>
+</div>
 <details class="code">
-<summary><a href="https://github.com/dot-agent/openagent">Open Agent</a> IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents</summary>
+<summary><a href="https://github.com/stanfordnlp/dspy">DSPY</a> is a framework for solving advanced tasks with language models and retrieval models</summary>
+<p>Useful for exploring automatic prompt opteimization. </p>
 </details>
-<h3 id="specific-components">Specific components<a class="headerlink" href="#specific-components" title="Permanent link">&para;</a></h3>
-<h4 id="retrieval-augmented">Retrieval Augmented<a class="headerlink" href="#retrieval-augmented" title="Permanent link">&para;</a></h4>
+<h4 id="language-like-interfaces">Language-like interfaces<a class="headerlink" href="#language-like-interfaces" title="Permanent link">&para;</a></h4>
+<details class="code">
+<summary><a href="https://github.com/eth-sri/lmql">LMQL</a> is a query language that enables simplified representations of chats and agents with minimal code. </summary>
+<div class="highlight"><pre><span></span><code>&quot;Greet LMQL:[GREETINGS]\n&quot; where stops_at(GREETINGS, &quot;.&quot;) and not &quot;\n&quot; in GREETINGS
+
+if &quot;Hi there&quot; in GREETINGS:
+    &quot;Can you reformulate your greeting in the speech of \
+     victorian-era English: [VIC_GREETINGS]\n&quot; where stops_at(VIC_GREETINGS, &quot;.&quot;)
+
+&quot;Analyse what part of this response makes it typically victorian:\n&quot;
+
+for i in range(4):
+    &quot;-[THOUGHT]\n&quot; where stops_at(THOUGHT, &quot;.&quot;)
+
+&quot;To summarize:[SUMMARY]&quot;
+</code></pre></div>
+</details>
+<h3 id="contorol-libraries">Contorol libraries<a class="headerlink" href="#contorol-libraries" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Guidance</li>
+<li>LMQL</li>
+<li>RELM</li>
+<li>Outlines</li>
+</ul>
+<h3 id="retrieval-augmentation-focus">Retrieval Augmentation focus<a class="headerlink" href="#retrieval-augmentation-focus" title="Permanent link">&para;</a></h3>
 <p>??? code "<a href="https://github.com/explodinggradients/ragas">RAGAS</a> is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines</p>
 
 
