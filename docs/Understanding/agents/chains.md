@@ -194,7 +194,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
         '''
     ```
     
-??? tip [Teach LLMs to Personalize – An Approach inspired by Writing Education](https://arxiv.org/pdf/2308.07968.pdf)
+??? tip "[Teach LLMs to Personalize – An Approach inspired by Writing Education](https://arxiv.org/pdf/2308.07968.pdf)"
 
     <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2638d727-8fbd-4fc7-84a0-ae2bc0e8b2ab">
     

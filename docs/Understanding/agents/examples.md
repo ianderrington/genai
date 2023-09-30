@@ -33,7 +33,8 @@ graph TB
     AgentManager --> |informs and effects| Agent
 ```
 ### Langchain focused.
-!!! "[GPT and PDFS](https://betterprogramming.pub/talking-to-pdfs-gpt-4-and-langchain-77f44f23505d)"
+!!! tip "[GPT and PDFS](https://betterprogramming.pub/talking-to-pdfs-gpt-4-and-langchain-77f44f23505d)"
+
 
 ### Agent
 
@@ -106,10 +107,7 @@ graph TB
     https://github.com/universal-ner/universal-ner
 
 
-!!! tip ️"[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
-    test
-
-asdf
 
 
-!!! tip "[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)"
+
+!!! tip "[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
