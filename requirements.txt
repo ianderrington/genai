@@ -1,7 +1,6 @@
 mkdocs>=1.2.2
 mkdocs-minify-plugin
 mkdocs-include-markdown-plugin
-git+https://github.com/jldiaz/mkdocs-plugin-tags.git
 mkdocs-awesome-pages-plugin
 mkdocs-section-index
 mkdocs-table-reader-plugin

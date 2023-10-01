@@ -2,7 +2,7 @@ import os
 import yaml
 import argparse
 
-def print_structure(directory, open_markdown=False, exclude_dirs=[]):
+def get_structure(directory, open_markdown=False, exclude_dirs=[]):
     # Check if directory exists
     if not os.path.exists(directory):
         print(f"Directory {directory} does not exist!")
@@ -44,5 +44,5 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
 
-    print_structure(args.repo_path, args.open_md, args.exclude)
+    print(get_structure(args.repo_path, args.open_md, args.exclude))
 
