@@ -13,7 +13,6 @@
 ??? tip "[Baize: An Open-Source Chat Model with Parameter-Efficient Tuning on Self-Chat Data](https://arxiv.org/pdf/2304.01196.pdf) Parameter efficient LLama Tuning and risk minimization"
     with a new 'Self Distillation' with Feedback to improve itself even more. RESEARCH ONLY
     <img width="587" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5426c030-96a6-4e85-a37f-d465a7e13ab5">
-dic>
 
 
 ## Mixture of Experts
