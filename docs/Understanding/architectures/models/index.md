@@ -52,12 +52,6 @@ TODO: Clip paper
 
 !!! tip "[Learning to Compress Prompts with Gist Tokens](https://arxiv.org/pdf/2304.08467.pdf). Can enable 26x compression and 40% FLOP reduction and improvements by training 'gist tokens' to summarize information."
 
-??? tip "[LM-INfinite: Simple On-the-Fly Length Generalization for Large Language Models](https://arxiv.org/abs/2308.16137) provides an O(n) time/space extension allows LMMs to ability to go to 32k tokens and 2.7x speedup."
-    <img width="545" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8">
-        <img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1">   
-    <img width="863" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61">
-
-
 
 
 ## TO SORT
