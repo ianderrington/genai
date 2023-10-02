@@ -57,14 +57,17 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 - [A Simple yet Effective Learnable Positional Encoding Method for Improving Document Transformer Model](https://aclanthology.org/2022.findings-aacl.42.pdf) They introduce a learnable sinusoidal positional encoding feed forward network. Demonstrates significant improvements over other datasets. 
 
 
+## Enhancements and variations
 
+### Context length Improvements
 
-## Improvements, Optimizations, and Variations. 
+Improvements 
 
-- [](https://github.com/neuro-inc/ml-recipe-hier-attention)
+??? code "[Heirarchichal Attention](https://github.com/neuro-inc/ml-recipe-hier-attention)"
+    [Paper](https://arxiv.or dsvg/abs/2304.11062)
 
-- [Scaling Transformer to 1M tokens and beyond with RMT](https://arxiv.or dsvg/abs/2304.11062) [Github](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. 
-
+!!! code "[Scaling Transformer to 1M tokens and beyond with RMT](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths."
+    
 
 ??? tip "[MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185.pdf)"
 
@@ -72,14 +75,18 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 
     <img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356">
 
-
-
-!!! tip "[Infinite former](https://arxiv.org/pdf/2109.00301.pdf)"
-    Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration.
-
-??? note
-    [Github](https://github.com/deep-spin/infinite-former) 
+??? code "[Infinite Former](https://github.com/deep-spin/infinite-former) Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions."
+    [Paper](https://arxiv.org/pdf/2109.00301.pdf)  
     ![Infinity Former](https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80){ align=left width="300"  loading=lazy }
+
+??? tip "[LM-INfinite: Simple On-the-Fly Length Generalization for Large Language Models](https://arxiv.org/abs/2308.16137) provides an O(n) time/space extension allows LMMs to ability to go to 32k tokens and 2.7x speedup."
+    <img width="545" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8">
+        <img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1">   
+    <img width="863" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61">
+
+??? code "[Efficient Streaming Language Models with Attention Sinks](https://github.com/mit-han-lab/streaming-llm)"
+    ![image](https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a)
+
 
 ### Computation Reduction
 
