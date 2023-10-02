@@ -12,13 +12,13 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/agents/chain_optimization.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/architectures/generation.html">
       
       
-        <link rel="prev" href="agents.html">
+        <link rel="prev" href="finetuning.html">
       
       
-        <link rel="next" href="chains.html">
+        <link rel="next" href="pre_trained_models.html">
       
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Chain optimization - Gen()AI</title>
+        <title>Generation - Gen()AI</title>
       
     
     
@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#contrastive-decoding" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -135,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chain optimization
+              Generation
             
           </span>
         </div>
@@ -827,6 +832,8 @@
                 
   
   
+    
+  
   
     
     
@@ -855,20 +862,22 @@
       
         
       
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../architectures/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -884,7 +893,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             Architectures
@@ -920,7 +929,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../architectures/models/index.html" class="md-nav__link ">
+            <a href="models/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -949,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/models/components.html" class="md-nav__link">
+      <a href="models/components.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -969,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/models/transformers.html" class="md-nav__link">
+      <a href="models/transformers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/models/diffusers.html" class="md-nav__link">
+      <a href="models/diffusers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1009,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/models/gans.html" class="md-nav__link">
+      <a href="models/gans.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1037,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/training.html" class="md-nav__link">
+      <a href="training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/optimizing_hyper_parameters.html" class="md-nav__link">
+      <a href="optimizing_hyper_parameters.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1077,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/optimization.html" class="md-nav__link">
+      <a href="optimization.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/evaluating_and_comparing.html" class="md-nav__link">
+      <a href="evaluating_and_comparing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1117,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/alignment.html" class="md-nav__link">
+      <a href="alignment.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1137,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/embedding.html" class="md-nav__link">
+      <a href="embedding.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1157,7 +1166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/finetuning.html" class="md-nav__link">
+      <a href="finetuning.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1175,9 +1184,72 @@
                 
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Generation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="generation.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Generation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contrastive-decoding" class="md-nav__link">
+    Contrastive Decoding
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
     <li class="md-nav__item">
-      <a href="../architectures/pre_trained_models.html" class="md-nav__link">
+      <a href="pre_trained_models.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1197,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/recurrent_training.html" class="md-nav__link">
+      <a href="recurrent_training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1217,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/reinforcement_feedback.html" class="md-nav__link">
+      <a href="reinforcement_feedback.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1346,7 +1418,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../agents/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1375,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples.html" class="md-nav__link">
+      <a href="../agents/examples.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1395,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="memory.html" class="md-nav__link">
+      <a href="../agents/memory.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1415,7 +1487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chains.html" class="md-nav__link">
+      <a href="../agents/chains.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1435,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="evaluation.html" class="md-nav__link">
+      <a href="../agents/evaluation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1455,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="environments.html" class="md-nav__link">
+      <a href="../agents/environments.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="systems.html" class="md-nav__link">
+      <a href="../agents/systems.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2360,6 +2432,21 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contrastive-decoding" class="md-nav__link">
+    Contrastive Decoding
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2376,14 +2463,32 @@
   
 
 
-  <h1>Chain optimization</h1>
+  <h1>Generation</h1>
 
-<p>HOW TO OPTIMIZE PARAMETERS. </p>
-<p>Problems such as Hallucinations can be mitigated through downstream methods of process. </p>
-<details class="tip">
-<summary><a href="https://arxiv.org/abs/2307.03987">A stitch in time saves Nine</a></summary>
-<p>A process to mitigate model hallucination using RAG. 
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="602" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30"></a></p>
+<p>Generating new data from an input involves selecting the next best token or sets of tokens given an output logit vector. </p>
+<h2 id="contrastive-decoding">Contrastive Decoding<a class="headerlink" href="#contrastive-decoding" title="Permanent link">&para;</a></h2>
+<p>Demonstrates large improvements by using differences between better and worse models shows substantial improvement in generative quality.</p>
+<p><strong>Contrastive inference:</strong></p>
+<div class="admonition quote">
+<p class="admonition-title">Any method which controls behavior differential at inference time, directly contrasting outputs from a desirable inference process with outputs from an undesirable inference process.</p>
+</div>
+<p>--Sean Obrien
+  <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/9e20dedf-12c1-4f87-8fc3-6da419c9cf0a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="824" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9e20dedf-12c1-4f87-8fc3-6da419c9cf0a"></a></p>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2309.09117.pdf">Contrastive Decoding Improves Reasonign in Large Language Models</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2210.15097.pdf">Contrastive Decoding: Open-ended Text Generation as Optimization</a></p>
+</div>
+<details class="code">
+<summary><a href="https://github.com/voidism/DoLa">Dola: Decoding by Contrasting Layers Improves Factuality in Large Language Models</a> </summary>
+<p><a href="https://arxiv.org/pdf/2309.03883.pdf">Paper</a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/ae1873a8-3d44-4a61-b409-049de25f91c2" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="594" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ae1873a8-3d44-4a61-b409-049de25f91c2"></a>
+<div class="highlight"><pre><span></span><code>&quot;(They) amplify the factual knowledge in an LM
+through a contrastive decoding approach, where the output probability over the next word is obtained from
+the difference in logits obtained from a higher layer versus a lower layer&quot;
+</code></pre></div>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/72b72c33-d355-4ee7-966e-72ad67a3b0c1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="930" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/72b72c33-d355-4ee7-966e-72ad67a3b0c1"></a></p>
 </details>
 
 

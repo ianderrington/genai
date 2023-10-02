@@ -860,6 +860,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1167,6 +1169,26 @@
   
   <span class="md-ellipsis">
     Finetuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/generation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generation
   </span>
   
 
@@ -1522,6 +1544,26 @@
           <li class="md-nav__item">
   <a href="#constraining-outputs" class="md-nav__link">
     Constraining outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chain-optimization" class="md-nav__link">
+    Chain Optimization
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chain-optimization_1" class="md-nav__link">
+    Chain optimization
   </a>
   
 </li>
@@ -2545,6 +2587,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#chain-optimization" class="md-nav__link">
+    Chain Optimization
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chain-optimization_1" class="md-nav__link">
+    Chain optimization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2737,9 +2799,10 @@ Final answer: 6 * (1 + 1) + 12 = 24
 </code></pre></div>
 <p>```</p>
 </details>
-<p>??? tip <a href="https://arxiv.org/pdf/2308.07968.pdf">Teach LLMs to Personalize – An Approach inspired by Writing Education</a></p>
-<div class="highlight"><pre><span></span><code>&lt;img width=&quot;531&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/2638d727-8fbd-4fc7-84a0-ae2bc0e8b2ab&quot;&gt;
-</code></pre></div>
+<details class="tip">
+<summary><a href="https://arxiv.org/pdf/2308.07968.pdf">Teach LLMs to Personalize – An Approach inspired by Writing Education</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2638d727-8fbd-4fc7-84a0-ae2bc0e8b2ab" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2638d727-8fbd-4fc7-84a0-ae2bc0e8b2ab"></a></p>
+</details>
 <h3 id="constraining-outputs">Constraining outputs<a class="headerlink" href="#constraining-outputs" title="Permanent link">&para;</a></h3>
 <details class="tip">
 <summary><a href="https://arxiv.org/abs/2306.04031">Certified Reasoning with Language models</a> A 'logical guide' tool that an LLM can use.</summary>
@@ -2750,6 +2813,14 @@ Possible open source implementation <a href="https://github.com/kyegomez/LOGICGU
 <details class="code">
 <summary><a href="https://github.com/normal-computing/outlines">Outlines</a> guides the model generation of next-token logits to guide the generation corresponding to regex / JSON and pydantic schema. compatible with all models.</summary>
 <p>Also provides a way to functionalize templates to separate prompt logic.</p>
+</details>
+<h2 id="chain-optimization">Chain Optimization<a class="headerlink" href="#chain-optimization" title="Permanent link">&para;</a></h2>
+<h3 id="chain-optimization_1">Chain optimization<a class="headerlink" href="#chain-optimization_1" title="Permanent link">&para;</a></h3>
+<p>Problems such as Hallucinations can be mitigated through downstream methods of process. </p>
+<details class="tip">
+<summary><a href="https://arxiv.org/abs/2307.03987">A stitch in time saves Nine</a></summary>
+<p>A process to mitigate model hallucination using RAG. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="602" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30"></a></p>
 </details>
 
 
