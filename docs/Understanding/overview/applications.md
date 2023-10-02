@@ -56,7 +56,11 @@ Generative AI is increasingly good at translating between domains.
 
 ### Compression
 
-!!! important "[Language Modeling Is Compression](https://arxiv.org/pdf/2309.10668.pdf) demonstrates lossless compression of png, flac, much better than standard approaches"
+??? important "[Language Modeling Is Compression](https://arxiv.org/pdf/2309.10668.pdf) demonstrates lossless compression of text and images with upwards of 3x smaller compression."
+    Uses either newly trained 200K-3M transformer models or pre-trained Chinchilla models and achieves impressive compression rates. 
+    <img width="1298" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ffa8ac86-3876-4ecb-8b18-e14b47b972e5">
+    Details on implementation are somewhat hidden. 
+
 
 
 ### Code Generation
