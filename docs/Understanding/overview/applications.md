@@ -72,6 +72,9 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 - [Codium pr-agent](https://github.com/Codium-ai/pr-agent) 
 - [Summarization with Langchain](https://github.com/EnkrateiaLucca/summarization_with_langchain) A splendid view of a quick streamlit app that does PDF summarization. 
 
+### Documentation extraction
+- [Deepdoctection](https://github.com/deepdoctection/deepdoctection)
+
 ### Application and component replacement
 
 - [GPT as backend](https://github.com/RootbeerComputer/backend-GPT)
