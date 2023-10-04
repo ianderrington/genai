@@ -7,12 +7,17 @@ When an agent (or model) engages in an interaction with another agent, the resul
 !!! note "Multi-body system (bidirectional calling)"
     This system consists of multiple agents, and they engage in ongoing discussions about their daily activities. They also receive regular updates about their environment. An example of this type of system can be viewed in [this paper](https://arxiv.org/pdf/2304.03442.pdf).
 
-## Research
+## Tools Paper and Code
+
+!!! code "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
+    ![image](https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924)
+    [Paper](https://arxiv.org/pdf/2308.08155.pdf)
 
 
 !!! tip "[MetaGPT](https://github.com/geekan/MetaGPT)"
     MetaGPT enables different agents to interact and generate meaningful outputs based on varying tasks and personas. It's a reliable partially-formed solution. Check out the code for further knowledge!
 
+!!! code "[Reworkd/AgentGPT](https://github.com/reworkd/AgentGPT) '🤖 Assemble, configure, and deploy autonomous AI Agent(s) in your browser. 🤖'"
 
     
 !!! tip "[Self-play GPT](https://arxiv.org/pdf/2305.10142.pdf)"
