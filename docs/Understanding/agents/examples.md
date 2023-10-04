@@ -70,8 +70,8 @@ graph TB
 
 
 
-??? tip "[Agent-GPT](https://github.com/reworkd/AgentGPT)"
-    [Website](https://agentgpt.reworkd.ai/) --> Doesn't have agency/tools... So it is not good. A fancy wrapper for multi-task planning and execution. Limited at present. 
+??? code "[Agent-GPT](https://github.com/reworkd/AgentGPT)"
+    [Website](https://agentgpt.reworkd.ai/) 
 
 
 ??? tip "[AssistGPT: A General Multi-modal Assistant that can Plan, Execute, Inspect, and Learn](https://arxiv.org/pdf/2306.08640.pdf)" 
