@@ -66,10 +66,15 @@ Improvements in context length, for both training and generation have found ways
 They improve computation complexity in one of several ways:
 
 * Introducing sparsity that is
+  - Banded or fixed
   -  Hierarchical
   -  Banded to reduce full computation
   -  $/Lambda$ shaped with a banded window that also takes into account observably important first tokens.
 * Inclusion of a recurrent RNN-style that permits memory to be retained. 
+
+??? code "[Generating Long Sequences with Sparse Transformers](https://arxiv.org/pdf/1904.10509.pdf) provides simple solutions to generate longer sequences."
+    <img width="662" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/86d4dc29-7711-490d-a2a8-99c4a4d34027">
+
 
 ??? code "[Heirarchichal Attention](https://github.com/neuro-inc/ml-recipe-hier-attention)"
     [Paper](https://arxiv.or dsvg/abs/2304.11062)
