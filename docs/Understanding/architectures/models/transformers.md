@@ -85,6 +85,7 @@ Improvements
     <img width="863" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61">
 
 ??? code "[Efficient Streaming Language Models with Attention Sinks](https://github.com/mit-han-lab/streaming-llm)"
+    [Paper](https://arxiv.org/abs/2309.17453)
     ![image](https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a)
 
 
