@@ -61,7 +61,11 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 
 ### Context length Improvements
 
-Improvements 
+Length improvements with transformer take several general themes. 
+* Including sparsity in self-attention maps 
+  - Hierarchichally
+  - With $/Lambda$ shaped attention maps
+  - Combined with RNN-style input-outputs
 
 ??? code "[Heirarchichal Attention](https://github.com/neuro-inc/ml-recipe-hier-attention)"
     [Paper](https://arxiv.or dsvg/abs/2304.11062)
