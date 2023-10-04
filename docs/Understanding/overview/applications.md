@@ -62,7 +62,8 @@ Generative AI is increasingly good at translating between domains.
     Details on implementation are somewhat hidden. 
 
 
-
+### Font generation
+- [Fontogen](https://github.com/SerCeMan/fontogen) [Read more here](https://serce.me/posts/02-10-2023-hey-computer-make-me-a-font)
 ### Code Generation
 
 Very powerfully it can generate code to accomplish a task based on natural language input. This is very promising but still requires human oversight, due to the [challenge](./challenges.md) associated with using Automated AI systems without human input or oversight.
