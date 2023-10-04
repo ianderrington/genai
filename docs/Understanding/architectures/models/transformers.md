@@ -61,7 +61,15 @@ This component helps to remove the impilcit position-independence that 'vanilla'
 
 ### Context length Improvements
 
-Improvements 
+In its vanilla state, Transformers are $O(N^2)$ in their computation with self-complexity. This makes long context lengths increasingly costly to train and generate. 
+Improvements in context length, for both training and generation have found ways to generally work-around these limits. While there is ample research in this domain, we present a few of the most successful methods.
+They improve computation complexity in one of several ways:
+
+* Introducing sparsity that is
+  -  Hierarchical
+  -  Banded to reduce full computation
+  -  $/Lambda$ shaped with a banded window that also takes into account observably important first tokens.
+* Inclusion of a recurrent RNN-style that permits memory to be retained. 
 
 ??? code "[Heirarchichal Attention](https://github.com/neuro-inc/ml-recipe-hier-attention)"
     [Paper](https://arxiv.or dsvg/abs/2304.11062)
@@ -97,10 +105,8 @@ Improvements
 
 Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.
 
-<div class="reult" markdown>
-!!! tip "[Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)"
- 
-??? note
+
+??? tip "[Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)"
     <img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5">
 
 
@@ -111,10 +117,7 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 ### Graphs
 
 
-!!! tip "[Transformers Meet Directed Graphs](https://arxiv.org/pdf/2302.00049.pdf)"
-    An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.
-
-??? note
+??? tip "[Transformers Meet Directed Graphs](https://arxiv.org/pdf/2302.00049.pdf) introduces a variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs" 
     <img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc">
 
 
