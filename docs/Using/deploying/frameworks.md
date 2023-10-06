@@ -159,5 +159,5 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 ### Retrieval Augmentation focus
 
-??? code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
+!!! code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
 
