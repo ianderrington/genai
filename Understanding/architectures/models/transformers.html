@@ -1109,12 +1109,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#improvements-optimizations-and-variations" class="md-nav__link">
-    Improvements, Optimizations, and Variations.
+  <a href="#enhancements-and-variations" class="md-nav__link">
+    Enhancements and variations
   </a>
   
-    <nav class="md-nav" aria-label="Improvements, Optimizations, and Variations.">
+    <nav class="md-nav" aria-label="Enhancements and variations">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-length-improvements" class="md-nav__link">
+    Context length Improvements
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#computation-reduction" class="md-nav__link">
@@ -2717,12 +2724,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#improvements-optimizations-and-variations" class="md-nav__link">
-    Improvements, Optimizations, and Variations.
+  <a href="#enhancements-and-variations" class="md-nav__link">
+    Enhancements and variations
   </a>
   
-    <nav class="md-nav" aria-label="Improvements, Optimizations, and Variations.">
+    <nav class="md-nav" aria-label="Enhancements and variations">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-length-improvements" class="md-nav__link">
+    Context length Improvements
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#computation-reduction" class="md-nav__link">
@@ -2907,50 +2921,64 @@ Important discussion revealing the components of Transformers.</p>
 <ul>
 <li><a href="https://aclanthology.org/2022.findings-aacl.42.pdf">A Simple yet Effective Learnable Positional Encoding Method for Improving Document Transformer Model</a> They introduce a learnable sinusoidal positional encoding feed forward network. Demonstrates significant improvements over other datasets. </li>
 </ul>
-<h2 id="improvements-optimizations-and-variations">Improvements, Optimizations, and Variations.<a class="headerlink" href="#improvements-optimizations-and-variations" title="Permanent link">&para;</a></h2>
+<h2 id="enhancements-and-variations">Enhancements and variations<a class="headerlink" href="#enhancements-and-variations" title="Permanent link">&para;</a></h2>
+<h3 id="context-length-improvements">Context length Improvements<a class="headerlink" href="#context-length-improvements" title="Permanent link">&para;</a></h3>
+<p>In its vanilla state, Transformers are <span class="arithmatex">\(O(N^2)\)</span> in their computation with self-complexity. This makes long context lengths increasingly costly to train and generate. 
+Improvements in context length, for both training and generation have found ways to generally work-around these limits. While there is ample research in this domain, we present a few of the most successful methods.
+They improve computation complexity in one of several ways:</p>
 <ul>
-<li>
-<p><a href="https://github.com/neuro-inc/ml-recipe-hier-attention"></a></p>
-</li>
-<li>
-<p><a href="https://arxiv.or dsvg/abs/2304.11062">Scaling Transformer to 1M tokens and beyond with RMT</a> <a href="https://github.com/booydar/t5-experiments/tree/scaling-report">Github</a> Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths. </p>
-</li>
+<li>Introducing sparsity that is</li>
+<li>Banded or fixed</li>
+<li>Hierarchical</li>
+<li>Banded to reduce full computation</li>
+<li><span class="arithmatex">\(/Lambda\)</span> shaped with a banded window that also takes into account observably important first tokens.</li>
+<li>Inclusion of a recurrent RNN-style that permits memory to be retained. </li>
 </ul>
+<details class="code">
+<summary><a href="https://arxiv.org/pdf/1904.10509.pdf">Generating Long Sequences with Sparse Transformers</a> provides simple solutions to generate longer sequences.</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/86d4dc29-7711-490d-a2a8-99c4a4d34027" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="662" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/86d4dc29-7711-490d-a2a8-99c4a4d34027"></a></p>
+</details>
+<details class="code">
+<summary><a href="https://github.com/neuro-inc/ml-recipe-hier-attention">Heirarchichal Attention</a></summary>
+<p><a href="https://arxiv.or dsvg/abs/2304.11062">Paper</a></p>
+</details>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/booydar/t5-experiments/tree/scaling-report">Scaling Transformer to 1M tokens and beyond with RMT</a> Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths.</p>
+</div>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2305.07185.pdf">MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers</a></summary>
 <p>MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration that allows for <span class="arithmatex">\(O(N^{4/3}\)</span> scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers.</p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356"></a></p>
 </details>
-<div class="admonition tip">
-<p class="admonition-title"><a href="https://arxiv.org/pdf/2109.00301.pdf">Infinite former</a></p>
-<p>Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions. Promising but potentially complex. Worth consideration.</p>
-</div>
-<details class="note">
-<summary>Note</summary>
-<p><a href="https://github.com/deep-spin/infinite-former">Github</a> 
+<details class="code">
+<summary><a href="https://github.com/deep-spin/infinite-former">Infinite Former</a> Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions.</summary>
+<p><a href="https://arxiv.org/pdf/2109.00301.pdf">Paper</a><br />
 <a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="left" alt="Infinity Former" loading="lazy" src="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" width="300" /></a></p>
+</details>
+<details class="tip">
+<summary><a href="https://arxiv.org/abs/2308.16137">LM-INfinite: Simple On-the-Fly Length Generalization for Large Language Models</a> provides an O(n) time/space extension allows LMMs to ability to go to 32k tokens and 2.7x speedup.</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="545" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8"></a>
+    <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1"></a> <br />
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="863" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61"></a></p>
+</details>
+<details class="code">
+<summary><a href="https://github.com/mit-han-lab/streaming-llm">Efficient Streaming Language Models with Attention Sinks</a></summary>
+<p><a href="https://arxiv.org/abs/2309.17453">Paper</a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a" /></a></p>
 </details>
 <h3 id="computation-reduction">Computation Reduction<a class="headerlink" href="#computation-reduction" title="Permanent link">&para;</a></h3>
 <p><a href="https://arxiv.org/pdf/2306.03078v1.pdf">SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression</a></p>
 <h3 id="fine-tuning">Fine Tuning<a class="headerlink" href="#fine-tuning" title="Permanent link">&para;</a></h3>
 <p>Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.</p>
-<div class="reult">
-<div class="admonition tip">
-<p class="admonition-title"><a href="https://arxiv.org/pdf/2305.08298.pdf">Symbol Tuning Improves in-context learning in Language Models</a></p>
-</div>
-<details class="note">
-<summary>Note</summary>
+<details class="tip">
+<summary><a href="https://arxiv.org/pdf/2305.08298.pdf">Symbol Tuning Improves in-context learning in Language Models</a></summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5"></a></p>
 </details>
 <h2 id="other-modalities">Other modalities<a class="headerlink" href="#other-modalities" title="Permanent link">&para;</a></h2>
 <h3 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">&para;</a></h3>
 <h3 id="graphs">Graphs<a class="headerlink" href="#graphs" title="Permanent link">&para;</a></h3>
-<div class="admonition tip">
-<p class="admonition-title"><a href="https://arxiv.org/pdf/2302.00049.pdf">Transformers Meet Directed Graphs</a></p>
-<p>An interesting-if-also-complex variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs.</p>
-</div>
-<details class="note">
-<summary>Note</summary>
+<details class="tip">
+<summary><a href="https://arxiv.org/pdf/2302.00049.pdf">Transformers Meet Directed Graphs</a> introduces a variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs</summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc"></a></p>
 </details>
 <h2 id="training-variations">Training variations<a class="headerlink" href="#training-variations" title="Permanent link">&para;</a></h2>
@@ -2979,7 +3007,6 @@ a constant number of encoder layers can emulate basic computing blocks, includin
 <li><a href="https://github.com/idiap/fast-transformers/tree/master">Fast Transformers</a> A quality collection of a number of transformer implementations written in Pytorch. </li>
 </ul>
 <h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-</div>
 
 
   
