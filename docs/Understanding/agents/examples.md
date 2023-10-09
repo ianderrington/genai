@@ -108,6 +108,12 @@ graph TB
 
 
 
+## Libraries
+
+!!! code "[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
+
+!!! code "[Chrome-GPT](https://github.com/richardyc/Chrome-GPT): an experimental AutoGPT agent that interacts with Chrome"
+    
 
 
-!!! tip "[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
+
