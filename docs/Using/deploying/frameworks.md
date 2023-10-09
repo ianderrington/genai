@@ -65,6 +65,8 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 - https://www.pinecone.io/learn/langchain-prompt-templates/
 - https://learn.deeplearning.ai/langchain/lesson/3/memory
 
+### Usage
+[OpenAI](https://github.com/openai/openai-python)
 
 
 #### Llama ecosystem
