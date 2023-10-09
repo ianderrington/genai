@@ -3,3 +3,5 @@
     <img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e">
 
 
+!!! code "[Slow Llama](https://github.com/okuvshynov/slowllama) for finetuning on a M1/M2 mac)"
+
