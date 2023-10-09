@@ -9,9 +9,13 @@ Demonstrates large improvements by using differences between better and worse mo
   --Sean Obrien
   <img width="824" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9e20dedf-12c1-4f87-8fc3-6da419c9cf0a">
 
-!!! tip "[Contrastive Decoding Improves Reasonign in Large Language Models](https://arxiv.org/pdf/2309.09117.pdf)"
+??? tip "[Contrastive Decoding Improves Reasonign in Large Language Models](https://arxiv.org/pdf/2309.09117.pdf)"
+    <img width="865" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/72f3d72a-eb5d-435f-bfd7-f8be2ae34d07">
 
-!!! tip "[Contrastive Decoding: Open-ended Text Generation as Optimization](https://arxiv.org/pdf/2210.15097.pdf)"
+
+??? tip "[Contrastive Decoding: Open-ended Text Generation as Optimization](https://arxiv.org/pdf/2210.15097.pdf)"
+    <img width="312" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f53b6aa3-a2d7-40d8-841a-822344bcb962">
+
   
 ??? code "[Dola: Decoding by Contrasting Layers Improves Factuality in Large Language Models](https://github.com/voidism/DoLa) "
     [Paper](https://arxiv.org/pdf/2309.03883.pdf)
