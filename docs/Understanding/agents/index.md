@@ -23,7 +23,10 @@ flowchart LR
     C --> D[Action]
 
 ```
-### [Models](../architectures/index.md)
+
+### [Cognition](cognition.md)
+
+[Models](../architectures/index.md)
 
 Models provide the computational core of Agents. Acting like a 'brain' that a takes in input [prompts](#prompts) they return outputs. Generally the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation with [recurrent training](../architectures/recurrent_training.md).
 
