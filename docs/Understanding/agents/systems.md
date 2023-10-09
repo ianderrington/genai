@@ -9,7 +9,7 @@ When an agent (or model) engages in an interaction with another agent, the resul
 
 ## Tools Paper and Code
 
-!!! code "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
+??? important "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
     ![image](https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924)
     [Paper](https://arxiv.org/pdf/2308.08155.pdf)
 
