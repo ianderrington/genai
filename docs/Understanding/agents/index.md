@@ -5,8 +5,8 @@ Similar to bots, or other computerized automota, they may have the ability to ru
 
 ## Basic Concepts
 
-* [Models](../architectures/index.md): The 'intelligent' component returns an output for a given input. 
-* Input [environments](environments.md) that can and do provide inputs. 
+* [Environments](environments.md) that can and do provide **inputs**.
+* [Cognition](./cognition.md) is the ability to understand through the use of computational [models](../architecture/models/index.md) and [memory](./memory.md). 
 * Language [prompts](../prompting/index.md) that orient's and agent's response. 
 * [Memory](./memory.md) to enable writing and reading information that may be of use. 
 * [Tools](./actions_and_tools.md) that enable more than text (or images) to be returned or otherwise acted upon. 
@@ -15,35 +15,34 @@ Similar to bots, or other computerized automota, they may have the ability to ru
 * Agents can be quite different! Here are some [examples](./examples.md) of agents made both in academic and commercial settings. 
 * [Systems of Agents](systems.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
 
+## Background
+```mermaid
+flowchart LR
+    A(Input) --> B[Calculate]
+    B --> C[Output]
+    C --> D[Action]
 
-
-## Essential references
-
-Before we go on, there are several references that are of high merit that you may wish to check out!!!
-
-- [Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent) As usual, a splendid post by Lilian Weng
-- [Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of nicely curated list of systems using agents
-
-## [Models](../architectures/index.md)
+```
+### [Models](../architectures/index.md)
 
 Models provide the computational core of Agents. Acting like a 'brain' that a takes in input [prompts](#prompts) they return outputs. Generally the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation with [recurrent training](../architectures/recurrent_training.md).
 
 [Here](../architectures/index.md) you can learn how to build models, though it is often easier to use [pre-trained models](../architectures/pre_trained_models.md). 
 
-## [Prompts](../prompting/index.md)
+### [Prompts](../prompting/index.md)
 
 !!! warning "Garbage In --> Garbage Out"
     The common realization that bad input will lead to bad outputs becomes more nuanced when considering the degree to which small changes in input prompts can lead to wildly different outcome performance. Consequently, well-chosen prompts can functionally enable an agent, or not. 
 
 Because of the importance and breadth of details involved with prompting, please visit [this section](../prompting/index.md). Note, that prompts will be model-specific, and if the model changes, either completely or with new architecture, the continued performance of a given prompt or prompt strategy is not certain. 
 
-## [Memory](./memory.md)
+### [Memory](./memory.md)
 
 Like people, agents can be better enabled when they have access to memory.  We discuss memory thoroughly [here](./memory.md).
 
-## [Tools](./actions_and_tools.md)
+### [Tools](./actions_and_tools.md)
 
-## Interpreters 
+### Interpreters 
 
 Both the input and output into an LLM model may be intepreted, or otherwise parsed in a manner that makes the input or output more impactful. 
 
@@ -52,6 +51,16 @@ Both the input and output into an LLM model may be intepreted, or otherwise pars
 
 ## [Systems](systems.md)
 Generative AI systems involve the interaction of multiple individual GenAI elements that can act, to a coordinated degree, independently of other AI Agents. 
+
+## Useful references
+
+Before we go on, there are several references that are of high merit that you may wish to check out!!!
+
+- [Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent) As usual, a splendid post by Lilian Weng
+- [Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of nicely curated list of systems using agents
+
+
+
 
 ## TO ORGANIZE
 
