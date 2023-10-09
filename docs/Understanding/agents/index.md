@@ -6,7 +6,7 @@ Similar to bots, or other computerized automota, they may have the ability to ru
 ## Basic Concepts
 
 * [Environments](environments.md) that can and do provide **inputs**.
-* [Cognition](./cognition.md) is the ability to understand through the use of computational [models](../architecture/models/index.md) and [memory](./memory.md). 
+* [Cognition architectures](./cognition.md) is the ability to understand through the use of computational [models](../architecture/models/index.md) and [memory](./memory.md). 
 * Language [prompts](../prompting/index.md) that orient's and agent's response. 
 * [Memory](./memory.md) to enable writing and reading information that may be of use. 
 * [Tools](./actions_and_tools.md) that enable more than text (or images) to be returned or otherwise acted upon. 
@@ -25,6 +25,7 @@ flowchart LR
 ```
 
 ### [Cognition](cognition.md)
+TODO: https://arxiv.org/pdf/2309.02427.pdf
 
 [Models](../architectures/index.md)
 
