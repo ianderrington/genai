@@ -26,3 +26,11 @@ Demonstrates large improvements by using differences between better and worse mo
     the difference in logits obtained from a higher layer versus a lower layer"
     ```
     <img width="930" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/72b72c33-d355-4ee7-966e-72ad67a3b0c1">
+
+
+
+
+!!! tip "[Decoding Strategies in Large Language Models](https://towardsdatascience.com/decoding-strategies-in-large-language-models-9733a8f70539)
+
+
+!!! code [https://github.com/lucidrains/speculative-decoding]
