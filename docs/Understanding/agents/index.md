@@ -31,22 +31,22 @@ graph LR
 
 To enable that it may require more complicated relations between example components. Below is an example representation. 
 
-
-```mermaid
-graph TB
-    Agent((Agent)) -->|makes| decision((Decision))
-    decision -->|attempts| action((Action))
-    action -->|passes| execution((Execution))
-    execution -->|affects| environment((Environment))
-    execution -->|generates| agentMemory((Agent's Memory))
-    agentMemory -->|informs and effects| Agent
-    environment -->|provides| observations((Observations))
-    observations -->|informs and effects| Agent
-    execution -->|queries| environment
-    AgentManager((Agent Manager)) -->|affects| execution
-    Agent --> |informs and effects| AgentManager
-    AgentManager --> |informs and effects| Agent
-```
+???+ example "An Agent's components"
+    ```mermaid
+    graph TB
+        Agent((Agent)) -->|makes| decision((Decision))
+        decision -->|attempts| action((Action))
+        action -->|passes| execution((Execution))
+        execution -->|affects| environment((Environment))
+        execution -->|generates| agentMemory((Agent's Memory))
+        agentMemory -->|informs and effects| Agent
+        environment -->|provides| observations((Observations))
+        observations -->|informs and effects| Agent
+        execution -->|queries| environment
+        AgentManager((Agent Manager)) -->|affects| execution
+        Agent --> |informs and effects| AgentManager
+        AgentManager --> |informs and effects| Agent
+    ```
 
 
 

@@ -1,44 +1,26 @@
-TODO: Sort and prioritize this. 
+There are different categories for Agents, which is often either by the environment that they act, or by manner in which they are used. 
+
+**Environments**
+
+1. Human+Chat-agents
+1. Autonomous chat-agents
+1. Agent-systems
+1. Physical-input agents
+
+**Purpose:**
+
+* Do simple/single things: perhaps ephemeral. 
+* Do a complex task that may require simple things. Very likely enduring, especially if they are expert systems.. 
+* Doing a list set of complex tasks, perhaps more continuously enduring. 
 
 Agent types can be described by direct agentic ability to cause a change in the world.
 
-## Text Agent
 
-An agent that can output only language text. Even thought the language can be 'interpreted' into different things, as is done in the environment. 
+### Agent Examples
 
-## Text + Image Agent
+Here are a few examples. Because agents are hard to disentangle from core components, we describe more throughout, and especially in the section on [cognitive architectures](./cognitive_architecture.md)
 
-An agent that can output 
-
-## Robotic Agent
-
-A robotic agent can control mechanism impacting the mechanical position or other activity of a device. 
-
-
-
-
-
-### Langchain focused.
-!!! tip "[GPT and PDFS](https://betterprogramming.pub/talking-to-pdfs-gpt-4-and-langchain-77f44f23505d)"
-
-
-### Agent
-
-
-??? tip "[ReAct](https://arxiv.org/abs/2210.03629)"
-    - [Github](https://github.com/ysymyth/ReAct) 
-    - Effectively Observe, Think, Act, Repeat.
-
-
-??? tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://arxiv.org/abs/2303.11366) an agent with dynamic memory and self-reflection capabilities"
-    ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
-    - [Github](https://github.com/noahshinn024/reflexion)
-    - [Inspired github](https://github.com/GammaTauAI/reflexion-human-eval) 
-
-
-
-??? tip "[Learning to Reason and Memorize with Self-Notes](https://adapterhub.ml/) Allows model to deviate from input context at any time to reason and take notes"
-    <img width="685" alt="image" src="https://github.com/ianderrington/general/assets/76016868/e3b9ed66-18a8-451b-b29a-09815d7791d1">
+??? tip "[Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning](https://browse.arxiv.org/pdf/2310.01061.pdf)"
 
 
 ??? tip "[Large language models as tool makers](https://arxiv.org/pdf/2305.17126.pdf) [Github](https://github.com/ctlllll/llm-toolmaker) Allows high-quality tools to be reused by more lightweight models."
@@ -48,8 +30,6 @@ A robotic agent can control mechanism impacting the mechanical position or other
 ??? tip "[CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation](https://arxiv.org/pdf/2305.14318.pdf)"
     <img width="750" alt="image" src="https://github.com/ianderrington/general/assets/76016868/0762aaaf-871e-495c-b560-f4e019c8020e">
     <img width="1012" alt="image" src="https://github.com/ianderrington/general/assets/76016868/81b88f7e-af2e-424e-9cb8-0e377bc141c0">
-
-
 
 
 ??? tip "[smolai](https://github.com/ThomasEwing04/SMOL_AI) https://www.youtube.com/watch?v=zsxyqz6SYp8&t=1s An interesting example"
