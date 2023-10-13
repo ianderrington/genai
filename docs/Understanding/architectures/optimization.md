@@ -43,9 +43,10 @@ Purpose of quantization
 
 #### Examples
 
-??? code [HF bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration) and code
-    [From Github](https://github.com/huggingface/blog/blob/main/assets/96_hf_bitsandbytes_integration/example.py)
+!!! code "[HF bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration) and code [From Github](https://github.com/huggingface/blog/blob/main/assets/96_hf_bitsandbytes_integration/example.py)"
 
+??? code "[PB-LLM: Partially Binarized Large Language Models](https://github.com/hahnyuan/PB-LLM) to compress identified model weights into a single bit, while allowing others to only be partially compressed."
+    [Paper](https://github.com/hahnyuan/PB-LLM) 
     
 ### Knowledge Distillation
 Train a new smaller model using the output of bigger models.
