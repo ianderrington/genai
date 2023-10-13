@@ -2,7 +2,6 @@ When an agent (or model) engages in an interaction with another agent, the resul
 
 !!! note "Binary system (asymmetric calling)"
     In this system, ChatGPT initiates communication with DallE using a prompt. DallE responds by delivering an image. This image is then used in the final response of ChatGPT or returned as-is.
-
         
 !!! note "Multi-body system (bidirectional calling)"
     This system consists of multiple agents, and they engage in ongoing discussions about their daily activities. They also receive regular updates about their environment. An example of this type of system can be viewed in [this paper](https://arxiv.org/pdf/2304.03442.pdf).
