@@ -17,21 +17,7 @@ A robotic agent can control mechanism impacting the mechanical position or other
 
 
 
-```mermaid
-graph TB
-    Agent((Agent)) -->|makes| decision((Decision))
-    decision -->|attempts| action((Action))
-    action -->|passes| execution((Execution))
-    execution -->|affects| environment((Environment))
-    execution -->|generates| agentMemory((Agent's Memory))
-    agentMemory -->|informs and effects| Agent
-    environment -->|provides| observations((Observations))
-    observations -->|informs and effects| Agent
-    execution -->|queries| environment
-    AgentManager((Agent Manager)) -->|affects| execution
-    Agent --> |informs and effects| AgentManager
-    AgentManager --> |informs and effects| Agent
-```
+
 ### Langchain focused.
 !!! tip "[GPT and PDFS](https://betterprogramming.pub/talking-to-pdfs-gpt-4-and-langchain-77f44f23505d)"
 
@@ -74,8 +60,6 @@ graph TB
     [Website](https://agentgpt.reworkd.ai/) 
 
 
-??? tip "[AssistGPT: A General Multi-modal Assistant that can Plan, Execute, Inspect, and Learn](https://arxiv.org/pdf/2306.08640.pdf)" 
-    [Webpage](https://showlab.github.io/assistgpt/) Uses PEIL PLan execute inspect learn.
 
 
 !!! tip "[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)"

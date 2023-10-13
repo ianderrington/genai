@@ -27,3 +27,4 @@ We can make this easier to read
 - [ ] build with https://docusaurus.io/
 - [ ] Integrate example python notebooks and build with https://github.com/outerbounds/nbdoc
 
+- [mkdocs charts](https://github.com/timvink/mkdocs-charts-plugin)
