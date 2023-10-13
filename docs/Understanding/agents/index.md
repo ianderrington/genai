@@ -58,9 +58,12 @@ LLM-enabled agents
 ## Useful references
 
 Here are several reference so of merit with considering. 
-??? note "[The Rise and POtentisl of LLM Based Agents:A Survey](https://arxiv.org/pdf/2309.07864.pdf) Providess a comprehensive overview of thoughtful ways of considering LLMss. 
+??? note "[The Rise and Potential of Large Language Model Based Agents:A Survey](https://arxiv.org/pdf/2309.07864.pdf) Providess a comprehensive overview of thoughtful ways of considering LLMss. 
 
-- [Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent) As usual, a splendid post by Lilian Weng
+??? important "[Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent)"
+     As usual, a splendid post by Lilian Weng
+
+
 - [Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of a nicely curated list of systems using agents
 
 
