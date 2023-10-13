@@ -17,6 +17,15 @@ There are different categories for Agents, which are often either by the environ
 
 Here are a few examples. Because agents are hard to disentangle from core components, we describe more throughout, especially in the section on [cognitive architectures](./cognitive_architecture.md)
 
+??? code "[Fresh LLMs](https://github.com/freshllms/freshqa that propose FreshQA, a dynamic QA benchmark, and FreshPrompt that allows LLMs to stay up to date"
+    - [Paper](https://arxiv.org/pdf/2310.03214.pdf)
+    
+    <img width="558" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b9cc4b22-3f98-40db-adfe-728a434abb72">
+    It also includes question-premise checking to help minimize hallucination
+    <img width="555" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e272bc63-a0a0-4735-a2d6-da79b6840107">
+
+
+
 ??? code "[Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning](https://github.com/RManLuo/reasoning-on-graphs)"
     In their [paper](https://browse.arxiv.org/pdf/2310.01061.pdf) they present a Planning-Retrieval-Reasoning framework that called 'Reasoning on Graphs' or RoG.
     RoG generates ground plans enabled by KGs which are then used to retrieve reasoning paths for the LLM. 
