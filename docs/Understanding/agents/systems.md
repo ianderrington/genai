@@ -8,13 +8,20 @@ When an agent (or model) engages in an interaction with another agent, the resul
 
 ## Tools Paper and Code
 
-??? important "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
+???+ important "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
     ![image](https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924)
     [Paper](https://arxiv.org/pdf/2308.08155.pdf)
+    TRY THIS!
+
+???+ important "[AutoAgents: A Framework for Automatic Agent Generation](https://arxiv.org/pdf/2309.17288v1.pdf)"
+    [Paper](https://arxiv.org/pdf/2309.17288v1.pdf)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/d89bf7b1-99a0-429f-a6f5-50a8183a151f)
+    <img width="581" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f9d7e423-b3d9-40ca-8be8-52461d53282a">
+
+    TRY THIS!
 
 
-!!! tip "[MetaGPT](https://github.com/geekan/MetaGPT)"
-    MetaGPT enables different agents to interact and generate meaningful outputs based on varying tasks and personas. It's a reliable partially-formed solution. Check out the code for further knowledge!
+??? code "[MetaGPT](https://github.com/geekan/MetaGPT) enables different agents to interact and generate meaningful outputs based on varying tasks and personas."
 
 !!! code "[Reworkd/AgentGPT](https://github.com/reworkd/AgentGPT) '🤖 Assemble, configure, and deploy autonomous AI Agent(s) in your browser. 🤖'"
 
