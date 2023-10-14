@@ -34,6 +34,7 @@ Eliminate weights that do not produce consistently valuable outputs.
 Reduce the precision of the models from fp32 to fp16, int8, and even binary! 
 
 ![image](https://huggingface.co/blog/assets/96_hf_bitsandbytes_integration/tf32-Mantissa-chart-hi-res-FINAL.png)
+
 Purpose of quantization
 
 <figure markdown>
@@ -41,16 +42,33 @@ Purpose of quantization
   <figcaption>Quantization summarized image taken from [Advanced Practical Data Science Lecture 9: Compression Techniques and Distillation](https://harvard-iacs.github.io/2020F-AC295/lectures/lecture9/presentation/lecture9.pdf)</figcaption>
 </figure>
 
+#### When? During or after training?
+There are general times when quantization may be performed. During training, post-training. 
+Here are the pros/cons of each kind:
+
+TODO: Table with this information 
+
 #### Examples
 
+??? code "[SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs](https://github.com/mit-han-lab/smoothquant)"
+    Using some post-training smoothing, they shift the weights in such a way that they are easier to quantize. 
+    [Paper](https://arxiv.org/abs/2211.10438.pdf)
+    <img width="337" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ed34f663-5792-471f-9927-f3622f3243a3">
+    
 !!! code "[HF bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration) and code [From Github](https://github.com/huggingface/blog/blob/main/assets/96_hf_bitsandbytes_integration/example.py)"
+    [Paper](https://arxiv.org/abs/2309.14717)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/85938334-b0cd-4d60-9a47-7ea5bc0b09ab)
 
+    
 ??? code "[PB-LLM: Partially Binarized Large Language Models](https://github.com/hahnyuan/PB-LLM) to compress identified model weights into a single bit, while allowing others to only be partially compressed."
     [Paper](https://github.com/hahnyuan/PB-LLM) 
     
 ### Knowledge Distillation
+
 Train a new smaller model using the output of bigger models.
 (TODO) 
+??? code "[QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models](https://github.com/yuhuixu1993/qa-lora)"
+    ![image](https://github.com/ianderrington/genai/assets/76016868/87219990-b7e8-4895-a274-a55584f2cb9e)
 
 [Knowledge Distillation and Compression Demo.ipynb](https://colab.research.google.com/drive/1A0SWlfcd6ISzsc0gLBIr4N_vECHhUAst#scrollTo=6v59Uu9pb_wM)
 
