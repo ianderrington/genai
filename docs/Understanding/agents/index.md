@@ -51,13 +51,15 @@ To enable that it may require more complicated relations between example compone
 
 
 ## Background
-Traditional RL agents.
-LLM-enabled agents
+TODO: Quick description of Traditional RL agents and how they compare, and how we are focusing on LLM-enabled agents.
 
 
 ## Useful references
 
-Here are several reference so of merit with considering. 
+Here are several references of merit. 
+
+!!! important "[LLM-Agent-Papers](https://github.com/WooooDyy/LLM-Agent-Paper-List)
+
 ??? note "[The Rise and Potential of Large Language Model Based Agents:A Survey](https://arxiv.org/pdf/2309.07864.pdf) Providess a comprehensive overview of thoughtful ways of considering LLMss. 
 
 ??? important "[Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent)"
