@@ -1,6 +1,9 @@
 
 ??? code tip "[Identifying the Risks of LM Agents with an LM-Emulated Sandbox](https://arxiv.org/pdf/2309.15817.pdf)"
-    [Paper](https://arxiv.org/pdf/2309.15817.pdf)
+    Where in their [paper](https://arxiv.org/pdf/2309.15817.pdf) they demonstrate an emulation container to evaluate the safety of an Agent.
+    
+    <img width="1198" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/48305f8b-7d79-4c36-b731-2aacd035fa49">
+
     
 
 ??? code tip "[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/pdf/2308.03688.pdf)"
