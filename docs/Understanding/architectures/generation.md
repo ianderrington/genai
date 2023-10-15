@@ -5,11 +5,10 @@ Generating new data from an input involves selecting the next best token or sets
 Demonstrates large improvements by using differences between better and worse models shows substantial improvement in generative quality.
 
 **Contrastive inference:**
-!!! quote "Any method which controls behavior differential at inference time, directly contrasting outputs from a desirable inference process with outputs from an undesirable inference process."
-  --Sean Obrien
-  <img width="824" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9e20dedf-12c1-4f87-8fc3-6da419c9cf0a">
 
-??? tip "[Contrastive Decoding Improves Reasonign in Large Language Models](https://arxiv.org/pdf/2309.09117.pdf)"
+!!! quote "Any method which controls behavior differential at inference time, directly contrasting outputs from a desirable inference process with outputs from an undesirable inference process. --Sean Obrien"
+
+???+ tip "[Contrastive Decoding Improves Reasoning in Large Language Models](https://arxiv.org/pdf/2309.09117.pdf)"
     <img width="865" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/72f3d72a-eb5d-435f-bfd7-f8be2ae34d07">
 
 
