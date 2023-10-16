@@ -52,6 +52,34 @@ Here are some known thought structures that are improving agentic output.
 
     <img width="537" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4dcb9273-8965-461d-8da7-ae9a0be6debc">
 
+
+## Planning and Reflective
+??? important "[Chain-of-Verification Reduces Hallucination in Large Language Models]"
+    Wherein they use the following Chain of Verification (CoVe) pattern to reduce
+    
+    1. Draft and initial response.
+    2. Plan verification questions to fact-check the draft.
+    3. Answers those questions independently to ensure it is unbiased by other responses. 
+    4. Generates the final verified response. 
+
+    <img width="557" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d35da65e-6e17-4b13-9a06-84b73f0bcea4">
+
+
+??? note "[AssistGPT: A General Multi-modal Assistant that can Plan, Execute, Inspect and Learn](https://arxiv.org/pdf/2306.08640.pdf)"
+    Uses a reasoning path that involves coved interleaved with LLM output, with something called Plan, Execute,  Inspect, and Learn.
+    
+    1. **Inspector:** Injests, and summarizeds data for the Agent. 
+    1. **Planner:** Takes in instruction prompts, Input Query and Summaries of inputs coming from **inpector**. It outputs a _thought_ about what will be done next and an _action_ that follows a template of instruction-code. It uses multimodal assistance tools called a **descriptor**, **locator** and **reasoner**. 
+    1. **Executor:**  takes code from **Planner** as input and then calls a module to produce output. There are some additional steps including **Validation Checks** **Module Executions** and **Post-processsing**
+    1. **Learner:** This will be doing a **self-assesment* or a **ground-trugh comparison** to see if it is needing updates. It will keep trying until feedback is obeyed or N commands such as _no adjustment needed_, _revise plan_ or _update functions_ would be needed to improve it's flow.
+
+    [AssistGPT empty github](https://github.com/showlab/assistgpt)
+    [Webpage](https://showlab.github.io/assistgpt/) Uses PEIL PLan execute inspect learn.
+
+
+??? tip "[Learning to Reason and Memorize with Self-Notes](https://adapterhub.ml/) Allows model to deviate from input context at any time to reason and take notes"
+    <img width="685" alt="image" src="https://github.com/ianderrington/general/assets/76016868/e3b9ed66-18a8-451b-b29a-09815d7791d1">
+
 ### Branching
 
 ??? tip "[Algorithm of Thoughts](https://arxiv.org/pdf/2308.10379.pdf) A general extension of Chain of Thought, similar to Graph of Thoughts"
@@ -129,6 +157,8 @@ Here are some known thought structures that are improving agentic output.
 
 ### Structural Decomposition 
 
+Breaking down the input into a divide-and-conquer approach is a valuable approach to more complex requests. Considering separate perspectives, within the _same_ model, or within separate model calls with different prompt-inceptions as in agent [systems](./systems.md) can improve performance.
+
 ??? tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)" 
 
     A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation. 
@@ -175,11 +205,6 @@ Here are some known thought structures that are improving agentic output.
         [Assistant:] {point index}. {point skeleton}
     ```
 
-
-
-#### Problem decomposition
-
-Breaking down the input into a divide-and-conquer approach is a valuable approach to more complex requests. Considering separate perspectives, within the _same_ model, or within separate model calls with different prompt-inceptions as in agent [systems](./systems.md) can improve performance.
 
 ??? tip "[Question Decomposition Improves the Faithfulness of Model-Generated Reasoning](https://arxiv.org/pdf/2307.11768.pdf)"
 
@@ -233,7 +258,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
 
     It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs." 
     <img width="956" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bf581eb0-96b1-4175-97d0-98f081a03438">
-    Possible open source implementation [here](https://github.com/kyegomez/LOGICGUIDE/tree/main)
+    Possible open-source implementation [here](https://github.com/kyegomez/LOGICGUIDE/tree/main)
 
 ??? code "[Outlines](https://github.com/normal-computing/outlines) guides the model generation of next-token logits to guide the generation corresponding to regex / JSON and pydantic schema. compatible with all models."
 
@@ -250,20 +275,6 @@ Problems such as Hallucinations can be mitigated through downstream methods of p
 
 
 
-## Examples
-??? note "[AssistGPT: A General Multi-modal Assistant that can PLan, Execute, Inspect and Learn](https://arxiv.org/pdf/2306.08640.pdf)"
-    Uses a reasoning path that involves coved interleaved with LLM output, with something called Plan, Execute,  Inspect, and Learn.
-    
-    1. **Inspector:** Injests, and summarizeds data for the Agent. 
-    1. **Planner:** Takes in instruction prompts, Input Query and Summaries of inputs coming from **inpector**. It outputs a _thought_ about what will be done next and an _action_ that follows a template of instruction-code. It uses multimodal assistance tools called a **descriptor**, **locator** and **reasoner**. 
-    1. **Executor:**  takes code from **Planner** as input and then calls a module to produce output. There are some additional steps including **Validation Checks** **Module Executions** and **Post-processsing**
-    1. **Learner:** This will be doing a **self-assesment* or a **ground-trugh comparison** to see if it is needing updates. It will keep trying until feedback is obeyed or N commands such as _no adjustment needed_, _revise plan_ or _update functions_ would be needed to improve it's flow.
 
-    [AssistGPT empty github](https://github.com/showlab/assistgpt)
-    [Webpage](https://showlab.github.io/assistgpt/) Uses PEIL PLan execute inspect learn.
-
-
-??? tip "[Learning to Reason and Memorize with Self-Notes](https://adapterhub.ml/) Allows model to deviate from input context at any time to reason and take notes"
-    <img width="685" alt="image" src="https://github.com/ianderrington/general/assets/76016868/e3b9ed66-18a8-451b-b29a-09815d7791d1">
 
 ##
