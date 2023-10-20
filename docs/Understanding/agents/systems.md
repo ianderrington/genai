@@ -88,11 +88,16 @@ When an agent (or model) engages in an interaction with another agent, the resul
 ??? tip "[Council ](https://github.com/chain-ml/council) Very promising initial creation of networks of agents to create full-fledged teams for output products." 
     ![image](https://github.com/chain-ml/council/raw/main/docs/source/introduction/engine_flow.png)
 
+??? code "[SocraticAI](https://github.com/RunzheYang/SocraticAI/tree/main) to use the power of conversation to solve problems. Very interesting"
+    [Description](https://princeton-nlp.github.io/SocraticAI/)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/48bf16aa-efde-4e38-b7e1-30963f74aa66)
+
 
 ## Open Source Implementations (unpublished)
 !!! tip "[Swarms](https://medium.com/@kyeg/swarms-of-ai-agents-automating-everything-c554f5be421b )"
     Very thoughtful next-level systems focusing on large-dimensions of swarms. Very initial stages but has a lot of promise. 
     [Github](https://github.com/kyegomez/swarms)
+
     
 ## Potentially useful tools
 !!! tip "[Nomadproject.io](https://www.nomadproject.io/) A simple and flexible scheduler and orchestrator to deploy and manage containers and non-containerized applications across on-prem and clouds at scale."
