@@ -64,6 +64,7 @@ Generative AI is increasingly good at translating between domains.
 
 ### Font generation
 - [Fontogen](https://github.com/SerCeMan/fontogen) [Read more here](https://serce.me/posts/02-10-2023-hey-computer-make-me-a-font)
+
 ### Code Generation
 
 Very powerfully it can generate code to accomplish a task based on natural language input. This is very promising but still requires human oversight, due to the [challenge](./challenges.md) associated with using Automated AI systems without human input or oversight.
@@ -71,9 +72,11 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 - [Wizard Coding](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder)
 - [AutoPR](https://github.com/irgolic/AutoPR)
 - [Codium pr-agent](https://github.com/Codium-ai/pr-agent) 
-- [Summarization with Langchain](https://github.com/EnkrateiaLucca/summarization_with_langchain) A splendid view of a quick streamlit app that does PDF summarization. 
+- [Code AI consulting](https://github.com/AI-Citizen/SolidGPT) Allows you to 'query your code' in a chatlike manner. 
 
 ### Documentation extraction
+- [Summarization with Langchain](https://github.com/EnkrateiaLucca/summarization_with_langchain) A splendid view of a quick streamlit app that does PDF summarization.
+
 - [Deepdoctection](https://github.com/deepdoctection/deepdoctection)
 
 ### Application and component replacement
