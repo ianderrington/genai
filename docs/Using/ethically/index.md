@@ -37,6 +37,10 @@ Responsible development guidelines
 Ethics review processes
 
 ## To sort
+### Unlearning
+
+https://github.com/optml-group/unlearn-saliency
+### Principles and Guidelines
 https://www.nature.com/articles/d41586-023-03266-1 
 
 Key principles of the living guidelines:
