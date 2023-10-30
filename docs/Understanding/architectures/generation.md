@@ -31,5 +31,12 @@ Demonstrates large improvements by using differences between better and worse mo
 
 !!! tip "[Decoding Strategies in Large Language Models](https://towardsdatascience.com/decoding-strategies-in-large-language-models-9733a8f70539)
 
+## Speculative Sampling
+
+Speculative sampling is a technique that relies on speedups due to generation parallelism to create k-next tokens samples to reduce latency. 
+
+??? paper "[Accelerating Large Language Model Decoding with Speculative Sampling](https://arxiv.org/pdf/2302.01318.pdf)"
+    <img width="665" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/948d7e87-b71c-465e-b3c5-28177e85ef6c">
+
 
 !!! code [https://github.com/lucidrains/speculative-decoding]
