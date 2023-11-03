@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#developing-results" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1168,6 +1173,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Finetuning
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="finetuning.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1177,6 +1193,30 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#developing-results" class="md-nav__link">
+    Developing Results
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1365,6 +1405,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1512,6 +1562,106 @@
   
   <span class="md-ellipsis">
     Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/actions_and_tools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actions and tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/cognitive_architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cognitive architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/evaluating_and_comparing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluating and comparing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/interpreters.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpreters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/rag.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retrieval-Augmented Generation
   </span>
   
 
@@ -1902,6 +2052,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1944,11 +2096,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/deploying/back_end.html" class="md-nav__link">
+      <a href="../../Using/deploying/examples_and_tutorials.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Back end
+    Examples and tutorials
   </span>
   
 
@@ -1964,11 +2116,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/deploying/computation.html" class="md-nav__link">
+      <a href="../../Using/deploying/front_end.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Computation
+    Front end
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/deploying/back_end.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Back end
   </span>
   
 
@@ -2004,11 +2176,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/deploying/front_end.html" class="md-nav__link">
+      <a href="../../Using/deploying/computation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Front end
+    Computation
   </span>
   
 
@@ -2392,6 +2564,21 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#developing-results" class="md-nav__link">
+    Developing Results
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2410,10 +2597,22 @@
 
   <h1>Finetuning</h1>
 
+<p>Base intro and discussion</p>
+<h2 id="developing-results">Developing Results<a class="headerlink" href="#developing-results" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary><a href="https://arxiv.org/pdf/2310.12962.pdf">An Emulator for Fine-Tuning Large Language Models using Small Language Models</a></summary>
+<p>Emulated fine-tuning cross-pollinates reward models used in small (or large) models for their alternative-sized model resulting in improvements in both instruction following and helpfulness. They also find by combining with speculative decoding, that there can be a speedup for larger models by a factor of 2.5.
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1088" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/5ae8af02-02f9-43ab-a545-16b7709935e8" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1017" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5ae8af02-02f9-43ab-a545-16b7709935e8"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="431" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887"></a></p>
+</details>
 <details class="code">
-<summary><a href="https://github.com/OpenPipe/OpenPipe">Open Pipe</a> Use powerful but expensive LLMs to fine-tune smaller and cheaper models suited to your exact needs. Evaluate model and prompt combinations in the playground. Query your past requests and export optimized training data.</summary>
+<summary><a href="https://github.com/OpenPipe/OpenPipe">Open Pipe</a> Use powerful but expensive LLMs to fine-tune smaller and cheaper models suited to your exact needs. Evaluate the model and prompt combinations in the playground. Query your past requests and export optimized training data.</summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e"></a></p>
 </details>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/okuvshynov/slowllama">Slow Llama</a> for finetuning on a M1/M2 mac)</p>
+</div>
 
 
   

@@ -1092,12 +1092,18 @@
     RLHF
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="RLHF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#frameworks" class="md-nav__link">
     Frameworks
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1493,6 +1499,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1640,6 +1656,106 @@
   
   <span class="md-ellipsis">
     Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/actions_and_tools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actions and tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/cognitive_architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cognitive architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/evaluating_and_comparing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluating and comparing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/interpreters.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpreters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/rag.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retrieval-Augmented Generation
   </span>
   
 
@@ -2030,6 +2146,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2072,11 +2190,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/deploying/back_end.html" class="md-nav__link">
+      <a href="../../Using/deploying/examples_and_tutorials.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Back end
+    Examples and tutorials
   </span>
   
 
@@ -2092,11 +2210,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/deploying/computation.html" class="md-nav__link">
+      <a href="../../Using/deploying/front_end.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Computation
+    Front end
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/deploying/back_end.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Back end
   </span>
   
 
@@ -2132,11 +2270,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/deploying/front_end.html" class="md-nav__link">
+      <a href="../../Using/deploying/computation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Front end
+    Computation
   </span>
   
 
@@ -2531,12 +2669,18 @@
     RLHF
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="RLHF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#frameworks" class="md-nav__link">
     Frameworks
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2650,10 +2794,15 @@
 <ul>
 <li><a href="https://huyenchip.com/2023/04/11/llm-engineering.html">LLM Engineering by Huyen Chip</a></li>
 </ul>
+<div class="admonition important">
+<p class="admonition-title"><a href="https://arxiv.org/abs/2203.02155">Training language models to follow instructions with human feedback</a></p>
+<p>Instruct GPT allows for following of instructions. InstructGPT, established a powerful paradigm of LLM performance
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f8eccb3c-0afe-4f8f-a477-4269c5b93fb0" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1006" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f8eccb3c-0afe-4f8f-a477-4269c5b93fb0"></a></p>
+</div>
 <h2 id="rlhf">RLHF<a class="headerlink" href="#rlhf" title="Permanent link">&para;</a></h2>
-<h2 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h2>
+<h3 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html">Levanter (not just LLMS) </a> Codebase for training FMs with JAX. Using Haliax for naming tensors field-names instead of indexes. (for example Batch, Feature....). Full sharding and distributable / parallelizable. </li>
+<li><a href="https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html">Levanter (not just LLMS) </a> Codebase for training FMs with JAX. Using Haliax for naming tensors field names instead of indexes. (for example Batch, Feature....). Full sharding and distributable/parallelizable. </li>
 <li>
 <p><a href="https://www.microsoft.com/en-us/research/blog/deepspeed-zero-a-leap-in-speed-for-llm-and-chat-model-training-with-4x-less-communication/">DeepSpeed ZeRO++</a> A framework for accelerating model pre-training, finetuning, RLHF updating.  by minimizing communication overhead. A likely essential concept to be very familiar with. </p>
 </li>

@@ -1157,6 +1157,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#when-during-or-after-training" class="md-nav__link">
+    When? During or after training?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -1460,6 +1467,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1607,6 +1624,106 @@
   
   <span class="md-ellipsis">
     Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/actions_and_tools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actions and tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/cognitive_architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cognitive architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/evaluating_and_comparing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluating and comparing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/interpreters.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpreters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/rag.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retrieval-Augmented Generation
   </span>
   
 
@@ -1997,6 +2114,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2039,11 +2158,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/deploying/back_end.html" class="md-nav__link">
+      <a href="../../Using/deploying/examples_and_tutorials.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Back end
+    Examples and tutorials
   </span>
   
 
@@ -2059,11 +2178,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/deploying/computation.html" class="md-nav__link">
+      <a href="../../Using/deploying/front_end.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Computation
+    Front end
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/deploying/back_end.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Back end
   </span>
   
 
@@ -2099,11 +2238,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/deploying/front_end.html" class="md-nav__link">
+      <a href="../../Using/deploying/computation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Front end
+    Computation
   </span>
   
 
@@ -2523,6 +2662,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#when-during-or-after-training" class="md-nav__link">
+    When? During or after training?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -2603,20 +2749,43 @@
  <a href="https://blog.research.google/2023/08/neural-network-pruning-with.html"><img alt="Fast as Chita" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIuxL23IilgYpOEWtnP9B4zbiPnuV5NUML47JP0q1idyLLmZUqRlHrxx77iFIinFWUXMekNhKSltLlZvzBSTaqsYmbithvXGlvggyaAZrtb4mg9oiYMWArjvf_lj7T9IbY1Ae4-wijzOZzTazsxWImdGRgLSyAJEc5WQWHvylSwcHQJWX8gXfEk70l8iEs/s1600/image5.gif" /></a></p>
 </details>
 <h3 id="quantization">Quantization<a class="headerlink" href="#quantization" title="Permanent link">&para;</a></h3>
-<p>Reduce the precision of the models from fp32 to fp16, int8, and even binary! </p>
-<p><a class="glightbox" href="https://huggingface.co/blog/assets/96_hf_bitsandbytes_integration/tf32-Mantissa-chart-hi-res-FINAL.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://huggingface.co/blog/assets/96_hf_bitsandbytes_integration/tf32-Mantissa-chart-hi-res-FINAL.png" /></a>
-Purpose of quantization</p>
+<p>Precision details the manner in which binary bits represent numbers in a computer. Generally, the greater the number of bits, the broader the variety of numbers that can be represented. 
+Broken down into the <code>exponent</code> and <code>fraction</code> components can have specific implications for the training of models. Quite generally, <a href="https://en.wikipedia.org/wiki/Bfloat16_floating-point_format">bfloat16</a> (developed by Google Brain) offers an effective balance of size and dynamic expressibility for LLMs, and is a well-used number format. </p>
+<p>To have improved performance, the models may be reduced, however, to using fewer bits. Standard fp16 may sometimes reduced to int8, and even binary representations.  </p>
+<p><a class="glightbox" href="https://huggingface.co/blog/assets/96_hf_bitsandbytes_integration/tf32-Mantissa-chart-hi-res-FINAL.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://huggingface.co/blog/assets/96_hf_bitsandbytes_integration/tf32-Mantissa-chart-hi-res-FINAL.png" /></a></p>
+<p>Purpose of quantization</p>
 <figure>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f1ff3e1a-1157-47a0-9e64-5ec29111a256" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Quantization" src="https://github.com/ianderrington/genai/assets/76016868/f1ff3e1a-1157-47a0-9e64-5ec29111a256" width="300" /></a>
   </p>
 <figcaption>Quantization summarized image taken from [Advanced Practical Data Science Lecture 9: Compression Techniques and Distillation](https://harvard-iacs.github.io/2020F-AC295/lectures/lecture9/presentation/lecture9.pdf)</figcaption>
 </figure>
+<h4 id="when-during-or-after-training">When? During or after training?<a class="headerlink" href="#when-during-or-after-training" title="Permanent link">&para;</a></h4>
+<p>There are general times when quantization may be performed. During training, post-training. 
+Here are the pros/cons of each kind:</p>
+<p>TODO: Table with this information </p>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
-<p>??? code <a href="https://huggingface.co/blog/hf-bitsandbytes-integration">HF bitsandbytes</a> and code
-    <a href="https://github.com/huggingface/blog/blob/main/assets/96_hf_bitsandbytes_integration/example.py">From Github</a></p>
+<details class="code">
+<summary><a href="https://github.com/mit-han-lab/smoothquant">SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs</a></summary>
+<p>Using some post-training smoothing, they shift the weights in such a way that they are easier to quantize. 
+<a href="https://arxiv.org/abs/2211.10438.pdf">Paper</a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/ed34f663-5792-471f-9927-f3622f3243a3" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="337" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ed34f663-5792-471f-9927-f3622f3243a3"></a></p>
+</details>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://huggingface.co/blog/hf-bitsandbytes-integration">HF bitsandbytes</a> and code <a href="https://github.com/huggingface/blog/blob/main/assets/96_hf_bitsandbytes_integration/example.py">From Github</a></p>
+<p><a href="https://arxiv.org/abs/2309.14717">Paper</a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/85938334-b0cd-4d60-9a47-7ea5bc0b09ab" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/85938334-b0cd-4d60-9a47-7ea5bc0b09ab" /></a></p>
+</div>
+<details class="code">
+<summary><a href="https://github.com/hahnyuan/PB-LLM">PB-LLM: Partially Binarized Large Language Models</a> to compress identified model weights into a single bit, while allowing others to only be partially compressed.</summary>
+<p><a href="https://github.com/hahnyuan/PB-LLM">Paper</a> </p>
+</details>
 <h3 id="knowledge-distillation">Knowledge Distillation<a class="headerlink" href="#knowledge-distillation" title="Permanent link">&para;</a></h3>
 <p>Train a new smaller model using the output of bigger models.
 (TODO) </p>
+<details class="code">
+<summary><a href="https://github.com/yuhuixu1993/qa-lora">QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/87219990-b7e8-4895-a274-a55584f2cb9e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/87219990-b7e8-4895-a274-a55584f2cb9e" /></a></p>
+</details>
 <p><a href="https://colab.research.google.com/drive/1A0SWlfcd6ISzsc0gLBIr4N_vECHhUAst#scrollTo=6v59Uu9pb_wM">Knowledge Distillation and Compression Demo.ipynb</a></p>
 <h3 id="low-rank-and-sparsity-approximations">Low rank and sparsity approximations<a class="headerlink" href="#low-rank-and-sparsity-approximations" title="Permanent link">&para;</a></h3>
 <p>(TODO) </p>

@@ -1358,6 +1358,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1505,6 +1515,106 @@
   
   <span class="md-ellipsis">
     Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Understanding/agents/actions_and_tools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actions and tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Understanding/agents/cognitive_architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cognitive architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Understanding/agents/evaluating_and_comparing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluating and comparing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Understanding/agents/interpreters.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpreters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Understanding/agents/rag.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retrieval-Augmented Generation
   </span>
   
 
@@ -1897,6 +2007,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1939,11 +2051,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../deploying/back_end.html" class="md-nav__link">
+      <a href="../deploying/examples_and_tutorials.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Back end
+    Examples and tutorials
   </span>
   
 
@@ -1959,11 +2071,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../deploying/computation.html" class="md-nav__link">
+      <a href="../deploying/front_end.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Computation
+    Front end
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying/back_end.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Back end
   </span>
   
 
@@ -1999,11 +2131,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../deploying/front_end.html" class="md-nav__link">
+      <a href="../deploying/computation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Front end
+    Computation
   </span>
   
 
@@ -2146,6 +2278,33 @@
   <a href="#background" class="md-nav__link">
     Background
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jail-breaking" class="md-nav__link">
+    Jail breaking
+  </a>
+  
+    <nav class="md-nav" aria-label="Jail breaking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompting" class="md-nav__link">
+    Prompting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fine-tune-compromising" class="md-nav__link">
+    Fine-tune compromising
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2460,6 +2619,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jail-breaking" class="md-nav__link">
+    Jail breaking
+  </a>
+  
+    <nav class="md-nav" aria-label="Jail breaking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompting" class="md-nav__link">
+    Prompting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fine-tune-compromising" class="md-nav__link">
+    Fine-tune compromising
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#alignment-with-people" class="md-nav__link">
     Alignment with People
   </a>
@@ -2494,9 +2680,15 @@
   <h1>Alignment and exential concerns</h1>
 
 <p>There is a notable degree of concern for the potential for Generative, and eventually General AI, to cause harm. The harm can occur either accidentally or to the intentional use of GenAI. </p>
-<p>There is also self-existenial concerns related to GenAI models themselves. This is found due to the potential that when models are trained on data that is produced by other models, there can be a degredation in performance, known as <em>model collapse</em>. </p>
+<p>There is also self-existential concerns related to GenAI models themselves. This is found due to the potential that when models are trained on data that is produced by other 
+models, there can be a degradation in performance, known as <em>model collapse</em>. </p>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
-<p>TODO: This sections needs complete remodling. </p>
+<h2 id="jail-breaking">Jail breaking<a class="headerlink" href="#jail-breaking" title="Permanent link">&para;</a></h2>
+<h3 id="prompting">Prompting<a class="headerlink" href="#prompting" title="Permanent link">&para;</a></h3>
+<h3 id="fine-tune-compromising">Fine-tune compromising<a class="headerlink" href="#fine-tune-compromising" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title"><a href="https://llm-tuning-safety.github.io/">Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!</a> reveals that a few adversarial examples can break alignment when finetuned.</p>
+</div>
 <h2 id="alignment-with-people">Alignment with People<a class="headerlink" href="#alignment-with-people" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://arxiv.org/pdf/1901.01851.pdf">Personal Universes: A Solutiont to the Multi-Agent Value Alignment Problem</a></li>
