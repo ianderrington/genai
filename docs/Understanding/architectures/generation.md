@@ -33,7 +33,7 @@ Demonstrates large improvements by using differences between better and worse mo
 
 ## Speculative Sampling
 
-Speculative sampling is a technique that relies on speedups due to generation parallelism to create k-next tokens samples to reduce latency. 
+Speculative sampling is a technique that relies on speedups due to generation parallelism to create k-next tokens samples to reduce latency. It starts by using a smaller model to generate a draft set of tokens. These are then run in parallel (instead of serial which is standard) to produce output logits. The draft and target-model tokens are compared and randomly sampled to allow the acceptance of the draft tokens or to generate a new token set.
 
 ??? paper "[Accelerating Large Language Model Decoding with Speculative Sampling](https://arxiv.org/pdf/2302.01318.pdf)"
     <img width="665" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/948d7e87-b71c-465e-b3c5-28177e85ef6c">
