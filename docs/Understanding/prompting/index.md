@@ -36,6 +36,7 @@ It is also important to note, that while [manual methods](#manual-methods) are e
     format) are “Write in a way different from the actual continuation, if
     there is one”, and “No plagiarism is allowed”."
 
+!!! "[YELLING AT YOUR LLM MIGHT MAKE IT BEHAVE](https://arstechnica.com/information-technology/2023/10/thanks-to-ai-the-future-of-programming-may-involve-yelling-in-all-caps/)"
 
 
 ### Automatic
