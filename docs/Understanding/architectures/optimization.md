@@ -76,7 +76,18 @@ Train a new smaller model using the output of bigger models.
 [Knowledge Distillation and Compression Demo.ipynb](https://colab.research.google.com/drive/1A0SWlfcd6ISzsc0gLBIr4N_vECHhUAst#scrollTo=6v59Uu9pb_wM)
 
 ### Low rank and sparsity approximations
-(TODO) 
+TODO
+
+### Mixture of Experts
+MOE provides the ability to use different smaller models that have better performance in certain domains. Their use is notable, as it has been stated that GPT-4 is powered by 8 different agents. 
+
+??? code "[Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning](https://github.com/for-ai/parameter-efficient-moe)"
+    "The codebase is built on T5X, which defines the model and training loop; Flaxformer, which defines the model computation; Flax, which defines the low level model layers; and Jax, which provides the execution."
+    [Paper](https://arxiv.org/pdf/2309.05444.pdf)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/ca081309-dca9-4081-a6eb-30d929715ef9)
+    
+
+
 
 ### Tooling
 
