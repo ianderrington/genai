@@ -72,10 +72,21 @@ Here are a few examples. Because agents are hard to disentangle from core compon
     https://github.com/universal-ner/universal-ner
 
 
-??? important "[Suspicion-Agent: Playing mMperfect Information Games with Theory of Mind Aware GPT-4](https://github.com/CR-Gjx/Suspicion-Agent)"
+??? important "[Suspicion-Agent: Playing imperfect Information Games with Theory of Mind Aware GPT-4](https://github.com/CR-Gjx/Suspicion-Agent)"
     Introduces directly into the prompts a Theory-of-Mind about their awareness and own estimations and will update accordingly." 
     <img width="648" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7d3d171c-5bae-4942-9469-ace20c4ef62b">
     <img width="678" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c1a762f6-5729-4d4f-8bb8-c288d7d639a0">
+
+??? code "[CLIN: A Continually Learning Language Agent for Rapid Task Adaptation and Generalization](https://allenai.github.io/clin/)"
+    An agent that stores a memory involving action, rationale, and result so that it can improve doing certain tasks. It uses a lookup to identify things that it needs to do and likely causal relations to decide to work on it.
+    The code is a little Academic, but generally readable here [Github](https://github.com/allenai/clin/blob/main/scienceworld/clin_agent.py#L10). 
+    
+    On the ScienceWorldEnv environment simulator it performed reasonably well. 
+    
+    <img width="816" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ccc0d2aa-4eab-4ffa-bfa4-7b9a0f7587d1">
+    
+    ![image](https://github.com/ianderrington/genai/assets/76016868/7a9cffc3-1f67-4ea2-8368-8380f323f16a)
+    <img width="814" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/af71d9db-a542-4289-a833-d16ca5e9b574">
 
 
 ## Libraries
