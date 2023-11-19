@@ -2,20 +2,26 @@ When an agent (or model) engages in an interaction with another agent, the resul
 
 !!! note "Binary system (asymmetric calling)"
     In this system, ChatGPT initiates communication with DallE using a prompt. DallE responds by delivering an image. This image is then used in the final response of ChatGPT or returned as-is.
-
         
 !!! note "Multi-body system (bidirectional calling)"
     This system consists of multiple agents, and they engage in ongoing discussions about their daily activities. They also receive regular updates about their environment. An example of this type of system can be viewed in [this paper](https://arxiv.org/pdf/2304.03442.pdf).
 
 ## Tools Paper and Code
 
-!!! code "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
+???+ important "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
     ![image](https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924)
     [Paper](https://arxiv.org/pdf/2308.08155.pdf)
+    TRY THIS!
+
+???+ important "[AutoAgents: A Framework for Automatic Agent Generation](https://arxiv.org/pdf/2309.17288v1.pdf)"
+    [Paper](https://arxiv.org/pdf/2309.17288v1.pdf)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/d89bf7b1-99a0-429f-a6f5-50a8183a151f)
+    <img width="581" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f9d7e423-b3d9-40ca-8be8-52461d53282a">
+
+    TRY THIS!
 
 
-!!! tip "[MetaGPT](https://github.com/geekan/MetaGPT)"
-    MetaGPT enables different agents to interact and generate meaningful outputs based on varying tasks and personas. It's a reliable partially-formed solution. Check out the code for further knowledge!
+??? code "[MetaGPT](https://github.com/geekan/MetaGPT) enables different agents to interact and generate meaningful outputs based on varying tasks and personas."
 
 !!! code "[Reworkd/AgentGPT](https://github.com/reworkd/AgentGPT) '🤖 Assemble, configure, and deploy autonomous AI Agent(s) in your browser. 🤖'"
 
@@ -82,11 +88,16 @@ When an agent (or model) engages in an interaction with another agent, the resul
 ??? tip "[Council ](https://github.com/chain-ml/council) Very promising initial creation of networks of agents to create full-fledged teams for output products." 
     ![image](https://github.com/chain-ml/council/raw/main/docs/source/introduction/engine_flow.png)
 
+??? code "[SocraticAI](https://github.com/RunzheYang/SocraticAI/tree/main) to use the power of conversation to solve problems. Very interesting"
+    [Description](https://princeton-nlp.github.io/SocraticAI/)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/48bf16aa-efde-4e38-b7e1-30963f74aa66)
+
 
 ## Open Source Implementations (unpublished)
 !!! tip "[Swarms](https://medium.com/@kyeg/swarms-of-ai-agents-automating-everything-c554f5be421b )"
     Very thoughtful next-level systems focusing on large-dimensions of swarms. Very initial stages but has a lot of promise. 
     [Github](https://github.com/kyegomez/swarms)
+
     
 ## Potentially useful tools
 !!! tip "[Nomadproject.io](https://www.nomadproject.io/) A simple and flexible scheduler and orchestrator to deploy and manage containers and non-containerized applications across on-prem and clouds at scale."

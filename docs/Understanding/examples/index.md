@@ -38,5 +38,10 @@
 !!! tip "[Langchain Javascript in the Real World](https://github.com/amalshehu/langchain-js-realworld)"
 
 
+
 <img width="764" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/35f863fe-0c55-4645-ac40-7d0512113ea9">
 
+## Time series
+
+??? code "[LLMTime](https://github.com/ngruver/llmtime)"
+    [Paper](https://arxiv.org/pdf/2310.07820.pdf) Uses pretrained transformers to do simple predictions with very high accuracy of rpattern matching."

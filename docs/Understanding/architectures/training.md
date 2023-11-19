@@ -1,5 +1,5 @@
+TODO: 
 Training GenAI will generally be domain/modality specific.
-
 
 1. Self-supervised pretraining: Predicts next token. 
 2. Supervised pretrainign: Trains to give generally expected output.
@@ -10,11 +10,18 @@ https://neptune.ai/blog/distributed-training-frameworks-and-tools
 
 - [LLM Engineering by Huyen Chip](https://huyenchip.com/2023/04/11/llm-engineering.html)
 
+
+!!! important "[Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)" 
+    Instruct GPT allows for following of instructions. InstructGPT, established a powerful paradigm of LLM performance
+    <img width="1006" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f8eccb3c-0afe-4f8f-a477-4269c5b93fb0">
+
 ## RLHF
 
-## Frameworks
 
-- [Levanter (not just LLMS) ](https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html) Codebase for training FMs with JAX. Using Haliax for naming tensors field-names instead of indexes. (for example Batch, Feature....). Full sharding and distributable / parallelizable. 
+
+### Frameworks
+
+- [Levanter (not just LLMS) ](https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html) Codebase for training FMs with JAX. Using Haliax for naming tensors field names instead of indexes. (for example Batch, Feature....). Full sharding and distributable/parallelizable. 
 -  [DeepSpeed ZeRO++](https://www.microsoft.com/en-us/research/blog/deepspeed-zero-a-leap-in-speed-for-llm-and-chat-model-training-with-4x-less-communication/) A framework for accelerating model pre-training, finetuning, RLHF updating.  by minimizing communication overhead. A likely essential concept to be very familiar with. 
 
 - [RL4LMs by microsoft](https://github.com/allenai/RL4LMs/tree/main) A modular RL library to fine-tune language models to human preferences. [paper](https://arxiv.org/pdf/2305.08844.pdf)
@@ -37,10 +44,13 @@ Adapters are efficient and performant layers that can optimize performance witho
 
 
 ## RLHF
+    
 - [RLHF: Reinforcement Learning from Human Feedback](https://huyenchip.com/2023/05/02/rlhf.html) A splendid summary of the RLHF system.
 <img width="751" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2fb5b4d5-ecc9-45b3-9d16-63fab4ab6db0">
 
 
+
+    
 - [RLHF basics by hugging face](https://huggingface.co/blog/rlhf) A realy good intro to parse again.
 - [RLHF for Palm in Pytorch](https://github.com/lucidrains/PaLM-rlhf-pytorch)
 - [AligningLargeLanguageModelsthroughSyntheticFeedback](https://arxiv.org/abs/2305.13735) Using a heirarchy of systems to 

@@ -1,4 +1,4 @@
-Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. While potentially minimal distinction. Often relayed by an [interpreter](./interpreter.md) or a perhaps simple jinja syntax-pattern more complete json input that can be validated for the function of choice. 
+Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. While potentially minimal distinction. Often relayed by an [interpreter](./interpreters.md) or a perhaps simple jinja syntax-pattern more complete json input that can be validated for the function of choice. 
 
 !!! code "[Local LLM Function Calling](https://github.com/rizerphe/local-llm-function-calling) enforces json semantics for calls to functions"
 

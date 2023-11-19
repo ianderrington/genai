@@ -47,7 +47,11 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 Handling the inputs/outputs to GenAI in a consistent and reliable manner has spurred the creation of software libraries that can work with GenAI that is called as a service, or hosted locally.
 
 #### LangChain
-!!! tip "[Langchain](https://python.langchain.com/en/latest/#) Is a primitive python and javascript orchestration language for adaptable, memory and tooling-equipped calls that can enable agentic AI."
+!!! tip "[Langchain](https://python.langchain.com/en/latest/#) Is a thorough python and javascript orchestration language for adaptable, memory and tooling-equipped calls that can enable agentic AI."
+
+!!! tip "[LangSErv](https://github.com/langchain-ai/langserve) will provide a hosted version of LangServe for one-click deployments of LangChain applications."
+
+!!! tip "[OpenGPTs](https://github.com/langchain-ai/opengpts) Provides an open-source effort to integrate multiple LLMs, and builds upon Langchain, LangServe, and LangSmith"
 
 **Their Stack**
 
@@ -65,6 +69,8 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 - https://www.pinecone.io/learn/langchain-prompt-templates/
 - https://learn.deeplearning.ai/langchain/lesson/3/memory
 
+### Usage
+[OpenAI](https://github.com/openai/openai-python)
 
 
 #### Llama ecosystem
@@ -157,5 +163,5 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 ### Retrieval Augmentation focus
 
-??? code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
+!!! code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
 
