@@ -1,5 +1,16 @@
-TODO: 
-Base intro and discussion
+Fine-tuning trains models that were previously trained on large corpora of data, that might potentially have varying degrees of relevance or quality. 
+
+There are several ways of fine-tuning, that may be combined where appropriate. Focusing on a specific set of data that is either natural or synthetic. 
+
+
+### Use simulated data
+
+It is very useful to consider a general way to train LLM's with synthetic data: 
+
+COPILOT: please change the below to a mermaid diagram
+* train(Large+Vague model) -> generate highly specific data
+* train(small(er?) specific model) on specific data --> have high-quality fine-tuned model 
+
 
 ## Developing Results
 
