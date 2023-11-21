@@ -1,22 +1,28 @@
+# Deploying Libraries and Tools
+
+This document provides an overview of various libraries and tools that can be used for deploying AI models. It is divided into several sections, each focusing on a specific aspect of deployment. The sections include LLM Ops, Models, Finetuning, Serving, Programming Convenience, Memory Interaction, Executors and Interpreters, Data Creation, and General.
 
 ## LLM Ops
 
-- [LLM Ops](https://github.com/microsoft/lmops)
-- [Reliable GPT](https://github.com/BerriAI/reliableGPT) A wrapper that prevents failures due to rate limiting requests. 
+LLM Ops refers to operations related to Large Language Models. Here are a couple of tools that can assist in managing these operations:
+
+
+- [LLM Ops](https://github.com/microsoft/lmops): This is a Microsoft tool for managing large language models.
+- [Reliable GPT](https://github.com/BerriAI/reliableGPT): This is a wrapper that prevents failures due to rate limiting requests.
 
 ## Models
 
-Here we share a selection of repositories, that enable the creation of models.
+This section provides a selection of repositories that enable the creation of models:
 
-- [Hugging Face Transformers](https://huggingface.co/transformers/v4.0.1/index.html)
+- [Hugging Face Transformers](https://huggingface.co/transformers/v4.0.1/index.html): This is a popular library for creating transformer models.
 
 ### Finetuning
 
-Please see the [finetuning](../../Understanding/architectures/finetuning.md) page for more in depth information on this. 
+Finetuning is the process of adapting a pre-trained model to a specific task. For more in-depth information on this, please see the [finetuning](../../Understanding/architectures/finetuning.md) page. Here are some tools for finetuning:
 
-- [Adapters for Hugging Face](https://adapterhub.ml/)
-- [Chatall](https://github.com/sunner/ChatALL) To interact with multiple chatbots at the same time.
-- [LocalAI](https://github.com/go-skynet/LocalAI) drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
+- [Adapters for Hugging Face](https://adapterhub.ml/): This is a tool for finetuning Hugging Face models.
+- [Chatall](https://github.com/sunner/ChatALL): This tool allows interaction with multiple chatbots at the same time.
+- [LocalAI](https://github.com/go-skynet/LocalAI): This is a drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
 
 ??? code "[Tool Bench](https://github.com/OpenBMB/ToolBench) 'This project (ToolLLM) aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability.'"
 

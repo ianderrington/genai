@@ -1,26 +1,26 @@
-There is a AI-Cambriatic explosion of services, methods, frameworks and tooling to better-enable the creation and deployment of models from beginning to end. While there may be complete end-to-end providers for generating valuable GenAI solutions, there is still a great deal of value in implementing and experimenting with your own stacks. 
+The AI-Cambriatic explosion has led to a surge in services, methods, frameworks, and tools that enhance the creation and deployment of models from start to finish. Although there are end-to-end providers for generating valuable GenAI solutions, there is immense value in implementing and experimenting with your own stacks. 
 
-There are additioanlly useful [libraries and tools](./libraries_and_tools.md) that are worthwhile checking out.
+Additionally, there are useful [libraries and tools](./libraries_and_tools.md) worth exploring.
 
 !!! note "**tldr;** Here are the prominent frameworks"
-    - [Langchain](#langchain) is a early system that has stellar success with a principled design allowing for extensive applications to built on top of it. 
-    - [Llama Ecosystem](#llama-ecosystem) is a a community of Llama-focused modelers, based on the Meta model called Llama, Llama-2 and beyond. 
+    - [Langchain](#langchain) is an early system with a principled design that allows for extensive applications to be built on top of it. 
+    - [Llama Ecosystem](#llama-ecosystem) is a community of Llama-focused modelers, based on the Meta model called Llama, Llama-2, and beyond. 
     - [A number of others](#others).
 
-As a note the excitement about the tooling around Generative AI make it hard to keep up with development and deprecation of powerful frameworks and tools. Some of the mentioned references may not be fully completed, or even nascent repos to build their intended purposes (described here). Please let us know if we are missing anything [here](../../Managen.ai/contributing.md). 
+The rapid development in Generative AI tooling makes it challenging to keep up with the development and deprecation of powerful frameworks and tools. Some of the mentioned references may not be fully completed, or even nascent repos to build their intended purposes (described here). Please let us know if we are missing anything [here](../../Managen.ai/contributing.md). 
 
 ## Frameworks 
 
-Starting with base programming languages, increasingly higher level frameworks enable training and calling of AI models. Higher level orchestration libraries and platforms allow creating and evaluating chains, agents, and systems that sometimmes use visual-interfaces. These can be often augmented with various tools/packages/repositories. On top of these involve mostly or all-complete frameworks and platforms that enable nearly complete. 
+Starting with base programming languages, increasingly higher-level frameworks enable training and calling of AI models. Higher-level orchestration libraries and platforms allow creating and evaluating chains, agents, and systems that sometimes use visual interfaces. These can often be augmented with various tools/packages/repositories. On top of these involve mostly or all-complete frameworks and platforms that enable nearly complete. 
 
 ### Base languages
 
-Prominent languages include [python](https://www.python.org), [C++/CUDA](https://en.wikipedia.org/wiki/CUDA), and [Javascript](https://www.javascript.com). Because of its popularity, we will be python-focused in this project.
+Prominent languages include [python](https://www.python.org), [C++/CUDA](https://en.wikipedia.org/wiki/CUDA), and [Javascript](https://www.javascript.com). Due to its popularity, this project will be python-focused.
 
 ### AI-level software libraries
 
-- [PyTorch](https://pytorch.org/) a popular python-focused system for creating and using AI.
-- [Tensorflow](https://tensorflow.org) a popular multi-language eco-system for creating and using AI.
+- [PyTorch](https://pytorch.org/) is a popular python-focused system for creating and using AI.
+- [Tensorflow](https://tensorflow.org) is a popular multi-language eco-system for creating and using AI.
 - [spAcy](https://spacy.io/) is a library for advanced Natural Language Processing in Python and Cython.
 
 #### Higher level
@@ -164,4 +164,5 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 ### Retrieval Augmentation focus
 
 !!! code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
+
 

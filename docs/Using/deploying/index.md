@@ -1,50 +1,42 @@
-The deployment of models enables callers, people, or other software, to use them. While deployment may initially consist of only 'making a model available for calling'. 
+Deploying models allows callers, people or other applications, to utilize them. It initially involves making the model accessible for calling. However, it's essential to look at the deployment of the model separately from the deployment of the model's encapsulating project, even though the two are closely related. 
 
-Because the model may be one limiting- consider the deployment of the model to be separate from the deployment of the model's encapsulating project, though they are directly connected.  
+There can be multiple components involved, especially for clients with higher requirements. The desired models should be stored in a file and then made available for service. Users' input is directed to the hosted model, optionally batched to enhance average request latency, and the results are returned and appropriately redirected to the users. 
 
-There are many component touchpoints along the way, and more so for customers that have higher requirements.
+When developing AI-enabled products, consider the following components:
 
-Quickly, models of the desired specs must be stored in a file and then loaded for serving. Serving as user inputs that are routed to the served model, optionally batched to improve average request latency, and outputs returned routed appropriately to users. 
+### 1. [Customer Needs](#caller-needs)
 
-As would be done for other AI-enabled products, you will need to have in mind the following
+The client's necessities are determined by the specific target audience you're catering to. Concentrating on a smaller audience helps to minimize initial requirements and might assist in the quick creation of a minimum viable product (MVP). The needs of the audience can be expanded or altered as required. Typically, the requirements demand quick and satisfactory results.
 
-### 1. [Caller needs](#caller-needs) (customer requirements)
+### 2. [Servable Model](#servable-model)
 
-What the caller requires will depend on the target audience your offering is provided. Focusing on narrower audiences allow you to have fewer (initial) requirements and may enable MVP generation quickly. These audiences can expand or shift as needed. Often needs will require 'rapid' results that are 'good'. 
+The models must be capable of delivering the required content with an acceptable latency to meet your model's marketing requirements.
 
-### 2. [Servable model](#servable-model) to appropriately service customer and environmental requirements.
+To create a serviceable model, you may need to [optimize](../../Understanding/architectures/optimization.md) your models' serving.
 
+### [Compute Requirements](#compute-needs)
 
-The models must be sufficient to provide the content that the model have a sufficiently reasonable latency that it can enable the throughput requirements of your model. 
+Consider these general factors (as suggested by AWS) when assessing the requirements for model deployment.
 
-To enable a properly servable model, it may likely be required to [optimize](../../Understanding/architectures/optimization.md) the serving of your models.
+![image](https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050.png)
 
-### [Compute needed](#compute-needs) to enable service
+### [Budget Constraints](#budget-available)
 
-Here are some general considerations (from AWS) regarding how to consider the requirements of model deployment.
+The allocated budget will affect your tool's monetization strategy. Highly dependent on your business model, it is crucial to optimize [model serving](../../Understanding/architectures/optimization.md) to avoid excessive computing needs.
 
-![[image](https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html)](https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050)
-    
+### [Back-end Computing](#compute-back-end)
 
-### [Budget available](#budget-available) the compute
+Choosing your back-end will involve deciding between do-it-yourself and fully serviced [frameworks](./frameworks.md) on some computing host solution. You may also need additional [tools and libraries](libraries_and_tools.md) for your solution.
 
-Your calculated budget will be useful to consider the monetization strategy of your tool. While highly dependant on your business model, knowing when to inspire greater [model serving optimization](../../Understanding/architectures/optimization.md) to prevent 'too much compute'. 
+### [Front-end Interface](./front_end.md)
 
-### [Compute back end](#compute-back-end) service and framework that will work with the budget you have
+Finally, you'll need to present the results to the end-user effectively. Look into our discussion on [front ends](./front_end.md) for best practices and excellent solutions for your model output.
 
-To determining your back-end will involve selecting from both DIY and full-service [frameworks](./frameworks.md) that you use on some compute host solution and perhaps connected with other [tools and libraries](libraries_and_tools.md) that can help your solution. 
+Remember that needs will evolve as your understanding of all the above factors shifts. So it's crucial to start with a base that you can iterate from, especially if your solution involves a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
 
-### [Front End](./front_end.md) that provides the appropriate visualization
+## Useful Tips 
 
-At the end of a model that is ready to be deployed, you'll need to get the results to the end-user in a useful manner. Look into the discussion on [front ends](./front_end.md) for some quality solutions and best practices to for your model output.
-
-
-Keep in mind the needs will change as the understanding of all of the answers above shifts. Still, it is important to get _something_ that you can iterate from, particularly if your solution involves some form of a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
-
-
-## Tips 
-
-??? tip "[State of GPT by Andrej Karpathy](https://build.microsoft.com/en-US/sessions/db3f4859-cd30-4445-a0cd-553c3304f8e2) A stellar presentation to update on the general state of Genai enabled by GPT"
+??? tip "[State of GPT by Andrej Karpathy](https://build.microsoft.com/en-US/sessions/db3f4859-cd30-4445-a0cd-553c3304f8e2) A comprehensive presentation on the general state of Generative AI made possible by GPT."
 
     <img width="925" alt="image" src="https://github.com/ianderrington/general/assets/76016868/de2d3b33-9e79-407d-b3c7-5b795f330722" loading="lazy">
     <img width="918" alt="image" src="https://github.com/ianderrington/general/assets/76016868/0ecb56de-966a-40c5-8d14-1df3b4a5a89f">
@@ -52,19 +44,17 @@ Keep in mind the needs will change as the understanding of all of the answers ab
     <img width="918" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a32295bd-9d88-4b31-bd10-134e11e6c546">
     <img width="886" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7b1c6c4b-3778-4536-8d10-03696f3624c5">
 
-## References
+## Reference Materials
 
-??? tip "[Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A very nice discussion of the components and their interactions via orchestration systems."
+??? tip "[Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A detailed discussion of the components and their interactions using orchestration systems."
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f287eaef-6b86-4846-8885-2b3ad3cd614b) [^n1]
 
-??? tip "[Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/abs/2307.10169) Well done and thorough."
+??? tip "[Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/abs/2307.10169) This is a well-done and comprehensive review."
 
-## Overview Literature
+## Additional Literature
 
-Below are some overviews to help with practical aspects of Generative AI, particularly GPT and LLMs.
+Here are some other overviews to assist you in understanding the practical aspects of Generative AI, particularly with regards to GPT and large language models.
 
 - [Neptune-nlp-models-infrastructure](https://neptune.ai/blog/nlp-models-infrastructure-cost-optimization#:~:text=Use%20a%20lightweight%20deployment%20framework,serve%20predictions%20over%20a%20network.)
-
 - [How to Deploy Large Size Deep Learning Models Into Production](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
-

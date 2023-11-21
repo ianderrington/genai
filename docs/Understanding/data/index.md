@@ -2,10 +2,10 @@ Data is the most important part of training any model. Better data is, well, bet
 
 With data in hand, it is generally good to understand it directly, by looking at the accompanying meta-data and a good number of examples to ensure that it is generally consistent. Often times data is not properly structured that can be processeed downstream. For language models, this may involve having the incorrect incorrect encoding, or symbols that are otherwise not anticipated for your token-space. The data is normalized, either once or on-the-fly, to ensure the modles downstream can process it. 
 
-COPILOT: Generate a MErmaid Diagram of the above. 
+COPILOT CONTINUE (Generate a MErmaid Diagram of the above. )
 
 
-COPILOT: generate a mermad
+COPILOT CONTINUE ( generate a mermaid diagram )
 very profound general way to retrain LLMs with synthetic data.
 * train(Large+Vague model) -> generate highly specific data
 * train(small specific model) on specific data.
@@ -13,19 +13,43 @@ very profound general way to retrain LLMs with synthetic data.
 ### Important questions 
 ## Amount of data needed. 
 The larger the model, the more data is needed. A rough order of estimate is that the number of tokens should be 10x the number of parameters used by the model. 
+# Understanding Data in AI
 
-??? tip "[Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556) The 'Chinchilla' paper of 2022, identifies scaling laws that help to understand the volume of data that is needed"
-    to obtain 'optimal' performance for a given LLM models size. Use of it in other areas, such as for Llama reveals that the models may have been under-trained.
-    - Primary takeaway: **"All three approaches suggest that as compute budget increases, model size and the amount of training data should be increased in approximately equal proportions." 
+Data is the lifeblood of any AI model. It is the raw material that fuels the learning process and shapes the model's understanding of the world. This section will delve into the various aspects of data, from its collection and access to its normalization and use in training AI models.
+
+## Data Collection and Access
+
+The first step in the data lifecycle is its collection. This involves gathering relevant data from various sources, which could range from databases and APIs to web scraping and user-generated content. The collected data must then be stored and organized in a way that allows easy access for further processing and analysis.
+
+## Data Normalization
+
+Once the data is collected and stored, it needs to be normalized. Data normalization is a process that transforms the data into a standard format, making it easier to work with. This could involve scaling numerical data, encoding categorical data, or handling missing values. Normalized data ensures consistency and improves the accuracy of the model.
+
+## Data Training
+
+The final step in the data lifecycle is using the data to train an AI model. This involves two key processes: tokenization and embedding.
+
+### Tokenization
+
+Tokenization is the process of breaking down the data into smaller units, or tokens. In the context of natural language processing (NLP), for example, a text document might be tokenized into individual words or sentences. This makes the data easier for the model to process and learn from.
+
+### Embedding
+
+Embedding is the process of representing these tokens in a numerical format that the model can understand. For instance, word embeddings might represent each word as a vector in a high-dimensional space. These embeddings capture the semantic relationships between words, allowing the model to learn from the underlying patterns in the data.
+
+## Amount of Data Needed
+
+The amount of data needed for training depends on the size of the model. As a general rule, the number of tokens should be approximately 10 times the number of parameters used by the model.
+
+??? tip "[Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)"
+    The 'Chinchilla' paper of 2022 identifies scaling laws that help to understand the volume of data needed to obtain 'optimal' performance for a given LLM model's size. Use of it in other areas, such as for Llama, reveals that the models may have been under-trained.
+    - Primary takeaway: **"All three approaches suggest that as compute budget increases, model size and the amount of training data should be increased in approximately equal proportions."**
     <img width="538" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d9243085-2db9-4ef2-91d7-83249fdd6c18">
 
-## Batch sizes of data needed...
-TODO
+## Batch Sizes of Data
 
-## Training with generated data. 
+The batch size refers to the number of data points that the model processes at once during training. Larger batch sizes can lead to faster training times, but they may also require more computational resources and can sometimes result in less accurate models. It's important to find a balance that suits your specific needs and constraints.
 
-It is possible and sometimes even peferred to train with generated data produced by other models. There are notable concerns, however, as some evidence indicates that training with generated data can yield worse results, and if done consistently, can lead to complete degredation of model performance.  
+## Training with Simulated Data
 
-??? tip "[Textbooks are all you need](https://arxiv.org/pdf/2306.11644.pdf) Used a volume of generated data, and transformer-classifiers to filter data to create a high quality coding-focused model."
-    Used 4 days on 8 A-100s to train to reach out-performing results. 
-    
+In some cases, it may be beneficial to train models with simulated data. This can be data generated by other models or through simulations of real-world scenarios. However, caution must be exercised as training with simulated data can sometimes lead to worse results. If done consistently, it can even lead to complete degradation of model performance. For more information, refer to [simulated data](simulation.md).

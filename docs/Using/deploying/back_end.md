@@ -1,42 +1,47 @@
-## Libraries
+# Deploying AI Models: Backend Considerations
 
-!!! code "[FlexFlow](https://github.com/flexflow/FlexFlow) Low-Latency, High-Performance LLM Serving"
-    Check this out!   
+Deploying AI models involves a variety of considerations, especially when it comes to backend infrastructure. The backend is the engine that powers your AI application, handling the complex computations and data processing that your models require. When setting up your backend, you need to consider factors such as latency, model availability, and compute resources. 
 
-!!! code "[llm](https://github.com/simonw/llm) A CLI utility and Python library for interacting with Large Language Models, including OpenAI, PaLM and local models installed on your own machine."
+- **Latency**: This refers to the delay between a user's action and the system's response. In AI applications, low latency is crucial for a smooth user experience. 
 
+- **Model Performance**: Your AI model should be readily available to process requests to the quality needed by your end user. If it doesn't give sufficiently reopted. asonable results, then it will not be ad
 
-??? code "[vLLM](https://vllm.ai/) utilizes **PagedAttention** to manage attention keys/values to enable 24x throughput than other transformers w/out architecture changes"
+- **Compute Resources**: AI models, especially large ones, require significant computational resources. You need to ensure that your backend has enough processing power and memory to handle your model's requirements. 
 
-    "PagedAttention allows storing continuous keys and values in non-contiguous memory space. Specifically, PagedAttention partitions the KV cache of each sequence into blocks, each block containing the keys and values for a fixed number of tokens. During the attention computation, the PagedAttention kernel identifies and fetches these blocks efficiently."
-    ![Paged Attention](https://vllm.ai/assets/figures/annimation0.gif)
-    [Github](https://github.com/vllm-project/vllm)
+For more information on compute resources, refer to our [computation guide](computation.md).
 
-??? code "[Text Generation Inference](https://github.com/Preemo-Inc/text-generation-inference) an open-sourced implementation forked from HF"
+## Libraries for Backend Deployment
 
-    "A Rust, Python and gRPC server for text generation inference. Used in production at HuggingFace to power LLMs api-inference widgets."    
-    ![image](https://github.com/ianderrington/genai/assets/76016868/a3f5ddbf-a2e3-45ae-bca4-200c07c9dd91)
+There are several libraries available that can help you deploy your AI models on the backend. These libraries provide tools and functionalities that simplify the process of setting up and managing your backend infrastructure.
 
-!!! code "[Lit-Gpt](https://github.com/Lightning-AI/lit-gpt#setup) Hackable implementation of state-of-the-art open-source large language models released under the Apache 2.0 license."
+- [FlexFlow](https://github.com/flexflow/FlexFlow): A low-latency, high-performance LLM serving library.
 
-!!! code "[Torch Serve](https://pytorch.org/serve/large_model_inference.html) enable efficient serving."
+- [llm](https://github.com/simonw/llm): A CLI utility and Python library for interacting with Large Language Models, including OpenAI, PaLM, and local models installed on your own machine.
 
-??? tip "[Triton Inference Server](https://github.com/triton-inference-server/server) Part of NVIDIA AI Inference" 
-    [Tutorial](https://github.com/triton-inference-server/server)
+- [vLLM](https://vllm.ai/): This library utilizes PagedAttention to manage attention keys/values, enabling 24x throughput than other transformers without architecture changes.
 
-!!! code "[litellm by BerriAI](https://github.com/BerriAI/litellm/blob/main/cookbook/proxy-server/readme.md) provides code to enable railways deployed on railway.app"
-    
-    [Railway.app](https://railway.app/about)
+- [Text Generation Inference](https://github.com/Preemo-Inc/text-generation-inference): An open-sourced implementation forked from HF. It is a Rust, Python, and gRPC server for text generation inference.
 
-## Platforms 
+- [Lit-Gpt](https://github.com/Lightning-AI/lit-gpt#setup): A hackable implementation of state-of-the-art open-source large language models.
 
-!!! code "[Azure-Chat-GPT](https://github.com/davidxw/azurechatgpt) to run GPT on Azure services"
+- [Torch Serve](https://pytorch.org/serve/large_model_inference.html): This library enables efficient serving of PyTorch models.
 
-??? code "[Amazon Sagemaker](https://aws.amazon.com/sagemaker/) and the AWS suite allows for streamlined running of AI models in various manners"
-    [Example Code](https://github.com/aws/amazon-sagemaker-examples)
+- [Triton Inference Server](https://github.com/triton-inference-server/server): Part of NVIDIA AI Inference, this server provides a robust solution for deploying AI models.
 
-!!! code "[Lamini](https://www.lamini.ai/) to help you build your AI moat"
-    [Lamini](
+- [litellm by BerriAI](https://github.com/BerriAI/litellm/blob/main/cookbook/proxy-server/readme.md): This library provides code to enable deployments on railway.app.
+
+## Platforms for Backend Deployment
+
+Several platforms provide infrastructure and services that can help you deploy your AI models on the backend.
+
+- [Azure-Chat-GPT](https://github.com/davidxw/azurechatgpt): This platform allows you to run GPT on Azure services.
+
+- [Amazon Sagemaker](https://aws.amazon.com/sagemaker/): Part of the AWS suite, Sagemaker allows for streamlined running of AI models in various manners.
+
+- [Lamini](https://www.lamini.ai/): This platform provides tools and services to help you build your AI applications.
 
 ## Tutorials
-!!! tip "[GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)"
+
+For more hands-on guidance, you can refer to the following tutorials:
+
+- [GCP Tutorial](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33): This tutorial provides a step-by-step guide on how to deploy large-size deep learning models into production using Google Cloud Platform.
