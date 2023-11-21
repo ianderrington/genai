@@ -1,7 +1,8 @@
 nav:
     - index.md
+    - deploying
     - commercial_products.md
-    - by_application.md
+    - by_category
     - governing.md
     - ml_ops.md
     - observability.md
@@ -9,7 +10,5 @@ nav:
     - marking_and_detecting.md
     - web_plugins.md
     - using_external_vendors.md
-    - deploying
     - ethically
-    - responsibly
     - ...

@@ -1,4 +1,10 @@
-COPILOT CONTINUE(Expand the simulation discussion.)
+COPILOT (Expand the simulation discussion.)
+
+
+COPILOT  ( generate a mermaid diagram of the general data process)
+very profound general way to retrain LLMs with synthetic data.
+* train(Large+Vague model) -> generate highly specific data
+* train(small specific model) on specific data.
 
 !!! code "[StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners](https://github.com/google-research/syn-rep-learn)"
     [Paper](https://github.com/google-research/syn-rep-learn)
