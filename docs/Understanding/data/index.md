@@ -1,5 +1,16 @@
-Data is the most important part of training any model. 
+Data is the most important part of training any model. Better data is, well, better. Higher quality data can lead to improved performance of downstream models. More data is better data too. More diverse data is better. Data with meta-data is better. We have to maintain a balance with the costs associated with getting, keeping, organizing, and accessing the data. 
 
+With data in hand, it is generally good to understand it directly, by looking at the accompanying meta-data and a good number of examples to ensure that it is generally consistent. Often times data is not properly structured that can be processeed downstream. For language models, this may involve having the incorrect incorrect encoding, or symbols that are otherwise not anticipated for your token-space. The data is normalized, either once or on-the-fly, to ensure the modles downstream can process it. 
+
+COPILOT: Generate a MErmaid Diagram of the above. 
+
+
+COPILOT: generate a mermad
+very profound general way to retrain LLMs with synthetic data.
+* train(Large+Vague model) -> generate highly specific data
+* train(small specific model) on specific data.
+
+### Important questions 
 ## Amount of data needed. 
 The larger the model, the more data is needed. A rough order of estimate is that the number of tokens should be 10x the number of parameters used by the model. 
 
@@ -8,7 +19,7 @@ The larger the model, the more data is needed. A rough order of estimate is that
     - Primary takeaway: **"All three approaches suggest that as compute budget increases, model size and the amount of training data should be increased in approximately equal proportions." 
     <img width="538" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d9243085-2db9-4ef2-91d7-83249fdd6c18">
 
-## Bath sizes of data needed...
+## Batch sizes of data needed...
 TODO
 
 ## Training with generated data. 
