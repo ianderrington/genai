@@ -22,18 +22,18 @@
       
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
     
     
       
-        <title>Augmentation - Gen()AI</title>
+        <title>Understanding Data Augmentation - Gen()AI</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#understanding-data-augmentation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -135,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Augmentation
+              Understanding Data Augmentation
             
           </span>
         </div>
@@ -375,9 +380,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -396,7 +405,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1">
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -434,12 +444,17 @@
         
       
         
+          
+        
       
+        
+      
+    
+    
     
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         
@@ -458,7 +473,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1_1">
+              
+              <label class="md-nav__link " for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -617,6 +633,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../overview/applications/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../overview/extra_resources.html" class="md-nav__link">
         
   
@@ -663,9 +699,10 @@
       
     
     
+    
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         
@@ -684,7 +721,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1_2">
+              
+              <label class="md-nav__link " for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -789,16 +827,108 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Understanding Data Augmentation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="augmentation.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Augmentation
+    Understanding Data Augmentation
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-data-augmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Data Augmentation?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Data Augmentation?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-is-data-augmentation-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is Data Augmentation Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-data-augmentation-improves-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Data Augmentation Improves Models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-data-augmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Data Augmentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-data-augmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing Data Augmentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -869,9 +999,10 @@
       
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         
@@ -890,7 +1021,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1_3">
+              
+              <label class="md-nav__link " for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -921,9 +1053,10 @@
       
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         
@@ -942,7 +1075,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1_3_1">
+              
+              <label class="md-nav__link " for="__nav_1_3_1" id="__nav_1_3_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1283,9 +1417,10 @@
       
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         
@@ -1304,7 +1439,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1_4">
+              
+              <label class="md-nav__link " for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1377,9 +1513,10 @@
       
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         
@@ -1398,7 +1535,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1_5">
+              
+              <label class="md-nav__link " for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1651,9 +1789,10 @@
       
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         
@@ -1672,7 +1811,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_1_6">
+              
+              <label class="md-nav__link " for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1749,6 +1889,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -1771,18 +1915,18 @@
         
       
         
-          
-        
       
-        
-          
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -1801,7 +1945,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_2">
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1813,6 +1958,192 @@
             Use and Manage
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Using/deploying/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploying
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Deploying
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/deploying/examples_and_tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples and tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/deploying/front_end.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Front end
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/deploying/back_end.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Models: Backend Considerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/deploying/frameworks.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/deploying/computation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computation in AI Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/deploying/libraries_and_tools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying Libraries and Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
             
               
                 
@@ -1839,16 +2170,72 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Using/by_category/by_application.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    By category
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            By category
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../Using/by_application.html" class="md-nav__link">
+      <a href="../../Using/by_category/healthcare.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    By application
+    Healthcare
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2010,195 +2397,12 @@
       
         
       
-        
-      
-        
-      
+    
+    
     
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../Using/deploying/index.html" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Deploying
-  </span>
-  
-
-            </a>
-            
-              <label class="md-nav__link " for="__nav_2_10">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_10">
-            <span class="md-nav__icon md-icon"></span>
-            Deploying
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/examples_and_tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Examples and tutorials
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/front_end.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Front end
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/back_end.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Back end
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/frameworks.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Frameworks
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/computation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Computation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/libraries_and_tools.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Libraries and tools
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
         
         
@@ -2217,7 +2421,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_2_11">
+              
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -2324,11 +2529,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/responsibly/index.html" class="md-nav__link">
+      <a href="../../Using/behavior.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Responsibly
+    Behavior
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/redteaming.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redteaming
   </span>
   
 
@@ -2365,9 +2590,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
-        
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
         
@@ -2386,7 +2615,8 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_3">
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -2523,6 +2753,76 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-data-augmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Data Augmentation?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Data Augmentation?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-is-data-augmentation-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is Data Augmentation Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-data-augmentation-improves-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Data Augmentation Improves Models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-data-augmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Data Augmentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-data-augmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing Data Augmentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2540,9 +2840,74 @@
   
 
 
-  <h1>Augmentation</h1>
+<h1 id="understanding-data-augmentation">Understanding Data Augmentation<a class="headerlink" href="#understanding-data-augmentation" title="Permanent link">&para;</a></h1>
+<p>Data augmentation is a strategy that enables practitioners to significantly increase the diversity of data available for training models, without actually collecting new data. Data augmentation techniques such as cropping, padding, and horizontal flipping are commonly used to train large neural networks.</p>
+<h2 id="what-is-data-augmentation">What is Data Augmentation?<a class="headerlink" href="#what-is-data-augmentation" title="Permanent link">&para;</a></h2>
+<p>Data augmentation is a process of creating new data from the existing ones. It is a form of synthetic data generation that can be used to improve the performance of machine learning models. The main idea behind data augmentation is to create variations of the data that can capture different perspectives and scenarios, thereby enriching the dataset.</p>
+<h3 id="why-is-data-augmentation-important">Why is Data Augmentation Important?<a class="headerlink" href="#why-is-data-augmentation-important" title="Permanent link">&para;</a></h3>
+<p>Data augmentation is important for several reasons:</p>
+<ol>
+<li>
+<p><strong>Improving Model Performance</strong>: Data augmentation can help improve the performance of models by providing more varied data for training. This can help the model learn more robust features and reduce overfitting.</p>
+</li>
+<li>
+<p><strong>Dealing with Imbalanced Data</strong>: In many real-world scenarios, the data we have is imbalanced. Data augmentation can help balance the dataset by creating synthetic data for under-represented classes.</p>
+</li>
+<li>
+<p><strong>Increasing Dataset Size</strong>: Data augmentation can help increase the size of the dataset. This can be particularly useful when we have limited data for training our model.</p>
+</li>
+</ol>
+<h2 id="how-data-augmentation-improves-models">How Data Augmentation Improves Models<a class="headerlink" href="#how-data-augmentation-improves-models" title="Permanent link">&para;</a></h2>
+<p>Data augmentation can improve models in several ways:</p>
+<ol>
+<li>
+<p><strong>Variety</strong>: By creating new data from the existing ones, data augmentation introduces variety into the training set. This variety can help the model learn more robust and generalizable features.</p>
+</li>
+<li>
+<p><strong>Regularization</strong>: Data augmentation acts as a form of regularization, reducing overfitting. By training on more varied data, the model is less likely to memorize the training data and more likely to generalize to unseen data.</p>
+</li>
+<li>
+<p><strong>Performance</strong>: Data augmentation can improve the performance of the model on the validation set. This is because the model is trained on a more diverse set of data, which can help it perform better on unseen data.</p>
+</li>
+</ol>
+<h2 id="types-of-data-augmentation">Types of Data Augmentation<a class="headerlink" href="#types-of-data-augmentation" title="Permanent link">&para;</a></h2>
+<p>There are several types of data augmentation techniques that can be used depending on the type of data:</p>
+<ol>
+<li>
+<p><strong>Image Data Augmentation</strong>: Techniques such as flipping, rotation, zooming, cropping, and brightness adjustment can be used to augment image data.</p>
+</li>
+<li>
+<p><strong>Text Data Augmentation</strong>: Techniques such as synonym replacement, random insertion, random swap, and random deletion can be used to augment text data.</p>
+</li>
+<li>
+<p><strong>Audio Data Augmentation</strong>: Techniques such as noise injection, time stretching, and pitch shifting can be used to augment audio data.</p>
+</li>
+<li>
+<p><strong>Time-Series Data Augmentation</strong>: Techniques such as jittering, scaling, magnitude warping, and time warping can be used to augment time-series data.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The choice of data augmentation techniques depends on the type of data and the specific problem at hand. It is important to choose techniques that are relevant and meaningful for the given context.</p>
+</div>
+<h2 id="implementing-data-augmentation">Implementing Data Augmentation<a class="headerlink" href="#implementing-data-augmentation" title="Permanent link">&para;</a></h2>
+<p>Implementing data augmentation involves applying the chosen techniques to the training data. This can be done either offline, where the augmented data is generated and stored before training, or online, where the augmented data is generated on-the-fly during training.</p>
+<p>Here is an example of how to implement image data augmentation using the <code>ImageDataGenerator</code> class in Keras:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
 
+<span class="c1"># create a data generator</span>
+<span class="n">datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+    <span class="n">rotation_range</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
+<span class="c1"># fit the data generator on the training data</span>
+<span class="n">datagen</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
+</code></pre></div>
+<p>In this example, the <code>ImageDataGenerator</code> is used to create a data generator that will apply random rotations, width and height shifts, and horizontal flips to the images.</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Data augmentation is a powerful technique for improving the performance of machine learning models, particularly when we have limited data. By creating new data from the existing ones, data augmentation can help the model learn more robust features, reduce overfitting, and improve performance on the validation set.</p>
 
 
   
@@ -2600,10 +2965,10 @@
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Back to top
-          </button>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -2634,6 +2999,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    
     
       <div class="md-consent" data-md-component="consent" id="__consent" hidden>
         <div class="md-consent__overlay"></div>
@@ -2713,10 +3079,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
