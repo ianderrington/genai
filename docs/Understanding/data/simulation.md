@@ -1,17 +1,26 @@
-COPILOT (Expand the simulation discussion.)
+Using data that is simulated can help AI and machine learning tremendously. Well-generated synthetic data that can be used to [train models recurrentl](../architectures/recurrent_training.md), especially when specialized, real-world, costly or scarce data is needed. 
+
+## Overview of the Data Simulation Process
+
+MANAGEN(evolve below:
+Choose goal of simulated data. Give examples
+Choose structure to help achieve goal.
+Choose prompt.
+Generate a few and evaluate.
+)
 
 
-COPILOT  ( generate a mermaid diagram of the general data process)
-very profound general way to retrain LLMs with synthetic data.
-* train(Large+Vague model) -> generate highly specific data
-* train(small specific model) on specific data.
+## Key Resources and Studies in Data Simulation
+
+Several resources and studies have made significant contributions to the field of data simulation in AI. Here are a few notable ones:
 
 !!! code "[StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners](https://github.com/google-research/syn-rep-learn)"
-    [Paper](https://github.com/google-research/syn-rep-learn)
+    This is a research paper by Google Research that explores the use of synthetic images generated from text-to-image models for training visual representation learners.
 
-!!! code "[Madrona](https://github.com/shacklettbp/madrona) Madrona is a prototype game engine for creating high-throughput, GPU-accelerated simulators that run thousands of virtual environment instances, and generate millions of aggregate simulation steps per second, on a single GPU."
+!!! code "[Madrona](https://github.com/shacklettbp/madrona)"
+    Madrona is a prototype game engine designed for creating high-throughput, GPU-accelerated simulators. These simulators can run thousands of virtual environment instances and generate millions of aggregate simulation steps per second on a single GPU.
 
 
-??? tip "[Textbooks are all you need](https://arxiv.org/pdf/2306.11644.pdf) Used a volume of generated data, and transformer-classifiers to filter data to create a high quality coding-focused model."
-    Used 4 days on 8 A-100s to train to reach out-performing results. 
-    
+## Conclusion
+
+Data simulation is a powerful tool in AI and machine learning. It enables the creation of large volumes of synthetic data, which can be used to train highly task-specific models. This process is particularly beneficial when real-world data is limited or challenging to obtain. The resources and studies highlighted in this document offer valuable insights into the practical application of data simulation in AI.

@@ -1,22 +1,20 @@
-TODO: 
+TODO: This needs to split up in to pre-training, finetuning and optimization
+
 Training GenAI will generally be domain/modality specific.
 
-1. Self-supervised pretraining: Predicts next token. 
+1. Self-supervised [pre-training](pre-training.md) to predict the next token with reasonable likelihoods. 
 2. Supervised pretrainign: Trains to give generally expected output.
-3. Reinforcement Learning with Human Feedback: Trains a reward model that is used with Proximal Policy Optimization (PPO) to produce aligned output. 
+3. [Finetuning](./finetuning.md) on higher quality data sets sometimes [recurrently](./recurrent_training.md) using [simulated data](../data/simulation.md),
+4. [Reinforcement Learning with Human Feedback](rlhf.md) to more accurately train a model's output to find a reward model that is used with Proximal Policy Optimization (PPO) to produce aligned output. 
 
 Basics: [Distributed Training](https://neptune.ai/blog/distributed-training)
 https://neptune.ai/blog/distributed-training-frameworks-and-tools
 
-- [LLM Engineering by Huyen Chip](https://huyenchip.com/2023/04/11/llm-engineering.html)
 
 
 !!! important "[Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)" 
     Instruct GPT allows for following of instructions. InstructGPT, established a powerful paradigm of LLM performance
     <img width="1006" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f8eccb3c-0afe-4f8f-a477-4269c5b93fb0">
-
-## RLHF
-
 
 
 ### Frameworks
@@ -26,38 +24,6 @@ https://neptune.ai/blog/distributed-training-frameworks-and-tools
 
 - [RL4LMs by microsoft](https://github.com/allenai/RL4LMs/tree/main) A modular RL library to fine-tune language models to human preferences. [paper](https://arxiv.org/pdf/2305.08844.pdf)
 
-# Methods and Improvements
-
-### Fine Tuning using Distillation
-
-Train on model trains a new model on the output of a new model. 
-- [Alpaca ](https://github.com/tatsu-lab/stanford_alpaca)
-
-### Fine tuning Optimizations
-
-- [Full Parameter Fine-Tuning for Large Language Models with Limited Resources.](https://github.com/openlmlab/lomo) Introduces LOMO: LOw-Memory Optimization to fuse 
-
-### Adapter layers
-
-- [AdapterHub: A Framework for Adapting Transformers](https://arxiv.org/pdf/2007.07779.pdf) [Website](https://adapterhub.ml/)
-Adapters are efficient and performant layers that can optimize performance without needing to do inefficient fine-tuning. 
-
-
-## RLHF
-    
-- [RLHF: Reinforcement Learning from Human Feedback](https://huyenchip.com/2023/05/02/rlhf.html) A splendid summary of the RLHF system.
-<img width="751" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2fb5b4d5-ecc9-45b3-9d16-63fab4ab6db0">
-
-
-
-    
-- [RLHF basics by hugging face](https://huggingface.co/blog/rlhf) A realy good intro to parse again.
-- [RLHF for Palm in Pytorch](https://github.com/lucidrains/PaLM-rlhf-pytorch)
-- [AligningLargeLanguageModelsthroughSyntheticFeedback](https://arxiv.org/abs/2305.13735) Using a heirarchy of systems to 
-
-### AI-enabled ranking
-
-- [Can foundation models label data like humans?](https://huggingface.co/blog/llm-leaderboard) using GPT to review model outputs produced biased results. Changing the prompt doesn't really help to de-bias it. Lots of additional considerations surrounding model evaluation
 
 
 ## Mixture of Experts.
@@ -73,4 +39,4 @@ Adapters are efficient and performant layers that can optimize performance witho
 ### Pruning and compression
 
 - [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](https://arxiv.org/abs/2301.00774) Remove up to ~50% parameters preserving 
-- [SqueezeLLM](paper) They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' [Github](https://github.com/SqueezeAILab/SqueezeLLM)
+- [SqueezeLLM](https://arxiv.org/pdf/2306.07629.pdf) They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' [Github](https://github.com/SqueezeAILab/SqueezeLLM)

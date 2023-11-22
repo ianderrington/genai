@@ -2,7 +2,9 @@ nav:
     - index.md
     - models
     - training.md
-    - optimizing_hyper_parameters.md
+    - pre-training.md
+    - finetuning.md
+    - rlhf.md
     - optimization.md
     - evaluating_and_comparing.md
     - alignment.md

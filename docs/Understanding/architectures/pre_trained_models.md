@@ -1,3 +1,4 @@
+TODO: 
 There are a vast number of both open and closed-source models that can be used. A number of them can be downloaded and run on the appropriate hardware, others may be accessed through APIs. 
 
 It is essential to [compare and evaluate](evaluating_and_comparing.md) the models for your intended use-cases to ensure they meet technical, customer, and organizational requirements. 

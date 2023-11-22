@@ -1,3 +1,4 @@
+TODO: 
 There are many ways that you can evaluate your model, and the manner of evaluation will generally  depend on your use case. 
 
 As a general principle in ML, it is important to have your evaluation or test ing data thoroughly separated from your training data. If this is not done, it may be considered an improper test because the model will have had a chance to 'learn' the answers directly, and the test may not thoroughly represent any form of generalization that the model may have achieved. If needed, the 'contamination' of data may be removed with [automated methods](https://lmsys.org/blog/2023-11-14-llm-decontaminator/). 
