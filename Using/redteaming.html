@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#essential-reading" class="md-skip">
+        <a href="#manual-approaches" class="md-skip">
           Skip to content
         </a>
       
@@ -841,7 +841,7 @@
         
   
   <span class="md-ellipsis">
-    Simulation
+    Understanding the Role of Data Simulation in AI
   </span>
   
 
@@ -2489,6 +2489,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#manual-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Approaches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Approaches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#essential-reading" class="md-nav__link">
     <span class="md-ellipsis">
       Essential reading
@@ -2704,6 +2722,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#manual-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Approaches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Approaches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#essential-reading" class="md-nav__link">
     <span class="md-ellipsis">
       Essential reading
@@ -2734,12 +2770,19 @@
 
 <p>Generative models are generally built to do one thing: predict the next token. This by no means will guarantee that the model does well in generating text that is aligned with external requirements.</p>
 <p>While standard testing might allow one to identify flaws within the test sets, and fixes may be gradually built in to account for the flaws, such as with RLHF, red-teaming seeks to identify the manners in which behaviors that are identified out of alignment, can be successfully extracted by manipulating the inputs to the models. </p>
-<p>More specifically: </p>
 <div class="admonition quote">
 <p class="admonition-title">Definitions</p>
 <p><strong>Red-teaming</strong> is a form of evaluation that elicits model vulnerabilities that might lead to undesirable behaviors. ^N1
-<strong>Jailbreaking</strong> is another term for red-teaming wherein the LLM is manipulated to break away from its guardrails." ^N!</p>
+<strong>Jailbreaking</strong> is another term for red-teaming wherein the LLM is manipulated to break away from its guardrails." ^N1</p>
 </div>
+<h3 id="manual-approaches">Manual Approaches<a class="headerlink" href="#manual-approaches" title="Permanent link">&para;</a></h3>
+<p>COPILOT (Expand discussion here)</p>
+<h3 id="automated-approaches">Automated Approaches<a class="headerlink" href="#automated-approaches" title="Permanent link">&para;</a></h3>
+<details class="code">
+<summary><a href="https://github.com/sherdencooper/prompt-injection">Custom GPT Security Analysis</a> provides research and systems to use adversarial prompts to evaluate GPT's</summary>
+</details>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/4b99aae5-4f96-4f37-a30a-6c214a379a4d" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="575" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4b99aae5-4f96-4f37-a30a-6c214a379a4d"></a>
+   <a href="https://arxiv.org/pdf/2311.11538.pdf">Paper</a></p>
 <h2 id="essential-reading">Essential reading<a class="headerlink" href="#essential-reading" title="Permanent link">&para;</a></h2>
 <p>^N1: <a href="https://huggingface.co/blog/red-teaming">Hugging Face</a></p>
 

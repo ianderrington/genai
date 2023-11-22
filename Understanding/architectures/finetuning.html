@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#use-simulated-data" class="md-skip">
+        <a href="#methods-of-fine-tuning" class="md-skip">
           Skip to content
         </a>
       
@@ -843,7 +843,7 @@
         
   
   <span class="md-ellipsis">
-    Simulation
+    Understanding the Role of Data Simulation in AI
   </span>
   
 
@@ -1245,11 +1245,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#use-simulated-data" class="md-nav__link">
+  <a href="#methods-of-fine-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Use simulated data
+      Methods of Fine-Tuning
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Methods of Fine-Tuning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-real-world-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Real-World Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-transfer-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Transfer Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-simulated-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Simulated Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2715,11 +2748,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#use-simulated-data" class="md-nav__link">
+  <a href="#methods-of-fine-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Use simulated data
+      Methods of Fine-Tuning
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Methods of Fine-Tuning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-real-world-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Real-World Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-transfer-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Transfer Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-simulated-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Simulated Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2752,28 +2818,39 @@
 
   <h1>Finetuning</h1>
 
-<p>Fine-tuning trains models that were previously trained on large corpora of data, that might potentially have varying degrees of relevance or quality. </p>
-<p>There are several ways of fine-tuning, that may be combined where appropriate. Focusing on a specific set of data that is either natural or synthetic. </p>
-<h3 id="use-simulated-data">Use simulated data<a class="headerlink" href="#use-simulated-data" title="Permanent link">&para;</a></h3>
-<p>It is very useful to consider a general way to train LLM's with synthetic data: </p>
-<p>COPILOT: please change the below to a mermaid diagram
-* train(Large+Vague model) -&gt; generate highly specific data
-* train(small(er?) specific model) on specific data &rarr; have high-quality fine-tuned model </p>
+<p>Fine-tuning is a critical process in the lifecycle of AI model development. It involves the retraining of pre-existing models, which have been initially trained on extensive data corpora. The data used for fine-tuning can vary in relevance and quality. Several methods are available for fine-tuning, and they can be combined as needed to achieve the desired results. The focus of fine-tuning is usually on a specific set of data, which can be either natural or synthetic.</p>
+<h2 id="methods-of-fine-tuning">Methods of Fine-Tuning<a class="headerlink" href="#methods-of-fine-tuning" title="Permanent link">&para;</a></h2>
+<p>Fine-tuning methods can be diverse, each with its unique approach and benefits. Here, we will discuss one such method that involves the use of simulated data.</p>
+<h3 id="using-real-world-data">Using Real-World Data<a class="headerlink" href="#using-real-world-data" title="Permanent link">&para;</a></h3>
+<p>Another method involves using real-world data that is relevant to the task at hand. This data is used to fine-tune the model, allowing it to perform better on specific tasks that require an understanding of real-world scenarios and data.</p>
+<h3 id="using-transfer-learning">Using Transfer Learning<a class="headerlink" href="#using-transfer-learning" title="Permanent link">&para;</a></h3>
+<p>Transfer learning is a method where a pre-trained model, trained on a large dataset, is used as a starting point. The model is then fine-tuned on a smaller, more specific dataset. This method leverages the knowledge gained from the initial training and applies it to the specific task.</p>
+<h3 id="using-simulated-data">Using Simulated Data<a class="headerlink" href="#using-simulated-data" title="Permanent link">&para;</a></h3>
+<p>Utilizing synthetic or simulated data is an effective method for training Large Language Models (LLMs). The process can be visualized in the following sequence:</p>
+<pre class="mermaid"><code>graph LR
+A[Train Large+Vague model] --&gt; B[Generate highly specific data]
+B --&gt; C[Train small(er?) specific model on specific data]
+C --&gt; D[High-quality fine-tuned model]</code></pre>
+<p>In this sequence, a large and vague model is initially trained. This model then generates highly specific data. This specific data is subsequently used to train a smaller, more specific model. The end result is a high-quality, fine-tuned model.</p>
 <h2 id="developing-results">Developing Results<a class="headerlink" href="#developing-results" title="Permanent link">&para;</a></h2>
+<p>Fine-tuning can lead to significant improvements in both instruction following and helpfulness of models. This is demonstrated in the research paper <a href="https://arxiv.org/pdf/2310.12962.pdf">An Emulator for Fine-Tuning Large Language Models using Small Language Models</a>. The paper also suggests that combining fine-tuning with speculative decoding can speed up larger models by a factor of 2.5.</p>
 <details class="note">
-<summary><a href="https://arxiv.org/pdf/2310.12962.pdf">An Emulator for Fine-Tuning Large Language Models using Small Language Models</a></summary>
-<p>Emulated fine-tuning cross-pollinates reward models used in small (or large) models for their alternative-sized model resulting in improvements in both instruction following and helpfulness. They also find by combining with speculative decoding, that there can be a speedup for larger models by a factor of 2.5.
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1088" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf"></a>
+<summary>Research Paper: An Emulator for Fine-Tuning Large Language Models using Small Language Models</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1088" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf"></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/5ae8af02-02f9-43ab-a545-16b7709935e8" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1017" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5ae8af02-02f9-43ab-a545-16b7709935e8"></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="431" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887"></a></p>
 </details>
+<p>There are also several tools available that can assist in the fine-tuning process. </p>
 <details class="code">
-<summary><a href="https://github.com/OpenPipe/OpenPipe">Open Pipe</a> Use powerful but expensive LLMs to fine-tune smaller and cheaper models suited to your exact needs. Evaluate the model and prompt combinations in the playground. Query your past requests and export optimized training data.</summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e"></a></p>
+<summary><a href="https://github.com/OpenPipe/OpenPipe">Open Pipe</a> allows you to use powerful but expensive LLMs to fine-tune smaller and cheaper models</summary>
+<p>You can evaluate the model and prompt combinations in the playground, query your past requests, and export optimized training data.
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e"></a></p>
 </details>
+<p>Another tool, <a href="https://github.com/okuvshynov/slowllama">Slow Llama</a>, is particularly useful for fine-tuning on M1/M2 Macs.</p>
 <div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/okuvshynov/slowllama">Slow Llama</a> for finetuning on a M1/M2 mac)</p>
+<p class="admonition-title"><a href="https://github.com/okuvshynov/slowllama">Slow Llama</a> for finetuning on a M1/M2 mac</p>
 </div>
+<p>In conclusion, fine-tuning is a crucial step in the development of AI models. It allows models to specialize and improve their performance on specific tasks, leading to more accurate and efficient AI systems.</p>
 
 
   
