@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://managen.ai/Understanding/architectures/optimization.html">
       
       
-        <link rel="prev" href="optimizing_hyper_parameters.html">
+        <link rel="prev" href="rlhf.html">
       
       
         <link rel="next" href="evaluating_and_comparing.html">
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#different-methods" class="md-skip">
+        <a href="#model-metric-optimizaitons" class="md-skip">
           Skip to content
         </a>
       
@@ -695,6 +695,8 @@
       
         
       
+        
+      
     
     
     
@@ -843,7 +845,27 @@
         
   
   <span class="md-ellipsis">
-    Understanding the Role of Data Simulation in AI
+    Simulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/simulation_temp0.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Data Simulation in AI
   </span>
   
 
@@ -873,8 +895,6 @@
       
         
           
-        
-      
         
       
         
@@ -1103,11 +1123,51 @@
   
   
     <li class="md-nav__item">
-      <a href="optimizing_hyper_parameters.html" class="md-nav__link">
+      <a href="pre-training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Optimizing hyper parameters
+    Pre training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="finetuning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Finetuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rlhf.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rlhf
   </span>
   
 
@@ -1165,13 +1225,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#different-methods" class="md-nav__link">
+  <a href="#model-metric-optimizaitons" class="md-nav__link">
     <span class="md-ellipsis">
-      Different methods
+      Model metric optimizaitons
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Different methods">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Performance Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Performance Optimization">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1330,46 +1399,6 @@
   
   
     <li class="md-nav__item">
-      <a href="embedding.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Embedding
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="finetuning.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Finetuning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
       <a href="generation.html" class="md-nav__link">
         
   
@@ -1415,26 +1444,6 @@
   
   <span class="md-ellipsis">
     Recurrent training
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="reinforcement_feedback.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Reinforcement feedback
   </span>
   
 
@@ -2600,7 +2609,7 @@
         
   
   <span class="md-ellipsis">
-    Redteaming
+    Red Teaming in AI
   </span>
   
 
@@ -2808,13 +2817,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#different-methods" class="md-nav__link">
+  <a href="#model-metric-optimizaitons" class="md-nav__link">
     <span class="md-ellipsis">
-      Different methods
+      Model metric optimizaitons
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Different methods">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Performance Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Performance Optimization">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2938,9 +2956,18 @@
 
   <h1>Optimization</h1>
 
-<p>Time is money and the ability to quickly allow your GenAI to create high-performing content is paramount. While related to engineering, there is not a fully settled solution. Here we share an understanding of good ways to make your model generate more efficiently, with minimal loss in quality. </p>
-<p>While most successful models may use a [combination of approaches(#combination-approaches) there are several methods used to reduce model sizes</p>
-<h2 id="different-methods">Different methods<a class="headerlink" href="#different-methods" title="Permanent link">&para;</a></h2>
+<p>Models must yield results that are sufficiently good for downstream users. This is quite often the accuracy, an <a href="evaluating_and_comparing.html">evaluation and comparison</a> metric. Efficiency another is a crucial aspect of AI model development. The ability to generate high-performing content quickly can significantly impact the overall performance of your AI model. Although there isn't a universally accepted solution, several methods can help optimize your model for better efficiency without compromising quality. </p>
+<p>Most successful models employ a combination of approaches to reduce model sizes. This document provides an understanding of these methods and how they can be applied to optimize your AI model.</p>
+<h2 id="model-metric-optimizaitons">Model metric optimizaitons<a class="headerlink" href="#model-metric-optimizaitons" title="Permanent link">&para;</a></h2>
+<p>MANAGEN(Please describe model optimization methods and what is mentioned below)</p>
+<ul>
+<li>Data (quality and volume)</li>
+<li>Hyper parameters: Batch size is important. Use gradient accumulation if possible.</li>
+<li>Model size</li>
+<li>Model structure (BERT vs last-token prediction)</li>
+</ul>
+<h2 id="model-performance-optimization">Model Performance Optimization<a class="headerlink" href="#model-performance-optimization" title="Permanent link">&para;</a></h2>
+<p>The following are some of the commonly used methods for optimizing AI models:</p>
 <ol>
 <li><a href="#pruning">Pruning</a></li>
 <li><a href="#quantization">Quantization</a></li>
@@ -2950,31 +2977,29 @@
 <li>Neural Architecture Search (NAS)</li>
 </ol>
 <h3 id="pruning">Pruning<a class="headerlink" href="#pruning" title="Permanent link">&para;</a></h3>
-<p>Pruning eliminates weights that do not produce consistently highly-impactful outputs.</p>
+<p>Pruning is a technique that eliminates weights that do not consistently produce highly impactful outputs. </p>
 <details class="important">
 <summary><a href="https://blog.research.google/2023/08/neural-network-pruning-with.html">Fast as Chita: Neural network pruning with combinatorial optimization</a></summary>
 <p><a href="https://arxiv.org/abs/2302.14623">Arxiv paper</a>
- "an optimization-based approach for pruning pre-trained neural networks at scale. CHITA (which stands for “Combinatorial Hessian-free Iterative Thresholding Algorithm”) outperforms existing pruning methods in terms of scalability and performance tradeoffs, and it does so by leveraging advances from several fields, including high-dimensional statistics, combinatorial optimization, and neural network pruning."
+ "An optimization-based approach for pruning pre-trained neural networks at scale. CHITA (which stands for “Combinatorial Hessian-free Iterative Thresholding Algorithm”) outperforms existing pruning methods in terms of scalability and performance tradeoffs, and it does so by leveraging advances from several fields, including high-dimensional statistics, combinatorial optimization, and neural network pruning."
  <a href="https://blog.research.google/2023/08/neural-network-pruning-with.html"><img alt="Fast as Chita" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIuxL23IilgYpOEWtnP9B4zbiPnuV5NUML47JP0q1idyLLmZUqRlHrxx77iFIinFWUXMekNhKSltLlZvzBSTaqsYmbithvXGlvggyaAZrtb4mg9oiYMWArjvf_lj7T9IbY1Ae4-wijzOZzTazsxWImdGRgLSyAJEc5WQWHvylSwcHQJWX8gXfEk70l8iEs/s1600/image5.gif" /></a></p>
 </details>
 <h3 id="quantization">Quantization<a class="headerlink" href="#quantization" title="Permanent link">&para;</a></h3>
 <p>Precision details the manner in which binary bits represent numbers in a computer. Generally, the greater the number of bits, the broader the variety of numbers that can be represented. </p>
 <p>Broken down into the <code>exponent</code> and <code>fraction</code>, as the different values can have specific implications for the training of models. Quite generally, <a href="https://en.wikipedia.org/wiki/Bfloat16_floating-point_format">bfloat16</a> (developed by Google Brain) offers an effective balance of size and dynamic expressibility for LLMs, and is a well-used number format. </p>
 <p>To have improved performance, the models may be reduced, however, to using fewer bits. Standard fp16 may sometimes reduced to int8, and even binary representations.  </p>
-<details class="info">
-<summary>Comparison of range and precision</summary>
-</details>
-<p><a class="glightbox" href="https://huggingface.co/blog/assets/96_hf_bitsandbytes_integration/tf32-Mantissa-chart-hi-res-FINAL.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://huggingface.co/blog/assets/96_hf_bitsandbytes_integration/tf32-Mantissa-chart-hi-res-FINAL.png" /></a></p>
-<p>Purpose of quantization</p>
-<figure>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f1ff3e1a-1157-47a0-9e64-5ec29111a256" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Quantization" src="https://github.com/ianderrington/genai/assets/76016868/f1ff3e1a-1157-47a0-9e64-5ec29111a256" width="500" /></a>
-  </p>
-<figcaption>Quantization summarized image taken from [Advanced Practical Data Science Lecture 9: Compression Techniques and Distillation](https://harvard-iacs.github.io/2020F-AC295/lectures/lecture9/presentation/lecture9.pdf)</figcaption>
+<details class="info" open="open">
+<summary>What is Precision?</summary>
+<p><figure markdown>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f1ff3e1a-1157-47a0-9e64-5ec29111a256" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Quantization" src="https://github.com/ianderrington/genai/assets/76016868/f1ff3e1a-1157-47a0-9e64-5ec29111a256" width="500" /></a>
+<figcaption>Quantization summarized image taken from <a href="https://harvard-iacs.github.io/2020F-AC295/lectures/lecture9/presentation/lecture9.pdf">Advanced Practical Data Science Lecture 9: Compression Techniques and Distillation</a></figcaption>
 </figure>
+<a class="glightbox" href="https://huggingface.co/blog/assets/96_hf_bitsandbytes_integration/tf32-Mantissa-chart-hi-res-FINAL.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://huggingface.co/blog/assets/96_hf_bitsandbytes_integration/tf32-Mantissa-chart-hi-res-FINAL.png" /></a></p>
+</details>
 <h4 id="when-during-or-after-training">When? During or after training?<a class="headerlink" href="#when-during-or-after-training" title="Permanent link">&para;</a></h4>
 <p>There are general times when quantization may be performed. During training, post-training. 
-Here are the pros/cons of each kind:</p>
-<p>TODO: Table with this information </p>
+Here are the benefit chart for each method each kind:
+MANAGEN: (Table with this the characteristic chart of the different methods to help individuals know specific challenges and benefits)</p>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
 <details class="code">
 <summary><a href="https://github.com/mit-han-lab/smoothquant">SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs</a></summary>
@@ -2982,10 +3007,10 @@ Here are the pros/cons of each kind:</p>
 <a href="https://arxiv.org/abs/2211.10438.pdf">Paper</a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/ed34f663-5792-471f-9927-f3622f3243a3" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="337" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ed34f663-5792-471f-9927-f3622f3243a3"></a></p>
 </details>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://huggingface.co/blog/hf-bitsandbytes-integration">HF bitsandbytes</a> and code <a href="https://github.com/huggingface/blog/blob/main/assets/96_hf_bitsandbytes_integration/example.py">From Github</a></p>
+<details class="code">
+<summary><a href="https://huggingface.co/blog/hf-bitsandbytes-integration">HF bitsandbytes</a> and code <a href="https://github.com/huggingface/blog/blob/main/assets/96_hf_bitsandbytes_integration/example.py">From Github</a></summary>
 <p><a href="https://arxiv.org/abs/2309.14717">Paper</a></p>
-</div>
+</details>
 <details class="code">
 <summary><a href="https://github.com/hahnyuan/PB-LLM">PB-LLM: Partially Binarized Large Language Models</a> to compress identified model weights into a single bit, while allowing others to only be partially compressed.</summary>
 <p><a href="https://github.com/hahnyuan/PB-LLM">Paper</a> </p>

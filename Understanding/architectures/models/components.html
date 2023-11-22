@@ -695,6 +695,8 @@
       
         
       
+        
+      
     
     
     
@@ -843,7 +845,27 @@
         
   
   <span class="md-ellipsis">
-    Understanding the Role of Data Simulation in AI
+    Simulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/simulation_temp0.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Data Simulation in AI
   </span>
   
 
@@ -873,8 +895,6 @@
       
         
           
-        
-      
         
       
         
@@ -1077,6 +1097,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embeddings
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1180,11 +1209,51 @@
   
   
     <li class="md-nav__item">
-      <a href="../optimizing_hyper_parameters.html" class="md-nav__link">
+      <a href="../pre-training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Optimizing hyper parameters
+    Pre training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finetuning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Finetuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rlhf.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rlhf
   </span>
   
 
@@ -1260,46 +1329,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../embedding.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Embedding
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../finetuning.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Finetuning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../generation.html" class="md-nav__link">
         
   
@@ -1345,26 +1374,6 @@
   
   <span class="md-ellipsis">
     Recurrent training
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reinforcement_feedback.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Reinforcement feedback
   </span>
   
 
@@ -2530,7 +2539,7 @@
         
   
   <span class="md-ellipsis">
-    Redteaming
+    Red Teaming in AI
   </span>
   
 
@@ -2776,6 +2785,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embeddings
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2810,6 +2828,12 @@ $$</p>
 <p>Based on some observations by <a href="https://arxiv.org/pdf/2306.12929.pdf">Qualcom</a>, where "97%+ of outlier activations in LLMs occur in whitespace and punctuation positions.”  there was indication that it is important to have 'no attention' given to some tokens.
 Adding a <span class="arithmatex">\(1\)</span> to the demonimator allows for <code>no attention</code> to be had. This is describe <a href="https://www.evanmiller.org/attention-is-off-by-one.html">here</a>, discussed <a href="https://news.ycombinator.com/item?id=36851494">here</a> and already found in the <a href="https://github.com/google/flaxformer/blame/ee62754ebe5a5eeb111493622de5537133822e3e/flaxformer/components/attention/dense_attention.py#L50">flaxformer</a> architecture. A general conclusion is that it is likely more important for highly quantized weights, but 32 and 16 bit dtypes are probably unaffected. </p>
 <!--stop-activations-->
+
+<h2 id="embeddings">Embeddings<a class="headerlink" href="#embeddings" title="Permanent link">&para;</a></h2>
+<!--start-embeddings-->
+<p>Embeddings play a key role in AI as they translate <a href="../data/tokenizing.md">tokens</a> into numerical representation that can be processed by the AI. </p>
+<p>'What are Embeddings' is an essential <a href="http://vickiboykis.com/what_are_embeddings/">read</a> that elucidates the concept of embeddings in a digestible manner. For a deeper dive, check the accompanied <a href="https://github.com/veekaybee/what_are_embeddings/blob/main/README.md">Github</a> page.</p>
+<!--stop-embeddings-->
 
 
   

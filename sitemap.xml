@@ -141,11 +141,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Understanding/architectures/embedding.html</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://managen.ai/Understanding/architectures/evaluating_and_comparing.html</loc>
          <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
@@ -166,7 +161,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Understanding/architectures/optimizing_hyper_parameters.html</loc>
+         <loc>https://managen.ai/Understanding/architectures/pre-training.html</loc>
          <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -181,7 +176,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Understanding/architectures/reinforcement_feedback.html</loc>
+         <loc>https://managen.ai/Understanding/architectures/rlhf.html</loc>
          <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -257,6 +252,11 @@
     </url>
     <url>
          <loc>https://managen.ai/Understanding/data/simulation.html</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/data/simulation_temp0.html</loc>
          <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>

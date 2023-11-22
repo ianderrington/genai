@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://managen.ai/Understanding/architectures/finetuning.html">
       
       
-        <link rel="prev" href="embedding.html">
+        <link rel="prev" href="pre-training.html">
       
       
-        <link rel="next" href="generation.html">
+        <link rel="next" href="rlhf.html">
       
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
@@ -695,6 +695,8 @@
       
         
       
+        
+      
     
     
     
@@ -843,7 +845,27 @@
         
   
   <span class="md-ellipsis">
-    Understanding the Role of Data Simulation in AI
+    Simulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/simulation_temp0.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Data Simulation in AI
   </span>
   
 
@@ -873,8 +895,6 @@
       
         
           
-        
-      
         
       
         
@@ -1103,91 +1123,11 @@
   
   
     <li class="md-nav__item">
-      <a href="optimizing_hyper_parameters.html" class="md-nav__link">
+      <a href="pre-training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Optimizing hyper parameters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="optimization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Optimization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="evaluating_and_comparing.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Evaluating and comparing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="alignment.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Alignment
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="embedding.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Embedding
+    Pre training
   </span>
   
 
@@ -1281,6 +1221,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#usee-adapter-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usee Adapter layers
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1299,6 +1248,86 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rlhf.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rlhf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="optimization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="evaluating_and_comparing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluating and comparing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="alignment.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alignment
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1355,26 +1384,6 @@
   
   <span class="md-ellipsis">
     Recurrent training
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="reinforcement_feedback.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Reinforcement feedback
   </span>
   
 
@@ -2540,7 +2549,7 @@
         
   
   <span class="md-ellipsis">
-    Redteaming
+    Red Teaming in AI
   </span>
   
 
@@ -2784,6 +2793,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#usee-adapter-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usee Adapter layers
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2832,6 +2850,11 @@ A[Train Large+Vague model] --&gt; B[Generate highly specific data]
 B --&gt; C[Train small(er?) specific model on specific data]
 C --&gt; D[High-quality fine-tuned model]</code></pre>
 <p>In this sequence, a large and vague model is initially trained. This model then generates highly specific data. This specific data is subsequently used to train a smaller, more specific model. The end result is a high-quality, fine-tuned model.</p>
+<h3 id="usee-adapter-layers">Usee Adapter layers<a class="headerlink" href="#usee-adapter-layers" title="Permanent link">&para;</a></h3>
+<p>Adapters are efficient and performant layers that can optimize performance without needing to do inefficient fine-tuning. </p>
+<div class="admonition important">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2007.07779.pdf">AdapterHub: A Framework for Adapting Transformers</a> <a href="https://adapterhub.ml/">Website</a></p>
+</div>
 <h2 id="developing-results">Developing Results<a class="headerlink" href="#developing-results" title="Permanent link">&para;</a></h2>
 <p>Fine-tuning can lead to significant improvements in both instruction following and helpfulness of models. This is demonstrated in the research paper <a href="https://arxiv.org/pdf/2310.12962.pdf">An Emulator for Fine-Tuning Large Language Models using Small Language Models</a>. The paper also suggests that combining fine-tuning with speculative decoding can speed up larger models by a factor of 2.5.</p>
 <details class="note">
@@ -2846,6 +2869,9 @@ C --&gt; D[High-quality fine-tuned model]</code></pre>
 <p>You can evaluate the model and prompt combinations in the playground, query your past requests, and export optimized training data.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e"></a></p>
 </details>
+<ul>
+<li><a href="https://github.com/openlmlab/lomo">Full Parameter Fine-Tuning for Large Language Models with Limited Resources.</a> Introduces LOMO: LOw-Memory Optimization to fuse </li>
+</ul>
 <p>Another tool, <a href="https://github.com/okuvshynov/slowllama">Slow Llama</a>, is particularly useful for fine-tuning on M1/M2 Macs.</p>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/okuvshynov/slowllama">Slow Llama</a> for finetuning on a M1/M2 mac</p>
