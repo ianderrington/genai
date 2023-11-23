@@ -8,12 +8,17 @@ MANAGEN(Also include discussion on how this relates to knowledge graphs)
 
 ## Steps
 ```mermaid
-    graph LR
-        A[Proprietary Data] -->|Store| B(Embedding Model)
-        C[User Question] -->|Search| B
+    graph TB
+        A[Proprietary Data] -->|Format | B(Embedding Model)
+        C[User Question] --> |Transform| Q(Query)
+        Q --> B
         B -->|Store| D[Vector Database]
-        D -->|Search| E[Top K relevant documents]
+        %% Q -->
+        B --> |Search|D
+        D --> |Retrieve| E[Assemble relevant documents]
         E --> F[Prompt: Original Question + Context]
+        %% C --> F
+        C --> F
         F -->|Generate| G[LLM]
         G --> H[Answer]
 ```
