@@ -113,13 +113,17 @@ Some questions may require individual pieces of information to be found to answe
 2. Routing - Queries may need to be routed to different data sources depending on what is being asked. Recent blog reviewing OpenAI's RAG strategies provides some guidance on question routing: https://blog.langchain.dev/applying-openai-rag/
 
 #### Matching
- 
+
+TODO: RESEARCH ON THIS
+
 ### Generating
 
+TODO: READ NAD PROCESS THIS
 5. Post-processing - Given retrieved documents, there are various way to rank / filter them. Recent blog reviewing OpenAI's RAG strategies provides a few ideas on applying post-processing: https://blog.langchain.dev/applying-openai-rag/
 
 ## Other Topics
 
+TODO: PROCESS THESE
 4a. Multi-Modal -
 This cookbook show how I used this approach for RAG on a substack (
 @jaminball
