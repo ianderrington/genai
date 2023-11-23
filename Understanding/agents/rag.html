@@ -26,7 +26,7 @@
     
     
       
-        <title>Retrieval-Augmented Generation - Gen()AI</title>
+        <title>Rag - Gen()AI</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#retrieval-augmented-generation" class="md-skip">
+        <a href="#steps" class="md-skip">
           Skip to content
         </a>
       
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Retrieval-Augmented Generation
+              Rag
             
           </span>
         </div>
@@ -1661,18 +1661,173 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Rag
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="rag.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Retrieval-Augmented Generation
+    Rag
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splitting-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splitting Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedding Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrieving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query transformations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Topics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials-and-blogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorials and Blogs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2663,8 +2818,143 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splitting-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splitting Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedding Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrieving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query transformations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Topics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials-and-blogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorials and Blogs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2682,9 +2972,119 @@
   
 
 
-<h1 id="retrieval-augmented-generation">Retrieval-Augmented Generation<a class="headerlink" href="#retrieval-augmented-generation" title="Permanent link">&para;</a></h1>
-<p>Becuase models are expensive to update it can be easier to get information and then feed that into the model. </p>
-<h1 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
+  <h1>Rag</h1>
+
+<p>To be as useful as possible, LLMs may need to access a set of information for working that is relevant to the prompt at hand. </p>
+<p>Using both vector, SQL, and no-SQL  <a href="memory.html">memory</a> information can be extracted and fed into the LLM to achieve impressive results. </p>
+<p>Using retrieval to improve the generation of content is known as RAG and was <a href="https://arxiv.org/abs/2005.11401">introduced in 2020</a>. While very powerful, it is still an area of active development and research, with fully optimized solutions not always found. </p>
+<p>MANAGEN(Also include discussion on how this relates to knowledge graphs)</p>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<p><pre class="mermaid"><code>    graph TB
+        A[Proprietary Data] --&gt;|Format | B(Embedding Model)
+        C[User Question] --&gt; |Transform| Q(Query)
+        Q --&gt; B
+        B --&gt;|Store| D[Vector Database]
+        %% Q --&gt;
+        B --&gt; |Search|D
+        D --&gt; |Retrieve| E[Assemble relevant documents]
+        E --&gt; F[Prompt: Original Question + Context]
+        %% C --&gt; F
+        C --&gt; F
+        F --&gt;|Generate| G[LLM]
+        G --&gt; H[Answer]</code></pre>
+<strong>Preparation (offline):</strong> </p>
+<ol>
+<li>Selection of the appropriate data to ingest.</li>
+<li>Loading data in such a manner that can be consumed by the models.</li>
+<li>Splitting the data into chunks in such a way they can be both consumed by the model, and retrieved with reasonable degree of data.</li>
+<li>Embedding the data. </li>
+<li>Storing the embedding</li>
+</ol>
+<p><strong>Retrieval and Generation (online):</strong></p>
+<ol>
+<li>Retrieve the data based on input in such a way that relevant documents and chunks can be used in downstream chains.</li>
+<li>Generate an output using a prompt that integrates the query and retrieved data. </li>
+</ol>
+<p>MANAGEN(make the above  into a mermaid diagram)</p>
+<h3 id="data-selection">Data Selection<a class="headerlink" href="#data-selection" title="Permanent link">&para;</a></h3>
+<p>Users will only need to access data that is appropriate for their application at hand, and consequently that data should be provided. However, it might be unnecessary or harmful to retrieval if too much information is included, and the <a href="#retrieval">retrieval</a> cannot handle the volume or complexity of data. 
+Of course, it is important to be very careful with data privacy when providing data that might not be appropriate (or legal) to access.</p>
+<h3 id="loading-data">Loading data<a class="headerlink" href="#loading-data" title="Permanent link">&para;</a></h3>
+<p>Different data will require different loaders. Raw text, PDFs, spreadsheets, and more proprietary formats will need to be processed in such a way that the information is of highest relevance to data. Text is easy. Some data, especially multimodal data like PDFS may need to be formatted with schema to allow for more effective searching.</p>
+<h3 id="splitting-data">Splitting Data<a class="headerlink" href="#splitting-data" title="Permanent link">&para;</a></h3>
+<p>Once data has been loaded in such a way that a model can process it, it must be split. There are several ways of splitting data. 
+1. By the max size a model can handle
+2. By some heuristic break, such as <code>\n</code> return characters or <code>\p</code> paragraphs or newlines.
+3. In some manner that maximizes the topic coherence, (in this case, splitting and embedding may happen simultaneously).</p>
+<h3 id="embedding-data">Embedding Data<a class="headerlink" href="#embedding-data" title="Permanent link">&para;</a></h3>
+<p>Index Building - One of the most useful tricks I've been using is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the llm for answer synthesis (e.g., the raw image, a table). See blog: 
+<a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/">https://blog.langchain.dev/semi-structured-multi-modal-rag/</a>…</p>
+<h3 id="storing">Storing<a class="headerlink" href="#storing" title="Permanent link">&para;</a></h3>
+<h3 id="retrieving">Retrieving<a class="headerlink" href="#retrieving" title="Permanent link">&para;</a></h3>
+<p>The decision and act to retrieve the documents will depend on the additional contexts that the agents may need to be aware of. </p>
+<p>It might not always be necessary to retrieve documents. When it is necessary to retrieve the document, it is important to know 1. where to retrieve from <a href="#routing">routing</a>,  and 2. a then <a href="#matching">matching</a> the query to the appropriately stored information. Both of these may involve <a href="#query-transformations">rewriting</a> the prompt to be more effective in the manner the data is retrieved. </p>
+<h4 id="query-transformations">Query transformations<a class="headerlink" href="#query-transformations" title="Permanent link">&para;</a></h4>
+<p><strong>Rewrite-Retrieve-Read</strong></p>
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2305.14283.pdf">Query Rewriting for Retrieval-Augmented Large Language Models</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b518994c-a419-4cc3-b065-065c0ca625d1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="630" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b518994c-a419-4cc3-b065-065c0ca625d1"></a></p>
+</details>
+<p>For instance, <a href="https://blog.langchain.dev/query-transformations/">in this blog</a> transformations </p>
+<p><strong>Step back prompting</strong></p>
+<p>This method generates an intermediate context that helps to 'abstract' the information. Once generated the additional context can be used</p>
+<details class="example" open="open">
+<summary><a href="https://smith.langchain.com/hub/langchain-ai/stepback-answer">Step back</a></summary>
+<div class="highlight"><pre><span></span><code>You are an expert of world knowledge. I am going to ask you a question. Your response should be comprehensive and not contradicted with the following context if they are relevant. Otherwise, ignore them if they are not relevant.
+
+{normal_context}
+{step_back_context}
+
+Original Question: {question}
+Answer:
+</code></pre></div>
+</details>
+<details class="example">
+<summary><a href="https://arxiv.org/pdf/2310.06117.pdf">Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/970df1c9-cdfc-4a9e-9dcf-f83944e6102c" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/970df1c9-cdfc-4a9e-9dcf-f83944e6102c" /></a></p>
+</details>
+<p><strong>Question rephrasing</strong>
+Particularly chat settings, be sure to include all of the appropriate context to create an effective search query. </p>
+<details class="example" open="open">
+<summary><a href="https://smith.langchain.com/hub/langchain-ai/weblangchain-search-query">Rephrase question</a></summary>
+<p>```markdown
+    Given the following conversation and a follow up question, rephrase the follow up \</p>
+</details>
+<p>question to be a standalone question.</p>
+<div class="highlight"><pre><span></span><code>    Chat History:
+    {chat_history}
+    Follow Up Input: {question}
+    Standalone Question:
+```
+</code></pre></div>
+<p><strong>Question partitioning</strong>
+Some questions may require individual pieces of information to be found to answer the question.  Consequently, that means breaking the question apart into multiple pieces. 
+<a href="https://python.langchain.com/docs/modules/data_connection/retrievers/MultiQueryRetriever">Here</a> is an example implementation in Langchain.</p>
+<h4 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Routing - Queries may need to be routed to different data sources depending on what is being asked. Recent blog reviewing OpenAI's RAG strategies provides some guidance on question routing: <a href="https://blog.langchain.dev/applying-openai-rag/">https://blog.langchain.dev/applying-openai-rag/</a></li>
+</ol>
+<h4 id="matching">Matching<a class="headerlink" href="#matching" title="Permanent link">&para;</a></h4>
+<p>TODO: RESEARCH ON THIS</p>
+<h3 id="generating">Generating<a class="headerlink" href="#generating" title="Permanent link">&para;</a></h3>
+<p>TODO: READ NAD PROCESS THIS
+5. Post-processing - Given retrieved documents, there are various way to rank / filter them. Recent blog reviewing OpenAI's RAG strategies provides a few ideas on applying post-processing: <a href="https://blog.langchain.dev/applying-openai-rag/">https://blog.langchain.dev/applying-openai-rag/</a></p>
+<h2 id="other-topics">Other Topics<a class="headerlink" href="#other-topics" title="Permanent link">&para;</a></h2>
+<p>TODO: PROCESS THESE
+4a. Multi-Modal -
+This cookbook show how I used this approach for RAG on a substack (
+<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jaminball" title="GitHub User: jaminball">@jaminball</a>
+'s Clouded Judgement) that has many images of densely packed tables, graphs:
+<a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/Multi_modal_RAG.ipynb">https://github.com/langchain-ai/langchain/blob/master/cookbook/Multi_modal_RAG.ipynb</a>…</p>
+<p>4b. Semi-Structured -
+This cookbook show how I used this for RAG on a docs (papers) with tables, which can be split using naive RAG text-splitting (that does not explicitly preserve them):
+<a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_Structured_RAG.ipynb">https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_Structured_RAG.ipynb</a>…</p>
+<h2 id="tutorials-and-blogs">Tutorials and Blogs<a class="headerlink" href="#tutorials-and-blogs" title="Permanent link">&para;</a></h2>
+<p><a href="https://python.langchain.com/docs/use_cases/question_answering/">Langchain Question Answering</a></p>
 
 
   
