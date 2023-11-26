@@ -68,6 +68,7 @@ It might not always be necessary to retrieve documents. When it is necessary to 
 #### Query transformations
 
 **Rewrite-Retrieve-Read**
+
 ??? important "[Query Rewriting for Retrieval-Augmented Large Language Models](https://arxiv.org/pdf/2305.14283.pdf)"
     
     <img width="630" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b518994c-a419-4cc3-b065-065c0ca625d1">
@@ -93,19 +94,21 @@ This method generates an intermediate context that helps to 'abstract' the infor
     ![image](https://github.com/ianderrington/genai/assets/76016868/970df1c9-cdfc-4a9e-9dcf-f83944e6102c)
 
 **Question rephrasing**
+
 Particularly chat settings, be sure to include all of the appropriate context to create an effective search query. 
 
 ???+ example "[Rephrase question](https://smith.langchain.com/hub/langchain-ai/weblangchain-search-query)"
     ```markdown
-        Given the following conversation and a follow up question, rephrase the follow up \
-question to be a standalone question.
+        Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
         
         Chat History:
         {chat_history}
         Follow Up Input: {question}
         Standalone Question:
     ```
+
 **Question partitioning**
+
 Some questions may require individual pieces of information to be found to answer the question.  Consequently, that means breaking the question apart into multiple pieces. 
 [Here](https://python.langchain.com/docs/modules/data_connection/retrievers/MultiQueryRetriever) is an example implementation in Langchain.
 
