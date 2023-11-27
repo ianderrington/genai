@@ -3,18 +3,19 @@ We explores different activities and fields that utilize Generative AI's capabil
 
 There is a philosophical overlap with 'predictive' AI where a predictive model could just be said to 'generate' either possible future outcomes or estimated classifications of data. 
 
-
-
 There are many generally distinct domains of Gen()AI application, though many be compositional. Effectively any information that can be recorded onto a computer may be made by Gen()AI.
 
-* Language
-* Visual 2D
+## General Modalities
+MANGEN (Expand, and clarify the below )
+* Language, Spoken and Written
+* Visual 2D, Images, Diagrams, 
 * Visual 3D
 * Visual 2D with time
 * Visual 3D with time
-* Brain recordings
-* Weather patterns
-* Protein folding 
+* Graphical (Relation and influence networks)
+* Generally linear biological sequences (Genome, Proteome)
+* Multidimensional Temporal sequences (weather, brain recordings, stock market)
+* Multimodal variants of the above. 
 
 
 ## General Activities
@@ -49,6 +50,7 @@ Generative AI can be utilized for a wide range of prose generation applications,
 
 
 ### Language Translation
+
 Generative AI is increasingly good at translating between domains. 
 
 ### Personal assistants and memory
@@ -67,8 +69,7 @@ Generative AI is increasingly good at translating between domains.
 
 ### Code Generation
 
-Very powerfully it can generate code to accomplish a task based on natural language input. 
-This is very promising but still requires human oversight.
+Very powerfully it can generate code to accomplish a task based on natural language input. This is very promising but still requires human oversight, due to the [challenge](./challenges.md) associated with using Automated AI systems without human input or oversight.
 
 - [Wizard Coding](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder)
 - [AutoPR](https://github.com/irgolic/AutoPR)
@@ -76,6 +77,7 @@ This is very promising but still requires human oversight.
 - [Code AI consulting](https://github.com/AI-Citizen/SolidGPT) Allows you to 'query your code' in a chatlike manner. 
 
 ### Documentation extraction
+
 - [Summarization with Langchain](https://github.com/EnkrateiaLucca/summarization_with_langchain) A splendid view of a quick streamlit app that does PDF summarization.
 
 - [Deepdoctection](https://github.com/deepdoctection/deepdoctection)
@@ -91,57 +93,3 @@ This is very promising but still requires human oversight.
 ### Audio Visual Generation
 
 - [Showrunner Agents](https://fablestudio.github.io/showrunner-agents/)
-
-## Fields
-Here are a few fields where Gen()AI is already having formative impacts. 
-
-### Robotics
-
-- [CLAIRIFY](https://ac-rad.github.io/clairify/) Translates English to domain-specific languages like robots. 
-  - https://arxiv.org/abs/2303.14100
-- [RT-2](https://robotics-transformer2.github.io/assets/rt2.pdf) An impressive demonstration of multi-step fusing (PaLI-X) and Pathways Language model Embodied (PaLM-E) as components of it. 
-
-### Science
-
-??? tip "[Emergent autonomous scientific research](https://arxiv.org/pdf/2304.05332.pdf)"
-    <img width="658" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656">
-
-### Mathematics
-
-
-### Healthcare
-
-- [Health system-scale language models are all-purpose prediction engines](https://www.nature.com/articles/s41586-023-06160-y) Uses LLM based system to integrate real time clinical workflows with note-writing and electronic ordering. Generally quite-performant and. a great indication of how they could be used to predict things such as readmission rates, and many other applications. 
-
-- [LLMs encode clinical knowledge](https://www.nature.com/articles/s41586-023-06291-2)
-
-### Chemistry
-
-??? tip "[Grammar-Induced Geometry for Data-Efficient Molecular Property Prediction](https://openreview.net/pdf?id=SGQi3LgFnqj) IMPORTANT uses heirarchichal metagraphs to stitch-together molecular nodes. " 
-    This results in leaves that are 'actual' molecules. Using graph neural-diffusion, it does amazingly well even with minimal data-sets (100 examples).
-    <img width="1052" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/50894091-fdc9-4a8f-9836-90cec4a147d0"> 
-
-
-### Biology
-
-- [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end. 
--  https://arxiv.org/pdf/2303.16416.pdf
--  https://arxiv.org/abs/2304.02496
-- [Biomedical simulation](https://www.biorxiv.org/content/10.1101/2023.06.16.545235v1.full.pdf)
-
-### Kinesiology 
-
-- [Motion GPT](https://github.com/openmotionlab/motiongpt)
-
-
-## Societal simulations
-
-- [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf): 
-  They gave 25 AI agents motivations & memory, and put them in a simulated town. Not only did they engage in complex behavior.The actions were rated more human than humans roleplaying.
-  Demo: https://t.co/pYNF4BBveG
-
-### Finance
-
-- [ML for trading (NOT LLM based)](https://github.com/stefan-jansen/machine-learning-for-trading)
-- https://github.com/irgolic/AutoPR
-- [Finance GPT](https://github.com/ai4finance-foundation/fingpt) LLMs for finance

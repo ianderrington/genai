@@ -3,6 +3,9 @@ nav:
     - examples.md
     - memory.md
     - chains.md
+    - cognitive_architecture.md
+    - rag.md
+    - actions_and_tools.md
     - evaluation.md
     - environments.md
     - systems.md

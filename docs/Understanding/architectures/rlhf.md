@@ -1,3 +1,5 @@
+# RLHF
+
 Reinforcement Learning From Human Feedback (RLHF) is a method that trains a policy model to predict the sequence of output results, based on a given input. 
 
 !!! note "Key Takeaway"

@@ -1,5 +1,5 @@
 !!! important "[tl;dr](#tldr)"
-    - Evaluate your [**application**](./overview/applications.md) and think of the [**challenges**](./overview/challenges.md) associated with it
+    - Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it
     - Understand the [**data**](./data/index.md) and collect data that you need.
     - [**Understandand build**](architectures/index.md) use [**pre-trained**](architectures/pre_trained_models.md) models.
     - [**Deploy**](../Using/deploying/index.md) your model
@@ -20,7 +20,6 @@ In the documents you read here, you will be able to see an increseasingly consis
 
 ## The base components of Gen()AI
 
-If you are new to this area, you may briefly peruse [applications](overview/applications.md) and [challenges](overview/challenges.md) associated with Gen()AI. 
 
 Getting into it, you will find the following outline: 
 
@@ -58,7 +57,7 @@ There is so much quality material, it would be valuable for your time to check s
     * [Retreival Augmented Generation (RAG)](agents/rag.md)
     * [Fine tuning](architectures/alignment.md#finetuning)
     * [Caching](agents/memory.md#caching) to reduce latency. 
-    * [Guardrails](agents/interpreters.md#guardrails) to ensure output (and input) quality.
+    * [Guardrails](agents/chains.md#guardrails) to ensure output (and input) quality.
     * Data Flywheel to use data collection and feedback to improve model and experience
     * Cascade Breaking models up into smaller simpler tasks instead of big ones.
     * Monitoring to ensure value is being derived
@@ -76,7 +75,7 @@ Generative AI is a subset of machine learning that aim to creates new data sampl
 
 !!! tip "A little more advanced"
     - [Use Agents](agents/index.md) for increasingly powerful applications
-    - Optimize your model [performance](architectures/optimizing_hyper_parameters.md) and [serving](architectures/optimization.md)
+    - [Optimize](architectures/optimization.md) your model 
 
 In this section, we will focus on 'Understanding' the various components of GenAI, [data](./data/index.md), [models](./architectures/index.md) and [agents](./agents/index.md) including methods and models that are initial or under development. 
 

@@ -38,8 +38,10 @@ Memory implementations can vary based on the type of memory used, and how it's s
 
 Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milvus, and ScaNN, use embeddings to create query vector databases. These databases allow for efficient semantic searches. 
 
-!!! example 'Example vector databases'
+!!! example "Example vector databases"
+    
     Please read this for more information  [Vector Databases (primer by Pinecone.io)](https://www.pinecone.io/learn/vector-database/)
+
     - https://github.com/Helicone/helicone
     - [Website](https://www.deeplake.ai/) [Github](https://github.com/activeloopai/deeplake)
 

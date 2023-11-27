@@ -11,7 +11,7 @@ Similar to bots, or other computerized automata, they may have the ability to ru
 * [Memory](./memory.md) to enable writing and reading information that may be of use.
 * [Tools](./actions_and_tools.md) that enable more than text (or images) to be returned or otherwise acted upon. 
 * [Cognition architectures](./cognitive_architecture.md) is the ability to understand through the use of computational [models](../architectures/models/index.md), [chains](chains.md) and [memory](./memory.md). 
-* [Interpreters and Executors](./interpreters.md) that are used to process input or output.
+* [Interpreters and Executors](./chains.md#interpreters) that are used to process input or output.
 * [Systems of Agents](systems.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
 
 Agents can be quite different! Here are some [examples](./examples.md) of agents made both in academic and commercial settings. 
@@ -58,15 +58,13 @@ TODO: Quick description of Traditional RL agents and how they compare, and how w
 
 Here are several references of merit. 
 
-!!! important "[LLM-Agent-Papers](https://github.com/WooooDyy/LLM-Agent-Paper-List)
+!!! important "[LLM-Agent-Papers](https://github.com/WooooDyy/LLM-Agent-Paper-List)"
 
-??? note "[The Rise and Potential of Large Language Model Based Agents:A Survey](https://arxiv.org/pdf/2309.07864.pdf) Providess a comprehensive overview of thoughtful ways of considering LLMss. 
+??? note "[The Rise and Potential of Large Language Model Based Agents:A Survey](https://arxiv.org/pdf/2309.07864.pdf) Providess a comprehensive overview of thoughtful ways of considering LLMs."
 
-??? important "[Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent)"
+??? tip "[Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent)"
      As usual, a splendid post by Lilian Weng
 
 
-- [Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of a nicely curated list of systems using agents
+!!! code "[Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of a nicely curated list of systems using agents"
 
-
-## TO ORGANIZE

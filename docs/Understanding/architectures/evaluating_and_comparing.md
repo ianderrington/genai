@@ -19,8 +19,7 @@ While single-LLM calls are useful to evaluate, [comparing and evaluating](../age
 ## Evaluation Methods and Libraries
 ### General
 
-??? code "[ROSCOE: A SUITE OF METRICS FOR SCORING STEP-BYSTEP REASONING](https://github.com/facebookresearch/ParlAI/tree/main/projects/roscoe) is ' a new suite of interpretable, unsupervised metrics that enables evaluation
-of step-by-step reasoning generations of LMs when no golden reference generation exists. ' "
+??? code "[ROSCOE: A SUITE OF METRICS FOR SCORING STEP-BYSTEP REASONING](https://github.com/facebookresearch/ParlAI/tree/main/projects/roscoe) is ' a new suite of interpretable, unsupervised metrics that enables evaluation of step-by-step reasoning generations of LMs when no golden reference generation exists. ' "
     [Paper](https://arxiv.org/pdf/2212.07919.pdf)
 
 ### Domain specific 
@@ -31,4 +30,8 @@ The evaluation of models helps us to identify which, if any, model to use for a 
 
 ## Measure what matters
 
-[sycophancy](https://github.com/meg-tong/sycophancy-eval)
+TODO: COMPLETE THIS
+
+* Hallucinations
+* Logic/Math
+* Sycophancy, or the degree to which a model mirrors biases, large or small, put into input queries. The repo, [sycophancy-eval](https://github.com/meg-tong/sycophancy-eval) offers some ability to evaluate this. 
