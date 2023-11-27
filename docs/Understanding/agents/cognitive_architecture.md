@@ -1,8 +1,9 @@
-Cognitive Architectures refer to systems or chain-patterns that are employed after discrete interactions with ah LLM. 
+Cognitive Architectures refer to systems or chain-patterns that are employed after discrete interactions with single or multiple LLMs. 
 
 
 ## Core themes
 
+- **Rephrasing** or reformatting the input in such a way that the next 
 - **Observing** or ingesting, intentionally or passively, gaining stored information that may assist in the tasks at hand. 
 - **Reasoning** or the ability to create causal connections between input and output. These are often taken care of at the level of the LLM. 
 - **Planning** to enable more complicated goals to be broken down into individually accomplishable tasks. May use external tools like memory to keep track of tasks.
@@ -39,6 +40,27 @@ Here are some known thought structures that are improving agentic output.
 
 ## Linear thought chains
 
+
+??? important "[System 2 Attention (is something you might need too)](https://arxiv.org/abs/2311.11829)"
+
+    This helps to improve downstream model's ability to not suffer from irrelevent context, or judgement and preference in the 
+    original context, termed sycophancy they use an initial model to _remove_ unecessary context. They call it 'System 2 Attention'. 
+    Starting with instruction-tuned models that are 'proficient at reasoning and generation'. 
+    
+    They compare this to models that just use prompts like below to remove context in different manners:
+    ```markdown
+        Given the following text by a user, extract the part that is unbiased and not their opinion,
+        so that using that text alone would be good context for providing an unbiased answer to
+        the question portion of the text.
+        Please include the actual question or query that the user is asking. Separate this
+        into two categories labeled with “Unbiased text context (includes all content except user’s
+        bias):” and “Question/Query (does not include user bias/preference):”.
+        Text by User: [ORIGINAL INPUT PROMPT]
+    ```
+    With several evaluations, including one for [sycophancy](https://github.com/meg-tong/sycophancy-eval), and a few variations,
+    they show it can improve output even beyon Chain of Thought. 
+    
+
 ??? code "[ReAct](https://github.com/ysymyth/ReAct)"
     Effectively Observe, Think, Act, Repeat.
     [Paper](https://arxiv.org/abs/2210.03629) 
@@ -50,10 +72,6 @@ Here are some known thought structures that are improving agentic output.
 
 ??? tip "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf)"
     
-
-
-
-
 
 ## Planning and Reflective
 ??? important "[Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation](https://arxiv.org/pdf/2310.02304v1.pdf)"

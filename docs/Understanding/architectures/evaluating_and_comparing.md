@@ -31,4 +31,4 @@ The evaluation of models helps us to identify which, if any, model to use for a 
 
 ## Measure what matters
 
-
+[sycophancy](https://github.com/meg-tong/sycophancy-eval)

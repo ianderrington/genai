@@ -10,3 +10,51 @@
 
 ??? tip "[ChemChrow](https://arxiv.org/abs/2304.05376)"
     [Github](https://github.com/ur-whitelab/chemcrow-public)
+
+
+
+## Fields
+Here are a few fields where Gen()AI is already having formative impacts. 
+
+### Robotics
+
+- [CLAIRIFY](https://ac-rad.github.io/clairify/) Translates English to domain-specific languages like robots. 
+  - https://arxiv.org/abs/2303.14100
+- [RT-2](https://robotics-transformer2.github.io/assets/rt2.pdf) An impressive demonstration of multi-step fusing (PaLI-X) and Pathways Language model Embodied (PaLM-E) as components of it. 
+
+### Science
+
+??? tip "[Emergent autonomous scientific research](https://arxiv.org/pdf/2304.05332.pdf)"
+    <img width="658" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656">
+
+
+### Chemistry
+
+??? tip "[Grammar-Induced Geometry for Data-Efficient Molecular Property Prediction](https://openreview.net/pdf?id=SGQi3LgFnqj) IMPORTANT uses heirarchichal metagraphs to stitch-together molecular nodes. " 
+    This results in leaves that are 'actual' molecules. Using graph neural-diffusion, it does amazingly well even with minimal data-sets (100 examples).
+    <img width="1052" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/50894091-fdc9-4a8f-9836-90cec4a147d0"> 
+
+
+### Biology
+
+- [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end. 
+-  https://arxiv.org/pdf/2303.16416.pdf
+-  https://arxiv.org/abs/2304.02496
+- [Biomedical simulation](https://www.biorxiv.org/content/10.1101/2023.06.16.545235v1.full.pdf)
+
+### Kinesiology 
+
+- [Motion GPT](https://github.com/openmotionlab/motiongpt)
+
+
+## Societal simulations
+
+- [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf): 
+  They gave 25 AI agents motivations & memory, and put them in a simulated town. Not only did they engage in complex behavior.The actions were rated more human than humans roleplaying.
+  Demo: https://t.co/pYNF4BBveG
+
+### Finance
+
+- [ML for trading (NOT LLM based)](https://github.com/stefan-jansen/machine-learning-for-trading)
+- https://github.com/irgolic/AutoPR
+- [Finance GPT](https://github.com/ai4finance-foundation/fingpt) LLMs for finance
