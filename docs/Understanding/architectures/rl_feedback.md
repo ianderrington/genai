@@ -1,11 +1,13 @@
-# RLHF
+Reinforcement learning feedback provides a method to extend data-sparse examples to provide a way of training to produce entire output traces that are optimal. 
 
-Reinforcement Learning From Human Feedback (RLHF) is a method that trains a policy model to predict the sequence of output results, based on a given input. 
+In general, Reinforcement-learning feedback is a method that trains a policy model to predict an optimal sequence of output results given inputs. 
+
+Starting initially from Reinforcement Learning From Human Feedback (RLHF), it has also evolved to include Reinforcement Learning from AI Feedback (RLAIF). 
 
 !!! note "Key Takeaway"
     RLHF is a technique that trains a model to predict the best sequence of token outputs, conditioned on a given input. 
 
-## Understanding RLHF
+## Understanding RLF
 
 During pre-training, the next token output is maximized probabilistically. However, this method does not always yield the optimal next token in different contexts or in response to varying inputs, as it may not be able to attend to relevant information properly. 
 
@@ -43,7 +45,7 @@ A reward model is used to approximate the evaluation quality, or reward, that a 
 
 While multiple examples may be ranked and used simultaneously, the reward model may be trained by considering only a winning and a losing example. The reward models will produce a $S_w$ $S_l$ for winning and losing examples. 
 
-The reward model is trained with an objective to incentivize the winning response to have a lower score than the losing response. More specifically, it minimizes 
+The reward model is trained with the objective of incentivizing the winning response to have a lower score than the losing response. More specifically, it minimizes 
 
 $$
 -E_x(\log(\sigma(s_w-s_l)))
@@ -51,7 +53,11 @@ $$
 
 TODO: Expand this to include more mathematics. 
 
-## AI-enabled ranking
+## RLHF
+
+??? important "[Starling-7B: Increasing LLM Helpfulness & Harmlessness with RLAIF](https://starling.cs.berkeley.edu/) provides a solid example using RLAIF generated with GPT-4 to create a 7B model that is almost as good as GPT-4"
+    They also released a [data set called Nectar](https://huggingface.co/datasets/berkeley-nest/Nectar) that with over 180k GPT-4 ranked outputs. 
+
 
 - [Can foundation models label data like humans?](https://huggingface.co/blog/llm-leaderboard) Using GPT to review model outputs produced biased results. Changing the prompt doesn't really help to de-bias it. There are many additional considerations surrounding model evaluation.
 
