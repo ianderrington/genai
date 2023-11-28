@@ -1,39 +1,45 @@
-TODO: THorough research 
+TODO: THorough research and add /change with optimization.md
 
-Fine-tuning is a critical process in the lifecycle of AI model development. It involves the retraining of pre-existing models, which have been initially trained on extensive data corpora. The data used for fine-tuning can vary in relevance and quality. Several methods are available for fine-tuning, and they can be combined as needed to achieve the desired results. The focus of fine-tuning is usually on a specific set of data, which can be either natural or synthetic.
+Fine-tuning adapt's  foundation model to improve its domain performance by using training with high-quality data. The adapted model may be architecturally equivalent, or a variation of the original model. The [data](#data-for-fine-tuning) that is used to update the model may be natural or [synthetically-created](using-simulated-data) and it is often domain-specific or intentionally constructed.
 
-## Methods of Fine-Tuning
+Because of the computational requirements needed to train the original foundation models, fine-tuning is preferably done in way that does not update the entire model. 
+One manner of doing this is through the use of [adapter layers](#adaptermodel-changes-for-fine-tuning).  
 
-Fine-tuning methods can be diverse, each with its unique approach and benefits. Here, we will discuss one such method that involves the use of simulated data.
+## Data for fine-tuning 
 
-### Using Real-World Data
-
-Another method involves using real-world data that is relevant to the task at hand. This data is used to fine-tune the model, allowing it to perform better on specific tasks that require an understanding of real-world scenarios and data.
-
-### Using Transfer Learning
-
-Transfer learning is a method where a pre-trained model, trained on a large dataset, is used as a starting point. The model is then fine-tuned on a smaller, more specific dataset. This method leverages the knowledge gained from the initial training and applies it to the specific task.
+Higher-quality data that may be proprietary or otherwise not-included in the training data for foundation-models can be used to improve a model's performance. Fine-tuning is generally done in a supervised fashion, where the specific responses desired for a given model input are trained on the output. Unsupervised fine-tuning is [also possible](https://arxiv.org/abs/2110.09510) though not as commonly described. 
 
 ### Using Simulated Data
-
 Utilizing synthetic or simulated data is an effective method for training Large Language Models (LLMs). The process can be visualized in the following sequence:
 
 ```mermaid
-graph LR
-A[Train Large+Vague model] --> B[Generate highly specific data]
-B --> C[Train small(er?) specific model on specific data]
-C --> D[High-quality fine-tuned model]
+    graph LR
+        A[Large dataset] --> |Training (partial or full)| B[Large quality model]
+        B --> |Generate tailored data| D[Tailored data]
+        D --> |Training| E[New or adapted model]
 ```
 
-In this sequence, a large and vague model is initially trained. This model then generates highly specific data. This specific data is subsequently used to train a smaller, more specific model. The end result is a high-quality, fine-tuned model.
+In this sequence, a large and vague model is initially trained. This model then generates highly specific data. This specific data is subsequently used to train a smaller, more specific model. The end result is a high-quality, fine-tuned model. 
 
-### Usee Adapter layers
-Adapters are efficient and performant layers that can optimize performance without needing to do inefficient fine-tuning. 
+## Model changes for fine-tuning
 
-!!! important "[AdapterHub: A Framework for Adapting Transformers](https://arxiv.org/pdf/2007.07779.pdf) [Website](https://adapterhub.ml/)"
+The simplest manner of fine-tuning a model involves updating all of the original weights based on the fine-tuning dataset. This is less preferred because of the additional computational requirements. To minimize the compute, some number of layers can be 'frozen'. While helpful, the computational savings given the performance gains may not be considerable. (TODO FIND CITATIONS FOR THIS)
 
+### Adapter layers 
 
-## Developing Results
+If all of the layers are frozen, it is possible to adapt the model using relatively simple models that rescale or adapt outputs. 
+!!! code "[AdapterHub: A Framework for Adapting Transformers](https://arxiv.org/pdf/2007.07779.pdf) [Website](https://adapterhub.ml/)"
+
+### Low Rank Adaption (LoRA)
+
+Instead of interleaving a trainable layer in between various layers, Low Rank Adaption (LoRA) uses the notion that changes to outputs of a given layer $W$ will likely be small $\Delta W$. Instead of computing all those weights a low-rank vector matrix decomposition where $\Delta W = A B$ for two LoRA matrices $A$ and $B$. With a common inner-dimension variable $r$ the matrix parameter counts can be appropriately minimized to have a small fraction of the original model $W$
+
+![image](https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9)
+
+### Useful Tips
+[Practical Tips for Finetuning LLMS](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms)
+
+## Results
 
 Fine-tuning can lead to significant improvements in both instruction following and helpfulness of models. This is demonstrated in the research paper [An Emulator for Fine-Tuning Large Language Models using Small Language Models](https://arxiv.org/pdf/2310.12962.pdf). The paper also suggests that combining fine-tuning with speculative decoding can speed up larger models by a factor of 2.5.
 
