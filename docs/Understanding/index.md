@@ -3,7 +3,7 @@
     - Understand the [**data**](./data/index.md) and collect data that you need.
     - [**Understandand build**](architectures/index.md) use [**pre-trained**](architectures/pre_trained_models.md) models.
     - [**Deploy**](../Using/deploying/index.md) your model
-    - [**Manage**](../Managen.ai/index.md) your model
+    - [**Manage**](../Managenai/index.md) your model
 
 Generative Artificial Intelligence, and related General AI and General Super AI are components of what already is and may be the future of intelligence and computing. We must effectively manage these technologies to use them to their highest potential. 
 
@@ -80,4 +80,4 @@ Generative AI is a subset of machine learning that aim to creates new data sampl
 In this section, we will focus on 'Understanding' the various components of GenAI, [data](./data/index.md), [models](./architectures/index.md) and [agents](./agents/index.md) including methods and models that are initial or under development. 
 
 !!! warning "Presentation bias"
-    This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managen.ai/contributing.md)
+    This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managenai/contributing.md)

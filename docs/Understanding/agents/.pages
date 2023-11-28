@@ -6,7 +6,7 @@ nav:
     - cognitive_architecture.md
     - rag.md
     - actions_and_tools.md
-    - evaluation.md
+    - evaluating_and_comparing.md
     - environments.md
     - systems.md
     - ...

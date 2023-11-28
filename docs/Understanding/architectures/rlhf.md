@@ -65,3 +65,5 @@ TODO: Expand this to include more mathematics.
 - [RLHF basics by hugging face](https://huggingface.co/blog/rlhf) A really good introduction to parse again.
 - [RLHF for Palm in Pytorch](https://github.com/lucidrains/PaLM-rlhf-pytorch)
 - [Aligning Large Language Models Through Synthetic Feedback](https://arxiv.org/abs/2305.13735) Using a hierarchy of systems to improve model alignment.
+
+??? note  "[Learning to summarize from human feedback](https://proceedings.neurips.cc/paper/2020/file/1f89885d556929e98d3ef9b86448f951-Paper.pdf) Provides initial successful examples using PPO and human feedback to improve summaries."
