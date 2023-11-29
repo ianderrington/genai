@@ -41,16 +41,20 @@ Broken down into the `exponent` and `fraction`, as the different values can have
 To have improved performance, the models may be reduced, however, to using fewer bits. Standard fp16 may sometimes reduced to int8, and even binary representations.  
 
 ???+ info "What is Precision?"
+
     <figure markdown>
     ![Quantization](https://github.com/ianderrington/genai/assets/76016868/f1ff3e1a-1157-47a0-9e64-5ec29111a256){ width="500" }
     <figcaption>Quantization summarized image taken from [Advanced Practical Data Science Lecture 9: Compression Techniques and Distillation](https://harvard-iacs.github.io/2020F-AC295/lectures/lecture9/presentation/lecture9.pdf)</figcaption>
     </figure>
+
     ![image](https://huggingface.co/blog/assets/96_hf_bitsandbytes_integration/tf32-Mantissa-chart-hi-res-FINAL.png)
 
 
-#### When? During or after training?
+#### When to quantize: During or after training?
+
 There are general times when quantization may be performed. During training, post-training. 
 Here are the benefit chart for each method each kind:
+
 MANAGEN: (Table with this the characteristic chart of the different methods to help individuals know specific challenges and benefits)
 
 #### Examples
@@ -81,19 +85,18 @@ Train a new smaller model using the output of bigger models.
 TODO
 
 
-
 ### Mixture of Experts
 MOE provides the ability to use different smaller models that have better performance in certain domains. Their use is notable, as it has been stated that GPT-4 is powered by 8 different agents. 
 
 
 
 ??? code "[Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning](https://github.com/for-ai/parameter-efficient-moe)"
+
     "The codebase is built on T5X, which defines the model and training loop; Flaxformer, which defines the model computation; Flax, which defines the low level model layers; and Jax, which provides the execution."
     [Paper](https://arxiv.org/pdf/2309.05444.pdf)
     ![image](https://github.com/ianderrington/genai/assets/76016868/ca081309-dca9-4081-a6eb-30d929715ef9)
     
 ### Combination Approaches
-
 
 
 ??? code "[QLoRA: Efficient Finetuning of Quantized LLms](https://github.com/artidoro/qlora) uses Quantization and Low-Rank Adapters to enable SoTA models with even smaller models"
