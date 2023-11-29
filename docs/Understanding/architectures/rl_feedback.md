@@ -23,10 +23,13 @@ The policy model creates a path of tokens that will end with a reward that is cl
 
 A [reward model](#reward-model) is created to estimate how humans would evaluate the output. This model allows general human-informed guidance to help improve the policy model iteratively. 
 
-TODO: INclude OPENAI's Instruct GPT 
-
 One of the most successful examples of this is [Instruct GPT](https://arxiv.org/pdf/2203.02155.pdf), which follows the process outlined above. This method underlies the basis of Chat-GPT 3 and 4. 
 
+??? note "Many RL methods use 'outcome' evaluations, but [process reward models ](#process-reward-model) can be better"
+    Using RL feedback from human labelers to provide feedback on intermediate steps, in [Let's Verify Step By Step](https://arxiv.org/pdf/2305.20050.pdf) the authors demonstrate that providing feedback on intermediate steps can yield a reward model that is considerably better on various math-tests, than it is for outcome-based reward models. 
+
+    
+    
 ## Policy
 
 ### Proximal Policy optimization 
@@ -39,9 +42,9 @@ $$
 
 TODO: Expand this based on [Proximal Policy Optimization Algorithms](https://arxiv.org/pdf/1707.06347.pdf)
 
-## Reward Model 
+## Reward Models
 
-A reward model is used to approximate the evaluation quality, or reward, that a labeler (a person) might assign to an example output. 
+A reward model is used to approximate the  quality, or reward, that a labeler (a person) might assign to an example output. 
 
 While multiple examples may be ranked and used simultaneously, the reward model may be trained by considering only a winning and a losing example. The reward models will produce a $S_w$ $S_l$ for winning and losing examples. 
 
@@ -52,6 +55,24 @@ $$
 $$
 
 TODO: Expand this to include more mathematics. 
+
+### Process reward models
+
+Much like intermediate points to a ball-game are indicators of the winner of a game, a process reward model approximates the quality of intermediate steps in a total outcome. 
+
+Having intermediate rewards provides better guidance on how the token generation occurs before the token termination. 
+
+??? "[Let's reward step by step; Step-Level Reward Model as the Navigators for Reasoning](https://arxiv.org/abs/2310.10080)" 
+    <img width="495" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4bf366b4-f7f6-47ed-b5aa-2b94ab140796">
+    <img width="687" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a2706b6e-78e0-458b-a607-069758207909">
+
+
+
+
+Literature to read and integrate :
+https://arxiv.org/pdf/2211.14275.pdf
+https://arxiv.org/abs/2308.01825
+
 
 ## RLHF
 
