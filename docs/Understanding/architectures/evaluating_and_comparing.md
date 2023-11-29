@@ -23,7 +23,7 @@ While single-LLM calls are useful to evaluate, [comparing and evaluating](../age
     [Paper](https://arxiv.org/pdf/2212.07919.pdf)
 
 
-??? [Introducing MMMU, a Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI.](https://mmmu-benchmark.github.io)
+??? "[Introducing MMMU, a Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI.](https://mmmu-benchmark.github.io)"
     [Paper](https://arxiv.org/abs/2311.16502)
 
     11.5K meticulously collected multimodal questions from college exams, quizzes, and textbooks
