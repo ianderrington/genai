@@ -22,4 +22,5 @@ The field of data simulation in AI has been enriched by several resources and st
 !!! code "[Madrona](https://github.com/shacklettbp/madrona)"
     Madrona is a prototype game engine designed for creating high-throughput, GPU-accelerated simulators. These simulators can run thousands of virtual environment instances and generate millions of aggregate simulation steps per second on a single GPU.
 
-
+!!! code "[TuNA](https://replit.com/@olafblitz/tuna-asyncio?v=1&ref=blog.langchain.dev#main.py) for using LangChain to create volumes of synthetic data pairs."
+    [Blog](https://blog.langchain.dev/introducing-tuna-a-tool-for-rapidly-generating-synthetic-fine-tuning-datasets/)
