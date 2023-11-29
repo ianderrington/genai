@@ -18,7 +18,7 @@
         <link rel="prev" href="pre-training.html">
       
       
-        <link rel="next" href="rlhf.html">
+        <link rel="next" href="rl_feedback.html">
       
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#methods-of-fine-tuning" class="md-skip">
+        <a href="#data-for-fine-tuning" class="md-skip">
           Skip to content
         </a>
       
@@ -889,8 +889,6 @@
       
         
       
-        
-      
     
     
     
@@ -1159,46 +1157,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#methods-of-fine-tuning" class="md-nav__link">
+  <a href="#data-for-fine-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Methods of Fine-Tuning
+      Data for fine-tuning
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Methods of Fine-Tuning">
+    <nav class="md-nav" aria-label="Data for fine-tuning">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-real-world-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Real-World Data
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-transfer-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Transfer Learning
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#using-simulated-data" class="md-nav__link">
     <span class="md-ellipsis">
       Using Simulated Data
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usee-adapter-layers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usee Adapter layers
     </span>
   </a>
   
@@ -1210,9 +1181,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#developing-results" class="md-nav__link">
+  <a href="#model-changes-for-fine-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Developing Results
+      Model changes for fine-tuning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model changes for fine-tuning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adapter-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adapter layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-rank-adaption-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low Rank Adaption (LoRA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results
     </span>
   </a>
   
@@ -1233,11 +1246,11 @@
   
   
     <li class="md-nav__item">
-      <a href="rlhf.html" class="md-nav__link">
+      <a href="rl_feedback.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    RLHF
+    Rl feedback
   </span>
   
 
@@ -1278,26 +1291,6 @@
   
   <span class="md-ellipsis">
     Evaluating and comparing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="alignment.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Alignment
   </span>
   
 
@@ -2271,6 +2264,8 @@
       
         
       
+        
+      
     
     
     
@@ -2308,6 +2303,26 @@
             Ethically
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/ethically/alignment.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2635,46 +2650,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#methods-of-fine-tuning" class="md-nav__link">
+  <a href="#data-for-fine-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Methods of Fine-Tuning
+      Data for fine-tuning
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Methods of Fine-Tuning">
+    <nav class="md-nav" aria-label="Data for fine-tuning">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-real-world-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Real-World Data
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-transfer-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Transfer Learning
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#using-simulated-data" class="md-nav__link">
     <span class="md-ellipsis">
       Using Simulated Data
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usee-adapter-layers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usee Adapter layers
     </span>
   </a>
   
@@ -2686,9 +2674,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#developing-results" class="md-nav__link">
+  <a href="#model-changes-for-fine-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Developing Results
+      Model changes for fine-tuning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model changes for fine-tuning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adapter-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adapter layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-rank-adaption-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low Rank Adaption (LoRA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results
     </span>
   </a>
   
@@ -2714,26 +2744,31 @@
 
   <h1>Finetuning</h1>
 
-<p>Fine-tuning is a critical process in the lifecycle of AI model development. It involves the retraining of pre-existing models, which have been initially trained on extensive data corpora. The data used for fine-tuning can vary in relevance and quality. Several methods are available for fine-tuning, and they can be combined as needed to achieve the desired results. The focus of fine-tuning is usually on a specific set of data, which can be either natural or synthetic.</p>
-<h2 id="methods-of-fine-tuning">Methods of Fine-Tuning<a class="headerlink" href="#methods-of-fine-tuning" title="Permanent link">&para;</a></h2>
-<p>Fine-tuning methods can be diverse, each with its unique approach and benefits. Here, we will discuss one such method that involves the use of simulated data.</p>
-<h3 id="using-real-world-data">Using Real-World Data<a class="headerlink" href="#using-real-world-data" title="Permanent link">&para;</a></h3>
-<p>Another method involves using real-world data that is relevant to the task at hand. This data is used to fine-tune the model, allowing it to perform better on specific tasks that require an understanding of real-world scenarios and data.</p>
-<h3 id="using-transfer-learning">Using Transfer Learning<a class="headerlink" href="#using-transfer-learning" title="Permanent link">&para;</a></h3>
-<p>Transfer learning is a method where a pre-trained model, trained on a large dataset, is used as a starting point. The model is then fine-tuned on a smaller, more specific dataset. This method leverages the knowledge gained from the initial training and applies it to the specific task.</p>
+<p>Fine-tuning adapt's  foundation model to improve its domain performance by using training with high-quality data. The adapted model may be architecturally equivalent, or a variation of the original model. The <a href="#data-for-fine-tuning">data</a> that is used to update the model may be natural or <a href="using-simulated-data">synthetically-created</a> and it is often domain-specific or intentionally constructed.</p>
+<p>Because of the computational requirements needed to train the original foundation models, fine-tuning is preferably done in way that does not update the entire model. 
+One manner of doing this is through the use of <a href="#adaptermodel-changes-for-fine-tuning">adapter layers</a>.  </p>
+<h2 id="data-for-fine-tuning">Data for fine-tuning<a class="headerlink" href="#data-for-fine-tuning" title="Permanent link">&para;</a></h2>
+<p>Higher-quality data that may be proprietary or otherwise not-included in the training data for foundation-models can be used to improve a model's performance. Fine-tuning is generally done in a supervised fashion, where the specific responses desired for a given model input are trained on the output. Unsupervised fine-tuning is <a href="https://arxiv.org/abs/2110.09510">also possible</a> though not as commonly described. </p>
 <h3 id="using-simulated-data">Using Simulated Data<a class="headerlink" href="#using-simulated-data" title="Permanent link">&para;</a></h3>
 <p>Utilizing synthetic or simulated data is an effective method for training Large Language Models (LLMs). The process can be visualized in the following sequence:</p>
-<pre class="mermaid"><code>graph LR
-A[Train Large+Vague model] --&gt; B[Generate highly specific data]
-B --&gt; C[Train small(er?) specific model on specific data]
-C --&gt; D[High-quality fine-tuned model]</code></pre>
-<p>In this sequence, a large and vague model is initially trained. This model then generates highly specific data. This specific data is subsequently used to train a smaller, more specific model. The end result is a high-quality, fine-tuned model.</p>
-<h3 id="usee-adapter-layers">Usee Adapter layers<a class="headerlink" href="#usee-adapter-layers" title="Permanent link">&para;</a></h3>
-<p>Adapters are efficient and performant layers that can optimize performance without needing to do inefficient fine-tuning. </p>
-<div class="admonition important">
+<pre class="mermaid"><code>    graph LR
+        A[Large dataset] --&gt; |Training (partial or full)| B[Large quality model]
+        B --&gt; |Generate tailored data| D[Tailored data]
+        D --&gt; |Training| E[New or adapted model]</code></pre>
+<p>In this sequence, a large and vague model is initially trained. This model then generates highly specific data. This specific data is subsequently used to train a smaller, more specific model. The end result is a high-quality, fine-tuned model. </p>
+<h2 id="model-changes-for-fine-tuning">Model changes for fine-tuning<a class="headerlink" href="#model-changes-for-fine-tuning" title="Permanent link">&para;</a></h2>
+<p>The simplest manner of fine-tuning a model involves updating all of the original weights based on the fine-tuning dataset. This is less preferred because of the additional computational requirements. To minimize the compute, some number of layers can be 'frozen'. While helpful, the computational savings given the performance gains may not be considerable. (TODO FIND CITATIONS FOR THIS)</p>
+<h3 id="adapter-layers">Adapter layers<a class="headerlink" href="#adapter-layers" title="Permanent link">&para;</a></h3>
+<p>If all of the layers are frozen, it is possible to adapt the model using relatively simple models that rescale or adapt outputs. </p>
+<div class="admonition code">
 <p class="admonition-title"><a href="https://arxiv.org/pdf/2007.07779.pdf">AdapterHub: A Framework for Adapting Transformers</a> <a href="https://adapterhub.ml/">Website</a></p>
 </div>
-<h2 id="developing-results">Developing Results<a class="headerlink" href="#developing-results" title="Permanent link">&para;</a></h2>
+<h3 id="low-rank-adaption-lora">Low Rank Adaption (LoRA)<a class="headerlink" href="#low-rank-adaption-lora" title="Permanent link">&para;</a></h3>
+<p>Instead of interleaving a trainable layer in between various layers, Low Rank Adaption (LoRA) uses the notion that changes to outputs of a given layer <span class="arithmatex">\(W\)</span> will likely be small <span class="arithmatex">\(\Delta W\)</span>. Instead of computing all those weights a low-rank vector matrix decomposition where <span class="arithmatex">\(\Delta W = A B\)</span> for two LoRA matrices <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. With a common inner-dimension variable <span class="arithmatex">\(r\)</span> the matrix parameter counts can be appropriately minimized to have a small fraction of the original model <span class="arithmatex">\(W\)</span></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9" /></a></p>
+<h3 id="useful-tips">Useful Tips<a class="headerlink" href="#useful-tips" title="Permanent link">&para;</a></h3>
+<p><a href="https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms">Practical Tips for Finetuning LLMS</a></p>
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
 <p>Fine-tuning can lead to significant improvements in both instruction following and helpfulness of models. This is demonstrated in the research paper <a href="https://arxiv.org/pdf/2310.12962.pdf">An Emulator for Fine-Tuning Large Language Models using Small Language Models</a>. The paper also suggests that combining fine-tuning with speculative decoding can speed up larger models by a factor of 2.5.</p>
 <details class="note">
 <summary>Research Paper: An Emulator for Fine-Tuning Large Language Models using Small Language Models</summary>

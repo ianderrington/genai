@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#technical-challenges" class="md-skip">
+        <a href="#open-challenges" class="md-skip">
           Skip to content
         </a>
       
@@ -553,11 +553,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#technical-challenges" class="md-nav__link">
+  <a href="#open-challenges" class="md-nav__link">
     <span class="md-ellipsis">
-      Technical Challenges
+      Open Challenges
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accuracy-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accuracy Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accuracy Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hallucinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hallucinations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -976,8 +1000,6 @@
       
         
       
-        
-      
     
     
     
@@ -1224,11 +1246,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../architectures/rlhf.html" class="md-nav__link">
+      <a href="../architectures/rl_feedback.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    RLHF
+    Rl feedback
   </span>
   
 
@@ -1269,26 +1291,6 @@
   
   <span class="md-ellipsis">
     Evaluating and comparing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../architectures/alignment.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Alignment
   </span>
   
 
@@ -2262,6 +2264,8 @@
       
         
       
+        
+      
     
     
     
@@ -2299,6 +2303,26 @@
             Ethically
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/ethically/alignment.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2626,11 +2650,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#technical-challenges" class="md-nav__link">
+  <a href="#open-challenges" class="md-nav__link">
     <span class="md-ellipsis">
-      Technical Challenges
+      Open Challenges
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accuracy-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accuracy Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accuracy Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hallucinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hallucinations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2701,12 +2749,12 @@
 <p>At a higher level, the concerns for displacement and capture of people's jobs must be taken into consideration. With arguments both minimizing and amplifying the concern, estimates still have around 300 million jobs replaced by AI, <a href="https://www.goldmansachs.com/intelligence/pages/generative-ai-could-raise-global-gdp-by-7-percent.html">according to a Goldman Sachs report</a>. AT the same time GDP could be increased by 7% and lift productivity. It is still apparent that <a href="#upskilling">upskilling</a> to enable people to work with AI as an enabling tool is important to consider. </p>
 <p>At nearly the highest level of challenge is to have GenAI that is Aligned for the betterment of humanity and our planet and not to its detriment with <a href="#dual-use">dual use</a>. Because of the expansive and moral-philosophical nature of this, as in what is defining 'betterment' it is difficult. Concretely, however, minimizing potential risks associated with GenAI, especially Autonomous Agents, are necessary to address at a functional level, both at organizations and within governments and the regulatory bodies that coordinate the two.</p>
 <p>In general <a href="../../Using/ethically/index.html">ethical use</a> of GenAI will necessarily address all or most of these challenges. </p>
-<h2 id="technical-challenges">Technical Challenges<a class="headerlink" href="#technical-challenges" title="Permanent link">&para;</a></h2>
+<h2 id="open-challenges">Open Challenges<a class="headerlink" href="#open-challenges" title="Permanent link">&para;</a></h2>
 <p>!!! <a href="LLMhttps://huyenchip.com/2023/08/16/llm-research-open-challenges.html#5_design_a_new_model_architecture">Open challenges in LLM research</a>
 Challenges associated with GenAI.</p>
 <div class="highlight"><pre><span></span><code>```markdown
 
-1. Reduce and measure hallucinations
+1. Reduce and measure [hallucinations](#hallucinations)
 2. Optimize context length and context construction
 3. Incorporate other data modalities
 4. Make LLMs faster and cheaper
@@ -2718,6 +2766,10 @@ Challenges associated with GenAI.</p>
 10. Build LLMs for non-English languages
 ```
 </code></pre></div>
+<h2 id="accuracy-challenges">Accuracy Challenges<a class="headerlink" href="#accuracy-challenges" title="Permanent link">&para;</a></h2>
+<h3 id="hallucinations">Hallucinations<a class="headerlink" href="#hallucinations" title="Permanent link">&para;</a></h3>
+<p>There are a number of issues related to modle accuracy that pose challenges for GenAI models. Most prominant among them are the effect of <em>Hallucinations</em>. Models hallucinate, by making up facts or sentences that have no reasoanble bearing to reality. </p>
+<p><a href="https://arxiv.org/pdf/2311.14648.pdf">Some studies</a> indicate that the halluciantion-rate is related to the frequency that a fact appears only once in a data set, and that calibrated models, like those that are pre-trained, are more likely to hallucinate than those that do not have calibrated next-token predictions. </p>
 <h2 id="ethical-challenges">Ethical Challenges<a class="headerlink" href="#ethical-challenges" title="Permanent link">&para;</a></h2>
 <h3 id="job-displacement">Job displacement<a class="headerlink" href="#job-displacement" title="Permanent link">&para;</a></h3>
 <p>Because GenAI can perform tasks at a speedy rate. </p>

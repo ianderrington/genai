@@ -12,13 +12,13 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/architectures/alignment.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/architectures/rl_feedback.html">
       
       
-        <link rel="prev" href="evaluating_and_comparing.html">
+        <link rel="prev" href="finetuning.html">
       
       
-        <link rel="next" href="generation.html">
+        <link rel="next" href="optimization.html">
       
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Alignment - Gen()AI</title>
+        <title>Rl feedback - Gen()AI</title>
       
     
     
@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#understanding-rlf" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -135,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Alignment
+              Rl feedback
             
           </span>
         </div>
@@ -884,8 +889,6 @@
       
         
       
-        
-      
     
     
     
@@ -1130,17 +1133,113 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="rlhf.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Rl feedback
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="rl_feedback.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    RLHF
+    Rl feedback
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-rlf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding RLF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proximal-policy-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proximal Policy optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reward-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reward Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rlhf" class="md-nav__link">
+    <span class="md-ellipsis">
+      RLHF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essential-additional-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential additional information
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1181,34 +1280,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="alignment.html" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Alignment
-  </span>
-  
-
-      </a>
-      
     </li>
   
 
@@ -2178,6 +2249,8 @@
       
         
       
+        
+      
     
     
     
@@ -2215,6 +2288,26 @@
             Ethically
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/ethically/alignment.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2535,6 +2628,74 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-rlf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding RLF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proximal-policy-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proximal Policy optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reward-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reward Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rlhf" class="md-nav__link">
+    <span class="md-ellipsis">
+      RLHF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essential-additional-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential additional information
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2551,20 +2712,61 @@
   
 
 
-  <h1>Alignment</h1>
+  <h1>Rl feedback</h1>
 
-<p>Raw generative models do not generally produce globally accurate outputs given input prompts. <sup id="fnref:n1"><a class="footnote-ref" href="#fn:n1">1</a></sup> </p>
-<p>Global alignment </p>
-<p>Ensuring the output of models are appropriately capable of </p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:n1">
-<p>We will be describing text-focused models in this discussion though variations can be appropriately considered for other domains and datatypes
-This is due to the manner of training and next-word-prediction (or more arbitrary masked-word prediction) is probabilistically 'greedy'. Namely, within a sampling of outputs, the next-prediction will be sampled based on their <em>immediate</em> likelihood. To improve the outputs, the models are further refined using various approaches. These approaches 'align' the output to accurately considered&#160;<a class="footnote-backref" href="#fnref:n1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
+<p>Reinforcement learning feedback provides a method to extend data-sparse examples to provide a way of training to produce entire output traces that are optimal. </p>
+<p>In general, Reinforcement-learning feedback is a method that trains a policy model to predict an optimal sequence of output results given inputs. </p>
+<p>Starting initially from Reinforcement Learning From Human Feedback (RLHF), it has also evolved to include Reinforcement Learning from AI Feedback (RLAIF). </p>
+<div class="admonition note">
+<p class="admonition-title">Key Takeaway</p>
+<p>RLHF is a technique that trains a model to predict the best sequence of token outputs, conditioned on a given input. </p>
 </div>
+<h2 id="understanding-rlf">Understanding RLF<a class="headerlink" href="#understanding-rlf" title="Permanent link">&para;</a></h2>
+<p>During pre-training, the next token output is maximized probabilistically. However, this method does not always yield the optimal next token in different contexts or in response to varying inputs, as it may not be able to attend to relevant information properly. </p>
+<p>To provide better paths, supervised fine-tuning can be used to update base models to predict output that is more accurate given the input. This process often requires a high volume of quality data, typically labeled by humans, which can be costly to obtain. Moreover, the volume of quality data may not cover the desired input space comprehensively enough for the models to be generalizable. </p>
+<p>To condition a model to produce the desired output given a certain type of input, it is crucial to ensure the entire path of tokens that are predicted are correct, rather than individually predicted tokens. This is where Reinforcement Learning comes into play. </p>
+<p>Reinforcement Learning uses the outcomes of a game, also known as a roll-out, to determine how to improve the choices or moves made during the game. In the context of Language Models, this means the moves are discrete and are the next tokens that are produced. </p>
+<p>A <a href="#policy">policy</a> helps to decide what action or direction to take based on your current state or location. Specifically, a proximal policy predicts a probability distribution over all potential output states, shaping the entire path of the outcome. </p>
+<p>The policy model creates a path of tokens that will end with a reward that is closest to the preferred reward. Feedback, generally from humans or other models, is used to update the policy model. However, not all variations of input data can be reasonably considered given the volume of feedback that could be provided. </p>
+<p>A <a href="#reward-model">reward model</a> is created to estimate how humans would evaluate the output. This model allows general human-informed guidance to help improve the policy model iteratively. </p>
+<p>TODO: INclude OPENAI's Instruct GPT </p>
+<p>One of the most successful examples of this is <a href="https://arxiv.org/pdf/2203.02155.pdf">Instruct GPT</a>, which follows the process outlined above. This method underlies the basis of Chat-GPT 3 and 4. </p>
+<h2 id="policy">Policy<a class="headerlink" href="#policy" title="Permanent link">&para;</a></h2>
+<h3 id="proximal-policy-optimization">Proximal Policy optimization<a class="headerlink" href="#proximal-policy-optimization" title="Permanent link">&para;</a></h3>
+<p>There are several policy gradient methods to optimize, a common one being <a href="#proximal-policy-optimization">proximal policy optimization</a>, or PPO. </p>
+<div class="arithmatex">\[
+\hat{g} = \hat{\mathbb{E}}_t \left[ \nabla_\theta \log \pi_\theta(a_t | s_t) \hat{A}_t \right]
+\]</div>
+<p>TODO: Expand this based on <a href="https://arxiv.org/pdf/1707.06347.pdf">Proximal Policy Optimization Algorithms</a></p>
+<h2 id="reward-model">Reward Model<a class="headerlink" href="#reward-model" title="Permanent link">&para;</a></h2>
+<p>A reward model is used to approximate the evaluation quality, or reward, that a labeler (a person) might assign to an example output. </p>
+<p>While multiple examples may be ranked and used simultaneously, the reward model may be trained by considering only a winning and a losing example. The reward models will produce a <span class="arithmatex">\(S_w\)</span> <span class="arithmatex">\(S_l\)</span> for winning and losing examples. </p>
+<p>The reward model is trained with the objective of incentivizing the winning response to have a lower score than the losing response. More specifically, it minimizes </p>
+<div class="arithmatex">\[
+-E_x(\log(\sigma(s_w-s_l)))
+\]</div>
+<p>TODO: Expand this to include more mathematics. </p>
+<h2 id="rlhf">RLHF<a class="headerlink" href="#rlhf" title="Permanent link">&para;</a></h2>
+<details class="important">
+<summary><a href="https://starling.cs.berkeley.edu/">Starling-7B: Increasing LLM Helpfulness &amp; Harmlessness with RLAIF</a> provides a solid example using RLAIF generated with GPT-4 to create a 7B model that is almost as good as GPT-4</summary>
+<p>They also released a <a href="https://huggingface.co/datasets/berkeley-nest/Nectar">data set called Nectar</a> that with over 180k GPT-4 ranked outputs. </p>
+</details>
+<ul>
+<li><a href="https://huggingface.co/blog/llm-leaderboard">Can foundation models label data like humans?</a> Using GPT to review model outputs produced biased results. Changing the prompt doesn't really help to de-bias it. There are many additional considerations surrounding model evaluation.</li>
+</ul>
+<h2 id="essential-additional-information">Essential additional information<a class="headerlink" href="#essential-additional-information" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://huyenchip.com/2023/05/02/rlhf.html">RLHF: Reinforcement Learning from Human Feedback</a> A splendid summary of the RLHF system.</li>
+</ul>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2fb5b4d5-ecc9-45b3-9d16-63fab4ab6db0" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="RLHF Diagram" src="https://github.com/ianderrington/genai/assets/76016868/2fb5b4d5-ecc9-45b3-9d16-63fab4ab6db0" /></a></p>
+<ul>
+<li><a href="https://huggingface.co/blog/rlhf">RLHF basics by hugging face</a> A really good introduction to parse again.</li>
+<li><a href="https://github.com/lucidrains/PaLM-rlhf-pytorch">RLHF for Palm in Pytorch</a></li>
+<li><a href="https://arxiv.org/abs/2305.13735">Aligning Large Language Models Through Synthetic Feedback</a> Using a hierarchy of systems to improve model alignment.</li>
+</ul>
+<details class="note">
+<summary><a href="https://proceedings.neurips.cc/paper/2020/file/1f89885d556929e98d3ef9b86448f951-Paper.pdf">Learning to summarize from human feedback</a> Provides initial successful examples using PPO and human feedback to improve summaries.</summary>
+</details>
 
 
   
