@@ -31,3 +31,11 @@ It is debated that sufficiently large models exhibit 'emergence'. While not alwa
 
 ??? "[Studying Large Language Model Generalization with Influence Functions](https://arxiv.org/pdf/2308.03296.pdf)"
     
+??? "[Calibrated Language Models Must Hallucinate](https://arxiv.org/pdf/2311.14648.pdf)"
+    The authors demonstrate that in pre-trained models that are calibrated, have a hallucination rate that is proportional to the 'mono-fact' rate within the training data. Calibrated models are those that predict next tokens with a probabilities corresponding to their observation frequency. 
+
+    ```markdown
+        "pretraining LMs for predictive accuracy leads to hallucination even in an ideal world where the
+        training data is perfectly factual, there is no blur between facts and hallucinations, each document
+        contains at most one fact, and there is not even a prompt that would encourage hallucination"
+    ```

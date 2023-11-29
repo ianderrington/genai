@@ -5,7 +5,7 @@ Training GenAI will generally be domain/modality specific.
 1. Self-supervised [pre-training](pre-training.md) to predict the next token with reasonable likelihoods. 
 2. Supervised pretrainign: Trains to give generally expected output.
 3. [Finetuning](./finetuning.md) on higher quality data sets sometimes [recurrently](./recurrent_training.md) using [simulated data](../data/simulation.md),
-4. [Reinforcement Learning with Human Feedback](rlhf.md) to more accurately train a model's output to find a reward model that is used with Proximal Policy Optimization (PPO) to produce aligned output. 
+4. [Reinforcement Learning with Human Feedback](rl_feedback.md) to more accurately train a model's output to find a reward model that is used with Proximal Policy Optimization (PPO) to produce aligned output. 
 
 Basics: [Distributed Training](https://neptune.ai/blog/distributed-training)
 https://neptune.ai/blog/distributed-training-frameworks-and-tools

@@ -9,13 +9,13 @@ At nearly the highest level of challenge is to have GenAI that is Aligned for th
 In general [ethical use](../../Using/ethically/index.md) of GenAI will necessarily address all or most of these challenges. 
 
 
-## Technical Challenges
+## Open Challenges
 !!! [Open challenges in LLM research](LLMhttps://huyenchip.com/2023/08/16/llm-research-open-challenges.html#5_design_a_new_model_architecture)
 Challenges associated with GenAI.
 
     ```markdown
 
-    1. Reduce and measure hallucinations
+    1. Reduce and measure [hallucinations](#hallucinations)
     2. Optimize context length and context construction
     3. Incorporate other data modalities
     4. Make LLMs faster and cheaper
@@ -26,6 +26,16 @@ Challenges associated with GenAI.
     9. Improve the efficiency of the chat interface
     10. Build LLMs for non-English languages
     ```
+
+## Accuracy Challenges
+
+### Hallucinations 
+There are a number of issues related to modle accuracy that pose challenges for GenAI models. Most prominant among them are the effect of _Hallucinations_. Models hallucinate, by making up facts or sentences that have no reasoanble bearing to reality. 
+
+[Some studies](https://arxiv.org/pdf/2311.14648.pdf) indicate that the halluciantion-rate is related to the frequency that a fact appears only once in a data set, and that calibrated models, like those that are pre-trained, are more likely to hallucinate than those that do not have calibrated next-token predictions. 
+
+
+
 
 ## Ethical Challenges
 

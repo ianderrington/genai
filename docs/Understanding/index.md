@@ -55,7 +55,7 @@ There is so much quality material, it would be valuable for your time to check s
     Important patterns mentioned (references to discussions herein):
     * [Evaluating and comparing](architectures/evaluating_and_comparing.md)
     * [Retreival Augmented Generation (RAG)](agents/rag.md)
-    * [Fine tuning](architectures/alignment.md#finetuning)
+    * [Fine tuning](architectures/optimization.md#finetuning)
     * [Caching](agents/memory.md#caching) to reduce latency. 
     * [Guardrails](agents/chains.md#guardrails) to ensure output (and input) quality.
     * Data Flywheel to use data collection and feedback to improve model and experience
