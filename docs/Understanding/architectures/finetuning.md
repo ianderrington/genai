@@ -14,7 +14,7 @@ Utilizing synthetic or simulated data is an effective method for training Large 
 
 ```mermaid
     graph LR
-        A[Large dataset] --> |Training (partial or full)| B[Large quality model]
+        A[Large dataset] --> |Training| B[Large quality model]
         B --> |Generate tailored data| D[Tailored data]
         D --> |Training| E[New or adapted model]
 ```
@@ -32,12 +32,49 @@ If all of the layers are frozen, it is possible to adapt the model using relativ
 
 ### Low Rank Adaption (LoRA)
 
-Instead of interleaving a trainable layer in between various layers, Low Rank Adaption (LoRA) uses the notion that changes to outputs of a given layer $W$ will likely be small $\Delta W$. Instead of computing all those weights a low-rank vector matrix decomposition where $\Delta W = A B$ for two LoRA matrices $A$ and $B$. With a common inner-dimension variable $r$ the matrix parameter counts can be appropriately minimized to have a small fraction of the original model $W$
+Instead of interleaving a trainable layer in between various layers, [Low-Rank Adaption](https://arxiv.org/abs/2106.09685) (LoRA) uses the notion that changes to outputs of a given layer $W$ will likely be small $\Delta W$. Instead of computing all those weights a low-rank vector matrix decomposition where $\Delta W = A B$ for two LoRA matrices $A$ and $B$. With a common inner-dimension variable _rank_, $r$, is the matrix parameter counts can be appropriately minimized to have a small fraction of the original model $W$.
 
 ![image](https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9)
 
-### Useful Tips
-[Practical Tips for Finetuning LLMS](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms)
+### Practical Tips
+These are tips mostly from [Practical Tips for Finetuning LLMS](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms).
+
+#### Data Quality and Size
+
+It is essential that fine-tuning data is of high-quality/aligned with the end use-case of the model. Depending on the modality, anywhere between 5-10 (generally for Image-based models), and many thousands of examples (text-language) may be considered for LoRA. In terms of the number of passes over the data, _be careful_ if going beyond one-epoch, lest overfitting occur. 
+
+#### Choice of optimizers
+
+When Adam and SGD are common optimizers. There are indications that with larger $r$, the memory requirements become >20% larger.
+
+#### Where do you use LoRA? 
+
+Enabling the LoRA for all layers appears may be valuable, though it hasn't been thoroughly explored. 
+
+#### Choice of parameters
+
+The [original paper](https://arxiv.org/abs/2106.09685) has both the rank and a scaling factor $\alpha$. 
+
+```markdown
+scaling = alpha / r
+weight += (lora_B @ lora_A) * scaling
+```
+Both of these will need to be explored, but it may be beneficial to set $\alpha \approx r$
+
+Selecting the rank to be _too large_ may result in overfitting, but too small may not provide enough additional model capacity to capture the characteristics of the data. 
+
+#### Combining LoRA weights
+It appears that it is possible to add multiple LoRA weights, either beforehand as such:
+$$
+weight += (L_B \times L_A) * scale
+$$
+or
+
+$$
+weight += (L1_B \times L1_A) * scale1 \\
+weight += (L2_B \times L2_A) * scale2 \\
+\cdots
+$$
 
 ## Results
 
