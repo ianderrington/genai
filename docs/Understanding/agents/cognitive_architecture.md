@@ -8,7 +8,7 @@ Cognitive Architectures refer to systems or chain-patterns that are employed aft
 - **Reasoning** or the ability to create causal connections between input and output. These are often taken care of at the level of the LLM. 
 - **Planning** to enable more complicated goals to be broken down into individually accomplishable tasks. May use external tools like memory to keep track of tasks.
 - **Deciding and prioritizing** to select between different options or available components
-- **Summarizing** to compress information into memory or t
+- **Summarizing and Abstracting** to compress information into reusable chunks or otherwise abstracting information to be more effective. 
 - **Logging + Remembering: Learning** being the automatic or initiated information storage and recall that is accessed in [memory](./memory.md)
 - **Reflection**, or an internal (or external) evaluation of output, be it thoughts, planing, and thoughts. 
 - **Tool use** While overlapping directly with Observing or taking memory-actions, tool-usage may be part of cognitive patterns (like `check task-list`) and must be considered as such. 
@@ -64,6 +64,49 @@ Here are some known thought structures that are improving agentic output.
 ??? code "[ReAct](https://github.com/ysymyth/ReAct)"
     Effectively Observe, Think, Act, Repeat.
     [Paper](https://arxiv.org/abs/2210.03629) 
+
+??? tip "[Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models](https://arxiv.org/pdf/2310.06117.pdf) provides a solid improvement over scientific Q&A by first extracting fundamental principles in an initial multi-shotted prompt and then putting it into a subsequent multi-shotted prompt."
+    The authors find significant improvement over other methods.
+    <img width="941" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/8f79caa8-da02-4f34-8166-e08148dbd1e5">
+
+    <img width="949" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c23021bc-9c3e-4981-bf98-90fe95d2983a">
+
+    Here is the prompt they use to extract the first principles:
+    
+    ```markdown "MMLU Physics/Chemistry First-Principle Prompt"
+    You are an expert at Physics/Chemistry. You are given
+    a Physics/Chemistry problem. Your task is to extract the
+    Physics/Chemistry concepts and principles involved in solving
+    the problem. Here are a few examples:
+    Question: <Question Example1>
+    Principles Involved: <Principles Example1>
+    ...
+    Question: <Question Example5>
+    Principles Involved: <Principles Example5>
+    Question: <Question>
+    Principles Involved:
+    ```
+    
+    Here is the prompt they use to use the extracted first principles and generate a final answer:
+    
+    ```markdown "MMLU Physics/Chemistry Final Answer Prompt"
+    You are an expert at Physics/Chemistry. You are given a
+    Physics/Chemistry problem and a set of principles involved in
+    solving the problem. Solve the problem step by step by following the
+    principles. Here are a few examples:
+    Question: <Question Example1>
+    Principles: <Principles Example1>
+    Answer: <Answer Example1>
+    ...
+    Question: <Question Example5>
+    Principles: <Principles Example5>
+    Answer: <Answer Example5>
+    Question: <Question>
+    Principles: <Principles>
+    Answer:
+    ```
+
+
 
 ??? tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
     ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
