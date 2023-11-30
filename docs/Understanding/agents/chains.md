@@ -36,7 +36,4 @@ Both the input and output into an LLM model may be interpreted, or otherwise par
 MANAGEN IMPROVE:
 When a model questions it's own, or another's output in creates an _interrogation_ that can be used as input to the model to improve it's output. Such chain 
 
-!!! important "[Let's verify step by step](https://arxiv.org/abs/2305.20050)"
-
-
 
