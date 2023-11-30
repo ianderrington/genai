@@ -7,3 +7,5 @@
 !!! important "[State of California Benefits and Risks of Generative Artificial Intelligence Report](https://www.govops.ca.gov/wp-content/uploads/sites/11/2023/11/GenAI-EO-1-Report_FINAL.pdf)"
 
 !!! important "[AI Risk-Management Standards Profile for General-Purpose AI Systems (GPAIS) and Foundation Models](https://cltc.berkeley.edu/wp-content/uploads/2023/11/Berkeley-GPAIS-Foundation-Model-Risk-Management-Standards-Profile-v1.0.pdf)"
+
+!!! important [https://www.ncsc.gov.uk/files/Guidelines-for-secure-AI-system-development.pdf]
