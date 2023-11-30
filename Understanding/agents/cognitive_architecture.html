@@ -691,6 +691,8 @@
       
         
       
+        
+      
     
     
     
@@ -820,6 +822,26 @@
   
   <span class="md-ellipsis">
     Understanding Data Augmentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/distillation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Distillation
   </span>
   
 
@@ -2794,7 +2816,7 @@
 <li><strong>Reasoning</strong> or the ability to create causal connections between input and output. These are often taken care of at the level of the LLM. </li>
 <li><strong>Planning</strong> to enable more complicated goals to be broken down into individually accomplishable tasks. May use external tools like memory to keep track of tasks.</li>
 <li><strong>Deciding and prioritizing</strong> to select between different options or available components</li>
-<li><strong>Summarizing</strong> to compress information into memory or t</li>
+<li><strong>Summarizing and Abstracting</strong> to compress information into reusable chunks or otherwise abstracting information to be more effective. </li>
 <li><strong>Logging + Remembering: Learning</strong> being the automatic or initiated information storage and recall that is accessed in <a href="memory.html">memory</a></li>
 <li><strong>Reflection</strong>, or an internal (or external) evaluation of output, be it thoughts, planing, and thoughts. </li>
 <li><strong>Tool use</strong> While overlapping directly with Observing or taking memory-actions, tool-usage may be part of cognitive patterns (like <code>check task-list</code>) and must be considered as such. </li>
@@ -2836,6 +2858,43 @@ they show it can improve output even beyon Chain of Thought. </p>
 <summary><a href="https://github.com/ysymyth/ReAct">ReAct</a></summary>
 <p>Effectively Observe, Think, Act, Repeat.
 <a href="https://arxiv.org/abs/2210.03629">Paper</a> </p>
+</details>
+<details class="tip">
+<summary><a href="https://arxiv.org/pdf/2310.06117.pdf">Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models</a> provides a solid improvement over scientific Q&amp;A by first extracting fundamental principles in an initial multi-shotted prompt and then putting it into a subsequent multi-shotted prompt.</summary>
+<p>The authors find significant improvement over other methods.
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/8f79caa8-da02-4f34-8166-e08148dbd1e5" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="941" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/8f79caa8-da02-4f34-8166-e08148dbd1e5"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c23021bc-9c3e-4981-bf98-90fe95d2983a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="949" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c23021bc-9c3e-4981-bf98-90fe95d2983a"></a></p>
+<p>Here is the prompt they use to extract the first principles:</p>
+<p>```markdown "MMLU Physics/Chemistry First-Principle Prompt"
+You are an expert at Physics/Chemistry. You are given
+a Physics/Chemistry problem. Your task is to extract the
+Physics/Chemistry concepts and principles involved in solving
+the problem. Here are a few examples:
+Question: <Question Example1>
+Principles Involved: <Principles Example1>
+...
+Question: <Question Example5>
+Principles Involved: <Principles Example5>
+Question: <Question>
+Principles Involved:
+<div class="highlight"><pre><span></span><code>Here is the prompt they use to use the extracted first principles and generate a final answer:
+
+```markdown &quot;MMLU Physics/Chemistry Final Answer Prompt&quot;
+You are an expert at Physics/Chemistry. You are given a
+Physics/Chemistry problem and a set of principles involved in
+solving the problem. Solve the problem step by step by following the
+principles. Here are a few examples:
+Question: &lt;Question Example1&gt;
+Principles: &lt;Principles Example1&gt;
+Answer: &lt;Answer Example1&gt;
+...
+Question: &lt;Question Example5&gt;
+Principles: &lt;Principles Example5&gt;
+Answer: &lt;Answer Example5&gt;
+Question: &lt;Question&gt;
+Principles: &lt;Principles&gt;
+Answer:
+</code></pre></div></p>
 </details>
 <details class="tip">
 <summary><a href="https://github.com/noahshinn024/reflexion">Reflexion: an autonomous agent with dynamic memory and self-reflection</a> an agent with dynamic memory and self-reflection capabilities</summary>

@@ -691,6 +691,8 @@
       
         
       
+        
+      
     
     
     
@@ -820,6 +822,26 @@
   
   <span class="md-ellipsis">
     Understanding Data Augmentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/distillation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Distillation
   </span>
   
 
@@ -1209,11 +1231,62 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#useful-tips" class="md-nav__link">
+  <a href="#practical-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      Useful Tips
+      Practical Tips
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Practical Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-quality-and-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality and Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choice-of-optimizers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choice of optimizers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-do-you-use-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where do you use LoRA?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choice-of-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choice of parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-lora-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining LoRA weights
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2702,11 +2775,62 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#useful-tips" class="md-nav__link">
+  <a href="#practical-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      Useful Tips
+      Practical Tips
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Practical Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-quality-and-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality and Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choice-of-optimizers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choice of optimizers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-do-you-use-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where do you use LoRA?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choice-of-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choice of parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-lora-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining LoRA weights
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2752,7 +2876,7 @@ One manner of doing this is through the use of <a href="#adaptermodel-changes-fo
 <h3 id="using-simulated-data">Using Simulated Data<a class="headerlink" href="#using-simulated-data" title="Permanent link">&para;</a></h3>
 <p>Utilizing synthetic or simulated data is an effective method for training Large Language Models (LLMs). The process can be visualized in the following sequence:</p>
 <pre class="mermaid"><code>    graph LR
-        A[Large dataset] --&gt; |Training (partial or full)| B[Large quality model]
+        A[Large dataset] --&gt; |Training| B[Large quality model]
         B --&gt; |Generate tailored data| D[Tailored data]
         D --&gt; |Training| E[New or adapted model]</code></pre>
 <p>In this sequence, a large and vague model is initially trained. This model then generates highly specific data. This specific data is subsequently used to train a smaller, more specific model. The end result is a high-quality, fine-tuned model. </p>
@@ -2764,10 +2888,34 @@ One manner of doing this is through the use of <a href="#adaptermodel-changes-fo
 <p class="admonition-title"><a href="https://arxiv.org/pdf/2007.07779.pdf">AdapterHub: A Framework for Adapting Transformers</a> <a href="https://adapterhub.ml/">Website</a></p>
 </div>
 <h3 id="low-rank-adaption-lora">Low Rank Adaption (LoRA)<a class="headerlink" href="#low-rank-adaption-lora" title="Permanent link">&para;</a></h3>
-<p>Instead of interleaving a trainable layer in between various layers, Low Rank Adaption (LoRA) uses the notion that changes to outputs of a given layer <span class="arithmatex">\(W\)</span> will likely be small <span class="arithmatex">\(\Delta W\)</span>. Instead of computing all those weights a low-rank vector matrix decomposition where <span class="arithmatex">\(\Delta W = A B\)</span> for two LoRA matrices <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. With a common inner-dimension variable <span class="arithmatex">\(r\)</span> the matrix parameter counts can be appropriately minimized to have a small fraction of the original model <span class="arithmatex">\(W\)</span></p>
+<p>Instead of interleaving a trainable layer in between various layers, <a href="https://arxiv.org/abs/2106.09685">Low-Rank Adaption</a> (LoRA) uses the notion that changes to outputs of a given layer <span class="arithmatex">\(W\)</span> will likely be small <span class="arithmatex">\(\Delta W\)</span>. Instead of computing all those weights a low-rank vector matrix decomposition where <span class="arithmatex">\(\Delta W = A B\)</span> for two LoRA matrices <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. With a common inner-dimension variable <em>rank</em>, <span class="arithmatex">\(r\)</span>, is the matrix parameter counts can be appropriately minimized to have a small fraction of the original model <span class="arithmatex">\(W\)</span>.</p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9" /></a></p>
-<h3 id="useful-tips">Useful Tips<a class="headerlink" href="#useful-tips" title="Permanent link">&para;</a></h3>
-<p><a href="https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms">Practical Tips for Finetuning LLMS</a></p>
+<h3 id="practical-tips">Practical Tips<a class="headerlink" href="#practical-tips" title="Permanent link">&para;</a></h3>
+<p>These are tips mostly from <a href="https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms">Practical Tips for Finetuning LLMS</a>.</p>
+<h4 id="data-quality-and-size">Data Quality and Size<a class="headerlink" href="#data-quality-and-size" title="Permanent link">&para;</a></h4>
+<p>It is essential that fine-tuning data is of high-quality/aligned with the end use-case of the model. Depending on the modality, anywhere between 5-10 (generally for Image-based models), and many thousands of examples (text-language) may be considered for LoRA. In terms of the number of passes over the data, <em>be careful</em> if going beyond one-epoch, lest overfitting occur. </p>
+<h4 id="choice-of-optimizers">Choice of optimizers<a class="headerlink" href="#choice-of-optimizers" title="Permanent link">&para;</a></h4>
+<p>When Adam and SGD are common optimizers. There are indications that with larger <span class="arithmatex">\(r\)</span>, the memory requirements become &gt;20% larger.</p>
+<h4 id="where-do-you-use-lora">Where do you use LoRA?<a class="headerlink" href="#where-do-you-use-lora" title="Permanent link">&para;</a></h4>
+<p>Enabling the LoRA for all layers appears may be valuable, though it hasn't been thoroughly explored. </p>
+<h4 id="choice-of-parameters">Choice of parameters<a class="headerlink" href="#choice-of-parameters" title="Permanent link">&para;</a></h4>
+<p>The <a href="https://arxiv.org/abs/2106.09685">original paper</a> has both the rank and a scaling factor <span class="arithmatex">\(\alpha\)</span>. </p>
+<p><div class="highlight"><pre><span></span><code>scaling = alpha / r
+weight += (lora_B @ lora_A) * scaling
+</code></pre></div>
+Both of these will need to be explored, but it may be beneficial to set <span class="arithmatex">\(\alpha \approx r\)</span></p>
+<p>Selecting the rank to be <em>too large</em> may result in overfitting, but too small may not provide enough additional model capacity to capture the characteristics of the data. </p>
+<h4 id="combining-lora-weights">Combining LoRA weights<a class="headerlink" href="#combining-lora-weights" title="Permanent link">&para;</a></h4>
+<p>It appears that it is possible to add multiple LoRA weights, either beforehand as such:
+$$
+weight += (L_B \times L_A) * scale
+$$
+or</p>
+<div class="arithmatex">\[
+weight += (L1_B \times L1_A) * scale1 \\
+weight += (L2_B \times L2_A) * scale2 \\
+\cdots
+\]</div>
 <h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
 <p>Fine-tuning can lead to significant improvements in both instruction following and helpfulness of models. This is demonstrated in the research paper <a href="https://arxiv.org/pdf/2310.12962.pdf">An Emulator for Fine-Tuning Large Language Models using Small Language Models</a>. The paper also suggests that combining fine-tuning with speculative decoding can speed up larger models by a factor of 2.5.</p>
 <details class="note">
