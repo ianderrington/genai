@@ -25,7 +25,7 @@ A [reward model](#reward-model) is created to estimate how humans would evaluate
 
 One of the most successful examples of this is [Instruct GPT](https://arxiv.org/pdf/2203.02155.pdf), which follows the process outlined above. This method underlies the basis of Chat-GPT 3 and 4. 
 
-??? note "Many RL methods use 'outcome' evaluations, but [process reward models ](#process-reward-model) can be better"
+??? note "Many RL methods use 'outcome' evaluations, but [process reward models ](#process-reward-models) can be better"
     Using RL feedback from human labelers to provide feedback on intermediate steps, in [Let's Verify Step By Step](https://arxiv.org/pdf/2305.20050.pdf) the authors demonstrate that providing feedback on intermediate steps can yield a reward model that is considerably better on various math-tests, than it is for outcome-based reward models. 
 
     
