@@ -24,6 +24,13 @@ Automated red teaming uses programmed scripts or tools to test the AI model. Thi
    <img width="575" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4b99aae5-4f96-4f37-a30a-6c214a379a4d">
    [Paper](https://arxiv.org/pdf/2311.11538.pdf)
 
+## Attack methods
+
+### Divergence ATtacks
+
+??? note "[Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/pdf/2311.17035.pdf)"
+   "Developed a new divergence attack that causes the model to diverge from its chatbot-style generations and emit training data at a " high rate.
+
 ## Further Reading
 
 For more information on red teaming in AI, consider the following resources:
