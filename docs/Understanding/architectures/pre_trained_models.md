@@ -32,6 +32,17 @@ Here are a few boards that help to aggregate and test models that have been rele
 - [GPT4all](https://gpt4all.io/index.html)
 - [DoctorGPT](https://github.com/llSourcell/DoctorGPT)
 
+??? code "[Qwen]"
+
+    Open-source : Qwen-72B and Qwen-1.8B! Including Base, Chat and Quantized versions.
+    
+    🌟 Qwen-72B has been trained on high-quality data consisting of 3T tokens, boasting a larger parameter scale and more training data to achieve a comprehensive performance upgrade. Additionally, we have expanded the context window length to 32K and enhanced the system prompt capability, allowing users to customize their own AI assistant with just a single prompt.
+    
+    🎁 Qwen-1.8B is our additional gift to the research community, striking a balance between maintaining essential functionalities and maximizing efficiency, generating 2K-length text content with just 3GB of GPU memory.
+    
+    🤗 https://huggingface.co/Qwen
+    🤖 https://github.com/QwenLM/Qwen
+
 ### Vision focused
 
 - [StableLM: Stability AI Language Models](https://github.com/stability-AI/stableLM/) 
