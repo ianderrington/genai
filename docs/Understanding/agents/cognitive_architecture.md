@@ -173,6 +173,42 @@ Here are some known thought structures that are improving agentic output.
 
 ### Branching
 
+General manners of search. 
+<img width="565" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3025c425-4f12-4b50-8d23-33a6002fa2aa">
+
+
+??? important "[Toolchain*: Efficient Action Space Navigation in Large Language Models with A* Search](https://arxiv.org/pdf/2310.13227.pdf) provides an efficient tree guided-search algorithm that allows SOT performance"
+    
+    As opposed to other branching methods that allows for efficient exploration of action space, helping to find global optimization of a series of LLM calls.
+    It happsens in 3 general steps: 
+    
+    -  **Selection** from the highest quality frontier nodes $\F(\Tau)$ of tree $\Tau$, by choosing the node $n_next = arg min_{n\elem \F(\Tau)} f(n), given a cost-function oracle f(n) that provides the cost of the best plan of incorporating the $n$-th call into the chain. 
+    - **Expansion** to create the _fronteir_ nodes of up to k-potential actions for the next step can be sampled.  
+    - **Updating** the frontier nodes to repeat the process. 
+
+    The choice of the cost function is based on the $A^*$ algorithm, where $f(n) = g(n) + h(n)$ where $g(n)$ is the cost of the path from the start node, and $h(n)$ is a heuristic function that estimates the cheapest path from $n$ to the destination goal. 
+
+    Their choice of $g(n)$ is generally the sum of single-steps costs from ancestor nodes. More accurately they create a geometric sum of two different step value functions. 
+    
+    One step function is a _task-specific heuristic function_ that maximizes the longest-common subsequence score over other paths. The longest-common subsequence score finds the longest-common subsequence between plan $s_n$ and other plans $m_j$ and divides by the smaller of the two lengths of the paths $s_n$ and $m_j$. 
+
+    The other step function is a self-consistency frequency that takes an ensemble approach to generate the next steps. It calculates the number of actions that arrive at step n using non-semantically equivalent reasoning steps, divided by the number of k samples.  
+
+    Their choice of the future cost $h(n)$ is a multiplicative combination of a similar task-specific heuristic and an imagination score, enabled by an LLM. 
+    
+    The future task-specific heuristic calculates the average fractional position of action a found within all plans.
+
+    The imagination score directly queries the LLMs to imagine more concrete steps until target node $n_T$ and computing the ratio of the number of steps of the number between the current node n ancestors to the target node. The higher score 'suggests the imagined plan closely captures the path to the current step, indicating that fewer remaining steps are needed to accomplish the task in the imagination of LLMs. 
+    
+    <img width="276" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c544e5ae-10a0-4fa7-bb05-9fd607524096">
+    <img width="272" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a1b4af81-6769-458b-8b9d-c7474309477f">
+    <img width="275" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b66028d7-bb42-4c9c-887f-505262062f5f">
+
+
+
+    
+
+
 ??? tip "[Algorithm of Thoughts](https://arxiv.org/pdf/2308.10379.pdf) A general extension of Chain of Thought, similar to Graph of Thoughts"
 
     <img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/daca5b24-8ca4-4548-a3b4-1c5eac34017f">
