@@ -1605,6 +1605,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#automated-chain-selection-and-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated chain selection and discovery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#chain-optimization" class="md-nav__link">
     <span class="md-ellipsis">
       Chain Optimization
@@ -2217,11 +2226,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Using/regulation.html" class="md-nav__link">
+      <a href="../../Using/regulations_and_guidelines.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Regulation
+    Regulations and guidelines
   </span>
   
 
@@ -2771,6 +2780,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#automated-chain-selection-and-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated chain selection and discovery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#chain-optimization" class="md-nav__link">
     <span class="md-ellipsis">
       Chain Optimization
@@ -3130,6 +3148,49 @@ Possible open-source implementation <a href="https://github.com/kyegomez/LOGICGU
 <details class="code">
 <summary><a href="https://github.com/normal-computing/outlines">Outlines</a> guides the model generation of next-token logits to guide the generation corresponding to regex / JSON and pydantic schema. compatible with all models.</summary>
 <p>Also provides a way to functionalize templates to separate prompt logic.</p>
+</details>
+<h2 id="automated-chain-selection-and-discovery">Automated chain selection and discovery<a class="headerlink" href="#automated-chain-selection-and-discovery" title="Permanent link">&para;</a></h2>
+<details class="tip">
+<summary><a href="https://arxiv.org/pdf/2311.16452.pdf">Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine</a></summary>
+<ul>
+<li>GPT4 + Simple Prompts (86.1, MedQA task) </li>
+<li>GPT4 + Complex Prompts (90.2, MedQA task)</li>
+</ul>
+<p>The Authors use 'in context learning' (more like RAG) to identify prompting chains for specific problem sets that are 'winning'. </p>
+<p>Their prompting strategies can efficiently steer GPT-4 to achieve top performance on medical problems (90% on MedQA dataset). </p>
+<p>The winning composition of prompting strategies is fairly elaborate including multiple steps:</p>
+<ol>
+<li>
+<p>Preprocessing Phase:
+ - Iterate through each question in the training dataset.
+ - Generate an embedding vector for each question using a lightweight embedding model, such as OpenAI's text-embedding-ada-002.
+ - Use GPT-4 to generate a chain of thought and a prediction of the final answer.
+ - Compare the GPT-4 generated answer against the ground truth (correct answer).
+ - Store questions, their embedding vectors, chains of thought, and answers if the prediction is correct; otherwise, discard them.</p>
+</li>
+<li>
+<p>Inference Step:
+ - Compute the embedding for the test question using the same embedding model as in preprocessing.
+ - Select the most similar examples from the preprocessed training data using k-Nearest Neighbors (kNN) and cosine similarity as the distance function.
+ - Format the selected examples as context for GPT-4.
+ - Repeat the following steps several times (e.g., five times as configured):
+ - Shuffle the answer choices for the test question.
+ - Prompt GPT-4 with the context and shuffled test question to generate a chain of thought and a candidate answer.
+ - Determine the final predicted answer by taking a majority vote of the generated candidate answers.</p>
+</li>
+</ol>
+<p>Additional Details:
+- The strategy uses 5 kNN-selected few-shot exemplars and performs 5 parallel API calls in the ensemble procedure.
+- Ablation studies suggest that increasing the number of few-shot exemplars and ensemble items can yield better performance.
+- The general methodology of combining few-shot exemplar selection, self-generated chain-of-thought reasoning, and majority vote ensembling is not limited to medical texts and can be adapted to other domains and problem types.</p>
+<p>Limitations:</p>
+<ul>
+<li>Assumes availability of training ground truth data needed for preprocessing steps</li>
+<li>Costs (multiple llm inference calls, latency). This will matter depending on use case and accuracy requirements </li>
+<li>Problem Domain - this will work best for tasks that have a single valid objective answer</li>
+</ul>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b9319ec5-1d2c-42ad-92bd-3472d1e300a1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="706" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b9319ec5-1d2c-42ad-92bd-3472d1e300a1"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6e1451fd-3ac9-4e6a-b440-123ed58dcc80" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="713" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e1451fd-3ac9-4e6a-b440-123ed58dcc80"></a></p>
 </details>
 <h2 id="chain-optimization">Chain Optimization<a class="headerlink" href="#chain-optimization" title="Permanent link">&para;</a></h2>
 <p>Problems such as Hallucinations can be mitigated through downstream methods of process. </p>
