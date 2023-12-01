@@ -355,6 +355,53 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
 
     Also provides a way to functionalize templates to separate prompt logic.
 
+## Automated chain selection and discovery
+
+??? tip "[Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine](https://arxiv.org/pdf/2311.16452.pdf)"
+
+    - GPT4 + Simple Prompts (86.1, MedQA task) 
+    - GPT4 + Complex Prompts (90.2, MedQA task)
+    
+    The Authors use 'in context learning' (more like RAG) to identify prompting chains for specific problem sets that are 'winning'. 
+    
+    Their prompting strategies can efficiently steer GPT-4 to achieve top performance on medical problems (90% on MedQA dataset). 
+    
+    The winning composition of prompting strategies is fairly elaborate including multiple steps:
+    
+    1. Preprocessing Phase:
+     - Iterate through each question in the training dataset.
+     - Generate an embedding vector for each question using a lightweight embedding model, such as OpenAI's text-embedding-ada-002.
+     - Use GPT-4 to generate a chain of thought and a prediction of the final answer.
+     - Compare the GPT-4 generated answer against the ground truth (correct answer).
+     - Store questions, their embedding vectors, chains of thought, and answers if the prediction is correct; otherwise, discard them.
+    
+    2. Inference Step:
+     - Compute the embedding for the test question using the same embedding model as in preprocessing.
+     - Select the most similar examples from the preprocessed training data using k-Nearest Neighbors (kNN) and cosine similarity as the distance function.
+     - Format the selected examples as context for GPT-4.
+     - Repeat the following steps several times (e.g., five times as configured):
+     - Shuffle the answer choices for the test question.
+     - Prompt GPT-4 with the context and shuffled test question to generate a chain of thought and a candidate answer.
+     - Determine the final predicted answer by taking a majority vote of the generated candidate answers.
+    
+    Additional Details:
+    - The strategy uses 5 kNN-selected few-shot exemplars and performs 5 parallel API calls in the ensemble procedure.
+    - Ablation studies suggest that increasing the number of few-shot exemplars and ensemble items can yield better performance.
+    - The general methodology of combining few-shot exemplar selection, self-generated chain-of-thought reasoning, and majority vote ensembling is not limited to medical texts and can be adapted to other domains and problem types.
+    
+    Limitations:
+    
+    - Assumes availability of training ground truth data needed for preprocessing steps
+    - Costs (multiple llm inference calls, latency). This will matter depending on use case and accuracy requirements 
+    - Problem Domain - this will work best for tasks that have a single valid objective answer
+
+    <img width="706" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b9319ec5-1d2c-42ad-92bd-3472d1e300a1">
+    <img width="713" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e1451fd-3ac9-4e6a-b440-123ed58dcc80">
+
+
+
+
+
 ## Chain Optimization
 
 Problems such as Hallucinations can be mitigated through downstream methods of process. 
