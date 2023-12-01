@@ -24,6 +24,10 @@ Tools generally consist of single function calls to something that will return v
 ### Toolkits
 Toolkits consist of tool pairings that often work together well. For instance, bash commands for file creation, deletion, naming and movement. Toolkits can be api-calls or 
 
+??? code "[On the Tool Manipulation Capability of Open-source Large Language Models](https://github.com/sambanova/toolbench/tree/main)"
+    [Paper](https://arxiv.org/pdf/2305.16504.pdf)
+    Provides a method to allow open-source LLMs to work with tools for real-world tasks.
+    
 
 ??? code "[Langchain Toolkits](https://github.com/langchain-ai/langchain/tree/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent_toolkits)"
     <img width="971" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/65e22011-f815-4f19-8d78-24bc2c731b08">
