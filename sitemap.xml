@@ -336,6 +336,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://managen.ai/Using/security.html</loc>
+         <lastmod>2023-12-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://managen.ai/Using/using_external_vendors.html</loc>
          <lastmod>2023-12-01</lastmod>
          <changefreq>daily</changefreq>

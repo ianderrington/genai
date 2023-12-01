@@ -1815,6 +1815,8 @@
       
         
       
+        
+      
     
     
     
@@ -2504,6 +2506,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/security.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2980,6 +3002,28 @@ Answer:
 <p><a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/e3b9ed66-18a8-451b-b29a-09815d7791d1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="685" alt="image" src="https://github.com/ianderrington/general/assets/76016868/e3b9ed66-18a8-451b-b29a-09815d7791d1"></a></p>
 </details>
 <h3 id="branching">Branching<a class="headerlink" href="#branching" title="Permanent link">&para;</a></h3>
+<p>General manners of search. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/3025c425-4f12-4b50-8d23-33a6002fa2aa" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="565" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3025c425-4f12-4b50-8d23-33a6002fa2aa"></a></p>
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2310.13227.pdf">Toolchain*: Efficient Action Space Navigation in Large Language Models with A* Search</a> provides an efficient tree guided-search algorithm that allows SOT performance</summary>
+<p>As opposed to other branching methods that allows for efficient exploration of action space, helping to find global optimization of a series of LLM calls.
+It happsens in 3 general steps: </p>
+<ul>
+<li><strong>Selection</strong> from the highest quality frontier nodes <span class="arithmatex">\(\F(\Tau)\)</span> of tree <span class="arithmatex">\(\Tau\)</span>, by choosing the node $n_next = arg min_{n\elem \F(\Tau)} f(n), given a cost-function oracle f(n) that provides the cost of the best plan of incorporating the <span class="arithmatex">\(n\)</span>-th call into the chain. </li>
+<li><strong>Expansion</strong> to create the <em>fronteir</em> nodes of up to k-potential actions for the next step can be sampled.  </li>
+<li><strong>Updating</strong> the frontier nodes to repeat the process. </li>
+</ul>
+<p>The choice of the cost function is based on the <span class="arithmatex">\(A^*\)</span> algorithm, where <span class="arithmatex">\(f(n) = g(n) + h(n)\)</span> where <span class="arithmatex">\(g(n)\)</span> is the cost of the path from the start node, and <span class="arithmatex">\(h(n)\)</span> is a heuristic function that estimates the cheapest path from <span class="arithmatex">\(n\)</span> to the destination goal. </p>
+<p>Their choice of <span class="arithmatex">\(g(n)\)</span> is generally the sum of single-steps costs from ancestor nodes. More accurately they create a geometric sum of two different step value functions. </p>
+<p>One step function is a <em>task-specific heuristic function</em> that maximizes the longest-common subsequence score over other paths. The longest-common subsequence score finds the longest-common subsequence between plan <span class="arithmatex">\(s_n\)</span> and other plans <span class="arithmatex">\(m_j\)</span> and divides by the smaller of the two lengths of the paths <span class="arithmatex">\(s_n\)</span> and <span class="arithmatex">\(m_j\)</span>. </p>
+<p>The other step function is a self-consistency frequency that takes an ensemble approach to generate the next steps. It calculates the number of actions that arrive at step n using non-semantically equivalent reasoning steps, divided by the number of k samples.  </p>
+<p>Their choice of the future cost <span class="arithmatex">\(h(n)\)</span> is a multiplicative combination of a similar task-specific heuristic and an imagination score, enabled by an LLM. </p>
+<p>The future task-specific heuristic calculates the average fractional position of action a found within all plans.</p>
+<p>The imagination score directly queries the LLMs to imagine more concrete steps until target node <span class="arithmatex">\(n_T\)</span> and computing the ratio of the number of steps of the number between the current node n ancestors to the target node. The higher score 'suggests the imagined plan closely captures the path to the current step, indicating that fewer remaining steps are needed to accomplish the task in the imagination of LLMs. </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c544e5ae-10a0-4fa7-bb05-9fd607524096" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="276" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c544e5ae-10a0-4fa7-bb05-9fd607524096"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/a1b4af81-6769-458b-8b9d-c7474309477f" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="272" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a1b4af81-6769-458b-8b9d-c7474309477f"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b66028d7-bb42-4c9c-887f-505262062f5f" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="275" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b66028d7-bb42-4c9c-887f-505262062f5f"></a></p>
+</details>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2308.10379.pdf">Algorithm of Thoughts</a> A general extension of Chain of Thought, similar to Graph of Thoughts</summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/daca5b24-8ca4-4548-a3b4-1c5eac34017f" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/daca5b24-8ca4-4548-a3b4-1c5eac34017f"></a></p>
