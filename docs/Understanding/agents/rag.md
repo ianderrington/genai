@@ -132,4 +132,5 @@ The final step is generating an output using a prompt that integrates the query 
 
 ## Tutorials and Blogs
 
-For more information, you can refer to the [Langchain Question Answering](https://python.langchain.com/docs/use_cases/question_answering/) tutorial.
+- [Langchain Question Answering](https://python.langchain.com/docs/use_cases/question_answering/) 
+- [RAG demystified](https://github.com/pchunduri6/rag-demystified/blob/main/complex_qa.py)
