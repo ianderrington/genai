@@ -53,6 +53,14 @@ Here are a few boards that help to aggregate and test models that have been rele
 
 ## Closed Source 
 
+??? important "[Gemini](https://blog.google/technology/ai/google-gemini-ai/)"
+    [Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf)
+    [Tech Report](https://storage.googleapis.com/deepmind-media/AlphaCode2/AlphaCode2_Tech_Report.pdf)
+    <img width="633" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e1ff291-fcfc-479d-aa07-d13486d82424">
+    <img width="653" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c21a4954-49d9-4bbb-a364-aae017cc8584">
+
+
+    
 - [Bard](https://bard.google.com/)
 - [Claud]()
 - [ChatGPT (OpenAI)](https://openai.com/blog/chatgpt)
