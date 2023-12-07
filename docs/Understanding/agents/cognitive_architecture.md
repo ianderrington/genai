@@ -405,6 +405,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
     The winning composition of prompting strategies is fairly elaborate including multiple steps:
     
     1. Preprocessing Phase:
+    
      - Iterate through each question in the training dataset.
      - Generate an embedding vector for each question using a lightweight embedding model, such as OpenAI's text-embedding-ada-002.
      - Use GPT-4 to generate a chain of thought and a prediction of the final answer.
@@ -412,6 +413,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
      - Store questions, their embedding vectors, chains of thought, and answers if the prediction is correct; otherwise, discard them.
     
     2. Inference Step:
+    
      - Compute the embedding for the test question using the same embedding model as in preprocessing.
      - Select the most similar examples from the preprocessed training data using k-Nearest Neighbors (kNN) and cosine similarity as the distance function.
      - Format the selected examples as context for GPT-4.
@@ -421,6 +423,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
      - Determine the final predicted answer by taking a majority vote of the generated candidate answers.
     
     Additional Details:
+    
     - The strategy uses 5 kNN-selected few-shot exemplars and performs 5 parallel API calls in the ensemble procedure.
     - Ablation studies suggest that increasing the number of few-shot exemplars and ensemble items can yield better performance.
     - The general methodology of combining few-shot exemplar selection, self-generated chain-of-thought reasoning, and majority vote ensembling is not limited to medical texts and can be adapted to other domains and problem types.
