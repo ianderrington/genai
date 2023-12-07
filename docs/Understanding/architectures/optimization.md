@@ -33,6 +33,14 @@ Pruning is a technique that eliminates weights that do not consistently produce 
      "An optimization-based approach for pruning pre-trained neural networks at scale. CHITA (which stands for “Combinatorial Hessian-free Iterative Thresholding Algorithm”) outperforms existing pruning methods in terms of scalability and performance tradeoffs, and it does so by leveraging advances from several fields, including high-dimensional statistics, combinatorial optimization, and neural network pruning."
      [![Fast as Chita](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIuxL23IilgYpOEWtnP9B4zbiPnuV5NUML47JP0q1idyLLmZUqRlHrxx77iFIinFWUXMekNhKSltLlZvzBSTaqsYmbithvXGlvggyaAZrtb4mg9oiYMWArjvf_lj7T9IbY1Ae4-wijzOZzTazsxWImdGRgLSyAJEc5WQWHvylSwcHQJWX8gXfEk70l8iEs/s1600/image5.gif)](https://blog.research.google/2023/08/neural-network-pruning-with.html)
 
+Related to pruning is the use of smaller models that are initialized based on larger ones
+
+??? code "[](https://github.com/OscarXZQ/weight-selection)"
+    A nice way to initialize smaller models from bigger ones
+    [Paper](https://arxiv.org/pdf/2311.18823.pdf)
+    <img width="270" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2c14986f-8edc-430e-bb59-3d3bae4f30d3">
+
+
 ### Quantization
 Precision details the manner in which binary bits represent numbers in a computer. Generally, the greater the number of bits, the broader the variety of numbers that can be represented. 
 
