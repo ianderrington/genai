@@ -1,3 +1,5 @@
+TODO: These need to be partitioned out to the different positions
+
 The AI-Cambriatic explosion has led to a surge in services, methods, frameworks, and tools that enhance the creation and deployment of models from start to finish. Although there are end-to-end providers for generating valuable GenAI solutions, there is immense value in implementing and experimenting with your own stacks. 
 
 Additionally, there are useful [libraries and tools](./libraries_and_tools.md) worth exploring.
@@ -23,24 +25,10 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 - [Tensorflow](https://tensorflow.org) is a popular multi-language eco-system for creating and using AI.
 - [spAcy](https://spacy.io/) is a library for advanced Natural Language Processing in Python and Cython.
 
-#### Higher level
+### APIs based model usage 
+- [OpenAI](https://github.com/openai/openai-python)
 
-??? code "[Pytorch Lightning](https://lightning.ai/docs/pytorch/latest/) Enables model training with Pytorch and minimizes the boilerplate"
 
-    [Model parallelism](https://lightning.ai/docs/pytorch/stable/advanced/model_parallel.html)
-
-??? code "[Deep Speed (by MSFT)](https://github.com/microsoft/DeepSpeed) empowers ChatGPT-like model training with a single click, offering 15x speedup over SOTA RLHF systems with unprecedented cost reduction at all scales"
-    [Blog on Deepspeed Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
-    ![image](https://github.com/microsoft/DeepSpeed/raw/master/blogs/assets/images/ds-chat-overview.png)
-    
-    DeepSpeed-Ulysses uses a simple, portable, and effective methodology for enabling highly efficient and scalable LLM training with extremely long sequence lengths
-    "DeepSpeed-Ulysses partitions individual samples along the sequence dimension among participating GPU. Then right before the attention computation, it employs all-to-all communication collective on the partitioned queries, keys and values such that each GPU receives the full sequence but only for a non-overlapping subset of the attention heads. This allows the participating GPUs to compute attention for different attention heads in parallel. Finally, DeepSpeed-Ulysses employs another all-to-all to gather the results along the attention heads while re-partitioning along the sequence dimension."
-    ![Ulysses](https://github.com/microsoft/DeepSpeed/blob/master/blogs/deepspeed-ulysses/media/image3.png)
-    Tutorial [here](https://www.deepspeed.ai/tutorials/ds-sequence/)
-
-#### Fine Tuning
-
-!!! code "[LLM Finetuning Hub](https://github.com/georgian-io/LLM-Finetuning-Hub) is an evolving model finetuning codebase. "
 
 ### Interaction and Orchestration Frameworks and Languages
 
@@ -69,14 +57,14 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 - https://www.pinecone.io/learn/langchain-prompt-templates/
 - https://learn.deeplearning.ai/langchain/lesson/3/memory
 
-### Usage
-[OpenAI](https://github.com/openai/openai-python)
-
 
 #### Llama ecosystem
 
-!!! tip "[Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model."
+!!! code "[Llamaindex](https://github.com/run-llama/llama_index) Provides an orchestration framework for with multiple connectors" 
 
+!!! code "[Llama Lab](https://github.com/run-llama/llama-lab) enables flexible tools to use and indesx various tools"
+
+!!! tip "[Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model."
 
 
 ??? code "Code and models surrounding Llama"
@@ -91,6 +79,33 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
     - [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
     - [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
     - [Llama.cpp](https://github.com/ggerganov/llama.cpp) 4 bit llama on macbooks. 
+
+
+### Haystack
+
+!!! code "[Haystack](https://github.com/deepset-ai/haystack) is an e2e llm orchestration framework that allows a number of versatile interactions."
+
+
+#### Higher level
+
+??? code "[Pytorch Lightning](https://lightning.ai/docs/pytorch/latest/) Enables model training with Pytorch and minimizes the boilerplate"
+
+    [Model parallelism](https://lightning.ai/docs/pytorch/stable/advanced/model_parallel.html)
+
+??? code "[Deep Speed (by MSFT)](https://github.com/microsoft/DeepSpeed) empowers ChatGPT-like model training with a single click, offering 15x speedup over SOTA RLHF systems with unprecedented cost reduction at all scales"
+    [Blog on Deepspeed Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
+    ![image](https://github.com/microsoft/DeepSpeed/raw/master/blogs/assets/images/ds-chat-overview.png)
+    
+    DeepSpeed-Ulysses uses a simple, portable, and effective methodology for enabling highly efficient and scalable LLM training with extremely long sequence lengths
+    "DeepSpeed-Ulysses partitions individual samples along the sequence dimension among participating GPU. Then right before the attention computation, it employs all-to-all communication collective on the partitioned queries, keys and values such that each GPU receives the full sequence but only for a non-overlapping subset of the attention heads. This allows the participating GPUs to compute attention for different attention heads in parallel. Finally, DeepSpeed-Ulysses employs another all-to-all to gather the results along the attention heads while re-partitioning along the sequence dimension."
+    ![Ulysses](https://github.com/microsoft/DeepSpeed/blob/master/blogs/deepspeed-ulysses/media/image3.png)
+    Tutorial [here](https://www.deepspeed.ai/tutorials/ds-sequence/)
+
+#### Fine Tuning
+
+!!! code "[LLM Finetuning Hub](https://github.com/georgian-io/LLM-Finetuning-Hub) is an evolving model finetuning codebase. "
+
+
 
 #### Others
 
