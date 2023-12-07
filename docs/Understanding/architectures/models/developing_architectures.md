@@ -3,12 +3,6 @@ Here we share novel and promising architectures that may supplement or supplant 
 ## Models
 
 
-!!! "[Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf) Uses inspiration from FFT to create a drop in replacement for Transformer models."
-    [Github implementation for PyTorch](https://github.com/lucidrains/MEGABYTE-pytorch)
-
-
-!!! tip "[Retentive Network: A successor to Transformer for Large Language Models](https://arxiv.org/pdf/2307.08621.pdf) Important LLM-like system using similar components that may help it to be more scaleable than `O(N^2)` memory and `O(N)` inference complexity."
-
 
 !!! tip "[Bayesian Flow Networks](https://arxiv.org/pdf/2308.07037.pdf) A new class of generative models for discrete and continuous data and generation"
 
@@ -22,3 +16,26 @@ Here we share novel and promising architectures that may supplement or supplant 
     <img width="688" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/fe79add1-6748-45d8-a187-1db22c74a185">
 
 
+### Structured State Space Sequence Models
+Structured state space sequence models are a class of models that generally combine RNNs, convolutions with inspiration from state-space methods.
+
+Well-known methods include: 
+
+!!! code "[Megabyte Github implementation for PyTorch](https://github.com/lucidrains/MEGABYTE-pytorch)"
+
+!!! code "[HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution](https://github.com/HazyResearch/hyena-dna) Uses inspiration from FFT to create a drop-in replacement for Transformer models."
+    [Paper for Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf)
+
+
+!!! tip "[Retentive Network: A successor to Transformer for Large Language Models](https://arxiv.org/pdf/2307.08621.pdf) Important LLM-like system using similar components that may help it to be more scaleable than `O(N^2)` memory and `O(N)` inference complexity."
+
+
+!!! code "[Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://github.com/state-spaces/mamba)"
+    Their method provides potential highly parallelized 
+    ![image](https://github.com/ianderrington/genai/assets/76016868/6be90c7e-a135-4a05-bd2b-cd4344b5a61e)
+    <img width="601" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a5db3865-79d3-4ea2-b729-ecd2b7afc9d5">
+
+- Linear Attention
+- H3
+- RWKV
+    [Paper](https://arxiv.org/pdf/2312.00752.pdf)
