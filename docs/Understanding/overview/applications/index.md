@@ -108,6 +108,10 @@ Here are a few fields where Gen()AI is already having formative impacts.
 
 ### Mathematics
 
+!!! tip "[Large Language Models for Mathematicians](https://arxiv.org/pdf/2312.04556.pdf)"
+
+    
+
 
 ### Healthcare
 
