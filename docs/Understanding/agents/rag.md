@@ -96,11 +96,13 @@ Query transformations can be done in several ways, including:
         ```
 
     ??? example "[Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models](https://arxiv.org/pdf/2310.06117.pdf)"
+   
         ![image](https://github.com/ianderrington/genai/assets/76016868/970df1c9-cdfc-4a9e-9dcf-f83944e6102c)
 
-3. **Question Rephrasing:** Particularly in chat settings, it's important to include all of the appropriate context to create an effective search query. 
+4. **Question Rephrasing:** Particularly in chat settings, it's important to include all of the appropriate context to create an effective search query. 
 
     ???+ example "[Rephrase question](https://smith.langchain.com/hub/langchain-ai/weblangchain-search-query)"
+   
         ```markdown
             Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
             
@@ -110,7 +112,7 @@ Query transformations can be done in several ways, including:
             Standalone Question:
         ```
 
-4. **Question Partitioning:** Some questions may require individual pieces of information to be found to answer the question. This means breaking the question apart into multiple pieces. 
+5. **Question Partitioning:** Some questions may require individual pieces of information to be found to answer the question. This means breaking the question apart into multiple pieces. 
 
 #### Routing
 
