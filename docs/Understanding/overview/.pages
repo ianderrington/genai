@@ -1,5 +1,6 @@
 nav:
-    - applications.md
+    - index.md
+    - use_cases.md
     - challenges.md
     - ...
     - extra_resources.md

@@ -22,3 +22,5 @@ cairosvg
 mkdocs-glightbox
 pypdf
 tiktoken
+langchain
+openai

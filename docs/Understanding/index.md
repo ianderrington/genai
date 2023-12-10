@@ -1,9 +1,9 @@
 !!! important "[tl;dr](#tldr)"
-    - Evaluate your [**application**](./overview/applications.md) and think of the [**challenges**](./overview/challenges.md) associated with it
+    - Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it
     - Understand the [**data**](./data/index.md) and collect data that you need.
     - [**Understandand build**](architectures/index.md) use [**pre-trained**](architectures/pre_trained_models.md) models.
     - [**Deploy**](../Using/deploying/index.md) your model
-    - [**Manage**](../Managen.ai/index.md) your model
+    - [**Manage**](../Managenai/index.md) your model
 
 Generative Artificial Intelligence, and related General AI and General Super AI are components of what already is and may be the future of intelligence and computing. We must effectively manage these technologies to use them to their highest potential. 
 
@@ -20,7 +20,6 @@ In the documents you read here, you will be able to see an increseasingly consis
 
 ## The base components of Gen()AI
 
-If you are new to this area, you may briefly peruse [applications](overview/applications.md) and [challenges](overview/challenges.md) associated with Gen()AI. 
 
 Getting into it, you will find the following outline: 
 
@@ -56,9 +55,9 @@ There is so much quality material, it would be valuable for your time to check s
     Important patterns mentioned (references to discussions herein):
     * [Evaluating and comparing](architectures/evaluating_and_comparing.md)
     * [Retreival Augmented Generation (RAG)](agents/rag.md)
-    * [Fine tuning](architectures/alignment.md#finetuning)
+    * [Fine tuning](architectures/optimization.md#finetuning)
     * [Caching](agents/memory.md#caching) to reduce latency. 
-    * [Guardrails](agents/interpreters.md#guardrails) to ensure output (and input) quality.
+    * [Guardrails](agents/chains.md#guardrails) to ensure output (and input) quality.
     * Data Flywheel to use data collection and feedback to improve model and experience
     * Cascade Breaking models up into smaller simpler tasks instead of big ones.
     * Monitoring to ensure value is being derived
@@ -76,9 +75,9 @@ Generative AI is a subset of machine learning that aim to creates new data sampl
 
 !!! tip "A little more advanced"
     - [Use Agents](agents/index.md) for increasingly powerful applications
-    - Optimize your model [performance](architectures/optimizing_hyper_parameters.md) and [serving](architectures/optimization.md)
+    - [Optimize](architectures/optimization.md) your model 
 
 In this section, we will focus on 'Understanding' the various components of GenAI, [data](./data/index.md), [models](./architectures/index.md) and [agents](./agents/index.md) including methods and models that are initial or under development. 
 
 !!! warning "Presentation bias"
-    This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managen.ai/contributing.md)
+    This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managenai/contributing.md)

@@ -104,6 +104,13 @@ They improve computation complexity in one of several ways:
 
 ### Computation Reduction
 
+??? code "[Simplified Transformers](https://github.com/bobby-he/simplified_transformers) that removes the 'value' parameter-set to increase speed by 14% with potentially minimal accuracy reduction"
+
+    Herein the authors reveal a variation of transformers that removes the 'value' parameter to yield notable speed gains at the same performance level. 
+    <img width="632" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/16a8b01d-10df-4188-addd-345128ba4156">
+    [Paper](https://arxiv.org/pdf/2311.01906.pdf)
+
+
 [SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](https://arxiv.org/pdf/2306.03078v1.pdf)
 
 ### Fine Tuning

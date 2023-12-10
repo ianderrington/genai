@@ -4,8 +4,9 @@ Here we will discuss the architectural components needed to build Gen()AI models
 
     - Understand [self-supervised learning](#self-supervised-learning)
     - Learn about [models](./models/index.md)
-    - [Optimize](optimization.md) your models
-
+    - [Pre-Train](./pre-training.md) your models
+    - 
+    - [Optimize](optimization.md) your models'
 
 ## Background 
 
@@ -84,5 +85,6 @@ Different [model classes](./models/index.md) of models can often be used with mu
 
 - [A Survey of Large Language Models](https://arxiv.org/pdf/2303.18223.pdf) A very comprehensive paper discussing LLM technology. 
 - [Understanding Large Language Models](https://magazine.sebastianraschka.com/p/understanding-large-language-models)
-- [ What we know about LLMS (primer)](https://willthompson.name/what-we-know-about-llms-primer)
+- [What we know about LLMS (primer)](https://willthompson.name/what-we-know-about-llms-primer)
 - [Catching up on the weird world of LLMs](https://simonwillison.net/2023/Aug/3/weird-world-of-llms/)
+- [LLM Engineering by Huyen Chip](https://huyenchip.com/2023/04/11/llm-engineering.html)

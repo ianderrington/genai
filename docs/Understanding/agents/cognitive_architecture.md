@@ -1,13 +1,14 @@
-Cognitive Architectures refer to systems or chain-patterns that are employed after discrete interactions with ah LLM. 
+Cognitive Architectures refer to systems or chain-patterns that are employed after discrete interactions with single or multiple LLMs. 
 
 
 ## Core themes
 
+- **Rephrasing** or reformatting the input in such a way that the next 
 - **Observing** or ingesting, intentionally or passively, gaining stored information that may assist in the tasks at hand. 
 - **Reasoning** or the ability to create causal connections between input and output. These are often taken care of at the level of the LLM. 
 - **Planning** to enable more complicated goals to be broken down into individually accomplishable tasks. May use external tools like memory to keep track of tasks.
 - **Deciding and prioritizing** to select between different options or available components
-- **Summarizing** to compress information into memory or t
+- **Summarizing and Abstracting** to compress information into reusable chunks or otherwise abstracting information to be more effective. 
 - **Logging + Remembering: Learning** being the automatic or initiated information storage and recall that is accessed in [memory](./memory.md)
 - **Reflection**, or an internal (or external) evaluation of output, be it thoughts, planing, and thoughts. 
 - **Tool use** While overlapping directly with Observing or taking memory-actions, tool-usage may be part of cognitive patterns (like `check task-list`) and must be considered as such. 
@@ -39,9 +40,73 @@ Here are some known thought structures that are improving agentic output.
 
 ## Linear thought chains
 
+
+??? important "[System 2 Attention (is something you might need too)](https://arxiv.org/abs/2311.11829)"
+
+    This helps to improve downstream model's ability to not suffer from irrelevent context, or judgement and preference in the 
+    original context, termed sycophancy they use an initial model to _remove_ unecessary context. They call it 'System 2 Attention'. 
+    Starting with instruction-tuned models that are 'proficient at reasoning and generation'. 
+    
+    They compare this to models that just use prompts like below to remove context in different manners:
+    ```markdown
+        Given the following text by a user, extract the part that is unbiased and not their opinion,
+        so that using that text alone would be good context for providing an unbiased answer to
+        the question portion of the text.
+        Please include the actual question or query that the user is asking. Separate this
+        into two categories labeled with “Unbiased text context (includes all content except user’s
+        bias):” and “Question/Query (does not include user bias/preference):”.
+        Text by User: [ORIGINAL INPUT PROMPT]
+    ```
+    With several evaluations, including one for [sycophancy](https://github.com/meg-tong/sycophancy-eval), and a few variations,
+    they show it can improve output even beyon Chain of Thought. 
+    
+
 ??? code "[ReAct](https://github.com/ysymyth/ReAct)"
     Effectively Observe, Think, Act, Repeat.
     [Paper](https://arxiv.org/abs/2210.03629) 
+
+??? tip "[Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models](https://arxiv.org/pdf/2310.06117.pdf) provides a solid improvement over scientific Q&A by first extracting fundamental principles in an initial multi-shotted prompt and then putting it into a subsequent multi-shotted prompt."
+    The authors find significant improvement over other methods.
+    <img width="941" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/8f79caa8-da02-4f34-8166-e08148dbd1e5">
+
+    <img width="949" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c23021bc-9c3e-4981-bf98-90fe95d2983a">
+
+    Here is the prompt they use to extract the first principles:
+    
+    ```markdown "MMLU Physics/Chemistry First-Principle Prompt"
+    You are an expert at Physics/Chemistry. You are given
+    a Physics/Chemistry problem. Your task is to extract the
+    Physics/Chemistry concepts and principles involved in solving
+    the problem. Here are a few examples:
+    Question: <Question Example1>
+    Principles Involved: <Principles Example1>
+    ...
+    Question: <Question Example5>
+    Principles Involved: <Principles Example5>
+    Question: <Question>
+    Principles Involved:
+    ```
+    
+    Here is the prompt they use to use the extracted first principles and generate a final answer:
+    
+    ```markdown "MMLU Physics/Chemistry Final Answer Prompt"
+    You are an expert at Physics/Chemistry. You are given a
+    Physics/Chemistry problem and a set of principles involved in
+    solving the problem. Solve the problem step by step by following the
+    principles. Here are a few examples:
+    Question: <Question Example1>
+    Principles: <Principles Example1>
+    Answer: <Answer Example1>
+    ...
+    Question: <Question Example5>
+    Principles: <Principles Example5>
+    Answer: <Answer Example5>
+    Question: <Question>
+    Principles: <Principles>
+    Answer:
+    ```
+
+
 
 ??? tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
     ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
@@ -50,10 +115,6 @@ Here are some known thought structures that are improving agentic output.
 
 ??? tip "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf)"
     
-
-
-
-
 
 ## Planning and Reflective
 ??? important "[Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation](https://arxiv.org/pdf/2310.02304v1.pdf)"
@@ -111,6 +172,42 @@ Here are some known thought structures that are improving agentic output.
     <img width="685" alt="image" src="https://github.com/ianderrington/general/assets/76016868/e3b9ed66-18a8-451b-b29a-09815d7791d1">
 
 ### Branching
+
+General manners of search. 
+<img width="565" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3025c425-4f12-4b50-8d23-33a6002fa2aa">
+
+
+??? important "[Toolchain*: Efficient Action Space Navigation in Large Language Models with A* Search](https://arxiv.org/pdf/2310.13227.pdf) provides an efficient tree guided-search algorithm that allows SOT performance"
+    
+    As opposed to other branching methods that allows for efficient exploration of action space, helping to find global optimization of a series of LLM calls.
+    It happsens in 3 general steps: 
+    
+    -  **Selection** from the highest quality frontier nodes $\F(\Tau)$ of tree $\Tau$, by choosing the node $n_next = arg min_{n\elem \F(\Tau)} f(n), given a cost-function oracle f(n) that provides the cost of the best plan of incorporating the $n$-th call into the chain. 
+    - **Expansion** to create the _fronteir_ nodes of up to k-potential actions for the next step can be sampled.  
+    - **Updating** the frontier nodes to repeat the process. 
+
+    The choice of the cost function is based on the $A^*$ algorithm, where $f(n) = g(n) + h(n)$ where $g(n)$ is the cost of the path from the start node, and $h(n)$ is a heuristic function that estimates the cheapest path from $n$ to the destination goal. 
+
+    Their choice of $g(n)$ is generally the sum of single-steps costs from ancestor nodes. More accurately they create a geometric sum of two different step value functions. 
+    
+    One step function is a _task-specific heuristic function_ that maximizes the longest-common subsequence score over other paths. The longest-common subsequence score finds the longest-common subsequence between plan $s_n$ and other plans $m_j$ and divides by the smaller of the two lengths of the paths $s_n$ and $m_j$. 
+
+    The other step function is a self-consistency frequency that takes an ensemble approach to generate the next steps. It calculates the number of actions that arrive at step n using non-semantically equivalent reasoning steps, divided by the number of k samples.  
+
+    Their choice of the future cost $h(n)$ is a multiplicative combination of a similar task-specific heuristic and an imagination score, enabled by an LLM. 
+    
+    The future task-specific heuristic calculates the average fractional position of action a found within all plans.
+
+    The imagination score directly queries the LLMs to imagine more concrete steps until target node $n_T$ and computing the ratio of the number of steps of the number between the current node n ancestors to the target node. The higher score 'suggests the imagined plan closely captures the path to the current step, indicating that fewer remaining steps are needed to accomplish the task in the imagination of LLMs. 
+    
+    <img width="276" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c544e5ae-10a0-4fa7-bb05-9fd607524096">
+    <img width="272" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a1b4af81-6769-458b-8b9d-c7474309477f">
+    <img width="275" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b66028d7-bb42-4c9c-887f-505262062f5f">
+
+
+
+    
+
 
 ??? tip "[Algorithm of Thoughts](https://arxiv.org/pdf/2308.10379.pdf) A general extension of Chain of Thought, similar to Graph of Thoughts"
 
@@ -293,6 +390,56 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
 ??? code "[Outlines](https://github.com/normal-computing/outlines) guides the model generation of next-token logits to guide the generation corresponding to regex / JSON and pydantic schema. compatible with all models."
 
     Also provides a way to functionalize templates to separate prompt logic.
+
+## Automated chain selection and discovery
+
+??? tip "[Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine](https://arxiv.org/pdf/2311.16452.pdf)"
+
+    - GPT4 + Simple Prompts (86.1, MedQA task) 
+    - GPT4 + Complex Prompts (90.2, MedQA task)
+    
+    The Authors use 'in context learning' (more like RAG) to identify prompting chains for specific problem sets that are 'winning'. 
+    
+    Their prompting strategies can efficiently steer GPT-4 to achieve top performance on medical problems (90% on MedQA dataset). 
+    
+    The winning composition of prompting strategies is fairly elaborate including multiple steps:
+    
+    1. Preprocessing Phase:
+    
+     - Iterate through each question in the training dataset.
+     - Generate an embedding vector for each question using a lightweight embedding model, such as OpenAI's text-embedding-ada-002.
+     - Use GPT-4 to generate a chain of thought and a prediction of the final answer.
+     - Compare the GPT-4 generated answer against the ground truth (correct answer).
+     - Store questions, their embedding vectors, chains of thought, and answers if the prediction is correct; otherwise, discard them.
+    
+    2. Inference Step:
+    
+     - Compute the embedding for the test question using the same embedding model as in preprocessing.
+     - Select the most similar examples from the preprocessed training data using k-Nearest Neighbors (kNN) and cosine similarity as the distance function.
+     - Format the selected examples as context for GPT-4.
+     - Repeat the following steps several times (e.g., five times as configured):
+     - Shuffle the answer choices for the test question.
+     - Prompt GPT-4 with the context and shuffled test question to generate a chain of thought and a candidate answer.
+     - Determine the final predicted answer by taking a majority vote of the generated candidate answers.
+    
+    Additional Details:
+    
+    - The strategy uses 5 kNN-selected few-shot exemplars and performs 5 parallel API calls in the ensemble procedure.
+    - Ablation studies suggest that increasing the number of few-shot exemplars and ensemble items can yield better performance.
+    - The general methodology of combining few-shot exemplar selection, self-generated chain-of-thought reasoning, and majority vote ensembling is not limited to medical texts and can be adapted to other domains and problem types.
+    
+    Limitations:
+    
+    - Assumes availability of training ground truth data needed for preprocessing steps
+    - Costs (multiple llm inference calls, latency). This will matter depending on use case and accuracy requirements 
+    - Problem Domain - this will work best for tasks that have a single valid objective answer
+
+    <img width="706" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b9319ec5-1d2c-42ad-92bd-3472d1e300a1">
+    <img width="713" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e1451fd-3ac9-4e6a-b440-123ed58dcc80">
+
+
+
+
 
 ## Chain Optimization
 

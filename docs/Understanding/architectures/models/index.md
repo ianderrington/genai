@@ -1,4 +1,9 @@
 
+
+While there is a great deal in several primary domains of Generative AI, Text, Image, sound, video, there are many other modalities that are of interest. Here we share prominent and interesting methods for these domains. These models will often rely on [tokenization](../../data/tokenizing.md). Once tokenized, the transformed projected in some way to an _embedding vector_ that can be used by  downstream LLM's, as well as vector-databases. 
+
+MANGEN: This entire document needs to be reorganized and revised. 
+
 ??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/abs/2307.09288) A nearly open source set of 7B-70B models with quality performance"
     <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
 
@@ -20,7 +25,6 @@
 
 ## Multi-Modal Models
 
-While there is a great deal in several primary domains of Generative AI, Text, Image, sound, video, there are many other modalities that are of interest. Here we share prominent and interesting methods for these domains. These models will often rely on [tokenization](../../data/tokenizing.md) and [embedding](../embedding.md) changes, but because they may impact the entire system we mention them here.
 
 ### Vision-Language Models
 Vision Language models are among the most prominent. 
@@ -64,15 +68,10 @@ TODO: Clip paper
     
     <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
 
-??? tip "[Shepherd: A Critic for Language Model Generation](https://arxiv.org/pdf/2308.04592.pdf) A 7B model trained to critique outputs"
-    
-    **Example chat response**
-    <img width="560" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c207939b-9bd7-4a20-b747-ea46d13534f7">
-
-
 
 ## To consider and sort
 
+MANGEN (This is a number of the things that need to be considered in reorganization)
 
 ### Self-supervised learning.
 - 

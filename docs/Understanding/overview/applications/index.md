@@ -67,7 +67,8 @@ Generative AI is increasingly good at translating between domains.
 
 ### Code Generation
 
-Very powerfully it can generate code to accomplish a task based on natural language input. This is very promising but still requires human oversight, due to the [challenge](./challenges.md) associated with using Automated AI systems without human input or oversight.
+Very powerfully it can generate code to accomplish a task based on natural language input. 
+This is very promising but still requires human oversight.
 
 - [Wizard Coding](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder)
 - [AutoPR](https://github.com/irgolic/AutoPR)
@@ -104,6 +105,12 @@ Here are a few fields where Gen()AI is already having formative impacts.
 
 ??? tip "[Emergent autonomous scientific research](https://arxiv.org/pdf/2304.05332.pdf)"
     <img width="658" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656">
+
+### Mathematics
+
+!!! tip "[Large Language Models for Mathematicians](https://arxiv.org/pdf/2312.04556.pdf)"
+
+    
 
 
 ### Healthcare

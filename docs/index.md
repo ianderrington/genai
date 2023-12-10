@@ -13,7 +13,7 @@ Our **open-source project** on [**Managing Generative AI**](https://www.managen.
 - [**Understanding GenAI**](./Understanding/index.md): Delve deep into the mechanics, models, and methodologies fo building GenAI.
 - [**Deploying GenAI**](./Using/deploying/index.md): Learn how to build and deploy models.
 - [**Using GenAI**](./Using/index.md): Where we describe use cases and applications, commercial tools and applications, and the ethics and regulations surrounding GenAI.
-- [**Managing GenAI**](./Managen.ai/index.md): This is the heart of our project, where we describe the tools that we are building to enable quality, and responsible development of this and other AI-projects.
+- [**Managing GenAI**](./Managenai/index.md): This is the heart of our project, where we describe the tools that we are building to enable quality, and responsible development of this and other AI-projects.
 
 ## 🚀 GenAI Explaining Itself?
 
@@ -29,5 +29,5 @@ We believe in Gen()AI's potential to effecively **explain itself** even as the t
 If you're as excited as we are and wish to contribute, join us!
 
 !!! hint "Contribute"
-    Interested in contributing? Check out our [**guidelines**](Managen.ai/contributing.md) to get started.
+    Interested in contributing? Check out our [**guidelines**](Managenai/contributing.md) to get started.
 
