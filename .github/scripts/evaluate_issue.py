@@ -46,7 +46,7 @@ def main(issue_number, issue_text, directory):
     # must use the format above instead of set-output
     
     # print(f"echo \"label='{label}'\" >> \"$GITHUB_OUTPUT\"")
-    print(f"\"label='{label}'\"")
+    print(f"\"label={label}\"")
     
 
 if __name__ == "__main__":
