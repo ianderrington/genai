@@ -18,12 +18,13 @@ def find_keywords(directory, keywords):
                     for keyword in keywords:
                         if keyword in file_content:
                             matches.append(file)
-                            print(f"Match found in {file_path} for keyword '{keyword}'")
+                            # print(f"Match found in {file_path} for keyword '{keyword}'")
             except UnicodeDecodeError:
                 pass
                 ##print(f"Skipping non-text or non-UTF-8 encoded file: {file_path}")
             except Exception as e:
-                print(f"Error reading file {file_path}: {e}")
+                pass
+                # print(f"Error reading file {file_path}: {e}")
     return matches
 
 
