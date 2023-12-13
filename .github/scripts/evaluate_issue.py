@@ -36,7 +36,7 @@ def main(issue_number, issue_text, directory):
     else:
         keyword_matches = find_keywords(directory, keywords)
         if keyword_matches:
-            label = "To Be Included"
+            label = "IncludeInDocs"
 
     # Output for GitHub Actions
     # print(f"::set-output name=label::{label}")
