@@ -39,7 +39,12 @@ def main(issue_number, issue_text, directory):
             label = "'To Be Included'"
 
     # Output for GitHub Actions
-    print(f"::set-output name=label::{label}")
+    # print(f"::set-output name=label::{label}")
+    # run: echo "{name}={value}" >> $GITHUB_STATE
+    # must use the format above instead of set-output
+    
+    print(f"run: echo \"label={label}\" >> $GITHUB_STATE")
+    
 
 if __name__ == "__main__":
     issue_number = sys.argv[1]
