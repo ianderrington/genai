@@ -43,7 +43,7 @@ def main(issue_number, issue_text, directory):
     # run: echo "{name}={value}" >> $GITHUB_STATE
     # must use the format above instead of set-output
     
-    print(f"run: echo \"label={label}\" >> $GITHUB_STATE")
+    print(f"echo \"label={label}\" >> $LABEL_TO_ADD")
     
 
 if __name__ == "__main__":
