@@ -28,9 +28,8 @@ jobs:
 
       - name: Run issue evaluation script
         id: evaluate_issue
-        run: 
-          run: `python .github/scripts/evaluate_issue.py ${{ github.event.issue.number }} ${{ github.event.issue.body }}`
-        # run: echo "label='To Be Included'" >> "$GITHUB_OUTPUT"
+        # run: python .github/scripts/evaluate_issue.py ${{ github.event.issue.number }} ${{ github.event.issue.body }}
+        run: echo "label='To Be Included'" >> "$GITHUB_OUTPUT"
 
   label:
     if: contains(fromJson('["ianderrington"]'), github.actor)
