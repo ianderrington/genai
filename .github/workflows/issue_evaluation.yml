@@ -28,8 +28,9 @@ jobs:
 
       - name: Run issue evaluation script
         id: evaluate_issue
-        # run: python .github/scripts/evaluate_issue.py ${{ github.event.issue.number }} ${{ github.event.issue.body }}
-        run: echo "label='To Be Included'" >> "$GITHUB_OUTPUT"
+        run: 
+          run: python .github/scripts/evaluate_issue.py ${{ github.event.issue.number }} ${{ github.event.issue.body }}
+        # run: echo "label='To Be Included'" >> "$GITHUB_OUTPUT"
 
   label:
     if: contains(fromJson('["ianderrington"]'), github.actor)
@@ -39,6 +40,7 @@ jobs:
       - name: Label Issue
         env:
           LABEL: ${{ needs.evaluate.outputs.label }} 
+          GH_TOKEN: ${{ github.token }}
         run: gh issue edit ${{github.event.issue.number}} --add-label $LABEL
         # env:
         #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
