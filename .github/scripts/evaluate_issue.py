@@ -36,14 +36,15 @@ def main(issue_number, issue_text, directory):
     else:
         keyword_matches = find_keywords(directory, keywords)
         if keyword_matches:
-            label = "'To Be Included'"
+            label = "To Be Included"
 
     # Output for GitHub Actions
     # print(f"::set-output name=label::{label}")
     # run: echo "{name}={value}" >> $GITHUB_STATE
+    # https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
     # must use the format above instead of set-output
     
-    print(f"echo \"label={label}\" >> $LABEL_TO_ADD")
+    print(f"echo \"label={label}\" >> \"$LABEL_TO_ADD\"")
     
 
 if __name__ == "__main__":
