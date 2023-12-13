@@ -16,8 +16,7 @@ Layer normalization observably improves results [On Layer Normalization in the T
 ??? tip "[The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)"
 
 
-??? tip "[The Transformer Blueprint: A Holistic Guide to the Transformer Neural Network Architecture](https://deeprevision.github.io/posts/001-transformer/)
-    A thorough exposition of transformer technology."
+??? tip "[The Transformer Blueprint: A Holistic Guide to the Transformer Neural Network Architecture](https://deeprevision.github.io/posts/001-transformer/) provides q thorough exposition of transformer technology."
 
 
 
@@ -65,12 +64,14 @@ In its vanilla state, Transformers are $O(N^2)$ in their computation with self-c
 Improvements in context length, for both training and generation have found ways to generally work-around these limits. While there is ample research in this domain, we present a few of the most successful methods.
 They improve computation complexity in one of several ways:
 
-* Introducing sparsity that is
-  - Banded or fixed
-  -  Hierarchical
-  -  Banded to reduce full computation
-  -  $/Lambda$ shaped with a banded window that also takes into account observably important first tokens.
-* Inclusion of a recurrent RNN-style that permits memory to be retained. 
+- Introducing sparsity that is
+    - Banded or fixed
+    - Hierarchical
+    - Banded to reduce full computation
+    - $/Lambda$ shaped with a banded window that also takes into account observably important first tokens.
+
+- Inclusion of a recurrent RNN-style that permits memory to be retained.
+- Memory retrieval systems.  
 
 ??? code "[Generating Long Sequences with Sparse Transformers](https://arxiv.org/pdf/1904.10509.pdf) provides simple solutions to generate longer sequences."
     <img width="662" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/86d4dc29-7711-490d-a2a8-99c4a4d34027">
@@ -87,6 +88,9 @@ They improve computation complexity in one of several ways:
     MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration that allows for $O(N^{4/3}$ scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers.
 
     <img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356">
+    
+    An open source version made by `lucidrains`: [Megabyte Github implementation for PyTorch](https://github.com/lucidrains/MEGABYTE-pytorch)
+
 
 ??? code "[Infinite Former](https://github.com/deep-spin/infinite-former) Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions."
     [Paper](https://arxiv.org/pdf/2109.00301.pdf)  
@@ -100,6 +104,8 @@ They improve computation complexity in one of several ways:
 ??? code "[Efficient Streaming Language Models with Attention Sinks](https://github.com/mit-han-lab/streaming-llm)"
     [Paper](https://arxiv.org/abs/2309.17453)
     ![image](https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a)
+
+
 
 
 ### Computation Reduction

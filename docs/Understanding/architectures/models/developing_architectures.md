@@ -21,7 +21,6 @@ Structured state space sequence models are a class of models that generally comb
 
 Well-known methods include: 
 
-!!! code "[Megabyte Github implementation for PyTorch](https://github.com/lucidrains/MEGABYTE-pytorch)"
 
 !!! code "[HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution](https://github.com/HazyResearch/hyena-dna) Uses inspiration from FFT to create a drop-in replacement for Transformer models."
     [Paper for Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf)
