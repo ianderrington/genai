@@ -45,7 +45,8 @@ def main(issue_number, issue_text, directory):
     # https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
     # must use the format above instead of set-output
     
-    print(f"echo \"label='{label}'\" >> \"$GITHUB_OUTPUT\"")
+    # print(f"echo \"label='{label}'\" >> \"$GITHUB_OUTPUT\"")
+    print(f"\"label='{label}'\"")
     
 
 if __name__ == "__main__":
