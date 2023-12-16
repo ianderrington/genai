@@ -1,8 +1,7 @@
 Here we share novel and promising architectures that may supplement or supplant other presently established models.
 
+
 ## Models
-
-
 
 !!! tip "[Bayesian Flow Networks](https://arxiv.org/pdf/2308.07037.pdf) A new class of generative models for discrete and continuous data and generation"
 

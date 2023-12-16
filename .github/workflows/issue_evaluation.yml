@@ -43,9 +43,6 @@ jobs:
           LABEL: ${{ needs.evaluate.outputs.label }} 
           GH_TOKEN: ${{ github.token }}
         run: gh issue edit ${{github.event.issue.number}} --add-label $LABEL
-        # env:
-        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # run: gh issue edit ${{ github.event.issue.number }} --add-label ${{ needs.evaluate.outputs.label }}
 
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idoutputs
 # here is the appropriate syntax for referencing outputs from other jobs:

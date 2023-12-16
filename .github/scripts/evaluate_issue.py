@@ -5,7 +5,8 @@ import json
 
 def has_url(text):
     url_regex = r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
-    return re.search(url_regex, text) is not None
+    
+    return re.search(url_regex, text.lower()) is not None
 
 def find_keywords(directory, keywords):
     matches = []
@@ -29,19 +30,19 @@ def find_keywords(directory, keywords):
 
 
 def main(issue_number, issue_text, directory):
-    keywords = ["example_keyword_1", "example_keyword_2"]  # Define your keywords here
-    label = "Human Insight Required"
+    keywords = ['includeindocs']  # Define your keywords here
+    label = "HumanInsightRequired"
 
     if has_url(issue_text):
-        label = "URL present"
+        label = "IncludeInDocs"
     else:
         keyword_matches = find_keywords(directory, keywords)
         if keyword_matches:
             label = "IncludeInDocs"
 
     # Output for GitHub Actions
-    # print(f"::set-output name=label::{label}")
-    # run: echo "{name}={value}" >> $GITHUB_STATE
+    
+    # python {output} "{name}={value}" >> $GITHUB_STATE
     # https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
     # must use the format above instead of set-output
     
