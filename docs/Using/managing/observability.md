@@ -1,4 +1,4 @@
-Understanding and enhancing Generative AI hinges largely on comprehensive monitoring and observability of the AI model's performance and its numerous operational parameters. In this light, observability refers to the capacity to examine and understand the inner workings of generative models, while closely monitoring their output quality. 
+Understanding and enhancing Generative AI hinges largely on comprehensive monitoring and observability of the AI model's performance and its numerous operational parameters. In this light, observability refers to the capacity to examine and understand the inner workings of generative models, while closely monitoring their output quality.
 
 ## Exploring Model and Infrastructure Performance Monitoring
 ### Observing the Model
@@ -28,4 +28,4 @@ Monitoring the speed at which a model infers results can aid in optimizing its e
 
 !!! example "[E2B's](https://github.com/e2b-dev/e2b) integration in AI agent technology stacks opens up new avenues, where it comfortably sits at the bottom, and is agnostic to the framework it operates in."
 
-!!! example "[llmonitor](https://github.com/llmonitor/llmonitor) provides self-hosted model monitoring for costs/users/requrets, feedback, etc..." 
+!!! example "[llmonitor](https://github.com/llmonitor/llmonitor) provides self-hosted model monitoring for costs/users/requrets, feedback, etc..."

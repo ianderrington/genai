@@ -1,4 +1,4 @@
-Because of potential pitfalls with Generative AI technology, it is essential to evaluate, compare, and test models such that they meet the indendent requirements. 
+Because of potential pitfalls with Generative AI technology, it is essential to evaluate, compare, and test models such that they meet the indendent requirements.
 
 Below are some tools that you can use to help with this!
 
@@ -9,7 +9,7 @@ Below are some tools that you can use to help with this!
     <img width="817" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/40b280b6-749e-49fd-8e72-3b51c38d06b9">
 
 ??? code "[Arthur.ai Bench](https://github.com/arthur-ai/bench) Bench is a tool for evaluating LLMs for production use cases. "
-    
+
     ![image](https://github.com/ianderrington/genai/assets/76016868/377d86c7-9ebf-4828-8e6a-582b86a499f9)
     ![image](https://github.com/ianderrington/genai/assets/76016868/081f14b5-f2b7-47e6-985b-a886ed66eaf1)
 
@@ -24,8 +24,8 @@ Below are some tools that you can use to help with this!
 
 ??? code tip "[Identifying the Risks of LM Agents with an LM-Emulated Sandbox](https://arxiv.org/pdf/2309.15817.pdf)"
     Where in their [paper](https://arxiv.org/pdf/2309.15817.pdf) they demonstrate an emulation container to evaluate the safety of an Agent.
-    
-    <img width="1198" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/48305f8b-7d79-4c36-b731-2aacd035fa49">   
+
+    <img width="1198" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/48305f8b-7d79-4c36-b731-2aacd035fa49">
 
 ??? code tip "[AgentBench: Evaluating LLMs as Agents](https://github.com/THUDM/AgentBench)"
     A comprehensive 8-environment evaluation for different agents from different models.

@@ -1,12 +1,12 @@
 # Deploying AI Models: Backend Considerations
 
-Deploying AI models involves a variety of considerations, especially when it comes to backend infrastructure. The backend is the engine that powers your AI application, handling the complex computations and data processing that your models require. When setting up your backend, you need to consider factors such as latency, model availability, and compute resources. 
+Deploying AI models involves a variety of considerations, especially when it comes to backend infrastructure. The backend is the engine that powers your AI application, handling the complex computations and data processing that your models require. When setting up your backend, you need to consider factors such as latency, model availability, and compute resources.
 
-- **Latency**: This refers to the delay between a user's action and the system's response. In AI applications, low latency is crucial for a smooth user experience. 
+- **Latency**: This refers to the delay between a user's action and the system's response. In AI applications, low latency is crucial for a smooth user experience.
 
 - **Model Performance**: Your AI model should be readily available to process requests to the quality needed by your end user. If it doesn't give sufficiently reopted. asonable results, then it will not be ad
 
-- **Compute Resources**: AI models, especially large ones, require significant computational resources. You need to ensure that your backend has enough processing power and memory to handle your model's requirements. 
+- **Compute Resources**: AI models, especially large ones, require significant computational resources. You need to ensure that your backend has enough processing power and memory to handle your model's requirements.
 
 For more information on compute resources, refer to our [computation guide](computation.md).
 

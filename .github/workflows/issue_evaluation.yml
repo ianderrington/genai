@@ -11,7 +11,7 @@ jobs:
     permissions:
       issues: write
       contents: read
-    outputs: 
+    outputs:
       label: ${{ steps.evaluate_issue.outputs.label }}
 
     steps:
@@ -35,12 +35,12 @@ jobs:
     if: contains(fromJson('["ianderrington"]'), github.actor)
     runs-on: ubuntu-latest
     needs: evaluate
-    steps: 
+    steps:
       - name: Checkout repository
         uses: actions/checkout@main
       - name: Label Issue
         env:
-          LABEL: ${{ needs.evaluate.outputs.label }} 
+          LABEL: ${{ needs.evaluate.outputs.label }}
           GH_TOKEN: ${{ github.token }}
         run: gh issue edit ${{github.event.issue.number}} --add-label $LABEL
 

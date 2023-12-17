@@ -3,7 +3,7 @@ https://cloud.google.com/blog/transform/introducing-executives-guide-to-generati
 
 
 ##Domains
-### Security 
+### Security
 https://lsvp.com/securing-ai-is-the-next-big-platform-opportunity/
 
 ## Business Trends

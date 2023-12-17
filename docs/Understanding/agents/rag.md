@@ -59,7 +59,7 @@ Once data has been loaded in a way that a model can process it, it must be split
 
 ### Embedding Data
 
-Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). See blog: 
+Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). See blog:
 https://blog.langchain.dev/semi-structured-multi-modal-rag/…
 
 ### Storing Data
@@ -68,9 +68,9 @@ The embedded data is stored for future retrieval and use.
 
 ### Retrieving Data
 
-The decision and act to retrieve the documents will depend on the additional contexts that the agents may need to be aware of. 
+The decision and act to retrieve the documents will depend on the additional contexts that the agents may need to be aware of.
 
-It might not always be necessary to retrieve documents. When it is necessary to retrieve the document, it is important to know where to retrieve from [routing](#routing), and then [matching](#matching) the query to the appropriately stored information. Both of these may involve [rewriting](#query-transformations) the prompt to be more effective in the manner the data is retrieved. 
+It might not always be necessary to retrieve documents. When it is necessary to retrieve the document, it is important to know where to retrieve from [routing](#routing), and then [matching](#matching) the query to the appropriately stored information. Both of these may involve [rewriting](#query-transformations) the prompt to be more effective in the manner the data is retrieved.
 
 #### Query Transformations
 
@@ -79,7 +79,7 @@ Query transformations can be done in several ways, including:
 1. **Rewrite-Retrieve-Read:** This approach involves rewriting the query for better retrieval and reading of the relevant documents.
 
     ??? important "[Query Rewriting for Retrieval-Augmented Large Language Models](https://arxiv.org/pdf/2305.14283.pdf)"
-    
+
         <img width="630" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b518994c-a419-4cc3-b065-065c0ca625d1">
 
 2. **Step Back Prompting:** This method generates an intermediate context that helps to 'abstract' the information. Once generated, the additional context can be used.
@@ -87,32 +87,32 @@ Query transformations can be done in several ways, including:
     ???+ example "[Step back](https://smith.langchain.com/hub/langchain-ai/stepback-answer)"
         ```markdown
         You are an expert of world knowledge. I am going to ask you a question. Your response should be comprehensive and not contradicted with the following context if they are relevant. Otherwise, ignore them if they are not relevant.
-        
+
         {normal_context}
         {step_back_context}
-        
+
         Original Question: {question}
         Answer:
         ```
 
     ??? example "[Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models](https://arxiv.org/pdf/2310.06117.pdf)"
-   
+
         ![image](https://github.com/ianderrington/genai/assets/76016868/970df1c9-cdfc-4a9e-9dcf-f83944e6102c)
 
-4. **Question Rephrasing:** Particularly in chat settings, it's important to include all of the appropriate context to create an effective search query. 
+4. **Question Rephrasing:** Particularly in chat settings, it's important to include all of the appropriate context to create an effective search query.
 
     ???+ example "[Rephrase question](https://smith.langchain.com/hub/langchain-ai/weblangchain-search-query)"
-   
+
         ```markdown
             Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
-            
+
             Chat History:
             {chat_history}
             Follow Up Input: {question}
             Standalone Question:
         ```
 
-5. **Question Partitioning:** Some questions may require individual pieces of information to be found to answer the question. This means breaking the question apart into multiple pieces. 
+5. **Question Partitioning:** Some questions may require individual pieces of information to be found to answer the question. This means breaking the question apart into multiple pieces.
 
 #### Routing
 
@@ -120,11 +120,11 @@ Queries may need to be routed to different data sources depending on what is bei
 
 #### Matching
 
-Matching involves aligning the query with the appropriately stored information. 
+Matching involves aligning the query with the appropriately stored information.
 
 ### Generating
 
-The final step is generating an output using a prompt that integrates the query and retrieved data. 
+The final step is generating an output using a prompt that integrates the query and retrieved data.
 
 ## Other Topics
 
@@ -134,5 +134,5 @@ The final step is generating an output using a prompt that integrates the query 
 
 ## Tutorials and Blogs
 
-- [Langchain Question Answering](https://python.langchain.com/docs/use_cases/question_answering/) 
+- [Langchain Question Answering](https://python.langchain.com/docs/use_cases/question_answering/)
 - [RAG demystified](https://github.com/pchunduri6/rag-demystified/blob/main/complex_qa.py)

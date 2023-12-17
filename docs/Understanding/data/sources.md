@@ -34,7 +34,7 @@ The largest open source text dataset just dropped
     The largest open curated dataset for pretraining.
 
     -----
-    
+
     • Link: https://huggingface.co/datasets/allenai/dolma
     • Blog: https://blog.allenai.org/dolma-3-trillion-tokens-open-llm-corpus-9a0ff4b8da64
     • Code: https://github.com/allenai/dolma

@@ -1,6 +1,8 @@
-# Contributing
 
-We welcome contributions to this project! Here are some guidelines to follow:
+
+Thank you for considering contributioning to help Manage Generative AI. 
+
+Here are some guidelines to follow:
 
 ## Reporting Bugs
 
@@ -21,7 +23,7 @@ We also welcome enhancement suggestions! [Open a GitHub issue](https://github.co
 - An overview of how it could be implemented
 - Any examples or mockups if applicable
 
-This will allow us to have a discussion on if and how the enhancement should be implemented. 
+This will allow us to have a discussion on if and how the enhancement should be implemented.
 
 ## Pull Requests
 
@@ -29,10 +31,19 @@ If you would like to directly contribute code:
 
 1. Fork the repository
 2. Create a new branch from `main` for your feature or bug fix
-3. Make your changes, test thoroughly, and update documentation if needed   
-4. Submit a pull request against the `main` branch explaining your changes
+3. Make your changes.
+    - Note: If code has been created, where possible please write tests to ensure it functions according to desired outcomes. thoroughly.
+
+    Before pushing, please run the following:
+    
+    ```bash
+    pre-commit run --all-files
+    ```
+
+4. Submit a pull request against the `main` branch, following the templated requirements. 
 
 A few notes:
+
 - Try to keep PRs small and focused on a single change
 - Make sure all tests are passing and new tests are added if needed
 - Follow the existing code style and conventions
@@ -40,4 +51,6 @@ A few notes:
 
 Thanks for helping make this project better!
 
-NOTE: Generated with Cody (likely using GPT 3.5)
+
+
+

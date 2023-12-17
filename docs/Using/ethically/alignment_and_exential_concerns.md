@@ -1,9 +1,9 @@
-TODO: This section needs complete remodeling. 
+TODO: This section needs complete remodeling.
 
-There is a notable degree of concern for the potential for Generative, and eventually General AI, to cause harm. The harm can occur either accidentally or to the intentional use of GenAI. 
+There is a notable degree of concern for the potential for Generative, and eventually General AI, to cause harm. The harm can occur either accidentally or to the intentional use of GenAI.
 
-There is also self-existential concerns related to GenAI models themselves. This is found due to the potential that when models are trained on data that is produced by other 
-models, there can be a degradation in performance, known as _model collapse_. 
+There is also self-existential concerns related to GenAI models themselves. This is found due to the potential that when models are trained on data that is produced by other
+models, there can be a degradation in performance, known as _model collapse_.
 
 ## Background
 
@@ -21,4 +21,3 @@ models, there can be a degradation in performance, known as _model collapse_.
 ## Alignment with GenAI
 
 - [Model Collapse Explained](https://www.techtarget.com/whatis/feature/Model-collapse-explained-How-synthetic-training-data-breaks-AI?Offer=abt_pubpro_AI-Insider)
-

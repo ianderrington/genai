@@ -1,14 +1,14 @@
-Agent memory is considered a state associated with a llm-call and effects the ability of LLM to respond, thereby helping to enable agentic ability. Memory augmented models enhance the capabilities of language models by ___ to improve their performance and efficiency. TODO: Read trillions of tokens paper. 
+Agent memory is considered a state associated with a llm-call and effects the ability of LLM to respond, thereby helping to enable agentic ability. Memory augmented models enhance the capabilities of language models by ___ to improve their performance and efficiency. TODO: Read trillions of tokens paper.
 
 ## Memory Considerations
 
-Memory plays a crucial role in enhancing the efficiency of information recall and routing for different chains and agent interactions. 
+Memory plays a crucial role in enhancing the efficiency of information recall and routing for different chains and agent interactions.
 
 In systems comprising Agents (and People), _conversation buffers_ may be employed to keep track of information. These buffers, can be 'private',  can facilitate communication between any agents, storing response stacks that include agent-environment interactions.
 
 For text-based memory can consist of perfect text record or compressed summaries, that may or may not follow some form of memory-schema.
 
-Memory can be pushed (into prompt templates) and requested (based on GET memory requests from an LLM agent). 
+Memory can be pushed (into prompt templates) and requested (based on GET memory requests from an LLM agent).
 
 
 
@@ -26,7 +26,7 @@ Parsed information routing involves directing parsed or processed information to
 
 ## Implementations
 
-Memory implementations can be based on memory types serialized and stored in many ways. Semantic searches can happen by looking at similar embeddings. 
+Memory implementations can be based on memory types serialized and stored in many ways. Semantic searches can happen by looking at similar embeddings.
 
 These can be global or private, and structured inside agent classes or inside system message boards. They can be 'limited' or 'unlimited' (within appropriately established allocation limits). They can be in memory and stored on disk or in the cloud. They allow informaion to be routed at the appropriate time, and 'skipped' if necessary to work within context-window limitations.
 
@@ -36,10 +36,10 @@ Memory implementations can vary based on the type of memory used, and how it's s
 
 ### Vector databases
 
-Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milvus, and ScaNN, use embeddings to create query vector databases. These databases allow for efficient semantic searches. 
+Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milvus, and ScaNN, use embeddings to create query vector databases. These databases allow for efficient semantic searches.
 
 !!! example "Example vector databases"
-    
+
     Please read this for more information  [Vector Databases (primer by Pinecone.io)](https://www.pinecone.io/learn/vector-database/)
 
     - https://github.com/Helicone/helicone
@@ -47,11 +47,11 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
 ### Traditional databases
 
-Databases that rely on query-languages such as SQL or non-SQL based databases, or even 'csv-type' information stores can be accessed and generated using agents. 
+Databases that rely on query-languages such as SQL or non-SQL based databases, or even 'csv-type' information stores can be accessed and generated using agents.
 
 The models may generate queries that can be executed by by an interpreter, though it is not guaranteed that the queries will be accurate. [TODO: Find reference](some_reference_on_LLM_SQL)
 
-!!! references 
+!!! references
     For more information on memory implementations and caching, refer to the following resources:
 
     - [Langchain `memory`](https://python.langchain.com/docs/modules/memory/)

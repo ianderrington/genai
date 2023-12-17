@@ -1,8 +1,8 @@
-Prompts detail the manner in which a Generative AI model should be producing output. Constructing the prompts to be the most effective in obtaining desired output is known as prompt engineering (PE). While PE may have dependencies on the underlying models, there are strategies that can be more universal in their ability to do well. 
+Prompts detail the manner in which a Generative AI model should be producing output. Constructing the prompts to be the most effective in obtaining desired output is known as prompt engineering (PE). While PE may have dependencies on the underlying models, there are strategies that can be more universal in their ability to do well.
 
-Because often an individual query or generation may be insufficient to produce the desired outputs, it may be necessary to use [cognitive architectures](../agents/cognitive_architecture.md) as part of [chains](../agents/chains.md). Here, we describe one-shot prompting methods, may function without multiple LLM-calls. 
+Because often an individual query or generation may be insufficient to produce the desired outputs, it may be necessary to use [cognitive architectures](../agents/cognitive_architecture.md) as part of [chains](../agents/chains.md). Here, we describe one-shot prompting methods, may function without multiple LLM-calls.
 
-It is also important to note, that while [manual methods](#manual-methods) are essential and may continue, [automatic methods](#automatic-methods) have become common and may help to reduce burdens of identifying sufficiently optimal prompts for certain models and situations. 
+It is also important to note, that while [manual methods](#manual-methods) are essential and may continue, [automatic methods](#automatic-methods) have become common and may help to reduce burdens of identifying sufficiently optimal prompts for certain models and situations.
 
 
 ## Manual Methods
@@ -15,11 +15,11 @@ It is also important to note, that while [manual methods](#manual-methods) are e
 - Generate many outputs, and then use the model to pick the best one
 - Fine-tune custom models to maximize performance
 - Provide several examples to ground it.
-  -  Good to evaluate this and see if input examples give expected scores. Modify the prompt if it isn't. 
+  -  Good to evaluate this and see if input examples give expected scores. Modify the prompt if it isn't.
 - Consider prompt versioning to keep track of outputs more easily.
 - Break prompts into smaller prompts
 - Chain of Thought Prompting
-- Generate many outputs and pick final one or use LLM to pick best one. 
+- Generate many outputs and pick final one or use LLM to pick best one.
 
 ### Important concepts
 
@@ -54,12 +54,12 @@ It is also important to note, that while [manual methods](#manual-methods) are e
     <img width="922" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cc0baed2-8331-4a17-8087-99b675261d5a">
     <img width="807" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e1e83d4b-09d3-4131-9f7a-0d6c71211ef9">
 
-??? hint "[Language Models as Optimizers](https://arxiv.org/pdf/2309.03409.pdf) reveals that starting with take a deep breath and work on this problem step by step... Yields better result!" 
+??? hint "[Language Models as Optimizers](https://arxiv.org/pdf/2309.03409.pdf) reveals that starting with take a deep breath and work on this problem step by step... Yields better result!"
     Prompt optimization using language that helps people, helps LLMs too! [Pop Article](https://arstechnica.com/information-technology/2023/09/telling-ai-model-to-take-a-deep-breath-causes-math-scores-to-soar-in-study/amp/)
     More importantly, they developed
-    ``` 
+    ```
     "Optimization by PROmpting (OPRO), a simple and effective approach to leverage large language models (LLMs)
-    as optimizers, where the optimization task is described in natural language"  
+    as optimizers, where the optimization task is described in natural language"
     ```
     to optimize prompts:
     <img width="418" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b82fd195-db43-48bb-9014-f5395329aa9a">
@@ -82,9 +82,9 @@ It is also important to note, that while [manual methods](#manual-methods) are e
             ...
         ]
     ```
-    
+
     ![image](https://github.com/ianderrington/genai/assets/76016868/f02a9f3e-4f4c-49de-9b35-1702df65d618)
-  
+
 
 
 
@@ -96,7 +96,7 @@ It is also important to note, that while [manual methods](#manual-methods) are e
 
 !!! tip "[Techniques to improve reliability](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md#how-to-improve-reliability-on-complex-tasks) By OpenAI"
 
-- [A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/pdf/2302.11382.pdf) 
+- [A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/pdf/2302.11382.pdf)
 - [LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide) based on [paper](https://arxiv.org/abs/2304.13712).
 - [Prompting Guide](https://www.promptingguide.ai/)
 
@@ -114,19 +114,19 @@ It is also important to note, that while [manual methods](#manual-methods) are e
 
 ### Tools and Services
 - [Notion.io plugin](https://haonmade.gumroad.com/l/ozuvb)
-- [PROMPT generator](https://huggingface.co/spaces/merve/ChatGPT-prompt-generator) To save a few words by just entering a persona and gives prompt output. 
+- [PROMPT generator](https://huggingface.co/spaces/merve/ChatGPT-prompt-generator) To save a few words by just entering a persona and gives prompt output.
 - [Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
 - [Scale spellbook](scale.com/spellbook)
 
 
 ### Prompt tuning
 
-Uses a layer to not change prompts but change the embedding of the prompts. 
+Uses a layer to not change prompts but change the embedding of the prompts.
 - [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/abs/2104.08691)
 Boosted Prompting: few shot prompts that progressively solve more of the problem.
 
 ## Prompt and optimization
-- [Large Language Models Can Self Improve](https://arxiv.org/pdf/2210.11610.pdf) Using Chain of thought to provide better examples and then fine-tune the LLM. 
+- [Large Language Models Can Self Improve](https://arxiv.org/pdf/2210.11610.pdf) Using Chain of thought to provide better examples and then fine-tune the LLM.
 - [Refiner](https://arxiv.org/pdf/2304.01904.pdf) Iteratively improves itself based on an LLM critic
 <img width="713" alt="image" src="https://github.com/ianderrington/general/assets/76016868/3ac44e13-2444-4f1e-ae3b-800c9d32ce59">
 

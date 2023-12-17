@@ -1,4 +1,38 @@
 
+To go beyond, we will be using Generative AI to create and expand. There are several 'stages' that may be considered. 
+
+1. Manual, and automated use of GenAI to [improve and refine](#improve_and_refine_content) content already present. 
+1. Automatic triggering of GenAI to [incorporate new](#incorporate) content coming from external inputs. 
+1. Searching for external inputs based on appropriate information feeds. 
+1. Responsive Chatty AI Oracle that will be 
+1. Agentic AI Oracle that will implement the solutions, or outline solutions for you to be implemented to achieve your goals. 
+
+### Improve and refine content
+
+
+### Incorporate new content
+
+```mermaid "Issue Updated"
+flowchart TD
+    A[Start: Issue Update Triggered] --> B{KG Node Updated?}
+    B -- Yes --> C[Parse KG for Vector Embedding Contents]
+    B -- No --> I[End: No Update Needed]
+    C --> D[Create Vector Embedding of KG Content]
+    D --> E[Generate Vector Representation of Existing Documentation]
+    E --> F{Find Best Location for New Content}
+    F -- New Section Needed --> G[Create New Section in Documentation]
+    F -- Existing Section --> H[Update Existing Section in Documentation]
+    G --> J[Update KG with Documentation Links]
+    H --> J
+    J --> K[Refine Adjacent Node Connections in KG]
+    K --> L[Synthesize and Integrate Content into Documentation]
+    L --> M[Commit Changes to Documentation Repository]
+    M --> N[End: Documentation Updated]
+
+```
+
+
+
 ## Detailed Action Plan for GitHub Actions and Knowledge Graph Integration
 
 ### Phase 1: MVP Development
@@ -104,7 +138,7 @@ Eventually we may shift to other systems (like docusaurus). Before that though, 
 We can make this easier to read
 
 - [ ] Improve landing page and header bar to be more modern. 
-- [ ] Build interactive graph representation of this site that includes summary information. Check [this out](https://towardsdatascience.com/making-network-graphs-interactive-with-python-and-pyvis-b754c22c270) and the [examples](../Understanding/examples/index.md)
+- [ ] Build interactive graph representation of this site that includes summary information. Check [this out](https://towardsdatascience.com/making-network-graphs-interactive-with-python-and-pyvis-b754c22c270) and the [examples](../Using/examples/index.md)
 - [ ] https://melaniewalsh.github.io/Intro-Cultural-Analytics/06-Network-Analysis/02-Making-Network-Viz-with-Bokeh.html
 - [ ] build with https://docusaurus.io/
 - [ ] Integrate example python notebooks and build with https://github.com/outerbounds/nbdoc

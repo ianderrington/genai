@@ -47,21 +47,21 @@ Finetuning is the process of adapting a pre-trained model to a specific task. Fo
     from typing import Literal
 
     from magentic import prompt, FunctionCall
-    
-    
+
+
     def activate_oven(temperature: int, mode: Literal["broil", "bake", "roast"]) -> str:
         """Turn the oven on with the provided settings."""
         return f"Preheating to {temperature} F with mode {mode}"
-    
-    
+
+
     @prompt(
         "Prepare the oven so I can make {food}",
         functions=[activate_oven],
     )
     def configure_oven(food: str) -> FunctionCall[str]:
         ...
-    
-    
+
+
     output = configure_oven("cookies!")
     # FunctionCall(<function activate_oven at 0x1105a6200>, temperature=350, mode='bake')
     output()
@@ -87,21 +87,21 @@ Finetuning is the process of adapting a pre-trained model to a specific task. Fo
 
 ###  Executors and Interpeters
 
-Executors are programming levels of abstraction that encourage the execution of any tools or intractions with internal and external memories and states. 
+Executors are programming levels of abstraction that encourage the execution of any tools or intractions with internal and external memories and states.
 
-Interpreters are executors that facilitate model computation by parsing, formatting, or otherwise preparing the data for effective use. They can also be used to interpret output to perform routing of actions. 
+Interpreters are executors that facilitate model computation by parsing, formatting, or otherwise preparing the data for effective use. They can also be used to interpret output to perform routing of actions.
 
-Such efforts can be used to reduce input complexity, token-count, to detect potentially unreasonable inputs or outputs. These interpreters _may_ be agents or models themselves, thought that is not required. 
+Such efforts can be used to reduce input complexity, token-count, to detect potentially unreasonable inputs or outputs. These interpreters _may_ be agents or models themselves, thought that is not required.
 
 !!! example "Link Routing"
-    A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output. 
+    A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output.
 
 !!! code "[Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts."
 
 
 
 !!! code "[Semantic Kernel](https://github.com/microsoft/semantic-kernel/tree/main)"
-    [Github](https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb), 
+    [Github](https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb),
 
 !!! code "️[Guidance](https://github.com/microsoft/guidance/) Interleaving generation, prompting and logical control to single  continuous flow."
 
@@ -119,4 +119,4 @@ Generative AI is a splendid use-case for creating data that can be used to train
 ### Network Visualization
 
 Being able to see the 'structure' of some neural networks make it easier to understand, and more aesthetic.  Please see
-[PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet) and a nice [writeup](https://pub.towardsai.net/creating-stunning-neural-network-visualizations-with-chatgpt-and-plotneuralnet-adab37589e5) on how to use it. 
+[PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet) and a nice [writeup](https://pub.towardsai.net/creating-stunning-neural-network-visualizations-with-chatgpt-and-plotneuralnet-adab37589e5) on how to use it.

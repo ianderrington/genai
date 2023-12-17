@@ -1,6 +1,6 @@
-Deploying models allows callers, people or other applications, to utilize them. It initially involves making the model accessible for calling. However, it's essential to look at the deployment of the model separately from the deployment of the model's encapsulating project, even though the two are closely related. 
+Deploying models allows callers, people or other applications, to utilize them. It initially involves making the model accessible for calling. However, it's essential to look at the deployment of the model separately from the deployment of the model's encapsulating project, even though the two are closely related.
 
-There can be multiple components involved, especially for clients with higher requirements. The desired models should be stored in a file and then made available for service. Users' input is directed to the hosted model, optionally batched to enhance average request latency, and the results are returned and appropriately redirected to the users. 
+There can be multiple components involved, especially for clients with higher requirements. The desired models should be stored in a file and then made available for service. Users' input is directed to the hosted model, optionally batched to enhance average request latency, and the results are returned and appropriately redirected to the users.
 
 When developing AI-enabled products, consider the following components:
 
@@ -34,7 +34,7 @@ Finally, you'll need to present the results to the end-user effectively. Look in
 
 Remember that needs will evolve as your understanding of all the above factors shifts. So it's crucial to start with a base that you can iterate from, especially if your solution involves a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
 
-## Useful Tips 
+## Useful Tips
 
 ??? tip "[State of GPT by Andrej Karpathy](https://build.microsoft.com/en-US/sessions/db3f4859-cd30-4445-a0cd-553c3304f8e2) A comprehensive presentation on the general state of Generative AI made possible by GPT."
 

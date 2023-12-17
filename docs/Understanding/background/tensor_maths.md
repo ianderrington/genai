@@ -1,6 +1,6 @@
 Tensor math is linear algebra on steroids. Here are some valuable resources to understand it better.
 
-TODO: Add all of the tensor series. 
+TODO: Add all of the tensor series.
 
 
 
@@ -14,7 +14,7 @@ https://arxiv.org/pdf/2308.01814.pdf
 ??? code "[The Tensor Programs: 1](https://arxiv.org/pdf/1910.12478.pdf)"
 
     Ouput embeddings of two samples will be i.I.d. under randompermutations.
-    Introduces generalization to Tensors and creates 
+    Introduces generalization to Tensors and creates
     NETSOR  Computation Programs
     Introduces three general mapping types of function variables.
 
@@ -23,10 +23,10 @@ https://arxiv.org/pdf/2308.01814.pdf
 
     If x is a (vector) variable of type G (or H) and has dimension n, we write x : G(n) (or x : H(n)).
     If A is a (matrix) variable of type A and has size n1 × n2, we write A : A(n1, n2)
-    G is a subtype of H, so that x : G(n) implies x : H(n). 
+    G is a subtype of H, so that x : G(n) implies x : H(n).
     ```
 
-    G is petty much a ‘pass through’ like an activation function. 
+    G is petty much a ‘pass through’ like an activation function.
 
 
     This a [Github](https://github.com/thegregyang/GP4A) implementation

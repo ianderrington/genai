@@ -3,10 +3,12 @@ import re
 import os
 import json
 
+
 def has_url(text):
-    url_regex = r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
-    
+    url_regex = r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+
     return re.search(url_regex, text.lower()) is not None
+
 
 def find_keywords(directory, keywords):
     matches = []
@@ -14,7 +16,7 @@ def find_keywords(directory, keywords):
         for file in files:
             file_path = os.path.join(root, file)
             try:
-                with open(file_path, 'r', encoding='utf-8') as f:
+                with open(file_path, "r", encoding="utf-8") as f:
                     file_content = f.read()
                     for keyword in keywords:
                         if keyword in file_content:
@@ -30,7 +32,7 @@ def find_keywords(directory, keywords):
 
 
 def main(issue_number, issue_text, directory):
-    keywords = ['includeindocs']  # Define your keywords here
+    keywords = ["includeindocs"]  # Define your keywords here
     label = "HumanInsightRequired"
 
     if has_url(issue_text):
@@ -41,18 +43,17 @@ def main(issue_number, issue_text, directory):
             label = "IncludeInDocs"
 
     # Output for GitHub Actions
-    
+
     # python {output} "{name}={value}" >> $GITHUB_STATE
     # https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
     # must use the format above instead of set-output
-    
+
     # print(f"echo \"label='{label}'\" >> \"$GITHUB_OUTPUT\"")
     print(f"label={label}")
-    
+
 
 if __name__ == "__main__":
     issue_number = sys.argv[1]
     issue_text = sys.argv[2]
-    search_directory = '.'  # Set the directory for keyword search
+    search_directory = "."  # Set the directory for keyword search
     main(issue_number, issue_text, search_directory)
-

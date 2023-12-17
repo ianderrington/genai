@@ -18,7 +18,7 @@ Risk assessment
 Safeguards against misuse
 Privacy
 
-## Data privacy 
+## Data privacy
 Anonymization and de-identification
 Encryption and secure computing
 
@@ -44,7 +44,7 @@ Ethics review processes
 
 https://github.com/optml-group/unlearn-saliency
 ### Principles and Guidelines
-https://www.nature.com/articles/d41586-023-03266-1 
+https://www.nature.com/articles/d41586-023-03266-1
 
 Key principles of the living guidelines:
 

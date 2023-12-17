@@ -18,7 +18,7 @@ Here we share novel and promising architectures that may supplement or supplant 
 ### Structured State Space Sequence Models
 Structured state space sequence models are a class of models that generally combine RNNs, convolutions with inspiration from state-space methods.
 
-Well-known methods include: 
+Well-known methods include:
 
 
 !!! code "[HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution](https://github.com/HazyResearch/hyena-dna) Uses inspiration from FFT to create a drop-in replacement for Transformer models."
@@ -29,7 +29,7 @@ Well-known methods include:
 
 
 !!! code "[Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://github.com/state-spaces/mamba)"
-    Their method provides potential highly parallelized 
+    Their method provides potential highly parallelized
     ![image](https://github.com/ianderrington/genai/assets/76016868/6be90c7e-a135-4a05-bd2b-cd4344b5a61e)
     <img width="601" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a5db3865-79d3-4ea2-b729-ecd2b7afc9d5">
 

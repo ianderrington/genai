@@ -1,4 +1,4 @@
-There are different categories for Agents, which are often either by the environment in which they act or by the manner in which they are used. 
+There are different categories for Agents, which are often either by the environment in which they act or by the manner in which they are used.
 
 **Environments**
 
@@ -9,9 +9,9 @@ There are different categories for Agents, which are often either by the environ
 
 **Purpose:**
 
-* Do simple/single things: perhaps ephemeral. 
-* Do a complex task that may require simple things. Very likely enduring, especially if they are expert systems.. 
-* Doing a list set of complex tasks, perhaps more continuously enduring. 
+* Do simple/single things: perhaps ephemeral.
+* Do a complex task that may require simple things. Very likely enduring, especially if they are expert systems..
+* Doing a list set of complex tasks, perhaps more continuously enduring.
 
 ### Agent Examples
 
@@ -19,7 +19,7 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 
 ??? code "[Fresh LLMs](https://github.com/freshllms/freshqa that propose FreshQA, a dynamic QA benchmark, and FreshPrompt that allows LLMs to stay up to date"
     - [Paper](https://arxiv.org/pdf/2310.03214.pdf)
-    
+
     <img width="558" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b9cc4b22-3f98-40db-adfe-728a434abb72">
     It also includes question-premise checking to help minimize hallucination
     <img width="555" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e272bc63-a0a0-4735-a2d6-da79b6840107">
@@ -28,7 +28,7 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 
 ??? code "[Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning](https://github.com/RManLuo/reasoning-on-graphs)"
     In their [paper](https://browse.arxiv.org/pdf/2310.01061.pdf) they present a Planning-Retrieval-Reasoning framework that called 'Reasoning on Graphs' or RoG.
-    RoG generates ground plans enabled by KGs which are then used to retrieve reasoning paths for the LLM. 
+    RoG generates ground plans enabled by KGs which are then used to retrieve reasoning paths for the LLM.
     <img width="576" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a05f9e37-72ab-421d-8a54-0c3ef78c9302">
 
 
@@ -44,7 +44,7 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 ??? tip "[smolai](https://github.com/ThomasEwing04/SMOL_AI) https://www.youtube.com/watch?v=zsxyqz6SYp8&t=1s An interesting example"
 
 ??? code "[Agent-GPT](https://github.com/reworkd/AgentGPT)"
-    [Website](https://agentgpt.reworkd.ai/) 
+    [Website](https://agentgpt.reworkd.ai/)
 
 !!! tip "[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)"
 
@@ -55,7 +55,7 @@ Here are a few examples. Because agents are hard to disentangle from core compon
     ![image](https://github.com/ianderrington/genai/assets/76016868/5e60c94c-7c03-4667-ae5f-3a9282cf30c4)
     ```
 
-    
+
         Clarify requirement documents: Interact with DevOpsGPT to clarify and confirm details in requirement documents.
         Generate interface documentation: DevOpsGPT can generate interface documentation based on the requirements, facilitating interface design and implementation for developers.
         Write pseudocode based on existing projects: Analyze existing projects to generate corresponding pseudocode, providing developers with references and starting points.
@@ -73,18 +73,18 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 
 
 ??? important "[Suspicion-Agent: Playing imperfect Information Games with Theory of Mind Aware GPT-4](https://github.com/CR-Gjx/Suspicion-Agent)"
-    Introduces directly into the prompts a Theory-of-Mind about their awareness and own estimations and will update accordingly." 
+    Introduces directly into the prompts a Theory-of-Mind about their awareness and own estimations and will update accordingly."
     <img width="648" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7d3d171c-5bae-4942-9469-ace20c4ef62b">
     <img width="678" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c1a762f6-5729-4d4f-8bb8-c288d7d639a0">
 
 ??? code "[CLIN: A Continually Learning Language Agent for Rapid Task Adaptation and Generalization](https://allenai.github.io/clin/)"
     An agent that stores a memory involving action, rationale, and result so that it can improve doing certain tasks. It uses a lookup to identify things that it needs to do and likely causal relations to decide to work on it.
-    The code is a little Academic, but generally readable here [Github](https://github.com/allenai/clin/blob/main/scienceworld/clin_agent.py#L10). 
-    
-    On the ScienceWorldEnv environment simulator it performed reasonably well. 
-    
+    The code is a little Academic, but generally readable here [Github](https://github.com/allenai/clin/blob/main/scienceworld/clin_agent.py#L10).
+
+    On the ScienceWorldEnv environment simulator it performed reasonably well.
+
     <img width="816" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ccc0d2aa-4eab-4ffa-bfa4-7b9a0f7587d1">
-    
+
     ![image](https://github.com/ianderrington/genai/assets/76016868/7a9cffc3-1f67-4ea2-8368-8380f323f16a)
     <img width="814" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/af71d9db-a542-4289-a833-d16ca5e9b574">
 
@@ -94,7 +94,3 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 !!! code "[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
 
 !!! code "[Chrome-GPT](https://github.com/richardyc/Chrome-GPT): an experimental AutoGPT agent that interacts with Chrome"
-    
-
-
-

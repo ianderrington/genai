@@ -1,4 +1,4 @@
-## Plugins 
+## Plugins
 Plugins are can enable connection of GenAI with input media, often via web interfaces
 
 - [Mini Wob++](http://miniwob.farama.org/) For web interactive environments for accomplishing different tasks. Quite useful.

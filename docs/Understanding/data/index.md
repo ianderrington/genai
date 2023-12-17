@@ -1,14 +1,14 @@
 # Understanding Data in AI
 
-Data is the lifeblood of any AI model. It is the raw material that fuels the learning process and shapes the model's understanding of the world. This section will delve into the various aspects of data, from its collection and access to its normalization and use in training AI models. 
+Data is the lifeblood of any AI model. It is the raw material that fuels the learning process and shapes the model's understanding of the world. This section will delve into the various aspects of data, from its collection and access to its normalization and use in training AI models.
 
 ## Data Collection and Access
 
-The first step in the data lifecycle is its collection. This involves gathering relevant data from various sources, which could range from databases and APIs to web scraping and user-generated content. The collected data must then be stored and organized in a way that allows easy access for further processing and analysis. 
+The first step in the data lifecycle is its collection. This involves gathering relevant data from various sources, which could range from databases and APIs to web scraping and user-generated content. The collected data must then be stored and organized in a way that allows easy access for further processing and analysis.
 
 ## Data Normalization
 
-Once the data is collected and stored, it needs to be normalized. Data normalization is a process that transforms the data into a standard format, making it easier to work with. This could involve scaling numerical data, encoding categorical data, or handling missing values. Normalized data ensures consistency and improves the accuracy of the model. 
+Once the data is collected and stored, it needs to be normalized. Data normalization is a process that transforms the data into a standard format, making it easier to work with. This could involve scaling numerical data, encoding categorical data, or handling missing values. Normalized data ensures consistency and improves the accuracy of the model.
 
 ## Data Training
 
@@ -24,7 +24,7 @@ Embedding is the process of representing these tokens in a numerical format that
 
 ## Important Considerations
 
-### Data Volume 
+### Data Volume
 
 The amount of data needed for training depends on the size of the model. As a general rule, the number of tokens should be approximately 10 times the number of parameters used by the model.
 
@@ -65,6 +65,6 @@ graph TD;
 
 ## Common Data Formats
 
-Often, it is useful to have data loaders that are common in Keras and Pytorch. These wrap iterators that allow the data to be processed in a parallel manner across different nodes. This parallel processing enhances the efficiency of data handling, especially when dealing with large datasets. 
+Often, it is useful to have data loaders that are common in Keras and Pytorch. These wrap iterators that allow the data to be processed in a parallel manner across different nodes. This parallel processing enhances the efficiency of data handling, especially when dealing with large datasets.
 
 In conclusion, data is a crucial component in AI model training. Its collection, normalization, and processing significantly influence the performance of the model. Therefore, it's essential to understand and implement best practices in data handling for optimal results.

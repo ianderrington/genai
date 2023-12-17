@@ -6,12 +6,12 @@ Pytorch
 Tensorflow
 
 ### Higher-level Frameworks
-Higher level frameworks minimize the lines of code needed to make a model and keep track of everything. 
+Higher level frameworks minimize the lines of code needed to make a model and keep track of everything.
 
 - [Catalyst](https://github.com/catalyst-team/catalyst) Framework for boiler-plate minimal ML calling using pytorch. Enabled [heirarchichal Attention networks](https://github.com/neuro-inc/ml-recipe-hier-attention)
 
 #### Lightning
-- [Lightning + Hydra](https://github.com/ashleve/lightning-hydra-template) Uses the [lightning] framework with Hydra-based config management. 
+- [Lightning + Hydra](https://github.com/ashleve/lightning-hydra-template) Uses the [lightning] framework with Hydra-based config management.
 - [Lightning Hugging face adapter](https://github.com/mariomeissner/lightning-hydra-transformers/blob/main/src/architectures/hf_model.py)
 
 ## Must-have knowledge
@@ -21,6 +21,6 @@ Higher level frameworks minimize the lines of code needed to make a model and ke
 
 ## Network Figures
 
-Being able to see the 'structure' of some neural networks make it easier to understand, and more aesthetic.  
+Being able to see the 'structure' of some neural networks make it easier to understand, and more aesthetic.
 
-- [PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet) and a nice [writeup](https://pub.towardsai.net/creating-stunning-neural-network-visualizations-with-chatgpt-and-plotneuralnet-adab37589e5) on how to use it. 
+- [PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet) and a nice [writeup](https://pub.towardsai.net/creating-stunning-neural-network-visualizations-with-chatgpt-and-plotneuralnet-adab37589e5) on how to use it.

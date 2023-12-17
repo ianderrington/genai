@@ -8,4 +8,3 @@
 ### What it looks like
 
 <img width="1151" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0b344719-b998-43f7-92fb-725797324af9">
-

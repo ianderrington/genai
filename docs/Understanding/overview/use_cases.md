@@ -1,27 +1,27 @@
 We explores different activities and fields that utilize Generative AI's capabilities and provide a few notable references for each. For an overview of applications (and challenges), we highly recommend [Challenges and Applications of Large Language Models](https://arxiv.org/pdf/2307.10169.pdf)
 
 
-There is a philosophical overlap with 'predictive' AI where a predictive model could just be said to 'generate' either possible future outcomes or estimated classifications of data. 
+There is a philosophical overlap with 'predictive' AI where a predictive model could just be said to 'generate' either possible future outcomes or estimated classifications of data.
 
 There are many generally distinct domains of Gen()AI application, though many be compositional. Effectively any information that can be recorded onto a computer may be made by Gen()AI.
 
 ## General Modalities
 MANGEN (Expand, and clarify the below )
 * Language, Spoken and Written
-* Visual 2D, Images, Diagrams, 
+* Visual 2D, Images, Diagrams,
 * Visual 3D
 * Visual 2D with time
 * Visual 3D with time
 * Graphical (Relation and influence networks)
 * Generally linear biological sequences (Genome, Proteome)
 * Multidimensional Temporal sequences (weather, brain recordings, stock market)
-* Multimodal variants of the above. 
+* Multimodal variants of the above.
 
 
 ## General Activities
 There are many activities that can be used in many, if not all, fields of applications. We mention a few below:
 
-### Summarization 
+### Summarization
 
 Summarization is a key application for Generative AI. It uses the technology to provide brief, accurate summaries of a larger body of text.
 
@@ -31,7 +31,7 @@ With or without examples LLMs can perform classification on input, though someti
 
 ### Semantic Search
 
-Generative AI has the capability to understand relationships between words and concepts. By embedding an input, the technology can measure semantic, or 'meaning', nearness via distance calculations. This capability enhances the potential for memory recall with imperfect inputs and improves action routing. 
+Generative AI has the capability to understand relationships between words and concepts. By embedding an input, the technology can measure semantic, or 'meaning', nearness via distance calculations. This capability enhances the potential for memory recall with imperfect inputs and improves action routing.
 
 ### Prose Generation
 
@@ -51,17 +51,17 @@ Generative AI can be utilized for a wide range of prose generation applications,
 
 ### Language Translation
 
-Generative AI is increasingly good at translating between domains. 
+Generative AI is increasingly good at translating between domains.
 
 ### Personal assistants and memory
-- [Quiver](https://github.com/StanGirard/quiv) A LLM for self second brain. 
+- [Quiver](https://github.com/StanGirard/quiv) A LLM for self second brain.
 
 ### Compression
 
 ??? important "[Language Modeling Is Compression](https://arxiv.org/pdf/2309.10668.pdf) demonstrates lossless compression of text and images with upwards of 3x smaller compression."
-    Uses either newly trained 200K-3M transformer models or pre-trained Chinchilla models and achieves impressive compression rates. 
+    Uses either newly trained 200K-3M transformer models or pre-trained Chinchilla models and achieves impressive compression rates.
     <img width="1298" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ffa8ac86-3876-4ecb-8b18-e14b47b972e5">
-    Details on implementation are somewhat hidden. 
+    Details on implementation are somewhat hidden.
 
 
 ### Font generation
@@ -73,8 +73,8 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 
 - [Wizard Coding](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder)
 - [AutoPR](https://github.com/irgolic/AutoPR)
-- [Codium pr-agent](https://github.com/Codium-ai/pr-agent) 
-- [Code AI consulting](https://github.com/AI-Citizen/SolidGPT) Allows you to 'query your code' in a chatlike manner. 
+- [Codium pr-agent](https://github.com/Codium-ai/pr-agent)
+- [Code AI consulting](https://github.com/AI-Citizen/SolidGPT) Allows you to 'query your code' in a chatlike manner.
 
 ### Documentation extraction
 

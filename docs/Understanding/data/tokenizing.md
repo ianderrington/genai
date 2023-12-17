@@ -2,14 +2,14 @@
 In generative AI, the raw data—whether it be in binary, text, or a different form—is divided into individual units termed as *tokens*. These play a crucial role in easing the understanding and manipulation of data for the AI.
 
 ## Understanding Tokenization
-Tokenization is the process of splitting data into these individual units. The choice of a token largely depends on the data type and the expected outcome of the AI. In text data, for instance, tokens often correspond to single words or subwords. These tokens are then often represented in one-hot encoding. Research may eventually show that [hierarchical tokenization](#heirarchichal-tokenization), either trained, guessed, or otherwise constructed, could minimize token use. 
+Tokenization is the process of splitting data into these individual units. The choice of a token largely depends on the data type and the expected outcome of the AI. In text data, for instance, tokens often correspond to single words or subwords. These tokens are then often represented in one-hot encoding. Research may eventually show that [hierarchical tokenization](#heirarchichal-tokenization), either trained, guessed, or otherwise constructed, could minimize token use.
 
 ### Heirarchichal Tokenization
 !!! code "[Floret Vectors](https://explosion.ai/blog/floret-vectors)"
 
 ??? tip "[Superbloom: Bloom filter meets Transformer](https://arxiv.org/pdf/2002.04723.pdf)"
 
-  Wherein a bloom filter is used to create tokens/embeddings. 
+  Wherein a bloom filter is used to create tokens/embeddings.
   ![image](https://github.com/ianderrington/genai/assets/76016868/5ba71e69-7eaa-416c-b09a-940e016db145)
 
 
@@ -25,7 +25,7 @@ A subword unit, or a part of a word, can be a token in itself. The paper titled 
 
 ### Special tokens
 
-There are special tokens that are used by high-level interpreters on what next to do. 
+There are special tokens that are used by high-level interpreters on what next to do.
 
 | Token Name | Description |
 | --- | --- |
@@ -39,7 +39,7 @@ There are special tokens that are used by high-level interpreters on what next t
 ??? code "[Speech Tokenizer](https://github.com/zhangxinfd/speechtokenizer)  is a unified speech tokenizer for speech language models, which adopts the Encoder-Decoder architecture with residual vector quantization (RVQ)"
 
     ![image](https://github.com/ZhangXInFD/SpeechTokenizer/raw/main/images/speechtokenizer_framework.jpg)
-    
+
 ## Multimodal Tokenization
 
 Multimodal tokenization is an area of tokenization that focuses on incorporating multiple data forms or modes. This facet of tokenization has seen remarkable strides. [Bytes are all you need](https://arxiv.org/pdf/2306.00238.pdf)—a study utilizing transformer technology to input file bytes directly—demonstrates that multimodal tokenization can assist in improving the AI's performance accuracy. The researchers in the study developed ByteFormer, a model based on their study’s findings that can be accessed [here](https://github.com/apple/ml-cvnets/tree/main/examples/byteformer).
@@ -66,6 +66,6 @@ Examples of coding tools that facilitate tokenization include [Tiktoken](https:/
 [What are Embeddings](http://vickiboykis.com/what_are_embeddings/)[Github](https://github.com/veekaybee/what_are_embeddings/blob/main/README.md)
 
 [^kudo]: [Kudo](https://arxiv.org/pdf/1804.10959.pdf) "subword regularization,
-which trains the model with multiple subword segmentations probabilistically sampled during training". Effectively, this takes aliasing-like effects that cause different tokenization. It is more effective because it breaks it down in different ways. 
+which trains the model with multiple subword segmentations probabilistically sampled during training". Effectively, this takes aliasing-like effects that cause different tokenization. It is more effective because it breaks it down in different ways.
 
 [^n1]: [Token Monster](https://github.com/alasdairforsythe/tokenmonster)

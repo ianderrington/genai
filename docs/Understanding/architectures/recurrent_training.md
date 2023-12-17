@@ -14,11 +14,11 @@ graph LR
 ```
 
 
-Train on model trains a new model on the output of a new model. 
+Train on model trains a new model on the output of a new model.
 - [Alpaca ](https://github.com/tatsu-lab/stanford_alpaca)
 
 ??? tip "[Shepherd: A Critic for Language Model Generation](https://arxiv.org/pdf/2308.04592.pdf) A 7B model trained to critique outputs"
-    
+
     **Example chat response**
     <img width="560" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c207939b-9bd7-4a20-b747-ea46d13534f7">
 
@@ -37,7 +37,7 @@ Train on model trains a new model on the output of a new model.
     a stronger model. F
 
 ??? code "[WizardMath: Empowering Mathematical Reasoning for Large Language Models via _Reinforced Evol-Instruct_](https://github.com/nlpxucan/WizardLM/tree/main/WizardMath)"
-    Llama-2 based reinforcement enables substantial improvement over other models. 
+    Llama-2 based reinforcement enables substantial improvement over other models.
     <img width="670" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ea4313c0-9ba7-4000-b77b-a363bce049f8">
     [Paper](https://github.com/nlpxucan/WizardLM/blob/main/WizardMath/WizardMath_Paper.pdf)
 

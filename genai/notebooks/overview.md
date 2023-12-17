@@ -19,7 +19,7 @@ There are both open and closed-source models, that can be used. Because of compu
 ## References
 
 !!! references
-    - [A Survey of Large Language Models](https://arxiv.org/pdf/2303.18223.pdf) A very comprehensive paper discussing LLM technology. 
-    - [A cookbook of self-supervised Learning](https://arxiv.org/pdf/2304.12210.pdf) 
+    - [A Survey of Large Language Models](https://arxiv.org/pdf/2303.18223.pdf) A very comprehensive paper discussing LLM technology.
+    - [A cookbook of self-supervised Learning](https://arxiv.org/pdf/2304.12210.pdf)
     - [LLM Survey](https://github.com/RUCAIBox/LLMSurvey)
     - [](https://www.understandingai.org/p/large-language-models-explained-with)

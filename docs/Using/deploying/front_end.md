@@ -2,7 +2,7 @@ Deploying AI technologies involves a variety of steps, one of which is understan
 
 ## Understanding Visualization Needs
 
-The first step towards creating an effective front end is understanding your visualization needs. This process involves identifying the key data points and processes that need to be visualized and determining the most effective way to present this information to the user. 
+The first step towards creating an effective front end is understanding your visualization needs. This process involves identifying the key data points and processes that need to be visualized and determining the most effective way to present this information to the user.
 
 In addition, it's important to identify the simplest possible result for your end users. This means understanding your audience and presenting the information in a logical format that is easy for them to comprehend.
 
@@ -16,7 +16,7 @@ There are several popular repositories that can serve as a starting point for yo
 
 - [OobaBooga Text generation WebUI](https://github.com/oobabooga/text-generation-webui): This is a user-friendly interface for text generation.
 - [Streamlit](https://blog.streamlit.io/langchain-streamlit/): This platform allows you to build machine learning and data science apps.
-- [DemoGPT](https://github.com/melih-unsal/DemoGPT): This tool connects Langchain and Streamlit to create dynamic apps that can be used repeatedly for interacting with Chat-GPTs. 
-- [GPT Graph](https://github.com/m-elbably/gpt-graph): This tool allows for a graphical network representation of chat interactions. 
+- [DemoGPT](https://github.com/melih-unsal/DemoGPT): This tool connects Langchain and Streamlit to create dynamic apps that can be used repeatedly for interacting with Chat-GPTs.
+- [GPT Graph](https://github.com/m-elbably/gpt-graph): This tool allows for a graphical network representation of chat interactions.
 
 By understanding your visualization needs and implementing an effective front end, you can ensure that your users have a smooth and intuitive experience when interacting with your AI technology.

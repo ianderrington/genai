@@ -2,7 +2,7 @@ Data selection acts as the backbone for training generative AI models. Without s
 
 ## Why is Data Selection Important?
 
-Data selection forms the initial step in any machine learning project. Selecting the right data can help train your GenAI model more efficiently and accurately. Improper data selection, and balancing, can cause you models to fail all together, or more insideously induce output biases that are of [ethical concern](../../Using/ethically/fairness.md) 
+Data selection forms the initial step in any machine learning project. Selecting the right data can help train your GenAI model more efficiently and accurately. Improper data selection, and balancing, can cause you models to fail all together, or more insideously induce output biases that are of [ethical concern](../../Using/ethically/fairness.md)
 
 ### Role in Training Models
 
@@ -26,9 +26,9 @@ Relevancy of data to the problem at hand is crucial. Inappropriate data can lead
 
 ### Balancing Your Dataset
 
-In order to train an effective Generative AI model, it's important to balance your dataset. An imbalanced dataset could lead your model to be biased towards the class that is overrepresented. 
+In order to train an effective Generative AI model, it's important to balance your dataset. An imbalanced dataset could lead your model to be biased towards the class that is overrepresented.
 
-## Tools for Data Selection 
+## Tools for Data Selection
 
 There are different tools that can aid in effective data selection.
 

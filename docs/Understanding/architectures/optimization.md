@@ -1,4 +1,4 @@
-Models must yield results that are sufficiently good for downstream users. This is quite often the accuracy, an [evaluation and comparison](evaluating_and_comparing.md) metric. Efficiency another is a crucial aspect of AI model development. The ability to generate high-performing content quickly can significantly impact the overall performance of your AI model. Although there isn't a universally accepted solution, several methods can help optimize your model for better efficiency without compromising quality. 
+Models must yield results that are sufficiently good for downstream users. This is quite often the accuracy, an [evaluation and comparison](evaluating_and_comparing.md) metric. Efficiency another is a crucial aspect of AI model development. The ability to generate high-performing content quickly can significantly impact the overall performance of your AI model. Although there isn't a universally accepted solution, several methods can help optimize your model for better efficiency without compromising quality.
 
 Most successful models employ a combination of approaches to reduce model sizes. This document provides an understanding of these methods and how they can be applied to optimize your AI model.
 
@@ -25,7 +25,7 @@ The following are some of the commonly used methods for optimizing AI models:
 
 ### Pruning
 
-Pruning is a technique that eliminates weights that do not consistently produce highly impactful outputs. 
+Pruning is a technique that eliminates weights that do not consistently produce highly impactful outputs.
 
 ??? important "[Fast as Chita: Neural network pruning with combinatorial optimization](https://blog.research.google/2023/08/neural-network-pruning-with.html)"
 
@@ -42,11 +42,11 @@ Related to pruning is the use of smaller models that are initialized based on la
 
 
 ### Quantization
-Precision details the manner in which binary bits represent numbers in a computer. Generally, the greater the number of bits, the broader the variety of numbers that can be represented. 
+Precision details the manner in which binary bits represent numbers in a computer. Generally, the greater the number of bits, the broader the variety of numbers that can be represented.
 
-Broken down into the `exponent` and `fraction`, as the different values can have specific implications for the training of models. Quite generally, [bfloat16](https://en.wikipedia.org/wiki/Bfloat16_floating-point_format) (developed by Google Brain) offers an effective balance of size and dynamic expressibility for LLMs, and is a well-used number format. 
+Broken down into the `exponent` and `fraction`, as the different values can have specific implications for the training of models. Quite generally, [bfloat16](https://en.wikipedia.org/wiki/Bfloat16_floating-point_format) (developed by Google Brain) offers an effective balance of size and dynamic expressibility for LLMs, and is a well-used number format.
 
-To have improved performance, the models may be reduced, however, to using fewer bits. Standard fp16 may sometimes reduced to int8, and even binary representations.  
+To have improved performance, the models may be reduced, however, to using fewer bits. Standard fp16 may sometimes reduced to int8, and even binary representations.
 
 ???+ info "What is Precision?"
 
@@ -60,7 +60,7 @@ To have improved performance, the models may be reduced, however, to using fewer
 
 #### When to quantize: During or after training?
 
-There are general times when quantization may be performed. During training, post-training. 
+There are general times when quantization may be performed. During training, post-training.
 Here are the benefit chart for each method each kind:
 
 MANAGEN: (Table with this the characteristic chart of the different methods to help individuals know specific challenges and benefits)
@@ -68,21 +68,21 @@ MANAGEN: (Table with this the characteristic chart of the different methods to h
 #### Examples
 
 ??? code "[SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs](https://github.com/mit-han-lab/smoothquant)"
-    Using some post-training smoothing, they shift the weights in such a way that they are easier to quantize. 
+    Using some post-training smoothing, they shift the weights in such a way that they are easier to quantize.
     [Paper](https://arxiv.org/abs/2211.10438.pdf)
     <img width="337" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ed34f663-5792-471f-9927-f3622f3243a3">
-    
+
 ??? code "[HF bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration) and code [From Github](https://github.com/huggingface/blog/blob/main/assets/96_hf_bitsandbytes_integration/example.py)"
     [Paper](https://arxiv.org/abs/2309.14717)
-    
-    
+
+
 ??? code "[PB-LLM: Partially Binarized Large Language Models](https://github.com/hahnyuan/PB-LLM) to compress identified model weights into a single bit, while allowing others to only be partially compressed."
-    [Paper](https://github.com/hahnyuan/PB-LLM) 
-    
+    [Paper](https://github.com/hahnyuan/PB-LLM)
+
 ### Knowledge Distillation
 
 Train a new smaller model using the output of bigger models.
-(TODO) 
+(TODO)
 
 ??? code "[QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models](https://github.com/yuhuixu1993/qa-lora)"
     ![image](https://github.com/ianderrington/genai/assets/76016868/87219990-b7e8-4895-a274-a55584f2cb9e)
@@ -94,7 +94,7 @@ TODO
 
 
 ### Mixture of Experts
-MOE provides the ability to use different smaller models that have better performance in certain domains. Their use is notable, as it has been stated that GPT-4 is powered by 8 different agents. 
+MOE provides the ability to use different smaller models that have better performance in certain domains. Their use is notable, as it has been stated that GPT-4 is powered by 8 different agents.
 
 
 
@@ -103,12 +103,12 @@ MOE provides the ability to use different smaller models that have better perfor
     "The codebase is built on T5X, which defines the model and training loop; Flaxformer, which defines the model computation; Flax, which defines the low level model layers; and Jax, which provides the execution."
     [Paper](https://arxiv.org/pdf/2309.05444.pdf)
     ![image](https://github.com/ianderrington/genai/assets/76016868/ca081309-dca9-4081-a6eb-30d929715ef9)
-    
+
 ### Combination Approaches
 
 
 ??? code "[QLoRA: Efficient Finetuning of Quantized LLms](https://github.com/artidoro/qlora) uses Quantization and Low-Rank Adapters to enable SoTA models with even smaller models"
-    [Paper](https://arxiv.org/abs/2305.14314) 
+    [Paper](https://arxiv.org/abs/2305.14314)
     [Example HF 4bit transformers](https://huggingface.co/blog/4bit-transformers-bitsandbytes)
 
 

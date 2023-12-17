@@ -1,7 +1,7 @@
 # Gen(erative) AI Agents
 Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to generate text or image based responses to the input data.
 
-Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from standard chat interfaces. Generally, they involve the possibility of Human-in-the-loop to help correct odd components. 
+Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from standard chat interfaces. Generally, they involve the possibility of Human-in-the-loop to help correct odd components.
 
 ## Essential Concepts
 
@@ -9,15 +9,15 @@ Similar to bots, or other computerized automata, they may have the ability to ru
 * Language [prompts](../prompting/index.md) that orient's and agent's response.
 * [Chains](./chains.md) which enable a continuous connection of information with various prompts.
 * [Memory](./memory.md) to enable writing and reading information that may be of use.
-* [Tools](./actions_and_tools.md) that enable more than text (or images) to be returned or otherwise acted upon. 
-* [Cognition architectures](./cognitive_architecture.md) is the ability to understand through the use of computational [models](../architectures/models/index.md), [chains](chains.md) and [memory](./memory.md). 
+* [Tools](./actions_and_tools.md) that enable more than text (or images) to be returned or otherwise acted upon.
+* [Cognition architectures](./cognitive_architecture.md) is the ability to understand through the use of computational [models](../architectures/models/index.md), [chains](chains.md) and [memory](./memory.md).
 * [Interpreters and Executors](./chains.md#interpreters) that are used to process input or output.
 * [Systems of Agents](systems.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
 
-Agents can be quite different! Here are some [examples](./examples.md) of agents made both in academic and commercial settings. 
+Agents can be quite different! Here are some [examples](./examples.md) of agents made both in academic and commercial settings.
 
-### Example Agent Diagram: 
-At the very simplistic level, an embodiment of an agent would look like this. 
+### Example Agent Diagram:
+At the very simplistic level, an embodiment of an agent would look like this.
 
 ```mermaid
 graph LR
@@ -29,7 +29,7 @@ graph LR
 
 ```
 
-To enable that it may require more complicated relations between example components. Below is an example representation. 
+To enable that it may require more complicated relations between example components. Below is an example representation.
 
 ???+ example "An Agent's components"
     ```mermaid
@@ -56,7 +56,7 @@ TODO: Quick description of Traditional RL agents and how they compare, and how w
 
 ## Useful references
 
-Here are several references of merit. 
+Here are several references of merit.
 
 !!! important "[LLM-Agent-Papers](https://github.com/WooooDyy/LLM-Agent-Paper-List)"
 
@@ -67,4 +67,3 @@ Here are several references of merit.
 
 
 !!! code "[Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of a nicely curated list of systems using agents"
-

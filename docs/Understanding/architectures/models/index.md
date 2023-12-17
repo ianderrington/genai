@@ -1,8 +1,8 @@
 
 
-While there is a great deal in several primary domains of Generative AI, Text, Image, sound, video, there are many other modalities that are of interest. Here we share prominent and interesting methods for these domains. These models will often rely on [tokenization](../../data/tokenizing.md). Once tokenized, the transformed projected in some way to an _embedding vector_ that can be used by  downstream LLM's, as well as vector-databases. 
+While there is a great deal in several primary domains of Generative AI, Text, Image, sound, video, there are many other modalities that are of interest. Here we share prominent and interesting methods for these domains. These models will often rely on [tokenization](../../data/tokenizing.md). Once tokenized, the transformed projected in some way to an _embedding vector_ that can be used by  downstream LLM's, as well as vector-databases.
 
-MANGEN: This entire document needs to be reorganized and revised. 
+MANGEN: This entire document needs to be reorganized and revised.
 
 ??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/abs/2307.09288) A nearly open source set of 7B-70B models with quality performance"
     <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
@@ -27,13 +27,13 @@ MANGEN: This entire document needs to be reorganized and revised.
 
 
 ### Vision-Language Models
-Vision Language models are among the most prominent. 
+Vision Language models are among the most prominent.
 
 TODO: Clip paper
 
 ??? tip "[SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs](https://arxiv.org/pdf/2306.17842.pdf) A really cool idea that uses pyramidal representations and compresses information into text-tokens of different levels."
 
-    It can be reconstructed as needed. These tokens then could be used in novel image generation via semantic mapping with an LLM. 
+    It can be reconstructed as needed. These tokens then could be used in novel image generation via semantic mapping with an LLM.
     <img width="1252" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e64de0a0-0e8b-4d2e-9c0e-bb89fcdd67e8">
 
 ??? "[Towards Language Models That Can See: Computer Vision Through the LENS of Natural Language](https://arxiv.org/pdf/2306.16410.pdf) Represents images into language and combines them with a Frozen LLM to produce output."
@@ -45,7 +45,7 @@ TODO: Clip paper
 ### Tabular Models
 - [Challenges in End-to-End Neural Scientific Table Recognitions](https://ieeexplore.ieee.org/abstract/document/8978078)
 
-## More than one modal 
+## More than one modal
 
 ??? important "[Meta Transformer](https://arxiv.org/pdf/2307.10802.pdf) Combines embedding in from 12 modalities by adjoining individual models and flattening them together."
     <img width="868" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f366d75d-43fd-4101-84e6-53baa49b64ab">
@@ -61,11 +61,11 @@ TODO: Clip paper
 ## TO SORT
 
 
-!!! tip " [Multimodal Neurons in Pretrained Text-Only Transformers](https://arxiv.org/pdf/2308.01544.pdf) "finding multimodal neurons in text-only transformer MLPs and show that these neurons consistently translate image semantics into language."  
+!!! tip " [Multimodal Neurons in Pretrained Text-Only Transformers](https://arxiv.org/pdf/2308.01544.pdf) "finding multimodal neurons in text-only transformer MLPs and show that these neurons consistently translate image semantics into language."
 
 
 ??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/abs/2307.09288) A nearly open source set of 7B-70B models with quality performance"
-    
+
     <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
 
 
@@ -74,7 +74,7 @@ TODO: Clip paper
 MANGEN (This is a number of the things that need to be considered in reorganization)
 
 ### Self-supervised learning.
-- 
+-
 Diffusion
 LLMs
 
@@ -85,34 +85,34 @@ Additional models come up all the time.
 
   * [HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units](https://ieeexplore.ieee.org/abstract/document/9585401)
   * [Generating Diverse High-Fidelity Images with VQ-VAE-2](https://arxiv.org/abs/1906.00446)
-  * Token Embedding: Mapping to a vector space. 
+  * Token Embedding: Mapping to a vector space.
   * Positional Embedding: Learned or hard-coded mapping to position of sequence to a vector space
-  * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information. 
+  * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information.
   * Bi-directional / unmasked
   * Unidirectional / masked self attetion
-  * Cross attention applies attention to the primary sequence and treates the second token sequence the context. 
+  * Cross attention applies attention to the primary sequence and treates the second token sequence the context.
   * Multi-head attention. Multiple attention heads in parallel.
-  * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`. 
-  * Unembedding: Learns to convert vector intot he vocuabulary elements.  
-  * Token Embedding: Mapping to a vector space. 
+  * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`.
+  * Unembedding: Learns to convert vector intot he vocuabulary elements.
+  * Token Embedding: Mapping to a vector space.
   * Positional Embedding: Learned or hard-coded mapping to position of sequence to a vector space
-  * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information. 
+  * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information.
   * Bi-directional / unmasked
   * Unidirectional / masked self attetion
-  * Cross attention applies attention to the primary sequence and treates the second token sequence the context. 
+  * Cross attention applies attention to the primary sequence and treates the second token sequence the context.
   * Multi-head attention. Multiple attention heads in parallel.
-  * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`. 
-  * Unembedding: Learns to convert vector intot he vocuabulary elements. 
+  * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`.
+  * Unembedding: Learns to convert vector intot he vocuabulary elements.
 
 ??? tip "[Why you probably don't need to fine tune an LLM](https://www.tidepool.so/2023/08/17/why-you-probably-dont-need-to-fine-tune-an-llm)
-    
+
     Summary (with links internal to this project):
     **Why you shouldn't**
     1. Few Shot examples and better [prompts](../prompting/index.md) (and [chains](../agents/chains.md) helps a great deal.
-    2. [Retrieval Augmented Generation](../agents/rag.md) will get you all the way there. 
-    
-    
-    **Why you should** 
+    2. [Retrieval Augmented Generation](../agents/rag.md) will get you all the way there.
+
+
+    **Why you should**
     1. High accuracy requirements
     2. Don't care about speed
     3. Methods above don't work
@@ -122,15 +122,15 @@ Additional models come up all the time.
 
   **Architectures:**
 
-  * Encoder-Decoder (EDT), is also sequence-to-sequence. 
+  * Encoder-Decoder (EDT), is also sequence-to-sequence.
   * Encoder-only: (BERT)
-  * Decoder-only (GPT) Next-token 
+  * Decoder-only (GPT) Next-token
   * Multi-domain decoder-only transformer (Gato)
 
 
 ## Established Architectures
 
-## Developing Architectures 
+## Developing Architectures
 
 !!! tip "[Retentive Network: A successor to Transformer for Large Language Models](https://arxiv.org/pdf/2307.08621.pdf) Important LLM-like system using similar components that may help it to be more scaleable than `O(N^2)` memory and `O(N)` inference complexity."
 

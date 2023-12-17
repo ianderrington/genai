@@ -1,4 +1,4 @@
-Generating new data from an input involves selecting the next best token or sets of tokens given an output logit vector. 
+Generating new data from an input involves selecting the next best token or sets of tokens given an output logit vector.
 
 ## Contrastive Decoding
 
@@ -15,7 +15,7 @@ Demonstrates large improvements by using differences between better and worse mo
 ??? tip "[Contrastive Decoding: Open-ended Text Generation as Optimization](https://arxiv.org/pdf/2210.15097.pdf)"
     <img width="312" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f53b6aa3-a2d7-40d8-841a-822344bcb962">
 
-  
+
 ??? code "[Dola: Decoding by Contrasting Layers Improves Factuality in Large Language Models](https://github.com/voidism/DoLa) "
     [Paper](https://arxiv.org/pdf/2309.03883.pdf)
     <img width="594" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ae1873a8-3d44-4a61-b409-049de25f91c2">

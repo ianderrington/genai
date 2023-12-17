@@ -2,15 +2,15 @@
 site_name:  "Gen()AI"
 site_url: "https://managen.ai"
 site_author: Ian Derrington
-site_description: Focusing on Gen(erative) AI 
+site_description: Focusing on Gen(erative) AI
 
 # Repository
-repo_name: genai 
+repo_name: genai
 repo_url: "https://github.com/ianderrington/genai"
 edit_uri: "https://github.com/ianderrington/genai/reader_edits/docs/"
 # Copyright
 copyright: >
-  Copyright © Ian Derrington; 
+  Copyright © Ian Derrington;
   <a href="#__consent">Change cookie settings</a>
 
 # Configuration
@@ -107,7 +107,7 @@ extra:
         checked: false
   consent:
     title: Cookie consent
-    description: >- 
+    description: >-
       We use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
@@ -115,8 +115,8 @@ extra:
     actions:
       - accept
       - reject
-      - manage 
-  analytics: 
+      - manage
+  analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
     feedback:
@@ -130,7 +130,7 @@ extra:
         - icon: material/emoticon-sad-outline
           name: This page could be improved
           data: 0
-          note: >- 
+          note: >-
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 # extra:
@@ -205,7 +205,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  
+
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tilde

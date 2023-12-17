@@ -1,19 +1,19 @@
 TODO: These need to be partitioned out to the different positions
 
-The AI-Cambriatic explosion has led to a surge in services, methods, frameworks, and tools that enhance the creation and deployment of models from start to finish. Although there are end-to-end providers for generating valuable GenAI solutions, there is immense value in implementing and experimenting with your own stacks. 
+The AI-Cambriatic explosion has led to a surge in services, methods, frameworks, and tools that enhance the creation and deployment of models from start to finish. Although there are end-to-end providers for generating valuable GenAI solutions, there is immense value in implementing and experimenting with your own stacks.
 
 Additionally, there are useful [libraries and tools](./libraries_and_tools.md) worth exploring.
 
 !!! note "**tldr;** Here are the prominent frameworks"
-    - [Langchain](#langchain) is an early system with a principled design that allows for extensive applications to be built on top of it. 
-    - [Llama Ecosystem](#llama-ecosystem) is a community of Llama-focused modelers, based on the Meta model called Llama, Llama-2, and beyond. 
+    - [Langchain](#langchain) is an early system with a principled design that allows for extensive applications to be built on top of it.
+    - [Llama Ecosystem](#llama-ecosystem) is a community of Llama-focused modelers, based on the Meta model called Llama, Llama-2, and beyond.
     - [A number of others](#others).
 
-The rapid development in Generative AI tooling makes it challenging to keep up with the development and deprecation of powerful frameworks and tools. Some of the mentioned references may not be fully completed, or even nascent repos to build their intended purposes (described here). Please let us know if we are missing anything [here](../../Managenai/contributing.md). 
+The rapid development in Generative AI tooling makes it challenging to keep up with the development and deprecation of powerful frameworks and tools. Some of the mentioned references may not be fully completed, or even nascent repos to build their intended purposes (described here). Please let us know if we are missing anything [here](../../Managenai/contributing.md).
 
-## Frameworks 
+## Frameworks
 
-Starting with base programming languages, increasingly higher-level frameworks enable training and calling of AI models. Higher-level orchestration libraries and platforms allow creating and evaluating chains, agents, and systems that sometimes use visual interfaces. These can often be augmented with various tools/packages/repositories. On top of these involve mostly or all-complete frameworks and platforms that enable nearly complete. 
+Starting with base programming languages, increasingly higher-level frameworks enable training and calling of AI models. Higher-level orchestration libraries and platforms allow creating and evaluating chains, agents, and systems that sometimes use visual interfaces. These can often be augmented with various tools/packages/repositories. On top of these involve mostly or all-complete frameworks and platforms that enable nearly complete.
 
 ### Base languages
 
@@ -25,7 +25,7 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 - [Tensorflow](https://tensorflow.org) is a popular multi-language eco-system for creating and using AI.
 - [spAcy](https://spacy.io/) is a library for advanced Natural Language Processing in Python and Cython.
 
-### APIs based model usage 
+### APIs based model usage
 - [OpenAI](https://github.com/openai/openai-python)
 
 
@@ -49,8 +49,8 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 - [Langchain service deployment](https://github.com/ajndkr/lanarky)
 - [Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
-- [Langflow](https://github.com/logspace-ai/langflow) 
-- [Toolkit](https://www.toolkit.club/) Generates LangChain plugins for javascript. May be deprecated. 
+- [Langflow](https://github.com/logspace-ai/langflow)
+- [Toolkit](https://www.toolkit.club/) Generates LangChain plugins for javascript. May be deprecated.
 
 **Tutorials:**
 
@@ -60,7 +60,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 #### Llama ecosystem
 
-!!! code "[Llamaindex](https://github.com/run-llama/llama_index) Provides an orchestration framework for with multiple connectors" 
+!!! code "[Llamaindex](https://github.com/run-llama/llama_index) Provides an orchestration framework for with multiple connectors"
 
 !!! code "[Llama Lab](https://github.com/run-llama/llama-lab) enables flexible tools to use and indesx various tools"
 
@@ -72,13 +72,13 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
     - [Lit-Llama](https://github.com/Lightning-AI/lit-llama)
     - [MedAlpaca](https://github.com/kbressem/medAlpaca)
     - [Llama-2 on a CPU](https://towardsdatascience.com/running-llama-2-on-cpu-inference-for-document-q-a-3d636037a3d8) and [Github](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
-    - [GPT LLM Training](https://github.com/mshumer/gpt-llm-trainer) Generates and trains fine-tuned LLAMA-2 LLMs for specific tasks. 
-    - [llama index](https://www.llamaindex.ai/) and [Github](https://github.com/jerryjliu/llama_index) for integrating data ingestion and models. 
+    - [GPT LLM Training](https://github.com/mshumer/gpt-llm-trainer) Generates and trains fine-tuned LLAMA-2 LLMs for specific tasks.
+    - [llama index](https://www.llamaindex.ai/) and [Github](https://github.com/jerryjliu/llama_index) for integrating data ingestion and models.
     - [LlamaHub (community library of data loaders)](https://llamahub.ai)
     - [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
     - [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
     - [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
-    - [Llama.cpp](https://github.com/ggerganov/llama.cpp) 4 bit llama on macbooks. 
+    - [Llama.cpp](https://github.com/ggerganov/llama.cpp) 4 bit llama on macbooks.
 
 
 ### Haystack
@@ -95,7 +95,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 ??? code "[Deep Speed (by MSFT)](https://github.com/microsoft/DeepSpeed) empowers ChatGPT-like model training with a single click, offering 15x speedup over SOTA RLHF systems with unprecedented cost reduction at all scales"
     [Blog on Deepspeed Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
     ![image](https://github.com/microsoft/DeepSpeed/raw/master/blogs/assets/images/ds-chat-overview.png)
-    
+
     DeepSpeed-Ulysses uses a simple, portable, and effective methodology for enabling highly efficient and scalable LLM training with extremely long sequence lengths
     "DeepSpeed-Ulysses partitions individual samples along the sequence dimension among participating GPU. Then right before the attention computation, it employs all-to-all communication collective on the partitioned queries, keys and values such that each GPU receives the full sequence but only for a non-overlapping subset of the attention heads. This allows the participating GPUs to compute attention for different attention heads in parallel. Finally, DeepSpeed-Ulysses employs another all-to-all to gather the results along the attention heads while re-partitioning along the sequence dimension."
     ![Ulysses](https://github.com/microsoft/DeepSpeed/blob/master/blogs/deepspeed-ulysses/media/image3.png)
@@ -109,24 +109,24 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 #### Others
 
-??? code "[EmbedChain](https://github.com/embedchain/embedchain)  is a framework to easily create LLM powered bots over any dataset." 
+??? code "[EmbedChain](https://github.com/embedchain/embedchain)  is a framework to easily create LLM powered bots over any dataset."
     Example:
     ```python
         import os
 
         from embedchain import Llama2App
-        
+
         os.environ['REPLICATE_API_TOKEN'] = "REPLICATE API TOKEN"
-        
+
         zuck_bot = Llama2App()
-        
+
         # Embed your data
         zuck_bot.add("youtube_video", "https://www.youtube.com/watch?v=Ff4fRgnuFgQ")
         zuck_bot.add("web_page", "https://en.wikipedia.org/wiki/Mark_Zuckerberg")
-        
+
         # Nice, your bot is ready now. Start asking questions to your bot.
         zuck_bot.query("Who is Mark Zuckerberg?")
-        # Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook. 
+        # Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook.
     ```
 
 ??? tip "[txtai](https://github.com/neuml/txtai) 'is an all-in-one embeddings database for semantic search, LLM orchestration and language model workflows."
@@ -145,7 +145,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 
 ??? code "[DSPY](https://github.com/stanfordnlp/dspy) is a framework for solving advanced tasks with language models and retrieval models"
-    Useful for exploring automatic prompt opteimization. 
+    Useful for exploring automatic prompt opteimization.
 
 
 ### Language-like interfaces
@@ -156,12 +156,12 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
     if "Hi there" in GREETINGS:
         "Can you reformulate your greeting in the speech of \
          victorian-era English: [VIC_GREETINGS]\n" where stops_at(VIC_GREETINGS, ".")
-    
+
     "Analyse what part of this response makes it typically victorian:\n"
-    
+
     for i in range(4):
         "-[THOUGHT]\n" where stops_at(THOUGHT, ".")
-    
+
     "To summarize:[SUMMARY]"
     ```
 
@@ -174,10 +174,8 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 * RELM
 * Outlines
 
-  
+
 
 ### Retrieval Augmentation focus
 
 !!! code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
-
-

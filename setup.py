@@ -14,4 +14,3 @@ setup(
     author_email="your.email@example.com",  # Your email address
     description="A description of the genai package.",  # A brief description of your package
 )
-

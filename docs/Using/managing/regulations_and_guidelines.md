@@ -1,4 +1,4 @@
-## Regulations 
+## Regulations
 !!! important "[Executive order on AI development](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/)"
 
 ## Compliance evaluations
