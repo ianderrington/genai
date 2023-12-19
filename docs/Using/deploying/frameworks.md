@@ -5,7 +5,7 @@ The AI-Cambriatic explosion has led to a surge in services, methods, frameworks,
 Additionally, there are useful [libraries and tools](./libraries_and_tools.md) worth exploring.
 
 !!! note "**tldr;** Here are the prominent frameworks"
-    - [Langchain](#langchain) is an early system with a principled design that allows for extensive applications to be built on top of it.
+    - [Langchain](#langchain) is an early system with a principled design that allows for extensive applications to be built with it.
     - [Llama Ecosystem](#llama-ecosystem) is a community of Llama-focused modelers, based on the Meta model called Llama, Llama-2, and beyond.
     - [A number of others](#others).
 
@@ -28,8 +28,6 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 ### APIs based model usage
 - [OpenAI](https://github.com/openai/openai-python)
 
-
-
 ### Interaction and Orchestration Frameworks and Languages
 
 Handling the inputs/outputs to GenAI in a consistent and reliable manner has spurred the creation of software libraries that can work with GenAI that is called as a service, or hosted locally.
@@ -37,7 +35,7 @@ Handling the inputs/outputs to GenAI in a consistent and reliable manner has spu
 #### LangChain
 !!! tip "[Langchain](https://python.langchain.com/en/latest/#) Is a thorough python and javascript orchestration language for adaptable, memory and tooling-equipped calls that can enable agentic AI."
 
-!!! tip "[LangSErv](https://github.com/langchain-ai/langserve) will provide a hosted version of LangServe for one-click deployments of LangChain applications."
+!!! tip "[LangServe](https://github.com/langchain-ai/langserve) will provide a hosted version of LangServe for one-click deployments of LangChain applications."
 
 !!! tip "[OpenGPTs](https://github.com/langchain-ai/opengpts) Provides an open-source effort to integrate multiple LLMs, and builds upon Langchain, LangServe, and LangSmith"
 

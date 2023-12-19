@@ -1,3 +1,10 @@
+🔮 Welcome to Manging Gen()AI. 🔮 
+
+Generative Artificial Intelligence, and related General AI and General Super AI are components of what already is and may be the future of intelligence and computing. We must effectively manage these technologies to use them to their highest potential.
+
+To manage these technologies effectively and responsibly _we must understand them_. That is a complex task, especially given the speed at which we are generating novel insights, new discoveries, backed by increasingly powerful hardware.
+
+That is why we created Mana Gen AI.
 !!! important "[tl;dr](#tldr)"
     - Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it
     - Understand the [**data**](./data/index.md) and collect data that you need.
@@ -5,11 +12,7 @@
     - [**Deploy**](../Using/deploying/index.md) your model
     - [**Manage**](../Managenai/index.md) your model
 
-Generative Artificial Intelligence, and related General AI and General Super AI are components of what already is and may be the future of intelligence and computing. We must effectively manage these technologies to use them to their highest potential.
 
-To manage these technologies effectively and responsibly _we must understand them_. That is a complex task, especially given the speed at which we are generating novel insights, new discoveries, backed by increasingly powerful hardware.
-
-That is why we created Mana Gen AI.
 
 Here we focus on Generative AI, knowing various and changing definitions of these domains have a degree of overlap. With time and support we will be able to help many people understand the technology, lest it become a magician's tool.
 
@@ -31,7 +34,6 @@ Getting into it, you will find the following outline:
 1. [Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners.
 1. [Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies.
 1. [Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis.
-i
 
 
 ### How do you do stuff with Gen()AI?

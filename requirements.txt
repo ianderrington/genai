@@ -43,7 +43,6 @@ filelock
 fonttools
 fqdn
 frozenlist
-genai @ file:///Users/ianderrington/git/genai
 github
 ghp-import
 gitdb

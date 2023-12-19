@@ -22,7 +22,7 @@ Consider these general factors (as suggested by AWS) when assessing the requirem
 
 ### [Budget Constraints](#budget-available)
 
-The allocated budget will affect your tool's monetization strategy. Highly dependent on your business model, it is crucial to optimize [model serving](../../Understanding/architectures/optimization.md) to avoid excessive computing needs.
+The allocated budget will affect your tool's monetization strategy. Highly dependent on your business model, it is crucial to optimize [model serving](../../Understanding/architectures/optimization.md) to avoid excessive computing needs. Using services that try to optimize this for you, like [OpenRouter](https://openrouter.ai/) may be helpful.
 
 ### [Back-end Computing](#compute-back-end)
 
@@ -34,21 +34,8 @@ Finally, you'll need to present the results to the end-user effectively. Look in
 
 Remember that needs will evolve as your understanding of all the above factors shifts. So it's crucial to start with a base that you can iterate from, especially if your solution involves a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
 
-## Useful Tips
 
-??? tip "[State of GPT by Andrej Karpathy](https://build.microsoft.com/en-US/sessions/db3f4859-cd30-4445-a0cd-553c3304f8e2) A comprehensive presentation on the general state of Generative AI made possible by GPT."
 
-    <img width="925" alt="image" src="https://github.com/ianderrington/general/assets/76016868/de2d3b33-9e79-407d-b3c7-5b795f330722" loading="lazy">
-    <img width="918" alt="image" src="https://github.com/ianderrington/general/assets/76016868/0ecb56de-966a-40c5-8d14-1df3b4a5a89f">
-    <img width="282" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7cea8be4-26dd-46c3-9001-fcf625e5975d">
-    <img width="918" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a32295bd-9d88-4b31-bd10-134e11e6c546">
-    <img width="886" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7b1c6c4b-3778-4536-8d10-03696f3624c5">
-
-## Reference Materials
-
-??? tip "[Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A detailed discussion of the components and their interactions using orchestration systems."
-
-    ![image](https://github.com/ianderrington/genai/assets/76016868/f287eaef-6b86-4846-8885-2b3ad3cd614b) [^n1]
 
 ??? tip "[Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/abs/2307.10169) This is a well-done and comprehensive review."
 

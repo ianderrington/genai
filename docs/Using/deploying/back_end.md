@@ -1,5 +1,3 @@
-# Deploying AI Models: Backend Considerations
-
 Deploying AI models involves a variety of considerations, especially when it comes to backend infrastructure. The backend is the engine that powers your AI application, handling the complex computations and data processing that your models require. When setting up your backend, you need to consider factors such as latency, model availability, and compute resources.
 
 - **Latency**: This refers to the delay between a user's action and the system's response. In AI applications, low latency is crucial for a smooth user experience.
@@ -29,6 +27,9 @@ There are several libraries available that can help you deploy your AI models on
 - [Triton Inference Server](https://github.com/triton-inference-server/server): Part of NVIDIA AI Inference, this server provides a robust solution for deploying AI models.
 
 - [litellm by BerriAI](https://github.com/BerriAI/litellm/blob/main/cookbook/proxy-server/readme.md): This library provides code to enable deployments on railway.app.
+
+- [OpenRouter](https://openrouter.ai/): Provides a python and curl based calling of open and closed source models, tracking rates.
+
 
 ## Platforms for Backend Deployment
 

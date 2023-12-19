@@ -1,4 +1,57 @@
-from genai.interactions.github.evaluate_issue import main
+# from genai.interactions.github.evaluate_issue import main
+import sys
+import re
+import os
+import json
+
+
+def has_url(text):
+    url_regex = r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+
+    return re.search(url_regex, text.lower()) is not None
+
+
+def find_keywords(directory, keywords):
+    matches = []
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            file_path = os.path.join(root, file)
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    file_content = f.read()
+                    for keyword in keywords:
+                        if keyword in file_content:
+                            matches.append(file)
+                            # print(f"Match found in {file_path} for keyword '{keyword}'")
+            except UnicodeDecodeError:
+                pass
+                ##print(f"Skipping non-text or non-UTF-8 encoded file: {file_path}")
+            except Exception as e:
+                pass
+                # print(f"Error reading file {file_path}: {e}")
+    return matches
+
+
+def main(issue_number, issue_text, directory):
+    keywords = ["includeindocs"]  # Define your keywords here
+    label = "HumanInsightRequired"
+
+    if has_url(issue_text):
+        label = "IncludeInDocs"
+    else:
+        keyword_matches = find_keywords(directory, keywords)
+        if keyword_matches:
+            label = "IncludeInDocs"
+
+    # Output for GitHub Actions
+
+    # python {output} "{name}={value}" >> $GITHUB_STATE
+    # https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+    # must use the format above instead of set-output
+
+    # print(f"echo \"label='{label}'\" >> \"$GITHUB_OUTPUT\"")
+    print(f"label={label}")
+
 
 if __name__ == "__main__":
     issue_number = sys.argv[1]
