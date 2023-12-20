@@ -46,11 +46,12 @@ jobs:
         run: gh issue edit ${{github.event.issue.number}} --add-label $LABEL
       - name: Issue comment
         env:
-          LABEL: ${{ needs.evaluate.outputs.label }}
           GH_TOKEN: ${{ github.token }}
           BODY: ${{ needs.evaluate.outputs.body }}
-        run: if $BODY != "None"; gh issue edit ${{github.event.issue.number}} --body $BODY; fi
-            
+        run: |
+          if [ "$BODY" != "None" ]; then
+            gh issue edit ${{github.event.issue.number}} --body "$BODY"
+          fi
             
         # env:
         #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
