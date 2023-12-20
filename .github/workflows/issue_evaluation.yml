@@ -50,9 +50,12 @@ jobs:
           BODY: ${{ needs.evaluate.outputs.body }}
         run: |
           if [ "$BODY" != "None" ]; then
-            gh issue edit ${{github.event.issue.number}} --body "$BODY"
+            gh issue comment ${{github.event.issue.number}} --body "$BODY"
           fi
-            
+        # run: |
+        # if [ "$BODY" != "None" ]; then
+        #   gh issue edit ${{github.event.issue.number}} --body "$BODY"
+        # fi 
         # env:
         #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # run: gh issue edit ${{ github.event.issue.number }} --add-label ${{ needs.evaluate.outputs.label }}
