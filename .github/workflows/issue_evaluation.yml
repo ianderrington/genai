@@ -28,7 +28,7 @@ jobs:
 
       - name: Run issue evaluation script
         id: evaluate_issue
-        run: python .github/scripts/evaluate_issue.py "${{ github.event.issue.number }} ${{ github.event.issue.body }}" >> "$GITHUB_OUTPUT"
+        run: python .github/scripts/evaluate_issue.py "${{ github.event.issue.number }}" "${{ github.event.issue.body }}" >> "$GITHUB_OUTPUT"
         # run: echo "label=IncludeInDocs" >> "$GITHUB_OUTPUT"
 
   label:
