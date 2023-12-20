@@ -1,6 +1,6 @@
 # Overview of Gen()AI
 
-Computers and algorithms have been able to generate art, writing, and other forms of content for many decades. It is recently that the content has become _human like_ in its quality. Using AI, that is generally Machine-Learning based, uses _data_ to create such high quality output. 
+Computers and algorithms have been able to generate art, writing, and other forms of content for many decades. It is recently that the content has become _human-like_ in its quality. Using AI, that is generally Machine-Learning based, uses _data_ to create such high quality output. 
 
 Here we discuss at a high-level how Gen() AI accomplishes this. 
 
@@ -34,17 +34,41 @@ With a visual representation as follows
 
 ## How do we create Gen()AI?
 
-MANAGEN Summarize the different techniques Rule-based, Data-based, and fusion methods. Expand the results in the subsequent sections.
 
-### Data-based
+There are several techniques for creating Gen()AI, including rule-based, data-based, and fusion methods. We will provide a brief summary of these techniques here and delve into more detail in the subsequent sections.
 
-1. Get data.
-1. Train model. 
-1. Generate. 
-1. Iterate. 
+### Data-based Approaches
 
-MANAGEN mention [foundation models](foundation_models.md) and how it relates. 
+The data-based approach to creating Gen()AI involves the following steps:
 
-### Rule-based
+1. Collect data.
+2. Train the model on the collected data.
+3. Evaluate the model based on any new data.
+4. Iterate the process to improve the model.
 
-1. 
+[Foundation models](#foundation-models) play a significant role in the data-based approach as they can be built from to allow fine-tuning based on new or more specific data that may be proprietary, private, or otherwise inappropriately accessed for training a public-facing model. 
+
+<i id='#foundation-models'></i>"
+!!! important "Foundation models"
+    By their nature, foundational models will be ever increasing in scope and potential. We share some seminal papers on foundation models here.
+
+    Continual evolution of models may be found in hubs such as [Hugging Face](https://huggingface.co/models?other=foundation+model&sort=trending).
+
+
+### Rule-based Approaches
+
+The rule-based approach to creating Gen()AI involves defining a set of rules that the AI follows to interact new data. This approach is often used in scenarios where the data is scarce or when the generation process needs to adhere to specific guidelines or standards. 
+
+The steps involved in the rule-based approach are:
+
+1. Define the rules for data generation.
+2. Implement the rules in the AI model.
+3. Evaluate new data based on the rules.
+4. Iterate the process to refine the rules and improve the model.
+
+On larger volumes of data process can be less powerful due to unecessary or inaccurate rules, especially if the rules are are not continually re-evaluated for their impact. 
+
+
+### Fusion approaches can do both of those
+
+Fine-tuned models, even those that are smaller in their size/cost may out-perform larger mdoels, likely due to the no free lunch theorem. As such, using both hard-coded and ml-generated rules to select between models provide the basis fo fusion techniques. For instance, combining traditional algorithms, like that of a calculator for math processing, or regular expressions for text processing, with a ML, will help it to be more explainable, more accurate, and more designable, compared to systems that are mostly AI-driven. 

@@ -16,3 +16,21 @@ Here are some ideas of things that might be explored.
 This relates to general methods of GenAI directly .
 
 * Fusing State spaced copy methods (Mamba) with [binpacking funsearch](https://deepmind.google/discover/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/) methods from google. 
+
+## Our logo-emoji
+
+🧠 - Brain: Represents intelligence, a core aspect of AI.
+⚙️ - Gear: Symbolizes technology and machinery, which are fundamental in AI.
+🤖 - Robot: Often used to represent AI and automation.
+🔮 - Crystal Ball: Suggests prediction and foresight, key capabilities of AI.
+💻 - Computer: Represents the digital nature of AI.
+🌐 - Globe with Meridians: Indicates connectivity and the global reach of AI.
+🧬 - DNA: Symbolizes the complexity and evolutionary aspects of generative AI.
+🎨 - Artist Palette: For generative AI, especially if it involves creativity or generative art.
+📊 - Chart Increasing: Represents data analysis and learning, essential for AI.
+🔌 - Electric Plug: Denotes technology, energy, and the idea of 'powering' AI.
+🧮 - Abacus: An ancient calculating tool, symbolizing the evolution to modern computing and AI.
+🕹️ - Joystick: If your AI relates to gaming or interactive systems.
+🚀 - Rocket: Symbolizes innovation, advancement, and the futuristic aspect of AI.
+🌟 - Star: Signifies excellence, success, or a pioneering aspect in AI.
+🔍 - Magnifying Glass Tilted Right: Represents analysis, scrutiny, and the detail-oriented nature of AI.
