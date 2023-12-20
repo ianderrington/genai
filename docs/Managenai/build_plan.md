@@ -12,7 +12,8 @@ To go beyond, we will be using Generative AI to create and expand. There are sev
 
 ### Incorporate new content
 
-```mermaid "Issue Updated"
+```mermaid 
+
 flowchart TD
     A[Start: Issue Update Triggered] --> B{KG Node Updated?}
     B -- Yes --> C[Parse KG for Vector Embedding Contents]

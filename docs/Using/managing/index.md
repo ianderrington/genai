@@ -1,1 +1,1 @@
-After [deploying](../deploying/index.md) your model, you will need to manage it. 
+You will need to manage your models

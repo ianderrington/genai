@@ -8,7 +8,7 @@ As a general principle in ML, it is important to have your evaluation or test in
 - Exact Match (EM)
 TODO: Finish this
 
-While single-LLM calls are useful to evaluate, [comparing and evaluating](../agents/evaluating_and_comparing.md) system-evaluation will likely be essential to ensure successful [deployment](../../Using/deploying/index.md).
+While single-LLM calls are useful to evaluate, [comparing and evaluating](../agents/evaluating_and_comparing.md) system-evaluation will likely be essential to ensure successful [deployment](../deploying/index.md).
 
 
 

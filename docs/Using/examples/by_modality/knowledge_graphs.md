@@ -5,6 +5,10 @@ TODO: This needs to be moved to ai_in_general (and that needs to be made into a 
 Knowledge graphs can be created with the help of Generative AI. Understanding relationships between pieces of information allows the technology to create visual representations of connections, improving information processing.
 
 ### General approaches 
+
+
+!!! tip "[GPT-graph](https://github.com/m-elbably/gpt-graph) A react-based ability to explore questions."
+
 ??? important "[Natural Language is All a Graph Needs](https://arxiv.org/pdf/2308.07134.pdf) is a very powerful manner of fusing LLMs with KGs using natural language"
 
     - Node classification and self-supervised link predictions.
@@ -31,7 +35,6 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 
 ### Other examples
-
 
 !!! note "[Ontology mapping](https://medium.com/@peter.lawrence_47665/encouraging-results-for-knowledge-graph-extraction-by-llm-ontology-prompting-60a7e5dcaf0a)"
 

@@ -9,7 +9,7 @@ That is why we created Mana Gen AI.
     - Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it
     - Understand the [**data**](./data/index.md) and collect data that you need.
     - [**Understandand build**](architectures/index.md) use [**pre-trained**](architectures/pre_trained_models.md) models.
-    - [**Deploy**](../Using/deploying/index.md) your model
+    - [**Deploy**](deploying/index.md) your model
     - [**Manage**](../Managenai/index.md) your model
 
 
