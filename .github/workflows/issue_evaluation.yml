@@ -46,8 +46,8 @@ jobs:
           BODY: ${{ needs.evaluate.outputs.body }}
         run: |
           gh issue edit ${{github.event.issue.number}} --add-label $LABEL
-          if $BODY != "None":
-            gh issue edit ${{github.event.issue.number}} --body $BODY
+          if $BODY != "None"; gh issue edit ${{github.event.issue.number}} --body $BODY; fi
+            
             
         # env:
         #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
