@@ -55,7 +55,7 @@ def main(issue_number, issue_text, directory):
 
     urls = extract_urls(issue_text)
     urls = clean_urls(urls)
-    print(f"urls={urls}")
+    # print(f"urls={urls}")
     label = "HumanInsightRequired"
     body = ""
     if urls: 
