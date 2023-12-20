@@ -13,6 +13,7 @@ jobs:
       contents: read
     outputs: 
       label: ${{ steps.evaluate_issue.outputs.label }}
+      body: ${{ steps.evaluate_issue.outputs.body }}
 
     steps:
       - name: Checkout repository
@@ -42,7 +43,12 @@ jobs:
         env:
           LABEL: ${{ needs.evaluate.outputs.label }} 
           GH_TOKEN: ${{ github.token }}
-        run: gh issue edit ${{github.event.issue.number}} --add-label $LABEL
+          BODY: ${{ needs.evaluate.outputs.body }}
+        run: |
+          gh issue edit ${{github.event.issue.number}} --add-label $LABEL
+          if $BODY != "None":
+            gh issue edit ${{github.event.issue.number}} --body $BODY
+            
         # env:
         #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # run: gh issue edit ${{ github.event.issue.number }} --add-label ${{ needs.evaluate.outputs.label }}
