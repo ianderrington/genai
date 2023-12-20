@@ -53,7 +53,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           NUMBER: ${{github.event.issue.number}}
           BODY: ${{ needs.evaluate.outputs.body }} 
-       run: gh issue edit ${{github.event.issue.number}} --add-label $LABEL
+        run: gh issue edit ${{github.event.issue.number}} --add-label $LABEL
 
   # run: |
   #   gh issue edit "$NUMBER" --add-label $LABEL
