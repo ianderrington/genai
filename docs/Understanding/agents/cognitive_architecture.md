@@ -38,7 +38,7 @@ They can be executed programmatically given frameworks or sometimes done manuall
 
 Here are some known thought structures that are improving agentic output.
 
-## Linear thought chains
+### Linear thought chains
 
 ??? important "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf)"
     
@@ -143,7 +143,7 @@ There are other [memory based solutions](memory.md) including [RAG](rag.md) that
     Demonstrates the use of 'scratch pads' to store intermediate results that can be recalled later for improved perfomance. 
     
 
-## Planning and Reflective
+### Planning and Reflective
 
 ??? important "[Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation](https://arxiv.org/pdf/2310.02304v1.pdf)"
 
@@ -416,7 +416,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
 
     Also provides a way to functionalize templates to separate prompt logic.
 
-## Automated chain discovery, selection, and creation.
+### Automated chain discovery, selection, and creation.
 
 ??? code "[Auto-CoT: Automatic Chain of Thought Prompting in Large Language Models](https://github.com/amazon-science/auto-cot)"
 
@@ -472,7 +472,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
 
 
 
-## Chain Optimization
+### Chain Optimization
 
 Problems such as Hallucinations can be mitigated through downstream methods of process.
 
