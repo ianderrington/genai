@@ -1,4 +1,4 @@
-Cognitive Architectures refer to systems or chain-patterns that are employed after discrete interactions with single or multiple LLMs.
+Cognitive Architectures refer to systems or chain patterns that are employed after discrete interactions with single or multiple LLMs.
 
 
 ## Core themes
@@ -8,10 +8,10 @@ Cognitive Architectures refer to systems or chain-patterns that are employed aft
 - **Reasoning** or the ability to create causal connections between input and output. These are often taken care of at the level of the LLM.
 - **Planning** to enable more complicated goals to be broken down into individually accomplishable tasks. May use external tools like memory to keep track of tasks.
 - **Deciding and prioritizing** to select between different options or available components
-- **Summarizing and Abstracting** to compress information into reusable chunks or otherwise abstracting information to be more effective.
+- **Summarizing and Abstracting** to compress information into reusable chunks or otherwise abstract information to be more effective.
 - **Logging + Remembering: Learning** being the automatic or initiated information storage and recall that is accessed in [memory](./memory.md)
-- **Reflection**, or an internal (or external) evaluation of output, be it thoughts, planing, and thoughts.
-- **Tool use** While overlapping directly with Observing or taking memory-actions, tool-usage may be part of cognitive patterns (like `check task-list`) and must be considered as such.
+- **Reflection**, or an internal (or external) evaluation of output, be it thoughts, planning, and thoughts.
+- **Tool use** While overlapping directly with Observing or taking memory actions, tool usage may be part of cognitive patterns (like using a `scratch-pad`) and must be considered as such.
 
 
 Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](#prompts) they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation with [recurrent training](../architectures/recurrent_training.md).
@@ -40,9 +40,15 @@ Here are some known thought structures that are improving agentic output.
 
 ## Linear thought chains
 
-??? important "[]()" Chain of 
+??? important "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf)"
+    
+    [Neurips paper](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf)"
+
+    A classic paper, demonstrating the use of in-call task breakdown to better-enable more successful outputs. Often represented as appending a phrase such as `let's think about this step by step` both with and without exemplars to improve success quality going from zero to multi-shot prompts. 
+    <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66">
 
 ??? important "[Chain of Code: Reasoning with a Language Model-Augmented Code Emulator](https://arxiv.org/pdf/2312.04474.pdf)"
+
     [Site](https://sites.google.com/view/chain-of-code)
     A powerful solution to reasoning-based problems. It generates code-based solutions that can be executed or pseudo-executed with llm-enabled execution emulation (if code interpreter execution fails).  
     <img width="658" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cc5128c6-d99f-4130-961f-48280947c42e">
@@ -70,10 +76,12 @@ Here are some known thought structures that are improving agentic output.
 
 
 ??? code "[ReAct](https://github.com/ysymyth/ReAct)"
+
     Effectively Observe, Think, Act, Repeat.
     [Paper](https://arxiv.org/abs/2210.03629)
 
 ??? tip "[Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models](https://arxiv.org/pdf/2310.06117.pdf) provides a solid improvement over scientific Q&A by first extracting fundamental principles in an initial multi-shotted prompt and then putting it into a subsequent multi-shotted prompt."
+
     The authors find significant improvement over other methods.
     <img width="941" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/8f79caa8-da02-4f34-8166-e08148dbd1e5">
 
@@ -114,18 +122,23 @@ Here are some known thought structures that are improving agentic output.
     Answer:
     ```
 
-
-
 ??? tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
+
     ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
     - [Paper](https://arxiv.org/abs/2303.11366)
     - [Inspired github](https://github.com/GammaTauAI/reflexion-human-eval)
 
-??? tip "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf)"
+??? tip "[Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks](https://arxiv.org/pdf/2211.12588.pdf)"
+
+    Superseded by Chain of Code.
+    Generates code to answer financial, and math-related problems.
+    <img width="649" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/20376dba-1944-4486-8510-33feec16dd36">
 
 
 ## Planning and Reflective
+
 ??? important "[Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation](https://arxiv.org/pdf/2310.02304v1.pdf)"
+
     ```python
          from helpers import extract_code
              def improve_algorithm(initial_solution, utility, language_model):
@@ -211,10 +224,6 @@ General manners of search.
     <img width="276" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c544e5ae-10a0-4fa7-bb05-9fd607524096">
     <img width="272" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a1b4af81-6769-458b-8b9d-c7474309477f">
     <img width="275" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b66028d7-bb42-4c9c-887f-505262062f5f">
-
-
-
-
 
 
 ??? tip "[Algorithm of Thoughts](https://arxiv.org/pdf/2308.10379.pdf) A general extension of Chain of Thought, similar to Graph of Thoughts"
@@ -399,7 +408,13 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
 
     Also provides a way to functionalize templates to separate prompt logic.
 
-## Automated chain selection and discovery
+## Automated chain discovery, selection, and creation.
+
+??? code "[Auto-CoT: Automatic Chain of Thought Prompting in Large Language Models](https://github.com/amazon-science/auto-cot)"
+
+    [Paper](https://arxiv.org/pdf/2210.03493.pdf)
+    This algorithm samples exemplars to construct demonstrations that enable improved accuracy of multi-shotted outcomes using the Chain-of-Thought prompting method. 
+    <img width="647" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e0c1161f-ce0b-4302-b05a-55b094032c8e">
 
 ??? tip "[Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine](https://arxiv.org/pdf/2311.16452.pdf)"
 
