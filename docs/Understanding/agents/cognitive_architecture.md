@@ -40,6 +40,14 @@ Here are some known thought structures that are improving agentic output.
 
 ## Linear thought chains
 
+??? important "[]()" Chain of 
+
+??? important "[Chain of Code: Reasoning with a Language Model-Augmented Code Emulator](https://arxiv.org/pdf/2312.04474.pdf)"
+    [Site](https://sites.google.com/view/chain-of-code)
+    A powerful solution to reasoning-based problems. It generates code-based solutions that can be executed or pseudo-executed with llm-enabled execution emulation (if code interpreter execution fails).  
+    <img width="658" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cc5128c6-d99f-4130-961f-48280947c42e">
+    <img width="647" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d115b042-ee91-464a-8915-4757286658fe">
+
 
 ??? important "[System 2 Attention (is something you might need too)](https://arxiv.org/abs/2311.11829)"
 
