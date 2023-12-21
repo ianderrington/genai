@@ -134,6 +134,11 @@ Here are some known thought structures that are improving agentic output.
     Generates code to answer financial, and math-related problems.
     <img width="649" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/20376dba-1944-4486-8510-33feec16dd36">
 
+### Including Memory
+
+There are other [memory based solutions](memory.md) including [RAG](rag.md) that improve results. Here we reveal a few important ones.
+
+??? important [
 
 ## Planning and Reflective
 
