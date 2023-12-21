@@ -86,8 +86,15 @@ It is also important to note, that while [manual methods](#manual-methods) are e
     ![image](https://github.com/ianderrington/genai/assets/76016868/f02a9f3e-4f4c-49de-9b35-1702df65d618)
 
 
+### Prompt Compression
 
+Prompt compression provides methods of compressing prompt inputs in such a way that it will yield equivalent results for downstream result generation. 
 
+??? code "[(Long)LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://github.com/microsoft/LLMLingua?)"
+    [Paper: LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://arxiv.org/pdf/2310.05736.pdf)
+    The authors demonstrate the use of smaller language models to identify and remove non-essential tokens in prompts, enablign up to 20x compression with minimal performance loss. 
+    
+    
 ## Useful Resources for LLM Prompting
 
 - [Prompting is Programming: A Query Language for Large Language Models](https://arxiv.org/pdf/2212.06094.pdf)
