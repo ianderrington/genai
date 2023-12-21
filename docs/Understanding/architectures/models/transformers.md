@@ -160,6 +160,15 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 - [Language is not all you need](https://arxiv.org/pdf/2302.14045.pdf)
 - [Meta-Transformer: A Unified Framework for Multimodal Learning](https://arxiv.org/abs/2307.10802) The first framework to perform unified learning across 12 modalities with unpaired data. It does so by learning an embedding that can be shared across the modalities. [Github](https://kxgong.github.io/meta_transformer/)
 
+### Graph
+
+!!! note "[Invariant Graph Transformer](https://arxiv.org/pdf/2312.07859.pdf)"
+    
+    <img width="348" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/43ab8576-6c74-4f1d-ba67-8c0a6e728c27">
+
+    <img width="695" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/66251260-2113-47d1-a416-2d160d7a2bef">
+
+
 ## Abstractions
 
 - [Looped Transformers and Programmable Computers](https://arxiv.org/pdf/2301.13196.pdf) Understanding that transformer networks can simulate complex algorithms when hardcoded with specific weights and made intoa  loop. 'Machine Learning' 'Machine code'. "We demonstrate that
