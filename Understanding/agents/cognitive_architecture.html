@@ -1701,9 +1701,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#structural-decomposition" class="md-nav__link">
+  <a href="#structural-and-task-decomposition" class="md-nav__link">
     <span class="md-ellipsis">
-      Structural Decomposition
+      Structural and Task Decomposition
     </span>
   </a>
   
@@ -3490,9 +3490,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#structural-decomposition" class="md-nav__link">
+  <a href="#structural-and-task-decomposition" class="md-nav__link">
     <span class="md-ellipsis">
-      Structural Decomposition
+      Structural and Task Decomposition
     </span>
   </a>
   
@@ -3832,8 +3832,13 @@ It happens in 3 general steps:</p>
 <p><a href="https://posgnu.github.io/rci-web/">Website</a>, <a href="https://github.com/posgnu/rci-agent">GitHub</a>  Combining with Chain of Thought it is even better. The method: Plan: Critique, Improve
 - Explicit RCI: "Review your previous answer and find problems with your answer." &rarr; "Based on the problems you found, improve your answer." Recursively Criticizes and Improves its output. This sort of prompting outperforms Chain of Thought, and combined it works even better.</p>
 </details>
-<h3 id="structural-decomposition">Structural Decomposition<a class="headerlink" href="#structural-decomposition" title="Permanent link">&para;</a></h3>
+<h3 id="structural-and-task-decomposition">Structural and Task Decomposition<a class="headerlink" href="#structural-and-task-decomposition" title="Permanent link">&para;</a></h3>
 <p>Breaking down the input into a divide-and-conquer approach is a valuable approach to more complex requests. Considering separate perspectives, within the <em>same</em> model, or within separate model calls with different prompt-inceptions as in agent <a href="systems.html">systems</a> can improve performance.</p>
+<details class="tip">
+<summary><a href="https://arxiv.org/pdf/2312.10332.pdf">ProTIP: Progressive Tool Retrieval Improves Planning</a></summary>
+<p>The authors demonstrate a dynamic contrastive learning-based framework implicitly performs task decomposition without explicit subtask requirements, while retaining subtask automicity. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/52204bc7-fc1d-467a-9c3c-7fc367ac4b44" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="676" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/52204bc7-fc1d-467a-9c3c-7fc367ac4b44"></a></p>
+</details>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2307.15337.pdf">Skeleton of Thought</a></summary>
 <p>A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation.
