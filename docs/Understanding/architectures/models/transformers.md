@@ -150,6 +150,12 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
 ### Multimodal
 
+??? important "[Jack of All Tasks, Master of Many: Designing General-purpose Coarse-to-Fine Vision-Language Model](https://arxiv.org/pdf/2312.12423.pdf)"
+
+    <img width="672" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/61e04782-ee50-4964-829b-270cd8a0041c">
+
+    > In this work, we present VistaLLM, the first generalpurpose vision model that addresses coarse- and finegrained vision-language reasoning and grounding tasks over single and multiple input images. We unify these tasks by converting them into an instruction-following sequenceto-sequence format. We efficiently transform binary masks into a sequence of points by proposing a gradient-aware adaptive contour sampling scheme, which significantly improves over the naive uniform sampling technique previously used for sequence-to-sequence segmentation tasks
+
 - [Visual GPT](https://arxiv.org/pdf/2303.04671.pdf)
 - [Language is not all you need](https://arxiv.org/pdf/2302.14045.pdf)
 - [Meta-Transformer: A Unified Framework for Multimodal Learning](https://arxiv.org/abs/2307.10802) The first framework to perform unified learning across 12 modalities with unpaired data. It does so by learning an embedding that can be shared across the modalities. [Github](https://kxgong.github.io/meta_transformer/)
