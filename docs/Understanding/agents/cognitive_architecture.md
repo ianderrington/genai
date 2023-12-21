@@ -138,7 +138,10 @@ Here are some known thought structures that are improving agentic output.
 
 There are other [memory based solutions](memory.md) including [RAG](rag.md) that improve results. Here we reveal a few important ones.
 
-??? important [
+??? important "[Show your work: Scratch Pads for Intermediate Computation with Language Models](https://arxiv.org/pdf/2112.00114.pdf)"
+    
+    Demonstrates the use of 'scratch pads' to store intermediate results that can be recalled later for improved perfomance. 
+    
 
 ## Planning and Reflective
 
