@@ -316,9 +316,15 @@ General manners of search.
     [Website](https://posgnu.github.io/rci-web/), [GitHub](https://github.com/posgnu/rci-agent)  Combining with Chain of Thought it is even better. The method: Plan: Critique, Improve
     - Explicit RCI: "Review your previous answer and find problems with your answer." --> "Based on the problems you found, improve your answer." Recursively Criticizes and Improves its output. This sort of prompting outperforms Chain of Thought, and combined it works even better.
 
-### Structural Decomposition
+### Structural and Task Decomposition
 
 Breaking down the input into a divide-and-conquer approach is a valuable approach to more complex requests. Considering separate perspectives, within the _same_ model, or within separate model calls with different prompt-inceptions as in agent [systems](./systems.md) can improve performance.
+
+??? tip "[ProTIP: Progressive Tool Retrieval Improves Planning](https://arxiv.org/pdf/2312.10332.pdf)"
+
+    The authors demonstrate a dynamic contrastive learning-based framework implicitly performs task decomposition without explicit subtask requirements, while retaining subtask automicity. 
+    <img width="676" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/52204bc7-fc1d-467a-9c3c-7fc367ac4b44">
+
 
 ??? tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)"
 
