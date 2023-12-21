@@ -1652,9 +1652,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Important Architectures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#linear-thought-chains" class="md-nav__link">
     <span class="md-ellipsis">
       Linear thought chains
@@ -1662,16 +1663,24 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#including-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Including Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#planning-and-reflective" class="md-nav__link">
     <span class="md-ellipsis">
       Planning and Reflective
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Planning and Reflective">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#branching" class="md-nav__link">
@@ -1709,26 +1718,26 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automated-chain-selection-and-discovery" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#automated-chain-discovery-selection-and-creation" class="md-nav__link">
     <span class="md-ellipsis">
-      Automated chain selection and discovery
+      Automated chain discovery, selection, and creation.
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#chain-optimization" class="md-nav__link">
     <span class="md-ellipsis">
       Chain Optimization
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3432,9 +3441,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Important Architectures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#linear-thought-chains" class="md-nav__link">
     <span class="md-ellipsis">
       Linear thought chains
@@ -3442,16 +3452,24 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#including-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Including Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#planning-and-reflective" class="md-nav__link">
     <span class="md-ellipsis">
       Planning and Reflective
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Planning and Reflective">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#branching" class="md-nav__link">
@@ -3489,26 +3507,26 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automated-chain-selection-and-discovery" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#automated-chain-discovery-selection-and-creation" class="md-nav__link">
     <span class="md-ellipsis">
-      Automated chain selection and discovery
+      Automated chain discovery, selection, and creation.
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#chain-optimization" class="md-nav__link">
     <span class="md-ellipsis">
       Chain Optimization
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3541,7 +3559,7 @@
 
   <h1>Cognitive architecture</h1>
 
-<p>Cognitive Architectures refer to systems or chain-patterns that are employed after discrete interactions with single or multiple LLMs.</p>
+<p>Cognitive Architectures refer to systems or chain patterns that are employed after discrete interactions with single or multiple LLMs.</p>
 <h2 id="core-themes">Core themes<a class="headerlink" href="#core-themes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Rephrasing</strong> or reformatting the input in such a way that the next</li>
@@ -3549,10 +3567,10 @@
 <li><strong>Reasoning</strong> or the ability to create causal connections between input and output. These are often taken care of at the level of the LLM.</li>
 <li><strong>Planning</strong> to enable more complicated goals to be broken down into individually accomplishable tasks. May use external tools like memory to keep track of tasks.</li>
 <li><strong>Deciding and prioritizing</strong> to select between different options or available components</li>
-<li><strong>Summarizing and Abstracting</strong> to compress information into reusable chunks or otherwise abstracting information to be more effective.</li>
+<li><strong>Summarizing and Abstracting</strong> to compress information into reusable chunks or otherwise abstract information to be more effective.</li>
 <li><strong>Logging + Remembering: Learning</strong> being the automatic or initiated information storage and recall that is accessed in <a href="memory.html">memory</a></li>
-<li><strong>Reflection</strong>, or an internal (or external) evaluation of output, be it thoughts, planing, and thoughts.</li>
-<li><strong>Tool use</strong> While overlapping directly with Observing or taking memory-actions, tool-usage may be part of cognitive patterns (like <code>check task-list</code>) and must be considered as such.</li>
+<li><strong>Reflection</strong>, or an internal (or external) evaluation of output, be it thoughts, planning, and thoughts.</li>
+<li><strong>Tool use</strong> While overlapping directly with Observing or taking memory actions, tool usage may be part of cognitive patterns (like using a <code>scratch-pad</code>) and must be considered as such.</li>
 </ul>
 <p>Models provide the computational core of Agents. Acting like a 'brain' that takes in input <a href="#prompts">prompts</a> they return outputs. Generally, the models may be considered <code>frozen</code> for a given agent, but sometimes, agentic feedback is used for helping model creation with <a href="../architectures/recurrent_training.html">recurrent training</a>.</p>
 <details class="important">
@@ -3569,7 +3587,20 @@ Relations between different systems.
 <p>Thought systems are chain patterns used by single agents and <a href="systems.html">systems</a> to enable more robust responses.
 They can be executed programmatically given frameworks or sometimes done manually in a chat setting.</p>
 <p>Here are some known thought structures that are improving agentic output.</p>
-<h2 id="linear-thought-chains">Linear thought chains<a class="headerlink" href="#linear-thought-chains" title="Permanent link">&para;</a></h2>
+<h3 id="linear-thought-chains">Linear thought chains<a class="headerlink" href="#linear-thought-chains" title="Permanent link">&para;</a></h3>
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2201.11903.pdf">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></summary>
+<p><a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf">Neurips paper</a>"</p>
+<p>A classic paper, demonstrating the use of in-call task breakdown to better-enable more successful outputs. Often represented as appending a phrase such as <code>let's think about this step by step</code> both with and without exemplars to improve success quality going from zero to multi-shot prompts. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66"></a></p>
+</details>
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2312.04474.pdf">Chain of Code: Reasoning with a Language Model-Augmented Code Emulator</a></summary>
+<p><a href="https://sites.google.com/view/chain-of-code">Site</a>
+A powerful solution to reasoning-based problems. It generates code-based solutions that can be executed or pseudo-executed with llm-enabled execution emulation (if code interpreter execution fails).<br />
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/cc5128c6-d99f-4130-961f-48280947c42e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="658" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cc5128c6-d99f-4130-961f-48280947c42e"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d115b042-ee91-464a-8915-4757286658fe" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="647" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d115b042-ee91-464a-8915-4757286658fe"></a></p>
+</details>
 <details class="important">
 <summary><a href="https://arxiv.org/abs/2311.11829">System 2 Attention (is something you might need too)</a></summary>
 <p>This helps to improve downstream model's ability to not suffer from irrelevent context, or judgement and preference in the
@@ -3636,9 +3667,18 @@ Answer:
 - <a href="https://github.com/GammaTauAI/reflexion-human-eval">Inspired github</a></p>
 </details>
 <details class="tip">
-<summary><a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></summary>
+<summary><a href="https://arxiv.org/pdf/2211.12588.pdf">Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks</a></summary>
+<p>Superseded by Chain of Code.
+Generates code to answer financial, and math-related problems.
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/20376dba-1944-4486-8510-33feec16dd36" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="649" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/20376dba-1944-4486-8510-33feec16dd36"></a></p>
 </details>
-<h2 id="planning-and-reflective">Planning and Reflective<a class="headerlink" href="#planning-and-reflective" title="Permanent link">&para;</a></h2>
+<h3 id="including-memory">Including Memory<a class="headerlink" href="#including-memory" title="Permanent link">&para;</a></h3>
+<p>There are other <a href="memory.html">memory based solutions</a> including <a href="rag.html">RAG</a> that improve results. Here we reveal a few important ones.</p>
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2112.00114.pdf">Show your work: Scratch Pads for Intermediate Computation with Language Models</a></summary>
+<p>Demonstrates the use of 'scratch pads' to store intermediate results that can be recalled later for improved perfomance. </p>
+</details>
+<h3 id="planning-and-reflective">Planning and Reflective<a class="headerlink" href="#planning-and-reflective" title="Permanent link">&para;</a></h3>
 <details class="important">
 <summary><a href="https://arxiv.org/pdf/2310.02304v1.pdf">Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation</a></summary>
 <div class="highlight"><pre><span></span><code>     <span class="kn">from</span> <span class="nn">helpers</span> <span class="kn">import</span> <span class="n">extract_code</span>
@@ -3697,21 +3737,28 @@ Answer:
 <h3 id="branching">Branching<a class="headerlink" href="#branching" title="Permanent link">&para;</a></h3>
 <p>General manners of search.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/3025c425-4f12-4b50-8d23-33a6002fa2aa" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="565" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3025c425-4f12-4b50-8d23-33a6002fa2aa"></a></p>
+<details class="code">
+<summary><a href="https://github.com/SqueezeAILab/LLMCompiler">LLMCompiler: An LLM Compiler for Parallel Function Calling</a> provides an useful framework that improves latency, accuracy, and costs by orchestrating parallel calls.</summary>
+<p><a href="https://arxiv.org/pdf/2312.04511.pdf">Paper</a>
+This breaks components down into a task-fetching unit and an executor to dynamically identify the tasks that could be executed, performs argument replacements on intermediate results, and an executor that performs function calls provided by the Task-fetching unit. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/e461a9b8-042e-4687-a2ce-73b8ea412318" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e461a9b8-042e-4687-a2ce-73b8ea412318" /></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/9d8c8d9e-1145-4cce-be1e-846cba71b1d4" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="654" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9d8c8d9e-1145-4cce-be1e-846cba71b1d4"></a></p>
+</details>
 <details class="important">
 <summary><a href="https://arxiv.org/pdf/2310.13227.pdf">Toolchain*: Efficient Action Space Navigation in Large Language Models with A* Search</a> provides an efficient tree guided-search algorithm that allows SOT performance</summary>
-<p>As opposed to other branching methods that allows for efficient exploration of action space, helping to find global optimization of a series of LLM calls.
-It happsens in 3 general steps:</p>
+<p>As opposed to other branching methods that allow for efficient exploration of action space, helping to find global optimization of a series of LLM calls.
+It happens in 3 general steps:</p>
 <ul>
 <li><strong>Selection</strong> from the highest quality frontier nodes <span class="arithmatex">\(\F(\Tau)\)</span> of tree <span class="arithmatex">\(\Tau\)</span>, by choosing the node $n_next = arg min_{n\elem \F(\Tau)} f(n), given a cost-function oracle f(n) that provides the cost of the best plan of incorporating the <span class="arithmatex">\(n\)</span>-th call into the chain.</li>
 <li><strong>Expansion</strong> to create the <em>fronteir</em> nodes of up to k-potential actions for the next step can be sampled.</li>
 <li><strong>Updating</strong> the frontier nodes to repeat the process.</li>
 </ul>
 <p>The choice of the cost function is based on the <span class="arithmatex">\(A^*\)</span> algorithm, where <span class="arithmatex">\(f(n) = g(n) + h(n)\)</span> where <span class="arithmatex">\(g(n)\)</span> is the cost of the path from the start node, and <span class="arithmatex">\(h(n)\)</span> is a heuristic function that estimates the cheapest path from <span class="arithmatex">\(n\)</span> to the destination goal.</p>
-<p>Their choice of <span class="arithmatex">\(g(n)\)</span> is generally the sum of single-steps costs from ancestor nodes. More accurately they create a geometric sum of two different step value functions.</p>
-<p>One step function is a <em>task-specific heuristic function</em> that maximizes the longest-common subsequence score over other paths. The longest-common subsequence score finds the longest-common subsequence between plan <span class="arithmatex">\(s_n\)</span> and other plans <span class="arithmatex">\(m_j\)</span> and divides by the smaller of the two lengths of the paths <span class="arithmatex">\(s_n\)</span> and <span class="arithmatex">\(m_j\)</span>.</p>
+<p>Their choice of <span class="arithmatex">\(g(n)\)</span> is generally the sum of single-step costs from ancestor nodes. More accurately they create a geometric sum of two different step value functions.</p>
+<p>One step function is a <em>task-specific heuristic function</em> that maximizes the longest-common subsequence score over other paths. The longest-common subsequence score finds the longest-common subsequence between plan <span class="arithmatex">\(s_n\)</span> and other plans <span class="arithmatex">\(m_j\)</span> and divides by the smaller lengths of the paths <span class="arithmatex">\(s_n\)</span> and <span class="arithmatex">\(m_j\)</span>.</p>
 <p>The other step function is a self-consistency frequency that takes an ensemble approach to generate the next steps. It calculates the number of actions that arrive at step n using non-semantically equivalent reasoning steps, divided by the number of k samples.</p>
 <p>Their choice of the future cost <span class="arithmatex">\(h(n)\)</span> is a multiplicative combination of a similar task-specific heuristic and an imagination score, enabled by an LLM.</p>
-<p>The future task-specific heuristic calculates the average fractional position of action a found within all plans.</p>
+<p>The future task-specific heuristic calculates the average fractional position of action found within all plans.</p>
 <p>The imagination score directly queries the LLMs to imagine more concrete steps until target node <span class="arithmatex">\(n_T\)</span> and computing the ratio of the number of steps of the number between the current node n ancestors to the target node. The higher score 'suggests the imagined plan closely captures the path to the current step, indicating that fewer remaining steps are needed to accomplish the task in the imagination of LLMs.</p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c544e5ae-10a0-4fa7-bb05-9fd607524096" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="276" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c544e5ae-10a0-4fa7-bb05-9fd607524096"></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/a1b4af81-6769-458b-8b9d-c7474309477f" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="272" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a1b4af81-6769-458b-8b9d-c7474309477f"></a>
@@ -3727,7 +3774,7 @@ It happsens in 3 general steps:</p>
 </details>
 <details class="tip">
 <summary><a href="https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/">Graph of Thought</a></summary>
-<p>An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.
+<p>An excellent thought on what to consider next when dealing with knowledge (or other output like information) generation chains.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649" /></a></p>
 </details>
 <details class="code">
@@ -3886,7 +3933,13 @@ Possible open-source implementation <a href="https://github.com/kyegomez/LOGICGU
 <summary><a href="https://github.com/normal-computing/outlines">Outlines</a> guides the model generation of next-token logits to guide the generation corresponding to regex / JSON and pydantic schema. compatible with all models.</summary>
 <p>Also provides a way to functionalize templates to separate prompt logic.</p>
 </details>
-<h2 id="automated-chain-selection-and-discovery">Automated chain selection and discovery<a class="headerlink" href="#automated-chain-selection-and-discovery" title="Permanent link">&para;</a></h2>
+<h3 id="automated-chain-discovery-selection-and-creation">Automated chain discovery, selection, and creation.<a class="headerlink" href="#automated-chain-discovery-selection-and-creation" title="Permanent link">&para;</a></h3>
+<details class="code">
+<summary><a href="https://github.com/amazon-science/auto-cot">Auto-CoT: Automatic Chain of Thought Prompting in Large Language Models</a></summary>
+<p><a href="https://arxiv.org/pdf/2210.03493.pdf">Paper</a>
+This algorithm samples exemplars to construct demonstrations that enable improved accuracy of multi-shotted outcomes using the Chain-of-Thought prompting method. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/e0c1161f-ce0b-4302-b05a-55b094032c8e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="647" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e0c1161f-ce0b-4302-b05a-55b094032c8e"></a></p>
+</details>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2311.16452.pdf">Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine</a></summary>
 <ul>
@@ -3929,7 +3982,7 @@ Possible open-source implementation <a href="https://github.com/kyegomez/LOGICGU
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b9319ec5-1d2c-42ad-92bd-3472d1e300a1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="706" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b9319ec5-1d2c-42ad-92bd-3472d1e300a1"></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6e1451fd-3ac9-4e6a-b440-123ed58dcc80" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="713" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e1451fd-3ac9-4e6a-b440-123ed58dcc80"></a></p>
 </details>
-<h2 id="chain-optimization">Chain Optimization<a class="headerlink" href="#chain-optimization" title="Permanent link">&para;</a></h2>
+<h3 id="chain-optimization">Chain Optimization<a class="headerlink" href="#chain-optimization" title="Permanent link">&para;</a></h3>
 <p>Problems such as Hallucinations can be mitigated through downstream methods of process.</p>
 <details class="tip">
 <summary><a href="https://arxiv.org/abs/2307.03987">A stitch in time saves Nine</a></summary>
