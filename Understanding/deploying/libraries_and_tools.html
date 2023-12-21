@@ -12,28 +12,28 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://managen.ai/Understanding/overview/foundation_models.html">
+        <link rel="canonical" href="https://managen.ai/Understanding/deploying/libraries_and_tools.html">
       
       
-        <link rel="prev" href="business.html">
+        <link rel="prev" href="front_end.html">
       
       
-        <link rel="next" href="knowledge_graphs.html">
+        <link rel="next" href="../overview/index.html">
       
       
       <link rel="icon" href="../../assets/genai_logo_edited.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
     
     
       
-        <title>Foundation models - Gen()AI</title>
+        <title>Deploying Libraries and Tools - Gen()AI</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -95,16 +95,13 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
   
     
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
         
-        <a href="#by-modality" class="md-skip">
+        <a href="#deploying-libraries-and-tools" class="md-skip">
           Skip to content
         </a>
       
@@ -140,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Foundation models
+              Deploying Libraries and Tools
             
           </span>
         </div>
@@ -153,9 +150,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
       </label>
     
@@ -163,15 +160,18 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
       </label>
     
   
 </form>
       
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -224,7 +224,7 @@
         <a href="https://github.com/ianderrington/genai" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     genai
@@ -243,10 +243,8 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
+    <li class="md-tabs__item">
       <a href="../index.html" class="md-tabs__link">
         
   
@@ -334,7 +332,7 @@
       <a href="https://github.com/ianderrington/genai" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     genai
@@ -348,7 +346,6 @@
       
   
   
-    
   
   
     
@@ -383,12 +380,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           
@@ -410,7 +407,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Understand and build
@@ -421,7 +418,6 @@
                 
   
   
-    
   
   
     
@@ -451,17 +447,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../overview/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -478,7 +474,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_1">
             <span class="md-nav__icon md-icon"></span>
             Overview
@@ -490,8 +486,9 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="use_cases.html" class="md-nav__link">
+      <a href="../overview/use_cases.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -510,8 +507,9 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="challenges.html" class="md-nav__link">
+      <a href="../overview/challenges.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,8 +528,9 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="ai_in_general.html" class="md-nav__link">
+      <a href="../overview/ai_in_general.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,8 +549,9 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="business.html" class="md-nav__link">
+      <a href="../overview/business.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,117 +569,14 @@
                 
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Foundation models
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="foundation_models.html" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Foundation models
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#by-modality" class="md-nav__link">
-    <span class="md-ellipsis">
-      By Modality
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="By Modality">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vision" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vision
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#by-domain" class="md-nav__link">
-    <span class="md-ellipsis">
-      By Domain
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="By Domain">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#biology-and-healthcare" class="md-nav__link">
-    <span class="md-ellipsis">
-      Biology and Healthcare
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
   
   
     <li class="md-nav__item">
-      <a href="knowledge_graphs.html" class="md-nav__link">
+      <a href="../overview/chronology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Knowledge graphs
+    Chronology
   </span>
   
 
@@ -694,8 +591,30 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="open_source.html" class="md-nav__link">
+      <a href="../overview/llms.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/open_source.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,8 +633,9 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="applications/index.html" class="md-nav__link">
+      <a href="../overview/applications/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,8 +654,9 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="extra_resources.html" class="md-nav__link">
+      <a href="../overview/extra_resources.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -759,6 +680,7 @@
             
               
                 
+  
   
   
   
@@ -822,6 +744,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../data/selection.html" class="md-nav__link">
         
@@ -839,6 +762,7 @@
             
               
                 
+  
   
   
   
@@ -862,6 +786,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../data/privacy.html" class="md-nav__link">
         
@@ -879,6 +804,7 @@
             
               
                 
+  
   
   
   
@@ -902,6 +828,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../data/augmentation.html" class="md-nav__link">
         
@@ -922,6 +849,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../data/distillation.html" class="md-nav__link">
         
@@ -939,6 +867,7 @@
             
               
                 
+  
   
   
   
@@ -967,6 +896,7 @@
             
               
                 
+  
   
   
   
@@ -1038,6 +968,7 @@
   
   
   
+  
     
     
       
@@ -1098,6 +1029,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../architectures/models/components.html" class="md-nav__link">
         
@@ -1115,6 +1047,7 @@
             
               
                 
+  
   
   
   
@@ -1138,6 +1071,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../architectures/models/diffusers.html" class="md-nav__link">
         
@@ -1155,6 +1089,7 @@
             
               
                 
+  
   
   
   
@@ -1178,6 +1113,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../architectures/models/developing_architectures.html" class="md-nav__link">
         
@@ -1198,6 +1134,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../architectures/models/hybrid_models.html" class="md-nav__link">
         
@@ -1215,6 +1152,7 @@
             
               
                 
+  
   
   
   
@@ -1246,6 +1184,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../architectures/training.html" class="md-nav__link">
         
@@ -1263,6 +1202,7 @@
             
               
                 
+  
   
   
   
@@ -1286,6 +1226,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../architectures/finetuning.html" class="md-nav__link">
         
@@ -1303,6 +1244,7 @@
             
               
                 
+  
   
   
   
@@ -1326,6 +1268,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../architectures/optimization.html" class="md-nav__link">
         
@@ -1343,6 +1286,7 @@
             
               
                 
+  
   
   
   
@@ -1366,6 +1310,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../architectures/generation.html" class="md-nav__link">
         
@@ -1386,6 +1331,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../architectures/pre_trained_models.html" class="md-nav__link">
         
@@ -1403,6 +1349,7 @@
             
               
                 
+  
   
   
   
@@ -1431,6 +1378,7 @@
             
               
                 
+  
   
   
   
@@ -1482,6 +1430,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../prompting/prompt_injections.html" class="md-nav__link">
         
@@ -1507,6 +1456,7 @@
             
               
                 
+  
   
   
   
@@ -1574,6 +1524,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../agents/examples.html" class="md-nav__link">
         
@@ -1591,6 +1542,7 @@
             
               
                 
+  
   
   
   
@@ -1614,6 +1566,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../agents/chains.html" class="md-nav__link">
         
@@ -1631,6 +1584,7 @@
             
               
                 
+  
   
   
   
@@ -1654,6 +1608,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../agents/rag.html" class="md-nav__link">
         
@@ -1671,6 +1626,7 @@
             
               
                 
+  
   
   
   
@@ -1694,6 +1650,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../agents/evaluating_and_comparing.html" class="md-nav__link">
         
@@ -1714,6 +1671,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../agents/environments.html" class="md-nav__link">
         
@@ -1731,6 +1689,7 @@
             
               
                 
+  
   
   
   
@@ -1759,6 +1718,7 @@
             
               
                 
+  
   
   
   
@@ -1810,6 +1770,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../studies/studies.html" class="md-nav__link">
         
@@ -1845,6 +1806,7 @@
   
   
   
+  
     
     
       
@@ -1860,12 +1822,6 @@
       
         
           
-        
-      
-        
-          
-        
-      
         
       
         
@@ -1920,6 +1876,7 @@
   
   
   
+  
     
     
       
@@ -1971,6 +1928,7 @@
             
               
                 
+  
   
   
   
@@ -2032,6 +1990,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/examples/by_field/mathematics.html" class="md-nav__link">
         
@@ -2052,6 +2011,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/examples/by_field/socio_societal.html" class="md-nav__link">
         
@@ -2069,6 +2029,7 @@
             
               
                 
+  
   
   
   
@@ -2120,6 +2081,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/examples/by_field/entertainment/static.html" class="md-nav__link">
         
@@ -2145,6 +2107,7 @@
             
               
                 
+  
   
   
   
@@ -2200,6 +2163,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/examples/by_field/science/biology.html" class="md-nav__link">
         
@@ -2220,6 +2184,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/examples/by_field/science/chemistry.html" class="md-nav__link">
         
@@ -2237,6 +2202,7 @@
             
               
                 
+  
   
   
   
@@ -2265,6 +2231,7 @@
             
               
                 
+  
   
   
   
@@ -2320,6 +2287,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/examples/by_field/technology/finance.html" class="md-nav__link">
         
@@ -2340,6 +2308,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/examples/by_field/technology/healthcare.html" class="md-nav__link">
         
@@ -2357,6 +2326,7 @@
             
               
                 
+  
   
   
   
@@ -2396,8 +2366,11 @@
   
   
   
+  
     
     
+      
+        
       
         
       
@@ -2456,12 +2429,13 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_modality/graph.html" class="md-nav__link">
+      <a href="../../Using/examples/by_modality/knowledge_graphs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Graph
+    Knowledge graphs
   </span>
   
 
@@ -2473,6 +2447,7 @@
             
               
                 
+  
   
   
   
@@ -2496,6 +2471,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/examples/by_modality/sound.html" class="md-nav__link">
         
@@ -2513,6 +2489,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/examples/by_modality/static_2d.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Static 2d
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -2536,6 +2534,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/examples/by_modality/text.html" class="md-nav__link">
         
@@ -2556,6 +2555,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/examples/by_modality/time_series.html" class="md-nav__link">
         
@@ -2573,6 +2573,7 @@
             
               
                 
+  
   
   
   
@@ -2609,6 +2610,7 @@
             
               
                 
+  
   
   
   
@@ -2668,6 +2670,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/ethically/alignment.html" class="md-nav__link">
         
@@ -2685,6 +2688,7 @@
             
               
                 
+  
   
   
   
@@ -2708,6 +2712,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/ethically/dual_use_concerns.html" class="md-nav__link">
         
@@ -2728,6 +2733,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/ethically/fairness.html" class="md-nav__link">
         
@@ -2745,6 +2751,7 @@
             
               
                 
+  
   
   
   
@@ -2776,6 +2783,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/building_and_buying.html" class="md-nav__link">
         
@@ -2796,12 +2804,9 @@
   
   
   
+  
     
     
-      
-        
-      
-        
       
         
       
@@ -2825,11 +2830,11 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/deploying/index.html" class="md-nav__link ">
+            <a href="../../Using/managing/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    Deploying
+    Managing
   </span>
   
 
@@ -2845,194 +2850,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
-            Deploying
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/examples_and_tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Examples and tutorials
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/front_end.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Front end
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/back_end.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Deploying AI Models: Backend Considerations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/frameworks.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Frameworks
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/computation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Computation in AI Deployment
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Using/deploying/libraries_and_tools.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Deploying Libraries and Tools
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../Using/managing/index.html" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Managing
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
-            <span class="md-nav__icon md-icon"></span>
             Managing
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
+  
   
   
   
@@ -3056,6 +2880,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/managing/ml_ops.html" class="md-nav__link">
         
@@ -3076,6 +2901,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/managing/observability.html" class="md-nav__link">
         
@@ -3093,6 +2919,7 @@
             
               
                 
+  
   
   
   
@@ -3124,25 +2951,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../Using/commercial_products.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Platforms
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
     <li class="md-nav__item">
       <a href="../../Using/marking_and_detecting.html" class="md-nav__link">
@@ -3164,6 +2972,7 @@
   
   
   
+  
     
     
       
@@ -3178,7 +2987,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
           
@@ -3194,14 +3003,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             De risking
           </label>
@@ -3209,6 +3018,7 @@
             
               
                 
+  
   
   
   
@@ -3240,6 +3050,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Using/interfacing_layers/web_plugins.html" class="md-nav__link">
         
@@ -3264,6 +3075,7 @@
     
       
       
+  
   
   
   
@@ -3326,6 +3138,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Managenai/managing.html" class="md-nav__link">
         
@@ -3343,6 +3156,7 @@
             
               
                 
+  
   
   
   
@@ -3366,6 +3180,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Managenai/brainstorming.html" class="md-nav__link">
         
@@ -3386,6 +3201,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../Managenai/build_plan.html" class="md-nav__link">
         
@@ -3403,6 +3219,7 @@
             
               
                 
+  
   
   
   
@@ -3445,6 +3262,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3453,19 +3272,79 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#by-modality" class="md-nav__link">
+  <a href="#llm-ops" class="md-nav__link">
     <span class="md-ellipsis">
-      By Modality
+      LLM Ops
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="By Modality">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Models">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vision" class="md-nav__link">
+  <a href="#finetuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Vision
+      Finetuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serving
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distributed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-convenience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming Convenience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Interaction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executors-and-interpeters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executors and Interpeters
     </span>
   </a>
   
@@ -3477,19 +3356,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#by-domain" class="md-nav__link">
+  <a href="#data-creation" class="md-nav__link">
     <span class="md-ellipsis">
-      By Domain
+      Data Creation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="By Domain">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      General
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#biology-and-healthcare" class="md-nav__link">
+  <a href="#network-visualization" class="md-nav__link">
     <span class="md-ellipsis">
-      Biology and Healthcare
+      Network Visualization
     </span>
   </a>
   
@@ -3518,21 +3406,125 @@
   
 
 
-  <h1>Foundation models</h1>
-
-<p>By their nature, foundational models will be ever increasing in scope and potential. We share some seminal papers on foundation models here.
-Continual evolution of models may be found in hubs such as <a href="https://huggingface.co/models?other=foundation+model&amp;sort=trending">Hugging Face</a>.</p>
-<h2 id="by-modality">By Modality<a class="headerlink" href="#by-modality" title="Permanent link">&para;</a></h2>
-<h3 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">&para;</a></h3>
-<details class="code">
-<summary><a href="https://github.com/facebookresearch/segment-anything">Segment anything</a></summary>
-<p><a href="https://segment-anything.com/">Webpage</a></p>
-</details>
-<h2 id="by-domain">By Domain<a class="headerlink" href="#by-domain" title="Permanent link">&para;</a></h2>
-<h3 id="biology-and-healthcare">Biology and Healthcare<a class="headerlink" href="#biology-and-healthcare" title="Permanent link">&para;</a></h3>
+<h1 id="deploying-libraries-and-tools">Deploying Libraries and Tools<a class="headerlink" href="#deploying-libraries-and-tools" title="Permanent link">&para;</a></h1>
+<p>This document provides an overview of various libraries and tools that can be used for deploying AI models. It is divided into several sections, each focusing on a specific aspect of deployment. The sections include LLM Ops, Models, Finetuning, Serving, Programming Convenience, Memory Interaction, Executors and Interpreters, Data Creation, and General.</p>
+<h2 id="llm-ops">LLM Ops<a class="headerlink" href="#llm-ops" title="Permanent link">&para;</a></h2>
+<p>LLM Ops refers to operations related to Large Language Models. Here are a couple of tools that can assist in managing these operations:</p>
 <ul>
-<li><a href="https://www.nature.com/articles/s41586-023-06555-x">Foundation models for Retinas</a></li>
+<li><a href="https://github.com/microsoft/lmops">LLM Ops</a>: This is a Microsoft tool for managing large language models.</li>
+<li><a href="https://github.com/BerriAI/reliableGPT">Reliable GPT</a>: This is a wrapper that prevents failures due to rate limiting requests.</li>
 </ul>
+<h2 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h2>
+<p>This section provides a selection of repositories that enable the creation of models:</p>
+<ul>
+<li><a href="https://huggingface.co/transformers/v4.0.1/index.html">Hugging Face Transformers</a>: This is a popular library for creating transformer models.</li>
+</ul>
+<h3 id="finetuning">Finetuning<a class="headerlink" href="#finetuning" title="Permanent link">&para;</a></h3>
+<p>Finetuning is the process of adapting a pre-trained model to a specific task. For more in-depth information on this, please see the <a href="../architectures/finetuning.html">finetuning</a> page. Here are some tools for finetuning:</p>
+<ul>
+<li><a href="https://adapterhub.ml/">Adapters for Hugging Face</a>: This is a tool for finetuning Hugging Face models.</li>
+<li><a href="https://github.com/sunner/ChatALL">Chatall</a>: This tool allows interaction with multiple chatbots at the same time.</li>
+<li><a href="https://github.com/go-skynet/LocalAI">LocalAI</a>: This is a drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.</li>
+</ul>
+<details class="code">
+<summary><a href="https://github.com/OpenBMB/ToolBench">Tool Bench</a> 'This project (ToolLLM) aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability.'</summary>
+<p><a class="glightbox" href="https://github.com/OpenBMB/ToolBench/blob/master/assets/overview.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/OpenBMB/ToolBench/blob/master/assets/overview.png" /></a></p>
+</details>
+<h3 id="serving">Serving<a class="headerlink" href="#serving" title="Permanent link">&para;</a></h3>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/bentoml/OpenLLM">Open LLM</a> to run inference with any open-source large-language models, deploy to the cloud or on-premises, and build powerful AI apps.</p>
+</div>
+<h4 id="distributed">Distributed<a class="headerlink" href="#distributed" title="Permanent link">&para;</a></h4>
+<details class="code">
+<summary><a href="https://github.com/bigscience-workshop/petals">Petals</a> Run large language models at home, BitTorrent-style.</summary>
+<p>Generate text with distributed LLaMA 2 (70B), Stable Beluga 2, Guanaco-65B or BLOOM-176B and fine‑tune them for your own tasks — right from your desktop computer or Google Cola
+<a href="https://github.com/bigscience-workshop/petals/wiki/Launch-your-own-swarm">Launch your own swarm</a></p>
+</details>
+<h3 id="programming-convenience">Programming Convenience<a class="headerlink" href="#programming-convenience" title="Permanent link">&para;</a></h3>
+<details class="code">
+<summary><a href="https://github.com/jackmpcollins/magentic">Magentic</a> for decorators</summary>
+<p>A nice and simple plugin that allows a <code>@prompt</code> decorator to call functions as an llm, including function-choice calls.
+Their example](<a href="https://github.com/jackmpcollins/magentic">https://github.com/jackmpcollins/magentic</a>)
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Literal</span>
+
+<span class="kn">from</span> <span class="nn">magentic</span> <span class="kn">import</span> <span class="n">prompt</span><span class="p">,</span> <span class="n">FunctionCall</span>
+
+
+<span class="k">def</span> <span class="nf">activate_oven</span><span class="p">(</span><span class="n">temperature</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;broil&quot;</span><span class="p">,</span> <span class="s2">&quot;bake&quot;</span><span class="p">,</span> <span class="s2">&quot;roast&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Turn the oven on with the provided settings.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Preheating to </span><span class="si">{</span><span class="n">temperature</span><span class="si">}</span><span class="s2"> F with mode </span><span class="si">{</span><span class="n">mode</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="nd">@prompt</span><span class="p">(</span>
+    <span class="s2">&quot;Prepare the oven so I can make </span><span class="si">{food}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">functions</span><span class="o">=</span><span class="p">[</span><span class="n">activate_oven</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">configure_oven</span><span class="p">(</span><span class="n">food</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FunctionCall</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="o">...</span>
+
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">configure_oven</span><span class="p">(</span><span class="s2">&quot;cookies!&quot;</span><span class="p">)</span>
+<span class="c1"># FunctionCall(&lt;function activate_oven at 0x1105a6200&gt;, temperature=350, mode=&#39;bake&#39;)</span>
+<span class="n">output</span><span class="p">()</span>
+<span class="c1"># &#39;Preheating to 350 F with mode bake&#39;</span>
+</code></pre></div></p>
+</details>
+<h3 id="memory-interaction">Memory Interaction<a class="headerlink" href="#memory-interaction" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna">Deploying on Azure for Embeddings</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://www.youtube.com/watch?v=tW2EA4aZ_YQ">Integrating with Azure Services</a></p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/zilliztech/GPTCache">GPTCache</a> to quickly Cache your results to speed second-time queries.</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/monarch-initiative/agent-smith-ai">AGent Smith AI</a> makes it easy to instantiate AI agents that can safely and easily call APIs and locally defined functions to interact with the world.</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/monarch-initiative/monarch-assistant">Monarch Assistant</a> Uses AGent Smith for RAG purposes</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/monarch-initiative/curate-gpt">Curage GPT</a></p>
+</div>
+<h3 id="executors-and-interpeters">Executors and Interpeters<a class="headerlink" href="#executors-and-interpeters" title="Permanent link">&para;</a></h3>
+<p>Executors are programming levels of abstraction that encourage the execution of any tools or intractions with internal and external memories and states.</p>
+<p>Interpreters are executors that facilitate model computation by parsing, formatting, or otherwise preparing the data for effective use. They can also be used to interpret output to perform routing of actions.</p>
+<p>Such efforts can be used to reduce input complexity, token-count, to detect potentially unreasonable inputs or outputs. These interpreters <em>may</em> be agents or models themselves, thought that is not required.</p>
+<div class="admonition example">
+<p class="admonition-title">Link Routing</p>
+<p>A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output.</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://shreyar.github.io/guardrails/">Guardrails</a> To help format output and prevent improper prompts.</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/microsoft/semantic-kernel/tree/main">Semantic Kernel</a></p>
+<p><a href="https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb">Github</a>,</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title">️<a href="https://github.com/microsoft/guidance/">Guidance</a> Interleaving generation, prompting and logical control to single  continuous flow.</p>
+</div>
+<h2 id="data-creation">Data Creation<a class="headerlink" href="#data-creation" title="Permanent link">&para;</a></h2>
+<p>Generative AI is a splendid use-case for creating data that can be used to train or refine new models. Here are some tools that allow for creation of data for down-stream purposes, always being sure to be consistent with <a href="../overview/challenges.html#dual-use">dual-use concerns</a>.</p>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/refuel-ai/autolabel">AutoLabel</a> A nice pythonic system for generating semantic labels repeatedly for use in downstream datasets</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/eyurtsev/kor">Kor</a> For extracting structured data using LLMs.</p>
+</div>
+<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
+<h3 id="network-visualization">Network Visualization<a class="headerlink" href="#network-visualization" title="Permanent link">&para;</a></h3>
+<p>Being able to see the 'structure' of some neural networks make it easier to understand, and more aesthetic.  Please see
+<a href="https://github.com/HarisIqbal88/PlotNeuralNet">PlotNeuralNet</a> and a nice <a href="https://pub.towardsai.net/creating-stunning-neural-network-visualizations-with-chatgpt-and-plotneuralnet-adab37589e5">writeup</a> on how to use it.</p>
+
+
+
+
+
+
+
 
 
   
@@ -3587,6 +3579,7 @@ Continual evolution of models may be found in hubs such as <a href="https://hugg
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -3707,7 +3700,7 @@ Continual evolution of models may be found in hubs such as <a href="https://hugg
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
