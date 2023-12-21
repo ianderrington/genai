@@ -92,9 +92,9 @@ Prompt compression provides methods of compressing prompt inputs in such a way t
 
 ??? code "[(Long)LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://github.com/microsoft/LLMLingua?)"
     [Paper: LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://arxiv.org/pdf/2310.05736.pdf)
-    The authors demonstrate the use of smaller language models to identify and remove non-essential tokens in prompts, enablign up to 20x compression with minimal performance loss. 
+    The authors demonstrate the use of smaller language models to identify and remove non-essential tokens in prompts, enablign up to 20x compression with minimal performance loss. The method is designed to generate a compressed prompt from an original prompt. Using a budget-controller to dynamically allocate compression ratios for different components in prompts to maintain semantic integrity with under high compression ratios. 
     
-    
+
 ## Useful Resources for LLM Prompting
 
 - [Prompting is Programming: A Query Language for Large Language Models](https://arxiv.org/pdf/2212.06094.pdf)
