@@ -205,6 +205,11 @@ There are other [memory based solutions](memory.md) including [RAG](rag.md) that
 General manners of search.
 <img width="565" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3025c425-4f12-4b50-8d23-33a6002fa2aa">
 
+??? code "[LLMCompiler: An LLM Compiler for Parallel Function Calling](https://github.com/SqueezeAILab/LLMCompiler) provides an useful framework that improves latency, accuracy, and costs by orchestrating parallel calls."
+    [Paper](https://arxiv.org/pdf/2312.04511.pdf)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/e461a9b8-042e-4687-a2ce-73b8ea412318)
+
+
 
 ??? important "[Toolchain*: Efficient Action Space Navigation in Large Language Models with A* Search](https://arxiv.org/pdf/2310.13227.pdf) provides an efficient tree guided-search algorithm that allows SOT performance"
 
