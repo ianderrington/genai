@@ -28,7 +28,8 @@ One of the most successful examples of this is [Instruct GPT](https://arxiv.org/
 ??? note "Many RL methods use 'outcome' evaluations, but [process reward models ](#process-reward-models) can be better"
     Using RL feedback from human labelers to provide feedback on intermediate steps, in [Let's Verify Step By Step](https://arxiv.org/pdf/2305.20050.pdf) the authors demonstrate that providing feedback on intermediate steps can yield a reward model that is considerably better on various math-tests, than it is for outcome-based reward models.
 
-
+??? important "[(Anthropic) Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback](https://arxiv.org/pdf/2204.05862.pdf)"
+    <img width="784" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ec75fbc6-c3a9-404d-9a69-035f3ea6316b">
 
 ## Policy
 
