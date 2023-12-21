@@ -170,4 +170,9 @@ a constant number of encoder layers can emulate basic computing blocks, includin
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers/main/index) An API to access a large number of pre-trained transformers. Pytorch based.
 - [Fast Transformers](https://github.com/idiap/fast-transformers/tree/master) A quality collection of a number of transformer implementations written in Pytorch.
 
-##
+## Theory and Experiment
+
+??? note "[A MATHEMATICAL PERSPECTIVE ON TRANSFORMERS](https://arxiv.org/pdf/2312.10794.pdf)"
+     We develop a mathematical framework for analyzing Transformers based on their interpretation as interacting particle systems, which
+reveals that clusters emerge in long time. 
+
