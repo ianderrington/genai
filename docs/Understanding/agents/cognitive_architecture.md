@@ -207,14 +207,18 @@ General manners of search.
 
 ??? code "[LLMCompiler: An LLM Compiler for Parallel Function Calling](https://github.com/SqueezeAILab/LLMCompiler) provides an useful framework that improves latency, accuracy, and costs by orchestrating parallel calls."
     [Paper](https://arxiv.org/pdf/2312.04511.pdf)
+    This breaks components down into a task-fetching unit and an executor to dynamically identify the tasks that could be executed, performs argument replacements on intermediate results, and an executor that performs function calls provided by the Task-fetching unit. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/e461a9b8-042e-4687-a2ce-73b8ea412318)
+    <img width="654" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9d8c8d9e-1145-4cce-be1e-846cba71b1d4">
 
+    
+    
 
 
 ??? important "[Toolchain*: Efficient Action Space Navigation in Large Language Models with A* Search](https://arxiv.org/pdf/2310.13227.pdf) provides an efficient tree guided-search algorithm that allows SOT performance"
 
-    As opposed to other branching methods that allows for efficient exploration of action space, helping to find global optimization of a series of LLM calls.
-    It happsens in 3 general steps:
+    As opposed to other branching methods that allow for efficient exploration of action space, helping to find global optimization of a series of LLM calls.
+    It happens in 3 general steps:
 
     -  **Selection** from the highest quality frontier nodes $\F(\Tau)$ of tree $\Tau$, by choosing the node $n_next = arg min_{n\elem \F(\Tau)} f(n), given a cost-function oracle f(n) that provides the cost of the best plan of incorporating the $n$-th call into the chain.
     - **Expansion** to create the _fronteir_ nodes of up to k-potential actions for the next step can be sampled.
@@ -222,15 +226,15 @@ General manners of search.
 
     The choice of the cost function is based on the $A^*$ algorithm, where $f(n) = g(n) + h(n)$ where $g(n)$ is the cost of the path from the start node, and $h(n)$ is a heuristic function that estimates the cheapest path from $n$ to the destination goal.
 
-    Their choice of $g(n)$ is generally the sum of single-steps costs from ancestor nodes. More accurately they create a geometric sum of two different step value functions.
+    Their choice of $g(n)$ is generally the sum of single-step costs from ancestor nodes. More accurately they create a geometric sum of two different step value functions.
 
-    One step function is a _task-specific heuristic function_ that maximizes the longest-common subsequence score over other paths. The longest-common subsequence score finds the longest-common subsequence between plan $s_n$ and other plans $m_j$ and divides by the smaller of the two lengths of the paths $s_n$ and $m_j$.
+    One step function is a _task-specific heuristic function_ that maximizes the longest-common subsequence score over other paths. The longest-common subsequence score finds the longest-common subsequence between plan $s_n$ and other plans $m_j$ and divides by the smaller lengths of the paths $s_n$ and $m_j$.
 
     The other step function is a self-consistency frequency that takes an ensemble approach to generate the next steps. It calculates the number of actions that arrive at step n using non-semantically equivalent reasoning steps, divided by the number of k samples.
 
     Their choice of the future cost $h(n)$ is a multiplicative combination of a similar task-specific heuristic and an imagination score, enabled by an LLM.
 
-    The future task-specific heuristic calculates the average fractional position of action a found within all plans.
+    The future task-specific heuristic calculates the average fractional position of action found within all plans.
 
     The imagination score directly queries the LLMs to imagine more concrete steps until target node $n_T$ and computing the ratio of the number of steps of the number between the current node n ancestors to the target node. The higher score 'suggests the imagined plan closely captures the path to the current step, indicating that fewer remaining steps are needed to accomplish the task in the imagination of LLMs.
 
@@ -250,7 +254,7 @@ General manners of search.
 
 ??? tip "[Graph of Thought](https://www.linkedin.com/posts/tonyseale_gpt4-promptengineering-semanticweb-activity-7075381524631580672-TAv3/)"
 
-    An excellent thought on what next to consider when dealing with knowledge (or other output like information) generation chains.
+    An excellent thought on what to consider next when dealing with knowledge (or other output like information) generation chains.
     ![image](https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649)
 
 ??? code "[Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
