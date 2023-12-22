@@ -133,7 +133,7 @@ Prompt compression provides methods of compressing prompt inputs in such a way t
 - [Notion.io plugin](https://haonmade.gumroad.com/l/ozuvb)
 - [PROMPT generator](https://huggingface.co/spaces/merve/ChatGPT-prompt-generator) To save a few words by just entering a persona and gives prompt output.
 - [Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
-- [Scale spellbook](scale.com/spellbook)
+- [Scale spellbook](https://www.scale.com/spellbook)
 
 
 ### Prompt tuning

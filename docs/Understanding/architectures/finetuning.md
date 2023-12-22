@@ -1,6 +1,6 @@
 TODO: THorough research and add /change with optimization.md
 
-Fine-tuning adapt's  foundation model to improve its domain performance by using training with high-quality data. The adapted model may be architecturally equivalent, or a variation of the original model. The [data](#data-for-fine-tuning) that is used to update the model may be natural or [synthetically-created](using-simulated-data) and it is often domain-specific or intentionally constructed.
+Fine-tuning adapt's  foundation model to improve its domain performance by using training with high-quality data. The adapted model may be architecturally equivalent, or a variation of the original model. The [data](#data-for-fine-tuning) that is used to update the model may be natural or [synthetically-created](#using-simulated-data) and it is often domain-specific or intentionally constructed.
 
 Because of the computational requirements needed to train the original foundation models, fine-tuning is preferably done in way that does not update the entire model.
 One manner of doing this is through the use of [adapter layers](#adaptermodel-changes-for-fine-tuning).

@@ -2,14 +2,14 @@ Models must yield results that are sufficiently good for downstream users. This 
 
 Most successful models employ a combination of approaches to reduce model sizes. This document provides an understanding of these methods and how they can be applied to optimize your AI model.
 
-## Model metric optimizaitons
+## Model metric optimizations
+
 MANAGEN(Please describe model optimization methods and what is mentioned below)
 
 * Data (quality and volume)
 * Hyper parameters: Batch size is important. Use gradient accumulation if possible.
 * Model size
 * Model structure (BERT vs last-token prediction)
-
 
 
 ## Model Performance Optimization

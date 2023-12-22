@@ -12,10 +12,14 @@ class ResourceProcessor:
     def __init__(self, db_connection):
         self.db_connection = db_connection  # Database connection object
 
-    def extract_html_links(self, issue_body):
+    def process(self, resource):
         """
-        Extract HTML links from genai.interactions.github.evaluate_issue import main
-
+        Process a resource.
+        """
+        if resource["type"] == "github_issue":
+            self.process_github_issue(resource)
+        else:
+            raise ValueError(f"Unknown resource type: {resource['type']}")
 if __name__ == "__main__":
     issue_number = sys.argv[1]
     issue_text = sys.argv[2]
