@@ -67,11 +67,6 @@ There is so much quality material, it would be valuable for your time to check s
     ![image](https://github.com/ianderrington/genai/assets/76016868/fd03db2c-c695-4f52-8306-062fad5c3779)
 
 
-- [A Survey of Large Language Models](https://arxiv.org/pdf/2303.18223.pdf) A very comprehensive paper discussing LLM technology.
-- [A cookbook of self-supervised Learning](https://arxiv.org/pdf/2304.12210.pdf)
-- [LLM Survey](https://github.com/RUCAIBox/LLMSurvey)
-- [Large Language Models Explained](https://www.understandingai.org/p/large-language-models-explained-with)
-
 
 Generative AI is a subset of machine learning that aim to creates new data samples or information based on an input. This technology has gained significant attention recently because they have been able to produce produce high-quality, realistic data across various domains, from images and videos to text and audio.
 

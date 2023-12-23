@@ -90,6 +90,3 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 
 - [AudioCraft (Meta)](https://ai.meta.com/blog/audiocraft-musicgen-audiogen-encodec-generative-ai-audio/)
 
-### Audio Visual Generation
-
-- [Showrunner Agents](https://fablestudio.github.io/showrunner-agents/)

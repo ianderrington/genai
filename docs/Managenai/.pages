@@ -5,4 +5,5 @@ nav:
     - brainstorming.md
     - build_plan.md
     - contributing.md
+    - site_graph.md
     - ...

@@ -6,9 +6,6 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 ### General approaches 
 
-
-!!! tip "[GPT-graph](https://github.com/m-elbably/gpt-graph) A react-based ability to explore questions."
-
 ??? important "[Natural Language is All a Graph Needs](https://arxiv.org/pdf/2308.07134.pdf) is a very powerful manner of fusing LLMs with KGs using natural language"
 
     - Node classification and self-supervised link predictions.

@@ -88,3 +88,9 @@ Different [model classes](./models/index.md) of models can often be used with mu
 - [What we know about LLMS (primer)](https://willthompson.name/what-we-know-about-llms-primer)
 - [Catching up on the weird world of LLMs](https://simonwillison.net/2023/Aug/3/weird-world-of-llms/)
 - [LLM Engineering by Huyen Chip](https://huyenchip.com/2023/04/11/llm-engineering.html)
+
+
+- [A Survey of Large Language Models](https://arxiv.org/pdf/2303.18223.pdf) A very comprehensive paper discussing LLM technology.
+- [A cookbook of self-supervised Learning](https://arxiv.org/pdf/2304.12210.pdf)
+- [LLM Survey](https://github.com/RUCAIBox/LLMSurvey)
+- [Large Language Models Explained](https://www.understandingai.org/p/large-language-models-explained-with)

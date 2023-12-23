@@ -61,8 +61,6 @@ TODO: Clip paper
 ## TO SORT
 
 
-!!! tip " [Multimodal Neurons in Pretrained Text-Only Transformers](https://arxiv.org/pdf/2308.01544.pdf) "finding multimodal neurons in text-only transformer MLPs and show that these neurons consistently translate image semantics into language."
-
 
 ??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/abs/2307.09288) A nearly open source set of 7B-70B models with quality performance"
 

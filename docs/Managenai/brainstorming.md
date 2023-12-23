@@ -34,3 +34,6 @@ This relates to general methods of GenAI directly .
 🚀 - Rocket: Symbolizes innovation, advancement, and the futuristic aspect of AI.
 🌟 - Star: Signifies excellence, success, or a pioneering aspect in AI.
 🔍 - Magnifying Glass Tilted Right: Represents analysis, scrutiny, and the detail-oriented nature of AI.
+
+## Presentation building
+- [Marp markdown presentation ecosystem](https://marp.app/)
