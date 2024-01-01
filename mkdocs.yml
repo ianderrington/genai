@@ -16,7 +16,7 @@ copyright: >
 # Configuration
 theme:
   name: material
-#  custom_dir: overrides
+  custom_dir: material/overrides
   # name: null
   # custom_dir: themes/material
 

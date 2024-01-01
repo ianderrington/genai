@@ -1,3 +1,14 @@
+---
+template: home.html
+title: " "
+social:
+  cards_layout_options:
+    title: Helping to use Gen() AI for our better future. 
+---
+
+Welcome to Managen.AI
+
+
 # 🎉 Welcome to Managing Gen()AI!
 
 **Our Mission**: Simplify and demystify Gen()AI to make it accessible and understandable and increase our ability to manage it.
