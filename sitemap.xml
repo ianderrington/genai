@@ -116,6 +116,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://managen.ai/Understanding/architectures/llm_systems.html</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://managen.ai/Understanding/architectures/optimization.html</loc>
          <lastmod>2024-01-02</lastmod>
          <changefreq>daily</changefreq>
@@ -276,16 +281,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Understanding/overview/ai_in_general.html</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://managen.ai/Understanding/overview/business.html</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://managen.ai/Understanding/overview/challenges.html</loc>
          <lastmod>2024-01-02</lastmod>
          <changefreq>daily</changefreq>
@@ -301,22 +296,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Understanding/overview/index_temp0.html</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://managen.ai/Understanding/overview/llms.html</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://managen.ai/Understanding/overview/open_source.html</loc>
          <lastmod>2024-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://managen.ai/Understanding/overview/use_cases.html</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Understanding/overview/ai_and_ml_basics/index.html</loc>
          <lastmod>2024-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -406,12 +396,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://managen.ai/Using/examples/by_field/mathematics.html</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://managen.ai/Using/examples/by_field/socio_societal.html</loc>
+         <loc>https://managen.ai/Using/examples/by_field/business.html</loc>
          <lastmod>2024-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -422,6 +407,26 @@
     </url>
     <url>
          <loc>https://managen.ai/Using/examples/by_field/entertainment/static.html</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Using/examples/by_field/individuals_and_society/education.html</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Using/examples/by_field/individuals_and_society/law.html</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Using/examples/by_field/individuals_and_society/socio_societal.html</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Using/examples/by_field/mathematics/index.html</loc>
          <lastmod>2024-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -442,16 +447,6 @@
     </url>
     <url>
          <loc>https://managen.ai/Using/examples/by_field/science/healthcare.html</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://managen.ai/Using/examples/by_field/social/education.html</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://managen.ai/Using/examples/by_field/social/law.html</loc>
          <lastmod>2024-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -482,6 +477,11 @@
     </url>
     <url>
          <loc>https://managen.ai/Using/examples/by_modality/knowledge_graphs.html</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://managen.ai/Using/examples/by_modality/language.html</loc>
          <lastmod>2024-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
