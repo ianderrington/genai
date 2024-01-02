@@ -1,5 +1,14 @@
 TODO and MANGEN: This entire document needs to be reorganized and revised.
 
+[Foundation models](#foundation-models) play a significant role in the data-based approach as they can be built upon to allow fine-tuning based on new or more specific data that may be proprietary, private, or otherwise inappropriately accessed for training a public-facing model. 
+
+<i id='#foundation-models'></i>
+!!! important "Foundation models"
+    Foundation models, by their nature, will continually expand in scope and potential. We share some seminal papers on foundation models here.
+
+    Continual evolution of models may be found in hubs such as [Hugging Face](https://huggingface.co/models?other=foundation+model&sort=trending).
+
+
 While there is a great deal in several primary domains of Generative AI, Text, Image, sound, video, there are many other modalities that are of interest. Here we share prominent and interesting methods for these domains. These models will often rely on [tokenization](../../data/tokenizing.md). Once tokenized, the transformed projected in some way to an _embedding vector_ that can be used by  downstream LLM's, as well as vector-databases.
 
 

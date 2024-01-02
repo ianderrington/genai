@@ -1,9 +1,7 @@
+STUB: 
+This will provide information and references for base-level AI for more simplified understanding of the field
 
-Here we provide selected references to frameworks and solutions surrounding AI in general
 
-## Frameworks
-Pytorch
-Tensorflow
 
 ### Higher-level Frameworks
 Higher level frameworks minimize the lines of code needed to make a model and keep track of everything.

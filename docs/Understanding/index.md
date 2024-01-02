@@ -23,22 +23,25 @@ In the documents you read here, you will be able to see an increseasingly consis
 
 ## The base components of Gen()AI
 
-
 Getting into it, you will find the following outline:
 
-### What's been done with Gen()AI?
+### What is important to understand about Gen()AI?
 
-1. [Data](data/index.md) provides the backbone connecting computation to our recorded reality.
-1. [Models](architectures/index.md) allow the data to be understood and used. [^n1]
-1. [Prompts](prompting/index.md) govern how we interact with the models.
-1. [Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners.
-1. [Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies.
-1. [Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis.
+!!! tip "Start with these"
+    - [Data](data/index.md) provides the backbone connecting computation to our recorded reality.
+    - [Models](architectures/index.md) allow the data to be understood and used. [^n1]
+    - [Prompts](prompting/index.md) govern how we interact with the models.
+    - [Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners.
+    - [Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies.
+    - [Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis.
 
+!!! tip "A little more advanced"
+  - [Use Agents](agents/index.md) for increasingly powerful applications
+  - [Optimize](architectures/optimization.md) your model
 
 ### How do you do stuff with Gen()AI?
 
-Of course, there will be some important 'how-to's, particularly in the [data](data/index.md), [models](architectures/index.md), [prompts](prompting/index.md) and [agents](./agents/index.md).
+Of course, there will be some important 'how-to's, in this section. You will also want to look at the [../Using/index.md] which may help you to directly use GenAI while minimizing wading too-deeply into the intriguing complexities of research and engineering associated with Gen()AI.  
 
 Competition is fierce to create the 'best' (based on certain metrics) Gen()AI, so much knowledge may not be known to protect IP and other secrets.
 
@@ -48,33 +51,8 @@ If you are working on commercial projects, be sure to look at the Licenses to en
 
 And please, whatever you do, be cognisant of the [ethical concerns](../Using/ethically/index.md)
 
-## Useful References
-
-There is so much quality material, it would be valuable for your time to check some of these out if you got the chance.
-
-
-??? tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
-    Important patterns mentioned (references to discussions herein):
-    * [Evaluating and comparing](architectures/evaluating_and_comparing.md)
-    * [Retreival Augmented Generation (RAG)](agents/rag.md)
-    * [Fine tuning](architectures/optimization.md#finetuning)
-    * [Caching](agents/memory.md#caching) to reduce latency.
-    * [Guardrails](agents/chains.md#guardrails) to ensure output (and input) quality.
-    * Data Flywheel to use data collection and feedback to improve model and experience
-    * Cascade Breaking models up into smaller simpler tasks instead of big ones.
-    * Monitoring to ensure value is being derived
-    * Effective (defensive) UX to ensure the models can be used well.
-    ![image](https://github.com/ianderrington/genai/assets/76016868/fd03db2c-c695-4f52-8306-062fad5c3779)
-
-
-
 Generative AI is a subset of machine learning that aim to creates new data samples or information based on an input. This technology has gained significant attention recently because they have been able to produce produce high-quality, realistic data across various domains, from images and videos to text and audio.
 
-!!! tip "A little more advanced"
-    - [Use Agents](agents/index.md) for increasingly powerful applications
-    - [Optimize](architectures/optimization.md) your model
-
-In this section, we will focus on 'Understanding' the various components of GenAI, [data](./data/index.md), [models](./architectures/index.md) and [agents](./agents/index.md) including methods and models that are initial or under development.
 
 !!! warning "Presentation bias"
     This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managenai/contributing.md)

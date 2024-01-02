@@ -1,7 +1,8 @@
 nav: 
   - index.md
+  - business.md
   - entertainment
-  - mathematics.md
   - science
-  - socio_societal.md
+  - mathematics
+  - individuals_and_society
   - ...

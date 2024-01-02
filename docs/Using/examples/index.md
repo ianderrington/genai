@@ -1,3 +1,8 @@
+## References
+
+For a comprehensive overview of applications and challenges, we highly recommend the study [Challenges and Applications of Large Language Models](https://arxiv.org/pdf/2307.10169.pdf).
+
+
 
 ## General examples
 

@@ -2,5 +2,7 @@ nav:
     - index.md
     - use_cases.md
     - challenges.md
+    - chronology.md
+    - ai_and_ml_basics
     - ...
     - extra_resources.md

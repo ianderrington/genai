@@ -1,92 +1,51 @@
-We explores different activities and fields that utilize Generative AI's capabilities and provide a few notable references for each. For an overview of applications (and challenges), we highly recommend [Challenges and Applications of Large Language Models](https://arxiv.org/pdf/2307.10169.pdf)
-
-
-There is a philosophical overlap with 'predictive' AI where a predictive model could just be said to 'generate' either possible future outcomes or estimated classifications of data.
-
-There are many generally distinct domains of Gen()AI application, though many be compositional. Effectively any information that can be recorded onto a computer may be made by Gen()AI.
+Thhere are various activities and fields that leverage the capabilities of Generative AI.
 
 ## General Modalities
-MANGEN (Expand, and clarify the below )
-* Language, Spoken and Written
-* Visual 2D, Images, Diagrams,
-* Visual 3D
-* Visual 2D with time
-* Visual 3D with time
-* Graphical (Relation and influence networks)
-* Generally linear biological sequences (Genome, Proteome)
-* Multidimensional Temporal sequences (weather, brain recordings, stock market)
-* Multimodal variants of the above.
 
+The following table provides an overview of the general modalities in which Generative AI can be applied:
+
+| Modality | Examples |
+| --- | --- |
+| Language | Spoken and Written |
+| Time series | Music, Speech, Finances |
+| Visual 2D | Images, Diagrams |
+| Visual 3D | 3D Models, Virtual Reality |
+| Visual 2D with time | Animated Graphics, Videos |
+| Visual 3D with time | 3D Animations, Simulations |
+| Graphical | Relation and Influence Networks |
+| Generally linear sequences | Genome, Proteome |
+| Multidimensional Temporal sequences | Weather, Brain Recordings, Stock Market |
+| Multimodal variants | Combination of the above methods |
+
+For a more detailed description of these modalities, refer to [this section](../../Using/examples/by_modality/index.md).
 
 ## General Activities
-There are many activities that can be used in many, if not all, fields of applications. We mention a few below:
 
-### Summarization
+Because at its core, GenAI works on Information, there several core ways numerous ways in which Generative AI can be used. The application often depends on the [field](../../Using/examples/by_field/index.md). Here are some activities that can be used in many, if not all, fields of applications:
 
-Summarization is a key application for Generative AI. It uses the technology to provide brief, accurate summaries of a larger body of text.
+### Creating information 
 
-### Classification
+At it's base, Generative AI is used to create information, such as new text or images. The information that is created can have two general uses: for direct muse by people or other algorithms, or for the use in the training or improving Gen()AI using [simulated](../data/simulation.md) data. 
 
-With or without examples LLMs can perform classification on input, though sometimes additional supervised training may be preferred to improve accuracy.
+### Converting Information
 
-### Semantic Search
+Generative AI can generate content in one domain with input from another. Language, a common method of understanding and communicating the world around us, is often used to generate content in different domains, such as images, movies, and music. Domain mapping can also be reversed: taking an input image and generating a description or caption for the image.
 
-Generative AI has the capability to understand relationships between words and concepts. By embedding an input, the technology can measure semantic, or 'meaning', nearness via distance calculations. This capability enhances the potential for memory recall with imperfect inputs and improves action routing.
+### Compactifying Information
 
-### Prose Generation
-
-Generative AI can be utilized for a wide range of prose generation applications, such as:
-
-- Drafting and refining text and notes.
-- Brainstorming and ideation.
-- Generating initial drafts for later human editing.
-- Creating descriptions and explanations.
-- Rewriting to target different audiences.
-- Expanding on key points.
-- Improving flow and readability
-
-- [Pyprompt chatgpt](http://morganlancer.com/en/portfolio/pyprompt_chatgpt)
-
-
-
-### Language Translation
-
-Generative AI is increasingly good at translating between domains.
-
-### Personal assistants and memory
-- [Quiver](https://github.com/StanGirard/quiv) A LLM for self second brain.
-
-### Compression
+Generative AI is instrumental in summarization and compression. It can provide brief, accurate summaries of a larger body of text, effectively compactifying information. Interestingly, as discussed in the reference below, Language Modeling is found to be equivalent to compression lossless methods. 
 
 ??? important "[Language Modeling Is Compression](https://arxiv.org/pdf/2309.10668.pdf) demonstrates lossless compression of text and images with upwards of 3x smaller compression."
     Uses either newly trained 200K-3M transformer models or pre-trained Chinchilla models and achieves impressive compression rates.
     <img width="1298" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ffa8ac86-3876-4ecb-8b18-e14b47b972e5">
     Details on implementation are somewhat hidden.
 
+### Classification and Prediction
 
-### Font generation
-- [Fontogen](https://github.com/SerCeMan/fontogen) [Read more here](https://serce.me/posts/02-10-2023-hey-computer-make-me-a-font)
+While traditionally the domain of AI/ML, Generative AI can also be used for classification and predictions. For instance, it can take an input sentence and predict the sentiment within it (like positive or negative). Although not necessarily as accurate or efficient as smaller, finely tuned models, Generative AI offers greater versatility by allowing multiple classifications or predictions to be made. These methods can be improved with additional supervised training.
 
-### Code Generation
+### Finding Information
 
-Very powerfully it can generate code to accomplish a task based on natural language input. This is very promising but still requires human oversight, due to the [challenge](./challenges.md) associated with using Automated AI systems without human input or oversight.
+Generative AI can understand relationships between words and concepts. By embedding an input, the technology can measure semantic, or 'meaning', nearness via distance calculations. This capability enhances the potential for memory recall with imperfect inputs and improves action routing.
 
-- [Wizard Coding](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder)
-- [AutoPR](https://github.com/irgolic/AutoPR)
-- [Codium pr-agent](https://github.com/Codium-ai/pr-agent)
-- [Code AI consulting](https://github.com/AI-Citizen/SolidGPT) Allows you to 'query your code' in a chatlike manner.
-
-### Documentation extraction
-
-- [Summarization with Langchain](https://github.com/EnkrateiaLucca/summarization_with_langchain) A splendid view of a quick streamlit app that does PDF summarization.
-
-- [Deepdoctection](https://github.com/deepdoctection/deepdoctection)
-
-### Application and component replacement
-
-- [GPT as backend](https://github.com/RootbeerComputer/backend-GPT)
-
-### Sound and Music Generation
-
-- [AudioCraft (Meta)](https://ai.meta.com/blog/audiocraft-musicgen-audiogen-encodec-generative-ai-audio/)
 

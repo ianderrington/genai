@@ -238,7 +238,8 @@ def find_link_suffix(link):
 
 def visualize_graph(G):
     """Visualize the network graph"""
-    pos = nx.spring_layout(G)
+    # pos = nx.spring_layout(G)
+    
     nx.draw(G, pos, with_labels=False)
     plt.show()
 

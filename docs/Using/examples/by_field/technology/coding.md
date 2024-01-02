@@ -1,3 +1,13 @@
+### Code Generation
+
+Very powerfully it can generate code to accomplish a task based on natural language input. This is very promising but still requires human oversight, due to the [challenge](../../../../Understanding/overview/challenges.md) associated with using Automated AI systems without human input or oversight.
+
+- [Wizard Coding](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder)
+- [AutoPR](https://github.com/irgolic/AutoPR)
+- [Codium pr-agent](https://github.com/Codium-ai/pr-agent)
+- [Code AI consulting](https://github.com/AI-Citizen/SolidGPT) Allows you to 'query your code' in a chatlike manner.
+
+
 ## Coding
 !!! code "[Octopack](https://github.com/bigcode-project/octopack) [Github](https://arxiv.org/pdf/2308.07124.pdf)s"
 
@@ -17,3 +27,6 @@ code completion model
 - [ChatGPT](https://chat.openai.com/) Does quite well with code creation
 
 
+### Application and component replacement
+
+- [GPT as backend](https://github.com/RootbeerComputer/backend-GPT)

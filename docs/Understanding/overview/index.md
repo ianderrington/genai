@@ -1,5 +1,3 @@
-# Gen()AI: An Overview
-
 The ability of computers and algorithms to generate art, literature, and other forms of content has been around for several decades. However, it is only recently that such content has begun to exhibit _human-like_ quality. This is largely due to the use of Artificial Intelligence (AI), particularly Machine Learning (ML), which leverages _data_ to produce high-quality output. 
 
 This document provides a high-level overview of how Gen()AI achieves this feat. 
@@ -12,7 +10,7 @@ Gen()AI is a term that encapsulates both **Generative** and **General** AI. Each
 
 Recent advancements in Generative AI have positioned it as a potential stepping stone towards AGI. Given the [profound implications](../../Using/ethically/index.md) of Gen()AI on individuals and society, it is crucial to understand these technologies. 
 
-Generative AI is a subset of [AI in general](ai_in_general.md), as illustrated in the diagram below.
+Generative AI is a subset of [AI in general](ai_and_ml_basics/index.md), as illustrated in the diagram below.
 
 <img width="1151" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0b344719-b998-43f7-92fb-725797324af9">
 
@@ -41,14 +39,6 @@ The data-based approach to creating Gen()AI involves the following steps:
 2. Train the model on the collected data.
 3. Evaluate the model based on any new data.
 4. Iterate the process to improve the model.
-
-[Foundation models](#foundation-models) play a significant role in the data-based approach as they can be built upon to allow fine-tuning based on new or more specific data that may be proprietary, private, or otherwise inappropriately accessed for training a public-facing model. 
-
-<i id='#foundation-models'></i>
-!!! important "Foundation models"
-    Foundation models, by their nature, will continually expand in scope and potential. We share some seminal papers on foundation models here.
-
-    Continual evolution of models may be found in hubs such as [Hugging Face](https://huggingface.co/models?other=foundation+model&sort=trending).
 
 
 ### Rule-based Approaches

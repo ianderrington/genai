@@ -1,3 +1,7 @@
+STUB: 
+This will provide a chronological record of significant advancements of GenAI. 
+
+
 ## 2023-06
 
 ??? tip "[State of GPT by Andrej Karpathy](https://build.microsoft.com/en-US/sessions/db3f4859-cd30-4445-a0cd-553c3304f8e2) A comprehensive presentation on the general state of Generative AI made possible by GPT."
