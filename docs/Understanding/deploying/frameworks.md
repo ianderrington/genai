@@ -1,6 +1,6 @@
 TODO: These need to be partitioned out to the different positions
 
-The AI-Cambriatic explosion has led to a surge in services, methods, frameworks, and tools that enhance the creation and deployment of models from start to finish. Although there are end-to-end providers for generating valuable GenAI solutions, there is immense value in implementing and experimenting with your own stacks.
+The big-bang like expansion of AI has led to a surge in services, methods, frameworks, and tools that enhance the creation and deployment of models from start to finish. Although there are end-to-end providers for generating valuable GenAI solutions, there is immense value in implementing and experimenting with your own stacks.
 
 Additionally, there are useful [libraries and tools](./libraries_and_tools.md) worth exploring.
 
@@ -104,8 +104,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 !!! code "[LLM Finetuning Hub](https://github.com/georgian-io/LLM-Finetuning-Hub) is an evolving model finetuning codebase. "
 
 
-
-#### Others
+#### Orchestration
 
 ??? code "[EmbedChain](https://github.com/embedchain/embedchain)  is a framework to easily create LLM powered bots over any dataset."
     Example:
@@ -133,14 +132,13 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 - [Flowise](https://github.com/FlowiseAI/Flowise)
 - [Chain Forge](https://github.com/ianarawjo/ChainForge) A data flow prompt engineering environment for evaluating ana analyzing LLM responses
-- [llm-chain](https://docs.llm-chain.xyz/docs/introduction) ChatGPT and Alpaca support. Agentic with bash commands.
+- [llm-chain](https://docs.llm-chain.xyz/docs/introduction) ChatGPT and Alpaca support. Agentic with bash commands.n
 - [Agent Flow](https://github.com/simonmesmith/agentflow)
 - [Auto Chain](https://github.com/Forethought-Technologies/AutoChain)
 - [Chatall](https://github.com/sunner/ChatALL) To interact with multiple chatbots at the same time.
 - [LocalAI](https://github.com/go-skynet/LocalAI) drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
 
 !!! code "[Open Agent](https://github.com/dot-agent/openagent) IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents"
-
 
 ??? code "[DSPY](https://github.com/stanfordnlp/dspy) is a framework for solving advanced tasks with language models and retrieval models"
     Useful for exploring automatic prompt opteimization.
@@ -163,16 +161,11 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
     "To summarize:[SUMMARY]"
     ```
 
-
-
-
 ### Control libraries
 
 * Guidance
 * RELM
 * Outlines
-
-
 
 ### Retrieval Augmentation focus
 

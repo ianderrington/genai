@@ -14,8 +14,19 @@ Once you have a clear understanding of your visualization needs, the next step i
 
 There are several popular repositories that can serve as a starting point for your product. These include:
 
-- [OobaBooga Text generation WebUI](https://github.com/oobabooga/text-generation-webui): This is a user-friendly interface for text generation.
+### Prominant and supported 
+
+- [Fly.io](https://www.fly.io)
+- [Modal.com](https://www.modal.com)
+- [Render.com](https://www.render.com)
+- [Gradio.app](https://www.gradio.app)
 - [Streamlit](https://blog.streamlit.io/langchain-streamlit/): This platform allows you to build machine learning and data science apps.
+- [Hugging Face](https://www.huggingface.co)
+- [EmbedChain.ai](https://www.embedchain.ai)
+
+### Demo Examples
+
+- [OobaBooga Text generation WebUI](https://github.com/oobabooga/text-generation-webui): This is a user-friendly interface for text generation.
 - [DemoGPT](https://github.com/melih-unsal/DemoGPT): This tool connects Langchain and Streamlit to create dynamic apps that can be used repeatedly for interacting with Chat-GPTs.
 - [GPT Graph](https://github.com/m-elbably/gpt-graph): This tool allows for a graphical network representation of chat interactions.
 
