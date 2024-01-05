@@ -1,5 +1,7 @@
-pip install embedchain
-pip install huggingface
-pip install sentence-transformers
-pip install lxml
-pip install ipywidgets
+embedchain
+huggingface
+sentence-transformers
+lxml
+ipywidgets
+transformers
+accelerate

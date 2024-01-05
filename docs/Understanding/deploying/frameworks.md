@@ -103,6 +103,9 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 !!! code "[LLM Finetuning Hub](https://github.com/georgian-io/LLM-Finetuning-Hub) is an evolving model finetuning codebase. "
 
+#### Agents
+
+- [AgentOps](https://github.com/AgentOps-AI/agentops)
 
 #### Orchestration
 
