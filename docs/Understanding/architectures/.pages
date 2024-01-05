@@ -5,7 +5,7 @@ nav:
     - training.md
     - pre-training.md
     - finetuning.md
-    - rl_feedback.md
+    - feedback.md
     - optimization.md
     - evaluating_and_comparing.md
     - ...
