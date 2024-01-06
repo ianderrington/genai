@@ -1,13 +1,56 @@
-TODO
+Transformers are a powerful type of architecture allows input sequences to be considered with the whole input context. They are built on [self attention] mechanism, that performs an $O(N^2)$ computation fon the input sequence and, in continued stacks, provides the ability to represent relations between inputs at different levels of abstration. 
+
+Transformers can be used in three general ways: encoder-only, decoder-only and encoder-decoder. 
+
+In Encoder-only networks, like Bert, the entire input text is used, but is useful for primarily output classification tasks (sequence-to-value). 
+
+As in the original [Transformer ATtention paper], encoder-decoder networks are used to convert sequence to sequences for language translation. In these systems, an encoder will first project information based on the input, generate new outputs, and the new outpus will be used in a recurrent fashion to generate subsequent outputs. 
+
+In Decoder-only networks, like [GPT](gpt.md), because they are _next-token_predictions_, they only require information from words/tokens that have been previously seen. The outputs will be the estimates of the probability of the next word/token. While next-token prediction is singular, this can happen iteratively, and with the proper prompting, the generation of output sequences can perform a varity of sequence-to-sequence tasks, such as language translation. 
+
 ## Components
 
-TODO: Describe transformers and components
-
-1. Attention: Query, Key, Vectors
 1. Positional Encoding
+1. Attention: Query, Key, Vectors
 1. Layer Normalization
 
-### Attention Models
+Initially the word, or subword is broken anad represented as a lookup-key to find an 'embedding'. This can be trained alongside transformer models, or pre-trained from other models. It provides a vector representation of the input word.
+
+To allow the token+embedding to _attend_ or share information with the other inputs, calculate a 'self-attention matrix' with the following pieces. 
+1. A Query matrix $W^Q$
+2. A Key matrix $W^K$
+3. A Value matrix $W^V$
+
+For each token/word $i$, the embedding is multiplied by this matrix to yield a query vector, a key vector, and a value vector, $Q_i$, $K_i$ and $V_i$
+
+Each query-vector, is then multiplied by each key-vector, resulting in matrix computation $Q*V$. Because the key-query is suppoesed to describe how important an input combination is, it is then normalized by the dimension of the values to allow for similar behavior for different dimensions, and then  passed through a soft-max function 
+
+$softmax(\frac{(Q * K^T)}{\sqrt{d_k}})
+
+This is then multiplied by the value matrix to provide the attention output. 
+
+$Z_(head i) = $softmax(\frac{(Q * K^T)}{\sqrt{d_k}}) V$
+
+Multiple attention heads can be combined by stacking them together and then multiplied by a final matrix that will produce a final
+
+$Z = cat(Z_i) * W^O$
+
+Finally, this matrix is with input values to have a residual connection, and the [layer is normalized](#layer-normalization). 
+
+This matrix can be passed to additional layers, or a final fully-connected projection layer. 
+
+
+### Positional Encoding
+
+[Standard embeddings are position in variant](), meaning the position of the token/word in the input will have little importance. As token/ word positions have certain importance, position-embeddings are also used. Generally additive, position embeddings are based on varying sinusoids, or trainable parameters. 
+
+- [A Gentle Introduction to Positional Encoding in Transformer Models, pt1]( https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/)
+
+- [Transformer Language Models without POsitional Encodings STill Learn Positional Information](https://arxiv.org/abs/2203.16634) Indications that causal LMS may derive positional awareness from more than the positional embeddings: they learn it from the causal mask.
+
+TODO: Which is used more and why aren't trainable, and why are not non-linear embeddings considered as opposed to just addative...? 
+  
+### Layer Normalization 
 
 Layer normalization observably improves results [On Layer Normalization in the Transformer Architecture](http://proceedings.mlr.press/v119/xiong20b/xiong20b.pdf)
 
@@ -15,16 +58,7 @@ Layer normalization observably improves results [On Layer Normalization in the T
 
 ??? tip "[The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)"
 
-
 ??? tip "[The Transformer Blueprint: A Holistic Guide to the Transformer Neural Network Architecture](https://deeprevision.github.io/posts/001-transformer/) provides q thorough exposition of transformer technology."
-
-
-
-### GPT
-
-- [Illustrated GPT](http://jalammar.github.io/illustrated-gpt2/)
-- [How GPT3 works](https://jalammar.github.io/how-gpt3-works-visualizations-animations/)
-Excellent summary of the progress of GPT over time, revealing core components, optimizations, and essential variations to the major Foundation model architectures.
 
 ## Useful References and Research
 
@@ -32,9 +66,6 @@ Excellent summary of the progress of GPT over time, revealing core components, o
 
 - [Transformers by Lucas Beyer (presentation)](https://docs.google.com/presentation/d/1ZXFIhYczos679r70Yu8vV9uO6B1J0ztzeDxbnBxD1S0/mobilepresent?fbclid=IwAR18pR_Mf46mkZ1_E3NFOwYY2wVx0aATficgfh_GWZd29c_lWNRa4vK5zy8&slide=id.g31364026ad_3_2)
 
-- [Five years of progress in GPTs](https://finbarrtimbers.substack.com/p/five-years-of-progress-in-gpts?utm_source=substack&utm_medium=email)
-
-- [The Transformer Architecture of GPT Models](https://towardsdatascience.com/the-transformer-architecture-of-gpt-models-b8695b48728b)
 
 ### Seminal documents
 
@@ -45,12 +76,7 @@ Excellent summary of the progress of GPT over time, revealing core components, o
 - [Formal Algorithms for Transformers in 2023](https://arxiv.org/pdf/2207.09238.pdf)
 Important discussion revealing the components of Transformers.
 
-### Positional Encoding
-This component helps to remove the impilcit position-independence that 'vanilla' attention methods have.
 
-- [A Gentle Introduction to Positional Encoding in Transformer Models, pt1]( https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/)
-
-- [Transformer Language Models without POsitional Encodings STill Learn Positional Information](https://arxiv.org/abs/2203.16634) Indications that causal LMS may derive positional awareness from more than the positional embeddings: they learn it from the causal mask.
 
 #### Modifications
 - [A Simple yet Effective Learnable Positional Encoding Method for Improving Document Transformer Model](https://aclanthology.org/2022.findings-aacl.42.pdf) They introduce a learnable sinusoidal positional encoding feed forward network. Demonstrates significant improvements over other datasets.
