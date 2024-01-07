@@ -7,7 +7,7 @@ embedder:
   provider: huggingface
   config:
     model: 'sentence-transformers/all-mpnet-base-v2'
-# vectordb:
-#   provider: chroma
-#   config:
-#     collection_name: 'mistral'
+vectordb:
+  provider: chroma
+  config:
+    collection_name: 'mistral'
