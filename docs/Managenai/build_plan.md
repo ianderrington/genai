@@ -1,11 +1,46 @@
+To go beyond, we will be using Generative AI to create and expand thys system with automations to assis personal authorships. 
 
-To go beyond, we will be using Generative AI to create and expand. There are several 'stages' that may be considered. 
+There are several 'stages' that may be considered. 
 
 1. Manual, and automated use of GenAI to [improve and refine](#improve_and_refine_content) content already present. 
 1. Automatic triggering of GenAI to [incorporate new](#incorporate) content coming from external inputs. 
 1. Searching for external inputs based on appropriate information feeds. 
 1. Responsive Chatty AI Oracle that will be 
 1. Agentic AI Oracle that will implement the solutions, or outline solutions for you to be implemented to achieve your goals. 
+
+## What do I need
+1. To Automatically add or fix content already present: a crawler
+    1. with LLM calls: to make it more impactufl:
+        * How?
+          - Best model. 
+             - How? Pay. 
+           - Better prompt optimizations. 
+             - How? Experiment. 
+             - Back/forth agent with ability to help. 
+                - Agent can combine variants, using line numbers and whatnot. 
+                    - modified chat service: https://github.com/sebastiengilbert73/chat_service https://towardsdatascience.com/build-a-locally-running-voice-assistant-2f2ead904fe9
+
+                    It responds' these are your options: 
+
+                    WAS ON RIGHT PATH, JusT NEED MODIFY GUI for CHAT INTERFACE AND INTERACTIONS
+
+                    - Eg: Combine left first part and second part. 
+                          Add rule: Make it more. 
+                          VOICE COMMAND
+                          Show rules: 
+                    - Loop: What it has remembered. Allow it to 'self adapt' and propose new rules. 
+                    - I NEED TO CACHE RESULTS. Caching key values for e
+        * What is in the way?
+        * What are the solutions?
+        * What 
+        What information? 
+            - Tags or headers on the top. (not high priority)
+    1. with just strict formatting functions 
+        1. 
+1. To parse the database --> use embedchain or something similar
+
+1. to automatically add n 
+
 
 ### Improve and refine content
 
