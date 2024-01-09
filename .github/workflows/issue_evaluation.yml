@@ -7,7 +7,8 @@ on:
 jobs:
   evaluate:
     if: contains(fromJson('["ianderrington"]'), github.actor)
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       issues: write
       contents: read
@@ -34,7 +35,8 @@ jobs:
 
   label:
     if: contains(fromJson('["ianderrington"]'), github.actor)
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: evaluate
     steps: 
       - name: Checkout repository

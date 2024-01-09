@@ -10,3 +10,5 @@ site/
 *.obsidian*
 
 *cloned*
+
+actions-runner/
