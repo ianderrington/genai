@@ -1,0 +1,9 @@
+llm:
+  provider: huggingface
+  config:
+    model: 'mistralai/MixtralForCausalLM'
+    top_p: 0.99
+embedder:
+  provider: huggingface
+  config:
+    model: 'sentence-transformers/all-mpnet-base-v2'

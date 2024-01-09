@@ -1,0 +1,9 @@
+nav:
+    - index.md
+    - overview
+    - data
+    - architectures
+    - prompting
+    - agents
+    - studies
+    - ...

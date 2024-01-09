@@ -1,0 +1,13 @@
+llm:
+  provider: huggingface
+  config:
+    model: 'mistralai/Mistral-7B-v0.1'
+    top_p: 0.99
+embedder:
+  provider: huggingface
+  config:
+    model: 'sentence-transformers/all-mpnet-base-v2'
+vectordb:
+  provider: chroma
+  config:
+    collection_name: 'mistral'

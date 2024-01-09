@@ -1,0 +1,9 @@
+nav:
+    - index.md
+    - managing.md
+    - requirements.md
+    - brainstorming.md
+    - build_plan.md
+    - contributing.md
+    - site_graph.md
+    - ...

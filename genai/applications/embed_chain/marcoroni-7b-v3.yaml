@@ -1,0 +1,13 @@
+llm:
+  provider: huggingface
+  config:
+    model: AIDC-ai-business/Marcoroni-7B-v3
+    top_p: 0.5
+embedder:
+  provider: huggingface
+  config:
+    model: 'sentence-transformers/all-mpnet-base-v2'
+# vectordb:
+#   provider: chroma
+#   config:
+#     collection_name: 'AIDC-ai-business-Marcoroni-7B-v3-app'

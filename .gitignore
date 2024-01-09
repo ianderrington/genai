@@ -1,0 +1,12 @@
+*Icon*
+*DS_store*
+site/
+.cache
+.env
+
+*.ipynb_checkpoints*
+*__pycache__*
+*/output*
+*.obsidian*
+
+*cloned*

@@ -1,0 +1,5 @@
+llm:
+  provider: huggingface
+  config:
+    model: 'DopeorNope/SOLARC-MOE-10.7Bx6'
+    top_p: 0.99

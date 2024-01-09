@@ -1,0 +1,43 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% extends "base.html" %}
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/custom.14cc6f30.min.css' | url }}">
+{% endblock %}
+{% block announce %}
+  For updates follow <strong>Ian</strong> on
+  <a rel="me" href="https://www.linkedin.com/in/ian-derrington/">
+  <span class="twemoji linkedin">
+    {% include ".icons/fontawesome/brands/linkedin.svg" %}
+  </span>
+  <strong>LinkedIn</strong>
+</a>
+and
+  <a href="https://twitter.com/ian_derrington">
+    <span class="twemoji twitter">
+      {% include ".icons/fontawesome/brands/x-twitter.svg" %}
+    </span>
+    (Twitter)
+  </a>
+{% endblock %}
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ 'assets/javascripts/custom.97a2da2b.min.js' | url }}"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.managen.ai",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.managen.ai?/q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+{% endblock %}

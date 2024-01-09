@@ -1,0 +1,7 @@
+embedchain
+huggingface
+sentence-transformers
+lxml
+ipywidgets
+transformers
+accelerate
