@@ -42,8 +42,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@main
       - name: activate venv
-        run: |
-          conda activate genai
+        run: conda activate genai
 
       - name: Label Issue
         env:
