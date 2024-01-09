@@ -27,6 +27,9 @@ jobs:
 
       # - name: Install Python dependencies
       #   run: python -m pip install --upgrade pip
+      - name: activate venv
+        run: |
+          ca genai
 
       - name: Run issue evaluation script
         id: evaluate_issue
