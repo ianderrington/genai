@@ -25,12 +25,9 @@ jobs:
       #   with:
       #     python-version: '3.10'
 
-      # - name: Install Python dependencies
-      #   run: python -m pip install --upgrade pip
-      - name: activate venv
-        run: |
-          conda activate genai
-
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip
+   
       - name: Run issue evaluation script
         id: evaluate_issue
         run: python .github/scripts/evaluate_issue.py "${{ github.event.issue.number }}" "${{ github.event.issue.body }}" >> "$GITHUB_OUTPUT"
@@ -44,6 +41,10 @@ jobs:
     steps: 
       - name: Checkout repository
         uses: actions/checkout@main
+      - name: activate venv
+        run: |
+          conda activate genai
+
       - name: Label Issue
         env:
           LABEL: ${{ needs.evaluate.outputs.label }} 
