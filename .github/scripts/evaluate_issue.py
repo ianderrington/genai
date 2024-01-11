@@ -42,7 +42,8 @@ def clean_urls(url_list):
 
     clean_urls = []
     for url in url_list:
-        url = url.replace("https://", "").replace("http://", "")
+        # url = url.replace("https://", "").replace("http://", "")
+        # remove query string from url
         url = re.sub(r"\?.*", "", url)
         clean_urls.append(url)
 
