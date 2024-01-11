@@ -12,3 +12,5 @@ site/
 *cloned*
 
 actions-runner/
+
+.*env*
