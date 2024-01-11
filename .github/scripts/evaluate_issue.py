@@ -79,7 +79,7 @@ def main(issue_number, issue_text, directory):
     # print(f"echo \"label='{label}'\" >> \"$GITHUB_OUTPUT\"")
     print(f"label={label}")
     if body:
-        print(f"body={body}")
+        print(f"body="{body}"")
 
 
 if __name__ == "__main__":
