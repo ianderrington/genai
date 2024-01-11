@@ -67,7 +67,7 @@ def main(issue_number, issue_text, directory):
             
         else:
             missing_urls = list(set(urls) - set(matches))
-            body = ','.join(missing_urls)
+            body = ', '.join(missing_urls)
             body = f"/MANAGEN, please consider and add the following issues to your understanding: [{body}]"
             
             # print(f"matches={matches}")
