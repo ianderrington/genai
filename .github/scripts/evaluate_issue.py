@@ -67,7 +67,7 @@ def main(issue_number, issue_text, directory):
             
         else:
             missing_urls = list(set(urls) - set(matches))
-            body = f"MANAGEN, please consider and add the following issues to your understanding:\n"
+            body = f"MANAGEN, please consider and add the following issues to your :\n"
             body += '\n'.join(missing_urls)
             # print(f"matches={matches}")
     # Output for GitHub Actions
@@ -79,7 +79,7 @@ def main(issue_number, issue_text, directory):
     # print(f"echo \"label='{label}'\" >> \"$GITHUB_OUTPUT\"")
     print(f"label={label}")
     if body:
-        print(f"body="{body}"")
+        print(f'body="{body}"')
 
 
 if __name__ == "__main__":
