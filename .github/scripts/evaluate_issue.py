@@ -43,7 +43,7 @@ def clean_urls(url_list):
     clean_urls = []
     for url in url_list:
         # url = url.replace("https://", "").replace("http://", "")
-        # remove query string from url
+        # remove query string 
         url = re.sub(r"\?.*", "", url)
         clean_urls.append(url)
 
@@ -67,8 +67,7 @@ def main(issue_number, issue_text, directory):
             
         else:
             missing_urls = list(set(urls) - set(matches))
-            body = f"MANAGEN, please consider and add the following issues to your understanding:\n"
-            body += '\n'.join(missing_urls)
+            body = '\n'.join(missing_urls)
             # print(f"matches={matches}")
     # Output for GitHub Actions
 
