@@ -37,12 +37,16 @@ jobs:
     if: contains(fromJson('["ianderrington"]'), github.actor)
     # runs-on: ubuntu-latest
     runs-on: self-hosted
+    
     needs: evaluate
     steps: 
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: genai
       - name: Checkout repository
         uses: actions/checkout@main
-      - name: activate venv
-        run: conda activate genai
+      # - name: activate venv
+      #   run: conda activate genai
 
       - name: Label Issue
         env:

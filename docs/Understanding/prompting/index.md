@@ -22,7 +22,8 @@ It is also important to note, that while [manual methods](#manual-methods) are e
 - Generate many outputs and pick final one or use LLM to pick best one.
 
 
-??? important "[Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4](https://arxiv.org/abs/2312.16171 )
+??? important "[Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4](https://arxiv.org/abs/2312.16171 )"
+
     26 Prompting Tips
 
     1 - No need to be polite with LLM so there is no need to add phrases like “please”, “if you don’t mind”, “thank you”, “I would like to”, etc., and get straight to the point.
@@ -38,8 +39,7 @@ It is also important to note, that while [manual methods](#manual-methods) are e
 
     6 - Add “I’m going to tip $xxx for a better solution!”
     7 -  Implement example-driven prompting (Use few-shot prompting).
-    8 - 
-    When formatting your prompt, start with ‘###Instruction###’, followed by either ‘###Example###’ or ‘###Question###’ if relevant. Subsequently, present your content. Use one or more
+    8 - When formatting your prompt, start with ‘###Instruction###’, followed by either ‘###Example###’ or ‘###Question###’ if relevant. Subsequently, present your content. Use one or more
     line breaks to separate instructions, examples, questions, context, and input data.
     9 -  Incorporate the following phrases: “Your task is” and “You MUST”.
     10 - Incorporate the following phrases: “You will be penalized”.
