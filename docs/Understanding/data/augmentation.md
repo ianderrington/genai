@@ -1,4 +1,3 @@
-# Understanding Data Augmentation
 
 Data augmentation is a strategy that enables practitioners to significantly increase the diversity of data available for training models, without actually collecting new data. Data augmentation techniques such as cropping, padding, and horizontal flipping are commonly used to train large neural networks.
 
@@ -62,7 +61,3 @@ datagen.fit(x_train)
 ```
 
 In this example, the `ImageDataGenerator` is used to create a data generator that will apply random rotations, width and height shifts, and horizontal flips to the images.
-
-## Conclusion
-
-Data augmentation is a powerful technique for improving the performance of machine learning models, particularly when we have limited data. By creating new data from the existing ones, data augmentation can help the model learn more robust features, reduce overfitting, and improve performance on the validation set.

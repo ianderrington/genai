@@ -10,7 +10,7 @@ setup(
     packages=find_packages(),  # Searches for Python packages in the current directory
     install_requires=requirements,  # List of dependencies read from requirements.txt
     url="https://github.com/username/genai",  # The URL of your package's home page (update with your URL)
-    author="Your Name",  # Your name
-    author_email="your.email@example.com",  # Your email address
-    description="A description of the genai package.",  # A brief description of your package
+    author="Ian Derrington",  # Your name
+    author_email="Ian.Derrington@gmail.com",  
+    description="Genai, supports the Managen protocal for enabling people to work in aligned collaboration with AI.",
 )

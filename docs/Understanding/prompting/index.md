@@ -30,8 +30,7 @@ It is also important to note, that while [manual methods](#manual-methods) are e
     2 -  Integrate the intended audience in the prompt, e.g., the audience is an expert in the field.
     3 - Break down complex tasks into a sequence of simpler prompts in an interactive conversation.
     4 - Employ affirmative directives such as ‘do,’ while steering clear of negative language like ‘don’t’.
-    5 -
-        When you need clarity or a deeper understanding of a topic, idea, or any piece of information, utilize the following prompts:
+    5 - When you need clarity or a deeper understanding of a topic, idea, or any piece of information, utilize the following prompts:
         * Explain [insert specific topic] in simple terms.
         * Explain to me like I’m 11 years old.
         * Explain to me as if I’m a beginner in [field].
@@ -156,6 +155,12 @@ Prompt compression provides methods of compressing prompt inputs in such a way t
 ### Best practices and guides
 
 !!! tip "[Techniques to improve reliability](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md#how-to-improve-reliability-on-complex-tasks) By OpenAI"
+
+
+### Libraries 
+
+!!! tip "[Prompt Royale](https://github.com/meistrari/prompts-royale) Provides the ability to automatically generate prompts to test around the same general theme."
+
 
 - [A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/pdf/2302.11382.pdf)
 - [LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide) based on [paper](https://arxiv.org/abs/2304.13712).

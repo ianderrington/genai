@@ -28,10 +28,6 @@ Relevancy of data to the problem at hand is crucial. Inappropriate data can lead
 
 In order to train an effective Generative AI model, it's important to balance your dataset. An imbalanced dataset could lead your model to be biased towards the class that is overrepresented.
 
-## Tools for Data Selection
-
-There are different tools that can aid in effective data selection.
-
-### Automated Data
+### Automated Data Selection
 
 Automated machine learning tools can greatly simplify data selection by providing features for automatic feature selection, data cleaning and preprocessing.

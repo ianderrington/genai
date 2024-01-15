@@ -110,6 +110,22 @@ MOE provides the ability to use different smaller models that have better perfor
     [Paper](https://arxiv.org/pdf/2309.05444.pdf)
     ![image](https://github.com/ianderrington/genai/assets/76016868/ca081309-dca9-4081-a6eb-30d929715ef9)
 
+??? code "[Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM](https://huggingface.co/ChaiML)"
+    [Paper](https://arxiv.org/pdf/2401.02994.pdf)
+    The authors demonstrate that selecting parameters from differently trained models at generation can yield significant improvements in performance for lower-sized models.
+    Here is the algorithm:
+    # Algorithm 1 Blended Algorithm
+
+        1. k ← 1
+        2. while true do
+        3.     uₖ ← user’s current input turn
+        4.     Sample model parameter θₙ ~ Pθ
+        5.     Generate response rₖ according to:
+        6.         rₖ ~ P(r|u₁:k, r₁:k−1; θₙ)
+        7.     k = k + 1
+        8. end while
+
+
 ### Combination Approaches
 
 

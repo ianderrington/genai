@@ -32,12 +32,12 @@ Getting into it, you will find the following outline:
     - [Models](architectures/index.md) allow the data to be understood and used. [^n1]
     - [Prompts](prompting/index.md) govern how we interact with the models.
     - [Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners.
-    - [Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies.
+    
     - [Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis.
 
 !!! tip "A little more advanced"
-  - [Use Agents](agents/index.md) for increasingly powerful applications
-  - [Optimize](architectures/optimization.md) your model
+    - [Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies.
+    - [Optimize](architectures/optimization.md) your model
 
 ### How do you do stuff with Gen()AI?
 
