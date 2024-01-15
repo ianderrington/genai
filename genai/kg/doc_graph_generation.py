@@ -12,23 +12,8 @@ from pyvis.network import Network
 from git.exc import GitCommandError
 import yaml
 
-from utils.hash import KeyDict
+from utils import KeyDict
 
-
-# def extract_documents(root_path):
-#     """Walk through the directory and extract all documents"""
-#     for root, dirs, files in os.walk(root_path):
-#         # # yield a directory if there is a markdown file in it
-#         # # and there is no .pages file in it
-#         # if any(file.endswith(".md") for file in files) and not os.path.exists(os.path.join(root, ".pages")):
-#         #     # add a dummy .pages file
-#         #     yield os.path.join(root, ".pages")
-#         # for file in files:
-#         #     if file.endswith(".md") or file.endswith(".py"):# or file == ".pages":
-#         #         yield os.path.join(root, file)
-#         if ".pages" not in files:
-#             yield os.path.join(root, ".pages")
-            
 
 def parse_markdown(file_path):
     """Parse markdown file and extract links"""
@@ -38,43 +23,26 @@ def parse_markdown(file_path):
         for link in soup.find_all("a"):
             yield link.get("href")
 
-def remap_url(url):
-    # If it is an http link, then we need to change it to https
-    if url.startswith("http://"):
-        url = url.replace("http://", "https://")
-    # If it is an arxiv paper but not pointing to the direct pdf, then we need to change the url to contain the pdf
-    # Example: url = https://arxiv.org/abs/2203.15556 --> https://arxiv.org/pdf/2203.15556.pdf
-    if url.startswith("https://arxiv.org/abs/") and not url.endswith(".pdf"):
-        url = url.replace("https://arxiv.org/abs/", "https://arxiv.org/pdf/") + ".pdf"
-    url.replace(".pdf.pdf", ".pdf")
-    return url
-
-
-def save_content(url, save_path, overwrite=False, reclone=False):
-    """Save the content of an endpoint to a local file"""
-    if not url:
-        return
-
-    if os.path.exists(save_path) and "github" not in url and not overwrite:
-        print(f"url {url} and file {save_path} already exists")
-        return
-
-    url = remap_url(url)
-
-    if "github" not in url:
-        with open(save_path, "wb") as out_file:
-            print(f"saving {url} to {save_path}")
-            out_file.write(response.content)
-    else:
-        clone_github(url, save_path, reclone=False)
+# def remap_url(url):
+#     # If it is an http link, then we need to change it to https
+#     if url.startswith("http://"):
+#         url = url.replace("http://", "https://")
+#     # If it is an arxiv paper but not pointing to the direct pdf, then we need to change the url to contain the pdf
+#     # Example: url = https://arxiv.org/abs/2203.15556 --> https://arxiv.org/pdf/2203.15556.pdf
+#     if url.startswith("https://arxiv.org/abs/") and not url.endswith(".pdf"):
+#         url = url.replace("https://arxiv.org/abs/", "https://arxiv.org/pdf/") + ".pdf"
+#     url.replace(".pdf.pdf", ".pdf")
+#     return url
 
 
 def is_local_file(link):
     """Check if the link is a local file or an endpoint"""
     return os.path.exists(link)
+# def url_downloader(url, base_path, overwrite=False, dry_run=False, verbose=False):
 
+from downloader import url_downloader
 
-def create_documention_graph(root_path, output_path, download_content=False):
+def create_documention_graph(root_path, output_path, download_content=False, overwrite=False, dry_run=False, verbose=False):
     G = nx.DiGraph()
 
     for root, dirs, files in os.walk(root_path):
@@ -89,10 +57,7 @@ def create_documention_graph(root_path, output_path, download_content=False):
             G.add_edge(root, dir_path)
         for file in files:
             file_path = os.path.join(root, file)
-            # if  file.endswith('index.md'):
-            #     continue
-                # G.add_node(file_path, type='index')
-                # G.add_edge(root, file_path)
+
             if file.endswith('.md') :
                 G.add_node(file_path, type='local')
                 G.add_edge(root, file_path)
@@ -109,7 +74,13 @@ def create_documention_graph(root_path, output_path, download_content=False):
                         location_type = 'github'
                     elif 'pdf' in link:
                         location_type = 'pdf'
-                    
+
+                    if  not is_local_file(link):
+                        # try:
+                        url_downloader(link, output_path, overwrite=overwrite, dry_run=dry_run, verbose=verbose)
+                        # except Exception as e:
+                        #     print(f"Exception: {e} for link {link} in file {file_path}")
+                        #     import ipdb; ipdb.set_trace()
                         # link = os.path.normpath(link)
                     G.add_node(link, type=location_type)
                     G.add_edge(file_path, link)#, content=content) 
@@ -160,7 +131,6 @@ def make_local_path(output_path, link):
         file_suffix = find_link_suffix(link)
         link_name = make_link_name(link + file_suffix)
         return os.path.join(output_path, link_name)
-    # return os.path.join(output_path, link_name + file_suffix
     else:
 
         if len(link) < 3:
@@ -215,9 +185,7 @@ def find_link_suffix(link):
 
 
 def visualize_graph(G):
-    """Visualize the network graph"""
-    # pos = nx.spring_layout(G)
-    
+    """Visualize the network graph"""    
     nx.draw(G, pos, with_labels=False)
     plt.show()
 
@@ -233,15 +201,7 @@ def networkx_to_pyvis(nx_graph, notebook=False):
                 }
     # shape_map = {'local': 'circle', 'folder': 'box', 'non-local': 'box'}
     for node, node_attrs in nx_graph.nodes(data=True):
-
         color = color_map.get(node_attrs.get('type', ''), 'black')
-        # shape = shape_map.get(node_attrs.get('type', ''), 'box')
-        # if node_attrs.get('type', '') == 'non-local':
-        #     return
-            # pyvis_net.add_node(node, color=color, shape='box')
-        # if color != 'black':
-        #     # pyvis_net.add_node(node, color=color, shape='box')
-        #     # pyvis_net.add_node(node, color=color, shape=shape)
         pyvis_net.add_node(node, color=color)
 
     for source, target, edge_attrs in nx_graph.edges(data=True):
@@ -258,13 +218,11 @@ def save_graph(graph, filename):
 
 
 def check_args(args):
-    # if load graph or save graph are provided, then graph_filename must be provided
-    if args.load_graph or args.save_graph:
+   if args.load_graph or args.save_graph:
         assert (
             args.graph_filename
         ), "graph_filename must be provided if load_graph or save_graph are provided"
-    # if graph_filename is provided but load_graph or save_graph are not provided, then raise an warning
-    if args.graph_filename and not (args.load_graph or args.save_graph):
+   if args.graph_filename and not (args.load_graph or args.save_graph):
         print(
             f"Warning: graph_filename provided but load_graph or save_graph are not provided. graph_filename will be ignored"
         )
@@ -280,7 +238,7 @@ def resize_html_graph(file_path, width='100%', height='1000px'):
         f.write(str(soup))
         f.truncate()
 
-def main():
+def get_args():
     parser = argparse.ArgumentParser(
         description="Build a network graph from mkdocs repository."
     )
@@ -317,7 +275,7 @@ def main():
     parser.add_argument(
         "--output_path",
         type=str,
-        default="./output",
+        default="./downloads",
         help="Path to save the output files. Defaults to ./output",
     )
 
@@ -340,20 +298,32 @@ def main():
         action="store_true",
         help="Run the script in a notebook. Defaults to False",
     )
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Overwrite existing files. Defaults to False",
+    )
+    parser.add_argument(
+        "--dry_run",
+        action="store_true",
+        help="Dry run. Defaults to False",
+    )   
     # TODO: Detect if it is a jupyter notebook calling
 
     args = parser.parse_args()
     check_args(args)
+    return args
+
+def main(args):
     if args.load_graph:
         G = pickle.load(open(args.load_graph, "rb"))
     elif args.root_path:
-        G = create_documention_graph(args.root_path, args.output_path, args.download_content)
+        G = create_documention_graph(args.root_path, args.output_path, args.download_content, )
     else:
         raise ValueError("Either root_path or load_graph must be provided")
-
+    import ipdb; ipdb.set_trace()
     # visualize_graph(G)
     print("Finishing up")
-    # import ipdb; ipdb.set_trace()
     pyvis_net = networkx_to_pyvis(G)
     if args.visualize:
         pyvis_net.show(
@@ -365,4 +335,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    args = get_args()
+    main(args)

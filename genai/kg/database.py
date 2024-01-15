@@ -38,13 +38,20 @@ class DatabaseManager:
         existing_doc = session.query(Document).filter(Document.url == url).first()
 
         if existing_doc:
-            existing_doc.local_path = local_path
-            existing_doc.download_date = download_date
+            pass
+            # existing_doc.local_path = local_path
+            # existing_doc.download_date = download_date
         else:
             new_doc = Document(url=url, local_path=local_path, download_date=download_date)
-            session.add(new_doc)
+            try:
+                session.add(new_doc)
+                session.commit()
+            except Exception as e:
+                print(f"An error occurred: {e}")
+                import ipdb; ipdb.set_trace()
+                session.rollback()
 
-        session.commit()
+  
         session.close()
 
     
@@ -66,13 +73,12 @@ class DatabaseManager:
             existing_metadata = session.query(Metadata).filter(Metadata.url == url).first()
 
             if existing_metadata:
-                for key, value in metadata.items():
-                    setattr(existing_metadata, key, value)
+                pass
             else:
                 new_metadata = Metadata(url=url, **metadata)
                 session.add(new_metadata)
 
-            session.commit()
+                session.commit()
         except Exception as e:
             session.rollback()  # Rollback the changes on error
             print(f"An error occurred: {e}")
