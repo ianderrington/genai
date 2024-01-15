@@ -104,7 +104,7 @@ They improve computation complexity in one of several ways:
 
 
 ??? code "[Heirarchichal Attention](https://github.com/neuro-inc/ml-recipe-hier-attention)"
-    [Paper](https://arxiv.org/abs/2304.11062)
+    [Paper](https://arxiv.org/pdf/2304.11062.pdf)
 
 !!! code "[Scaling Transformer to 1M tokens and beyond with RMT](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths."
 
