@@ -10,8 +10,7 @@ Generative AI can be utilized for a wide range of prose generation applications,
 - Expanding on key points.
 - Improving flow and readability
 
-### Examples
-- [Pyprompt chatgpt](http://morganlancer.com/en/portfolio/pyprompt_chatgpt)
+
 
 
 ## Language Translation

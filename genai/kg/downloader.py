@@ -93,9 +93,13 @@ class Document:
     @staticmethod
     def create(url, base_path, overwrite=False, dry_run=False, verbose=False):
         parsed_url = urlparse(url)
+
+        github_match = url.startswith("https://github.com") or url.startswith("http://github.com")
+        github_match = github_match and 'assets' not in url 
         if "arxiv.org" in parsed_url.netloc:
             return ArxivDocument(url, base_path, overwrite, dry_run, verbose)
-        elif "github.com" in parsed_url.netloc:
+       
+        elif github_match :
             return GitHubDocument(url, base_path, overwrite, dry_run, verbose)
         elif parsed_url.path.endswith(".pdf"):
             return PDFDocument(url, base_path, overwrite, dry_run, verbose)
@@ -167,8 +171,6 @@ class Document:
         return self.local_path
 
 
-
-
 class ArxivDocument(Document):
     @staticmethod
     def return_is_doc_type(url):
@@ -193,7 +195,9 @@ class ArxivDocument(Document):
         return os.path.join(self.base_path, "pdf", "arxiv", file_name)
 
     def write_to_disk(self, url, local_path):
-        
+        print(f"Write to disk: url={url}, local_path={local_path}")
+        # if os.path.exists(local_path):
+        # import ipdb; ipdb.set_trace() 
         if isinstance(url, list):
             raise ValueError(" (list) urls is not supported: must be a string")
         # get id from url
@@ -212,8 +216,8 @@ class ArxivDocument(Document):
         base_path = os.path.dirname(local_path)
         # get date from paper.published and convert to a string with format YYYY-MM
         # example: 2016-05
-        date = paper.published.strftime("%Y-%m")
-        base_path = os.path.join(base_path, date)
+        # date = paper.published.strftime("%Y-%m")
+        # base_path = os.path.join(base_path, date)
         # import ipdb; ipdb.set_trace()
         if not os.path.exists(base_path):
             os.makedirs(base_path)
@@ -300,13 +304,14 @@ class GitHubDocument(Document):
 
     def file_name(self):
         pattern = r"github\.com/([^/]+/[^/]+)"
+        # pattern = r"github\.com/([^/]+(/[^/]+)?)"
         match = re.search(pattern, self.cleaned_url)
         if match:
             repo_name = match.group(1)  # Extracts the first matched group, which is 'owner/repo'
             repo_name = repo_name.replace(".", "_")
             return repo_name
         else:
-            raise ValueError("Could not parse repo name from URL")
+            raise ValueError(f"Could not parse repo name from URL {self.cleaned_url}")
    
 
 

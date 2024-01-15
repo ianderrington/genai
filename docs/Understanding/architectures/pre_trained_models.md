@@ -15,7 +15,7 @@ Here are a few boards that help to aggregate and test models that have been rele
 ### Text-focused
 
 ??? code "**Sept, 2023** [Mistral Transformer](https://github.com/mistralai/mistral-src)"
-    [Model Download](https://files.mistral-7b-v0-1.mistral.ai/mistral-7B-v0.1.tar)
+
     [Announcement](https://mistral.ai/news/announcing-mistral-7b/)
     [Hugging Face](https://huggingface.co/mistralai)
     ![image](https://github.com/ianderrington/genai/assets/76016868/ad494e0e-c854-4866-88db-be7c379a004a)
