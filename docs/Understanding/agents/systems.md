@@ -49,7 +49,7 @@ When an agent (or model) engages in an interaction with another agent, the resul
 
 
 
-!!! tip "[Multi-Agent Collaboration via Reward Attribution Decomposition](https://arxiv.org/abs/2010.08531)"
+!!! tip "[Multi-Agent Collaboration via Reward Attribution Decomposition](https://arxiv.org/pdf/2010.08531.pdf)"
     This work illuminates optimization techniques for multi-agents using distributed reward systems to achieve state-of-the-art performance. It introduces a joint optimization approach that depends on _self_ and _interactive_ terms.
 
 

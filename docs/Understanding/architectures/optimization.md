@@ -30,7 +30,7 @@ Pruning is a technique that eliminates weights that do not consistently produce 
 
 ??? important "[Fast as Chita: Neural network pruning with combinatorial optimization](https://blog.research.google/2023/08/neural-network-pruning-with.html)"
 
-    [Arxiv paper](https://arxiv.org/abs/2302.14623)
+    [Arxiv paper](https://arxiv.org/pdf/2302.14623.pdf)
      "An optimization-based approach for pruning pre-trained neural networks at scale. CHITA (which stands for “Combinatorial Hessian-free Iterative Thresholding Algorithm”) outperforms existing pruning methods in terms of scalability and performance tradeoffs, and it does so by leveraging advances from several fields, including high-dimensional statistics, combinatorial optimization, and neural network pruning."
      [![Fast as Chita](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIuxL23IilgYpOEWtnP9B4zbiPnuV5NUML47JP0q1idyLLmZUqRlHrxx77iFIinFWUXMekNhKSltLlZvzBSTaqsYmbithvXGlvggyaAZrtb4mg9oiYMWArjvf_lj7T9IbY1Ae4-wijzOZzTazsxWImdGRgLSyAJEc5WQWHvylSwcHQJWX8gXfEk70l8iEs/s1600/image5.gif)](https://blog.research.google/2023/08/neural-network-pruning-with.html)
 
@@ -70,11 +70,11 @@ MANAGEN: (Table with this the characteristic chart of the different methods to h
 
 ??? code "[SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs](https://github.com/mit-han-lab/smoothquant)"
     Using some post-training smoothing, they shift the weights in such a way that they are easier to quantize.
-    [Paper](https://arxiv.org/abs/2211.10438.pdf)
+    [Paper](https://arxiv.org/pdf/2211.10438.pdf.pdf)
     <img width="337" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ed34f663-5792-471f-9927-f3622f3243a3">
 
 ??? code "[HF bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration) and code [From Github](https://github.com/huggingface/blog/blob/main/assets/96_hf_bitsandbytes_integration/example.py)"
-    [Paper](https://arxiv.org/abs/2309.14717)
+    [Paper](https://arxiv.org/pdf/2309.14717.pdf)
 
 
 ??? code "[PB-LLM: Partially Binarized Large Language Models](https://github.com/hahnyuan/PB-LLM) to compress identified model weights into a single bit, while allowing others to only be partially compressed."
@@ -130,7 +130,7 @@ MOE provides the ability to use different smaller models that have better perfor
 
 
 ??? code "[QLoRA: Efficient Finetuning of Quantized LLms](https://github.com/artidoro/qlora) uses Quantization and Low-Rank Adapters to enable SoTA models with even smaller models"
-    [Paper](https://arxiv.org/abs/2305.14314)
+    [Paper](https://arxiv.org/pdf/2305.14314.pdf)
     [Example HF 4bit transformers](https://huggingface.co/blog/4bit-transformers-bitsandbytes)
 
 ### Hardware enabled optimization

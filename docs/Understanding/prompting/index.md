@@ -22,7 +22,7 @@ It is also important to note, that while [manual methods](#manual-methods) are e
 - Generate many outputs and pick final one or use LLM to pick best one.
 
 
-??? important "[Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4](https://arxiv.org/abs/2312.16171 )"
+??? important "[Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4](https://arxiv.org/pdf/2312.16171.pdf)"
 
     26 Prompting Tips
 
@@ -68,8 +68,8 @@ It is also important to note, that while [manual methods](#manual-methods) are e
 
 !!! important "['According to ...' Prompting Language Models Improves Quoting from Pre-Training Data](https://arxiv.org/pdf/2305.13252.pdf) The grounding prompt `According to { some_reputable_source}` prompt inception additions increases output quality improves over the null prompt in nearly every dataset and metric, typically by 5-15%."
 
-- [Chain of Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
-- [Automatic Prompt Engineering](https://arxiv.org/abs/2211.01910) --> Gave a CoT improvement suggestion "Let's work this out in a step by step by way to be sure we have the right answer."
+- [Chain of Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf)
+- [Automatic Prompt Engineering](https://arxiv.org/pdf/2211.01910.pdf) --> Gave a CoT improvement suggestion "Let's work this out in a step by step by way to be sure we have the right answer."
 
 
 ??? "[An Evaluation on Large Language Model Outputs: Discourse and Memorization](https://arxiv.org/pdf/2304.08637.pdf) explicitly ask for no plagiarism to reduce it."
@@ -163,7 +163,7 @@ Prompt compression provides methods of compressing prompt inputs in such a way t
 
 
 - [A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/pdf/2302.11382.pdf)
-- [LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide) based on [paper](https://arxiv.org/abs/2304.13712).
+- [LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide) based on [paper](https://arxiv.org/pdf/2304.13712.pdf).
 - [Prompting Guide](https://www.promptingguide.ai/)
 
 - [Prompt Engineering by Lillian Wang](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)
@@ -188,7 +188,7 @@ Prompt compression provides methods of compressing prompt inputs in such a way t
 ### Prompt tuning
 
 Uses a layer to not change prompts but change the embedding of the prompts.
-- [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/abs/2104.08691)
+- [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/pdf/2104.08691.pdf)
 Boosted Prompting: few shot prompts that progressively solve more of the problem.
 
 ## Prompt and optimization

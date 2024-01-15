@@ -55,7 +55,7 @@ Here are some known thought structures that are improving agentic output.
     <img width="647" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d115b042-ee91-464a-8915-4757286658fe">
 
 
-??? important "[System 2 Attention (is something you might need too)](https://arxiv.org/abs/2311.11829)"
+??? important "[System 2 Attention (is something you might need too)](https://arxiv.org/pdf/2311.11829.pdf)"
 
     This helps to improve downstream model's ability to not suffer from irrelevent context, or judgement and preference in the
     original context, termed sycophancy they use an initial model to _remove_ unecessary context. They call it 'System 2 Attention'.
@@ -78,7 +78,7 @@ Here are some known thought structures that are improving agentic output.
 ??? code "[ReAct](https://github.com/ysymyth/ReAct)"
 
     Effectively Observe, Think, Act, Repeat.
-    [Paper](https://arxiv.org/abs/2210.03629)
+    [Paper](https://arxiv.org/pdf/2210.03629.pdf)
 
 ??? tip "[Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models](https://arxiv.org/pdf/2310.06117.pdf) provides a solid improvement over scientific Q&A by first extracting fundamental principles in an initial multi-shotted prompt and then putting it into a subsequent multi-shotted prompt."
 
@@ -125,7 +125,7 @@ Here are some known thought structures that are improving agentic output.
 ??? tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
-    - [Paper](https://arxiv.org/abs/2303.11366)
+    - [Paper](https://arxiv.org/pdf/2303.11366.pdf)
     - [Inspired github](https://github.com/GammaTauAI/reflexion-human-eval)
 
 ??? tip "[Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks](https://arxiv.org/pdf/2211.12588.pdf)"
@@ -261,12 +261,12 @@ General manners of search.
 
     <img width="1663" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e516604b-57b2-4d82-b9a9-0168c8eb9f15">
 
-??? tip "[Strategic Reasoning with Language Models](https://arxiv.org/abs/2305.19165) Uses game trees and observed and inferred beliefs to achieve closer to optimal results. "
+??? tip "[Strategic Reasoning with Language Models](https://arxiv.org/pdf/2305.19165.pdf) Uses game trees and observed and inferred beliefs to achieve closer to optimal results. "
 
      Powerful to consider for inferred beliefs and interacting in situations where negotiation or games are being played.
     <img width="1008" alt="image" src="https://github.com/ianderrington/general/assets/76016868/5ffa0653-a323-44a6-bff5-b49e3be6091a">
 
-??? code "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291)"
+??? code "[Large Language Model Guided Tree-of-Thought](https://arxiv.org/pdf/2305.08291.pdf)"
 
     [Github](https://github.com/jieyilong/tree-of-thought-puzzle-solver)
 
@@ -306,7 +306,7 @@ General manners of search.
 
 ### Recursive
 
-??? tip "[Teaching Large Language Models to Self-Debug](https://arxiv.org/abs/2304.05128) `transcoder`"
+??? tip "[Teaching Large Language Models to Self-Debug](https://arxiv.org/pdf/2304.05128.pdf) `transcoder`"
 
     Coding focused LLM system to continuously improve self.
     <img width="865" alt="image" src="https://user-images.githubusercontent.com/76016868/231906559-758d89e4-d22a-4a3a-aa96-1d630e48651d.png">
@@ -421,7 +421,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
 
 ### Constraining outputs
 
-??? tip "[Certified Reasoning with Language models](https://arxiv.org/abs/2306.04031) A 'logical guide' tool that an LLM can use."
+??? tip "[Certified Reasoning with Language models](https://arxiv.org/pdf/2306.04031.pdf) A 'logical guide' tool that an LLM can use."
 
     It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs."
     <img width="956" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bf581eb0-96b1-4175-97d0-98f081a03438">
@@ -491,7 +491,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
 
 Problems such as Hallucinations can be mitigated through downstream methods of process.
 
-??? tip "[A stitch in time saves Nine](https://arxiv.org/abs/2307.03987)"
+??? tip "[A stitch in time saves Nine](https://arxiv.org/pdf/2307.03987.pdf)"
 
     A process to mitigate model hallucination using RAG.
     <img width="602" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30">

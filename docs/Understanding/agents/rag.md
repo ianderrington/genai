@@ -1,6 +1,6 @@
 # Retrieval-Augmented Generation (RAG)
 
-Large Language Models (LLMs) can be made more useful by enabling them to access a set of information relevant to the prompt at hand. This can be achieved by extracting information from vector, SQL, and no-SQL [memory](./memory.md) and feeding it into the LLM. This approach, known as Retrieval-Augmented Generation (RAG), was introduced in 2020 in [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401). It has shown impressive results in improving the generation of content. However, it is still an area of active development and research, and fully optimized solutions are not always available.
+Large Language Models (LLMs) can be made more useful by enabling them to access a set of information relevant to the prompt at hand. This can be achieved by extracting information from vector, SQL, and no-SQL [memory](./memory.md) and feeding it into the LLM. This approach, known as Retrieval-Augmented Generation (RAG), was introduced in 2020 in [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf). It has shown impressive results in improving the generation of content. However, it is still an area of active development and research, and fully optimized solutions are not always available.
 
 This document also discusses the relationship between RAG and knowledge graphs.
 

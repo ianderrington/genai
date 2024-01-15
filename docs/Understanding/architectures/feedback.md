@@ -88,7 +88,7 @@ Much like intermediate points to a ball-game are indicators of the winner of a g
 
 Having intermediate rewards provides better guidance on how the token generation occurs before the token termination.
 
-??? "[Let's reward step by step; Step-Level Reward Model as the Navigators for Reasoning](https://arxiv.org/abs/2310.10080)"
+??? "[Let's reward step by step; Step-Level Reward Model as the Navigators for Reasoning](https://arxiv.org/pdf/2310.10080.pdf)"
     <img width="495" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4bf366b4-f7f6-47ed-b5aa-2b94ab140796">
     <img width="687" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a2706b6e-78e0-458b-a607-069758207909">
 
@@ -101,7 +101,7 @@ Because of the ability to minimize costs associated with feedback, reinforcement
 
 - [Can foundation models label data like humans?](https://huggingface.co/blog/llm-leaderboard) Using GPT to review model outputs produced biased results. Changing the prompt doesn't really help to de-bias it. There are many additional considerations surrounding model evaluation.
 
-- [Aligning Large Language Models Through Synthetic Feedback](https://arxiv.org/abs/2305.13735) Using a hierarchy of systems to improve model alignment.
+- [Aligning Large Language Models Through Synthetic Feedback](https://arxiv.org/pdf/2305.13735.pdf) Using a hierarchy of systems to improve model alignment.
 
 ## RL-free feedback
 
@@ -114,5 +114,5 @@ https://arxiv.org/pdf/2305.18290.pdf
 ## TODO
 Literature to read and integrate :
 https://arxiv.org/pdf/2211.14275.pdf
-https://arxiv.org/abs/2308.01825
+https://arxiv.org/pdf/2308.01825.pdf
 

@@ -12,7 +12,7 @@ https://neptune.ai/blog/distributed-training-frameworks-and-tools
 
 
 
-!!! important "[Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)"
+!!! important "[Training language models to follow instructions with human feedback](https://arxiv.org/pdf/2203.02155.pdf)"
     Instruct GPT allows for following of instructions. InstructGPT, established a powerful paradigm of LLM performance
     <img width="1006" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f8eccb3c-0afe-4f8f-a477-4269c5b93fb0">
 
@@ -38,5 +38,5 @@ https://neptune.ai/blog/distributed-training-frameworks-and-tools
 
 ### Pruning and compression
 
-- [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](https://arxiv.org/abs/2301.00774) Remove up to ~50% parameters preserving
+- [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](https://arxiv.org/pdf/2301.00774.pdf) Remove up to ~50% parameters preserving
 - [SqueezeLLM](https://arxiv.org/pdf/2306.07629.pdf) They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' [Github](https://github.com/SqueezeAILab/SqueezeLLM)

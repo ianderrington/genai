@@ -20,7 +20,7 @@ Tokenization is the process of splitting data into these individual units. The c
 
 ### Subword Units
 
-A subword unit, or a part of a word, can be a token in itself. The paper titled [Neural Machine Translation of Rare Words with Subword Units](https://arxiv.org/abs/1508.07909) brings to light the effectiveness of subword units in improving results. This type of tokenization was used in a neural machine translation system and it significantly improved the handling of rare words.
+A subword unit, or a part of a word, can be a token in itself. The paper titled [Neural Machine Translation of Rare Words with Subword Units](https://arxiv.org/pdf/1508.07909.pdf) brings to light the effectiveness of subword units in improving results. This type of tokenization was used in a neural machine translation system and it significantly improved the handling of rare words.
 
 
 ### Special tokens
@@ -60,7 +60,7 @@ Examples of coding tools that facilitate tokenization include [Tiktoken](https:/
 
 ## References
 
-- [Neural Machine Translation of Rare Words with Subword Units](https://arxiv.org/abs/1508.07909)
+- [Neural Machine Translation of Rare Words with Subword Units](https://arxiv.org/pdf/1508.07909.pdf)
 - [Bytes are all you need](https://arxiv.org/pdf/2306.00238.pdf)
 - [ByteFormer Github](https://github.com/apple/ml-cvnets/tree/main/examples/byteformer)
 [What are Embeddings](http://vickiboykis.com/what_are_embeddings/)[Github](https://github.com/veekaybee/what_are_embeddings/blob/main/README.md)

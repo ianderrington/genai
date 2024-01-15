@@ -24,7 +24,7 @@ While single-LLM calls are useful to evaluate, [comparing and evaluating](../age
 
 
 ??? "[Introducing MMMU, a Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI.](https://mmmu-benchmark.github.io)"
-    [Paper](https://arxiv.org/abs/2311.16502)
+    [Paper](https://arxiv.org/pdf/2311.16502.pdf)
 
     11.5K meticulously collected multimodal questions from college exams, quizzes, and textbooks
     Spanning Art & Design 🎨, Business 💼, Science 🔬, Health & Medicine 🩺, Humanities & Social Science 📖, Tech & Engineering 🛠️ across 30 subjects and 183 subfields

@@ -37,7 +37,7 @@ Here we share some important research that provide useful manners of looking at 
     To find the baseball direction we first trained probes, but later found mechanistic probes - the baseball unembed times the OV circuit of key heads, gives a more principled probe, without needing to train one! We think this is a cool technique we’d love to see more work on. 
     This has interesting parallels with 
     this work showing relationship decoding (in fact recall) is a linear map - we speculate that the maps they find are mostly the OV circuits of key attention heads. 
-    https://arxiv.org/abs/2308.09124 
+    https://arxiv.org/pdf/2308.09124.pdf
     More generally, linear probes have a lot of promise as a technique for circuit analysis. By layer 6(/32) the sport is known with high accuracy, so it suffices to zoom in on early MLP layers to understand factual recall, rather than needing to understand the full circuit! 
     Some weird observations - we'd love to see future work!
     Early layers do longer-range processing on common words and punctuation, intuitively, it’s easier to figure out meaning without context than for a token in a multi-token word. 

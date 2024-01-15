@@ -7,7 +7,7 @@ One manner of doing this is through the use of [adapter layers](#adaptermodel-ch
 
 ## Data for fine-tuning
 
-Higher-quality data that may be proprietary or otherwise not-included in the training data for foundation-models can be used to improve a model's performance. Fine-tuning is generally done in a supervised fashion, where the specific responses desired for a given model input are trained on the output. Unsupervised fine-tuning is [also possible](https://arxiv.org/abs/2110.09510) though not as commonly described.
+Higher-quality data that may be proprietary or otherwise not-included in the training data for foundation-models can be used to improve a model's performance. Fine-tuning is generally done in a supervised fashion, where the specific responses desired for a given model input are trained on the output. Unsupervised fine-tuning is [also possible](https://arxiv.org/pdf/2110.09510.pdf) though not as commonly described.
 
 ### Using Simulated Data
 Utilizing synthetic or simulated data is an effective method for training Large Language Models (LLMs). The process can be visualized in the following sequence:
@@ -32,7 +32,7 @@ If all of the layers are frozen, it is possible to adapt the model using relativ
 
 ### Low Rank Adaption (LoRA)
 
-Instead of interleaving a trainable layer in between various layers, [Low-Rank Adaption](https://arxiv.org/abs/2106.09685) (LoRA) uses the notion that changes to outputs of a given layer $W$ will likely be small $\Delta W$. Instead of computing all those weights a low-rank vector matrix decomposition where $\Delta W = A B$ for two LoRA matrices $A$ and $B$. With a common inner-dimension variable _rank_, $r$, is the matrix parameter counts can be appropriately minimized to have a small fraction of the original model $W$.
+Instead of interleaving a trainable layer in between various layers, [Low-Rank Adaption](https://arxiv.org/pdf/2106.09685.pdf) (LoRA) uses the notion that changes to outputs of a given layer $W$ will likely be small $\Delta W$. Instead of computing all those weights a low-rank vector matrix decomposition where $\Delta W = A B$ for two LoRA matrices $A$ and $B$. With a common inner-dimension variable _rank_, $r$, is the matrix parameter counts can be appropriately minimized to have a small fraction of the original model $W$.
 
 ![image](https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9)
 
@@ -53,7 +53,7 @@ Enabling the LoRA for all layers appears may be valuable, though it hasn't been 
 
 #### Choice of parameters
 
-The [original paper](https://arxiv.org/abs/2106.09685) has both the rank and a scaling factor $\alpha$.
+The [original paper](https://arxiv.org/pdf/2106.09685.pdf) has both the rank and a scaling factor $\alpha$.
 
 ```markdown
 scaling = alpha / r

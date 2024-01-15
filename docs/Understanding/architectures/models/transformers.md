@@ -46,7 +46,7 @@ This matrix can be passed to additional layers, or a final fully-connected proje
 
 - [A Gentle Introduction to Positional Encoding in Transformer Models, pt1]( https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/)
 
-- [Transformer Language Models without POsitional Encodings STill Learn Positional Information](https://arxiv.org/abs/2203.16634) Indications that causal LMS may derive positional awareness from more than the positional embeddings: they learn it from the causal mask.
+- [Transformer Language Models without POsitional Encodings STill Learn Positional Information](https://arxiv.org/pdf/2203.16634.pdf) Indications that causal LMS may derive positional awareness from more than the positional embeddings: they learn it from the causal mask.
 
 TODO: Which is used more and why aren't trainable, and why are not non-linear embeddings considered as opposed to just addative...? 
   
@@ -122,13 +122,13 @@ They improve computation complexity in one of several ways:
     [Paper](https://arxiv.org/pdf/2109.00301.pdf)
     ![Infinity Former](https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80){ align=left width="300"  loading=lazy }
 
-??? tip "[LM-INfinite: Simple On-the-Fly Length Generalization for Large Language Models](https://arxiv.org/abs/2308.16137) provides an O(n) time/space extension allows LMMs to ability to go to 32k tokens and 2.7x speedup."
+??? tip "[LM-INfinite: Simple On-the-Fly Length Generalization for Large Language Models](https://arxiv.org/pdf/2308.16137.pdf) provides an O(n) time/space extension allows LMMs to ability to go to 32k tokens and 2.7x speedup."
     <img width="545" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8">
         <img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1">
     <img width="863" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61">
 
 ??? code "[Efficient Streaming Language Models with Attention Sinks](https://github.com/mit-han-lab/streaming-llm)"
-    [Paper](https://arxiv.org/abs/2309.17453)
+    [Paper](https://arxiv.org/pdf/2309.17453.pdf)
     ![image](https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a)
 
 
@@ -184,7 +184,7 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
 - [Visual GPT](https://arxiv.org/pdf/2303.04671.pdf)
 - [Language is not all you need](https://arxiv.org/pdf/2302.14045.pdf)
-- [Meta-Transformer: A Unified Framework for Multimodal Learning](https://arxiv.org/abs/2307.10802) The first framework to perform unified learning across 12 modalities with unpaired data. It does so by learning an embedding that can be shared across the modalities. [Github](https://kxgong.github.io/meta_transformer/)
+- [Meta-Transformer: A Unified Framework for Multimodal Learning](https://arxiv.org/pdf/2307.10802.pdf) The first framework to perform unified learning across 12 modalities with unpaired data. It does so by learning an embedding that can be shared across the modalities. [Github](https://kxgong.github.io/meta_transformer/)
 
 ### Graph
 

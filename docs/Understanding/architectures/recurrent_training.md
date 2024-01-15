@@ -43,4 +43,4 @@ Train on model trains a new model on the output of a new model.
 
 
 ??? code "[Fabic](https://github.com/sd-fabric/fabric) is a technique to incorporate iterative feedback into the generative process of diffusion models based on StableDiffusion."
-    [Paper](https://arxiv.org/abs/2307.10159v)
+    [Paper](https://arxiv.org/pdf/2307.10159v.pdf)

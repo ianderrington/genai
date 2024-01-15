@@ -64,4 +64,4 @@ Here are a few boards that help to aggregate and test models that have been rele
 - [Bard](https://bard.google.com/)
 - [Claud]()
 - [ChatGPT (OpenAI)](https://openai.com/blog/chatgpt)
-- [Medpalm](https://arxiv.org/abs/2212.13138)
+- [Medpalm](https://arxiv.org/pdf/2212.13138.pdf)

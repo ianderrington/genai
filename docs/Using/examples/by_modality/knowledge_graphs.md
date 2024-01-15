@@ -37,14 +37,14 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 ??? code "[OntoGPT](https://github.com/monarch-initiative/ontogpt) uses two different methods to query knowledge graphs using LLMS"
 
-    Uses [SPIRES: Structured Prompt Interrogation and Recursive Extraction of Semantics](https://arxiv.org/abs/2304.02711 )
+    Uses [SPIRES: Structured Prompt Interrogation and Recursive Extraction of Semantics](https://arxiv.org/pdf/2304.02711.pdf)
     A Zero-shot learning (ZSL) approach to extracting nested semantic structures from text
     This approach takes two inputs - 1) LinkML schema 2) free text, and outputs knowledge in a structure conformant with the supplied schema in JSON, YAML, RDF or OWL formats
     Uses GPT-3.5-turbo, GPT-4, or one of a variety of open LLMs on your local machine
-    [SPINDOCTOR: Structured Prompt Interpolation of Narrative Descriptions Or Controlled Terms for Ontological Reporting](https://arxiv.org/abs/2305.13338)
+    [SPINDOCTOR: Structured Prompt Interpolation of Narrative Descriptions Or Controlled Terms for Ontological Reporting](https://arxiv.org/pdf/2305.13338.pdf)
 
 
-??? code "[Universal Preprocessing Operators for Embedding Knowledge Graphs with Literals](https://arxiv.org/abs/2309.03023) proposes a set of preprocessing operators that can transform KGs to be embedded within any method."
+??? code "[Universal Preprocessing Operators for Embedding Knowledge Graphs with Literals](https://arxiv.org/pdf/2309.03023.pdf) proposes a set of preprocessing operators that can transform KGs to be embedded within any method."
 
     [Github](https://gitlab.com/patryk.preisner/mkga/)
     <img width="584" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4316fd44-acd3-4cad-81fd-7568c88cb69b">
@@ -55,7 +55,7 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 
 ??? code "[Multimodal learning with graphs](https://yashaektefaie.github.io/mgl/)"
-    [Preprint](https://arxiv.org/abs/2209.03299)
+    [Preprint](https://arxiv.org/pdf/2209.03299.pdf)
     [Nature](https://www.nature.com/articles/s42256-023-00624-6)
     While not strictly GenAI focused, this introduces a comprehensive manner of combining cross-modal dependencies using geometric relationships.
 

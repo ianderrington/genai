@@ -5,7 +5,7 @@ Below are some tools that you can use to help with this!
 ## Repositories
 
 ??? code "[Helm](https://github.com/stanford-crfm/helm) contains code used in the Holistic Evaluation of Language Models project"
-    [Paper](https://arxiv.org/abs/2211.09110)
+    [Paper](https://arxiv.org/pdf/2211.09110.pdf)
     <img width="817" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/40b280b6-749e-49fd-8e72-3b51c38d06b9">
 
 ??? code "[Arthur.ai Bench](https://github.com/arthur-ai/bench) Bench is a tool for evaluating LLMs for production use cases. "

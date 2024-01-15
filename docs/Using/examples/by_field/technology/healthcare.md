@@ -8,7 +8,7 @@
     [Github](https://www.biorxiv.org/content/10.1101/2023.01.11.523679v2.full.pdf)
     <img width="765" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/660548e4-1fe8-4dfa-b020-e22d88f4f656">
 
-??? tip "[ChemChrow](https://arxiv.org/abs/2304.05376)"
+??? tip "[ChemChrow](https://arxiv.org/pdf/2304.05376.pdf)"
     [Github](https://github.com/ur-whitelab/chemcrow-public)
 
 

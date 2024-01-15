@@ -54,7 +54,7 @@ _Hybrid Learning_ methods combine one or several methods above to enable more su
 
 General Pretrained Transformer models (GPT) work this way by first doing unsupervised prediction. Then some supervised training is provided. Then an RL approach is used to create a loss model using [reinforcment Learning with Human Feedback (RLHF)](./models/reinforcement_learning.md#RLHF) to score multiple potential outputs to provide more effective outputs.
 
-Particular types of RLHF, like instruction-training of [Instruct GPT](https://arxiv.org/abs/2203.02155) enables models to perform effectively.
+Particular types of RLHF, like instruction-training of [Instruct GPT](https://arxiv.org/pdf/2203.02155.pdf) enables models to perform effectively.
 
 ![image](https://github.com/ianderrington/genai/assets/76016868/f9604950-6bd6-4855-85dd-16456a0528e9)
 
