@@ -14,3 +14,7 @@ site/
 actions-runner/
 
 .*env*
+
+*.db*
+
+*downloads*
