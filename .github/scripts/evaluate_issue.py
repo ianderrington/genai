@@ -67,6 +67,8 @@ def main(issue_number, issue_text, directory):
             
         else:
             missing_urls = list(set(urls) - set(matches))
+            # NOTE THAT multiline line output is not supported in output for github actions
+            # https://github.com/github/docs/issues/21529
             body = ', '.join(missing_urls)
             body = f"/MANAGEN, please consider and add the following issues to your understanding: [{body}]"
             

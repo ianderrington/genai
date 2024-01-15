@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import argparse
 import pickle
-import git
+
 from pyvis.network import Network
 from git.exc import GitCommandError
 import yaml
@@ -30,7 +30,6 @@ from utils.hash import KeyDict
 #             yield os.path.join(root, ".pages")
             
 
-
 def parse_markdown(file_path):
     """Parse markdown file and extract links"""
     with open(file_path, "r") as f:
@@ -38,7 +37,6 @@ def parse_markdown(file_path):
         soup = BeautifulSoup(md, features="html.parser")
         for link in soup.find_all("a"):
             yield link.get("href")
-
 
 def remap_url(url):
     # If it is an http link, then we need to change it to https
@@ -50,26 +48,6 @@ def remap_url(url):
         url = url.replace("https://arxiv.org/abs/", "https://arxiv.org/pdf/") + ".pdf"
     url.replace(".pdf.pdf", ".pdf")
     return url
-
-
-def clone_github(url, save_path, reclone=False):
-    # Repo.clone_from(url, save_path)
-    if os.path.exists(save_path) and not reclone:
-        print(f"repo {url} already exists")
-        return
-
-    if not os.path.exists(save_path):
-        os.makedirs(save_path)
-
-    assert url.startswith("git@github.com:")
-    branches = ["master", "main"]
-    for branch in branches:
-        try:
-            repo = git.Repo.clone_from(url, save_path, branch=branch)
-            break
-        except GitCommandError:
-            print(f"branch {branch} not found")
-            continue
 
 
 def save_content(url, save_path, overwrite=False, reclone=False):
@@ -388,12 +366,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# IDEA: This needs to have a document class that will allow url to map to it so it can be processed in a pipeline run with a similar syntax. 
-# This requires there be an abstract document class that can be extended to different types of documents. 
-# It would have the following subtypes: html, (arxive(html or pdf)), pdf, markdown, github, local file, (local markdown),  etc.
-# This would also have a method to combine KG schema with the document schema. 
-# These schemas would be used to create a graph of the documents, and their relationships. 
-
-# The document processor would take a link, scan it for the type of document, and then process it accordingly based on that document type.
-# The processor would also have a method to create a graph of the documents, and their relationships.
