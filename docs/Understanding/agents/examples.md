@@ -94,3 +94,5 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 !!! code "[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
 
 !!! code "[Chrome-GPT](https://github.com/richardyc/Chrome-GPT): an experimental AutoGPT agent that interacts with Chrome"
+
+!!! GPTS "[GPT prompts](https://github.com/friuns2/Leaked-GPTs/)"
