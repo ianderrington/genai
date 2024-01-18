@@ -4998,9 +4998,82 @@ They can be executed programmatically given frameworks or sometimes done manuall
 <p>A classic paper, demonstrating the use of in-call task breakdown to better-enable more successful outputs. Often represented as appending a phrase such as <code>let's think about this step by step</code> both with and without exemplars to improve success quality going from zero to multi-shot prompts. 
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66"></a></p>
 </details>
-<details class="important">
+<details class="important" open="open">
 <summary><a href="https://arxiv.org/abs/2401.04925">The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps</a></summary>
 <p>Appending "you must think more steps" to "Let’s think step by step" increases the reasoning steps and signficantly improves the accuracy on various reasoning tasks.</p>
+<div class="highlight"><pre><span></span><code>&quot;Think About The Word: This strategy is to ask the model to interpret the word and rebuild the
+knowledge base. Typically a word has multiple different meanings, and the effect of this is to get
+the model to think outside the box and reinterpret the words in the problem based on the generated
+interpretations. This process does not introduce new information. In the prompt, we give examples
+of the words that the model is thinking about, and the model automatically picks words for this
+process based on the new question.
+• Read the question again: Read the questions repeatedly to reduce the interference of other texts
+on the chain of thought. In short, we let the model remember the questions.
+• Repeat State: Similar to repeated readings, we include a small summary of the current state after a
+long chain of reasoning, aiming to help the model simplify its memory and reduce the interference
+of other texts in the CoT.
+• Self-Verification: Humans will check if their answers are correct when answering questions.
+Therefore, before the model gets the answer, we add a self-verification process to judge whether
+the answer is reasonable based on some basic information.
+• Make Equation: For mathematical problems, Make Equations can help humans summarize and
+simplify memory. And for some problems that require the assumption of an unknown number x,
+establishing an equation is an essential process. We simulated this process and let the model try to
+make equations in mathematical problems
+&quot;
+
+In their prompts they have the following:
+```markdown
+**Think About The World:**
+_prompt:_
+Q: Could someone in Tokyo take a taxi to the Metropolitan Museum of Art?
+A: Let’s think step by step. The stem of the sentence is Tokyo, take a taxi, Metropolitan Museum
+of Art. Think about Tokyo... Think about taking a taxi... Think about the Metropolitan Museum of
+Art... Inference: Tokyo is in Japan and the Metropolitan Museum of Art is in New York. The two
+places are separated by the sea, so you can’t take a taxi there. Since the two places are separated
+by the sea, you can’t take a taxi there. The answer is yes.
+Q: {question}
+
+**Read the question again**
+_prompt:_
+Q: Mark’s father gave him $85. Mark bought 10 books, each of which cost $5. How much money
+does Mark have left?
+A: Let’s think step by step. The question is: How much money does Mark have left? So we need
+to calculate How much money does Mark have left. Start looking for information about money
+now. Mark’s father gave him $85. Mark bought 10 books, each of which cost $5. That means that
+Mark spent $50 on books. So we have equation money = +85 - 50 = 35. So Mark has $85 - $50 =
+$35 left. So the answer is 35.
+Q: {question}
+**Repeat State**
+_prompt:_
+Q: A coin is heads up. Janette does not flip the coin. Stacey flips the coin. Ronny flips the coin.
+Kim does not flip the coin. Is the coin still heads up? Note that &quot;flip&quot; here means &quot;reverse&quot;.
+A: Let’s think step by step. The state of the coin from the beginning is heads up. Janette does not
+flip the coin, so the coin remains heads up. coin is heads up. Stacey flips the coin, so the coin is
+now tails up. coin is now tail up. Ronny flips the coin, so the coin is now heads up again. Kim
+does not flip the coin, so the coin remains heads up. coin is head up. The answer is yes.
+Q: {question}
+
+**Self-Verification**
+_prompt:_
+Q: Take the last letters of each words in &quot;Alina Alessandra Amina Bianca&quot; and concatenate them.
+A: Let’s think step by step. There is four words. So the answer will consist of four letters. Explain
+concatenate: concatenate is a term used in computer programming and mathematics, referring to
+the operation of combining two or more strings, sequences, or sets in a linear order. The last letter
+of &quot;Alina&quot; is &quot;a&quot;. The last letter of &quot;Alessandra&quot; is &quot;a&quot;. The last letter of &quot;Amina&quot; is &quot;a&quot;. The last
+letter of &quot;Bianca&quot; is &quot;a&quot;. So we have four letters. So the final answer is &quot;aaaa&quot;. The answer is aaaa.
+Q: {question}
+**Make Equation**
+_prompt:_
+Q: 5 children were riding on the bus. At the bus stop 63 children got off the bus while some more
+got on the bus. Then there were 14 children altogether on the bus. How many more children got
+on the bus than those that got off?
+A: Let’s think step by step. first step, 5 children were riding on the bus. We know 5 children is on
+the bus. second step,There were 63 children that got off the bus. third step, some more got on the
+bus we define as unknown x. fourth step, 14 children remained on the bus, which means we can
+calculate unknow x.we have equation x+5-63 = 14, now we know x is 72. fifth step, Therefore, 72
+- 63 = 9. 9 more children got on the bus than those that got off. The answer is 9.
+Q: {question}
+</code></pre></div>
 </details>
 <details class="important">
 <summary><a href="https://arxiv.org/pdf/2312.04474.pdf">Chain of Code: Reasoning with a Language Model-Augmented Code Emulator</a></summary>
