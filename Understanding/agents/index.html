@@ -4739,7 +4739,7 @@ and
 
     LLM &lt;--&gt;|uses| CognitiveArchitectures[Cognitive \nArchitectures]
     click LLM "../architectures/models/index.html"
-    CognitiveArchitectures &lt;--&gt; |interacts \n with| Memory[Memory]
+    CognitiveArchitectures &lt;--&gt; |Find, Create, Read\nUpdate, Delete| Memory[Memory]
 
     classDef promptsColor fill:#f0ad4e,stroke:#333,stroke-width:2px;
     class Prompts promptsColor;
@@ -4786,13 +4786,12 @@ and
     style DummyNode fill:#ff9999,stroke:#fff,color:#000;  
 </code></pre>
 </details>
-<p>At the core of agents are information interpreters such as LLMs <a href="../architectures/models/index.html">models</a>, provide the 'brains' that allow for information to be processed, and then acted upon. Actions occur with an <a href="environments.html">environment</a>, with specific (./actions_and_tools.md). To be effective, the information interpretation is best accomplished with <a href="cognitive_architecture.html">cognitive architectures</a> that enable reasoning, planning, and interactions with <a href="memory.html">memory</a> sources. To coordinate these comopnents effectively <a href="chains.html#interpreters">interpreters and executors</a>. With one agent is found to work, <a href="systems.html">systems</a> of agents allow for multiple agents to interact with other agents and with people. </p>
+<p>At the core of agents are information interpreters such as LLMs <a href="../architectures/models/index.html">models</a>, provide the 'brains' that allow for information to be processed, and then acted upon. Actions occur with an <a href="environments.html">environment</a>, with specific <a href="actions_and_tools.html">actions and tools</a>. To be effective, the information interpretation is best accomplished with <a href="cognitive_architecture.html">cognitive architectures</a> that enable reasoning, planning, and interactions with <a href="memory.html">memory</a> sources. To coordinate these components effectively <a href="chains.html#interpreters">interpreters and executors</a>. With one agent is found to work, <a href="systems.html">systems</a> of agents allow for multiple agents to interact with other agents and with people. </p>
 <p>Agents can be quite different! Here are some <a href="examples.html">examples</a> of agents made both in academic and commercial settings.</p>
 <h3 id="example-agent-diagram">Example Agent Diagram:<a class="headerlink" href="#example-agent-diagram" title="Permanent link">&para;</a></h3>
-<p>At the very simplistic level, an embodiment of an agent would look like this.</p>
 <p>To enable that it may require more complicated relations between example components. Below is an example representation.</p>
-<details class="example" open="open">
-<summary>An Agent's components</summary>
+<details class="example">
+<summary>Another view of an Agent's components</summary>
 <pre class="mermaid"><code>graph TB
     Agent((Agent)) --&gt;|makes| decision((Decision))
     decision --&gt;|attempts| action((Action))
