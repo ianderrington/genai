@@ -12,38 +12,38 @@
         <meta name="author" content="Ian Derrington">
       
       
-        <link rel="canonical" href="https://www.managen.ai/Understanding/architectures/finetuning.html">
+        <link rel="canonical" href="https://www.managen.ai/Understanding/architectures/models/gpt.html">
       
       
-        <link rel="prev" href="pre-training.html">
+        <link rel="prev" href="developing_architectures.html">
       
       
-        <link rel="next" href="feedback.html">
+        <link rel="next" href="hybrid_models.html">
       
       
         
       
       
-      <link rel="icon" href="../../assets/genai_logo_edited.svg">
+      <link rel="icon" href="../../../assets/genai_logo_edited.svg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3+insiders-4.49.0">
     
     
       
-        <title>Finetuning - Gen()AI</title>
+        <title>Gpt - Gen()AI</title>
       
     
     
   
-      <link rel="stylesheet" href="../../assets/stylesheets/main.67c3bdf0.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.67c3bdf0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
 
     
-  <link rel="stylesheet" href="../../assets/stylesheets/custom.14cc6f30.min.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.14cc6f30.min.css">
 
     
       
@@ -58,9 +58,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -76,7 +76,7 @@
 
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -87,7 +87,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-for-fine-tuning" class="md-skip">
+        <a href="#gpt" class="md-skip">
           Skip to content
         </a>
       
@@ -150,9 +150,9 @@ and
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../../.." title="Gen()AI" class="md-header__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
-  <img src="../../assets/genai_logo_v1.png" alt="logo">
+  <img src="../../../assets/genai_logo_v1.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -169,7 +169,7 @@ and
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Finetuning
+              Gpt
             
           </span>
         </div>
@@ -285,7 +285,7 @@ and
   
   
     <li class="md-tabs__item md-tabs__item--active">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
     
@@ -302,7 +302,7 @@ and
   
   
     <li class="md-tabs__item">
-      <a href="../../Using/index.html" class="md-tabs__link">
+      <a href="../../../Using/index.html" class="md-tabs__link">
         
   
     
@@ -319,7 +319,7 @@ and
   
   
     <li class="md-tabs__item">
-      <a href="../../Managenai/index.html" class="md-tabs__link">
+      <a href="../../../Managenai/index.html" class="md-tabs__link">
         
   
     
@@ -353,9 +353,9 @@ and
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
+    <a href="../../.." title="Gen()AI" class="md-nav__button md-logo" aria-label="Gen()AI" data-md-component="logo">
       
-  <img src="../../assets/genai_logo_v1.png" alt="logo">
+  <img src="../../../assets/genai_logo_v1.png" alt="logo">
 
     </a>
     Gen()AI
@@ -431,7 +431,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../../index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -505,7 +505,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../overview/index.html" class="md-nav__link ">
+            <a href="../../overview/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -546,7 +546,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../overview/use_cases.html" class="md-nav__link">
+      <a href="../../overview/use_cases.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +573,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../overview/challenges.html" class="md-nav__link">
+      <a href="../../overview/challenges.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +600,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../overview/chronology.html" class="md-nav__link">
+      <a href="../../overview/chronology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,7 +627,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../overview/ai_and_ml_basics/index.html" class="md-nav__link">
+      <a href="../../overview/ai_and_ml_basics/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -654,7 +654,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../overview/open_source.html" class="md-nav__link">
+      <a href="../../overview/open_source.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,7 +681,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../overview/extra_resources.html" class="md-nav__link">
+      <a href="../../overview/extra_resources.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -749,7 +749,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../data/index.html" class="md-nav__link ">
+            <a href="../../data/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -790,7 +790,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../data/selection.html" class="md-nav__link">
+      <a href="../../data/selection.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +817,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../data/tokenizing.html" class="md-nav__link">
+      <a href="../../data/tokenizing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -844,7 +844,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../data/privacy.html" class="md-nav__link">
+      <a href="../../data/privacy.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +871,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../data/sources.html" class="md-nav__link">
+      <a href="../../data/sources.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -898,13 +898,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../data/augmentation.html" class="md-nav__link">
+      <a href="../../data/augmentation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Understanding Data Augmentation
+    Augmentation
   
 
     
@@ -925,7 +925,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../data/distillation.html" class="md-nav__link">
+      <a href="../../data/distillation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +952,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../data/simulation.html" class="md-nav__link">
+      <a href="../../data/simulation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -996,13 +996,7 @@ and
         
       
         
-      
-        
-      
-        
-      
-        
-      
+          
         
       
         
@@ -1032,7 +1026,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1070,8 +1064,10 @@ and
                 
   
   
+    
   
   
+  
     
     
       
@@ -1089,21 +1085,25 @@ and
       
         
       
+        
+      
+        
+      
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="models/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1126,7 +1126,7 @@ and
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1144,7 +1144,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="models/components.html" class="md-nav__link">
+      <a href="components.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,7 +1171,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="models/transformers.html" class="md-nav__link">
+      <a href="transformers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1198,7 +1198,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="models/diffusers.html" class="md-nav__link">
+      <a href="diffusers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1225,7 +1225,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="models/gans.html" class="md-nav__link">
+      <a href="gans.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1252,156 +1252,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="models/developing_architectures.html" class="md-nav__link">
+      <a href="developing_architectures.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
     Developing architectures
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="models/hybrid_models.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Hybrid models
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="models/reinforcement_learning.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Reinforcement learning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="llm_systems.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Llm systems
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="training.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Training
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="pre-training.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Pre training
   
 
     
@@ -1435,7 +1292,7 @@ and
   <span class="md-ellipsis">
     
   
-    Finetuning
+    Gpt
   
 
     
@@ -1446,13 +1303,13 @@ and
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="finetuning.html" class="md-nav__link md-nav__link--active">
+      <a href="gpt.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
     
   
-    Finetuning
+    Gpt
   
 
     
@@ -1476,149 +1333,10 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-for-fine-tuning" class="md-nav__link">
+  <a href="#gpt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data for fine-tuning
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data for fine-tuning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-simulated-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using Simulated Data
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-changes-for-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Model changes for fine-tuning
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Model changes for fine-tuning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adapter-layers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Adapter layers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#low-rank-adaption-lora" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Low Rank Adaption (LoRA)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#practical-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Practical Tips
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Practical Tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-quality-and-size" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Quality and Size
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choice-of-optimizers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Choice of optimizers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#where-do-you-use-lora" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Where do you use LoRA?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choice-of-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Choice of parameters
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combining-lora-weights" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Combining LoRA weights
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Results
+        GPT
       
     </span>
   </a>
@@ -1641,13 +1359,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="feedback.html" class="md-nav__link">
+      <a href="hybrid_models.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Feedback
+    Hybrid models
   
 
     
@@ -1668,7 +1386,277 @@ and
   
   
     <li class="md-nav__item">
-      <a href="optimization.html" class="md-nav__link">
+      <a href="multimodal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Multimodal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reinforcement_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Reinforcement learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../training/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    
+  
+    Training
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1_3_2" id="__nav_1_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Training
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training/pre-training.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre training
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training/finetuning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Finetuning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training/recurrent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Recurrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training/feedback.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llm_systems.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Llm systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optimization.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1695,7 +1683,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="evaluating_and_comparing.html" class="md-nav__link">
+      <a href="../evaluating_and_comparing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1722,7 +1710,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="generation.html" class="md-nav__link">
+      <a href="../generation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1749,40 +1737,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="pre_trained_models.html" class="md-nav__link">
+      <a href="../pre_trained_models.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
     Pre trained models
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="recurrent_training.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Recurrent training
   
 
     
@@ -1832,7 +1793,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../prompting/index.html" class="md-nav__link ">
+            <a href="../../prompting/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1873,7 +1834,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../prompting/prompt_injections.html" class="md-nav__link">
+      <a href="../../prompting/prompt_injections.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1928,6 +1889,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1945,7 +1908,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../agents/index.html" class="md-nav__link ">
+            <a href="../../agents/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1986,7 +1949,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../agents/examples.html" class="md-nav__link">
+      <a href="../../agents/examples.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2013,7 +1976,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../agents/memory.html" class="md-nav__link">
+      <a href="../../agents/memory.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2040,7 +2003,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../agents/chains.html" class="md-nav__link">
+      <a href="../../agents/chains.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2067,7 +2030,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../agents/cognitive_architecture.html" class="md-nav__link">
+      <a href="../../agents/cognitive_architecture.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2094,7 +2057,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../agents/rag.html" class="md-nav__link">
+      <a href="../../agents/rag.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2121,7 +2084,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../agents/actions_and_tools.html" class="md-nav__link">
+      <a href="../../agents/actions_and_tools.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2148,7 +2111,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../agents/evaluating_and_comparing.html" class="md-nav__link">
+      <a href="../../agents/evaluating_and_comparing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2175,7 +2138,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../agents/environments.html" class="md-nav__link">
+      <a href="../../agents/environments.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2202,13 +2165,40 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../agents/systems.html" class="md-nav__link">
+      <a href="../../agents/systems.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
     Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/commercial.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Commercial
   
 
     
@@ -2258,7 +2248,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../studies/behavior.html" class="md-nav__link ">
+            <a href="../../studies/behavior.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2299,7 +2289,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../studies/studies.html" class="md-nav__link">
+      <a href="../../studies/studies.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2334,7 +2324,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../background/tensor_maths.html" class="md-nav__link">
+      <a href="../../background/tensor_maths.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2394,7 +2384,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../deploying/index.html" class="md-nav__link ">
+            <a href="../../deploying/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2435,7 +2425,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../deploying/examples_and_tutorials.html" class="md-nav__link">
+      <a href="../../deploying/examples_and_tutorials.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2462,7 +2452,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../deploying/front_end.html" class="md-nav__link">
+      <a href="../../deploying/front_end.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2489,7 +2479,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../deploying/back_end.html" class="md-nav__link">
+      <a href="../../deploying/back_end.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2516,7 +2506,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../deploying/frameworks.html" class="md-nav__link">
+      <a href="../../deploying/frameworks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2543,7 +2533,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../deploying/commercial_products.html" class="md-nav__link">
+      <a href="../../deploying/commercial_products.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2570,7 +2560,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../deploying/computation.html" class="md-nav__link">
+      <a href="../../deploying/computation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2597,7 +2587,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../deploying/libraries_and_tools.html" class="md-nav__link">
+      <a href="../../deploying/libraries_and_tools.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2661,6 +2651,10 @@ and
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2678,7 +2672,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/index.html" class="md-nav__link ">
+            <a href="../../../Using/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2746,7 +2740,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/examples/index.html" class="md-nav__link ">
+            <a href="../../../Using/examples/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2819,7 +2813,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/examples/by_field/index.html" class="md-nav__link ">
+            <a href="../../../Using/examples/by_field/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2860,7 +2854,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/business.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/business.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2905,7 +2899,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/examples/by_field/entertainment/dynamic.html" class="md-nav__link ">
+            <a href="../../../Using/examples/by_field/entertainment/dynamic.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2946,7 +2940,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/entertainment/static.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/entertainment/static.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3003,7 +2997,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/examples/by_field/science/index.html" class="md-nav__link ">
+            <a href="../../../Using/examples/by_field/science/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3044,7 +3038,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/science/biology.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/science/biology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3071,7 +3065,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/science/chemistry.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/science/chemistry.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3098,7 +3092,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/science/healthcare.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/science/healthcare.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3133,7 +3127,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/mathematics/index.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/mathematics/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3180,7 +3174,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/examples/by_field/individuals_and_society/education.html" class="md-nav__link ">
+            <a href="../../../Using/examples/by_field/individuals_and_society/education.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3221,7 +3215,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/individuals_and_society/law.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/individuals_and_society/law.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3248,7 +3242,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/individuals_and_society/socio_societal.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/individuals_and_society/socio_societal.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3305,7 +3299,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/examples/by_field/technology/coding.html" class="md-nav__link ">
+            <a href="../../../Using/examples/by_field/technology/coding.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3346,7 +3340,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/technology/finance.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/technology/finance.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3373,7 +3367,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/technology/healthcare.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/technology/healthcare.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3400,7 +3394,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_field/technology/robotics.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_field/technology/robotics.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3477,7 +3471,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/examples/by_modality/index.html" class="md-nav__link ">
+            <a href="../../../Using/examples/by_modality/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3518,7 +3512,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_modality/knowledge_graphs.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_modality/knowledge_graphs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3545,7 +3539,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_modality/language.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_modality/language.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3572,7 +3566,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_modality/multimodal.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_modality/multimodal.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3599,7 +3593,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_modality/sound.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_modality/sound.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3626,7 +3620,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_modality/static_2d.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_modality/static_2d.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3653,7 +3647,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_modality/tabular.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_modality/tabular.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3680,7 +3674,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_modality/text.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_modality/text.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3707,7 +3701,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_modality/time_series.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_modality/time_series.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3734,7 +3728,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/examples/by_modality/video.html" class="md-nav__link">
+      <a href="../../../Using/examples/by_modality/video.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3806,7 +3800,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/ethically/index.html" class="md-nav__link ">
+            <a href="../../../Using/ethically/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3847,7 +3841,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/ethically/alignment.html" class="md-nav__link">
+      <a href="../../../Using/ethically/alignment.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3874,7 +3868,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/ethically/alignment_and_exestential_concerns.html" class="md-nav__link">
+      <a href="../../../Using/ethically/alignment_and_exestential_concerns.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3901,7 +3895,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/ethically/dual_use_concerns.html" class="md-nav__link">
+      <a href="../../../Using/ethically/dual_use_concerns.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3928,7 +3922,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/ethically/fairness.html" class="md-nav__link">
+      <a href="../../../Using/ethically/fairness.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3955,7 +3949,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/ethically/transparency.html" class="md-nav__link">
+      <a href="../../../Using/ethically/transparency.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3990,7 +3984,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/building_and_buying.html" class="md-nav__link">
+      <a href="../../../Using/building_and_buying.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4044,7 +4038,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/managing/index.html" class="md-nav__link ">
+            <a href="../../../Using/managing/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4085,7 +4079,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/managing/governing.html" class="md-nav__link">
+      <a href="../../../Using/managing/governing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4112,7 +4106,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/managing/ml_ops.html" class="md-nav__link">
+      <a href="../../../Using/managing/ml_ops.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4139,7 +4133,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/managing/observability.html" class="md-nav__link">
+      <a href="../../../Using/managing/observability.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4166,7 +4160,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/managing/regulations_and_guidelines.html" class="md-nav__link">
+      <a href="../../../Using/managing/regulations_and_guidelines.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4201,13 +4195,67 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/marking_and_detecting.html" class="md-nav__link">
+      <a href="../../../Using/marking_and_detecting.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
     Marking and detecting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/business.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Business
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/commercial_markets.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Commercial markets
   
 
     
@@ -4244,12 +4292,12 @@ and
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/de-risking/redteaming.html" class="md-nav__link ">
+            <a href="../../../Using/de-risking/redteaming.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4266,14 +4314,14 @@ and
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4290,7 +4338,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/de-risking/security.html" class="md-nav__link">
+      <a href="../../../Using/de-risking/security.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4325,7 +4373,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Using/interfacing_layers/web_plugins.html" class="md-nav__link">
+      <a href="../../../Using/interfacing_layers/web_plugins.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4390,7 +4438,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Managenai/index.html" class="md-nav__link ">
+            <a href="../../../Managenai/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4431,7 +4479,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/managing.html" class="md-nav__link">
+      <a href="../../../Managenai/managing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4458,7 +4506,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/requirements.html" class="md-nav__link">
+      <a href="../../../Managenai/requirements.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4485,7 +4533,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/brainstorming.html" class="md-nav__link">
+      <a href="../../../Managenai/brainstorming.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4512,7 +4560,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/build_plan.html" class="md-nav__link">
+      <a href="../../../Managenai/build_plan.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4539,7 +4587,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/contributing.html" class="md-nav__link">
+      <a href="../../../Managenai/contributing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4566,7 +4614,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/site_graph.html" class="md-nav__link">
+      <a href="../../../Managenai/site_graph.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4618,149 +4666,10 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-for-fine-tuning" class="md-nav__link">
+  <a href="#gpt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data for fine-tuning
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data for fine-tuning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-simulated-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using Simulated Data
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-changes-for-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Model changes for fine-tuning
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Model changes for fine-tuning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adapter-layers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Adapter layers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#low-rank-adaption-lora" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Low Rank Adaption (LoRA)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#practical-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Practical Tips
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Practical Tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-quality-and-size" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Quality and Size
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choice-of-optimizers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Choice of optimizers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#where-do-you-use-lora" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Where do you use LoRA?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choice-of-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Choice of parameters
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combining-lora-weights" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Combining LoRA weights
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Results
+        GPT
       
     </span>
   </a>
@@ -4784,7 +4693,7 @@ and
 
 
   
-    <a href="https://github.com/ianderrington/genai/reader_edits/docs/Understanding/architectures/finetuning.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/ianderrington/genai/reader_edits/docs/Understanding/architectures/models/gpt.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -4793,94 +4702,36 @@ and
     
       
     
-    <a href="https://github.com/ianderrington/genai/reader_raws/docs/Understanding/architectures/finetuning.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/ianderrington/genai/reader_raws/docs/Understanding/architectures/models/gpt.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-  <h1>Finetuning</h1>
+  <h1>Gpt</h1>
 
-<p>Fine-tuning adapt's  foundation model to improve its domain performance by using training with high-quality data. The adapted model may be architecturally equivalent, or a variation of the original model. The <a href="#data-for-fine-tuning">data</a> that is used to update the model may be natural or <a href="#using-simulated-data">synthetically-created</a> and it is often domain-specific or intentionally constructed.</p>
-<p>Because of the computational requirements needed to train the original foundation models, fine-tuning is preferably done in way that does not update the entire model.
-One manner of doing this is through the use of <a href="#adaptermodel-changes-for-fine-tuning">adapter layers</a>.</p>
-<h2 id="data-for-fine-tuning">Data for fine-tuning<a class="headerlink" href="#data-for-fine-tuning" title="Permanent link">&para;</a></h2>
-<p>Higher-quality data that may be proprietary or otherwise not-included in the training data for foundation-models can be used to improve a model's performance. Fine-tuning is generally done in a supervised fashion, where the specific responses desired for a given model input are trained on the output. Unsupervised fine-tuning is <a href="https://arxiv.org/abs/2110.09510">also possible</a> though not as commonly described.</p>
-<h3 id="using-simulated-data">Using Simulated Data<a class="headerlink" href="#using-simulated-data" title="Permanent link">&para;</a></h3>
-<p>Utilizing synthetic or simulated data is an effective method for training Large Language Models (LLMs). The process can be visualized in the following sequence:</p>
-<pre class="mermaid"><code>    graph LR
-        A[Large dataset] --&gt; |Training| B[Large quality model]
-        B --&gt; |Generate tailored data| D[Tailored data]
-        D --&gt; |Training| E[New or adapted model]</code></pre>
-<p>In this sequence, a large and vague model is initially trained. This model then generates highly specific data. This specific data is subsequently used to train a smaller, more specific model. The end result is a high-quality, fine-tuned model.</p>
-<h2 id="model-changes-for-fine-tuning">Model changes for fine-tuning<a class="headerlink" href="#model-changes-for-fine-tuning" title="Permanent link">&para;</a></h2>
-<p>The simplest manner of fine-tuning a model involves updating all of the original weights based on the fine-tuning dataset. This is less preferred because of the additional computational requirements. To minimize the compute, some number of layers can be 'frozen'. While helpful, the computational savings given the performance gains may not be considerable. (TODO FIND CITATIONS FOR THIS)</p>
-<h3 id="adapter-layers">Adapter layers<a class="headerlink" href="#adapter-layers" title="Permanent link">&para;</a></h3>
-<p>If all of the layers are frozen, it is possible to adapt the model using relatively simple models that rescale or adapt outputs.</p>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://arxiv.org/pdf/2007.07779.pdf">AdapterHub: A Framework for Adapting Transformers</a> <a href="https://adapterhub.ml/">Website</a></p>
-</div>
-<h3 id="low-rank-adaption-lora">Low Rank Adaption (LoRA)<a class="headerlink" href="#low-rank-adaption-lora" title="Permanent link">&para;</a></h3>
-<p>Instead of interleaving a trainable layer in between various layers, <a href="https://arxiv.org/abs/2106.09685">Low-Rank Adaption</a> (LoRA) uses the notion that changes to outputs of a given layer <span class="arithmatex">\(W\)</span> will likely be small <span class="arithmatex">\(\Delta W\)</span>. Instead of computing all those weights a low-rank vector matrix decomposition where <span class="arithmatex">\(\Delta W = A B\)</span> for two LoRA matrices <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. With a common inner-dimension variable <em>rank</em>, <span class="arithmatex">\(r\)</span>, is the matrix parameter counts can be appropriately minimized to have a small fraction of the original model <span class="arithmatex">\(W\)</span>.</p>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9" /></a></p>
-<h3 id="practical-tips">Practical Tips<a class="headerlink" href="#practical-tips" title="Permanent link">&para;</a></h3>
-<p>These are tips mostly from <a href="https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms">Practical Tips for Finetuning LLMS</a>.</p>
-<h4 id="data-quality-and-size">Data Quality and Size<a class="headerlink" href="#data-quality-and-size" title="Permanent link">&para;</a></h4>
-<p>It is essential that fine-tuning data is of high-quality/aligned with the end use-case of the model. Depending on the modality, anywhere between 5-10 (generally for Image-based models), and many thousands of examples (text-language) may be considered for LoRA. In terms of the number of passes over the data, <em>be careful</em> if going beyond one-epoch, lest overfitting occur.</p>
-<h4 id="choice-of-optimizers">Choice of optimizers<a class="headerlink" href="#choice-of-optimizers" title="Permanent link">&para;</a></h4>
-<p>When Adam and SGD are common optimizers. There are indications that with larger <span class="arithmatex">\(r\)</span>, the memory requirements become &gt;20% larger.</p>
-<h4 id="where-do-you-use-lora">Where do you use LoRA?<a class="headerlink" href="#where-do-you-use-lora" title="Permanent link">&para;</a></h4>
-<p>Enabling the LoRA for all layers appears may be valuable, though it hasn't been thoroughly explored.</p>
-<h4 id="choice-of-parameters">Choice of parameters<a class="headerlink" href="#choice-of-parameters" title="Permanent link">&para;</a></h4>
-<p>The <a href="https://arxiv.org/abs/2106.09685">original paper</a> has both the rank and a scaling factor <span class="arithmatex">\(\alpha\)</span>.</p>
-<p><div class="highlight"><pre><span></span><code>scaling = alpha / r
-weight += (lora_B @ lora_A) * scaling
-</code></pre></div>
-Both of these will need to be explored, but it may be beneficial to set <span class="arithmatex">\(\alpha \approx r\)</span></p>
-<p>Selecting the rank to be <em>too large</em> may result in overfitting, but too small may not provide enough additional model capacity to capture the characteristics of the data.</p>
-<h4 id="combining-lora-weights">Combining LoRA weights<a class="headerlink" href="#combining-lora-weights" title="Permanent link">&para;</a></h4>
-<p>It appears that it is possible to add multiple LoRA weights, either beforehand as such:
-$$
-weight += (L_B \times L_A) * scale
-$$
-or</p>
-<div class="arithmatex">\[
-weight += (L1_B \times L1_A) * scale1 \\
-weight += (L2_B \times L2_A) * scale2 \\
-\cdots
-\]</div>
-<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
-<p>Fine-tuning can lead to significant improvements in both instruction following and helpfulness of models. This is demonstrated in the research paper <a href="https://arxiv.org/pdf/2310.12962.pdf">An Emulator for Fine-Tuning Large Language Models using Small Language Models</a>. The paper also suggests that combining fine-tuning with speculative decoding can speed up larger models by a factor of 2.5.</p>
-<details class="note">
-<summary>Research Paper: An Emulator for Fine-Tuning Large Language Models using Small Language Models</summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1088" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf"></a>
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/5ae8af02-02f9-43ab-a545-16b7709935e8" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1017" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5ae8af02-02f9-43ab-a545-16b7709935e8"></a>
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="431" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887"></a></p>
-</details>
-<p>There are also several tools available that can assist in the fine-tuning process.</p>
-<details class="code">
-<summary><a href="https://github.com/OpenPipe/OpenPipe">Open Pipe</a> allows you to use powerful but expensive LLMs to fine-tune smaller and cheaper models</summary>
-<p>You can evaluate the model and prompt combinations in the playground, query your past requests, and export optimized training data.
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e"></a></p>
-</details>
+<h3 id="gpt">GPT<a class="headerlink" href="#gpt" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://github.com/openlmlab/lomo">Full Parameter Fine-Tuning for Large Language Models with Limited Resources.</a> Introduces LOMO: LOw-Memory Optimization to fuse</li>
+<li><a href="http://jalammar.github.io/illustrated-gpt2/">Illustrated GPT</a></li>
+<li>
+<p><a href="https://jalammar.github.io/how-gpt3-works-visualizations-animations/">How GPT3 works</a>
+Excellent summary of the progress of GPT over time, revealing core components, optimizations, and essential variations to the major Foundation model architectures.</p>
+</li>
+<li>
+<p><a href="https://finbarrtimbers.substack.com/p/five-years-of-progress-in-gpts?utm_source=substack&amp;utm_medium=email">Five years of progress in GPTs</a></p>
+</li>
+<li>
+<p><a href="https://towardsdatascience.com/the-transformer-architecture-of-gpt-models-b8695b48728b">The Transformer Architecture of GPT Models</a></p>
+</li>
 </ul>
-<p>Another tool, <a href="https://github.com/okuvshynov/slowllama">Slow Llama</a>, is particularly useful for fine-tuning on M1/M2 Macs.</p>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/okuvshynov/slowllama">Slow Llama</a> for finetuning on a M1/M2 mac</p>
-</div>
-<p>In conclusion, fine-tuning is a crucial step in the development of AI models. It allows models to specialize and improve their performance on specific tasks, leading to more accurate and efficient AI systems.</p>
+<p><a href="https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf">https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf</a></p>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -4984,9 +4835,9 @@ weight += (L2_B \times L2_A) * scale2 \\
         
           
           <a
-            href="pre-training.html"
+            href="developing_architectures.html"
             class="md-footer__link md-footer__link--prev"
-            aria-label="Previous: Pre training"
+            aria-label="Previous: Developing architectures"
           >
             <div class="md-footer__button md-icon">
               
@@ -4997,7 +4848,7 @@ weight += (L2_B \times L2_A) * scale2 \\
                 Previous
               </span>
               <div class="md-ellipsis">
-                Pre training
+                Developing architectures
               </div>
             </div>
           </a>
@@ -5007,16 +4858,16 @@ weight += (L2_B \times L2_A) * scale2 \\
         
           
           <a
-            href="feedback.html"
+            href="hybrid_models.html"
             class="md-footer__link md-footer__link--next"
-            aria-label="Next: Feedback"
+            aria-label="Next: Hybrid models"
           >
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Feedback
+                Hybrid models
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -5204,20 +5055,20 @@ weight += (L2_B \times L2_A) * scale2 \\
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="../../assets/javascripts/bundle.8e8db93a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8e8db93a.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  <script src="../../assets/javascripts/custom.97a2da2b.min.js"></script>
+  <script src="../../../assets/javascripts/custom.97a2da2b.min.js"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",

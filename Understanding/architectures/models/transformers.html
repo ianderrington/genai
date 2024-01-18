@@ -904,7 +904,7 @@ and
   <span class="md-ellipsis">
     
   
-    Understanding Data Augmentation
+    Augmentation
   
 
     
@@ -996,13 +996,7 @@ and
         
       
         
-      
-        
-      
-        
-      
-        
-      
+          
         
       
         
@@ -1076,6 +1070,10 @@ and
   
     
     
+      
+        
+      
+        
       
         
       
@@ -1239,10 +1237,21 @@ and
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#attention-models" class="md-nav__link">
+  <a href="#positional-encoding" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Attention Models
+        Positional Encoding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer Normalization
       
     </span>
   </a>
@@ -1262,23 +1271,6 @@ and
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Reviews">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gpt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPT
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1314,18 +1306,7 @@ and
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#positional-encoding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Positional Encoding
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Positional Encoding">
+    <nav class="md-nav" aria-label="Seminal documents">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1629,6 +1610,33 @@ and
   
   
     <li class="md-nav__item">
+      <a href="gpt.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Gpt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="hybrid_models.html" class="md-nav__link">
         
   
@@ -1636,6 +1644,33 @@ and
     
   
     Hybrid models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multimodal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Multimodal
   
 
     
@@ -1690,36 +1725,33 @@ and
   
   
   
-    <li class="md-nav__item">
-      <a href="../llm_systems.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
     
-  
-    Llm systems
-  
-
     
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../training.html" class="md-nav__link">
+      
         
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../training/index.html" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     
@@ -1732,11 +1764,25 @@ and
   
   
 
-      </a>
-    </li>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1_3_2" id="__nav_1_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Training
   
 
-              
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -1745,7 +1791,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../pre-training.html" class="md-nav__link">
+      <a href="../training/pre-training.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1772,7 +1818,7 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../finetuning.html" class="md-nav__link">
+      <a href="../training/finetuning.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1799,13 +1845,75 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../feedback.html" class="md-nav__link">
+      <a href="../training/recurrent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Recurrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training/feedback.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
     Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llm_systems.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Llm systems
   
 
     
@@ -1914,33 +2022,6 @@ and
     
   
     Pre trained models
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../recurrent_training.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Recurrent training
   
 
     
@@ -2067,6 +2148,8 @@ and
   
     
     
+      
+        
       
         
       
@@ -2367,6 +2450,33 @@ and
     
   
     Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/commercial.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Commercial
   
 
     
@@ -2811,6 +2921,10 @@ and
       
         
           
+        
+      
+        
+      
         
       
         
@@ -4385,6 +4499,60 @@ and
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../Using/business.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Business
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/commercial_markets.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Commercial markets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -4402,7 +4570,7 @@ and
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
         
           
           
@@ -4424,14 +4592,14 @@ and
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4788,10 +4956,21 @@ and
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#attention-models" class="md-nav__link">
+  <a href="#positional-encoding" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Attention Models
+        Positional Encoding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer Normalization
       
     </span>
   </a>
@@ -4811,23 +4990,6 @@ and
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Reviews">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gpt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPT
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4863,18 +5025,7 @@ and
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#positional-encoding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Positional Encoding
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Positional Encoding">
+    <nav class="md-nav" aria-label="Seminal documents">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5116,15 +5267,43 @@ and
 
   <h1>Transformers</h1>
 
-<p>TODO</p>
+<p>Transformers are a powerful type of architecture allows input sequences to be considered with the whole input context. They are built on [self attention] mechanism, that performs an <span class="arithmatex">\(O(N^2)\)</span> computation fon the input sequence and, in continued stacks, provides the ability to represent relations between inputs at different levels of abstration. </p>
+<p>Transformers can be used in three general ways: encoder-only, decoder-only and encoder-decoder. </p>
+<p>In Encoder-only networks, like Bert, the entire input text is used, but is useful for primarily output classification tasks (sequence-to-value). </p>
+<p>As in the original [Transformer ATtention paper], encoder-decoder networks are used to convert sequence to sequences for language translation. In these systems, an encoder will first project information based on the input, generate new outputs, and the new outpus will be used in a recurrent fashion to generate subsequent outputs. </p>
+<p>In Decoder-only networks, like <a href="gpt.html">GPT</a>, because they are <em>next-token_predictions</em>, they only require information from words/tokens that have been previously seen. The outputs will be the estimates of the probability of the next word/token. While next-token prediction is singular, this can happen iteratively, and with the proper prompting, the generation of output sequences can perform a varity of sequence-to-sequence tasks, such as language translation. </p>
 <h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
-<p>TODO: Describe transformers and components</p>
 <ol>
-<li>Attention: Query, Key, Vectors</li>
 <li>Positional Encoding</li>
+<li>Attention: Query, Key, Vectors</li>
 <li>Layer Normalization</li>
 </ol>
-<h3 id="attention-models">Attention Models<a class="headerlink" href="#attention-models" title="Permanent link">&para;</a></h3>
+<p>Initially the word, or subword is broken anad represented as a lookup-key to find an 'embedding'. This can be trained alongside transformer models, or pre-trained from other models. It provides a vector representation of the input word.</p>
+<p>To allow the token+embedding to <em>attend</em> or share information with the other inputs, calculate a 'self-attention matrix' with the following pieces. 
+1. A Query matrix <span class="arithmatex">\(W^Q\)</span>
+2. A Key matrix <span class="arithmatex">\(W^K\)</span>
+3. A Value matrix <span class="arithmatex">\(W^V\)</span></p>
+<p>For each token/word <span class="arithmatex">\(i\)</span>, the embedding is multiplied by this matrix to yield a query vector, a key vector, and a value vector, <span class="arithmatex">\(Q_i\)</span>, <span class="arithmatex">\(K_i\)</span> and <span class="arithmatex">\(V_i\)</span></p>
+<p>Each query-vector, is then multiplied by each key-vector, resulting in matrix computation <span class="arithmatex">\(Q*V\)</span>. Because the key-query is suppoesed to describe how important an input combination is, it is then normalized by the dimension of the values to allow for similar behavior for different dimensions, and then  passed through a soft-max function </p>
+<p>$softmax(\frac{(Q * K^T)}{\sqrt{d_k}})</p>
+<p>This is then multiplied by the value matrix to provide the attention output. </p>
+<p>$Z_(head i) = <span class="arithmatex">\(softmax(\frac{(Q * K^T)}{\sqrt{d_k}}) V\)</span></p>
+<p>Multiple attention heads can be combined by stacking them together and then multiplied by a final matrix that will produce a final</p>
+<p><span class="arithmatex">\(Z = cat(Z_i) * W^O\)</span></p>
+<p>Finally, this matrix is with input values to have a residual connection, and the <a href="#layer-normalization">layer is normalized</a>. </p>
+<p>This matrix can be passed to additional layers, or a final fully-connected projection layer. </p>
+<h3 id="positional-encoding">Positional Encoding<a class="headerlink" href="#positional-encoding" title="Permanent link">&para;</a></h3>
+<p><a href="">Standard embeddings are position in variant</a>, meaning the position of the token/word in the input will have little importance. As token/ word positions have certain importance, position-embeddings are also used. Generally additive, position embeddings are based on varying sinusoids, or trainable parameters. </p>
+<ul>
+<li>
+<p><a href="https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/">A Gentle Introduction to Positional Encoding in Transformer Models, pt1</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2203.16634.pdf">Transformer Language Models without POsitional Encodings STill Learn Positional Information</a> Indications that causal LMS may derive positional awareness from more than the positional embeddings: they learn it from the causal mask.</p>
+</li>
+</ul>
+<p>TODO: Which is used more and why aren't trainable, and why are not non-linear embeddings considered as opposed to just addative...? </p>
+<h3 id="layer-normalization">Layer Normalization<a class="headerlink" href="#layer-normalization" title="Permanent link">&para;</a></h3>
 <p>Layer normalization observably improves results <a href="http://proceedings.mlr.press/v119/xiong20b/xiong20b.pdf">On Layer Normalization in the Transformer Architecture</a></p>
 <h2 id="reviews">Reviews<a class="headerlink" href="#reviews" title="Permanent link">&para;</a></h2>
 <details class="tip">
@@ -5133,24 +5312,10 @@ and
 <details class="tip">
 <summary><a href="https://deeprevision.github.io/posts/001-transformer/">The Transformer Blueprint: A Holistic Guide to the Transformer Neural Network Architecture</a> provides q thorough exposition of transformer technology.</summary>
 </details>
-<h3 id="gpt">GPT<a class="headerlink" href="#gpt" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="http://jalammar.github.io/illustrated-gpt2/">Illustrated GPT</a></li>
-<li><a href="https://jalammar.github.io/how-gpt3-works-visualizations-animations/">How GPT3 works</a>
-Excellent summary of the progress of GPT over time, revealing core components, optimizations, and essential variations to the major Foundation model architectures.</li>
-</ul>
 <h2 id="useful-references-and-research">Useful References and Research<a class="headerlink" href="#useful-references-and-research" title="Permanent link">&para;</a></h2>
 <h3 id="general-introductions">General Introductions<a class="headerlink" href="#general-introductions" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p><a href="https://docs.google.com/presentation/d/1ZXFIhYczos679r70Yu8vV9uO6B1J0ztzeDxbnBxD1S0/mobilepresent?fbclid=IwAR18pR_Mf46mkZ1_E3NFOwYY2wVx0aATficgfh_GWZd29c_lWNRa4vK5zy8&amp;slide=id.g31364026ad_3_2">Transformers by Lucas Beyer (presentation)</a></p>
-</li>
-<li>
-<p><a href="https://finbarrtimbers.substack.com/p/five-years-of-progress-in-gpts?utm_source=substack&amp;utm_medium=email">Five years of progress in GPTs</a></p>
-</li>
-<li>
-<p><a href="https://towardsdatascience.com/the-transformer-architecture-of-gpt-models-b8695b48728b">The Transformer Architecture of GPT Models</a></p>
-</li>
+<li><a href="https://docs.google.com/presentation/d/1ZXFIhYczos679r70Yu8vV9uO6B1J0ztzeDxbnBxD1S0/mobilepresent?fbclid=IwAR18pR_Mf46mkZ1_E3NFOwYY2wVx0aATficgfh_GWZd29c_lWNRa4vK5zy8&amp;slide=id.g31364026ad_3_2">Transformers by Lucas Beyer (presentation)</a></li>
 </ul>
 <h3 id="seminal-documents">Seminal documents<a class="headerlink" href="#seminal-documents" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5163,16 +5328,6 @@ Excellent summary of the progress of GPT over time, revealing core components, o
 <li>
 <p><a href="https://arxiv.org/pdf/2207.09238.pdf">Formal Algorithms for Transformers in 2023</a>
 Important discussion revealing the components of Transformers.</p>
-</li>
-</ul>
-<h3 id="positional-encoding">Positional Encoding<a class="headerlink" href="#positional-encoding" title="Permanent link">&para;</a></h3>
-<p>This component helps to remove the impilcit position-independence that 'vanilla' attention methods have.</p>
-<ul>
-<li>
-<p><a href="https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/">A Gentle Introduction to Positional Encoding in Transformer Models, pt1</a></p>
-</li>
-<li>
-<p><a href="https://arxiv.org/abs/2203.16634">Transformer Language Models without POsitional Encodings STill Learn Positional Information</a> Indications that causal LMS may derive positional awareness from more than the positional embeddings: they learn it from the causal mask.</p>
 </li>
 </ul>
 <h4 id="modifications">Modifications<a class="headerlink" href="#modifications" title="Permanent link">&para;</a></h4>
@@ -5205,7 +5360,7 @@ They improve computation complexity in one of several ways:</p>
 </details>
 <details class="code">
 <summary><a href="https://github.com/neuro-inc/ml-recipe-hier-attention">Heirarchichal Attention</a></summary>
-<p><a href="https://arxiv.or dsvg/abs/2304.11062">Paper</a></p>
+<p><a href="https://arxiv.org/pdf/2304.11062.pdf">Paper</a></p>
 </details>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/booydar/t5-experiments/tree/scaling-report">Scaling Transformer to 1M tokens and beyond with RMT</a> Uses a Recurrent Memory Transformer(RMT) architecture to extend understanding to large lengths.</p>
@@ -5222,14 +5377,14 @@ They improve computation complexity in one of several ways:</p>
 <a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="left" alt="Infinity Former" loading="lazy" src="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" width="300" /></a></p>
 </details>
 <details class="tip">
-<summary><a href="https://arxiv.org/abs/2308.16137">LM-INfinite: Simple On-the-Fly Length Generalization for Large Language Models</a> provides an O(n) time/space extension allows LMMs to ability to go to 32k tokens and 2.7x speedup.</summary>
+<summary><a href="https://arxiv.org/pdf/2308.16137.pdf">LM-INfinite: Simple On-the-Fly Length Generalization for Large Language Models</a> provides an O(n) time/space extension allows LMMs to ability to go to 32k tokens and 2.7x speedup.</summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="545" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8"></a>
     <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1"></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="863" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61"></a></p>
 </details>
 <details class="code">
 <summary><a href="https://github.com/mit-han-lab/streaming-llm">Efficient Streaming Language Models with Attention Sinks</a></summary>
-<p><a href="https://arxiv.org/abs/2309.17453">Paper</a>
+<p><a href="https://arxiv.org/pdf/2309.17453.pdf">Paper</a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a" /></a></p>
 </details>
 <h3 id="computation-reduction">Computation Reduction<a class="headerlink" href="#computation-reduction" title="Permanent link">&para;</a></h3>
@@ -5273,7 +5428,7 @@ They improve computation complexity in one of several ways:</p>
 <ul>
 <li><a href="https://arxiv.org/pdf/2303.04671.pdf">Visual GPT</a></li>
 <li><a href="https://arxiv.org/pdf/2302.14045.pdf">Language is not all you need</a></li>
-<li><a href="https://arxiv.org/abs/2307.10802">Meta-Transformer: A Unified Framework for Multimodal Learning</a> The first framework to perform unified learning across 12 modalities with unpaired data. It does so by learning an embedding that can be shared across the modalities. <a href="https://kxgong.github.io/meta_transformer/">Github</a></li>
+<li><a href="https://arxiv.org/pdf/2307.10802.pdf">Meta-Transformer: A Unified Framework for Multimodal Learning</a> The first framework to perform unified learning across 12 modalities with unpaired data. It does so by learning an embedding that can be shared across the modalities. <a href="https://kxgong.github.io/meta_transformer/">Github</a></li>
 </ul>
 <h3 id="graph">Graph<a class="headerlink" href="#graph" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
