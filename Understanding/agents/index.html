@@ -4622,17 +4622,6 @@ and
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary-tldr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary (TL;DR)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#essential-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4720,7 +4709,8 @@ and
 <h2 id="generative-ai-agents">Gen(erative) AI Agents<a class="headerlink" href="#generative-ai-agents" title="Permanent link">&para;</a></h2>
 <p>Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables.</p>
 <p>Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.</p>
-<h2 id="summary-tldr">Summary (TL;DR)<a class="headerlink" href="#summary-tldr" title="Permanent link">&para;</a></h2>
+<details class="important" open="open">
+<summary><a href="#tldr">tl;dr</a></summary>
 <p>At a very basic level, an Agent does this, </p>
 <pre class="mermaid"><code>graph LR
     A(Observe Environment) --&gt; B[Evaluate]
@@ -4728,79 +4718,79 @@ and
     C --&gt; D[Act]
     D --&gt; E[Observe]
     E --&gt; A</code></pre>
-<p>Though, more generally it includes these components: 
-Agents:
-* <a href="../architectures/index.html">LLM models</a> that power information evaluation.
-* <a href="../prompting/index.html">Prompts</a>,  <a href="chains.html">chains</a>, <a href="memory.html">memory</a> connected with <a href="cognitive_architecture.html">cognition architectures</a>.
-* <a href="environments.html">Environments</a> where an agent can 'act'.
-* <a href="actions_and_tools.html">Tools</a>, or aspects of the environment that can be called upon. 
-* <a href="chains.html#interpreters">Interpreters and Executors</a> that are used to process input or output.
-* <a href="systems.html">Systems of Agents</a> that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.</p>
+</details>
+<p>Though, more generally it includes these components: </p>
+<ul>
+<li><a href="../architectures/index.html">LLM models</a> that power information evaluation.</li>
+<li><a href="../prompting/index.html">Prompts</a>,  <a href="chains.html">chains</a>, <a href="memory.html">memory</a> connected with <a href="cognitive_architecture.html">cognition architectures</a>.</li>
+<li><a href="environments.html">Environments</a> where an agent can 'act'.</li>
+<li><a href="actions_and_tools.html">Tools</a>, or aspects of the environment that can be called upon. </li>
+<li><a href="chains.html#interpreters">Interpreters and Executors</a> that are used to process input or output.</li>
+<li><a href="systems.html">Systems of Agents</a> that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.</li>
+</ul>
 <h2 id="essential-concepts">Essential Concepts<a class="headerlink" href="#essential-concepts" title="Permanent link">&para;</a></h2>
 <p>At the core of agents are information interpreters such as LLMs <a href="../architectures/models/index.html">models</a>, provide the 'brains' that allow for information to be processed, and then acted upon. Actions occur with an <a href="environments.html">environment</a>, with specific (./actions_and_tools.md). To be effective, the information interpretation is best accomplished with <a href="cognitive_architecture.html">cognitive architectures</a> that enable reasoning, planning, and interactions with <a href="memory.html">memory</a> sources. To coordinate these comopnents effectively <a href="chains.html#interpreters">interpreters and executors</a>. With one agent is found to work, <a href="systems.html">systems</a> of agents allow for multiple agents to interact with other agents and with people. </p>
 <p>This can be considered in the following graph:</p>
-<p>```mermaid
-graph TB
-    Information[Information] &harr;|represented \n by| Environment[Environment]
+<pre class="mermaid"><code>graph TB
+    Information[Information] &lt;--&gt;|represented \n by| Environment[Environment]
     click Environment "./environments.md"
-    Information &rarr;|interpreted \n with| LLM[LLMs]
+    Information --&gt;|interpreted \n with| LLM[LLMs]
     click Information "./information.md"
-    LLM &harr;|uses| CognitiveArchitectures[Cognitive \nArchitectures]
+    LLM &lt;--&gt;|uses| CognitiveArchitectures[Cognitive \nArchitectures]
     click LLM "../architectures/models/index.md"
-    CognitiveArchitectures &harr; |interacts \n with| Memory[Memory]</p>
-<div class="highlight"><pre><span></span><code>classDef promptsColor fill:#f0ad4e,stroke:#333,stroke-width:2px;
-class Prompts promptsColor;
-click Memory &quot;./memory.md&quot;
-Prompts[Prompts] --&gt;|condition| LLM
-click Prompts &quot;../prompting/index.md&quot;
-Prompts --&gt;|support| CognitiveArchitectures
+    CognitiveArchitectures &lt;--&gt; |interacts \n with| Memory[Memory]
 
-LLM --&gt;|decides| Action[Action]
-click CognitiveArchitectures &quot;./cognitive_architecture.md&quot;
-Action --&gt;|considered \n by| Interpreter[Interpreter]
-click Action &quot;./actions_and_tools.md&quot;
-Interpreter --&gt;|updates| Environment
-click Interpreter &quot;./interpreters.md&quot;
+    classDef promptsColor fill:#f0ad4e,stroke:#333,stroke-width:2px;
+    class Prompts promptsColor;
+    click Memory "./memory.md"
+    Prompts[Prompts] --&gt;|condition| LLM
+    click Prompts "../prompting/index.md"
+    Prompts --&gt;|support| CognitiveArchitectures
 
-classDef informationColor fill:#ffcc00,stroke:#333,stroke-width:2px;
-classDef environmentColor fill:#ff9999,stroke:#333,stroke-width:2px;
-classDef llmColor fill:#99ccff,stroke:#333,stroke-width:2px;
-classDef cognitiveColor fill:#cc99ff,stroke:#333,stroke-width:2px;
-classDef memoryColor fill:#99ff99,stroke:#333,stroke-width:2px;
-classDef actionColor fill:#ff9966,stroke:#333,stroke-width:2px;
-classDef interpreterColor fill:#66ffff,stroke:#333,stroke-width:2px;
-classDef internal fill:#f996,stroke:#333,stroke-width:2px;
-classDef external fill:#9f6,stroke:#333,stroke-width:2px;
+    LLM --&gt;|decides| Action[Action]
+    click CognitiveArchitectures "./cognitive_architecture.md"
+    Action --&gt;|considered \n by| Interpreter[Interpreter]
+    click Action "./actions_and_tools.md"
+    Interpreter --&gt;|updates| Environment
+    click Interpreter "./interpreters.md"
 
-class Information informationColor;
-class Environment environmentColor;
-class LLM llmColor;
-class CognitiveArchitectures cognitiveColor;
-class Memory memoryColor;
-class Action actionColor;
-class Interpreter interpreterColor;
+    classDef informationColor fill:#ffcc00,stroke:#333,stroke-width:2px;
+    classDef environmentColor fill:#ff9999,stroke:#333,stroke-width:2px;
+    classDef llmColor fill:#99ccff,stroke:#333,stroke-width:2px;
+    classDef cognitiveColor fill:#cc99ff,stroke:#333,stroke-width:2px;
+    classDef memoryColor fill:#99ff99,stroke:#333,stroke-width:2px;
+    classDef actionColor fill:#ff9966,stroke:#333,stroke-width:2px;
+    classDef interpreterColor fill:#66ffff,stroke:#333,stroke-width:2px;
+    classDef internal fill:#f996,stroke:#333,stroke-width:2px;
+    classDef external fill:#9f6,stroke:#333,stroke-width:2px;
 
-subgraph  
-LLM
-Prompts
-CognitiveArchitectures
-Memory
-Action
-DummyNode[Agent Internals]
-end
+    class Information informationColor;
+    class Environment environmentColor;
+    class LLM llmColor;
+    class CognitiveArchitectures cognitiveColor;
+    class Memory memoryColor;
+    class Action actionColor;
+    class Interpreter interpreterColor;
 
-class DummyNode internal;
-style DummyNode fill:#ff9999,stroke:#fff,color:#000;
-</code></pre></div>
-<p>```</p>
+    subgraph  
+    LLM
+    Prompts
+    CognitiveArchitectures
+    Memory
+    Action
+    DummyNode[Agent Internals]
+    end
+
+    class DummyNode internal;
+    style DummyNode fill:#ff9999,stroke:#fff,color:#000;  
+</code></pre>
 <p>Agents can be quite different! Here are some <a href="examples.html">examples</a> of agents made both in academic and commercial settings.</p>
 <h3 id="example-agent-diagram">Example Agent Diagram:<a class="headerlink" href="#example-agent-diagram" title="Permanent link">&para;</a></h3>
 <p>At the very simplistic level, an embodiment of an agent would look like this.</p>
 <p>To enable that it may require more complicated relations between example components. Below is an example representation.</p>
 <details class="example" open="open">
 <summary>An Agent's components</summary>
-<p><code>mermaid
-graph TB
+<pre class="mermaid"><code>graph TB
     Agent((Agent)) --&gt;|makes| decision((Decision))
     decision --&gt;|attempts| action((Action))
     action --&gt;|passes| execution((Execution))
@@ -4812,7 +4802,7 @@ graph TB
     execution --&gt;|queries| environment
     AgentManager((Agent Manager)) --&gt;|affects| execution
     Agent --&gt; |informs and effects| AgentManager
-    AgentManager --&gt; |informs and effects| Agent</code></p>
+    AgentManager --&gt; |informs and effects| Agent</code></pre>
 </details>
 <h2 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h2>
 <details class="important">
@@ -4821,8 +4811,8 @@ graph TB
 <details class="important">
 <summary><a href="https://arxiv.org/abs/2205.00445">MRKL agents</a></summary>
 <p>MRKL
-<code>txt
-"Huge language models (LMs) have ushered in a new era for AI, serving as a gateway to natural-language-based knowledge tasks. Although an essential element of modern AI, LMs are also inherently limited in a number of ways. We discuss these limitations and how they can be avoided by adopting a systems approach. Conceptualizing the challenge as one that involves knowledge and reasoning in addition to linguistic processing, we define a flexible architecture with multiple neural models, complemented by discrete knowledge and reasoning modules. We describe this neuro-symbolic architecture, dubbed the Modular Reasoning, Knowledge and Language (MRKL, pronounced "miracle") system, some of the technical challenges in implementing it, and Jurassic-X, AI21 Labs' MRKL system implementation.</code></p>
+<div class="highlight"><pre><span></span><code>&quot;Huge language models (LMs) have ushered in a new era for AI, serving as a gateway to natural-language-based knowledge tasks. Although an essential element of modern AI, LMs are also inherently limited in a number of ways. We discuss these limitations and how they can be avoided by adopting a systems approach. Conceptualizing the challenge as one that involves knowledge and reasoning in addition to linguistic processing, we define a flexible architecture with multiple neural models, complemented by discrete knowledge and reasoning modules. We describe this neuro-symbolic architecture, dubbed the Modular Reasoning, Knowledge and Language (MRKL, pronounced &quot;miracle&quot;) system, some of the technical challenges in implementing it, and Jurassic-X, AI21 Labs&#39; MRKL system implementation.
+</code></pre></div></p>
 </details>
 <h2 id="useful-references">Useful references<a class="headerlink" href="#useful-references" title="Permanent link">&para;</a></h2>
 <p>Here are several references of merit.</p>
