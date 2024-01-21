@@ -83,7 +83,10 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 !!! code "[Haystack](https://github.com/deepset-ai/haystack) is an e2e llm orchestration framework that allows a number of versatile interactions."
 
+### Griptape
 
+!!! code "[Griptape](https://github.com/griptape-ai/griptape) an enterprise alternative to Langchain"
+    [Docs]
 #### Higher level
 
 ??? code "[Pytorch Lightning](https://lightning.ai/docs/pytorch/latest/) Enables model training with Pytorch and minimizes the boilerplate"

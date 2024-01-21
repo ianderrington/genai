@@ -74,21 +74,36 @@ flowchart TD
 ### Phase 1: MVP Development
 GitHub Actions for Issue Submission and Initial Evaluation
 
+
+**Caching of External Sources**
+Set up a simple caching mechanism for external sources like GitHub repositories, PDFs, and blogs.
+Manually link these sources to relevant parts of the knowledge graph.
+
+- [x] Download to local files path genai/kg/doc_graph_generation.py and downloader.py
+- [x] Simple SQL mapping database. 
+
+
+**Basic Knowledge Graph (KG) Construction**: 
+
+Don't build a knowledge-graph, build an agent graph. 
+
+What is an agent-graph? It is an knowledge graph of 'agents', that allow for structured connections and an 'agent' template that can act on those structured connections. 
+
+It has 'summarizations' and 
+
+Start building a basic KG with a simple schema focusing on key concepts and relations in the existing documentation.
+
+Implement fuzzy and exact match search capabilities.
+Initially, manually identify appropriate locations for new concepts in the documentation tree.
+
+
+**Develop a basic summarization tool** to create summaries of submitted documents.
+Manually integrate these summaries into the appropriate locations in the documentation.
+
 **Develop a GitHub Action** to trigger on issue creation by an approved user.
 The Action should check if the submitted document/concept is already in the documentation tree using a simple keyword-based search.
 If the concept is not present, the Action should tag the issue for further processing.
 
-**Basic Knowledge Graph (KG) Construction**: 
-Start building a basic KG with a simple schema focusing on key concepts and relations in the existing documentation.
-Implement fuzzy and exact match search capabilities.
-Initially, manually identify appropriate locations for new concepts in the documentation tree.
-Summarization and Content Integration
-
-**Develop a basic summarization tool** to create summaries of submitted documents.
-Manually integrate these summaries into the appropriate locations in the documentation.
-**Caching of External Sources**
-Set up a simple caching mechanism for external sources like GitHub repositories, PDFs, and blogs.
-Manually link these sources to relevant parts of the knowledge graph.
 
 ### Phase 2: Enhanced Functionality and Automation
 Advanced KG Development with Automated Placement
