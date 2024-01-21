@@ -10,10 +10,8 @@ In general [ethical use](../../Using/ethically/index.md) of GenAI will necessari
 
 
 ## Open Challenges
-!!! [Open challenges in LLM research](LLMhttps://huyenchip.com/2023/08/16/llm-research-open-challenges.html#5_design_a_new_model_architecture)
-Challenges associated with GenAI.
-
-    ```markdown
+!!! note "[Open challenges in LLM research](LLMhttps://huyenchip.com/2023/08/16/llm-research-open-challenges.html#5_design_a_new_model_architecture)"
+    Challenges associated with GenAI.
 
     1. Reduce and measure [hallucinations](#hallucinations)
     2. Optimize context length and context construction
@@ -25,7 +23,7 @@ Challenges associated with GenAI.
     8. Improve learning from human preference
     9. Improve the efficiency of the chat interface
     10. Build LLMs for non-English languages
-    ```
+    
 
 ## Accuracy Challenges
 

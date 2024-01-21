@@ -1,0 +1,6 @@
+nav:
+  - index.md
+  - pre-training.md
+  - finetuning.md
+  - recurrent.md
+  - ...

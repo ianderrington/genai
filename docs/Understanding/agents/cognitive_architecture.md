@@ -1,12 +1,8 @@
-Cognitive Architectures refer to systems or chain patterns that are employed after discrete interactions with single or multiple LLMs.
-
-A cognitive architecure can be considered a higher level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They are can be focused on both simple and complex tasks. 
-
-
+A cognitive architecure are a higher level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They are can be focused on both simple and complex tasks. 
 
 One input call to an LLM outputs produces output(s) based on their input [prompts](../prompting/index.md).  Cognitive architectures, sometimes also considered [chains](#chains) allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md) in different forms of [#environments]. Chains can build more complex and integrated systems to enable higher-quality reasoning and results.
 
-Cognitive architectures can be constructed in a more linear [chains](#chains),as in the case of the LLM-enabled chat, or more complex branching [graph chains](#graph-chains) which have been shown to increase performance. 
+Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf) considered design system with a connection of a large number but highly connected units to facilitate computational-like behavior seen from Animals. For Gen()AI, however, cognitive architectures can be constructed in a more linear [chains](#chains), as in the case of the LLM-enabled chat, or more complex branching [graph chains](#graph-chains) which have been shown to increase performance. 
 
 ## Aspects of in Cognitive Architectures
 
@@ -24,9 +20,7 @@ Cognitive architectures can be constructed in a more linear [chains](#chains),as
 ### Models
 Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](#prompts) they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation with [recurrent training](../architectures/training/recurrent.md).
 
-
-
-
+### Overview
 ??? important "[Cognitive Architectures for Language Agents](https://arxiv.org/pdf/2309.02427.pdf) is a thoughtful understanding of Cognitive Architectures"
     They reveal a number of thoughtful perspectives on how to consider agents, considering much of what we have included here. Going further,
     <img width="549" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/16087788-df56-44cd-91be-8755d17fd7c0">

@@ -22,6 +22,21 @@ cognitive_architecture.md)
 !!! important "[Open GPTs](https://github.com/langchain-ai/opengpts) Provides a similar experience to OpenAI GPTs and assistants, using Langchain components"
 
 
+!!! code "[GPT researcher](https://github.com/assafelovic/gpt-researcher) is an autonomous agent designed for comprehensive online research on a variety of tasks."
+    LOOK INTO THIS
+
+??? tip "[Emergent autonomous scientific research](https://arxiv.org/pdf/2304.05332.pdf)"
+    <img width="658" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656">
+
+
+!!! code "[Sweep Dev (product)](https://github.com/sweepai/sweep/tree/main) provides a service for improving code-bases."
+    [Example Agent](https://github.com/sweepai/sweep/blob/main/sdk/src/agent.py)
+    [Website](https://sweep.dev)
+    Cognitive Architecture:  [from their blog](https://docs.sweep.dev/blogs/sweeps-core-algo?ref=blog.langchain.dev).
+    ![image](https://docs.sweep.dev/_next/static/media/flowchart.15fed92e.svg)
+
+
+
 ??? code "[Professor Synapse (ProfSynapse)](https://github.com/ProfSynapse/Synapse_CoR?) is an agent embodying the instructive channel for teaching people about Agents, and LLMs and how to work with new technology"
     Apart from the Github above, Here are several relevant and imporant links related to synth minds. 
     - https://www.synthminds.ai/

@@ -8,15 +8,8 @@ Tokenization is the process of splitting data into these individual units. The c
 !!! code "[Floret Vectors](https://explosion.ai/blog/floret-vectors)"
 
 ??? tip "[Superbloom: Bloom filter meets Transformer](https://arxiv.org/pdf/2002.04723.pdf)"
-
-  Wherein a bloom filter is used to create tokens/embeddings.
-  ![image](https://github.com/ianderrington/genai/assets/76016868/5ba71e69-7eaa-416c-b09a-940e016db145)
-
-
-
-??? idea "Related to Superbloom: Learned Hashing"
-
-    Which if you think of it, the ‘hashing function’ could just be a linear projection onto a hashing layer. A input unit (character or byte string) would be initialized randomly to have a ‘representation vector’, akin to a direct embedding. The challenge would be on inference when reconstructing outputs (it would be a Bloom look up for an output character, and not a simple mapping).
+    Wherein a bloom filter is used to create tokens/embeddings.
+    ![image](https://github.com/ianderrington/genai/assets/76016868/5ba71e69-7eaa-416c-b09a-940e016db145)
 
 ### Subword Units
 

@@ -18,3 +18,7 @@ actions-runner/
 *.db*
 
 *downloads*
+
+lib/
+
+*.egg-info

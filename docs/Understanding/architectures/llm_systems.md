@@ -1,7 +1,7 @@
 
 An LLM in isolation can have value, but it is often much easier to use when integrated with UI/UX and a host of elements that augment its performance. Here we describe some important components. 
 
-!!! tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
+???+ tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
     Important patterns mentioned (references to discussions herein):
     * [Evaluating and comparing](evaluating_and_comparing.md)
     * [Retreival Augmented Generation (RAG)](../agents/rag.md)

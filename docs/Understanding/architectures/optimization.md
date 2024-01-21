@@ -36,7 +36,7 @@ Pruning is a technique that eliminates weights that do not consistently produce 
 
 Related to pruning is the use of smaller models that are initialized based on larger ones
 
-??? code "[](https://github.com/OscarXZQ/weight-selection)"
+??? code "[Weight Selection](https://github.com/OscarXZQ/weight-selection)"
     A nice way to initialize smaller models from bigger ones
     [Paper](https://arxiv.org/pdf/2311.18823.pdf)
     <img width="270" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2c14986f-8edc-430e-bb59-3d3bae4f30d3">

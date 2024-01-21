@@ -9,8 +9,8 @@ When an agent (or model) engages in an interaction with another agent, the resul
 ## Frameworks
 Frameworks for Agentic Systems require that there is communication with AI-agents with and without people in the loop, to produce consistent end-goals. They may often have papers associated with them, and it may sometimes be inseprable from the papers. 
 
-???+ important "[ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
-
+???+ code "[ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
+    Works with Camel to create agentic systems and has some generally good results. It is certainly not full-fledged software but provides a solid framework for creating systems of agents to produce software-enabled products.
 
 
 
@@ -37,14 +37,21 @@ Frameworks for Agentic Systems require that there is communication with AI-agent
 
 
 
-
 ## Papers
-???+ important "[Experiential Co-Learning of Software-Developing Agents](https://arxiv.org/pdf/2312.17025.pdf) "
+??? important "[Experiential Co-Learning of Software-Developing Agents](https://arxiv.org/pdf/2312.17025.pdf) "
      Introduces a multi-agent paradigm that enables two types of language-agent using three modules of integration: 
      1. **Co-tracking**  that 'promotes interactive rehearsals between the agents' enabling joint exploration of procedural trajectories.
+     - During this process an instructor provides a set of instruction to which assisstants responds. This is viewed as a directed chain, connecting the node responses to the edge which is a transition-record from nodes $r_j$ to $r_{j+1}$ given instructions $i_{j+1}$, $\E = ($r_j, i_{j+1}, r_{j+1})$. The task execution represents the completion process, combining the 'collaborative dynamics between both agents'. 
      2. **Co-memorizing**  that looks for shortcuts based on past experiences and the environmental feedback, that allows information to be put into 'collective experience pools'.
+     - Nodes sharing the same state are agregated via a embedding hash. These are examiend with a graph-compiler to find shortcuts for task-completion. When done, the co-memorization routine compells the instructor to use the document the routes for better guidance to record the end-points. 
+     - The node feedback can be compared by looking at the product similarity between the node response $r_j$, the general task, the similarity between that node, and other nodes, and, the compilation success for node $r_j$. 
+     - This allows for the construction of key-value pairs showing the best states from $r_i$, with $r_i /ra r_j$ and with $r_i /ra r_j$ to $r_j$. 
      3. **Co-reasoning** encourages instruction enhancement from their experience pools 
-     Uses (#ChatDev) framework. 
+     - This step combines experience pools to generate refined insights in collaborative problem states, using memories to seed few-shot examples for instructions and responses as in [retrieval based prompting](../prompting/index.md#retrieval-augmented-prompting)
+     - With a response to instruction memory $M_I$ encountering the task state $r_j$, a retrieval tool, acesses experiential instructions matching the meaning of the task to provide zerofew-shot examples. to guide the instructors reasoning to share with the assistant. 
+     - The assistant with an instruction-to-response memory $M_A$ retrieves optimal responses based on the received instruction, allowing few-shot examples to create the next response.  
+
+    
 
 
 

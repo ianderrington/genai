@@ -2,8 +2,11 @@ Prompts detail the manner in which a Generative AI model should be producing out
 
 Because often an individual query or generation may be insufficient to produce the desired outputs, it may be necessary to use [cognitive architectures](../agents/cognitive_architecture.md) as part of [chains](../agents/cognitive_architecture.md). Here, we describe one-shot prompting methods, may function without multiple LLM-calls.
 
-It is also important to note, that while [manual methods](#manual-methods) are essential and may continue, [automatic methods](#automatic-methods) have become common and may help to reduce burdens of identifying sufficiently optimal prompts for certain models and situations.
+It is also important to note, that while [manual methods](#manual-methods) are essential and will continue. [Automatic methods](#automatic-methods) have become common and may help to reduce burdens of identifying sufficiently optimal prompts for certain models and situations. Because providing additional context through few-shot examples can improve results, [retrieval augmented prompting](#retrieval-augmented-prompting) can be successfully used to extract more effective solutions. 
 
+## Key concepts
+
+It has been found that the quality of responses is governed by the quality of the prompts. The structure of the prompts, as well as application-specific examples can improve the quality. The use of examples is called _few-shot_ or _multi-shot_ conditioning, and is distinct from _zero-shot_ prompts that do not give examples. Generally, examples can better-enable quality results, even with large LLMs. Consequently [retrieval augmented prompting](#retrieval-augmented-prompting), is used to find examples to improve results. 
 
 ## Manual Methods
 
@@ -62,7 +65,6 @@ It is also important to note, that while [manual methods](#manual-methods) are e
     25 - Clearly state the requirements that the model must follow in order to produce content, in the form of the keywords, regulations, hint, or instructions
     26 -  To write any text, such as an essay or paragraph, that is intended to be similar to a provided sample, include the following instructions: 
         * Please use the same language based on the provided paragraph[/title/text /essay/answer].
-
 
 ### Observed Frameworks:
 
@@ -126,9 +128,13 @@ It is also important to note, that while [manual methods](#manual-methods) are e
     to optimize prompts:
     <img width="418" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b82fd195-db43-48bb-9014-f5395329aa9a">
 
+??? "[Large Language Models Can Self Improve](https://arxiv.org/pdf/2210.11610.pdf) Using Chain of thought to provide better examples and then fine-tune the LLM."
+
+??? note "[Refiner](https://arxiv.org/pdf/2304.01904.pdf) Iteratively improves itself based on an LLM critic"
+    <img width="713" alt="image" src="https://github.com/ianderrington/general/assets/76016868/3ac44e13-2444-4f1e-ae3b-800c9d32ce59">
 
 
-!!! note "[GPT Prompt Engineer](https://github.com/mshumer/gpt-prompt-engineer)"
+??? code "[GPT Prompt Engineer](https://github.com/mshumer/gpt-prompt-engineer)"
     A fairly simple automation tool to create the best prompts
 
     ```python
@@ -147,8 +153,10 @@ It is also important to note, that while [manual methods](#manual-methods) are e
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f02a9f3e-4f4c-49de-9b35-1702df65d618)
 
+## Retrieval Augmented  Prompting 
+Retrieval based prompting use [RAG](../agents/rag.md) lookup to identify appropriate prompts that may more successfully generate results. 
 
-### Prompt Compression
+## Prompt Compression
 
 Prompt compression provides methods of compressing prompt inputs in such a way that it will yield equivalent results for downstream result generation. 
 
@@ -164,20 +172,33 @@ Prompt compression provides methods of compressing prompt inputs in such a way t
     **Pseudo Code**
     <img width="321" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0817d223-e806-4d16-9c31-c85124b248a7">
     <img width="307" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/40ef2794-7924-4882-a1bd-2d090428c017">
-    
 
-## Useful Resources for LLM Prompting
+## Optimizations
 
-- [Prompting is Programming: A Query Language for Large Language Models](https://arxiv.org/pdf/2212.06094.pdf)
-
-### Best practices and guides
-
-!!! tip "[Techniques to improve reliability](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md#how-to-improve-reliability-on-complex-tasks) By OpenAI"
+### Prompt tuning
+Uses a layer to not change prompts but change the embedding of the prompts.
+- [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/pdf/2104.08691.pdf)
 
 
-### Libraries 
+## Libraries and collections
 
 !!! tip "[Prompt Royale](https://github.com/meistrari/prompts-royale) Provides the ability to automatically generate prompts to test around the same general theme."
+
+- [Awesome Prompts](https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md)
+- [Prompt Hub](https://app.prompthub.studio/) For Generating image prompts
+- [Wolfram Prompt Repo](https://writings.stephenwolfram.com/2023/06/prompts-for-work-play-launching-the-wolfram-prompt-repository/?mibextid=Zxz2cZ)
+- [Notion.io plugin](https://haonmade.gumroad.com/l/ozuvb)
+- [PROMPT generator](https://huggingface.co/spaces/merve/ChatGPT-prompt-generator) To save a few words by just entering a persona and gives prompt output.
+- [Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
+- [Scale spellbook](https://www.scale.com/spellbook)
+
+
+## Best practices and guides
+
+!!! tip "[Prompting is Programming: A Query Language for Large Language Models](https://arxiv.org/pdf/2212.06094.pdf)"
+!!! tip "[Techniques to improve reliability](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md#how-to-improve-reliability-on-complex-tasks) By OpenAI"
+
+MANAGEN Make the below into Admonitions
 
 
 - [A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/pdf/2302.11382.pdf)
@@ -191,28 +212,7 @@ Prompt compression provides methods of compressing prompt inputs in such a way t
 - [Prompt Engineering Guide](https://www.promptingguide.ai/)
 - [Best practices for prompt engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)
 
-### Repositories and Collections
-- [Awesome Prompts](https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md)
-- [Prompt Hub](https://app.prompthub.studio/) For Generating image prompts
-- [Wolfram Prompt Repo](https://writings.stephenwolfram.com/2023/06/prompts-for-work-play-launching-the-wolfram-prompt-repository/?mibextid=Zxz2cZ)
 
-### Tools and Services
-- [Notion.io plugin](https://haonmade.gumroad.com/l/ozuvb)
-- [PROMPT generator](https://huggingface.co/spaces/merve/ChatGPT-prompt-generator) To save a few words by just entering a persona and gives prompt output.
-- [Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
-- [Scale spellbook](https://www.scale.com/spellbook)
-
-
-### Prompt tuning
-
-Uses a layer to not change prompts but change the embedding of the prompts.
-- [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/pdf/2104.08691.pdf)
-Boosted Prompting: few shot prompts that progressively solve more of the problem.
-
-## Prompt and optimization
-- [Large Language Models Can Self Improve](https://arxiv.org/pdf/2210.11610.pdf) Using Chain of thought to provide better examples and then fine-tune the LLM.
-- [Refiner](https://arxiv.org/pdf/2304.01904.pdf) Iteratively improves itself based on an LLM critic
-<img width="713" alt="image" src="https://github.com/ianderrington/general/assets/76016868/3ac44e13-2444-4f1e-ae3b-800c9d32ce59">
 
 
 ## To Sort
@@ -220,7 +220,6 @@ Boosted Prompting: few shot prompts that progressively solve more of the problem
 [A good description of advanced prompt tuning](https://cameronrwolfe.substack.com/p/advanced-prompt-engineering)
 
 
-```
 AutoPrompt [5] combines the original prompt input with a set of shared (across all input data) “trigger tokens” that are selected via a gradient-based search to improve performance.
 
 Prefix Tuning [6] adds several “prefix” tokens to the prompt embedding in both input and hidden layers, then trains the parameters of this prefix (leaving model parameters fixed) with gradient descent as a parameter-efficient fine-tuning strategy.
@@ -238,4 +237,4 @@ P-Tuning [8] adds task-specific anchor tokens to the model’s input layer that 
 [8] Liu, Xiao, et al. "GPT understands, too." arXiv preprint arXiv:2103.10385 (2021).
 
 [Self consistency technique](https://arxiv.org/pdf/2203.11171.pdf)
-```
+
