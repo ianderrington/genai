@@ -6,7 +6,13 @@ When an agent (or model) engages in an interaction with another agent, the resul
 !!! note "Multi-body system (bidirectional calling)"
     This system consists of multiple agents, and they engage in ongoing discussions about their daily activities. They also receive regular updates about their environment. An example of this type of system can be viewed in [this paper](https://arxiv.org/pdf/2304.03442.pdf).
 
-## Tools Paper and Code
+## Frameworks
+Frameworks for Agentic Systems require that there is communication with AI-agents with and without people in the loop, to produce consistent end-goals. They may often have papers associated with them, and it may sometimes be inseprable from the papers. 
+
+???+ important "[ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
+
+
+
 
 ???+ important "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
     ![image](https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924)
@@ -28,6 +34,17 @@ When an agent (or model) engages in an interaction with another agent, the resul
 
 !!! tip "[Self-play GPT](https://arxiv.org/pdf/2305.10142.pdf)"
     This model leverages different game-roles and LLMs to provide feedback on how to optimize the model and facilitate autonomous enhancement during gameplay.
+
+
+
+
+## Papers
+???+ important "[Experiential Co-Learning of Software-Developing Agents](https://arxiv.org/pdf/2312.17025.pdf) "
+     Introduces a multi-agent paradigm that enables two types of language-agent using three modules of integration: 
+     1. **Co-tracking**  that 'promotes interactive rehearsals between the agents' enabling joint exploration of procedural trajectories.
+     2. **Co-memorizing**  that looks for shortcuts based on past experiences and the environmental feedback, that allows information to be put into 'collective experience pools'.
+     3. **Co-reasoning** encourages instruction enhancement from their experience pools 
+     Uses (#ChatDev) framework. 
 
 
 

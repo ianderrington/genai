@@ -1,6 +1,6 @@
 Prompts detail the manner in which a Generative AI model should be producing output. Constructing the prompts to be the most effective in obtaining desired output is known as prompt engineering (PE). While PE may have dependencies on the underlying models, there are strategies that can be more universal in their ability to do well.
 
-Because often an individual query or generation may be insufficient to produce the desired outputs, it may be necessary to use [cognitive architectures](../agents/cognitive_architecture.md) as part of [chains](../agents/chains.md). Here, we describe one-shot prompting methods, may function without multiple LLM-calls.
+Because often an individual query or generation may be insufficient to produce the desired outputs, it may be necessary to use [cognitive architectures](../agents/cognitive_architecture.md) as part of [chains](../agents/cognitive_architecture.md). Here, we describe one-shot prompting methods, may function without multiple LLM-calls.
 
 It is also important to note, that while [manual methods](#manual-methods) are essential and may continue, [automatic methods](#automatic-methods) have become common and may help to reduce burdens of identifying sufficiently optimal prompts for certain models and situations.
 
@@ -62,6 +62,24 @@ It is also important to note, that while [manual methods](#manual-methods) are e
     25 - Clearly state the requirements that the model must follow in order to produce content, in the form of the keywords, regulations, hint, or instructions
     26 -  To write any text, such as an essay or paragraph, that is intended to be similar to a provided sample, include the following instructions: 
         * Please use the same language based on the provided paragraph[/title/text /essay/answer].
+
+
+### Observed Frameworks:
+
+???+ AIDA
+
+???+ SMART
+
+
+???+ note SCRIBE
+
+    Specify (S): Assign a unique, engaging role to ChatGPT to guide its responses.
+    Contextualize (C): Provide detailed background information to set the stage.
+    Responsibility (R): Clearly define ChatGPT's task, aligning it with the role and context.
+    Instructions (I): Offer clear, step-by-step guidance for ChatGPT.
+    Banter (B): Engage in interactive dialogue to refine ChatGPT's output.
+    Evaluate (E): Assess the final output, considering accuracy and relevance.
+
 
 
 ### Important concepts

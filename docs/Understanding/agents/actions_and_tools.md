@@ -1,4 +1,4 @@
-Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. While potentially minimal distinction. Often relayed by an [interpreter](./chains.md/#interpreters) or a perhaps simple jinja syntax-pattern more complete json input that can be validated for the function of choice.
+Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. While potentially minimal distinction. Often relayed by an [interpreter](./cognitive_architecture.md/#interpreters) or a perhaps simple jinja syntax-pattern more complete json input that can be validated for the function of choice.
 
 !!! code "[Local LLM Function Calling](https://github.com/rizerphe/local-llm-function-calling) enforces json semantics for calls to functions"
 
@@ -11,7 +11,7 @@ Actions may be be internal or externally focused.  focused generally related to 
 **External actions** may be to act on simulated or real environments, or otherwise tracked `state`, or to use a toolthat an agent may be 'equipped with' to run. These can be API calls or local function calls.
 
 ### Executors
-The action that an agent may take is enabled by an `AgentExecutor` or [interpreter](./chains.md/#interpreters) of the LLM output, that coordinates the call to perform the action.
+The action that an agent may take is enabled by an `AgentExecutor` or [interpreter](./cognitive_architecture.md/#interpreters) of the LLM output, that coordinates the call to perform the action.
 
 !!! code "[Langchain Agent Executor](https://github.com/langchain-ai/langchain/blob/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent.py#L637)"
 

@@ -16,7 +16,7 @@ Implementing a task-focused approach involves the following steps:
 2. Identify potential for AI assistance or automation for each task using tools such as supervised learning or generative AI.
 3. Estimate the value of automating each task, considering factors such as potential time or resource savings, and the ethical implications of doing so. [See ethical considerations](ethically/index.md).
 4. Decide whether to build or buy the necessary AI tools, and calculate the costs of automating the tasks. [See building or buying guide](building_and_buying.md).
-5. Prepare to govern the use of AI in your operations. [See governing guide](governing/index.md).
+5. Prepare to govern the use of AI in your operations. [See governing guide](managing/governing.md).
 
 ### Solution-Focused Approach
 

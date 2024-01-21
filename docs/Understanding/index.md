@@ -1,23 +1,25 @@
-🔮 Welcome to Manging Gen()AI. 🔮 
+# 🔮 Understanding Gen()AI! 
 
 Generative Artificial Intelligence, and related General AI and General Super AI are components of what already is and may be the future of intelligence and computing. We must effectively manage these technologies to use them to their highest potential.
 
 To manage these technologies effectively and responsibly _we must understand them_. That is a complex task, especially given the speed at which we are generating novel insights, new discoveries, backed by increasingly powerful hardware.
 
-That is why we created Mana Gen AI.
-!!! important "[tl;dr](#tldr)"
-    - Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it
-    - Understand the [**data**](./data/index.md) and collect data that you need.
-    - [**Understandand build**](architectures/index.md) use [**pre-trained**](architectures/pre_trained_models.md) models.
-    - [**Deploy**](deploying/index.md) your model
-    - [**Manage**](../Managenai/index.md) your model
+We created Mana Gen AI to help you _understand_ and [_use_](../Using/index.md). Gen()AI. 
 
-
-
-Here we focus on Generative AI, knowing various and changing definitions of these domains have a degree of overlap. With time and support we will be able to help many people understand the technology, lest it become a magician's tool.
+With time and support we will be able to help many people understand the technology, lest it become a magician's tool.
 
 !!! quote "Any sufficiently advanced technology is indistinguishable from magic."
     - Arthur C. Clark
+
+What do you need to know?
+
+???+ important "[tl;dr](#tldr)"
+    - Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it
+    - Understand the [**data**](./data/index.md) and collect data that you need.
+    - Consider [**Model Architectures**](./architectures/index.md) use [**pre-trained**](./architectures/pre_trained_models.md) models if possible.
+    - [**Deploy**](./deploying/index.md) your model.
+    - Build and use [agents](./agents/index.md) to do more.
+    - [**Use**](../Using/index.md) your Gen()AI efficiently, compliantly, and ethically.
 
 In the documents you read here, you will be able to see an increseasingly consistent and understandable discussion of Gen()AI technologies, enabled by Gen()AI technologies herein described.  Like most powerful technology, Gen()AI can be a two edged sword and effective use requires responsible and thoughtful understanding.
 
@@ -41,7 +43,7 @@ Getting into it, you will find the following outline:
 
 ### How do you do stuff with Gen()AI?
 
-Of course, there will be some important 'how-to's, in this section. You will also want to look at the [../Using/index.md] which may help you to directly use GenAI while minimizing wading too-deeply into the intriguing complexities of research and engineering associated with Gen()AI.  
+As part of understanding, you'll learn a number of 'how-to's, in this section. You will also want to look at the [using guide](../Using/index.md) which will help you to directly use GenAI without needing to wade too-deeply into the complexities of research and engineering associated with Gen()AI.  
 
 Competition is fierce to create the 'best' (based on certain metrics) Gen()AI, so much knowledge may not be known to protect IP and other secrets.
 

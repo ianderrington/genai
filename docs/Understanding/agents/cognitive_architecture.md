@@ -1,8 +1,16 @@
 Cognitive Architectures refer to systems or chain patterns that are employed after discrete interactions with single or multiple LLMs.
 
+A cognitive architecure can be considered a higher level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They are can be focused on both simple and complex tasks. 
 
-## Core themes
 
+
+One input call to an LLM outputs produces output(s) based on their input [prompts](../prompting/index.md).  Cognitive architectures, sometimes also considered [chains](#chains) allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md) in different forms of [#environments]. Chains can build more complex and integrated systems to enable higher-quality reasoning and results.
+
+Cognitive architectures can be constructed in a more linear [chains](#chains),as in the case of the LLM-enabled chat, or more complex branching [graph chains](#graph-chains) which have been shown to increase performance. 
+
+## Aspects of in Cognitive Architectures
+
+### Activities
 - **Rephrasing** or reformatting the input in such a way that the next
 - **Observing** or ingesting, intentionally or passively, gaining stored information that may assist in the tasks at hand.
 - **Reasoning** or the ability to create causal connections between input and output. These are often taken care of at the level of the LLM.
@@ -13,8 +21,9 @@ Cognitive Architectures refer to systems or chain patterns that are employed aft
 - **Reflection**, or an internal (or external) evaluation of output, be it thoughts, planning, and thoughts.
 - **Tool use** While overlapping directly with Observing or taking memory actions, tool usage may be part of cognitive patterns (like using a `scratch-pad`) and must be considered as such.
 
+### Models
+Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](#prompts) they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation with [recurrent training](../architectures/training/recurrent.md).
 
-Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](#prompts) they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation with [recurrent training](../architectures/recurrent_training.md).
 
 
 
@@ -38,7 +47,7 @@ They can be executed programmatically given frameworks or sometimes done manuall
 
 Here are some known thought structures that are improving agentic output.
 
-### Linear thought chains
+### Chains
 
 ??? important "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf)"
     
@@ -47,8 +56,83 @@ Here are some known thought structures that are improving agentic output.
     A classic paper, demonstrating the use of in-call task breakdown to better-enable more successful outputs. Often represented as appending a phrase such as `let's think about this step by step` both with and without exemplars to improve success quality going from zero to multi-shot prompts. 
     <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66">
 
-??? important "[The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps](https://arxiv.org/abs/2401.04925)"
+???+ important "[The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps](https://arxiv.org/abs/2401.04925)"
     Appending "you must think more steps" to "Let’s think step by step" increases the reasoning steps and signficantly improves the accuracy on various reasoning tasks.
+
+    ```txt
+    "Think About The Word: This strategy is to ask the model to interpret the word and rebuild the
+    knowledge base. Typically a word has multiple different meanings, and the effect of this is to get
+    the model to think outside the box and reinterpret the words in the problem based on the generated
+    interpretations. This process does not introduce new information. In the prompt, we give examples
+    of the words that the model is thinking about, and the model automatically picks words for this
+    process based on the new question.
+    • Read the question again: Read the questions repeatedly to reduce the interference of other texts
+    on the chain of thought. In short, we let the model remember the questions.
+    • Repeat State: Similar to repeated readings, we include a small summary of the current state after a
+    long chain of reasoning, aiming to help the model simplify its memory and reduce the interference
+    of other texts in the CoT.
+    • Self-Verification: Humans will check if their answers are correct when answering questions.
+    Therefore, before the model gets the answer, we add a self-verification process to judge whether
+    the answer is reasonable based on some basic information.
+    • Make Equation: For mathematical problems, Make Equations can help humans summarize and
+    simplify memory. And for some problems that require the assumption of an unknown number x,
+    establishing an equation is an essential process. We simulated this process and let the model try to
+    make equations in mathematical problems
+    "
+
+    In their prompts they have the following:
+    ```markdown
+    **Think About The World:**
+    _prompt:_
+    Q: Could someone in Tokyo take a taxi to the Metropolitan Museum of Art?
+    A: Let’s think step by step. The stem of the sentence is Tokyo, take a taxi, Metropolitan Museum
+    of Art. Think about Tokyo... Think about taking a taxi... Think about the Metropolitan Museum of
+    Art... Inference: Tokyo is in Japan and the Metropolitan Museum of Art is in New York. The two
+    places are separated by the sea, so you can’t take a taxi there. Since the two places are separated
+    by the sea, you can’t take a taxi there. The answer is yes.
+    Q: {question}
+    
+    **Read the question again**
+    _prompt:_
+    Q: Mark’s father gave him $85. Mark bought 10 books, each of which cost $5. How much money
+    does Mark have left?
+    A: Let’s think step by step. The question is: How much money does Mark have left? So we need
+    to calculate How much money does Mark have left. Start looking for information about money
+    now. Mark’s father gave him $85. Mark bought 10 books, each of which cost $5. That means that
+    Mark spent $50 on books. So we have equation money = +85 - 50 = 35. So Mark has $85 - $50 =
+    $35 left. So the answer is 35.
+    Q: {question}
+    **Repeat State**
+    _prompt:_
+    Q: A coin is heads up. Janette does not flip the coin. Stacey flips the coin. Ronny flips the coin.
+    Kim does not flip the coin. Is the coin still heads up? Note that "flip" here means "reverse".
+    A: Let’s think step by step. The state of the coin from the beginning is heads up. Janette does not
+    flip the coin, so the coin remains heads up. coin is heads up. Stacey flips the coin, so the coin is
+    now tails up. coin is now tail up. Ronny flips the coin, so the coin is now heads up again. Kim
+    does not flip the coin, so the coin remains heads up. coin is head up. The answer is yes.
+    Q: {question}
+
+    **Self-Verification**
+    _prompt:_
+    Q: Take the last letters of each words in "Alina Alessandra Amina Bianca" and concatenate them.
+    A: Let’s think step by step. There is four words. So the answer will consist of four letters. Explain
+    concatenate: concatenate is a term used in computer programming and mathematics, referring to
+    the operation of combining two or more strings, sequences, or sets in a linear order. The last letter
+    of "Alina" is "a". The last letter of "Alessandra" is "a". The last letter of "Amina" is "a". The last
+    letter of "Bianca" is "a". So we have four letters. So the final answer is "aaaa". The answer is aaaa.
+    Q: {question}
+    **Make Equation**
+    _prompt:_
+    Q: 5 children were riding on the bus. At the bus stop 63 children got off the bus while some more
+    got on the bus. Then there were 14 children altogether on the bus. How many more children got
+    on the bus than those that got off?
+    A: Let’s think step by step. first step, 5 children were riding on the bus. We know 5 children is on
+    the bus. second step,There were 63 children that got off the bus. third step, some more got on the
+    bus we define as unknown x. fourth step, 14 children remained on the bus, which means we can
+    calculate unknow x.we have equation x+5-63 = 14, now we know x is 72. fifth step, Therefore, 72
+    - 63 = 9. 9 more children got on the bus than those that got off. The answer is 9.
+    Q: {question}
+    ```
 
 ??? important "[Chain of Code: Reasoning with a Language Model-Augmented Code Emulator](https://arxiv.org/pdf/2312.04474.pdf)"
 

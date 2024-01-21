@@ -7,7 +7,7 @@ An LLM in isolation can have value, but it is often much easier to use when inte
     * [Retreival Augmented Generation (RAG)](../agents/rag.md)
     * [Fine tuning](optimization.md#finetuning)
     * [Caching](../agents/memory.md#caching) to reduce latency.
-    * [Guardrails](../agents/chains.md#guardrails) to ensure output (and input) quality.
+    * [Guardrails](../agents/cognitive_architecture.md#guardrails) to ensure output (and input) quality.
     * Data Flywheel to use data collection and feedback to improve model and experience
     * Cascade Breaking models up into smaller simpler tasks instead of big ones.
     * Monitoring to ensure value is being derived

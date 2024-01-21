@@ -16,11 +16,6 @@ This section provides a selection of repositories that enable the creation of mo
 
 - [Hugging Face Transformers](https://huggingface.co/transformers/v4.0.1/index.html): This is a popular library for creating transformer models.
 
-### Finetuning
-
-Finetuning is the process of adapting a pre-trained model to a specific task. For more in-depth information on this, please see the [finetuning](../../Understanding/architectures/finetuning.md) page. Here are some tools for finetuning:
-
-- [Adapters for Hugging Face](https://adapterhub.ml/): This is a tool for finetuning Hugging Face models.
 - [Chatall](https://github.com/sunner/ChatALL): This tool allows interaction with multiple chatbots at the same time.
 - [LocalAI](https://github.com/go-skynet/LocalAI): This is a drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
 
