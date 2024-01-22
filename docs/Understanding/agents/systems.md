@@ -12,6 +12,8 @@ Frameworks for Agentic Systems require that there is communication with AI-agent
 ???+ code "[ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
     Works with Camel to create agentic systems and has some generally good results. It is certainly not full-fledged software but provides a solid framework for creating systems of agents to produce software-enabled products.
 
+???+ code "[Agency Swarm](https://github.com/VRSEN/agency-swarm) provides a language creating interacting systems of agents."
+    
 
 
 ???+ important "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
