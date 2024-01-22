@@ -33,6 +33,10 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 ### Other examples
 
+??? code "[Enhancing LLMs with Semantic-layers](https://github.com/tomasonjo/llm-movieagentgs)"
+    [Blog](https://towardsdatascience.com/enhancing-interaction-between-language-models-and-graph-databases-via-a-semantic-layer-0a78ad3eba49)
+
+
 !!! note "[Ontology mapping](https://medium.com/@peter.lawrence_47665/encouraging-results-for-knowledge-graph-extraction-by-llm-ontology-prompting-60a7e5dcaf0a)"
 
 ??? code "[OntoGPT](https://github.com/monarch-initiative/ontogpt) uses two different methods to query knowledge graphs using LLMS"
