@@ -1,5 +1,3 @@
-
-
 conda create --name gpt-researcher python=3.12
 conda activate gpt-researcher
 ln -s ../../downloads/github/assafelovic/ .
@@ -18,7 +16,4 @@ sudo ln -s /opt/homebrew/opt/fontconfig/lib/libfontconfig.1.dylib /usr/local/lib
 sudo ln -s /opt/homebrew/opt/pango/lib/libpangoft2-1.0.dylib /usr/local/lib/pangoft2-1.0
 # If rust is not installed
 #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-
-
 

@@ -3,6 +3,8 @@ An LLM in isolation can have value, but it is often much easier to use when inte
 
 ???+ tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
     Important patterns mentioned (references to discussions herein):
+
+    
     * [Evaluating and comparing](evaluating_and_comparing.md)
     * [Retreival Augmented Generation (RAG)](../agents/rag.md)
     * [Fine tuning](optimization.md#finetuning)

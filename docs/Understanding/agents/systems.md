@@ -15,7 +15,6 @@ Frameworks for Agentic Systems require that there is communication with AI-agent
 ???+ code "[Agency Swarm](https://github.com/VRSEN/agency-swarm) provides a language creating interacting systems of agents."
     
 
-
 ???+ important "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
     ![image](https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924)
     [Paper](https://arxiv.org/pdf/2308.08155.pdf)
@@ -41,17 +40,73 @@ Frameworks for Agentic Systems require that there is communication with AI-agent
 
 ## Papers
 ??? important "[Experiential Co-Learning of Software-Developing Agents](https://arxiv.org/pdf/2312.17025.pdf) "
+
      Introduces a multi-agent paradigm that enables two types of language-agent using three modules of integration: 
-     1. **Co-tracking**  that 'promotes interactive rehearsals between the agents' enabling joint exploration of procedural trajectories.
-     - During this process an instructor provides a set of instruction to which assisstants responds. This is viewed as a directed chain, connecting the node responses to the edge which is a transition-record from nodes $r_j$ to $r_{j+1}$ given instructions $i_{j+1}$, $\E = ($r_j, i_{j+1}, r_{j+1})$. The task execution represents the completion process, combining the 'collaborative dynamics between both agents'. 
-     2. **Co-memorizing**  that looks for shortcuts based on past experiences and the environmental feedback, that allows information to be put into 'collective experience pools'.
+
+     **Co-tracking**  that 'promotes interactive rehearsals between the agents' enabling joint exploration of procedural trajectories.
+
+     - During this process an instructor provides a set of instruction to which assisstants responds. This is viewed as a directed chain, connecting the node responses to the edge which is a transition-record from nodes $r_j$ to $r_{j+1}$ given instructions $i_{j+1}$, $E = (r_j, i_{j+1}, r_{j+1})$. The task execution represents the completion process, combining the 'collaborative dynamics between both agents'. 
+    TODO: FIX THIS; it isn't quite right
+    ```mermaid
+    flowchart LR
+    subgraph instructor["Instructor"]
+        i1["Instruction \( i_{j} \)"]
+        i2["Instruction \( i_{j+1} \)"]
+    end
+    subgraph assistants["Assistants"]
+        r1["Response \( r_{j} \)"]
+        r2["Response \( r_{j+1} \)"]
+    end
+    i1 -->|provides| r1
+    r1 -->|responds with| i2
+    i2 -->|provides| r2
+    r2 -->|responds with| i1
+    r1 -->|transition-record| r2
+
+    ```
+     **Co-memorizing**  that looks for shortcuts based on past experiences and the environmental feedback, that allows information to be put into 'collective experience pools'.
+
      - Nodes sharing the same state are agregated via a embedding hash. These are examiend with a graph-compiler to find shortcuts for task-completion. When done, the co-memorization routine compells the instructor to use the document the routes for better guidance to record the end-points. 
      - The node feedback can be compared by looking at the product similarity between the node response $r_j$, the general task, the similarity between that node, and other nodes, and, the compilation success for node $r_j$. 
-     - This allows for the construction of key-value pairs showing the best states from $r_i$, with $r_i /ra r_j$ and with $r_i /ra r_j$ to $r_j$. 
-     3. **Co-reasoning** encourages instruction enhancement from their experience pools 
+     - This allows for the construction of key-value pairs showing the best states from $r_i$, with $r_i \Rightarrow r_j$ and with $r_i \Rightarrow r_j$ to $r_j$. 
+     
+    ```mermaid
+    graph TD
+        subgraph state_pool["Collective Experience Pools"]
+            A["Embedding Hash Aggregation"]
+            B["Graph Compiler"]
+            C["Documentation of Routes"]
+        end
+        A -->|examines| B
+        B -->|finds shortcuts| C
+        C -->|records endpoints| A
+    ```
+
+     **Co-reasoning** encourages instruction enhancement from their experience pools 
+
      - This step combines experience pools to generate refined insights in collaborative problem states, using memories to seed few-shot examples for instructions and responses as in [retrieval based prompting](../prompting/index.md#retrieval-augmented-prompting)
      - With a response to instruction memory $M_I$ encountering the task state $r_j$, a retrieval tool, acesses experiential instructions matching the meaning of the task to provide zerofew-shot examples. to guide the instructors reasoning to share with the assistant. 
      - The assistant with an instruction-to-response memory $M_A$ retrieves optimal responses based on the received instruction, allowing few-shot examples to create the next response.  
+
+     ```mermaid
+     flowchart LR
+        subgraph experience_pools["Experience Pools"]
+            MI["Instruction Memory  $$M_I$$ "]
+            MA["Assistant Memory \( M_A \)"]
+        end
+        subgraph reasoning["Instruction Enhancement"]
+            task_state["Task State \( r_j \)"]
+            retrieval["Retrieval Tool"]
+            few_shot["Few-Shot Examples"]
+        end
+        task_state -->|encounters| MI
+        MI -->|accesses| retrieval
+        retrieval -->|guides| few_shot
+        few_shot -->|informs| MA
+        MA -->|retrieves| task_state
+
+     
+     ```
 
     
 

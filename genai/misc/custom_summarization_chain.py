@@ -5,10 +5,22 @@ from langchain.document_loaders import PyPDFLoader
 from langchain import PromptTemplate
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains.summarize import load_summarize_chain
-from langchain.chat_models import ChatOpenAI
+# from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 
 
-@st.cache_data
+import pdfplumber
+
+def extract_data(feed):
+    data = []
+    with pdfplumber.load(feed) as pdf:
+        pages = pdf.pages
+        for p in pages:
+            data.append(p.extract_tables())
+    return None # build more code to return a dataframe 
+
+
+# @st.cache_data
 def setup_documents(pdf_file_path, chunk_size, chunk_overlap):
     loader = PyPDFLoader(pdf_file_path)
     docs_raw = loader.load()
@@ -87,7 +99,9 @@ def main(args):
     chunk_overlap = st.sidebar.slider(
         "Chunk Overlap", min_value=5, max_value=5000, step=10, value=200
     )
-
+    num_summaries = st.sidebar.number_input(
+        "Number of summaries", min_value=1, max_value=10, step=1, value=1
+    )
     if st.sidebar.checkbox("Debug chunk size"):
         st.header("Interactive Text Chunk Visualization")
 
@@ -102,8 +116,10 @@ def main(args):
 
     else:
         user_prompt = st.text_input("Enter the custom summary prompt")
-        pdf_file_path = st.text_input("Enther the pdf file path")
+        # pdf_file_path = st.text_input("Enther the pdf file path")
 
+        pdf_file_path = st.file_uploader("Upload a PDF file", type=["pdf"])
+        
         temperature = st.sidebar.number_input(
             "Set the ChatGPT Temperature",
             min_value=0.0,
@@ -111,10 +127,11 @@ def main(args):
             step=0.1,
             value=0.5,
         )
-        num_summaries = st.sidebar.number_input(
-            "Number of summaries", min_value=1, max_value=10, step=1, value=1
-        )
-        if pdf_file_path != "":
+
+        if pdf_file_path:
+            import ipdb; ipdb.set_trace()
+            # bytes_data = pdf_file_path.getvalue()
+            # st.write(bytes_data)
             docs = setup_documents(pdf_file_path, chunk_size, chunk_overlap)
             st.write("PDF loaded successfully")
 

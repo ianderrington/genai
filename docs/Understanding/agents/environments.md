@@ -12,3 +12,9 @@ The origin of the information can be 'a person' or a 'data stream' that is based
     As may be needed for a robot, a camera, and a microphone provide the inputs for the environment that it exists in. The signals received (and processes) only represent a portion of what might potentially be received.
 
 !!! code "[Madrona Game Enging](https://madrona-engine.github.io/)"
+
+??? code "[Voyager, an Agent in Minecraft](https://github.com/MineDojo/Voyager)"
+    [Website](https://voyager.minedojo.org/)
+    [Paper](https://arxiv.org/pdf/2305.16291.pdf)
+
+

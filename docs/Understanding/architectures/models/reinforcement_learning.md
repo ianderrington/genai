@@ -1,13 +1,8 @@
-Reinforcement learning-based models have a colorful history.
+Reinforcement learning is a class of of ML that uses dynamic feedback from environments to enable more successful outcomes.
 
-TODO
+MANAGEN TODO: Insert general description in here. 
 
-
-## Reinforcement Learning with Human Feedback (RLHF)
-
-RLFH has been found to be an essential component to enabling GPT based GenAI to be performant.
-
-TODO
+In the context of Generative AI, it may be considered that each token that is generated is an action taken in the state-space of tokens. Consequenetly, RL has been used as a method for improving, other Geerative models using [feedback](../training/feedback.md) methods. 
 
 ## Notable research
 

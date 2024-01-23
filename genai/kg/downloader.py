@@ -191,8 +191,10 @@ class ArxivDocument(Document):
     def make_local_path(self):
         # parse filename from url to make it something that is compatible for local_paths. Truncate if too long.
         print(f"parsed_url.path={self.parsed_url.path}")
+        
         file_name = self.file_name()
-        return os.path.join(self.base_path, "pdf", "arxiv", file_name)
+        folder_name = file_name.replace(".pdf", "")
+        return os.path.join(self.base_path, "pdf", "arxiv", folder_name, file_name)
 
     def write_to_disk(self, url, local_path):
         print(f"Write to disk: url={url}, local_path={local_path}")
@@ -278,8 +280,11 @@ class PDFDocument(Document):
         return url
 
     def make_local_path(self):
+        file_name = self.file_name()
 
-        return os.path.join(self.base_path, "pdf", "other", self.file_name())
+        folder_name = file_name.replace(".pdf", "")
+        return os.path.join(self.base_path, "pdf", "other", folder_name, file_name)
+        # return os.path.join(self.base_path, "pdf", "other", )
 
     def get_metadata(self):
         # if "arxiv.org" in self.parsed_url.netloc:

@@ -1,4 +1,5 @@
 ## Gen(erative) AI Agents
+
 Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables.
 
 Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.
@@ -24,7 +25,9 @@ Though, more generally it includes these components:
 * [Interpreters and Executors](./cognitive_architecture.md#interpreters) that are used to process input or output.
 * [Systems of Agents](systems.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
 
+
 ## Agents in In perspective
+
 Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/), Agents can be considered as 
 
 ???+ important "How components are related""
@@ -126,6 +129,7 @@ To enable that it may require more complicated relations between example compone
         Agent --> |informs and effects| AgentManager
         AgentManager --> |informs and effects| Agent
     ```
+
 ## Agent environemtns and purposes
 Agents can exist in different 'domains' all
 
@@ -152,9 +156,18 @@ Agents can exist in different 'domains' all
     "Huge language models (LMs) have ushered in a new era for AI, serving as a gateway to natural-language-based knowledge tasks. Although an essential element of modern AI, LMs are also inherently limited in a number of ways. We discuss these limitations and how they can be avoided by adopting a systems approach. Conceptualizing the challenge as one that involves knowledge and reasoning in addition to linguistic processing, we define a flexible architecture with multiple neural models, complemented by discrete knowledge and reasoning modules. We describe this neuro-symbolic architecture, dubbed the Modular Reasoning, Knowledge and Language (MRKL, pronounced "miracle") system, some of the technical challenges in implementing it, and Jurassic-X, AI21 Labs' MRKL system implementation.
     ```
 
+## Other concepts
+!!! note "Push vs Pull: how an agent gets its ability to perform the next action"
+    If an agent requests something, then it is able to act based on a 'pull' action. If it is given everything to begin with, it has a 'push' action. From this Langchain [blog](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)
+
+## The Future 
+
+It is possible that limitations fundamental to static agents are not goin to be universally optimal. Different cognitive architecutres and enabling tools will provide different degrees of success. That is where cognitive agents that are able to able to 'pull' new skills, and ways of working, into their realm of agency, will be able to bypass limitations inherent in in their original configurations.
+
 ## References
 
 ### Reviews and Lists
+
 !!! important "[LLM-Agent-Papers](https://github.com/WooooDyy/LLM-Agent-Paper-List)"
 
 ??? note "[The Rise and Potential of Large Language Model Based Agents:A Survey](https://arxiv.org/pdf/2309.07864.pdf) Providess a comprehensive overview of thoughtful ways of considering LLMs."
@@ -163,3 +176,7 @@ Agents can exist in different 'domains' all
      As usual, a splendid post by Lilian Weng
 
 !!! code "[Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of a nicely curated list of systems using agents"
+
+### Other
+
+!!! note "[Open AI's bet on a cognitive architecture](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)"

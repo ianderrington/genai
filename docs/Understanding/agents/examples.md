@@ -21,6 +21,10 @@ cognitive_architecture.md)
 
 !!! important "[Open GPTs](https://github.com/langchain-ai/opengpts) Provides a similar experience to OpenAI GPTs and assistants, using Langchain components"
 
+??? code "[Voyager from MineDojo](https://github.com/MineDojo/Voyager)"
+    Enables expandable tool-usage for a life-long learning agent working within the Minecraft Environment. 
+    ![image](https://github.com/MineDojo/Voyager/raw/main/images/pull.png)
+
 
 !!! code "[GPT researcher](https://github.com/assafelovic/gpt-researcher) is an autonomous agent designed for comprehensive online research on a variety of tasks."
     LOOK INTO THIS

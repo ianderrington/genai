@@ -11,6 +11,31 @@ Additionally, there are useful [libraries and tools](./libraries_and_tools.md) w
 
 The rapid development in Generative AI tooling makes it challenging to keep up with the development and deprecation of powerful frameworks and tools. Some of the mentioned references may not be fully completed, or even nascent repos to build their intended purposes (described here). Please let us know if we are missing anything [here](../../Managenai/contributing.md).
 
+## The Stack
+
+TODO: This needs to be made into a table with a pivot potential, lest the same information be rewritten. 
+
+
+
+| Layer             | Component            | Description                                                                 | Examples                   |
+|-------------------|----------------------|-----------------------------------------------------------------------------|----------------------------|
+| Layer 4: Management | Observability        | Tools for monitoring the AI system's performance and health.            | [Helicone](https://www.helicone.ai), [AgentOps](https://www.agentops.ai),       |
+|                   | Compliance           | Uses observability to ensure the system is operating with legal and ethical boundaries | www.holistic.ai, www.monitaur.ai ||                   
+|                   | Security             | Tools and services to ensure the security of AI systems and data.            | Security Service           |
+| Layer 3: Deployment | Evaluation           | Systems for assessing the performance and effectiveness of AI models.        | MANAGEN: FIND EVALUATION SYSTEMS          |
+|                   | Prompt Management    | Systems to manage and refine the prompts used in conversational AI.          | Prompt Management System   |
+|                   | Orchestration        | Tools for managing complex workflows and processes in AI operations.         | Orchestration Tool         |
+|                   | Agent Tool Frameworks| Frameworks for building AI agents and managing their interactions.           | Agent Tool Framework       |
+|                   | UI/UX        | Guis and interfaces are specifically designed for streamlined connection with GenAI models.         | [Gradio](https://grad.io), [streamlit.io](https://streamlit.io)|
+| Layer 2: Data     | Data Pre-processing  | Tools for cleaning, normalizing, and preparing data for analysis.            |[cleanlab.ai](https://cleanlab.ai), [unstructured.io](https://unstructured.io/)   |
+|                   | ETL + Data Pipelines | Tools to extract, transform, and load data, and to manage data flow.         | ETL & Data Pipeline Tool   |
+|                   | Databases            | Services for structured data storage, including vector databases and caches. | Database Service           |
+| Layer 1: Foundation | Model Deployment + Inference | Services to deploy AI models and perform inference at scale.       | Model Deployment Service   |
+|                   | Foundation Models    | Pre-built models offering a range of capabilities and uses.                  | Foundation Model           |
+|                   | GPU Providers        | Providers of computational resources, specifically GPUs, for AI processing.  | GPU Provider               |
+
+Table modified from [here](https://menlovc.com/perspective/the-modern-ai-stack-design-principles-for-the-future-of-enterprise-ai-architectures/)
+
 ## Frameworks
 
 Starting with base programming languages, increasingly higher-level frameworks enable training and calling of AI models. Higher-level orchestration libraries and platforms allow creating and evaluating chains, agents, and systems that sometimes use visual interfaces. These can often be augmented with various tools/packages/repositories. On top of these involve mostly or all-complete frameworks and platforms that enable nearly complete.
@@ -86,7 +111,8 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 ### Griptape
 
 !!! code "[Griptape](https://github.com/griptape-ai/griptape) an enterprise alternative to Langchain"
-    [Docs]
+    
+
 #### Higher level
 
 ??? code "[Pytorch Lightning](https://lightning.ai/docs/pytorch/latest/) Enables model training with Pytorch and minimizes the boilerplate"

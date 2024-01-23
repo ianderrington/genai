@@ -1,43 +1,52 @@
-TODO and MANGEN: This entire document needs to be reorganized and revised.
+MANGEN: This entire document needs to be reorganized and revised.
 
-[Foundation models](#foundation-models) play a significant role in the data-based approach as they can be built upon to allow fine-tuning based on new or more specific data that may be proprietary, private, or otherwise inappropriately accessed for training a public-facing model. 
+The models for Generative AI consist of the computational components that are trained to generate outputs conditioned upon given inputs. While computational models may be used to generate impressive new content, as for traditional state-machines that make output choices based on heuristics, they differ from those that are data-informed. 
 
-<i id='#foundation-models'></i>
-!!! important "Foundation models"
-    Foundation models, by their nature, will continually expand in scope and potential. We share some seminal papers on foundation models here.
+## Architecture Genres
 
-    Continual evolution of models may be found in hubs such as [Hugging Face](https://huggingface.co/models?other=foundation+model&sort=trending).
+* Encoder-Decoder (EDT), is also sequence-to-sequence.
+* Encoder-only: (BERT)
+* Decoder-only (GPT) Next-token
+* Multi-domain decoder-only transformer (Gato)
 
+
+## Model Classes
+Different model classes of models can often be used with multiple types of model learning. Because of their present degree of quality present model Architectures tend to be transformer-based, or diffusion-based, or made from any other sufficently capable AI method. While Generative Adversarial Networks, [GANS](https://en.wikipedia.org/wiki/Generative_adversarial_network) were the initially most successful, the challenges in training them successfully can be difficult to surmount. Below we describe the model classes in greater detail.
+
+- [Transformers](./transformers.md)
+- [Reinforcement Learning](./reinforcement_learning.md)
+- [Diffusers](./diffusers.md)
+- [Generative Adversarial Networks](./gans.md)
+- [Developing Architectures](./developing_architectures.md)
+
+## Model Domains
 
 While there is a great deal in several primary domains of Generative AI, Text, Image, sound, video, there are many other modalities that are of interest. Here we share prominent and interesting methods for these domains. These models will often rely on [tokenization](../../data/tokenizing.md). Once tokenized, the transformed projected in some way to an _embedding vector_ that can be used by  downstream LLM's, as well as vector-databases.
 
-
-??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/pdf/2307.09288.pdf) A nearly open source set of 7B-70B models with quality performance"
-    <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
-
-
-??? tip "[Shepherd: A Critic for Language Model Generation](https://arxiv.org/pdf/2308.04592.pdf) A 7B model trained to critique outputs"
-    **Example chat response**
-    <img width="560" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c207939b-9bd7-4a20-b747-ea46d13534f7">
-
-??? tip "[Baize: An Open-Source Chat Model with Parameter-Efficient Tuning on Self-Chat Data](https://arxiv.org/pdf/2304.01196.pdf) Parameter efficient LLama Tuning and risk minimization"
-    with a new 'Self Distillation' with Feedback to improve itself even more. RESEARCH ONLY
-    <img width="587" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5426c030-96a6-4e85-a37f-d465a7e13ab5">
-
-## Mixture of Experts
-
-## General Literature
-
-??? code "[A Survey of Large Language Models](https://github.com/RUCAIBox/LLMSurvey)"
-    [Paper](https://arxiv.org/pdf/2303.18223.pdf)
-
 ## Multi-Modal Models
+
+Multi-modal Large Language Models (MLMMs) enable us to connect information from different domains, and bring us closer to artificial general intelligence. 
+
+It can be challenging to fuse different domains of data, such as text and images, for a number of reasons. Here are some essential concepts to consider when working with or building MLMMs.
+
+There are two general methods to create MLMMS: 
+
+1. **Early Fusion**: Combine data modalities and then train a singular model to begin with. 
+1. **Late Fusion**: Create separate language models for different modalities and then combine the models under a fine-tuning objective.
+
+Each of these offers different benefits and challenges. 
+
+??? important "[How to Bridge the Gap between Modalities: A Comprehensive Survey on Multi-modal Large Language Model](https://arxiv.org/pdf/2311.07594.pdf)"
+    
+TODO: Clip paper
+
+??? important "[Meta Transformer](https://arxiv.org/pdf/2307.10802.pdf) Combines embedding in from 12 modalities by adjoining individual models and flattening them together."
+    <img width="868" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f366d75d-43fd-4101-84e6-53baa49b64ab">
+    [Github](https://github.com/invictus717/MetaTransformer)
 
 
 ### Vision-Language Models
-Vision Language models are among the most prominent.
-
-TODO: Clip paper
+Vision Language models are among the most prominent of models beyond language models. They are often based on [transformer](./transformers.md) though there are some unique requirements in them. There are some interesting ways of considering how to the different domains in ways that may have applicability across models. Here are a few useful considerations.  
 
 ??? tip "[SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs](https://arxiv.org/pdf/2306.17842.pdf) A really cool idea that uses pyramidal representations and compresses information into text-tokens of different levels."
 
@@ -53,76 +62,57 @@ TODO: Clip paper
 ### Tabular Models
 - [Challenges in End-to-End Neural Scientific Table Recognitions](https://ieeexplore.ieee.org/abstract/document/8978078)
 
-## More than one modal
 
-??? important "[Meta Transformer](https://arxiv.org/pdf/2307.10802.pdf) Combines embedding in from 12 modalities by adjoining individual models and flattening them together."
-    <img width="868" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f366d75d-43fd-4101-84e6-53baa49b64ab">
-    [Github](https://github.com/invictus717/MetaTransformer)
+## Common Components
+
+### Activations
+The components of model classes include a number of operations.
+
+### Softmax
+Softmax is an activation function that computes a probability-like output for logistic outputs. Generally given in the form
+
+$$
+(softmax(x))𝑖=exp(𝑥𝑖)∑𝑗exp(𝑥𝑗) \\
+softmax(x_i) = \exp(x_i)/\sum_j\exp(x_j)
+$$
+
+!!! note "Is softmax Off by 1?"
+
+    Based on some observations by [Qualcom](https://arxiv.org/pdf/2306.12929.pdf), where "97%+ of outlier activations in LLMs occur in whitespace and punctuation positions.”  there was indication that it is important to have 'no attention' given to some tokens.
+
+    Adding a $1$ to the demonimator allows for `no attention` to be had. This is describe [here](https://www.evanmiller.org/attention-is-off-by-one.html), discussed [here](https://news.ycombinator.com/item?id=36851494) and already found in the [flaxformer](https://github.com/google/flaxformer/blame/ee62754ebe5a5eeb111493622de5537133822e3e/flaxformer/components/attention/dense_attention.py#L50) architecture.
+
+    A general conclusion is that it is likely more important for highly quantized weights, but 32 and 16 bit dtypes are probably unaffected.
 
 
-## Model agnostic improvements
 
-!!! tip "[Learning to Compress Prompts with Gist Tokens](https://arxiv.org/pdf/2304.08467.pdf). Can enable 26x compression and 40% FLOP reduction and improvements by training 'gist tokens' to summarize information."
+## Embeddings
+Embeddings play a key role in AI as they translate [tokens](../../data/tokenizing.md) into numerical representation that can be processed by the AI.
 
+'What are Embeddings' is an essential [read](http://vickiboykis.com/what_are_embeddings/) that elucidates the concept of embeddings in a digestible manner. For a deeper dive, check the accompanied [Github](https://github.com/veekaybee/what_are_embeddings/blob/main/README.md) page.
+
+### Position Embeddings
+
+Position embedding is an essential aspect of transformer-based attention models -- without it the order of tokens in the sequence would not matter. 
+
+A common manner of including positional embeddings is to _add_ them to the text embeddings. There are other manners of including embeddings. 
+
+??? code "[Deberta: Decoding-Enhanced Bert with Disentangled Attention](https://github.com/microsoft/DeBERTa)"
+    [Paper](https://arxiv.org/pdf/2006.03654.pdf)
+    The authors herein describe a manner of including embeddings in a manner that enables position-dependence but does not require addition of the embeddings. 
+    
+
+## General Literature
+
+??? code "[A Survey of Large Language Models](https://github.com/RUCAIBox/LLMSurvey)"
+    [Paper](https://arxiv.org/pdf/2303.18223.pdf)
 
 
 ## TO SORT
-
-
-
-??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/pdf/2307.09288.pdf) A nearly open source set of 7B-70B models with quality performance"
-
-    <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
-
-
-## To consider and sort
-
-MANGEN (This is a number of the things that need to be considered in reorganization)
-
-### Self-supervised learning.
--
-Diffusion
-LLMs
-
-Alignment methods.
-
-Additional models come up all the time.
 
   * [HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units](https://ieeexplore.ieee.org/abstract/document/9585401)
   * [Generating Diverse High-Fidelity Images with VQ-VAE-2](https://arxiv.org/pdf/1906.00446.pdf)
   * Token Embedding: Mapping to a vector space.
   * Positional Embedding: Learned or hard-coded mapping to position of sequence to a vector space
-  * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information.
-  * Bi-directional / unmasked
-  * Unidirectional / masked self attetion
-  * Cross attention applies attention to the primary sequence and treates the second token sequence the context.
-  * Multi-head attention. Multiple attention heads in parallel.
-  * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`.
-  * Unembedding: Learns to convert vector intot he vocuabulary elements.
 
 
-
-
-
-  **Architectures:**
-
-  * Encoder-Decoder (EDT), is also sequence-to-sequence.
-  * Encoder-only: (BERT)
-  * Decoder-only (GPT) Next-token
-  * Multi-domain decoder-only transformer (Gato)
-
-
-## Established Architectures
-
-## Developing Architectures
-
-!!! tip "[Retentive Network: A successor to Transformer for Large Language Models](https://arxiv.org/pdf/2307.08621.pdf) Important LLM-like system using similar components that may help it to be more scaleable than `O(N^2)` memory and `O(N)` inference complexity."
-
-
-### Activations
-
-{%
-   include-markdown "./components.md"
-   start="<!--start-activations-->"
-   end="<!--stop-activations-->"
-%}

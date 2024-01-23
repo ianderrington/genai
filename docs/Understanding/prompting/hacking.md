@@ -3,7 +3,7 @@ Prompt hacking involves the manner of getting interfaces to do a. Do something t
 !!! important "**tl;dr** Prompt hacking' can allow for intentional bypasses of any pre-established alignment guardrails thereby enabling non-aligned output to occur."
 
 ## Solutions
-[Red teaming](../../using/derisking/red_teaming.md)
+[Red teaming](../../Using/de-risking/red_teaming.md)
 
 ## Prompt Hacking methods
 

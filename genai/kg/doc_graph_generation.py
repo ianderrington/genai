@@ -14,6 +14,7 @@ import yaml
 
 from utils import KeyDict
 
+from downloader import url_downloader
 
 def parse_markdown(file_path):
     """Parse markdown file and extract links"""
@@ -40,7 +41,6 @@ def is_local_file(link):
     return os.path.exists(link)
 # def url_downloader(url, base_path, overwrite=False, dry_run=False, verbose=False):
 
-from downloader import url_downloader
 
 def create_documention_graph(root_path, output_path, download_content=False, overwrite=False, dry_run=False, verbose=False):
     G = nx.DiGraph()

@@ -8,6 +8,15 @@ As in the original [Transformer ATtention paper], encoder-decoder networks are u
 
 In Decoder-only networks, like [GPT](gpt.md), because they are _next-token_predictions_, they only require information from words/tokens that have been previously seen. The outputs will be the estimates of the probability of the next word/token. While next-token prediction is singular, this can happen iteratively, and with the proper prompting, the generation of output sequences can perform a varity of sequence-to-sequence tasks, such as language translation. 
 
+
+  * Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information.
+  * Bi-directional / unmasked
+  * Unidirectional / masked self attetion
+  * Cross attention applies attention to the primary sequence and treates the second token sequence the context.
+  * Multi-head attention. Multiple attention heads in parallel.
+  * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`.
+  * Unembedding: Learns to convert vector intot he vocuabulary elements.
+
 ## Components
 
 1. Positional Encoding

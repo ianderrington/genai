@@ -33,9 +33,13 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 ### Other examples
 
-??? code "[Enhancing LLMs with Semantic-layers](https://github.com/tomasonjo/llm-movieagentgs)"
+??? code "[Enhancing LLMs with Semantic-layers](https://github.com/tomasonjo/llm-movieagent)"
     [Blog](https://towardsdatascience.com/enhancing-interaction-between-language-models-and-graph-databases-via-a-semantic-layer-0a78ad3eba49)
+    Enhancing Interaction between Language Models and Graph Databases via a Semantic Layer
 
+    "Knowledge graphs provide a great representation of data with flexible data schema that can store structured and unstructured information. You can use Cypher statements to retrieve information from a graph database like Neo4j. One option is to use LLMs to generate Cypher statements. While that option provides excellent flexibility, the truth is that base LLMs are still brittle at consistently generating precise Cypher statements. Therefore, we need to look for an alternative to guarantee consistency and robustness. What if, instead of developing Cypher statements, the LLM extracts parameters from user input and uses predefined functions or Cypher templates based on the user intent? In short, you could provide the LLM with a set of predefined tools and instructions on when and how to use them based on the user input, which is also known as the semantic layer."
+
+ 
 
 !!! note "[Ontology mapping](https://medium.com/@peter.lawrence_47665/encouraging-results-for-knowledge-graph-extraction-by-llm-ontology-prompting-60a7e5dcaf0a)"
 

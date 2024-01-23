@@ -1,5 +1,9 @@
 Agent memory is considered a state associated with a llm-call and effects the ability of LLM to respond, thereby helping to enable agentic ability. Memory augmented models enhance the capabilities of language models by ___ to improve their performance and efficiency. TODO: Read trillions of tokens paper.
 
+
+
+
+
 ## Memory Considerations
 
 Memory plays a crucial role in enhancing the efficiency of information recall and routing for different chains and agent interactions.
@@ -10,6 +14,12 @@ For text-based memory can consist of perfect text record or compressed summaries
 
 Memory can be pushed (into prompt templates) and requested (based on GET memory requests from an LLM agent).
 
+
+## Interpreters 
+Interactions with memory will require certain commands. That is why it structured outputs, that can be interpreted and used are very important. This interface between information is also called a [_semantic layer_](#semantic-layers). 
+
+### Semantic layers
+Semantic layer plays a powerful role: in interpreting the users question into a memory query, or call. 
 
 
 ## Uses
@@ -51,6 +61,13 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
     - https://github.com/Helicone/helicone
     - [Website](https://www.deeplake.ai/) [Github](https://github.com/activeloopai/deeplake)
+
+
+### Graph Databases
+
+Graph Databases provide the ability to put information in relational contexts. Both native and not, they can allow for rich understandings of how things are connected, though sometimes overly complex. Often interacted with using query languages like [Cypher](https://neo4j.com/developer/cypher/), these can be sometimes challenging to extract the appropriate information, making their query very powerful. 
+
+[Neo4j](https://towardsdatascience.com/enhancing-interaction-between-language-models-and-graph-databases-via-a-semantic-layer-0a78ad3eba49) has formed a sematnic layer, as shown in the `tomasonjo/llm-movieagent` repository. 
 
 ### Traditional databases
 

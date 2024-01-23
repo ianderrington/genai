@@ -35,6 +35,10 @@ Finally, you'll need to present the results to the end-user effectively. Look in
 Remember that needs will evolve as your understanding of all the above factors shifts. So it's crucial to start with a base that you can iterate from, especially if your solution involves a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
 
 
+### Tech-stack
+
+The tech stack can be 
+
 
 
 ??? tip "[Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/pdf/2307.10169.pdf) This is a well-done and comprehensive review."

@@ -40,12 +40,11 @@ Generative AI is instrumental in summarization and compression. It can provide b
     <img width="1298" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ffa8ac86-3876-4ecb-8b18-e14b47b972e5">
     Details on implementation are somewhat hidden.
 
-### Classification and Prediction
-
-While traditionally the domain of AI/ML, Generative AI can also be used for classification and predictions. For instance, it can take an input sentence and predict the sentiment within it (like positive or negative). Although not necessarily as accurate or efficient as smaller, finely tuned models, Generative AI offers greater versatility by allowing multiple classifications or predictions to be made. These methods can be improved with additional supervised training.
-
 ### Finding Information
 
 Generative AI can understand relationships between words and concepts. By embedding an input, the technology can measure semantic, or 'meaning', nearness via distance calculations. This capability enhances the potential for memory recall with imperfect inputs and improves action routing.
 
+### Classifying and Predicting Information
+
+While traditionally the domain of AI/ML, Generative AI can also be used for classification and predictions. For instance, it can take an input sentence and predict the sentiment within it (like positive or negative). Although not necessarily as accurate or efficient as smaller, finely tuned models, Generative AI offers greater versatility by allowing multiple classifications or predictions to be made. These methods can be improved with additional supervised training.
 

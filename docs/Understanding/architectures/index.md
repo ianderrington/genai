@@ -22,6 +22,11 @@ Once built, Gen()AI is generally called with language inputs to create a specifi
 
 [Foundation models](https://en.wikipedia.org/wiki/Foundation_models) are large-scale models that are pre-trained with self or semi-supervision on vast amounts of data and can be fine-tuned for specific tasks. These models serve as a foundation or base for various applications, reducing the need to train models from scratch.
 
+!!! important "Foundation models"
+    Foundation models, by their nature, will continually expand in scope and potential. We share some seminal papers on foundation models here.
+
+    Continual evolution of models may be found in hubs such as [Hugging Face](https://huggingface.co/models?other=foundation+model&sort=trending).
+
 ## Model Learning
 
 There are several fundamental ways that models can 'learn' in relation to how data interacts with the model.
@@ -71,14 +76,7 @@ Generative AI models are of two general categories: self-supervised, and Externa
 
 ## Model Classes
 
-Different [model classes](./models/index.md) of models can often be used with multiple types of model learning. Because of their present degree of quality present model Architectures tend to be transformer-based, or diffusion-based, or made from any other sufficently capable AI method. While Generative Adversarial Networks, [GANS](https://en.wikipedia.org/wiki/Generative_adversarial_network) were the initially most successful, the challenges in training them successfully can be difficult to surmount. Below we describe the model classes in greater detail.
-
-- [Hybrid models like GPT](./models/hybrid_models.md)
-- [Transformers](./models/transformers.md)
-- [Diffusers](./models/diffusers.md)
-- [Generative Adversarial Networks](./models/gans.md)
-- [Reinforcement Learning](./models/reinforcement_learning.md)
-- [Developing Architectures](./models/developing_architectures.md)
+Different [model classes](./models/index.md) of models can often be used with multiple types of model learning. 
 
 
 ## Quality References

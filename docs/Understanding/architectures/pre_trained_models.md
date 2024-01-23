@@ -14,6 +14,12 @@ Here are a few boards that help to aggregate and test models that have been rele
 
 ### Text-focused
 
+
+??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/pdf/2307.09288.pdf) A nearly open source set of 7B-70B models with quality performance"
+    <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
+
+
+
 ??? code "**Sept, 2023** [Mistral Transformer](https://github.com/mistralai/mistral-src)"
 
     [Announcement](https://mistral.ai/news/announcing-mistral-7b/)

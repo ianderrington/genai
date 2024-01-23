@@ -1,4 +1,4 @@
-To go beyond, we will be using Generative AI to create and expand thys system with automations to assis personal authorships. 
+To go beyond, we will be using Generative AI to create and expand the system with automations to assist in helping to organize and simplify the complexity of Generative AI into valuable  and insigntful information. 
 
 There are several 'stages' that may be considered. 
 
@@ -7,6 +7,8 @@ There are several 'stages' that may be considered.
 1. Searching for external inputs based on appropriate information feeds. 
 1. Responsive Chatty AI Oracle that will be 
 1. Agentic AI Oracle that will implement the solutions, or outline solutions for you to be implemented to achieve your goals. 
+
+There are also several potential avenues with 
 
 ## What do I need
 1. To Automatically add or fix content already present: a crawler
@@ -30,14 +32,43 @@ There are several 'stages' that may be considered.
                           Show rules: 
                     - Loop: What it has remembered. Allow it to 'self adapt' and propose new rules. 
                     - I NEED TO CACHE RESULTS. Caching key values for e
-        * What is in the way?
-        * What are the solutions?
-        * What 
-        What information? 
-            - Tags or headers on the top. (not high priority)
-    1. with just strict formatting functions 
-        1. 
+            Better LLMs directly with fine tuning
+
+
++++ important "Fine tuning to investigate"
+        Llama fine tuning
+
+        Runpod Affiliate Link https://tinyurl.com/yjxbdc9w
+
+        Advanced Fine-tuning and Data-preparation Scripts (Lifetime Membership)
+        Fine-tune LLMs for style, content or structured responses...
+        Learn More: https://trelis.com/advanced-fine-tuni...
+
+        LLM Server Setup Repo Access (Lifetime Membership)
+        - Video: Run Llama 2 on AWS:   
+        ￼
+         • Deploy Llama 2 for your Entire Organi...  
+        - Video: Deploy a Llama API in 5 clicks:   
+        ￼
+         • Deploy an API for Llama 70B in 5 Clicks  
+        - Learn more: https://trelis.com/enterprise-server-...
+
+        - https://arxiv.org/abs/2308.04152
+        - https://www.linkedin.com/pulse/fine-tuning-multi-model-large-language-models-deep-dive-jatasra-vwvrf/
+        - https://github.com/mayooear/gpt4-pdf-chatbot-langchain
+        - https://www.youtube.com/watch?v=JJ5mcdEIbj8
+        - https://www.youtube.com/watch?v=NXevvEF3QVI
+
+
 1. To parse the database --> use embedchain or something similar
+
+This can mirror waht is done in downloads/tomasonjo/llm-movieagent to initialize a graph. 
+
+Run through all of the data using an LLM, to create the data that can be ingested by a database? Or do it in bulk. (Both) 
+
+Command-line add to database. Add to database from a directory... Add to database based on updates since last. 
+
+Neo4j Semantic layer??? 
 
 1. to automatically add n 
 
@@ -195,3 +226,8 @@ We can make this easier to read
 - [ ] Integrate example python notebooks and build with https://github.com/outerbounds/nbdoc
 
 - [mkdocs charts](https://github.com/timvink/mkdocs-charts-plugin)
+
+
+## Business
+- [ Check out AiE.foundation](https://www.aie.foundation/#projects) for help as ManaGen grow
+s
