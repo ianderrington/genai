@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agent-examples" class="md-skip">
+        <a href="#multi-agent" class="md-skip">
           Skip to content
         </a>
       
@@ -1085,6 +1085,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1363,6 +1365,33 @@ and
     
   
     Reinforcement learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/models/vision_language_transformers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision language transformers
   
 
     
@@ -1777,13 +1806,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../prompting/prompt_injections.html" class="md-nav__link">
+      <a href="../prompting/hacking.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Prompt injections
+    Hacking
   
 
     
@@ -1815,8 +1844,6 @@ and
   
     
     
-      
-        
       
         
       
@@ -1948,10 +1975,21 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#agent-examples" class="md-nav__link">
+  <a href="#multi-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agent Examples
+        Multi-Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single-agents
       
     </span>
   </a>
@@ -1992,33 +2030,6 @@ and
     
   
     Memory
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="chains.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Chains
   
 
     
@@ -4306,7 +4317,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/de-risking/redteaming.html" class="md-nav__link ">
+            <a href="../../Using/de-risking/red_teaming.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4417,6 +4428,8 @@ and
   
     
     
+      
+        
       
         
       
@@ -4643,6 +4656,33 @@ and
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Managenai/explorations_blog.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorations blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4675,10 +4715,21 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#agent-examples" class="md-nav__link">
+  <a href="#multi-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agent Examples
+        Multi-Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single-agents
       
     </span>
   </a>
@@ -4731,27 +4782,47 @@ and
 
   <h1>Examples</h1>
 
-<p>There are different categories for Agents, which are often either by the environment in which they act or by the manner in which they are used.</p>
-<p><strong>Environments</strong></p>
-<ol>
-<li>Human+Chat-agents</li>
-<li>Autonomous chat-agents</li>
-<li>Agent-systems</li>
-<li>Physical-input agents</li>
-</ol>
-<p><strong>Purpose:</strong></p>
-<ul>
-<li>Do simple/single things: perhaps ephemeral.</li>
-<li>Do a complex task that may require simple things. Very likely enduring, especially if they are expert systems..</li>
-<li>Doing a list set of complex tasks, perhaps more continuously enduring.</li>
-</ul>
-<h3 id="agent-examples">Agent Examples<a class="headerlink" href="#agent-examples" title="Permanent link">&para;</a></h3>
+<p>There are different categories for Agents, which are often either by the environment in which they act or by the manner in which they are used. Because of their variety, it has been found essential to enable end-customization of them. This has been done with numerous commercial ventures, including OpenAI, POE, Character.ai and many others. We discuss some basics below, but if you'd just like to dig into to them, please check out the exmaples for <a href="#multi-agent">multiple agent</a>, and <a href="#single-agents">single agents</a> to learn about them specifically. </p>
+<h2 id="multi-agent">Multi-Agent<a class="headerlink" href="#multi-agent" title="Permanent link">&para;</a></h2>
 <p>Here are a few examples. Because agents are hard to disentangle from core components, we describe more throughout, especially in the section on <a href="cognitive_architecture.html">cognitive architectures</a></p>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/camel-ai/camel">CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)</a></p>
+<p>Paper: <a href="https://arxiv.org/abs/2303.17760">https://arxiv.org/abs/2303.17760</a></p>
+<p>Abstract:
+"The rapid advancement of conversational and chat-based language models has led to remarkable progress in complex task-solving. However, their success heavily relies on human input to guide the conversation, which can be challenging and time-consuming. This paper explores the potential of building scalable techniques to facilitate autonomous cooperation among communicative agents and provide insight into their "cognitive" processes. To address the challenges of achieving autonomous cooperation, we propose a novel communicative agent framework named role-playing. Our approach involves using inception prompting to guide chat agents toward task completion while maintaining consistency with human intentions. We showcase how role-playing can be used to generate conversational data for studying the behaviors and capabilities of chat agents, providing a valuable resource for investigating conversational language models. Our contributions include introducing a novel communicative agent framework, offering a scalable approach for studying the cooperative behaviors and capabilities of multi-agent systems, and open-sourcing our library to support research on communicative agents and beyond. "</p>
+<p>GitHub: <a href="https://github.com/camel-ai/camel">https://github.com/camel-ai/camel</a></p>
+<p>Article: <a href="https://blog.devgenius.io/coded-example-of-langchain-enabled-cooperative-agents-4859d294b197">https://blog.devgenius.io/coded-example-of-langchain-enabled-cooperative-agents-4859d294b197</a></p>
+</div>
+<h2 id="single-agents">Single-agents<a class="headerlink" href="#single-agents" title="Permanent link">&para;</a></h2>
+<div class="admonition important">
+<p class="admonition-title"><a href="https://github.com/langchain-ai/opengpts">Open GPTs</a> Provides a similar experience to OpenAI GPTs and assistants, using Langchain components</p>
+</div>
+<details class="code">
+<summary><a href="https://github.com/MineDojo/Voyager">Voyager from MineDojo</a></summary>
+<p>Enables expandable tool-usage for a life-long learning agent working within the Minecraft Environment. 
+<a class="glightbox" href="https://github.com/MineDojo/Voyager/raw/main/images/pull.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/MineDojo/Voyager/raw/main/images/pull.png" /></a></p>
+</details>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/assafelovic/gpt-researcher">GPT researcher</a> is an autonomous agent designed for comprehensive online research on a variety of tasks.</p>
+<p>LOOK INTO THIS</p>
+</div>
+<details class="tip">
+<summary><a href="https://arxiv.org/pdf/2304.05332.pdf">Emergent autonomous scientific research</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="658" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656"></a></p>
+</details>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/sweepai/sweep/tree/main">Sweep Dev (product)</a> provides a service for improving code-bases.</p>
+<p><a href="https://github.com/sweepai/sweep/blob/main/sdk/src/agent.py">Example Agent</a>
+<a href="https://sweep.dev">Website</a>
+Cognitive Architecture:  <a href="https://docs.sweep.dev/blogs/sweeps-core-algo?ref=blog.langchain.dev">from their blog</a>.
+<a class="glightbox" href="https://docs.sweep.dev/_next/static/media/flowchart.15fed92e.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://docs.sweep.dev/_next/static/media/flowchart.15fed92e.svg" /></a></p>
+</div>
 <details class="code">
 <summary><a href="https://github.com/ProfSynapse/Synapse_CoR?">Professor Synapse (ProfSynapse)</a> is an agent embodying the instructive channel for teaching people about Agents, and LLMs and how to work with new technology</summary>
 <p>Apart from the Github above, Here are several relevant and imporant links related to synth minds. 
 - <a href="https://www.synthminds.ai/">https://www.synthminds.ai/</a>
 - <a href="https://www.youtube.com/watch?v=pFPZFmOTgtA&amp;t=232s">https://www.youtube.com/watch?v=pFPZFmOTgtA&amp;t=232s</a>
+Here is an example
 <div class="highlight"><pre><span></span><code># MISSION
 Act as Prof Synapse🧙🏾‍♂️, a conductor of expert agents. Your job is to support me in accomplishing my goals by aligning with me, then calling upon an expert agent perfectly suited to the task by init:
 
@@ -4870,7 +4941,7 @@ The code is a little Academic, but generally readable here <a href="https://gith
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/richardyc/Chrome-GPT">Chrome-GPT</a>: an experimental AutoGPT agent that interacts with Chrome</p>
 </div>
-<div class="admonition gpts">
+<div class="admonition important">
 <p class="admonition-title"><a href="https://github.com/friuns2/Leaked-GPTs/">GPT prompts</a></p>
 </div>
 

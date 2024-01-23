@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tools-paper-and-code" class="md-skip">
+        <a href="#frameworks" class="md-skip">
           Skip to content
         </a>
       
@@ -1085,6 +1085,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1363,6 +1365,33 @@ and
     
   
     Reinforcement learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/models/vision_language_transformers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision language transformers
   
 
     
@@ -1777,13 +1806,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../prompting/prompt_injections.html" class="md-nav__link">
+      <a href="../prompting/hacking.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Prompt injections
+    Hacking
   
 
     
@@ -1815,8 +1844,6 @@ and
   
     
     
-      
-        
       
         
       
@@ -1928,33 +1955,6 @@ and
     
   
     Memory
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="chains.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Chains
   
 
     
@@ -2164,10 +2164,21 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tools-paper-and-code" class="md-nav__link">
+  <a href="#frameworks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tools Paper and Code
+        Frameworks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papers
       
     </span>
   </a>
@@ -4317,7 +4328,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/de-risking/redteaming.html" class="md-nav__link ">
+            <a href="../../Using/de-risking/red_teaming.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4428,6 +4439,8 @@ and
   
     
     
+      
+        
       
         
       
@@ -4654,6 +4667,33 @@ and
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Managenai/explorations_blog.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorations blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4686,10 +4726,21 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tools-paper-and-code" class="md-nav__link">
+  <a href="#frameworks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tools Paper and Code
+        Frameworks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papers
       
     </span>
   </a>
@@ -4762,7 +4813,15 @@ and
 <p class="admonition-title">Multi-body system (bidirectional calling)</p>
 <p>This system consists of multiple agents, and they engage in ongoing discussions about their daily activities. They also receive regular updates about their environment. An example of this type of system can be viewed in <a href="https://arxiv.org/pdf/2304.03442.pdf">this paper</a>.</p>
 </div>
-<h2 id="tools-paper-and-code">Tools Paper and Code<a class="headerlink" href="#tools-paper-and-code" title="Permanent link">&para;</a></h2>
+<h2 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h2>
+<p>Frameworks for Agentic Systems require that there is communication with AI-agents with and without people in the loop, to produce consistent end-goals. They may often have papers associated with them, and it may sometimes be inseprable from the papers. </p>
+<details class="code" open="open">
+<summary><a href="https://github.com/OpenBMB/ChatDev">ChatDev</a> is a communicative agent approach allowing for development of solutions using ML models.</summary>
+<p>Works with Camel to create agentic systems and has some generally good results. It is certainly not full-fledged software but provides a solid framework for creating systems of agents to produce software-enabled products.</p>
+</details>
+<details class="code" open="open">
+<summary><a href="https://github.com/VRSEN/agency-swarm">Agency Swarm</a> provides a language creating interacting systems of agents.</summary>
+</details>
 <details class="important" open="open">
 <summary><a href="https://github.com/microsoft/autogen">AutoGen</a> enables LLM application development with communication between multiple agents.</summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924" /></a>
@@ -4786,6 +4845,21 @@ TRY THIS!</p>
 <p class="admonition-title"><a href="https://arxiv.org/pdf/2305.10142.pdf">Self-play GPT</a></p>
 <p>This model leverages different game-roles and LLMs to provide feedback on how to optimize the model and facilitate autonomous enhancement during gameplay.</p>
 </div>
+<h2 id="papers">Papers<a class="headerlink" href="#papers" title="Permanent link">&para;</a></h2>
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2312.17025.pdf">Experiential Co-Learning of Software-Developing Agents</a> </summary>
+<p>Introduces a multi-agent paradigm that enables two types of language-agent using three modules of integration: 
+ 1. <strong>Co-tracking</strong>  that 'promotes interactive rehearsals between the agents' enabling joint exploration of procedural trajectories.
+ - During this process an instructor provides a set of instruction to which assisstants responds. This is viewed as a directed chain, connecting the node responses to the edge which is a transition-record from nodes <span class="arithmatex">\(r_j\)</span> to <span class="arithmatex">\(r_{j+1}\)</span> given instructions <span class="arithmatex">\(i_{j+1}\)</span>, <span class="arithmatex">\(\E = (\)</span>r_j, i_{j+1}, r_{j+1})$. The task execution represents the completion process, combining the 'collaborative dynamics between both agents'. 
+ 2. <strong>Co-memorizing</strong>  that looks for shortcuts based on past experiences and the environmental feedback, that allows information to be put into 'collective experience pools'.
+ - Nodes sharing the same state are agregated via a embedding hash. These are examiend with a graph-compiler to find shortcuts for task-completion. When done, the co-memorization routine compells the instructor to use the document the routes for better guidance to record the end-points. 
+ - The node feedback can be compared by looking at the product similarity between the node response <span class="arithmatex">\(r_j\)</span>, the general task, the similarity between that node, and other nodes, and, the compilation success for node <span class="arithmatex">\(r_j\)</span>. 
+ - This allows for the construction of key-value pairs showing the best states from <span class="arithmatex">\(r_i\)</span>, with <span class="arithmatex">\(r_i /ra r_j\)</span> and with <span class="arithmatex">\(r_i /ra r_j\)</span> to <span class="arithmatex">\(r_j\)</span>. 
+ 3. <strong>Co-reasoning</strong> encourages instruction enhancement from their experience pools 
+ - This step combines experience pools to generate refined insights in collaborative problem states, using memories to seed few-shot examples for instructions and responses as in <a href="../prompting/index.html#retrieval-augmented-prompting">retrieval based prompting</a>
+ - With a response to instruction memory <span class="arithmatex">\(M_I\)</span> encountering the task state <span class="arithmatex">\(r_j\)</span>, a retrieval tool, acesses experiential instructions matching the meaning of the task to provide zerofew-shot examples. to guide the instructors reasoning to share with the assistant. 
+ - The assistant with an instruction-to-response memory <span class="arithmatex">\(M_A\)</span> retrieves optimal responses based on the received instruction, allowing few-shot examples to create the next response.  </p>
+</details>
 <div class="admonition tip">
 <p class="admonition-title"><a href="https://arxiv.org/pdf/2306.09299.pdf">Can Language Models Teach Weaker Agents? Teacher Explanations Improve Students via Theory of Mind</a></p>
 <p>In this work, the Theory of Mind (ToM) concept is used to attempt to improve the performance of students. <a href="https://github.com/swarnaHub/ExplanationIntervention">Github</a></p>

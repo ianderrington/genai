@@ -1085,6 +1085,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1363,6 +1365,33 @@ and
     
   
     Reinforcement learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/models/vision_language_transformers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision language transformers
   
 
     
@@ -1777,13 +1806,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../prompting/prompt_injections.html" class="md-nav__link">
+      <a href="../prompting/hacking.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Prompt injections
+    Hacking
   
 
     
@@ -1815,8 +1844,6 @@ and
   
     
     
-      
-        
       
         
       
@@ -1928,33 +1955,6 @@ and
     
   
     Memory
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="chains.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Chains
   
 
     
@@ -4340,7 +4340,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/de-risking/redteaming.html" class="md-nav__link ">
+            <a href="../../Using/de-risking/red_teaming.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4451,6 +4451,8 @@ and
   
     
     
+      
+        
       
         
       
@@ -4677,6 +4679,33 @@ and
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Managenai/explorations_blog.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorations blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4799,7 +4828,7 @@ and
 
   <h1>Actions and tools</h1>
 
-<p>Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. While potentially minimal distinction. Often relayed by an <a href="chains.html#interpreters">interpreter</a> or a perhaps simple jinja syntax-pattern more complete json input that can be validated for the function of choice.</p>
+<p>Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. While potentially minimal distinction. Often relayed by an <a href="cognitive_architecture.html#interpreters">interpreter</a> or a perhaps simple jinja syntax-pattern more complete json input that can be validated for the function of choice.</p>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/rizerphe/local-llm-function-calling">Local LLM Function Calling</a> enforces json semantics for calls to functions</p>
 </div>
@@ -4808,7 +4837,7 @@ and
 <p><strong>Internal actions</strong> generally relate reading, writing or updating, an agents memory, <a href="memory.html">memory</a> state, such as free-text <code>scratech-pad</code>, an ordered <code>memory-log</code> or a vector database.</p>
 <p><strong>External actions</strong> may be to act on simulated or real environments, or otherwise tracked <code>state</code>, or to use a toolthat an agent may be 'equipped with' to run. These can be API calls or local function calls.</p>
 <h3 id="executors">Executors<a class="headerlink" href="#executors" title="Permanent link">&para;</a></h3>
-<p>The action that an agent may take is enabled by an <code>AgentExecutor</code> or <a href="chains.html#interpreters">interpreter</a> of the LLM output, that coordinates the call to perform the action.</p>
+<p>The action that an agent may take is enabled by an <code>AgentExecutor</code> or <a href="cognitive_architecture.html#interpreters">interpreter</a> of the LLM output, that coordinates the call to perform the action.</p>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/langchain-ai/langchain/blob/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent.py#L637">Langchain Agent Executor</a></p>
 </div>

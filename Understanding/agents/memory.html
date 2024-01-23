@@ -18,7 +18,7 @@
         <link rel="prev" href="examples.html">
       
       
-        <link rel="next" href="chains.html">
+        <link rel="next" href="cognitive_architecture.html">
       
       
         
@@ -1085,6 +1085,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1363,6 +1365,33 @@ and
     
   
     Reinforcement learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/models/vision_language_transformers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision language transformers
   
 
     
@@ -1777,13 +1806,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../prompting/prompt_injections.html" class="md-nav__link">
+      <a href="../prompting/hacking.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Prompt injections
+    Hacking
   
 
     
@@ -1815,8 +1844,6 @@ and
   
     
     
-      
-        
       
         
       
@@ -1986,6 +2013,34 @@ and
 </li>
       
         <li class="md-nav__item">
+  <a href="#interpreters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interpreters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantic-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#uses" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2059,6 +2114,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#graph-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graph Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#traditional-databases" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2078,33 +2144,6 @@ and
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="chains.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Chains
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -4384,7 +4423,7 @@ and
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Using/de-risking/redteaming.html" class="md-nav__link ">
+            <a href="../../Using/de-risking/red_teaming.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4495,6 +4534,8 @@ and
   
     
     
+      
+        
       
         
       
@@ -4721,6 +4762,33 @@ and
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Managenai/explorations_blog.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorations blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4760,6 +4828,34 @@ and
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interpreters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantic-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4837,6 +4933,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#graph-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graph Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#traditional-databases" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4893,6 +5000,10 @@ and
 <p>In systems comprising Agents (and People), <em>conversation buffers</em> may be employed to keep track of information. These buffers, can be 'private',  can facilitate communication between any agents, storing response stacks that include agent-environment interactions.</p>
 <p>For text-based memory can consist of perfect text record or compressed summaries, that may or may not follow some form of memory-schema.</p>
 <p>Memory can be pushed (into prompt templates) and requested (based on GET memory requests from an LLM agent).</p>
+<h2 id="interpreters">Interpreters<a class="headerlink" href="#interpreters" title="Permanent link">&para;</a></h2>
+<p>Interactions with memory will require certain commands. That is why it structured outputs, that can be interpreted and used are very important. This interface between information is also called a <a href="#semantic-layers"><em>semantic layer</em></a>. </p>
+<h3 id="semantic-layers">Semantic layers<a class="headerlink" href="#semantic-layers" title="Permanent link">&para;</a></h3>
+<p>Semantic layer plays a powerful role: in interpreting the users question into a memory query, or call. </p>
 <h2 id="uses">Uses<a class="headerlink" href="#uses" title="Permanent link">&para;</a></h2>
 <h3 id="input-prompt-caching">Input (prompt) Caching<a class="headerlink" href="#input-prompt-caching" title="Permanent link">&para;</a></h3>
 <p>Input caching is a technique that leverages memory to improve response time and efficiency. Instead of generating tokens based on the next input, it uses caching to identify responses that may have already been generated for similar prompts. This significantly enhances the efficiency of repeated queries. However, it may cause issues if the initial response was not satisfactory, as the system would return the same cached response.</p>
@@ -4920,6 +5031,9 @@ and
 <li><a href="https://www.deeplake.ai/">Website</a> <a href="https://github.com/activeloopai/deeplake">Github</a></li>
 </ul>
 </div>
+<h3 id="graph-databases">Graph Databases<a class="headerlink" href="#graph-databases" title="Permanent link">&para;</a></h3>
+<p>Graph Databases provide the ability to put information in relational contexts. Both native and not, they can allow for rich understandings of how things are connected, though sometimes overly complex. Often interacted with using query languages like <a href="https://neo4j.com/developer/cypher/">Cypher</a>, these can be sometimes challenging to extract the appropriate information, making their query very powerful. </p>
+<p><a href="https://towardsdatascience.com/enhancing-interaction-between-language-models-and-graph-databases-via-a-semantic-layer-0a78ad3eba49">Neo4j</a> has formed a sematnic layer, as shown in the <code>tomasonjo/llm-movieagent</code> repository. </p>
 <h3 id="traditional-databases">Traditional databases<a class="headerlink" href="#traditional-databases" title="Permanent link">&para;</a></h3>
 <p>Databases that rely on query-languages such as SQL or non-SQL based databases, or even 'csv-type' information stores can be accessed and generated using agents.</p>
 <p>The models may generate queries that can be executed by by an interpreter, though it is not guaranteed that the queries will be accurate. [TODO: Find reference some_reference_on_LLM_SQL)</p>
@@ -5064,16 +5178,16 @@ and
         
           
           <a
-            href="chains.html"
+            href="cognitive_architecture.html"
             class="md-footer__link md-footer__link--next"
-            aria-label="Next: Chains"
+            aria-label="Next: Cognitive architecture"
           >
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Chains
+                Cognitive architecture
               </div>
             </div>
             <div class="md-footer__button md-icon">
