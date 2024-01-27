@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enabling">
+        <meta name="description" content="Enabling Gen() AI to be understood, and used, by people and Gen()AI.">
       
       
         <meta name="author" content="Ian Derrington">
@@ -1142,33 +1142,6 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../architectures/models/components.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Components
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../architectures/models/transformers.html" class="md-nav__link">
         
   
@@ -1230,6 +1203,33 @@ and
     
   
     Gans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/models/components.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Components
   
 
     
@@ -4512,13 +4512,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/managing.html" class="md-nav__link">
+      <a href="../../Managenai/build_plan.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Managing
+    Build plan
   
 
     
@@ -4539,13 +4539,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/requirements.html" class="md-nav__link">
+      <a href="../../Managenai/project_requirements.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Requirements
+    Project requirements
   
 
     
@@ -4593,13 +4593,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/build_plan.html" class="md-nav__link">
+      <a href="../../Managenai/contributing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Build plan
+    Contributing to GenAI 🌟
   
 
     
@@ -4620,13 +4620,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/contributing.html" class="md-nav__link">
+      <a href="../../Managenai/code_of_conduct.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Contributing
+    Code of conduct
   
 
     
@@ -4848,17 +4848,67 @@ TRY THIS!</p>
 <h2 id="papers">Papers<a class="headerlink" href="#papers" title="Permanent link">&para;</a></h2>
 <details class="important">
 <summary><a href="https://arxiv.org/pdf/2312.17025.pdf">Experiential Co-Learning of Software-Developing Agents</a> </summary>
-<p>Introduces a multi-agent paradigm that enables two types of language-agent using three modules of integration: 
- 1. <strong>Co-tracking</strong>  that 'promotes interactive rehearsals between the agents' enabling joint exploration of procedural trajectories.
- - During this process an instructor provides a set of instruction to which assisstants responds. This is viewed as a directed chain, connecting the node responses to the edge which is a transition-record from nodes <span class="arithmatex">\(r_j\)</span> to <span class="arithmatex">\(r_{j+1}\)</span> given instructions <span class="arithmatex">\(i_{j+1}\)</span>, <span class="arithmatex">\(\E = (\)</span>r_j, i_{j+1}, r_{j+1})$. The task execution represents the completion process, combining the 'collaborative dynamics between both agents'. 
- 2. <strong>Co-memorizing</strong>  that looks for shortcuts based on past experiences and the environmental feedback, that allows information to be put into 'collective experience pools'.
- - Nodes sharing the same state are agregated via a embedding hash. These are examiend with a graph-compiler to find shortcuts for task-completion. When done, the co-memorization routine compells the instructor to use the document the routes for better guidance to record the end-points. 
- - The node feedback can be compared by looking at the product similarity between the node response <span class="arithmatex">\(r_j\)</span>, the general task, the similarity between that node, and other nodes, and, the compilation success for node <span class="arithmatex">\(r_j\)</span>. 
- - This allows for the construction of key-value pairs showing the best states from <span class="arithmatex">\(r_i\)</span>, with <span class="arithmatex">\(r_i /ra r_j\)</span> and with <span class="arithmatex">\(r_i /ra r_j\)</span> to <span class="arithmatex">\(r_j\)</span>. 
- 3. <strong>Co-reasoning</strong> encourages instruction enhancement from their experience pools 
- - This step combines experience pools to generate refined insights in collaborative problem states, using memories to seed few-shot examples for instructions and responses as in <a href="../prompting/index.html#retrieval-augmented-prompting">retrieval based prompting</a>
- - With a response to instruction memory <span class="arithmatex">\(M_I\)</span> encountering the task state <span class="arithmatex">\(r_j\)</span>, a retrieval tool, acesses experiential instructions matching the meaning of the task to provide zerofew-shot examples. to guide the instructors reasoning to share with the assistant. 
- - The assistant with an instruction-to-response memory <span class="arithmatex">\(M_A\)</span> retrieves optimal responses based on the received instruction, allowing few-shot examples to create the next response.  </p>
+<p>Introduces a multi-agent paradigm that enables two types of language-agent using three modules of integration: </p>
+<p><strong>Co-tracking</strong>  that 'promotes interactive rehearsals between the agents' enabling joint exploration of procedural trajectories.</p>
+<ul>
+<li>
+<p>During this process an instructor provides a set of instruction to which assisstants responds. This is viewed as a directed chain, connecting the node responses to the edge which is a transition-record from nodes <span class="arithmatex">\(r_j\)</span> to <span class="arithmatex">\(r_{j+1}\)</span> given instructions <span class="arithmatex">\(i_{j+1}\)</span>, <span class="arithmatex">\(E = (r_j, i_{j+1}, r_{j+1})\)</span>. The task execution represents the completion process, combining the 'collaborative dynamics between both agents'. 
+TODO: FIX THIS; it isn't quite right
+<pre class="mermaid"><code>flowchart LR
+subgraph instructor["Instructor"]
+    i1["Instruction \( i_{j} \)"]
+    i2["Instruction \( i_{j+1} \)"]
+end
+subgraph assistants["Assistants"]
+    r1["Response \( r_{j} \)"]
+    r2["Response \( r_{j+1} \)"]
+end
+i1 --&gt;|provides| r1
+r1 --&gt;|responds with| i2
+i2 --&gt;|provides| r2
+r2 --&gt;|responds with| i1
+r1 --&gt;|transition-record| r2
+</code></pre>
+ <strong>Co-memorizing</strong>  that looks for shortcuts based on past experiences and the environmental feedback, that allows information to be put into 'collective experience pools'.</p>
+</li>
+<li>
+<p>Nodes sharing the same state are agregated via a embedding hash. These are examiend with a graph-compiler to find shortcuts for task-completion. When done, the co-memorization routine compells the instructor to use the document the routes for better guidance to record the end-points. </p>
+</li>
+<li>The node feedback can be compared by looking at the product similarity between the node response <span class="arithmatex">\(r_j\)</span>, the general task, the similarity between that node, and other nodes, and, the compilation success for node <span class="arithmatex">\(r_j\)</span>. </li>
+<li>This allows for the construction of key-value pairs showing the best states from <span class="arithmatex">\(r_i\)</span>, with <span class="arithmatex">\(r_i \Rightarrow r_j\)</span> and with <span class="arithmatex">\(r_i \Rightarrow r_j\)</span> to <span class="arithmatex">\(r_j\)</span>. </li>
+</ul>
+<pre class="mermaid"><code>graph TD
+    subgraph state_pool["Collective Experience Pools"]
+        A["Embedding Hash Aggregation"]
+        B["Graph Compiler"]
+        C["Documentation of Routes"]
+    end
+    A --&gt;|examines| B
+    B --&gt;|finds shortcuts| C
+    C --&gt;|records endpoints| A</code></pre>
+<p><strong>Co-reasoning</strong> encourages instruction enhancement from their experience pools </p>
+<ul>
+<li>This step combines experience pools to generate refined insights in collaborative problem states, using memories to seed few-shot examples for instructions and responses as in <a href="../prompting/index.html#retrieval-augmented-prompting">retrieval based prompting</a></li>
+<li>With a response to instruction memory <span class="arithmatex">\(M_I\)</span> encountering the task state <span class="arithmatex">\(r_j\)</span>, a retrieval tool, acesses experiential instructions matching the meaning of the task to provide zerofew-shot examples. to guide the instructors reasoning to share with the assistant. </li>
+<li>The assistant with an instruction-to-response memory <span class="arithmatex">\(M_A\)</span> retrieves optimal responses based on the received instruction, allowing few-shot examples to create the next response.  </li>
+</ul>
+<pre class="mermaid"><code>flowchart LR
+   subgraph experience_pools["Experience Pools"]
+       MI["Instruction Memory  $$M_I$$ "]
+       MA["Assistant Memory \( M_A \)"]
+   end
+   subgraph reasoning["Instruction Enhancement"]
+       task_state["Task State \( r_j \)"]
+       retrieval["Retrieval Tool"]
+       few_shot["Few-Shot Examples"]
+   end
+   task_state --&gt;|encounters| MI
+   MI --&gt;|accesses| retrieval
+   retrieval --&gt;|guides| few_shot
+   few_shot --&gt;|informs| MA
+   MA --&gt;|retrieves| task_state
+
+</code></pre>
 </details>
 <div class="admonition tip">
 <p class="admonition-title"><a href="https://arxiv.org/pdf/2306.09299.pdf">Can Language Models Teach Weaker Agents? Teacher Explanations Improve Students via Theory of Mind</a></p>

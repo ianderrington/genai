@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enabling">
+        <meta name="description" content="Enabling Gen() AI to be understood, and used, by people and Gen()AI.">
       
       
         <meta name="author" content="Ian Derrington">
@@ -1144,33 +1144,6 @@ and
   
   
     <li class="md-nav__item">
-      <a href="models/components.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Components
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="models/transformers.html" class="md-nav__link">
         
   
@@ -1232,6 +1205,33 @@ and
     
   
     Gans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/components.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Components
   
 
     
@@ -1822,6 +1822,17 @@ and
     <span class="md-ellipsis">
       
         Hardware enabled optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compression
       
     </span>
   </a>
@@ -4640,13 +4651,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/managing.html" class="md-nav__link">
+      <a href="../../Managenai/build_plan.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Managing
+    Build plan
   
 
     
@@ -4667,13 +4678,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/requirements.html" class="md-nav__link">
+      <a href="../../Managenai/project_requirements.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Requirements
+    Project requirements
   
 
     
@@ -4721,13 +4732,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/build_plan.html" class="md-nav__link">
+      <a href="../../Managenai/contributing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Build plan
+    Contributing to GenAI 🌟
   
 
     
@@ -4748,13 +4759,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/contributing.html" class="md-nav__link">
+      <a href="../../Managenai/code_of_conduct.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Contributing
+    Code of conduct
   
 
     
@@ -4999,6 +5010,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tooling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5078,6 +5100,7 @@ and
 <li><a href="#mixture-of-experts">Mixture of Experts</a></li>
 <li>Neural Architecture Search (NAS)</li>
 <li><a href="#hardware-enabled-optimization">Hardware enabled optimization</a></li>
+<li><a href="#compression">Compression</a></li>
 </ol>
 <h3 id="pruning">Pruning<a class="headerlink" href="#pruning" title="Permanent link">&para;</a></h3>
 <p>Pruning is a technique that eliminates weights that do not consistently produce highly impactful outputs.</p>
@@ -5177,6 +5200,10 @@ Here is the algorithm:</p>
 <p>Large language models (LLMs) are central to modern natural language processing, delivering exceptional performance in various tasks. However, their intensive computational and memory requirements present challenges, especially for devices with limited DRAM capacity. This paper tackles the challenge of efficiently running LLMs that exceed the available DRAM capacity by storing the model parameters on flash memory but bringing them on demand to DRAM. Our method involves constructing an inference cost model that harmonizes with the flash memory behavior, guiding us to optimize in two critical areas: reducing the volume of data transferred from flash and reading data in larger, more contiguous chunks. Within this flash memory-informed framework, we introduce two principal techniques. First, “windowing” strategically reduces data transfer by reusing previously activated neurons, and second, “row-column bundling”, tailored to the sequential data access strengths of flash memory, increases the size of data chunks read from flash memory. These methods collectively enable running models up to twice the size of the available DRAM, with a 4-5x and 20-25x increase in inference speed compared to naive loading approaches in CPU and GPU, respectively. Our integration of sparsity awareness, context-adaptive loading, and a hardware-oriented design paves the way for effective inference of LLMs on devices with limited memory</p>
 </blockquote>
 </details>
+<h3 id="compression">Compression<a class="headerlink" href="#compression" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2304.08467.pdf">Learning to Compress Prompts with Gist Tokens</a>. Can enable 26x compression and 40% FLOP reduction and improvements by training 'gist tokens' to summarize information.</p>
+</div>
 <h2 id="tooling">Tooling<a class="headerlink" href="#tooling" title="Permanent link">&para;</a></h2>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/TimDettmers/bitsandbytes">Bitsandbytes</a> by provides a lightweight wrapper around CUDA custom functions, in particular 8-bit optimizers, matrix multiplication (LLM.int8()), and quantization functions.</p>

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enabling">
+        <meta name="description" content="Enabling Gen() AI to be understood, and used, by people and Gen()AI.">
       
       
         <meta name="author" content="Ian Derrington">
@@ -1142,33 +1142,6 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../architectures/models/components.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Components
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../architectures/models/transformers.html" class="md-nav__link">
         
   
@@ -1230,6 +1203,33 @@ and
     
   
     Gans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/models/components.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Components
   
 
     
@@ -4673,13 +4673,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/managing.html" class="md-nav__link">
+      <a href="../../Managenai/build_plan.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Managing
+    Build plan
   
 
     
@@ -4700,13 +4700,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/requirements.html" class="md-nav__link">
+      <a href="../../Managenai/project_requirements.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Requirements
+    Project requirements
   
 
     
@@ -4754,13 +4754,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/build_plan.html" class="md-nav__link">
+      <a href="../../Managenai/contributing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Build plan
+    Contributing to GenAI 🌟
   
 
     
@@ -4781,13 +4781,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../Managenai/contributing.html" class="md-nav__link">
+      <a href="../../Managenai/code_of_conduct.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Contributing
+    Code of conduct
   
 
     
@@ -5138,37 +5138,104 @@ and
 </div>
 <p>The rapid development in Generative AI tooling makes it challenging to keep up with the development and deprecation of powerful frameworks and tools. Some of the mentioned references may not be fully completed, or even nascent repos to build their intended purposes (described here). Please let us know if we are missing anything <a href="../../Managenai/contributing.html">here</a>.</p>
 <h2 id="the-stack">The Stack<a class="headerlink" href="#the-stack" title="Permanent link">&para;</a></h2>
+<p>TODO: This needs to be made into a table with a pivot potential, lest the same information be rewritten. </p>
 <table>
 <thead>
 <tr>
 <th>Layer</th>
+<th>Component</th>
 <th>Description</th>
 <th>Examples</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>Layer 4: Management</td>
 <td>Observability</td>
-<td>The final layer involves tools for monitoring and evaluating AI systems, as well as ensuring their security and reliability.</td>
-<td>Observability Tool, Evaluation System, Security Service</td>
+<td>Tools for monitoring the AI system's performance and health.</td>
+<td><a href="https://www.helicone.ai">Helicone</a>, <a href="https://www.agentops.ai">AgentOps</a>,</td>
 </tr>
 <tr>
-<td>Deployment</td>
-<td>This layer covers the management of AI prompts, orchestration tools for managing complex workflows, and agent tool frameworks for building AI agents.</td>
-<td>Prompt Management System, Orchestration Tool, Agent Tool Framework</td>
+<td></td>
+<td>Compliance</td>
+<td>Uses observability to ensure the system is operating with legal and ethical boundaries</td>
+<td><a href="http://www.holistic.ai">www.holistic.ai</a>, <a href="http://www.monitaur.ai">www.monitaur.ai</a></td>
 </tr>
 <tr>
-<td>Data</td>
-<td>This layer consists of tools for data pre-processing, databases for structured storage, and data pipelines for managing the flow of data.</td>
-<td>Data Pre-Processing Tool, Database Service, Data Pipeline Tool</td>
+<td></td>
+<td>Security</td>
+<td>Tools and services to ensure the security of AI systems and data.</td>
+<td>Security Service</td>
 </tr>
 <tr>
-<td>Compute + Foundation</td>
-<td>This layer includes services and frameworks for deploying machine learning models, foundational models that provide pre-built capabilities, and GPU providers for computational resources.</td>
-<td>Model Deployment Service, Foundation Model, GPU Provider</td>
+<td>Layer 3: Deployment</td>
+<td>Evaluation</td>
+<td>Systems for assessing the performance and effectiveness of AI models.</td>
+<td>MANAGEN: FIND EVALUATION SYSTEMS</td>
+</tr>
+<tr>
+<td></td>
+<td>Prompt Management</td>
+<td>Systems to manage and refine the prompts used in conversational AI.</td>
+<td>Prompt Management System</td>
+</tr>
+<tr>
+<td></td>
+<td>Orchestration</td>
+<td>Tools for managing complex workflows and processes in AI operations.</td>
+<td>Orchestration Tool</td>
+</tr>
+<tr>
+<td></td>
+<td>Agent Tool Frameworks</td>
+<td>Frameworks for building AI agents and managing their interactions.</td>
+<td>Agent Tool Framework</td>
+</tr>
+<tr>
+<td></td>
+<td>UI/UX</td>
+<td>Guis and interfaces are specifically designed for streamlined connection with GenAI models.</td>
+<td><a href="https://grad.io">Gradio</a>, <a href="https://streamlit.io">streamlit.io</a></td>
+</tr>
+<tr>
+<td>Layer 2: Data</td>
+<td>Data Pre-processing</td>
+<td>Tools for cleaning, normalizing, and preparing data for analysis.</td>
+<td><a href="https://cleanlab.ai">cleanlab.ai</a>, <a href="https://unstructured.io/">unstructured.io</a></td>
+</tr>
+<tr>
+<td></td>
+<td>ETL + Data Pipelines</td>
+<td>Tools to extract, transform, and load data, and to manage data flow.</td>
+<td>ETL &amp; Data Pipeline Tool</td>
+</tr>
+<tr>
+<td></td>
+<td>Databases</td>
+<td>Services for structured data storage, including vector databases and caches.</td>
+<td>Database Service</td>
+</tr>
+<tr>
+<td>Layer 1: Foundation</td>
+<td>Model Deployment + Inference</td>
+<td>Services to deploy AI models and perform inference at scale.</td>
+<td>Model Deployment Service</td>
+</tr>
+<tr>
+<td></td>
+<td>Foundation Models</td>
+<td>Pre-built models offering a range of capabilities and uses.</td>
+<td>Foundation Model</td>
+</tr>
+<tr>
+<td></td>
+<td>GPU Providers</td>
+<td>Providers of computational resources, specifically GPUs, for AI processing.</td>
+<td>GPU Provider</td>
 </tr>
 </tbody>
 </table>
+<p>Table modified from <a href="https://menlovc.com/perspective/the-modern-ai-stack-design-principles-for-the-future-of-enterprise-ai-architectures/">here</a></p>
 <h2 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h2>
 <p>Starting with base programming languages, increasingly higher-level frameworks enable training and calling of AI models. Higher-level orchestration libraries and platforms allow creating and evaluating chains, agents, and systems that sometimes use visual interfaces. These can often be augmented with various tools/packages/repositories. On top of these involve mostly or all-complete frameworks and platforms that enable nearly complete.</p>
 <h3 id="base-languages">Base languages<a class="headerlink" href="#base-languages" title="Permanent link">&para;</a></h3>

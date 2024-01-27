@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enabling">
+        <meta name="description" content="Enabling Gen() AI to be understood, and used, by people and Gen()AI.">
       
       
         <meta name="author" content="Ian Derrington">
@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://www.managen.ai/Understanding/architectures/models/transformers.html">
       
       
-        <link rel="prev" href="components.html">
+        <link rel="prev" href="index.html">
       
       
         <link rel="next" href="diffusers.html">
@@ -1143,33 +1143,6 @@ and
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="components.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Components
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1565,6 +1538,33 @@ and
     
   
     Gans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="components.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Components
   
 
     
@@ -4759,13 +4759,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../../Managenai/managing.html" class="md-nav__link">
+      <a href="../../../Managenai/build_plan.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Managing
+    Build plan
   
 
     
@@ -4786,13 +4786,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../../Managenai/requirements.html" class="md-nav__link">
+      <a href="../../../Managenai/project_requirements.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Requirements
+    Project requirements
   
 
     
@@ -4840,13 +4840,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../../Managenai/build_plan.html" class="md-nav__link">
+      <a href="../../../Managenai/contributing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Build plan
+    Contributing to GenAI 🌟
   
 
     
@@ -4867,13 +4867,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../../Managenai/contributing.html" class="md-nav__link">
+      <a href="../../../Managenai/code_of_conduct.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Contributing
+    Code of conduct
   
 
     
@@ -5301,6 +5301,15 @@ and
 <p>In Encoder-only networks, like Bert, the entire input text is used, but is useful for primarily output classification tasks (sequence-to-value). </p>
 <p>As in the original [Transformer ATtention paper], encoder-decoder networks are used to convert sequence to sequences for language translation. In these systems, an encoder will first project information based on the input, generate new outputs, and the new outpus will be used in a recurrent fashion to generate subsequent outputs. </p>
 <p>In Decoder-only networks, like <a href="gpt.html">GPT</a>, because they are <em>next-token_predictions</em>, they only require information from words/tokens that have been previously seen. The outputs will be the estimates of the probability of the next word/token. While next-token prediction is singular, this can happen iteratively, and with the proper prompting, the generation of output sequences can perform a varity of sequence-to-sequence tasks, such as language translation. </p>
+<ul>
+<li>Attention: Token being predicted is mapped to a query vector and tokens in context are mapped to key and value vectors. Inner products are used to combine to extract information.</li>
+<li>Bi-directional / unmasked</li>
+<li>Unidirectional / masked self attetion</li>
+<li>Cross attention applies attention to the primary sequence and treates the second token sequence the context.</li>
+<li>Multi-head attention. Multiple attention heads in parallel.</li>
+<li>Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or <code>RMSnorm</code>.</li>
+<li>Unembedding: Learns to convert vector intot he vocuabulary elements.</li>
+</ul>
 <h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Positional Encoding</li>
@@ -5590,9 +5599,9 @@ a constant number of encoder layers can emulate basic computing blocks, includin
         
           
           <a
-            href="components.html"
+            href="index.html"
             class="md-footer__link md-footer__link--prev"
-            aria-label="Previous: Components"
+            aria-label="Previous: Models"
           >
             <div class="md-footer__button md-icon">
               
@@ -5603,7 +5612,7 @@ a constant number of encoder layers can emulate basic computing blocks, includin
                 Previous
               </span>
               <div class="md-ellipsis">
-                Components
+                Models
               </div>
             </div>
           </a>
