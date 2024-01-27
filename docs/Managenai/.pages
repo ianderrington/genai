@@ -1,9 +1,9 @@
 nav:
     - index.md
-    - managing.md
-    - requirements.md
-    - brainstorming.md
     - build_plan.md
+    - project_requirements.md
+    - brainstorming.md
     - contributing.md
+    - code_of_conduct.md
     - site_graph.md
     - ...

@@ -6,8 +6,7 @@ See the [website](https://www.managen.ai)
 
 Our **open-source project** on [**Managing Generative AI**](https://www.managen.ai) 🤖 will help people to stay on top of understanding and effectively working with the increasingly complex world of Generative AI.
 
-[!NOTE] 
-**"Why is it called Gen() AI?"**
+## "Why is it called Gen() AI?"
 `Generative AI` creates. So does will `General AI`. Depending on their definitions, there may be notable differences, but the overlap ensures that shared characteristics warrant writing this ambiguously, such as GenAI or Gen()AI.
 
 ## 📘 What's Inside?

@@ -35,7 +35,6 @@ As this is intended to be Gen()AI self-explaining knowledgebase, we aim to start
 
 There will be several componentes to it, which we recommend you reading the [build plan](./build_plan.md) to better understand how this will be possible
 
-
 ## Audience
 
 Initially, the intendend audience of this will be initially for more technically focused folks. It will then evolve into broader audiences, to share information that is more generally useful for their particular needs to use Gen()AI. This may eventually include direction to public commercial solutions that might minimize the technichal requirements.
@@ -60,7 +59,7 @@ Our strategy can be separated [project strategy](#project_strategy) and [communi
 1. **Make this interesting and useful** Make this as useful as possible to help people both build and build with Gen()AI.
 1. **Publish, publish, publish** Aim to create content that can be shared, using the information herein as a background.
 
-## Potential challenges.
+## Potential challenges
 
 1. Input method. Markdown can be clunky, especially for images.
 1. Platform method. Github is more technichally oriented, and may make it challenging for potential contributors to help with the design.

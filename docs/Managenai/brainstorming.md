@@ -5,6 +5,19 @@
 
 Here are some ideas of things that might be explored. 
 
+## Agent Graph
+
+Don't build a knowledge-graph, build an agent graph. 
+
+What is an agent-graph? It is an knowledge graph of 'agents', that allow for structured connections and an 'agent' template that can act on those structured connections. 
+
+It has 'summarizations' and 
+
+Start building a basic KG with a simple schema focusing on key concepts and relations in the existing documentation.
+
+Implement fuzzy and exact match search capabilities.
+Initially, manually identify appropriate locations for new concepts in the documentation tree.
+
 ### Functional
 
 * Ability to create docker images from repos: [repo2docker](https://github.com/jupyterhub/repo2docker)

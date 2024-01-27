@@ -1,14 +1,12 @@
 To go beyond, we will be using Generative AI to create and expand the system with automations to assist in helping to organize and simplify the complexity of Generative AI into valuable  and insigntful information. 
 
-There are several 'stages' that may be considered. 
+There are several layers that will be part of the build plan. They may be considered as follows: 
 
 1. Manual, and automated use of GenAI to [improve and refine](#improve_and_refine_content) content already present. 
 1. Automatic triggering of GenAI to [incorporate new](#incorporate) content coming from external inputs. 
 1. Searching for external inputs based on appropriate information feeds. 
-1. Responsive Chatty AI Oracle that will be 
-1. Agentic AI Oracle that will implement the solutions, or outline solutions for you to be implemented to achieve your goals. 
-
-There are also several potential avenues with 
+1. Responsive [Chatty AI Oracle](#chatty-oracle)
+1. Agentic AI Oracle with varying degrees of veracity. 
 
 ## What do I need
 1. To Automatically add or fix content already present: a crawler
