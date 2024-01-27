@@ -68,10 +68,17 @@ It has been found that the quality of responses is governed by the quality of th
 
 ### Observed Frameworks:
 
-???+ AIDA
+???+ info "Who How What How?"
 
-???+ SMART
+    - Who are you?
+    - How should you respond?
+    - How you should not respond. 
+    - What type of information do you want. 
+    - How should we start. 
 
+???+ info AIDA
+
+???+ info SMART
 
 ???+ note SCRIBE
 
