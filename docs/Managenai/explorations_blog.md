@@ -1,5 +1,10 @@
 
 ### 2024-01-23
+#### Working on Summarization chain interface. 
+
+https://medium.com/@johnthuo/chat-with-your-pdf-using-langchain-f-a-i-s-s-and-openai-to-query-pdfs-e7bfde086155 --> Nice and simple. Faiss + OpenAI
+https://medium.com/@gaurav.jaik86/building-an-ai-powered-chat-with-pdf-app-with-streamlit-langchain-faiss-and-llama2-affadea65737
+
 ####  Working on pdf extraction to markdown.
 Build something: 
 `python genai/kg/pdf_extract.py downloads/pdf/arxiv/1904.10509/*`
@@ -9,7 +14,7 @@ Another option: https://www.reddit.com/r/Oobabooga/comments/16n7dm8/how_to_go_fr
 Translates them to html: https://github.com/arxiv-vanity/arxiv-vanity which uses this: https://github.com/arxiv-vanity/engrafo
 
 In general, we will just not worry about this presently 
-
+<a id="MyHeading"></a>
 Found this one https://github.com/VikParuchuri/marker?tab=readme-ov-file
 Installed it and it worked well. It doesn't extract images though, and it requires poetry and tesseract, meaning that a docker image is the only way to run it effectively. 
 It is also non-commercial use, so all information from this needs to be used appropriately
