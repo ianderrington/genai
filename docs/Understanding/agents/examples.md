@@ -121,7 +121,10 @@ cognitive_architecture.md)
 ??? code "[Agent-GPT](https://github.com/reworkd/AgentGPT)"
     [Website](https://agentgpt.reworkd.ai/)
 
-!!! tip "[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)"
+!!! tip "[GPT Engineer (AntonOsika)](https://github.com/AntonOsika/gpt-engineer)"
+
+!!! tip "[GPT Engineer (gpt-engineer-org)](https://github.com/gpt-engineer-org/gpt-engineer)"
+
 
 ??? tip "[DevOpsGPT](https://github.com/kuafuai/DevOpsGPT)"
     ```

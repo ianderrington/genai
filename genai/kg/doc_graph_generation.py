@@ -62,6 +62,8 @@ def create_documention_graph(root_path, output_path, download_content=False, ove
                 G.add_node(file_path, type='local')
                 G.add_edge(root, file_path)
                 for link in parse_markdown(file_path):
+                    if not link:
+                        continue
                     if '#' in link:
                         continue
                     if link.endswith('.md') and not (link.startswith('http') or 'github' in link):
@@ -321,7 +323,7 @@ def main(args):
         G = create_documention_graph(args.root_path, args.output_path, args.download_content, )
     else:
         raise ValueError("Either root_path or load_graph must be provided")
-    import ipdb; ipdb.set_trace()
+    # import ipdb; ipdb.set_trace()
     # visualize_graph(G)
     print("Finishing up")
     pyvis_net = networkx_to_pyvis(G)

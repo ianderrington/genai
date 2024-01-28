@@ -1,0 +1,12 @@
+site_name: My Docs
+plugins:
+  - search
+  - shareable_admonition
+
+theme:
+  name: material
+
+markdown_extensions:
+  - admonition
+
+# Add additional MkDocs configuration as needed

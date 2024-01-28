@@ -1,3 +1,28 @@
+###
+
+
+### 2024-01-27 
+#### Sharing Improvements
+Realized that in order to have appropriately viral growth would need to build link sharing that would enable sharing important concept-cards or paper-cards. 
+
+**Concept card** is a small description of a concept, with visuals, like a wiki but more succinct and contained, only providing essential references if they were derivative or otherwise necessary to still understand the concepts. 
+
+**Paper card** is the description of a paper, with visuls, that allows the paper to be understood and maybe used *directly*. 
+
+These would need to be enabled through admonitions. 
+
+Looked into it, and it might be possible?
+
+Here is how it would happen. 
+An mkdocs plugin is built. This Plugin would:
+1. Look for admonitions elements in markdown files
+1. For admonition elements that have extra input that is known as 'share-name'
+1. For these components, the full admonition block is extracted (with 'share-name' removed) and copied into to a temporary markdown file. This markdown file is added to the 'to process' list for markdowns to be rendered. 
+
+
+
+!!! question "Does this allow iframe"
+    <iframe src="contributing.html"></iframe>
 
 ### 2024-01-23
 #### Working on Summarization chain interface. 

@@ -16,14 +16,14 @@ Similar to bots, or other computerized automata, they may have the ability to ru
         E --> A
     ```
 
-Though, more generally it includes these components: 
+    Though, more generally it includes these components: 
 
-* [LLM models](../architectures/index.md) that power information evaluation.
-* [Prompts](../prompting/index.md),  [chains](./cognitive_architecture.md), [memory](./memory.md) connected with [cognition architectures](./cognitive_architecture.md).
-* [Environments](environments.md) where an agent can 'act'.
-* [Tools](./actions_and_tools.md), or aspects of the environment that can be called upon. 
-* [Interpreters and Executors](./cognitive_architecture.md#interpreters) that are used to process input or output.
-* [Systems of Agents](systems.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
+    * [LLM models](../architectures/index.md) that power information evaluation.
+    * [Prompts](../prompting/index.md),  [chains](./cognitive_architecture.md), [memory](./memory.md) connected with [cognition architectures](./cognitive_architecture.md).
+    * [Environments](environments.md) where an agent can 'act'.
+    * [Tools](./actions_and_tools.md), or aspects of the environment that can be called upon. 
+    * [Interpreters and Executors](./cognitive_architecture.md#interpreters) that are used to process input or output.
+    * [Systems of Agents](systems.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
 
 
 ## Agents in In perspective
@@ -34,7 +34,7 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
     | # | Process       | Decide Output of Step | Decide Which Steps to Take | Determine What Sequences of Steps are Available |
     |---|---------------|-----------------------|----------------------------|-----------------------------------------------|
     | 1 | Code          | 👩‍💻                   | 👩‍💻                         | 👩‍💻                                          |
-    | 2 | LLM Call      | 🗣️                   | 👩‍💻 (one step)              | 👩‍💻                                          |
+    | 2 | [LLM Call](../architectures/generation.md)      | 🗣️                   | 👩‍💻 (one step)              | 👩‍💻                                          |
     | 3 | Chain         | 🗣                   | 👩‍💻 (multiple steps)        | 👩‍💻                                          |
     | 4 | Router        | 🗣️                   | 🗣️  (no cycles)            | 👩‍💻                                          |
     | 5 | State Machine | 🗣️                   | 🗣️  (cycles)               | 👩‍💻                                          |
@@ -42,7 +42,6 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
 
 
 ## Essential Concepts
-
 
 ???+ important "How components interact (clickable)"
     ```mermaid
