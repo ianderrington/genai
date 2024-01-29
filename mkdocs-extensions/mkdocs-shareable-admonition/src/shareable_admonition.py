@@ -1,6 +1,7 @@
 import os
 import re
 import markdown
+import mkdocs
 from mkdocs.plugins import BasePlugin
 from mkdocs.structure.files import File
 import jinja2
@@ -17,35 +18,17 @@ class ShareableAdmonitionPlugin(BasePlugin):
             loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'templates'))
         )
 
-
-    # def on_files(self, files, config):
-    #     docs_dir = config['docs_dir']
-    #     site_dir = config['site_dir']
-
-    #     for file in files:
-    #         if file.src_path.endswith('.md'):
-    #             self.process_file(file, docs_dir, site_dir)
-
     def on_files(self, files, config):
         for file in files:
             if file.src_path.endswith('.md'):
                 self.process_file(file, files, config)
 
-
-    # def process_file(self, file, docs_dir, site_dir):
-    #     with open(file.abs_src_path, 'r') as f:
-    #         content = f.readlines()
-
-    #     new_content = []
-    #     admonition_block = []
-    #     in_admonition = False
-    #     share_name = None
-    #     for line in content:    
     def process_file(self, file, files, config):
         if file.src_path.endswith('.temp.md'):
             return
         docs_dir = config['docs_dir']
         site_dir = config['site_dir']
+        out_dir = file.url
         with open(file.abs_src_path, 'r') as f:
             content = f.readlines()
 
@@ -53,8 +36,6 @@ class ShareableAdmonitionPlugin(BasePlugin):
         admonition_block = []
         in_admonition = False
         share_name = None
-
-
         for line in content:
             if self.RE.match(line):
                 in_admonition = True
@@ -67,21 +48,32 @@ class ShareableAdmonitionPlugin(BasePlugin):
                 else:
                     in_admonition = False
                     # Process the extracted admonition block
-                    admonition_html_path = os.path.join(site_dir, f'{share_name}.html')
+                    # admonition_html_path = os.path.join(site_dir, f'{share_name}.html')
+                    admonition_html_path = os.path.join(out_dir, f'{share_name}.html')
+
                     # Create site_dir if it doesn't exist
-                    if not os.path.exists(site_dir):
-                        os.makedirs(site_dir)
-                    self.create_admonition_html(admonition_html_path, ''.join(admonition_block), title, "Description", None, f'{share_name}.html', file.abs_src_path)
+                    if not os.path.exists(admonition_html_path):
+                        os.makedirs(admonition_html_path)
+                    admonition_block = markdown.markdown(''.join(admonition_block), extensions=config['markdown_extensions']) 
+                    self.create_admonition_html(admonition_html_path,
+                        admonition_block, 
+                        title, 
+                        "Description", None, 
+                        page_url = f'{share_name}.html', 
+                        backlink_url=file.abs_src_path
+                    )
                     iframe_html = self.create_iframe(share_name)
                     new_content.append(iframe_html)
                     admonition_block = []
                     new_content.append(line)  # Include the current line as it's outside the admonition
             else:
                 new_content.append(line)
+        import ipdb; ipdb.set_trace()
 
         # Create a temporary markdown file
         temp_fd, temp_filepath = tempfile.mkstemp(suffix='.temp.md', dir=config['docs_dir'])
-        # import ipdb; ipdb.set_trace()
+
+        
         with os.fdopen(temp_fd, 'w') as temp_file:
             temp_file.writelines(new_content)
 
@@ -92,26 +84,41 @@ class ShareableAdmonitionPlugin(BasePlugin):
         temp_file_obj = File(path=temp_rel_path, src_dir=config['docs_dir'], dest_dir=config['site_dir'], use_directory_urls=config['use_directory_urls'])
         files.append(temp_file_obj)
 
+        import ipdb; ipdb.set_trace()
         # Optionally, update navigation to point to the temporary file
         # ... (logic to update navigation)
 
         return temp_filepath
-        # temp_fd, temp_filepath = tempfile.mkstemp(suffix='.md', dir=config['docs_dir'])
-        # with os.fdopen(temp_fd, 'w') as temp_file:
-        #     temp_file.writelines(new_content)
 
-        # # Replace the original file in MkDocs files list
-        # temp_file = File(path=temp_filepath, src_dir=file.src_dir, dest_dir=file.dest_dir, use_directory_urls=config['use_directory_urls'])
-        # files.append(temp_file)
-        
-        # # # Update the markdown file
-        # # with open(file.abs_src_path, 'w') as f:
-        # #     f.writelines(new_content)
-        # return temp_filepath
+
+    # def on_nav(self, nav, config, files):
+    #     temp_files_map = self.create_temp_files_map(files)
+    #     self.update_nav(nav, temp_files_map)
+
+    # def create_temp_files_map(self, files):
+    #     # Mapping of original file paths to temporary file paths
+    #     temp_files_map = {}
+    #     for file in files:
+    #         if file.abs_src_path.endswith('.tmp.md'):  # Assuming temporary files end with '.tmp.md'
+    #             original_path = file.abs_src_path.replace('.tmp.md', '.md')
+    #             temp_files_map[original_path] = file.abs_src_path
+    #     return temp_files_map
+
+    # def update_nav(self, nav, temp_files_map):
+    #     if not nav or not nav.items:
+    #         return
+
+    #     for item in nav.items:
+    #         if isinstance(item, mkdocs.nav.Section):
+    #             self.update_nav(item, temp_files_map)  # Recursive call for sections
+    #         elif isinstance(item, mkdocs.nav.Page) and item.file.abs_src_path in temp_files_map:
+    #             item.file.abs_src_path = temp_files_map[item.file.abs_src_path]
+    #             item.file.src_path = os.path.basename(temp_files_map[item.file.abs_src_path])
+
 
         
     def create_iframe(self, share_name):
-        iframe_html = f'<iframe src="{share_name}.html" width="100%" height="300"></iframe>\n'
+        iframe_html = f'<iframe src="{share_name}.html" width="100%" height="100%"></iframe>\n'
         return iframe_html
 
 
