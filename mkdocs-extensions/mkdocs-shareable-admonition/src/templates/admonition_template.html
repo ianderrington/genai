@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title|default("Shared Admonition") }}</title>
-    <meta property="og:title" content="{{ title|default("Shared Admonition") }}">
-    <meta property="og:description" content="{{ description|default("Admonition Content") }}">
-    {% if image_url %}
-    <meta property="og:image" content="{{ image_url }}">
-    {% endif %}
+    
+    
+    
     <meta property="og:url" content="{{ page_url|default("#") }}">
+
+    <meta property="fb:app_id" content="228388376292814">
+    <meta property="og:title" content="{{ title|default("Sharing www.Managen.ai") }}">
+    <meta property="og:description" content="{{ description|default("Sharing www.Managen.ai") }}"">
+
+    <meta property="og:type"  content="website" />
+    <meta property="og:image" content="{{ image_url | safe}}">
+    <meta property="og:url" content="{{ page_url | safe}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title|default("Sharing www.Managen.ai") }}">
+    <meta name="twitter:description" content="{{ title|default("Sharing www.Managen.ai") }}">
+    <meta name="twitter:image" content="{{ image_url | safe}}">
+    
     <style>
         .page-url { display: block; }
         .iframe .backlink-url { display: none; }
@@ -18,14 +29,14 @@
          .copy-icon {
              cursor: pointer;
              position: absolute;
-             top: 10px;
+             bottom: 10px;
              right: 10px;
          }
          .copied-popup {
              display: none;
              position: absolute;
              right: 10px;
-             top: 35px;
+             bottom: 35px;
              background-color: #f0f0f0;
              border: 1px solid #d0d0d0;
              padding: 5px;
@@ -35,7 +46,6 @@
              display: block;
          }
      </style>
-     <link rel="stylesheet" href="path_to_some_stylesheet.css"> <!-- Path to your CSS -->
 
     <script>
        (function(d, w) {
@@ -74,7 +84,7 @@
     <span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url')">&#128203; Copy link</span>
     <!-- Copied popup -->
     <div class="copied-popup" id="copied-popup">Link copied!</div>
-    <a href="{{ backlink_url|default("#") }}" class="backlink-url" id="backlink-url">See the main</a>
+    <a href="{{ backlink_url|default("#") }}" class="backlink-url" id="backlink-url">See the main site!</a>
 </body>
 </html>
 

@@ -12,7 +12,8 @@ Recent advancements in Generative AI have positioned it as a potential stepping 
 
 Generative AI is a subset of [AI in general](ai_and_ml_basics/index.md), as illustrated in the diagram below.
 
-<img width="1151" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0b344719-b998-43f7-92fb-725797324af9">
+???+ important "Heirarchy of GenAI" heirarchy-of-genai
+    <img width="100%" alt="image" loading="lazy" src="https://github.com/ianderrington/genai/assets/76016868/0b344719-b998-43f7-92fb-725797324af9">
 
 Traditionally, predictive AI has been widely used in virtually every domain where data exists. But how does predictive AI differ from generative AI?
 
@@ -25,7 +26,8 @@ Understanding the similarities and differences between predictive and generative
 
 The distinction is visually represented below.
 
-<img width="788" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/821b3315-962a-4956-96cf-ffe863beed3f">
+???+ important "Predictive AI vs Generative AI"
+    <img width="100%" alt="image" loading="lazy" src="https://github.com/ianderrington/genai/assets/76016868/821b3315-962a-4956-96cf-ffe863beed3f">
 
 ## Creating Gen()AI
 

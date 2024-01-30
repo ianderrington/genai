@@ -13,7 +13,7 @@ With time and support we will be able to help many people understand the technol
 
 What do you need to know?
 
-???+ important "[tl;dr](#tldr)"
+???+ important "[tl;dr]" need-to-know
     - Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it
     - Understand the [**data**](./data/index.md) and collect data that you need.
     - Consider [**Model Architectures**](./architectures/index.md) use [**pre-trained**](./architectures/pre_trained_models.md) models if possible.

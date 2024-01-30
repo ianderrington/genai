@@ -17,31 +17,47 @@ class ShareableAdmonitionPlugin(BasePlugin):
             loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'templates'))
         )
 
+    def get_image_and_first_text_from_block(self, line_content):
+        # choose the first image, return None if no image found
+        image_url = ""
+        description = ""
+        for line in line_content:
+            if line.startswith('!['):
+                image_url = re.search(r'!\[.*\]\((.*)\)', line).group(1)
+            elif line.startswith('<img'):
+                image_url = re.search(r'<img.*src="(.*)".*>', line).group(1)
+            elif not description and line:
+                description = line
+            if image_url:
+                break
+        # $ remove any "> at the end of the url
+        if image_url:
+            image_url = image_url.split('"')[0]
+        print(f"image_url: {image_url}")
+        print(f"description: {description}")
+        # import ipdb; ipdb.set_trace()
+        return description, image_url
+    
     def on_page_markdown(self, markdown_content, page, config, files):
         new_content = []
         admonition_block = []
         in_admonition = False
         share_name = None
         mkd_split = markdown_content.splitlines()
+        last_image = None
         for line_num, line in enumerate(mkd_split):
-            # if line.startswith('???'):
+
             matches = self.RE.match(line)
             if  matches:
-            # if line and line[:3] or line[:4] in types:
-                # if line.startswith('???'):
-                #     import ipdb; ipdb.set_trace()
+
                 in_admonition = True
                 admonition_type, tag, title, share_name = matches.groups()
                 new_line = ''.join([admonition_type, ' ', tag, ' "', title, '"'])
                 new_content.append(new_line)
                 in_admonition_space_count = 0
                 continue
-            # elif in_admonition and matches:
-            #     pass
             
-            
-            if in_admonition:
-                
+            if in_admonition:                
                 if line_num == len(mkd_split) - 1 or in_admonition_space_count > 1:
                     admonition_block.append(line)
                     end_block = True
@@ -57,15 +73,11 @@ class ShareableAdmonitionPlugin(BasePlugin):
                     in_admonition_space_count += 1
                     admonition_block.append(line)
                     end_block = False
-
                 else:
                     in_admonition_space_count = 0
                     end_block = True
 
-                # elif line ==  "":  # Content of the admonition
-
                 if end_block:
-
                     in_admonition = False
                     # Process extracted admonition block
                     self.process_admonition_block(admonition_block, share_name, config, page, title)
@@ -76,13 +88,16 @@ class ShareableAdmonitionPlugin(BasePlugin):
                     admonition_block = []
                     new_content.append(line)  # Include the current line as it's outside the admonition
             else:
+                
                 new_content.append(line)
-            
-        # import ipdb; ipdb.set_trace()
 
         return '\n'.join(new_content)
     
     def process_admonition_block(self, admonition_block, share_name, config, page, title):
+        description, image_url = self.get_image_and_first_text_from_block(admonition_block)
+        # if image_url:
+        #     import ipdb; ipdb.set_trace()
+        #     image_url = config['site_url'] + image_url
         admonition_content = '\n'.join(admonition_block)
         admonition_block_content = markdown.markdown(admonition_content, extensions=config['markdown_extensions'])
         shared_dir = os.path.join(config['site_dir'], 'shared')
@@ -93,16 +108,24 @@ class ShareableAdmonitionPlugin(BasePlugin):
         if os.path.exists(admonition_html_path):
             raise ValueError(f'File {path} already exists. You have a duplicate admonition share name: {share_name}')
         shareable_html_path = f'/shared/{share_name}.html'
-        full_page_url = os.path.join('/', page.url, shareable_html_path)
+        full_page_url = config['site_url']+os.path.join('/', page.url, shareable_html_path)
+        page_url = config['site_url'] + full_page_url
+        backlink_url = config['site_url'] + f'/{page.url}'
+        if not title:
+            title = 'Sharing information from www.managen.ai'
+        if not description:
+            description = title
+        title = markdown.markdown(title, extensions=config['markdown_extensions'])
+        description = markdown.markdown(description, extensions=config['markdown_extensions'])
         self.create_admonition_html(
             path=admonition_html_path, 
             content=admonition_block_content, 
             title=title, 
-            description="Description", 
-            image_url=None, 
+            description=description,
+            image_url=image_url, 
             page_url=full_page_url, 
             # backlink_url=full_page_url)
-            backlink_url=f'/{page.url}')
+            backlink_url=backlink_url)
 
     
 

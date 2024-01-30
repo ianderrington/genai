@@ -99,6 +99,7 @@ theme:
 # Plugins
 plugins:
   - search
+  - shareable_admonition
   - awesome-pages
   - meta
   #- redirects:
