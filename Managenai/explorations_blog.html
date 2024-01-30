@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024-01-23" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -4536,7 +4536,7 @@ and
   <span class="md-ellipsis">
     
   
-    Code of conduct
+    Code of Conduct
   
 
     
@@ -4636,6 +4636,45 @@ and
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2024-01-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2024-01-27
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2024-01-27">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sharing-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Improvements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#2024-01-23" class="md-nav__link">
@@ -4761,6 +4800,45 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2024-01-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2024-01-27
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2024-01-27">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sharing-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Improvements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2024-01-23" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4878,6 +4956,23 @@ and
 
   <h1>Explorations blog</h1>
 
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="2024-01-27">2024-01-27<a class="headerlink" href="#2024-01-27" title="Permanent link">&para;</a></h3>
+<h4 id="sharing-improvements">Sharing Improvements<a class="headerlink" href="#sharing-improvements" title="Permanent link">&para;</a></h4>
+<p>Realized that in order to have appropriately viral growth would need to build link sharing that would enable sharing important concept-cards or paper-cards. </p>
+<p><strong>Concept card</strong> is a small description of a concept, with visuals, like a wiki but more succinct and contained, only providing essential references if they were derivative or otherwise necessary to still understand the concepts. </p>
+<p><strong>Paper card</strong> is the description of a paper, with visuls, that allows the paper to be understood and maybe used <em>directly</em>. </p>
+<p>These would need to be enabled through admonitions. </p>
+<p>Looked into it, and it might be possible?</p>
+<p>Here is how it would happen. 
+An mkdocs plugin is built. This Plugin would:
+1. Look for admonitions elements in markdown files
+1. For admonition elements that have extra input that is known as 'share-name'
+1. For these components, the full admonition block is extracted (with 'share-name' removed) and copied into to a temporary markdown file. This markdown file is added to the 'to process' list for markdowns to be rendered. </p>
+<div class="admonition question">
+<p class="admonition-title">Does this allow iframe</p>
+<p><iframe src="contributing.html"></iframe></p>
+</div>
 <h3 id="2024-01-23">2024-01-23<a class="headerlink" href="#2024-01-23" title="Permanent link">&para;</a></h3>
 <h4 id="working-on-summarization-chain-interface">Working on Summarization chain interface.<a class="headerlink" href="#working-on-summarization-chain-interface" title="Permanent link">&para;</a></h4>
 <p><a href="https://medium.com/@johnthuo/chat-with-your-pdf-using-langchain-f-a-i-s-s-and-openai-to-query-pdfs-e7bfde086155">https://medium.com/@johnthuo/chat-with-your-pdf-using-langchain-f-a-i-s-s-and-openai-to-query-pdfs-e7bfde086155</a> &rarr; Nice and simple. Faiss + OpenAI

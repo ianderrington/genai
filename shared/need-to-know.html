@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[tl;dr]</title>
+    
+    
+    
+    <meta property="og:url" content="https://www.managen.ai//shared/need-to-know.html">
+
+    <meta property="fb:app_id" content="228388376292814">
+    <meta property="og:title" content="[tl;dr]">
+    <meta property="og:description" content="- Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it"">
+
+    <meta property="og:type"  content="website" />
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://www.managen.ai//shared/need-to-know.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="[tl;dr]">
+    <meta name="twitter:description" content="[tl;dr]">
+    <meta name="twitter:image" content="">
+    
+    <style>
+        .page-url { display: block; }
+        .iframe .backlink-url { display: none; }
+        .copy-icon { cursor: pointer; }
+         .copied { color: green; } /* Style for indicating copied status */
+         .copy-icon {
+             cursor: pointer;
+             position: absolute;
+             bottom: 10px;
+             right: 10px;
+         }
+         .copied-popup {
+             display: none;
+             position: absolute;
+             right: 10px;
+             bottom: 35px;
+             background-color: #f0f0f0;
+             border: 1px solid #d0d0d0;
+             padding: 5px;
+             border-radius: 5px;
+         }
+         .copied-popup.show {
+             display: block;
+         }
+     </style>
+
+    <script>
+       (function(d, w) {
+          if (w.self !== w.top) {
+             d.className += " iframe";
+          }
+       }(document.documentElement, window));
+
+        window.onload = function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].target = '_blank';
+            }
+        };
+        function copyToClipboard(elementId) {
+            var url = document.getElementById(elementId).href;
+            navigator.clipboard.writeText(url).then(function() {
+                // Show copied popup
+                var popup = document.getElementById("copied-popup");
+                popup.classList.add("show");
+
+                // Hide popup after 2 seconds
+                setTimeout(function() { popup.classList.remove("show"); }, 2000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="admonition">
+        <ul>
+<li>Evaluate your <a href="./overview/use_cases.md"><strong>use cases</strong></a> and think of the <a href="./overview/challenges.md"><strong>challenges</strong></a> associated with it</li>
+<li>Understand the <a href="./data/index.md"><strong>data</strong></a> and collect data that you need.</li>
+<li>Consider <a href="./architectures/index.md"><strong>Model Architectures</strong></a> use <a href="./architectures/pre_trained_models.md"><strong>pre-trained</strong></a> models if possible.</li>
+<li><a href="./deploying/index.md"><strong>Deploy</strong></a> your model.</li>
+<li>Build and use <a href="./agents/index.md">agents</a> to do more.</li>
+<li><a href="../Using/index.md"><strong>Use</strong></a> your Gen()AI efficiently, compliantly, and ethically.</li>
+</ul>
+    </div>
+    <a href="https://www.managen.ai//shared/need-to-know.html" class="page-url" id="page-url"></a>
+    <!-- Clipboard copy icon/button -->
+    <span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url')">&#128203; Copy link</span>
+    <!-- Copied popup -->
+    <div class="copied-popup" id="copied-popup">Link copied!</div>
+    <a href="https://www.managen.ai//Understanding/index.html" class="backlink-url" id="backlink-url">See the main site!</a>
+</body>
+</html>
