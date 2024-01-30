@@ -4,19 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title|default("Shared Admonition") }}</title>
-    <!-- Meta tags for link unfurling -->
     <meta property="og:title" content="{{ title|default("Shared Admonition") }}">
     <meta property="og:description" content="{{ description|default("Admonition Content") }}">
     {% if image_url %}
     <meta property="og:image" content="{{ image_url }}">
     {% endif %}
     <meta property="og:url" content="{{ page_url|default("#") }}">
-    <link rel="stylesheet" href="path_to_some_stylesheet.css"> <!-- Optional: Path to your CSS -->
+    <style>
+        .page-url { display: block; }
+        .iframe .backlink-url { display: none; }
+        .copy-icon { cursor: pointer; }
+         .copied { color: green; } /* Style for indicating copied status */
+         .copy-icon {
+             cursor: pointer;
+             position: absolute;
+             top: 10px;
+             right: 10px;
+         }
+         .copied-popup {
+             display: none;
+             position: absolute;
+             right: 10px;
+             top: 35px;
+             background-color: #f0f0f0;
+             border: 1px solid #d0d0d0;
+             padding: 5px;
+             border-radius: 5px;
+         }
+         .copied-popup.show {
+             display: block;
+         }
+     </style>
+     <link rel="stylesheet" href="path_to_some_stylesheet.css"> <!-- Path to your CSS -->
+
+    <script>
+       (function(d, w) {
+          if (w.self !== w.top) {
+             d.className += " iframe";
+          }
+       }(document.documentElement, window));
+
+        window.onload = function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].target = '_blank';
+            }
+        };
+        function copyToClipboard(elementId) {
+            var url = document.getElementById(elementId).href;
+            navigator.clipboard.writeText(url).then(function() {
+                // Show copied popup
+                var popup = document.getElementById("copied-popup");
+                popup.classList.add("show");
+
+                // Hide popup after 2 seconds
+                setTimeout(function() { popup.classList.remove("show"); }, 2000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="admonition">
         {{ content|safe }}
     </div>
-    <a href="{{ backlink_url|default("#") }}">Back to the original document</a>
+    <a href="{{ page_url|default("#") }}" class="page-url" id="page-url"></a>
+    <!-- Clipboard copy icon/button -->
+    <span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url')">&#128203; Copy link</span>
+    <!-- Copied popup -->
+    <div class="copied-popup" id="copied-popup">Link copied!</div>
+    <a href="{{ backlink_url|default("#") }}" class="backlink-url" id="backlink-url">See the main</a>
 </body>
 </html>
+
