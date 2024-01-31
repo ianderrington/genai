@@ -50,7 +50,7 @@ Here are some known thought structures that are improving agentic output.
     A classic paper, demonstrating the use of in-call task breakdown to better-enable more successful outputs. Often represented as appending a phrase such as `let's think about this step by step` both with and without exemplars to improve success quality going from zero to multi-shot prompts. 
     <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66">
 
-???+ important "[The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps](https://arxiv.org/abs/2401.04925)"
+??? important "[The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps](https://arxiv.org/abs/2401.04925)"
     Appending "you must think more steps" to "Let’s think step by step" increases the reasoning steps and signficantly improves the accuracy on various reasoning tasks.
 
     ```txt
@@ -406,9 +406,9 @@ General manners of search.
 
 Breaking down the input into a divide-and-conquer approach is a valuable approach to more complex requests. Considering separate perspectives, within the _same_ model, or within separate model calls with different prompt-inceptions as in agent [systems](./systems.md) can improve performance.
 
-??? tip "[ProTIP: Progressive Tool Retrieval Improves Planning](https://arxiv.org/pdf/2312.10332.pdf)"
+??? tip "[ProTIP: Progressive Tool Retrieval Improves Planning](https://arxiv.org/pdf/2312.10332.pdf)" protip-progressive-tool-retrieval
 
-    The authors demonstrate a dynamic contrastive learning-based framework implicitly performs task decomposition without explicit subtask requirements, while retaining subtask automicity. 
+    The authors demonstrate a dynamic contrastive learning-based framework implicitly performs task decomposition without explicit subtask requirements, while retaining subtask automicity.
     <img width="676" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/52204bc7-fc1d-467a-9c3c-7fc367ac4b44">
 
 

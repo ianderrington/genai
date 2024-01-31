@@ -6,7 +6,7 @@
     <title>{{ title|default("Shared Admonition") }}</title>
     
     
-    
+
     <meta property="og:url" content="{{ page_url|default("#") }}">
 
     <meta property="og:title" content="{{ title|default("Sharing www.Managen.ai") }}">
@@ -19,7 +19,8 @@
     <meta name="twitter:title" content="{{ title|default("Sharing www.Managen.ai") }}">
     <meta name="twitter:description" content="{{ title|default("Sharing www.Managen.ai") }}">
     <meta name="twitter:image" content="{{ image_url | safe}}">
-    
+    <!--Import stylesheet  -->
+    <link rel="stylesheet" href="../../stylesheets/share-card.css">
     <style>
         .page-url { display: block; }
         .iframe .backlink-url { display: none; }
@@ -44,6 +45,7 @@
          .copied-popup.show {
              display: block;
          }
+
      </style>
 
     <script>
@@ -75,12 +77,12 @@
     </script>
 </head>
 <body>
-    <div class="admonition">
+    <div class="blog-content">
         {{ content|safe }}
     </div>
     <a href="{{ page_url|default("#") }}" class="page-url" id="page-url"></a>
     <!-- Clipboard copy icon/button -->
-    <span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url')">&#128203; Copy link</span>
+    <span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url')">&#128203; </span>
     <!-- Copied popup -->
     <div class="copied-popup" id="copied-popup">Link copied!</div>
     <a href="{{ backlink_url|default("#") }}" class="backlink-url" id="backlink-url">See the main site!</a>

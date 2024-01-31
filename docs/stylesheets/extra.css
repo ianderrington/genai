@@ -10,3 +10,38 @@
     --md-primary-fg-color--light: #ECB7B7;
     --md-primary-fg-color--dark:  #039084;
   }
+
+  .page-url { display: block; }
+  .iframe .backlink-url { display: none; }
+
+   .copied { color: green; } /* Style for indicating copied status */
+   .copy-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    z-index: 1000;
+    right: 5%; 
+    top: 10px;
+  }
+  
+  .copied-popup {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: #f0f0f027;
+    padding: 5px;
+    border-radius: 5px;
+    right: 5%; 
+    top: 10px; 
+  }
+   
+   .copied-popup.show {
+       display: block;
+   }
+
+   .copy-wrapper {
+    position: relative;
+  }

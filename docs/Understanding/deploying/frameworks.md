@@ -58,6 +58,12 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 Handling the inputs/outputs to GenAI in a consistent and reliable manner has spurred the creation of software libraries that can work with GenAI that is called as a service, or hosted locally.
 
 #### LangChain
+* Open source
+Large user community
+Extensive integrations
+Enterprise expansions with LangSmith, LangChainHub and more
+
+
 !!! tip "[Langchain](https://python.langchain.com/en/latest/#) Is a thorough python and javascript orchestration language for adaptable, memory and tooling-equipped calls that can enable agentic AI."
 
 !!! tip "[LangServe](https://github.com/langchain-ai/langserve) will provide a hosted version of LangServe for one-click deployments of LangChain applications."
@@ -107,10 +113,18 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 ### Haystack
 
 !!! code "[Haystack](https://github.com/deepset-ai/haystack) is an e2e llm orchestration framework that allows a number of versatile interactions."
+    Open source by DeepSet
+    Designed for scaleable search and retrieval
+    Evaluation pipelines for system eval
+    Deployable as REST API
 
 ### Griptape
 
 !!! code "[Griptape](https://github.com/griptape-ai/griptape) an enterprise alternative to Langchain"
+    Open source / managemed
+    Commercial Support
+    Optimized for scalability and cloud
+    Encryption, access control, security
     
 
 #### Higher level

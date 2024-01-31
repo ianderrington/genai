@@ -21,12 +21,13 @@ Traditionally, predictive AI has been widely used in virtually every domain wher
 
 Understanding the similarities and differences between predictive and generative AI is crucial. While there is a significant overlap, with Generative AI inheriting many tools and methods from predictive AI, they serve different purposes. 
 
-* **Predictive AI** generates predictive data based on existing data
-* **Generative AI** creates new data based on existing data and generation criteria. 
 
 The distinction is visually represented below.
 
-???+ important "Predictive AI vs Generative AI"
+???+ important "Predictive AI vs Generative AI" predictive-vs-gen-ai
+
+    * **Predictive AI** generates predictive data based on existing data
+    * **Generative AI** creates new data based on existing data and generation criteria. 
     <img width="100%" alt="image" loading="lazy" src="https://github.com/ianderrington/genai/assets/76016868/821b3315-962a-4956-96cf-ffe863beed3f">
 
 ## Creating Gen()AI

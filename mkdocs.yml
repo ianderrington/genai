@@ -162,7 +162,7 @@ extra:
           data: 0
           note: >-
             Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            using our <a href="https://forms.gle/QFFAYhU9VRY8hcV1A" target="_blank" rel="noopener">feedback form</a>.
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ianderrington
@@ -225,5 +225,6 @@ extra_css:
 
 extra_javascript:
   - javascripts/mathjax.js
+  - javascripts/copy-link.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
