@@ -78,25 +78,6 @@ This section provides a selection of repositories that enable the creation of mo
 !!! code "[Curage GPT](https://github.com/monarch-initiative/curate-gpt)"
 
 
-###  Executors and Interpeters
-
-Executors are programming levels of abstraction that encourage the execution of any tools or intractions with internal and external memories and states.
-
-Interpreters are executors that facilitate model computation by parsing, formatting, or otherwise preparing the data for effective use. They can also be used to interpret output to perform routing of actions.
-
-Such efforts can be used to reduce input complexity, token-count, to detect potentially unreasonable inputs or outputs. These interpreters _may_ be agents or models themselves, thought that is not required.
-
-!!! example "Link Routing"
-    A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output.
-
-!!! code "[Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts."
-
-
-
-!!! code "[Semantic Kernel](https://github.com/microsoft/semantic-kernel/tree/main)"
-    [Github](https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb),
-
-!!! code "️[Guidance](https://github.com/microsoft/guidance/) Interleaving generation, prompting and logical control to single  continuous flow."
 
 
 ## Data Creation

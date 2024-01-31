@@ -1,13 +1,26 @@
-When an agent (or model) engages in an interaction with another agent, the result is an agent system. This is achieved by implementing and equipping various agents, and then setting them up so that the output of one is used as the input of the other. Although one may argue that an agent's input can be perceived as another 'tool' where the different agent prompts the action, this argument isn't entirely valid. The reason is that, in most cases, the same considerations apply to all agents but not to all tools. Therefore, we deal with it separately.
+Just like for people, when we can interact our interactions become a part of a system. When an agent (or model) engages in an interaction with another agent, the result is an agent system. The systems can be ordered or disordered, and interact with varying degrees of regulation as imposed by the environment, which includes other agents. To help steer the systems a person may be essential, though fully autonomous systems are of high intriguing for practical and theoretical reasons. 
 
-!!! note "Binary system (asymmetric calling)"
-    In this system, ChatGPT initiates communication with DallE using a prompt. DallE responds by delivering an image. This image is then used in the final response of ChatGPT or returned as-is.
+!!! quote "Agent systems are integral components of the next stage of AI"
 
-!!! note "Multi-body system (bidirectional calling)"
-    This system consists of multiple agents, and they engage in ongoing discussions about their daily activities. They also receive regular updates about their environment. An example of this type of system can be viewed in [this paper](https://arxiv.org/pdf/2304.03442.pdf).
+Individual agents are not individually ideal to perform the variety of tasks that are given to them. [Prompt-engineering](../prompting/index.md), [memories](./memory.md) and their derivative personas can enable different quality of output. Working together, different agents have the potential to create more successful outcomes. 
+
+The challenge is _how_? 
+
+This is an important question and bridges the gaps between complexity organization and process design. 
 
 ## Frameworks
-Frameworks for Agentic Systems require that there is communication with AI-agents with and without people in the loop, to produce consistent end-goals. They may often have papers associated with them, and it may sometimes be inseprable from the papers. 
+Agentic Systems require that there is communication with and between AI-agents. To produce complexity management and success-potential, they are enabled through frameworks that permit certain forms of interactions. A _higher level_ [cognitive architecture](./cognitive_architecture.md) that can be built up in various manners to achieve end-goals effectively. 
+
+Here are a few frameworks of importance. 
+
+
+???+ code "[LangGraph](https://python.langchain.com/docs/langgraph) provides a simple interaction diagram to allow custom-built systems of interaction" langgraph
+    It is important to consider [LangGraph](https://blog.langchain.dev/langgraph-multi-agent-workflows/) 
+
+    ![langgrah](https://blog.langchain.dev/content/images/size/w1600/2024/01/simple_multi_agent_diagram--1-.png)
+    ![langgraph](https://blog.langchain.dev/content/images/2024/01/hierarchical-diagram.png)
+    
+
 
 ???+ code "[ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
     Works with Camel to create agentic systems and has some generally good results. It is certainly not full-fledged software but provides a solid framework for creating systems of agents to produce software-enabled products.
@@ -36,7 +49,20 @@ Frameworks for Agentic Systems require that there is communication with AI-agent
 !!! tip "[Self-play GPT](https://arxiv.org/pdf/2305.10142.pdf)"
     This model leverages different game-roles and LLMs to provide feedback on how to optimize the model and facilitate autonomous enhancement during gameplay.
 
+### Commercial Examples
 
+#### OpenAI
+
+OpenAI released their ability to integrate or call different [AI assistants](https://platform.openai.com/docs/assistants/overvie) be called within a chat using the `@` symbol. Similar to tagging in chat-interfaces, with a human 
+
+
+## Theoretical Classifications
+
+!!! note "Binary system (asymmetric calling)"
+    In this system, ChatGPT initiates communication with DallE using a prompt. DallE responds by delivering an image. This image is then used in the final response of ChatGPT or returned as-is.
+
+!!! note "Multi-body system (bidirectional calling)"
+    This system consists of multiple agents, and they engage in ongoing discussions about their daily activities. They also receive regular updates about their environment. An example of this type of system can be viewed in [this paper](https://arxiv.org/pdf/2304.03442.pdf).
 
 ## Papers
 ??? important "[Experiential Co-Learning of Software-Developing Agents](https://arxiv.org/pdf/2312.17025.pdf) "
@@ -108,9 +134,6 @@ Frameworks for Agentic Systems require that there is communication with AI-agent
      
      ```
 
-    
-
-
 
 !!! tip "[Can Language Models Teach Weaker Agents? Teacher Explanations Improve Students via Theory of Mind](https://arxiv.org/pdf/2306.09299.pdf)"
     In this work, the Theory of Mind (ToM) concept is used to attempt to improve the performance of students. [Github](https://github.com/swarnaHub/ExplanationIntervention)
@@ -166,8 +189,10 @@ Frameworks for Agentic Systems require that there is communication with AI-agent
     ```
     [Github](https://github.com/composable-architectures/llm_multiagent_debate)
 
+
 ??? tip "[Council ](https://github.com/chain-ml/council) Very promising initial creation of networks of agents to create full-fledged teams for output products."
     ![image](https://github.com/chain-ml/council/raw/main/docs/source/introduction/engine_flow.png)
+
 
 ??? code "[SocraticAI](https://github.com/RunzheYang/SocraticAI/tree/main) to use the power of conversation to solve problems. Very interesting"
     [Description](https://princeton-nlp.github.io/SocraticAI/)
@@ -175,6 +200,7 @@ Frameworks for Agentic Systems require that there is communication with AI-agent
 
 
 ## Open Source Implementations (unpublished)
+
 !!! tip "[Swarms](https://medium.com/@kyeg/swarms-of-ai-agents-automating-everything-c554f5be421b )"
     Very thoughtful next-level systems focusing on large-dimensions of swarms. Very initial stages but has a lot of promise.
     [Github](https://github.com/kyegomez/swarms)
