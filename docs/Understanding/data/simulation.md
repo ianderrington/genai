@@ -16,6 +16,20 @@ The process of data simulation involves several steps, each of which contributes
 
 The field of data simulation in AI has been enriched by several resources and studies. Here are a few notable ones:
 
+??? note "[Rephrasing the Web: A Recipe for Compute & Data-Efficient Language Modeling](https://arxiv.org/pdf/2401.16380.pdf)" web-rephrase-augmented-pre-training
+    The authors reveal that creating new training-examples from input data using an off-the-shelf model (Mistral-7B) can yield convergence speeds that are 3x without doing so. The  rephrasing is done in a manner that is 'like wikipedia' or in a 'question-answer format'. They are also done at different levels of style diversity, such as a child or a a scholar. In detailed analysis they found that:
+    
+    * Style diversity improves the value
+    * Reasonable paraphraser models are needed
+    * It is better than standard augmentation that does random deletions or synonym replacements.
+    
+    Here is one of a few example rephrasing prompts: 
+    ```markdown
+    “For the following paragraph give me a paraphrase of the same in high-quality English language as in sentences on Wikipedia”
+    ```
+    <img width="556" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4">
+
+
 !!! code "[StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners](https://github.com/google-research/syn-rep-learn)"
     This research paper by Google Research delves into the use of synthetic images generated from text-to-image models for training visual representation learners.
 
