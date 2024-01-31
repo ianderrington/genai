@@ -17,6 +17,7 @@ The process of data simulation involves several steps, each of which contributes
 The field of data simulation in AI has been enriched by several resources and studies. Here are a few notable ones:
 
 ??? note "[Rephrasing the Web: A Recipe for Compute & Data-Efficient Language Modeling](https://arxiv.org/pdf/2401.16380.pdf)" web-rephrase-augmented-pre-training
+
     The authors reveal that creating new training-examples from input data using an off-the-shelf model (Mistral-7B) can yield convergence speeds that are 3x without doing so. The  rephrasing is done in a manner that is 'like wikipedia' or in a 'question-answer format'. They are also done at different levels of style diversity, such as a child or a a scholar. In detailed analysis they found that:
     
     * Style diversity improves the value
