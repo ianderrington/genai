@@ -1,5 +1,7 @@
-###
-
+### 2024-01-30
+Working on enabling admonitions to be shared so that there is greater viral potential of this. This required building a [mkdocs plugin](../../mkdocs-extensions/mkdocs-shareable-admonition/README.md). 
+The result is any adnomitions will have the potential for a fourth component at the end of the line that gives the share-title. 
+While this is a 'hacky' solution, it solves the immediate needs. 
 
 ### 2024-01-27 
 #### Sharing Improvements
@@ -16,8 +18,10 @@ Looked into it, and it might be possible?
 Here is how it would happen. 
 An mkdocs plugin is built. This Plugin would:
 1. Look for admonitions elements in markdown files
-1. For admonition elements that have extra input that is known as 'share-name'
-1. For these components, the full admonition block is extracted (with 'share-name' removed) and copied into to a temporary markdown file. This markdown file is added to the 'to process' list for markdowns to be rendered. 
+2. For admonition elements that have extra input that is known as 'share-name'
+3. For these components, the full admonition block is extracted (with 'share-name' removed) and copied into to a temporary markdown file of the same name. This markdown file is added to the 'to process' list for markdowns to be rendered... 
+4. The extracted markdown is not rendered in the full mkdocs template with menus and what not, just as a mkdocs html. It is rendered individually so that it can be embededed into the iframe. (or some variant). This rendered html, will also have a link back to the original document, to allow easier tracking. This html will also have meta-tags allowing for link unfurling. The html admonition will not render the title of the admonition, just the elements.
+5. In the original document, document, a 'share' button is given, that points to the extracted URL. The admonition retains the title. It will embed an iframe pointing to the compiled html of the extracted markdown. 
 
 
 

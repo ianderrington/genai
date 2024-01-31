@@ -19,14 +19,6 @@ Here are a few frameworks of importance.
 
     ![langgrah](https://blog.langchain.dev/content/images/size/w1600/2024/01/simple_multi_agent_diagram--1-.png)
     ![langgraph](https://blog.langchain.dev/content/images/2024/01/hierarchical-diagram.png)
-    
-
-
-???+ code "[ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
-    Works with Camel to create agentic systems and has some generally good results. It is certainly not full-fledged software but provides a solid framework for creating systems of agents to produce software-enabled products.
-
-???+ code "[Agency Swarm](https://github.com/VRSEN/agency-swarm) provides a language creating interacting systems of agents."
-    
 
 ???+ important "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
     ![image](https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924)
@@ -38,8 +30,14 @@ Here are a few frameworks of importance.
     ![image](https://github.com/ianderrington/genai/assets/76016868/d89bf7b1-99a0-429f-a6f5-50a8183a151f)
     <img width="581" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f9d7e423-b3d9-40ca-8be8-52461d53282a">
 
-    TRY THIS!
+    TRY THIS!   
 
+
+??? code "[ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
+    Works with Camel to create agentic systems and has some generally good results. It is certainly not full-fledged software but provides a solid framework for creating systems of agents to produce software-enabled products.
+
+??? code "[Agency Swarm](https://github.com/VRSEN/agency-swarm) provides a language creating interacting systems of agents."
+    
 
 ??? code "[MetaGPT](https://github.com/geekan/MetaGPT) enables different agents to interact and generate meaningful outputs based on varying tasks and personas."
 

@@ -127,23 +127,33 @@ class ShareableAdmonitionPlugin(BasePlugin):
         description, image_url = self.get_image_and_first_text_from_block(admonition_block)
         # Go through admonition block and use relpath
         new_admonition_block = []
-        # make RE for all ![image_text](image_url) and <img src="image_url">
-        # RE = re.compile(r'\[.*\]\((.*)\)|<img.*src="(.*)".*>')
-        # for line in admonition_block:
-        #     # find any links
-        #     matches = RE.findall(line)
-        #     for match in matches:
-        #         for m in match:
+        # make RE for all [link name](link),  <img src="image_url"> and also [**link name**](link)
+        # RE = re.compile(r'(\[.*?\]\((.*?)\))|(<img.*src="(.*)".*>)|(\[.*?\]\((.*?)\))')
+        RE = re.compile(r'\[.*?\]\((.*?)\)|<img.*src="(.*?)".*>|\[.*?\]\((.*?)\)')
+        for line in admonition_block:
+            # find any links
+            matches = RE.findall(line)
+            for match in matches:
+                for m in match:
 
-        #             if m and not m.startswith('http'):
-        #                 # make the path relative
-        #                 # new_path = os.path.relpath(m[1:], page.file.abs_src_path)
-        #                 m = m.lstrip('./')
-        #                 new_path = os.path.relpath(m, page.url)
-        #                 # relpath = os.path.relpath(admonition_url[1:], page.url)
-        #                 line = line.replace(m, new_path)
-
-            
+                    if m and not m.startswith('http'):
+                        # make the path relative
+                        # new_path = os.path.relpath(m[1:], page.file.abs_src_path)
+                        # m = m.lstrip('./')
+                        # new_path = os.path.relpath(m.lstrip('./'), page.url)
+                        # new_path = os.path.relpath('shared', page.url)
+                        new_path = '/'.join(os.path.relpath(page.url, 'shared').split('/')[:-1])
+                        new_path = '/'.join([new_path, m])
+                        # new_path = os.path.relpath(page.url, 'shared')
+                        new_path = new_path.rstrip('.md')
+                        if not new_path.endswith('.html'):
+                            new_path += '.html'
+                        # import ipdb; ipdb.set_trace()
+                        # relpath = os.path.relpath(admonition_url[1:], page.url)
+                        line = line.replace(m, new_path)
+            new_admonition_block.append(line)
+        admonition_block = new_admonition_block
+        
 
         # for idx, line in enumerate(admonition_block):
 

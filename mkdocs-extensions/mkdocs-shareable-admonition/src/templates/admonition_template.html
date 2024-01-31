@@ -57,7 +57,9 @@
     </script>
 </head>
 <body>
+    
     <div class="blog-content">
+        <h1>{{ title|default("Shared Admonition") }}</h1>
         {{ content|safe }}
     </div>
     <a href="{{ page_url|default("#") }}" class="page-url" id="page-url"></a>
