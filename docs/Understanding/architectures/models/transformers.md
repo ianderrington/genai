@@ -17,6 +17,10 @@ In Decoder-only networks, like [GPT](gpt.md), because they are _next-token_predi
   * Layer normalization. Found to be computationally efficient version sets m = beta = 0 or root mean square layer normalizagion or `RMSnorm`.
   * Unembedding: Learns to convert vector intot he vocuabulary elements.
 
+## Visualizing
+??? note "[Visualizing Large Transformers](https://bbycroft.net/llm)" visualizing-large-transformers
+    
+
 ## Components
 
 1. Positional Encoding
