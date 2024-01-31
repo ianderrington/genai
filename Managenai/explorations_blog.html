@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#2024-01-30" class="md-skip">
           Skip to content
         </a>
       
@@ -4638,10 +4638,10 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#2024-01-30" class="md-nav__link">
     <span class="md-ellipsis">
       
-        
+        2024-01-30
       
     </span>
   </a>
@@ -4800,10 +4800,10 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#2024-01-30" class="md-nav__link">
     <span class="md-ellipsis">
       
-        
+        2024-01-30
       
     </span>
   </a>
@@ -4956,7 +4956,10 @@ and
 
   <h1>Explorations blog</h1>
 
-<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="2024-01-30">2024-01-30<a class="headerlink" href="#2024-01-30" title="Permanent link">&para;</a></h3>
+<p>Working on enabling admonitions to be shared so that there is greater viral potential of this. This required building a <a href="../../mkdocs-extensions/mkdocs-shareable-admonition/README.md">mkdocs plugin</a>. 
+The result is any adnomitions will have the potential for a fourth component at the end of the line that gives the share-title. 
+While this is a 'hacky' solution, it solves the immediate needs. </p>
 <h3 id="2024-01-27">2024-01-27<a class="headerlink" href="#2024-01-27" title="Permanent link">&para;</a></h3>
 <h4 id="sharing-improvements">Sharing Improvements<a class="headerlink" href="#sharing-improvements" title="Permanent link">&para;</a></h4>
 <p>Realized that in order to have appropriately viral growth would need to build link sharing that would enable sharing important concept-cards or paper-cards. </p>
@@ -4967,8 +4970,10 @@ and
 <p>Here is how it would happen. 
 An mkdocs plugin is built. This Plugin would:
 1. Look for admonitions elements in markdown files
-1. For admonition elements that have extra input that is known as 'share-name'
-1. For these components, the full admonition block is extracted (with 'share-name' removed) and copied into to a temporary markdown file. This markdown file is added to the 'to process' list for markdowns to be rendered. </p>
+2. For admonition elements that have extra input that is known as 'share-name'
+3. For these components, the full admonition block is extracted (with 'share-name' removed) and copied into to a temporary markdown file of the same name. This markdown file is added to the 'to process' list for markdowns to be rendered... 
+4. The extracted markdown is not rendered in the full mkdocs template with menus and what not, just as a mkdocs html. It is rendered individually so that it can be embededed into the iframe. (or some variant). This rendered html, will also have a link back to the original document, to allow easier tracking. This html will also have meta-tags allowing for link unfurling. The html admonition will not render the title of the admonition, just the elements.
+5. In the original document, document, a 'share' button is given, that points to the extracted URL. The admonition retains the title. It will embed an iframe pointing to the compiled html of the extracted markdown. </p>
 <div class="admonition question">
 <p class="admonition-title">Does this allow iframe</p>
 <p><iframe src="contributing.html"></iframe></p>

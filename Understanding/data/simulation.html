@@ -4779,6 +4779,28 @@ and
 </ol>
 <h2 id="key-resources-and-studies-in-data-simulation">Key Resources and Studies in Data Simulation<a class="headerlink" href="#key-resources-and-studies-in-data-simulation" title="Permanent link">&para;</a></h2>
 <p>The field of data simulation in AI has been enriched by several resources and studies. Here are a few notable ones:</p>
+<p><a href="/shared/web-rephrase-augmented-pre-training.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
+
+<details class="note">
+<summary><a href="https://arxiv.org/pdf/2401.16380.pdf">Rephrasing the Web: A Recipe for Compute &amp; Data-Efficient Language Modeling</a></summary>
+<p>The authors reveal that creating new training-examples from input data using an off-the-shelf model (Mistral-7B) can yield convergence speeds that are 3x without doing so. The  rephrasing is done in a manner that is 'like wikipedia' or in a 'question-answer format'. They are also done at different levels of style diversity, such as a child or a a scholar. In detailed analysis they found that:</p>
+<ul>
+<li>Style diversity improves the value</li>
+<li>Reasonable paraphraser models are needed</li>
+<li>It is better than standard augmentation that does random deletions or synonym replacements.</li>
+</ul>
+<p>Here is one of a few example rephrasing prompts: 
+<div class="highlight"><pre><span></span><code>“For the following paragraph give me a paraphrase of the same in high-quality English language as in sentences on Wikipedia”
+</code></pre></div>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="556" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4"></a></p>
+</details>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/google-research/syn-rep-learn">StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners</a></p>
 <p>This research paper by Google Research delves into the use of synthetic images generated from text-to-image models for training visual representation learners.</p>

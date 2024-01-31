@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Rephrasing the Web: A Recipe for Compute & Data-Efficient Language Modeling](https://arxiv.org/pdf/2401.16380.pdf)</title>
+    
+    
+
+    <meta property="og:url" content="https://www.managen.ai//shared/web-rephrase-augmented-pre-training.html">
+
+    <meta property="og:title" content="[Rephrasing the Web: A Recipe for Compute & Data-Efficient Language Modeling](https://arxiv.org/pdf/2401.16380.pdf)">
+    <meta property="og:description" content="The authors reveal that creating new training-examples from input data using an off-the-shelf model (Mistral-7B) can yield convergence speeds that are 3x without doing so. The  rephrasing is done in a manner that is 'like wikipedia' or in a 'question-answer format'. They are also done at different levels of style diversity, such as a child or a a scholar. In detailed analysis they found that:"">
+
+    <meta property="og:type"  content="website" />
+    <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4">
+    <meta property="og:url" content="https://www.managen.ai//shared/web-rephrase-augmented-pre-training.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="[Rephrasing the Web: A Recipe for Compute & Data-Efficient Language Modeling](https://arxiv.org/pdf/2401.16380.pdf)">
+    <meta name="twitter:description" content="[Rephrasing the Web: A Recipe for Compute & Data-Efficient Language Modeling](https://arxiv.org/pdf/2401.16380.pdf)">
+    <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4">
+    <!--Import stylesheet  -->
+    <link rel="stylesheet" href="../../stylesheets/share-card.css">
+    <style>
+        .page-url { display: block; }
+        .iframe .backlink-url { display: none; }
+   
+
+     </style>
+
+    <script>
+       (function(d, w) {
+          if (w.self !== w.top) {
+             d.className += " iframe";
+          }
+       }(document.documentElement, window));
+
+        window.onload = function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].target = '_blank';
+            }
+        };
+        function copyToClipboard(elementId) {
+            var url = document.getElementById(elementId).href;
+            navigator.clipboard.writeText(url).then(function() {
+                // Show copied popup
+                var popup = document.getElementById("copied-popup");
+                popup.classList.add("show");
+
+                // Hide popup after 2 seconds
+                setTimeout(function() { popup.classList.remove("show"); }, 2000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="blog-content">
+        <h1>[Rephrasing the Web: A Recipe for Compute & Data-Efficient Language Modeling](https://arxiv.org/pdf/2401.16380.pdf)</h1>
+        <p>The authors reveal that creating new training-examples from input data using an off-the-shelf model (Mistral-7B) can yield convergence speeds that are 3x without doing so. The  rephrasing is done in a manner that is 'like wikipedia' or in a 'question-answer format'. They are also done at different levels of style diversity, such as a child or a a scholar. In detailed analysis they found that:</p>
+<ul>
+<li>Style diversity improves the value</li>
+<li>Reasonable paraphraser models are needed</li>
+<li>It is better than standard augmentation that does random deletions or synonym replacements.</li>
+</ul>
+<p>Here is one of a few example rephrasing prompts: 
+<div class="highlight"><pre><span></span><code>“For the following paragraph give me a paraphrase of the same in high-quality English language as in sentences on Wikipedia”
+</code></pre></div>
+<img width="556" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4"></p>
+    </div>
+    <a href="https://www.managen.ai//shared/web-rephrase-augmented-pre-training.html" class="page-url" id="page-url"></a>
+    <!-- Clipboard copy icon/button -->
+    <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Copy and share! &#128203; </span>
+    <!-- Copied popup -->
+    <div class="copied-popup" id="copied-popup">Link copied!</div>
+    <a href="https://www.managen.ai//Understanding/data/simulation.html" class="backlink-url" id="backlink-url">See the main site!</a>
+</body>
+</html>
