@@ -67,7 +67,7 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-MPQ831MCNS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-MPQ831MCNS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MPQ831MCNS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config",""),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
   
     <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
   
@@ -4721,9 +4721,25 @@ and
 </ul>
 </div>
 <p>What do you need to know?</p>
+<p><a href="/shared/need-to-know.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
+
 <details class="important" open="open">
 <summary>[tl;dr]</summary>
-<p><iframe src="/shared/need-to-know.html" width="100%" height="100%" frameBorder="0" loading="lazy"></iframe></p>
+<ul>
+<li>Evaluate your <a href="overview/use_cases.html"><strong>use cases</strong></a> and think of the <a href="overview/challenges.html"><strong>challenges</strong></a> associated with it</li>
+<li>Understand the <a href="data/index.html"><strong>data</strong></a> and collect data that you need.</li>
+<li>Consider <a href="architectures/index.html"><strong>Model Architectures</strong></a> use <a href="architectures/pre_trained_models.html"><strong>pre-trained</strong></a> models if possible.</li>
+<li><a href="deploying/index.html"><strong>Deploy</strong></a> your model.</li>
+<li>Build and use <a href="agents/index.html">agents</a> to do more.</li>
+<li><a href="../Using/index.html"><strong>Use</strong></a> your Gen()AI efficiently, compliantly, and ethically.</li>
+</ul>
 </details>
 <p>In the documents you read here, you will be able to see an increseasingly consistent and understandable discussion of Gen()AI technologies, enabled by Gen()AI technologies herein described.  Like most powerful technology, Gen()AI can be a two edged sword and effective use requires responsible and thoughtful understanding.</p>
 <h2 id="the-base-components-of-genai">The base components of Gen()AI<a class="headerlink" href="#the-base-components-of-genai" title="Permanent link">&para;</a></h2>
@@ -5077,6 +5093,8 @@ and
       <script src="../assets/javascripts/bundle.8e8db93a.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="../javascripts/copy-link.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

@@ -69,7 +69,7 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-MPQ831MCNS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-MPQ831MCNS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MPQ831MCNS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config",""),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
   
     <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
   
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#action" class="md-skip">
+        <a href="#actions-and-tools" class="md-skip">
           Skip to content
         </a>
       
@@ -2083,15 +2083,15 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
+  <a href="#actions-and-tools" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Action
+        Actions and tools
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Action">
+    <nav class="md-nav" aria-label="Actions and tools">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2102,6 +2102,34 @@ and
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpeters-and-routers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpeters and Routers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interpeters and Routers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Solutions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4738,15 +4766,15 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
+  <a href="#actions-and-tools" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Action
+        Actions and tools
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Action">
+    <nav class="md-nav" aria-label="Actions and tools">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4757,6 +4785,34 @@ and
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpeters-and-routers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpeters and Routers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interpeters and Routers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Solutions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4828,18 +4884,33 @@ and
 
   <h1>Actions and tools</h1>
 
-<p>Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. While potentially minimal distinction. Often relayed by an <a href="cognitive_architecture.html#interpreters">interpreter</a> or a perhaps simple jinja syntax-pattern more complete json input that can be validated for the function of choice.</p>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/rizerphe/local-llm-function-calling">Local LLM Function Calling</a> enforces json semantics for calls to functions</p>
-</div>
-<h2 id="action">Action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h2>
-<p>Actions may be be internal or externally focused.  focused generally related to an agent's '<code>memory</code>, or externally focused, with tools, though their distinction may be moot.</p>
+<p>Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. Relayed by an <a href="#interpeters-and-routers">interpreters and routers</a>, these have made LLMs one of the most powerful enablers of Agentic AI. </p>
+<h2 id="actions-and-tools">Actions and tools<a class="headerlink" href="#actions-and-tools" title="Permanent link">&para;</a></h2>
+<p>Actions can be thought of interacting in an environment, this environment can have external 'tools' or some form of digital or physical embodiment state of the agent. Thhought of in a different way, actions may be be internal or externally focused.  focused generally related to an agent's '<code>memory</code>, or externally focused, with tools, though their distinction may be moot.</p>
 <p><strong>Internal actions</strong> generally relate reading, writing or updating, an agents memory, <a href="memory.html">memory</a> state, such as free-text <code>scratech-pad</code>, an ordered <code>memory-log</code> or a vector database.</p>
 <p><strong>External actions</strong> may be to act on simulated or real environments, or otherwise tracked <code>state</code>, or to use a toolthat an agent may be 'equipped with' to run. These can be API calls or local function calls.</p>
 <h3 id="executors">Executors<a class="headerlink" href="#executors" title="Permanent link">&para;</a></h3>
 <p>The action that an agent may take is enabled by an <code>AgentExecutor</code> or <a href="cognitive_architecture.html#interpreters">interpreter</a> of the LLM output, that coordinates the call to perform the action.</p>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/langchain-ai/langchain/blob/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent.py#L637">Langchain Agent Executor</a></p>
+</div>
+<h3 id="interpeters-and-routers">Interpeters and Routers<a class="headerlink" href="#interpeters-and-routers" title="Permanent link">&para;</a></h3>
+<p>Interpreters are programs that facilitate model computation by parsing, formatting, or otherwise preparing the data for effective use. They can also be used to route information to the appropriate reciever, such as a tool or other LLM. </p>
+<p>Interpreting Such efforts can be used to reduce input complexity, token-count, to detect potentially unreasonable inputs or outputs. These interpreters <em>may</em> be agents or models themselves, thought that is not required.</p>
+<div class="admonition example">
+<p class="admonition-title">Link Routing</p>
+<p>A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output.</p>
+</div>
+<h4 id="code-solutions">Code Solutions<a class="headerlink" href="#code-solutions" title="Permanent link">&para;</a></h4>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://shreyar.github.io/guardrails/">Guardrails</a> To help format output and prevent improper prompts.</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/microsoft/semantic-kernel/tree/main">Semantic Kernel</a></p>
+<p><a href="https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb">Github</a>,</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title">️<a href="https://github.com/microsoft/guidance/">Guidance</a> Interleaving generation, prompting and logical control to single  continuous flow.</p>
 </div>
 <h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
 <p>Tools generally consist of single function calls to something that will return value to the end-point destination, be that the agent itself or a person interacting with an agent.</p>
@@ -4859,6 +4930,9 @@ Provides a method to allow open-source LLMs to work with tools for real-world ta
 </div>
 <div class="admonition tip">
 <p class="admonition-title"><a href="https://arxiv.org/pdf/2308.00675.pdf">Tool Documentation Enables Zero-Shot Tool-Usage with Large Language Models</a> Demonstrates that presenting documentation of tool usage is likely more valuable than providing examples.</p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/rizerphe/local-llm-function-calling">Local LLM Function Calling</a> enforces json semantics for calls to functions</p>
 </div>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://huggingface.co/papers/2307.16789">Tool LLM</a> This describes a novel approach enabling over 16000 API's to be called through an intelligent routing mechanism. <a href="https://github.com/OpenBMB/ToolBench">Github</a> Uses RapidAPI connector to do so. </p>
@@ -5199,6 +5273,8 @@ Provides a method to allow open-source LLMs to work with tools for real-world ta
       <script src="../../assets/javascripts/bundle.8e8db93a.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/copy-link.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

@@ -1,0 +1,59 @@
+/* Import the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Style the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Start content at the top */
+    margin: 0;
+    padding: 20px; /* Add padding around the content */
+    height: 100vh;
+    text-align: left;
+}
+
+/* Style the blog content */
+.blog-content {
+    max-width: 800px;
+    width: 100%;
+    position: relative; /* Set to relative for positioning children */
+    margin-bottom: 50px; /* Adjust as needed */
+}
+
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.copy-icon { 
+    cursor: pointer; 
+    position: relative;
+
+    
+}
+
+.copied-popup {
+    display: none;
+    position: relative;
+
+    background-color: #f0f0f0;
+    border: 1px solid #d0d0d0;
+
+    z-index: 100; /* Ensure visibility */
+}
+
+.copied-popup.show {
+    display: block;
+}
+
+/* Position the backlink at the bottom of the body */
+.backlink-url {
+    position: relative;
+
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    z-index: 100; /* Ensure it's above the content */
+}

@@ -69,7 +69,7 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-MPQ831MCNS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-MPQ831MCNS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MPQ831MCNS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config",""),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
   
     <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
   
@@ -2651,17 +2651,6 @@ and
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#executors-and-interpeters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Executors and Interpeters
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -4849,17 +4838,6 @@ and
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#executors-and-interpeters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Executors and Interpeters
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -4996,24 +4974,6 @@ Their example](<a href="https://github.com/jackmpcollins/magentic">https://githu
 </div>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/monarch-initiative/curate-gpt">Curage GPT</a></p>
-</div>
-<h3 id="executors-and-interpeters">Executors and Interpeters<a class="headerlink" href="#executors-and-interpeters" title="Permanent link">&para;</a></h3>
-<p>Executors are programming levels of abstraction that encourage the execution of any tools or intractions with internal and external memories and states.</p>
-<p>Interpreters are executors that facilitate model computation by parsing, formatting, or otherwise preparing the data for effective use. They can also be used to interpret output to perform routing of actions.</p>
-<p>Such efforts can be used to reduce input complexity, token-count, to detect potentially unreasonable inputs or outputs. These interpreters <em>may</em> be agents or models themselves, thought that is not required.</p>
-<div class="admonition example">
-<p class="admonition-title">Link Routing</p>
-<p>A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output.</p>
-</div>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://shreyar.github.io/guardrails/">Guardrails</a> To help format output and prevent improper prompts.</p>
-</div>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/microsoft/semantic-kernel/tree/main">Semantic Kernel</a></p>
-<p><a href="https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb">Github</a>,</p>
-</div>
-<div class="admonition code">
-<p class="admonition-title">️<a href="https://github.com/microsoft/guidance/">Guidance</a> Interleaving generation, prompting and logical control to single  continuous flow.</p>
 </div>
 <h2 id="data-creation">Data Creation<a class="headerlink" href="#data-creation" title="Permanent link">&para;</a></h2>
 <p>Generative AI is a splendid use-case for creating data that can be used to train or refine new models. Here are some tools that allow for creation of data for down-stream purposes, always being sure to be consistent with <a href="../overview/challenges.html#dual-use">dual-use concerns</a>.</p>
@@ -5360,6 +5320,8 @@ Their example](<a href="https://github.com/jackmpcollins/magentic">https://githu
       <script src="../../assets/javascripts/bundle.8e8db93a.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/copy-link.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
