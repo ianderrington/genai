@@ -21,7 +21,7 @@ In Decoder-only networks, like [GPT](gpt.md), because they are _next-token_predi
 
 ??? note "[Visualizing Large Transformers](https://bbycroft.net/llm)" visualizing-large-transformers
 
-    A very interesting representation of visual transformers.
+    A very interesting visual representation of transformers.
     <img width="785" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ecca4ace-6623-4341-b223-c12be4de3c11">
 
     

@@ -59,7 +59,7 @@
 <body>
     
     <div class="blog-content">
-        <h1>{{ title|default("Shared Admonition") }}</h1>
+        <h1>{{ page_title|default("Shared from www.Managen.ai") }}</h1>
         {{ content|safe }}
     </div>
     <a href="{{ page_url|default("#") }}" class="page-url" id="page-url"></a>

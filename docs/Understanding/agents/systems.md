@@ -63,6 +63,41 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
     This system consists of multiple agents, and they engage in ongoing discussions about their daily activities. They also receive regular updates about their environment. An example of this type of system can be viewed in [this paper](https://arxiv.org/pdf/2304.03442.pdf).
 
 ## Papers
+
+
+!!! important “[Society of Minds: To Enable Societal Interactions to Improve Output](https://arxiv.org/pdf/2305.17066.pdf)” ai-society-of-minds
+
+    https://medium.com/@ignacio.de.gregorio.noblejas/hallucination-312f79f4c888) 
+    See…  https://www.cjco.com.au/article/news/multi-agent-debates-elevate-language-models-mit-and-google-brain-unlock-llm-potential-and-accuracy/
+    And… https://medium.com/@ignacio.de.gregorio.noblejas/hallucination-312f79f4c888
+    Also… 
+    Plus Marvin Minsky YouTube “Society of Mind”…https://www.youtube.com/watch?v=-pb3z2w9gDg
+
+    Comment: The foundation of the multi-agent debate approach involves pitting multiple LLM instances against each other, where each proposes and argues a response to a given prompt. Through rounds of exchange, the objective is to collectively review and refine answers, ultimately reaching a well-reviewed, accurate final response.  The problem is if these agents provide an echo chamber of confabulated responses.
+
+    From Medium article… 
+
+    In his 1986 book The Society of Mind, Minksy, the founder of MIT’s AI laboratory, presented his theory of how the mind works.
+    He proposed that it is not a single entity but rather a complex system composed of many smaller, simpler processes that Minsky called “agents”. 
+    These agents, each simple in itself, work together to create intelligent behavior, the behavior that AI is every day trying to imitate from us humans.
+    Now, this fascinating theory has inspired a select group of MIT and Google Brain researchers to present the next breakthrough in Generative AI, a new way to fight the largest enemy of Large Language Models (LLMs) like ChatGPT.
+
+    The proposed method works by creating a “society of minds” where multiple instances of a language model propose and debate their individual responses and reasoning processes over multiple rounds to arrive at a single common answer.
+
+    Here’s a more detailed breakdown:
+
+    1/ Given a query, multiple instances of a language model (or several ones) first generate individual candidate answers.
+
+    2/ Each individual model instance reads and critiques the responses of all other models and uses this content to update its own answer.
+
+    3/ This step is then repeated over several rounds until we reach a final answer.
+
+    This process induces models to construct answers that are consistent with both their internal critic as well as sensible in light of the responses of other agents.
+
+    The resulting quorum of models can hold and maintain multiple chains of reasoning and possible answers simultaneously before proposing the final answer.
+
+    You can see an example in the attached image
+
 ??? important "[Experiential Co-Learning of Software-Developing Agents](https://arxiv.org/pdf/2312.17025.pdf) "
 
      Introduces a multi-agent paradigm that enables two types of language-agent using three modules of integration: 

@@ -174,13 +174,15 @@ class ShareableAdmonitionPlugin(BasePlugin):
             title = 'Sharing information from www.managen.ai'
         if not description:
             description = title
-        title = strip_html(title)
+        page_title = markdown.markdown(title)
+        title = strip_html(page_title)
         description = strip_html(description)
 
         self.create_admonition_html(
             path=admonition_html_path, 
             content=admonition_block_content, 
-            title=title, 
+            title=title,
+            page_title=page_title, 
             description=description,
             image_url=image_url, 
             page_url=full_page_url, 
@@ -195,13 +197,14 @@ class ShareableAdmonitionPlugin(BasePlugin):
     #     iframe_html = f'<iframe src="{share_name}" width="100%" height="100%" frameBorder="0" loading="lazy"></iframe>\n'
     #     return iframe_html
 
-    def create_admonition_html(self, path, content, title, description, image_url, page_url, backlink_url, config):
+    def create_admonition_html(self, path, content, title, page_title, description, image_url, page_url, backlink_url, config):
         # title = markdown.markdown(title, extensions=config['markdown_extensions'])
         # description = markdown.markdown(description, extensions=config['markdown_extensions'])
         template = self.template_env.get_template(self.TEMPLATE_NAME)
         html_content = template.render(
             content=content,
             title=title,
+            page_title=page_title,
             description=description,
             image_url=image_url,
             page_url=page_url,
