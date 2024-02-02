@@ -1,8 +1,8 @@
-A cognitive architecure are a higher level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They are can be focused on both simple and complex tasks. 
+A cognitive architecture is a higher-level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They are can be focused on both simple and complex tasks. 
 
-One input call to an LLM outputs produces output(s) based on their input [prompts](../prompting/index.md).  Cognitive architectures, sometimes also considered [chains](#chains) allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md) in different forms of [#environments]. Chains can build more complex and integrated systems to enable higher-quality reasoning and results.
+One input call to an LLM output produces output(s) based on their input [prompts](../prompting/index.md).  Cognitive architectures, sometimes also considered [chains](#chains) allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md) in different forms of [#environments]. Chains can build more complex and integrated systems to enable higher-quality reasoning and results.
 
-Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf) considered design system with a connection of a large number but highly connected units to facilitate computational-like behavior seen from Animals. For Gen()AI, however, cognitive architectures can be constructed in a more linear [chains](#chains), as in the case of the LLM-enabled chat, or more complex branching [graph chains](#graph-chains) which have been shown to increase performance. 
+Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf) considered design system with a connection of a large number but highly connected units to facilitate computational-like behavior seen from Animals. For Gen()AI, however, cognitive architectures can be constructed in more linear [chains](#chains), as in the case of the LLM-enabled chat, or more complex branching [graph chains](#graph-chains), which have been shown to increase performance. 
 
 ## Aspects of in Cognitive Architectures
 
@@ -18,7 +18,7 @@ Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/
 - **Tool use** While overlapping directly with Observing or taking memory actions, tool usage may be part of cognitive patterns (like using a `scratch-pad`) and must be considered as such.
 
 ### Models
-Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](#prompts) they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used for helping model creation with [recurrent training](../architectures/training/recurrent.md).
+Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](#prompts), they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used to help model creation with [recurrent training](../architectures/training/recurrent.md).
 
 ### Overview
 ??? important "[Cognitive Architectures for Language Agents](https://arxiv.org/pdf/2309.02427.pdf) is a thoughtful understanding of Cognitive Architectures"
@@ -31,6 +31,67 @@ Models provide the computational core of Agents. Acting like a 'brain' that take
 
     Prompt engineering as control flow
     <img width="623" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/46c00cc8-6530-4a76-af5d-35e70ae1b1cd">
+
+
+???+ important "[Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts](https://arxiv.org/pdf/2401.14295.pdf) provide excellent ways of thinking about reasoning." topologies-of-reasoning
+    
+    The authors present topologies of reasoning as ways of thinking about reasoning using LLMs, or 'thoughts' that are called **nodes** and edges are dependencies between the thoughts are **edges**.
+    If one thought is reachable from a task statement, that is a solution node, and the route is the **solution topology**. 
+
+    They share thorough discussions on the following methods.
+    
+    1. Basic Input-Output (IO)
+    2. Chain-of-Thought (CoT)
+    3. Multiple CoTs (CoT-SC)
+    4. Tree of Thoughts (ToT)
+    5. Graph of Thoughts (GoT)
+
+    They consider common concepts such as:
+    1. Multistep reasoning
+    2. Zero-Shot Reasoning
+    3. Planning and & Task Decomposition
+    4. Task Preprocessing
+    5. Iterative Refinement
+    6. Tool Utilizatoin
+    
+
+    <img width="745" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a0775270-66d5-445f-ac7e-4f4a77c7eb0d">
+
+    They also summarize the general flow of a prompting interaction. 
+    0. The user sends their prompt
+    1. Preprocessing 
+    2. Adding to into a prompting context
+    3. Input the content to the LLM
+    4. LLM Generation
+    5. Post-processing (Checking NSFW)
+    6. Returning information into the context,  and either
+    7. Iterating before returning to the user
+    8. Reply to the user
+    
+    <img width="729" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4823a84c-32fc-487f-b723-b013cf31a5c7">
+
+    They then share some important concepts related to topology.
+
+    <img width="738" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e25e44c1-51d5-4076-87de-4e4f2c28e264">
+
+    
+
+    They finally discuss Research opportunities:
+
+    1. Exploring New Topology Classes
+    2. Explicit Representation in Single-prompt Settings
+    3. Automatically Deriving Tree and Graph Topologies
+    4. Advancing Single-Prompt Schemes
+    5. Investigating New Schedule Approaches
+    6. Investigating Novel Graph Classes
+    8. Integrating Graph Algorithms and Paradigms
+    9. Diversifying Modalities in Prompting (multimodal)
+    10. Enhancing Retrieval in Prompting
+    11. Parallel Design in Prompting
+    12. Integrating Structure-Enhanced Prompting with Graph Neural Networks
+    13. Integrating Structure-Enhanced Prompting with Complex Architectures
+    14. Hardware acceleration    
+
 
 
 
