@@ -279,6 +279,7 @@ Here are some known thought structures that are improving agentic output.
     Generates code to answer financial, and math-related problems.
     <img width="649" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/20376dba-1944-4486-8510-33feec16dd36">
 
+
 ### Including Memory
 
 There are other [memory based solutions](memory.md) including [RAG](rag.md) that improve results. Here we reveal a few important ones.
@@ -350,6 +351,7 @@ There are other [memory based solutions](memory.md) including [RAG](rag.md) that
     [Paper](https://arxiv.org/pdf/2310.10632.pdf)
     Abstract: The ability to automatically generate accurate protocols for scientific experiments would represent a major step towards the automation of science. Large Language Models (LLMs) have impressive capabilities on a wide range of tasks, such as question answering and the generation of coherent text and code. However, LLMs can struggle with multi-step problems and long-term planning, which are crucial for designing scientific experiments. Moreover, evaluation of the accuracy of scientific protocols is challenging, because experiments can be described correctly in many different ways, require expert knowledge to evaluate, and cannot usually be executed automatically. Here we present an automatic evaluation framework for the task of planning experimental protocols, and we introduce BioProt: a dataset of biology protocols with corresponding pseudocode representations. To measure performance on generating scientific protocols, we use an LLM to convert a natural language protocol into pseudocode, and then evaluate an LLM's ability to reconstruct the pseudocode from a high-level description and a list of admissible pseudocode functions. We evaluate GPT-3 and GPT-4 on this task and explore their robustness. We externally validate the utility of pseudocode representations of text by generating accurate novel protocols using retrieved pseudocode, and we run a generated protocol successfully in our biological laboratory. Our framework is extensible to the evaluation and improvement of language model planning abilities in other areas of science or other areas that lack automatic evaluation.
 
+
 ### Branching
 
 General manners of search.
@@ -362,8 +364,6 @@ General manners of search.
     <img width="654" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9d8c8d9e-1145-4cce-be1e-846cba71b1d4">
 
     
-    
-
 
 ??? important "[Toolchain*: Efficient Action Space Navigation in Large Language Models with A* Search](https://arxiv.org/pdf/2310.13227.pdf) provides an efficient tree guided-search algorithm that allows SOT performance"
 
@@ -476,7 +476,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
     <img width="676" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/52204bc7-fc1d-467a-9c3c-7fc367ac4b44">
 
 
-??? tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)"
+???+ tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)"
 
     A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation.
     <img width="408" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd">
@@ -647,7 +647,3 @@ Problems such as Hallucinations can be mitigated through downstream methods of p
     <img width="602" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30">
 
 
-
-
-
-##
