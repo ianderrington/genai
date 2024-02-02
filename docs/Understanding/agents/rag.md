@@ -60,7 +60,7 @@ Once data has been loaded in a way that a model can process it, it must be split
 ### Embedding Data
 
 Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). See blog:
-https://blog.langchain.dev/semi-structured-multi-modal-rag/…
+https://blog.langchain.dev/semi-structured-multi-modal-rag/.
 
 ### Storing Data
 
@@ -128,9 +128,9 @@ The final step is generating an output using a prompt that integrates the query 
 
 ## Other Topics
 
-1. **Multi-Modal:** This approach is used for RAG on a substack that has many images of densely packed tables, graphs. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Multi_modal_RAG.ipynb) is an example implementation.
+* **Multi-Modal:** This approach is used for RAG on a substack that has many images of densely packed tables, graphs. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Multi_modal_RAG.ipynb) is an example implementation.
 
-2. **Semi-Structured:** This approach is used for RAG on documents with tables, which can be split using naive RAG text-splitting that does not explicitly preserve them. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_Structured_RAG.ipynb) is an example implementation.
+* **Semi-Structured:** This approach is used for RAG on documents with tables, which can be split using naive RAG text-splitting that does not explicitly preserve them. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_Structured_RAG.ipynb) is an example implementation.
 
 ## Tutorials and Blogs
 

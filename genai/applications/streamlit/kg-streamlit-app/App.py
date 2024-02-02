@@ -1,25 +1,21 @@
 import streamlit as st
-# from langchain.chat_models import ChatOpenAI, AzureChatOpenAI
-# from langchain_community.chat_models import AzureChatOpenAI
-from langchain_community.chat_models import AzureChatOpenAI
-from langchain_openai import AzureChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 
-# from langchain_community.chat_models import ChatOpenAI
-# from langchain.schema import HumanMessage
 from langchain.schema import HumanMessage, ChatMessage, AIMessage, SystemMessage
 
 from langchain.schema.output_parser import StrOutputParser
-# from langchain.graphs import Neo4jGraph
+
 from langchain_community.graphs import Neo4jGraph
 from streamlit_agraph import agraph, Node, Edge, Config
 
 from langchain.chains import GraphCypherQAChain
-# from neo4j import GraphDatabase
+
 
 from neo4j import GraphDatabase, basic_auth
 
 import os
-# from openai import OpenAI
+
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -242,18 +238,21 @@ if openai_api_key:
 
     result = initialize_retrievers()
     typical_rag, parent_vectorstore, hypothetic_question_vectorstore, summary_vectorstore = result
-    chain_txt = initialize_chain( 
-                                typical_rag, parent_vectorstore, 
-                                 hypothetic_question_vectorstore, 
-                                 summary_vectorstore)
-    cypher_llm = AzureChatOpenAI(
+    try:
+        chain_txt = initialize_chain( 
+                                    typical_rag, parent_vectorstore, 
+                                    hypothetic_question_vectorstore, 
+                                    summary_vectorstore)
+    except ValueError:
+        chain_txt = "No Neo4j vector index can be found. "
+    cypher_llm = ChatOpenAI(
         temperature=0,
         openai_api_key=os.getenv("OPENAI_API_KEY"),
         openai_api_version=os.getenv("OPENAI_API_VERSION"),
         openai_api_base=os.getenv("OPENAI_API_BASE"),
         deployment_name="gpt-4",
     )
-    qa_llm = AzureChatOpenAI(
+    qa_llm = ChatOpenAI(
         temperature=0,
         openai_api_key=os.getenv("OPENAI_API_KEY"),
         openai_api_version=os.getenv("OPENAI_API_VERSION"),
@@ -286,12 +285,6 @@ if prompt := st.chat_input(placeholder="Ask a question"):
     if not openai_api_key:
         st.error("Please add your OpenAI API key to continue.")
     else:
-        # These Dont work because they are not azure  endpoints
-        # Solution: https://github.com/langchain-ai/langchain/issues/13284
-        # cypher_llm = ChatOpenAI(temperature=0, model_name='gpt-4', api_key=openai_api_key)
-        # qa_llm = ChatOpenAI(temperature=0, api_key=openai_api_key)
-
-
         # Update session state with new message
         st.session_state.messages.append({"role": "user", "content": prompt})
         st.chat_message("user").write(prompt)

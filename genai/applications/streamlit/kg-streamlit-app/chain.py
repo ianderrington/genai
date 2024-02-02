@@ -1,7 +1,7 @@
 from operator import itemgetter
 
 # from langchain.chat_models import ChatOpenAI
-from langchain_openai import AzureChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 from langchain.pydantic_v1 import BaseModel
 from langchain.schema.output_parser import StrOutputParser
@@ -28,7 +28,7 @@ def initialize_chain(typical_rag, parent_vectorstore, hypothetic_question_vector
     """
     prompt = ChatPromptTemplate.from_template(template)
 
-    model= AzureChatOpenAI(
+    model= ChatOpenAI(
         temperature=0,
         openai_api_key=os.getenv("OPENAI_API_KEY"),
         openai_api_version=os.getenv("OPENAI_API_VERSION"),

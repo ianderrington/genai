@@ -1,6 +1,6 @@
-# from langchain.chat_models import AzureChatOpenAI
+# from langchain.chat_models import ChatOpenAI
 import os
-from langchain_openai import AzureChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema.output_parser import StrOutputParser
 from dotenv import load_dotenv
@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-chat_llm = AzureChatOpenAI(
+chat_llm = ChatOpenAI(
     temperature=0,
     openai_api_key=os.getenv("OPENAI_API_KEY"),
     openai_api_version=os.getenv("OPENAI_API_VERSION"),

@@ -26,7 +26,7 @@ There are several libraries available that can help you deploy your AI models on
 
 - [Triton Inference Server](https://github.com/triton-inference-server/server): Part of NVIDIA AI Inference, this server provides a robust solution for deploying AI models.
 
-- [litellm by BerriAI](https://github.com/BerriAI/litellm/blob/main/cookbook/proxy-server/readme.md): This library provides code to enable deployments on railway.app.
+- [litellm by BerriAI](https://github.com/BerriAI/litellm/): This library provides code to enable deployments 
 
 - [OpenRouter](https://openrouter.ai/): Provides a python and curl based calling of open and closed source models, tracking rates.
 

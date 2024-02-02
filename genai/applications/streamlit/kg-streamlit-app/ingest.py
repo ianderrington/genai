@@ -3,16 +3,16 @@ from typing import List
 from langchain.chains.openai_functions import create_structured_output_chain
 
 # from langchain.chat_models import ChatOpenAI
-from langchain_community.chat_models import AzureChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 # !pip install -U langchain-openai
-from langchain_openai import AzureChatOpenAI
+from langchain_openai import ChatOpenAI
 
 # from langchain.document_loaders import WikipediaLoader, PyPDFLoader, TextLoader
 from langchain_community.document_loaders import WikipediaLoader, PyPDFLoader, TextLoader
 from langchain.docstore.document import Document
 # from langchain.embeddings.openai import OpenAIEmbeddings
-# from langchain.embeddings.azure_openai import AzureOpenAIEmbeddings
-from langchain_community.embeddings import AzureOpenAIEmbeddings
+# from langchain.embeddings.azure_openai import OpenAIEmbeddings
+from langchain_community.embeddings import OpenAIEmbeddings
 
 # from langchain.graphs import Neo4jGraph
 from langchain_community.graphs import Neo4jGraph
@@ -31,9 +31,9 @@ graph = Neo4jGraph()
 all_data = WikipediaLoader(query="Removal_of_Sam_Altman_from_OpenAI").load()
 
 # Embeddings & LLM models
-embeddings = AzureOpenAIEmbeddings()
+embeddings = OpenAIEmbeddings()
 embedding_dimension = 1536
-llm = AzureChatOpenAI(
+llm = ChatOpenAI(
     temperature=0,
     openai_api_key=os.getenv("OPENAI_API_KEY"),
     openai_api_version=os.getenv("OPENAI_API_VERSION"),
