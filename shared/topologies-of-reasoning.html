@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts provide excellent ways of thinking about reasoning.</title>
+    
+    
+
+    <meta property="og:url" content="https://www.managen.ai//shared/topologies-of-reasoning.html">
+
+    <meta property="og:title" content="Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts provide excellent ways of thinking about reasoning.">
+    <meta property="og:description" content="The authors present topologies of reasoning as ways of thinking about reasoning using LLMs, or 'thoughts' that are called **nodes** and edges are dependencies between the thoughts are **edges**."">
+
+    <meta property="og:type"  content="website" />
+    <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/a0775270-66d5-445f-ac7e-4f4a77c7eb0d">
+    <meta property="og:url" content="https://www.managen.ai//shared/topologies-of-reasoning.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts provide excellent ways of thinking about reasoning.">
+    <meta name="twitter:description" content="Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts provide excellent ways of thinking about reasoning.">
+    <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/a0775270-66d5-445f-ac7e-4f4a77c7eb0d">
+    <!--Import stylesheet  -->
+    <link rel="stylesheet" href="../../stylesheets/share-card.css">
+    <style>
+        .page-url { display: block; }
+        .iframe .backlink-url { display: none; }
+   
+
+     </style>
+
+    <script>
+       (function(d, w) {
+          if (w.self !== w.top) {
+             d.className += " iframe";
+          }
+       }(document.documentElement, window));
+
+        window.onload = function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].target = '_blank';
+            }
+        };
+        function copyToClipboard(elementId) {
+            var url = document.getElementById(elementId).href;
+            navigator.clipboard.writeText(url).then(function() {
+                // Show copied popup
+                var popup = document.getElementById("copied-popup");
+                popup.classList.add("show");
+
+                // Hide popup after 2 seconds
+                setTimeout(function() { popup.classList.remove("show"); }, 2000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="blog-content">
+        <h1><p><a href="https://arxiv.org/pdf/2401.14295.pdf">Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts</a> provide excellent ways of thinking about reasoning.</p></h1>
+        <p>The authors present topologies of reasoning as ways of thinking about reasoning using LLMs, or 'thoughts' that are called <strong>nodes</strong> and edges are dependencies between the thoughts are <strong>edges</strong>.
+If one thought is reachable from a task statement, that is a solution node, and the route is the <strong>solution topology</strong>. </p>
+<p>They share thorough discussions on the following methods.</p>
+<ol>
+<li>Basic Input-Output (IO)</li>
+<li>Chain-of-Thought (CoT)</li>
+<li>Multiple CoTs (CoT-SC)</li>
+<li>Tree of Thoughts (ToT)</li>
+<li>Graph of Thoughts (GoT)</li>
+</ol>
+<p>They consider common concepts such as:
+1. Multistep reasoning
+2. Zero-Shot Reasoning
+3. Planning and &amp; Task Decomposition
+4. Task Preprocessing
+5. Iterative Refinement
+6. Tool Utilizatoin</p>
+<p><img width="745" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a0775270-66d5-445f-ac7e-4f4a77c7eb0d"></p>
+<p>They also summarize the general flow of a prompting interaction. 
+0. The user sends their prompt
+1. Preprocessing 
+2. Adding to into a prompting context
+3. Input the content to the LLM
+4. LLM Generation
+5. Post-processing (Checking NSFW)
+6. Returning information into the context,  and either
+7. Iterating before returning to the user
+8. Reply to the user</p>
+<p><img width="729" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4823a84c-32fc-487f-b723-b013cf31a5c7"></p>
+<p>They then share some important concepts related to topology.</p>
+<p><img width="738" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e25e44c1-51d5-4076-87de-4e4f2c28e264"></p>
+<p>They finally discuss Research opportunities:</p>
+<ol>
+<li>Exploring New Topology Classes</li>
+<li>Explicit Representation in Single-prompt Settings</li>
+<li>Automatically Deriving Tree and Graph Topologies</li>
+<li>Advancing Single-Prompt Schemes</li>
+<li>Investigating New Schedule Approaches</li>
+<li>Investigating Novel Graph Classes</li>
+<li>Integrating Graph Algorithms and Paradigms</li>
+<li>Diversifying Modalities in Prompting (multimodal)</li>
+<li>Enhancing Retrieval in Prompting</li>
+<li>Parallel Design in Prompting</li>
+<li>Integrating Structure-Enhanced Prompting with Graph Neural Networks</li>
+<li>Integrating Structure-Enhanced Prompting with Complex Architectures</li>
+<li>Hardware acceleration    </li>
+</ol>
+    </div>
+    <a href="https://www.managen.ai//shared/topologies-of-reasoning.html" class="page-url" id="page-url"></a>
+    <!-- Clipboard copy icon/button -->
+    <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Copy and share! &#128203; </span>
+    <!-- Copied popup -->
+    <div class="copied-popup" id="copied-popup">Link copied!</div>
+    <a href="https://www.managen.ai//Understanding/agents/cognitive_architecture.html" class="backlink-url" id="backlink-url">See the main site!</a>
+</body>
+</html>

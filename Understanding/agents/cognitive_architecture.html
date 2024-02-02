@@ -2194,17 +2194,6 @@ and
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5024,17 +5013,6 @@ and
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5070,9 +5048,9 @@ and
 
   <h1>Cognitive architecture</h1>
 
-<p>A cognitive architecure are a higher level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They are can be focused on both simple and complex tasks. </p>
-<p>One input call to an LLM outputs produces output(s) based on their input <a href="../prompting/index.html">prompts</a>.  Cognitive architectures, sometimes also considered <a href="#chains">chains</a> allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of <a href="actions_and_tools.html">actions and tools</a>, and interact with <a href="memory.html">memory</a> in different forms of [#environments]. Chains can build more complex and integrated systems to enable higher-quality reasoning and results.</p>
-<p>Biological <a href="https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf">Connectionism and Cognitive Architecture</a> considered design system with a connection of a large number but highly connected units to facilitate computational-like behavior seen from Animals. For Gen()AI, however, cognitive architectures can be constructed in a more linear <a href="#chains">chains</a>, as in the case of the LLM-enabled chat, or more complex branching <a href="#graph-chains">graph chains</a> which have been shown to increase performance. </p>
+<p>A cognitive architecture is a higher-level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They are can be focused on both simple and complex tasks. </p>
+<p>One input call to an LLM output produces output(s) based on their input <a href="../prompting/index.html">prompts</a>.  Cognitive architectures, sometimes also considered <a href="#chains">chains</a> allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of <a href="actions_and_tools.html">actions and tools</a>, and interact with <a href="memory.html">memory</a> in different forms of [#environments]. Chains can build more complex and integrated systems to enable higher-quality reasoning and results.</p>
+<p>Biological <a href="https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf">Connectionism and Cognitive Architecture</a> considered design system with a connection of a large number but highly connected units to facilitate computational-like behavior seen from Animals. For Gen()AI, however, cognitive architectures can be constructed in more linear <a href="#chains">chains</a>, as in the case of the LLM-enabled chat, or more complex branching <a href="#graph-chains">graph chains</a>, which have been shown to increase performance. </p>
 <h2 id="aspects-of-in-cognitive-architectures">Aspects of in Cognitive Architectures<a class="headerlink" href="#aspects-of-in-cognitive-architectures" title="Permanent link">&para;</a></h2>
 <h3 id="activities">Activities<a class="headerlink" href="#activities" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5087,9 +5065,18 @@ and
 <li><strong>Tool use</strong> While overlapping directly with Observing or taking memory actions, tool usage may be part of cognitive patterns (like using a <code>scratch-pad</code>) and must be considered as such.</li>
 </ul>
 <h3 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h3>
-<p>Models provide the computational core of Agents. Acting like a 'brain' that takes in input <a href="#prompts">prompts</a> they return outputs. Generally, the models may be considered <code>frozen</code> for a given agent, but sometimes, agentic feedback is used for helping model creation with <a href="../architectures/training/recurrent.html">recurrent training</a>.</p>
+<p>Models provide the computational core of Agents. Acting like a 'brain' that takes in input <a href="#prompts">prompts</a>, they return outputs. Generally, the models may be considered <code>frozen</code> for a given agent, but sometimes, agentic feedback is used to help model creation with <a href="../architectures/training/recurrent.html">recurrent training</a>.</p>
 <h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
-<details class="important">
+<p><a href="/shared/cognitive-architectures.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
+
+<details class="important" open="open">
 <summary><a href="https://arxiv.org/pdf/2309.02427.pdf">Cognitive Architectures for Language Agents</a> is a thoughtful understanding of Cognitive Architectures</summary>
 <p>They reveal a number of thoughtful perspectives on how to consider agents, considering much of what we have included here. Going further,
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/16087788-df56-44cd-91be-8755d17fd7c0" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="549" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/16087788-df56-44cd-91be-8755d17fd7c0"></a></p>
@@ -5099,16 +5086,86 @@ Relations between different systems.
 <p>Prompt engineering as control flow
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/46c00cc8-6530-4a76-af5d-35e70ae1b1cd" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="623" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/46c00cc8-6530-4a76-af5d-35e70ae1b1cd"></a></p>
 </details>
+<p><a href="/shared/topologies-of-reasoning.html" class="page-url" id="page-url-1"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+</div>
+
+<details class="important" open="open">
+<summary><a href="https://arxiv.org/pdf/2401.14295.pdf">Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts</a> provide excellent ways of thinking about reasoning.</summary>
+<p>The authors present topologies of reasoning as ways of thinking about reasoning using LLMs, or 'thoughts' that are called <strong>nodes</strong> and edges are dependencies between the thoughts are <strong>edges</strong>.
+If one thought is reachable from a task statement, that is a solution node, and the route is the <strong>solution topology</strong>. </p>
+<p>They share thorough discussions on the following methods.</p>
+<ol>
+<li>Basic Input-Output (IO)</li>
+<li>Chain-of-Thought (CoT)</li>
+<li>Multiple CoTs (CoT-SC)</li>
+<li>Tree of Thoughts (ToT)</li>
+<li>Graph of Thoughts (GoT)</li>
+</ol>
+<p>They consider common concepts such as:
+1. Multistep reasoning
+2. Zero-Shot Reasoning
+3. Planning and &amp; Task Decomposition
+4. Task Preprocessing
+5. Iterative Refinement
+6. Tool Utilizatoin</p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/a0775270-66d5-445f-ac7e-4f4a77c7eb0d" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="745" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a0775270-66d5-445f-ac7e-4f4a77c7eb0d"></a></p>
+<p>They also summarize the general flow of a prompting interaction. 
+0. The user sends their prompt
+1. Preprocessing 
+2. Adding to into a prompting context
+3. Input the content to the LLM
+4. LLM Generation
+5. Post-processing (Checking NSFW)
+6. Returning information into the context,  and either
+7. Iterating before returning to the user
+8. Reply to the user</p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/4823a84c-32fc-487f-b723-b013cf31a5c7" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="729" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4823a84c-32fc-487f-b723-b013cf31a5c7"></a></p>
+<p>They then share some important concepts related to topology.</p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/e25e44c1-51d5-4076-87de-4e4f2c28e264" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="738" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e25e44c1-51d5-4076-87de-4e4f2c28e264"></a></p>
+<p>They finally discuss Research opportunities:</p>
+<ol>
+<li>Exploring New Topology Classes</li>
+<li>Explicit Representation in Single-prompt Settings</li>
+<li>Automatically Deriving Tree and Graph Topologies</li>
+<li>Advancing Single-Prompt Schemes</li>
+<li>Investigating New Schedule Approaches</li>
+<li>Investigating Novel Graph Classes</li>
+<li>Integrating Graph Algorithms and Paradigms</li>
+<li>Diversifying Modalities in Prompting (multimodal)</li>
+<li>Enhancing Retrieval in Prompting</li>
+<li>Parallel Design in Prompting</li>
+<li>Integrating Structure-Enhanced Prompting with Graph Neural Networks</li>
+<li>Integrating Structure-Enhanced Prompting with Complex Architectures</li>
+<li>Hardware acceleration    </li>
+</ol>
+</details>
 <h2 id="important-architectures">Important Architectures<a class="headerlink" href="#important-architectures" title="Permanent link">&para;</a></h2>
 <p>Thought systems are chain patterns used by single agents and <a href="systems.html">systems</a> to enable more robust responses.
 They can be executed programmatically given frameworks or sometimes done manually in a chat setting.</p>
 <p>Here are some known thought structures that are improving agentic output.</p>
 <h3 id="chains">Chains<a class="headerlink" href="#chains" title="Permanent link">&para;</a></h3>
-<details class="important">
+<details class="important" open="open">
 <summary><a href="https://arxiv.org/pdf/2201.11903.pdf">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></summary>
 <p><a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf">Neurips paper</a>"</p>
 <p>A classic paper, demonstrating the use of in-call task breakdown to better-enable more successful outputs. Often represented as appending a phrase such as <code>let's think about this step by step</code> both with and without exemplars to improve success quality going from zero to multi-shot prompts. 
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66"></a></p>
+</details>
+<details class="code" open="open">
+<summary><a href="https://github.com/ysymyth/ReAct">ReAct</a></summary>
+<p>Effectively Observe, Think, Act, Repeat.
+<a href="https://arxiv.org/pdf/2210.03629.pdf">Paper</a></p>
+</details>
+<details class="tip" open="open">
+<summary><a href="https://github.com/noahshinn024/reflexion">Reflexion: an autonomous agent with dynamic memory and self-reflection</a> an agent with dynamic memory and self-reflection capabilities</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459" /></a>
+- <a href="https://arxiv.org/pdf/2303.11366.pdf">Paper</a>
+- <a href="https://github.com/GammaTauAI/reflexion-human-eval">Inspired github</a></p>
 </details>
 <details class="important">
 <summary><a href="https://arxiv.org/abs/2401.04925">The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps</a></summary>
@@ -5211,11 +5268,6 @@ Starting with instruction-tuned models that are 'proficient at reasoning and gen
 With several evaluations, including one for <a href="https://github.com/meg-tong/sycophancy-eval">sycophancy</a>, and a few variations,
 they show it can improve output even beyon Chain of Thought.</p>
 </details>
-<details class="code">
-<summary><a href="https://github.com/ysymyth/ReAct">ReAct</a></summary>
-<p>Effectively Observe, Think, Act, Repeat.
-<a href="https://arxiv.org/pdf/2210.03629.pdf">Paper</a></p>
-</details>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2310.06117.pdf">Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models</a> provides a solid improvement over scientific Q&amp;A by first extracting fundamental principles in an initial multi-shotted prompt and then putting it into a subsequent multi-shotted prompt.</summary>
 <p>The authors find significant improvement over other methods.
@@ -5252,12 +5304,6 @@ Question: &lt;Question&gt;
 Principles: &lt;Principles&gt;
 Answer:
 </code></pre></div></p>
-</details>
-<details class="tip">
-<summary><a href="https://github.com/noahshinn024/reflexion">Reflexion: an autonomous agent with dynamic memory and self-reflection</a> an agent with dynamic memory and self-reflection capabilities</summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459" /></a>
-- <a href="https://arxiv.org/pdf/2303.11366.pdf">Paper</a>
-- <a href="https://github.com/GammaTauAI/reflexion-human-eval">Inspired github</a></p>
 </details>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2211.12588.pdf">Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks</a></summary>
@@ -5432,13 +5478,13 @@ It happens in 3 general steps:</p>
 </details>
 <h3 id="structural-and-task-decomposition">Structural and Task Decomposition<a class="headerlink" href="#structural-and-task-decomposition" title="Permanent link">&para;</a></h3>
 <p>Breaking down the input into a divide-and-conquer approach is a valuable approach to more complex requests. Considering separate perspectives, within the <em>same</em> model, or within separate model calls with different prompt-inceptions as in agent <a href="systems.html">systems</a> can improve performance.</p>
-<p><a href="/shared/protip-progressive-tool-retrieval.html" class="page-url" id="page-url-0"></a></p>
+<p><a href="/shared/protip-progressive-tool-retrieval.html" class="page-url" id="page-url-2"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
 </div>
 
 <details class="tip">
@@ -5446,7 +5492,7 @@ It happens in 3 general steps:</p>
 <p>The authors demonstrate a dynamic contrastive learning-based framework implicitly performs task decomposition without explicit subtask requirements, while retaining subtask automicity.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/52204bc7-fc1d-467a-9c3c-7fc367ac4b44" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="676" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/52204bc7-fc1d-467a-9c3c-7fc367ac4b44"></a></p>
 </details>
-<details class="tip">
+<details class="tip" open="open">
 <summary><a href="https://arxiv.org/pdf/2307.15337.pdf">Skeleton of Thought</a></summary>
 <p>A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="408" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd"></a></p>
@@ -5601,7 +5647,6 @@ This algorithm samples exemplars to construct demonstrations that enable improve
 <p>A process to mitigate model hallucination using RAG.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="602" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30"></a></p>
 </details>
-<h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 
 
 

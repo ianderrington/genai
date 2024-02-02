@@ -5153,7 +5153,7 @@ and
 </ol>
 <h3 id="embedding-data">Embedding Data<a class="headerlink" href="#embedding-data" title="Permanent link">&para;</a></h3>
 <p>Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). See blog:
-<a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/">https://blog.langchain.dev/semi-structured-multi-modal-rag/</a>…</p>
+<a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/">https://blog.langchain.dev/semi-structured-multi-modal-rag/</a>.</p>
 <h3 id="storing-data">Storing Data<a class="headerlink" href="#storing-data" title="Permanent link">&para;</a></h3>
 <p>The embedded data is stored for future retrieval and use.</p>
 <h3 id="retrieving-data">Retrieving Data<a class="headerlink" href="#retrieving-data" title="Permanent link">&para;</a></h3>
@@ -5211,14 +5211,14 @@ Answer:
 <h3 id="generating">Generating<a class="headerlink" href="#generating" title="Permanent link">&para;</a></h3>
 <p>The final step is generating an output using a prompt that integrates the query and retrieved data.</p>
 <h2 id="other-topics">Other Topics<a class="headerlink" href="#other-topics" title="Permanent link">&para;</a></h2>
-<ol>
+<ul>
 <li>
 <p><strong>Multi-Modal:</strong> This approach is used for RAG on a substack that has many images of densely packed tables, graphs. <a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/Multi_modal_RAG.ipynb">Here</a> is an example implementation.</p>
 </li>
 <li>
 <p><strong>Semi-Structured:</strong> This approach is used for RAG on documents with tables, which can be split using naive RAG text-splitting that does not explicitly preserve them. <a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_Structured_RAG.ipynb">Here</a> is an example implementation.</p>
 </li>
-</ol>
+</ul>
 <h2 id="tutorials-and-blogs">Tutorials and Blogs<a class="headerlink" href="#tutorials-and-blogs" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://python.langchain.com/docs/use_cases/question_answering/">Langchain Question Answering</a></li>
