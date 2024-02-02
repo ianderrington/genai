@@ -21,7 +21,7 @@ Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/
 Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](#prompts), they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used to help model creation with [recurrent training](../architectures/training/recurrent.md).
 
 ### Overview
-??? important "[Cognitive Architectures for Language Agents](https://arxiv.org/pdf/2309.02427.pdf) is a thoughtful understanding of Cognitive Architectures"
+???+ important "[Cognitive Architectures for Language Agents](https://arxiv.org/pdf/2309.02427.pdf) is a thoughtful understanding of Cognitive Architectures" cognitive-architectures
     They reveal a number of thoughtful perspectives on how to consider agents, considering much of what we have included here. Going further,
     <img width="549" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/16087788-df56-44cd-91be-8755d17fd7c0">
 
@@ -104,12 +104,24 @@ Here are some known thought structures that are improving agentic output.
 
 ### Chains
 
-??? important "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf)"
+???+ important "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf)"
     
     [Neurips paper](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf)"
 
     A classic paper, demonstrating the use of in-call task breakdown to better-enable more successful outputs. Often represented as appending a phrase such as `let's think about this step by step` both with and without exemplars to improve success quality going from zero to multi-shot prompts. 
     <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66">
+
+
+???+ code "[ReAct](https://github.com/ysymyth/ReAct)"
+
+    Effectively Observe, Think, Act, Repeat.
+    [Paper](https://arxiv.org/pdf/2210.03629.pdf)
+
+???+ tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
+
+    ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
+    - [Paper](https://arxiv.org/pdf/2303.11366.pdf)
+    - [Inspired github](https://github.com/GammaTauAI/reflexion-human-eval)
 
 ??? important "[The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps](https://arxiv.org/abs/2401.04925)"
     Appending "you must think more steps" to "Let’s think step by step" increases the reasoning steps and signficantly improves the accuracy on various reasoning tasks.
@@ -217,11 +229,6 @@ Here are some known thought structures that are improving agentic output.
     they show it can improve output even beyon Chain of Thought.
 
 
-??? code "[ReAct](https://github.com/ysymyth/ReAct)"
-
-    Effectively Observe, Think, Act, Repeat.
-    [Paper](https://arxiv.org/pdf/2210.03629.pdf)
-
 ??? tip "[Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models](https://arxiv.org/pdf/2310.06117.pdf) provides a solid improvement over scientific Q&A by first extracting fundamental principles in an initial multi-shotted prompt and then putting it into a subsequent multi-shotted prompt."
 
     The authors find significant improvement over other methods.
@@ -264,11 +271,7 @@ Here are some known thought structures that are improving agentic output.
     Answer:
     ```
 
-??? tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
 
-    ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
-    - [Paper](https://arxiv.org/pdf/2303.11366.pdf)
-    - [Inspired github](https://github.com/GammaTauAI/reflexion-human-eval)
 
 ??? tip "[Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks](https://arxiv.org/pdf/2211.12588.pdf)"
 
