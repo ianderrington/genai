@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 RAG Pain Points and Proposed Solutions</title>
+    
+    
+
+    <meta property="og:url" content="https://www.managen.ai//shared/12-rag-pain-points-and-solutions.html">
+
+    <meta property="og:title" content="12 RAG Pain Points and Proposed Solutions">
+    <meta property="og:description" content="Things that might lead to failure of RAG pipeline. Mostly taken from the [blog]( https://towardsdatascience.com/12-rag-pain-points-and-proposed-solutions-43709939a28c)"">
+
+    <meta property="og:type"  content="website" />
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://www.managen.ai//shared/12-rag-pain-points-and-solutions.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="12 RAG Pain Points and Proposed Solutions">
+    <meta name="twitter:description" content="12 RAG Pain Points and Proposed Solutions">
+    <meta name="twitter:image" content="">
+    <!--Import stylesheet  -->
+    <link rel="stylesheet" href="../../stylesheets/share-card.css">
+    <style>
+        .page-url { display: block; }
+        .iframe .backlink-url { display: none; }
+   
+
+     </style>
+
+    <script>
+       (function(d, w) {
+          if (w.self !== w.top) {
+             d.className += " iframe";
+          }
+       }(document.documentElement, window));
+
+        window.onload = function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].target = '_blank';
+            }
+        };
+        function copyToClipboard(elementId) {
+            var url = document.getElementById(elementId).href;
+            navigator.clipboard.writeText(url).then(function() {
+                // Show copied popup
+                var popup = document.getElementById("copied-popup");
+                popup.classList.add("show");
+
+                // Hide popup after 2 seconds
+                setTimeout(function() { popup.classList.remove("show"); }, 2000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="blog-content">
+        <h1><p><a href="https://arxiv.org/pdf/2401.05856.pdf">12 RAG Pain Points and Proposed Solutions</a></p></h1>
+        <p>Things that might lead to failure of RAG pipeline. Mostly taken from the <a href="../Understanding/agents/ https://towardsdatascience.com/12-rag-pain-points-and-proposed-solutions-43709939a28c.html">blog</a></p>
+<p>Pain point:
+  And solutions</p>
+<p>1: Missing Content:</p>
+<ul>
+<li>Clean your data</li>
+<li>Better prompting</li>
+</ul>
+<p>2: Missed the Top Ranked Documents</p>
+<ul>
+<li>Hyperparameter tuning for <code>chunk_size</code> and <code>similarity_top_k</code> as in <a href="https://docs.llamaindex.ai/en/stable/examples/param_optimizer/param_optimizer.html">Hyperparameter Optimization for RAG</a>. </li>
+<li>Reranking <a href="https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/CohereRerank.html">notebook</a> usses <a href="https://blog.llamaindex.ai/improving-retrieval-performance-by-fine-tuning-cohere-reranker-with-llamaindex-16c0c1f9b33b">Improving Retrieval Performance by Fine-tuning Cohere Reranker with LlamaIndex</a> and <code>CohereRank</code> to rerank the results 
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">from</span> <span class="nn">llama_index.postprocessor.cohere_rerank</span> <span class="kn">import</span> <span class="n">CohereRerank</span>
+
+    <span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;COHERE_API_KEY&quot;</span><span class="p">]</span>
+    <span class="n">cohere_rerank</span> <span class="o">=</span> <span class="n">CohereRerank</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span> <span class="n">top_n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># return top 2 nodes from reranker</span>
+
+    <span class="n">query_engine</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">as_query_engine</span><span class="p">(</span>
+        <span class="n">similarity_top_k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="c1"># we can set a high top_k here to ensure maximum relevant retrieval</span>
+        <span class="n">node_postprocessors</span><span class="o">=</span><span class="p">[</span><span class="n">cohere_rerank</span><span class="p">],</span> <span class="c1"># pass the reranker to node_postprocessors</span>
+    <span class="p">)</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">query_engine</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+        <span class="s2">&quot;What did Sam Altman do in this essay?&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div></li>
+</ul>
+<p>3: Not in Context — Consolidation Strategy Limitations</p>
+<ul>
+<li>Tweak retrieval strategies</li>
+<li>Finetune embeddings</li>
+</ul>
+<p>4: Not Extracted</p>
+<ul>
+<li>Clean your Data</li>
+<li><a href="https://arxiv.org/abs/2310.06839">Prompt Compression</a></li>
+<li><a href="https://arxiv.org/abs/2307.03172">Long Context Reorder</a> (put crucial content at beginning and end)</li>
+</ul>
+<p>5: Wrong Format</p>
+<ul>
+<li>Output Parsing </li>
+<li>Pydantic </li>
+</ul>
+<p>6: Incorrect Specificity</p>
+<ul>
+<li><a href="https://docs.llamaindex.ai/en/stable/examples/retrievers/auto_merging_retriever.html">small-to-big retrieval</a></li>
+<li><a href="https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/MetadataReplacementDemo.html">sentence window retrieval</a></li>
+<li><a href="https://docs.llamaindex.ai/en/stable/examples/query_engine/pdf_tables/recursive_retriever.html">recursive retrieval</a></li>
+<li><a href="https://towardsdatascience.com/jump-start-your-rag-pipelines-with-advanced-retrieval-llamapacks-and-benchmark-with-lighthouz-ai-80a09b7c7d9d">Advanced Retriever</a></li>
+</ul>
+<p>7: Incomplete and Impartial Responses</p>
+<ul>
+<li><a href="https://docs.llamaindex.ai/en/stable/examples/query_transformations/query_transform_cookbook.html">Query Transformations</a> </li>
+<li><a href="https://github.com/run-llama/llama_index/blob/main/docs/examples/ingestion/parallel_execution_ingestion_pipeline.ipynb?__s=db5ef5gllwa79ba7a4r2&amp;utm_source=drip">Pipeline Parallelization</a></li>
+</ul>
+<p>8: Data Ingestion Scalability</p>
+<ul>
+<li><a href="https://arxiv.org/abs/2401.04398">Chain of table</a> and <a href="https://github.com/run-llama/llama-hub/blob/main/llama_hub/llama_packs/tables/chain_of_table/chain_of_table.ipynb">Llama solution</a></li>
+<li>Mix-Self-Consistency Pack based on  <a href="https://arxiv.org/pdf/2312.16702v1.pdf">Rethinking Tabular Data Understanding with Large Language Models</a> <a href="https://github.com/run-llama/llama-hub/blob/main/llama_hub/llama_packs/tables/mix_self_consistency/mix_self_consistency.ipynb">Llama solution</a></li>
+</ul>
+<p>9: Structured Data QA</p>
+<ul>
+<li>Use Llama index <code>ChainOfTablePack</code> based on <a href="https://arxiv.org/abs/2401.04398">Chain of Table</a></li>
+<li>Use <a href="https://github.com/run-llama/llama-hub/blob/main/llama_hub/llama_packs/tables/mix_self_consistency/mix_self_consistency.ipynb">Llama index <code>MixSelfConsistencyQueryEngine</code></a> based on <a href="https://arxiv.org/pdf/2312.16702v1.pdf">Rethinking Tabular Data Understanding with Large Language Models</a></li>
+</ul>
+<p>10: Data Extraction from Complex PDFs</p>
+<ul>
+<li>Use <a href="https://github.com/pdf2htmlEX/pdf2htmlEX">pdf2htmlEX</a></li>
+<li>Use <code>EmbeddedTablesUnstructuredRetrieverPack</code> in <code>LlamaIndex</code></li>
+</ul>
+<p>11: Fallback Model(s):  Use a model router like
+-  <a href="https://platform.neutrinoapp.com/">Neutrino</a> </p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">Neutrino</span>
+    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">ChatMessage</span>
+
+    <span class="n">llm</span> <span class="o">=</span> <span class="n">Neutrino</span><span class="p">(</span>
+        <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;&lt;your-Neutrino-api-key&gt;&quot;</span><span class="p">,</span> 
+        <span class="n">router</span><span class="o">=</span><span class="s2">&quot;test&quot;</span>  <span class="c1"># A &quot;test&quot; router configured in Neutrino dashboard. You treat a router as a LLM. You can use your defined router, or &#39;default&#39; to include all supported models.</span>
+    <span class="p">)</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="s2">&quot;What is large language model?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Optimal model: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><a href="https://docs.llamaindex.ai/en/stable/examples/llm/openrouter.html#openrouter">Openrouter</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">OpenRouter</span>
+    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">ChatMessage</span>
+
+    <span class="n">llm</span> <span class="o">=</span> <span class="n">OpenRouter</span><span class="p">(</span>
+        <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;&lt;your-OpenRouter-api-key&gt;&quot;</span><span class="p">,</span>
+        <span class="n">max_tokens</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+        <span class="n">context_window</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gryphe/mythomax-l2-13b&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">message</span> <span class="o">=</span> <span class="n">ChatMessage</span><span class="p">(</span><span class="n">role</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Tell me a joke&quot;</span><span class="p">)</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">chat</span><span class="p">([</span><span class="n">message</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+</code></pre></div>
+<p>12: LLM Security</p>
+<ul>
+<li>Use things like <a href="https://towardsdatascience.com/safeguarding-your-rag-pipelines-a-step-by-step-guide-to-implementing-llama-guard-with-llamaindex-6f80a2e07756?sk=c6cc48013bac60924548dd4e1363fa9e">Llama Guard</a></li>
+</ul>
+    </div>
+    <a href="https://www.managen.ai//shared/12-rag-pain-points-and-solutions.html" class="page-url" id="page-url"></a>
+    <!-- Clipboard copy icon/button -->
+    <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
+    <!-- Copied popup -->
+    <div class="copied-popup" id="copied-popup">Link copied!</div>
+    <a href="https://www.managen.ai//Understanding/agents/rag.html" class="backlink-url" id="backlink-url">See the main site!</a>
+</body>
+</html>
