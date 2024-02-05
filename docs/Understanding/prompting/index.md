@@ -170,7 +170,11 @@ It has been found that the quality of responses is governed by the quality of th
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f02a9f3e-4f4c-49de-9b35-1702df65d618)
 
-## Retrieval Augmented  Prompting 
+??? code "[PAP-REC: Personalized Automatic Prompt for Recommendation Language Model](https://github.com/rutgerswiselab/PAP-REC)"
+    The authors in their [paper](https://arxiv.org/pdf/2402.00284v1.pdf) reveal a method of automatically generating prompts for recommender language models with better performance results than manually constructed prompts and results baseline recommendation models.
+
+### Retrieval Augmented  Prompting 
+
 Retrieval based prompting use [RAG](../agents/rag.md) lookup to identify appropriate prompts that may more successfully generate results. 
 
 ## Prompt Compression
