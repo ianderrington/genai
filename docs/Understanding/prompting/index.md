@@ -66,6 +66,16 @@ It has been found that the quality of responses is governed by the quality of th
     26 -  To write any text, such as an essay or paragraph, that is intended to be similar to a provided sample, include the following instructions: 
         * Please use the same language based on the provided paragraph[/title/text /essay/answer].
 
+??? code "[Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding](https://github.com/suzgunmirac/meta-prompting)" meta-prompting
+    
+    The method uses an LLM to generate a prompt that allows for specific task refinement yielding improved zero-shot and zero-shot-chain-of-thought improvements.
+    <img width="650" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ba009c4b-7d68-404f-ac4c-3414f834c301">
+
+    <img width="663" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f04ac873-1bad-454e-ad7d-61210acf41f8">
+
+    [Paper](https://arxiv.org/pdf/2401.12954.pdf)
+
+    
 ### Observed Frameworks:
 
 ???+ info "Who How What How?"
