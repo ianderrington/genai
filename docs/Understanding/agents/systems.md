@@ -13,12 +13,14 @@ Agentic Systems require that there is communication with and between AI-agents. 
 
 Here are a few frameworks of importance. 
 
-
+### LangGraph
 ???+ code "[LangGraph](https://python.langchain.com/docs/langgraph) provides a simple interaction diagram to allow custom-built systems of interaction" langgraph
     It is important to consider [LangGraph](https://blog.langchain.dev/langgraph-multi-agent-workflows/) 
 
     ![langgrah](https://blog.langchain.dev/content/images/size/w1600/2024/01/simple_multi_agent_diagram--1-.png)
     ![langgraph](https://blog.langchain.dev/content/images/2024/01/hierarchical-diagram.png)
+
+    Some examples [gpt-newspaper](https://github.com/assafelovic/gpt-newspaper), [lang-graph-crewAI](https://github.com/joaomdmoura/crewAI-examples/tree/main/CrewAI-LangGraph)
 
 ???+ important "[AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
     ![image](https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924)
@@ -30,7 +32,7 @@ Here are a few frameworks of importance.
     ![image](https://github.com/ianderrington/genai/assets/76016868/d89bf7b1-99a0-429f-a6f5-50a8183a151f)
     <img width="581" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f9d7e423-b3d9-40ca-8be8-52461d53282a">
 
-    TRY THIS!   
+???+ important "[Crew.ai](https://github.com/joaomdmoura/crewai) is a framework for "
 
 
 ??? code "[ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
@@ -65,15 +67,16 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
 ## Papers
 
 
-!!! important “[Society of Minds: To Enable Societal Interactions to Improve Output](https://arxiv.org/pdf/2305.17066.pdf)” ai-society-of-minds
+??? important "[Society of Minds: To Enable Societal Interactions to Improve Output](https://arxiv.org/pdf/2305.17066.pdf)" ai-society-of-minds
 
-    https://medium.com/@ignacio.de.gregorio.noblejas/hallucination-312f79f4c888) 
-    See…  https://www.cjco.com.au/article/news/multi-agent-debates-elevate-language-models-mit-and-google-brain-unlock-llm-potential-and-accuracy/
-    And… https://medium.com/@ignacio.de.gregorio.noblejas/hallucination-312f79f4c888
-    Also… 
-    Plus Marvin Minsky YouTube “Society of Mind”…https://www.youtube.com/watch?v=-pb3z2w9gDg
+    The foundation of the multi-agent debate approach involves pitting multiple LLM instances against each other, where each proposes and argues a response to a given prompt. Through rounds of exchange, the objective is to collectively review and refine answers, ultimately reaching a well-reviewed, accurate final response. 
 
-    Comment: The foundation of the multi-agent debate approach involves pitting multiple LLM instances against each other, where each proposes and argues a response to a given prompt. Through rounds of exchange, the objective is to collectively review and refine answers, ultimately reaching a well-reviewed, accurate final response.  The problem is if these agents provide an echo chamber of confabulated responses.
+
+    [Hallucination reduction](https://medium.com/@ignacio.de.gregorio.noblejas/hallucination-312f79f4c888) 
+    
+    Also [this] (https://www.cjco.com.au/article/news/multi-agent-debates-elevate-language-models-mit-and-google-brain-unlock-llm-potential-and-accuracy/)
+
+    Also [Marvin Minsky YouTube "Society of Mind"](https://www.youtube.com/watch?v=-pb3z2w9gDg)
 
     From Medium article… 
 
@@ -86,17 +89,16 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
 
     Here’s a more detailed breakdown:
 
-    1/ Given a query, multiple instances of a language model (or several ones) first generate individual candidate answers.
-
-    2/ Each individual model instance reads and critiques the responses of all other models and uses this content to update its own answer.
-
-    3/ This step is then repeated over several rounds until we reach a final answer.
+    1. Given a query, multiple instances of a language model (or several ones) first generate individual candidate answers.
+    2. Each individual model instance reads and critiques the responses of all other models and uses this content to update its own answer.
+    3. This step is then repeated over several rounds until we reach a final answer.
 
     This process induces models to construct answers that are consistent with both their internal critic as well as sensible in light of the responses of other agents.
 
     The resulting quorum of models can hold and maintain multiple chains of reasoning and possible answers simultaneously before proposing the final answer.
 
-    You can see an example in the attached image
+    
+
 
 ??? important "[Experiential Co-Learning of Software-Developing Agents](https://arxiv.org/pdf/2312.17025.pdf) "
 

@@ -16,11 +16,18 @@ There are several popular repositories that can serve as a starting point for yo
 
 ### Prominant and supported 
 
+
+#### Streamlit
+[Streamlit](https://blog.streamlit.io/langchain-streamlit/): This platform allows you to build machine learning and data science apps.
+
+[Streamlit agent](git@github.com:langchain-ai/streamlit-agent.git)
+
+#### Others
 - [Fly.io](https://www.fly.io)
 - [Modal.com](https://www.modal.com)
 - [Render.com](https://www.render.com)
 - [Gradio.app](https://www.gradio.app)
-- [Streamlit](https://blog.streamlit.io/langchain-streamlit/): This platform allows you to build machine learning and data science apps.
+
 - [Hugging Face](https://www.huggingface.co)
 - [EmbedChain.ai](https://www.embedchain.ai)
 

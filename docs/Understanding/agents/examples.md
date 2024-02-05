@@ -172,6 +172,7 @@ cognitive_architecture.md)
 
 
 ## Libraries
+!!! code "[Awesome LLM Powered Agent](https://github.com/hyp1231/awesome-llm-powered-agent)"
 
 !!! code "[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
 

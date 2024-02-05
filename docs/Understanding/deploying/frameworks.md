@@ -26,7 +26,7 @@ TODO: This needs to be made into a table with a pivot potential, lest the same i
 |                   | Prompt Management    | Systems to manage and refine the prompts used in conversational AI.          | Prompt Management System   |
 |                   | Orchestration        | Tools for managing complex workflows and processes in AI operations.         | Orchestration Tool         |
 |                   | Agent Tool Frameworks| Frameworks for building AI agents and managing their interactions.           | Agent Tool Framework       |
-|                   | UI/UX        | Guis and interfaces are specifically designed for streamlined connection with GenAI models.         | [Gradio](https://grad.io), [streamlit.io](https://streamlit.io)|
+|                   | UI/UX        | Guis and interfaces are specifically designed for streamlined connection with GenAI models.         | [Gradio](https://gradio.app), [streamlit.io](https://streamlit.io)|
 | Layer 2: Data     | Data Pre-processing  | Tools for cleaning, normalizing, and preparing data for analysis.            |[cleanlab.ai](https://cleanlab.ai), [unstructured.io](https://unstructured.io/)   |
 |                   | ETL + Data Pipelines | Tools to extract, transform, and load data, and to manage data flow.         | ETL & Data Pipeline Tool   |
 |                   | Databases            | Services for structured data storage, including vector databases and caches. | Database Service           |

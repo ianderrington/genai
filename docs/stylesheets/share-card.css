@@ -27,23 +27,28 @@ body {
     height: auto;
 }
 
-.copy-icon { 
-    cursor: pointer; 
-    position: relative;
-
-    
+/* Style the copy button */
+.copy-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background-color: #ffffff;
 }
 
+/* Style the copied popup */
 .copied-popup {
     display: none;
-    position: relative;
-
-    background-color: #f0f0f0;
-    border: 1px solid #d0d0d0;
-
-    z-index: 100; /* Ensure visibility */
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    background-color: #ffffff;
+    /* border: 1px solid #d0d0d0; */
+    padding: 5px;
+    border-radius: 5px;
 }
 
+/* Show the copied popup */
 .copied-popup.show {
     display: block;
 }
