@@ -4,6 +4,12 @@ In generative AI, the raw data—whether it be in binary, text, or a different f
 ## Understanding Tokenization
 Tokenization is the process of splitting data into these individual units. The choice of a token largely depends on the data type and the expected outcome of the AI. In text data, for instance, tokens often correspond to single words or subwords. These tokens are then often represented in one-hot encoding. Research may eventually show that [hierarchical tokenization](#heirarchichal-tokenization), either trained, guessed, or otherwise constructed, could minimize token use.
 
+Tokenization can be have a pre-processing phase, called pre-tokenization that will use regular expressions for defining patterns for text segmentation. GPT-2 and GPT-4 do that as well as one called punct: 
+
+???+ note "Pre-tokenization methods"
+    <img width="445" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/050ce1cc-2d11-4d98-a178-af706d149aa9">
+
+
 ### Heirarchichal Tokenization
 !!! code "[Floret Vectors](https://explosion.ai/blog/floret-vectors)"
 
@@ -50,6 +56,12 @@ Examples of coding tools that facilitate tokenization include [Tiktoken](https:/
 - [Sentence Piece](https://github.com/google/sentencepiece) implements subword units (e.g., byte-pair-encoding (BPE) ) and unigram language model [^kudo]
 - [Tiktoken](https://github.com/openai/tiktoken)
 - [Token Monster](https://github.com/alasdairforsythe/tokenmonster)
+
+??? important "[Getting the most out of your tokenizer for pre-training and domain adaptation](https://arxiv.org/pdf/2402.01035.pdf)"
+    The authors highlight sub-optimial tokenizers hurt performance and efficiency of models, and reveal specialized Byte-Pair Encoding code tokenizers with a new pre-tokenizer with improved performance. 
+    <img width="340" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/96e8d12a-5c95-4270-b41a-8e201335ecdd">
+    <img width="445" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/70403f6b-68d4-4b0e-93c4-3315a91aec24">
+
 
 ## References
 
