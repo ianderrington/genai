@@ -4630,10 +4630,21 @@ and
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#observed-frameworks" class="md-nav__link">
+  <a href="#general-advice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Observed Frameworks:
+        General Advice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt Pattern
       
     </span>
   </a>
@@ -4791,70 +4802,190 @@ and
 <h2 id="key-concepts">Key concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h2>
 <p>It has been found that the quality of responses is governed by the quality of the prompts. The structure of the prompts, as well as application-specific examples can improve the quality. The use of examples is called <em>few-shot</em> or <em>multi-shot</em> conditioning, and is distinct from <em>zero-shot</em> prompts that do not give examples. Generally, examples can better-enable quality results, even with large LLMs. Consequently <a href="#retrieval-augmented-prompting">retrieval augmented prompting</a>, is used to find examples to improve results. </p>
 <h2 id="manual-methods">Manual Methods<a class="headerlink" href="#manual-methods" title="Permanent link">&para;</a></h2>
+<h3 id="general-advice">General Advice<a class="headerlink" href="#general-advice" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Give clearer instructions</li>
+<li>Use a <a href="#prompt-pattern">prompt pattern</a> to provide useful or necessary information  </li>
 <li>Split complex tasks into simpler subtasks</li>
 <li>Structure the instruction to keep the model on task</li>
 <li>Prompt the model to explain before answering</li>
 <li>Ask for justifications of many possible answers, and then synthesize</li>
-<li>Generate many outputs, and then use the model to pick the best one</li>
+<li>Generate many outputs, (and then use the model to pick the best one)</li>
 <li>Fine-tune custom models to maximize performance</li>
-<li>Provide several examples to ground it.</li>
+<li>Provide several examples to ground it</li>
 <li>Good to evaluate this and see if input examples give expected scores. Modify the prompt if it isn't.</li>
 <li>Consider prompt versioning to keep track of outputs more easily.</li>
 <li>Break prompts into smaller prompts</li>
-<li>Chain of Thought Prompting</li>
-<li>Generate many outputs and pick final one or use LLM to pick best one.</li>
+<li>Use <a href="../agents/cognitive_architecture.html#cognitive-topologies">cognitive topologies</a>
+ like Chain of Thought Prompting</li>
 </ul>
-<details class="important">
+<details class="important" open="open">
 <summary><a href="https://arxiv.org/pdf/2312.16171.pdf">Principled Instructions Are All You Need for Questioning LLaMA-&frac12;, GPT-3.5/4</a></summary>
-<p>26 Prompting Tips</p>
-<p>1 - No need to be polite with LLM so there is no need to add phrases like “please”, “if you don’t mind”, “thank you”, “I would like to”, etc., and get straight to the point.
-2 -  Integrate the intended audience in the prompt, e.g., the audience is an expert in the field.
-3 - Break down complex tasks into a sequence of simpler prompts in an interactive conversation.
-4 - Employ affirmative directives such as ‘do,’ while steering clear of negative language like ‘don’t’.
-5 - When you need clarity or a deeper understanding of a topic, idea, or any piece of information, utilize the following prompts:
-    * Explain [insert specific topic] in simple terms.
-    * Explain to me like I’m 11 years old.
-    * Explain to me as if I’m a beginner in [field].
-    * Write the [essay/text/paragraph] using simple English like you’re explaining something to a 5-year-old.</p>
-<p>6 - Add “I’m going to tip $xxx for a better solution!”
-7 -  Implement example-driven prompting (Use few-shot prompting).
-8 - When formatting your prompt, start with ‘###Instruction###’, followed by either ‘###Example###’ or ‘###Question###’ if relevant. Subsequently, present your content. Use one or more
-line breaks to separate instructions, examples, questions, context, and input data.
-9 -  Incorporate the following phrases: “Your task is” and “You MUST”.
-10 - Incorporate the following phrases: “You will be penalized”.
-11 -  Use the phrase ”Answer a question given in a natural, human-like manner” in your prompts.
-12 - Use leading words like writing “think step by step”.
-13 -  Add to your prompt the following phrase “Ensure that your answer is unbiased and does not rely on stereotypes”.
-14 - Allow the model to elicit precise details and requirements from you by asking you questions until he has enough information to provide the needed output (for example, “From now on, I would like you to ask me questions to...”).
-15 - To inquire about a specific topic or idea or any information and you want to test your understanding, you can use the following phrase: “Teach me the [Any theorem/topic/rule name] and include a test at the end, but don’t
-give me the answers and then tell me if I got the answer right when I respond”.
-16 - Assign a role to the large language models.
-17 - Use Delimiters.
-18 - Repeat a specific word or phrase multiple times within a prompt.
-19 - Combine Chain-of-thought (CoT) with few-Shot prompts.
-20 - 
-Use output primers, which involve concluding your prompt with the beginning of the desired output. Utilize output primers by ending your prompt with the start of the anticipated response. 
-21 - To write an essay /text /paragraph /article or any type of text that should be detailed: “Write a detailed [essay/text /paragraph] for me on [topic] in detail by adding all the information necessary”.
-22 - To correct/change specific text without changing its style: “Try to revise every paragraph sent by users. You should only improve the user’s grammar and vocabulary and make sure it sounds natural. You should not change the writing style, such as making a formal paragraph casual”.
-23 - When you have a complex coding prompt that may be in different files: “From now and on whenever you generate code that spans more than one file, generate a [programming language ] script that can be run to automatically create the specified files or make changes to existing files to insert the generated code. [your question]”.
-24 - When you want to initiate or continue a text using specific words, phrases, or sentences, utilize the following prompt: 
-    *  I’m providing you with the beginning [song lyrics/story/paragraph/essay...]: [Insert lyrics/words/sentence]’. Finish it based on the words provided. Keep the flow consistent.
-25 - Clearly state the requirements that the model must follow in order to produce content, in the form of the keywords, regulations, hint, or instructions
-26 -  To write any text, such as an essay or paragraph, that is intended to be similar to a provided sample, include the following instructions: 
-    * Please use the same language based on the provided paragraph[/title/text /essay/answer].</p>
+<p><strong>26 Prompting Tips</strong></p>
+<ol>
+<li>
+<p>No need to be polite with LLM so there is no need to add phrases like “please”, “if you don’t mind”, “thank you”, “I would like to”, etc., and get straight to the point.</p>
+</li>
+<li>
+<p>Integrate the intended audience in the prompt, e.g., the audience is an expert in the field.</p>
+</li>
+<li>
+<p>Break down complex tasks into a sequence of simpler prompts in an interactive conversation.</p>
+</li>
+<li>
+<p>Employ affirmative directives such as ‘do,’ while steering clear of negative language like ‘don’t’.</p>
+</li>
+<li>
+<p>When you need clarity or a deeper understanding of a topic, idea, or any piece of information, utilize the following prompts:</p>
+<ul>
+<li>Explain [insert specific topic] in simple terms.</li>
+<li>Explain to me like I’m 11 years old.</li>
+<li>Explain to me as if I’m a beginner in [field].</li>
+<li>Write the [essay/text/paragraph] using simple English like you’re explaining something to a 5-year-old.</li>
+</ul>
+</li>
+<li>
+<p>Add “I’m going to tip $xxx for a better solution!”</p>
+</li>
+<li>
+<p>Implement example-driven prompting (Use few-shot prompting).</p>
+</li>
+<li>
+<p>When formatting your prompt, start with ‘###Instruction###’, followed by either ‘###Example###’ or ‘###Question###’ if relevant. Subsequently, present your content. Use one or more line breaks to separate instructions, examples, questions, context, and input data.</p>
+</li>
+<li>
+<p>Incorporate the following phrases: “Your task is” and “You MUST”.</p>
+</li>
+<li>
+<p>Incorporate the following phrases: “You will be penalized”.</p>
+</li>
+<li>
+<p>Use the phrase ”Answer a question given in a natural, human-like manner” in your prompts.</p>
+</li>
+<li>
+<p>Use leading words like writing “think step by step”.</p>
+</li>
+<li>
+<p>Add to your prompt the following phrase “Ensure that your answer is unbiased and does not rely on stereotypes”.</p>
+</li>
+<li>
+<p>Allow the model to elicit precise details and requirements from you by asking you questions until he has enough information to provide the needed output (for example, “From now on, I would like you to ask me questions to...”).</p>
+</li>
+<li>
+<p>To inquire about a specific topic or idea or any information and you want to test your understanding, you can use the following phrase: “Teach me the [Any theorem/topic/rule name] and include a test at the end, but don’t
+give me the answers and then tell me if I got the answer right when I respond”.</p>
+</li>
+<li>
+<p>Assign a role to the large language models.</p>
+</li>
+<li>
+<p>Use Delimiters.</p>
+</li>
+<li>
+<p>Repeat a specific word or phrase multiple times within a prompt.</p>
+</li>
+<li>
+<p>Combine Chain-of-thought (CoT) with few-Shot prompts.</p>
+</li>
+<li>
+<p>Use output primers, which involve concluding your prompt with the beginning of the desired output. Utilize output primers by ending your prompt with the start of the anticipated response.</p>
+</li>
+<li>
+<p>To write an essay /text /paragraph /article or any type of text that should be detailed: “Write a detailed [essay/text /paragraph] for me on [topic] in detail by adding all the information necessary”.</p>
+</li>
+<li>
+<p>To correct/change specific text without changing its style: “Try to revise every paragraph sent by users. You should only improve the user’s grammar and vocabulary and make sure it sounds natural. You should not change the writing style, such as making a formal paragraph casual”.</p>
+</li>
+<li>
+<p>When you have a complex coding prompt that may be in different files: “From now and on whenever you generate code that spans more than one file, generate a [programming language ] script that can be run to automatically create the specified files or make changes to existing files to insert the generated code. [your question]”.</p>
+</li>
+<li>
+<p>When you want to initiate or continue a text using specific words, phrases, or sentences, utilize the following prompt: </p>
+<ul>
+<li>I’m providing you with the beginning [song lyrics/story/paragraph/essay...]: [Insert lyrics/words/sentence]’. Finish it based on the words provided. Keep the flow consistent.</li>
+</ul>
+</li>
+<li>
+<p>Clearly state the requirements that the model must follow in order to produce content, in the form of the keywords, regulations, hint, or instructions</p>
+</li>
+<li>
+<p>To write any text, such as an essay or paragraph, that is intended to be similar to a provided sample, include the following instructions: </p>
+<ul>
+<li>Please use the same language based on the provided paragraph[/title/text /essay/answer].</li>
+</ul>
+</li>
+</ol>
 </details>
-<h3 id="observed-frameworks">Observed Frameworks:<a class="headerlink" href="#observed-frameworks" title="Permanent link">&para;</a></h3>
+<h3 id="prompt-pattern">Prompt Pattern<a class="headerlink" href="#prompt-pattern" title="Permanent link">&para;</a></h3>
+<details class="info" open="open">
+<summary>Context, Task, Persona, Tone, Examples, Format</summary>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Context</td>
+<td>Be very specific. The better is the context the better will be the output.</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>Clearly describe what is the task you ask for.</td>
+</tr>
+<tr>
+<td>Persona</td>
+<td>(Optional) what is your role and what is the role of the tool.</td>
+</tr>
+<tr>
+<td>Tone</td>
+<td>(Optional) use when special “tone” is relevant, for example: formal, casual, funny …</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>(Optional) providing examples of request, expected output are very useful.</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>(Optional) use when you need a special format like producing a table, XML, HTML…</td>
+</tr>
+</tbody>
+</table>
+</details>
 <details class="info" open="open">
 <summary>Who How What How?</summary>
-<ul>
-<li>Who are you?</li>
-<li>How should you respond?</li>
-<li>How you should not respond. </li>
-<li>What type of information do you want. </li>
-<li>How should we start. </li>
-</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Persona</td>
+<td>Who are you?</td>
+</tr>
+<tr>
+<td>Tone</td>
+<td>How should you respond?</td>
+</tr>
+<tr>
+<td>Anti-Tone</td>
+<td>How you should not respond.</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>What type of information do you want.</td>
+</tr>
+<tr>
+<td>Begin Task</td>
+<td>How should we start.</td>
+</tr>
+</tbody>
+</table>
 </details>
 <details class="info aida" open="open">
 <summary>Info</summary>
