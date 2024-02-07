@@ -2151,6 +2151,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#indexing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indexing Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#retrieving-data" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4955,6 +4966,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#indexing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indexing Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#retrieving-data" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5121,7 +5143,26 @@ and
 <p>Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). See blog:
 <a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/">https://blog.langchain.dev/semi-structured-multi-modal-rag/</a>.</p>
 <h3 id="storing-data">Storing Data<a class="headerlink" href="#storing-data" title="Permanent link">&para;</a></h3>
-<p>The embedded data is stored for future retrieval and use.</p>
+<p>The embedded data is stored for future retrieval and use. This is done via standarad database methods, with the use of vector embeddings as retrieval addresses. </p>
+<h3 id="indexing-data">Indexing Data<a class="headerlink" href="#indexing-data" title="Permanent link">&para;</a></h3>
+<p>It is useful to perform parallel indexing that keeps track of records that are put into vector stores. </p>
+<p><a href="/shared/indexing-vector-records.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
+
+<div class="admonition info">
+<p class="admonition-title"><a href="https://blog.langchain.dev/syncing-data-sources-to-vector-stores/">Indexing</a></p>
+<p>Indexing helps to improves performance saving time and money by not:
+* Re-processing unchanged content
+* Re-computing embeddings of unchanged content 
+* Inserting duplicated content</p>
+</div>
+<p>The langchain <a href="https://blog.langchain.dev/syncing-data-sources-to-vector-stores/">Blog</a> and docs on <a href="https://python.langchain.com/docs/modules/data_connection/indexing">indexing</a> provide quality discussions on these topics. </p>
 <h3 id="retrieving-data">Retrieving Data<a class="headerlink" href="#retrieving-data" title="Permanent link">&para;</a></h3>
 <p>The decision and act to retrieve the documents will depend on the additional contexts that the agents may need to be aware of.</p>
 <p>It might not always be necessary to retrieve documents. When it is necessary to retrieve the document, it is important to know where to retrieve from <a href="#routing">routing</a>, and then <a href="#matching">matching</a> the query to the appropriately stored information. Both of these may involve <a href="#query-transformations">rewriting</a> the prompt to be more effective in the manner the data is retrieved.</p>
@@ -5194,13 +5235,13 @@ Answer:
 <li><a href="https://github.com/pchunduri6/rag-demystified/blob/main/complex_qa.py">RAG demystified</a></li>
 <li><a href="https://www.rungalileo.io/blog/mastering-rag-how-to-architect-an-enterprise-rag-system">Mastering RAG: How To Architect An Enterprise RAG System</a></li>
 </ul>
-<p><a href="/shared/12-rag-pain-points-and-solutions.html" class="page-url" id="page-url-0"></a></p>
+<p><a href="/shared/12-rag-pain-points-and-solutions.html" class="page-url" id="page-url-1"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
 </div>
 
 <details class="important" open="open">
