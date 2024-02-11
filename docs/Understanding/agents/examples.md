@@ -22,6 +22,36 @@ transforming diverse and lengthy tool documentation into a unified and concise t
 
     **Solution**
     Easy tool provides "a simple method to condense tool documentation into more concise and effective tool instructions."
+
+    ```markdown
+         I: Tool Description Generation
+         /* I: Task prompt */
+         Your task is to create a concise and effective tool usage description based on the tool documentation. You should ensure the description only contains the purposes of the
+         tool without irrelevant information. Here is an example:
+         /* Examples */
+         {Tool Documentation}
+         Tool usage description:
+         {Tool_name} is a tool that can {General_Purposes}.
+         This tool has {Number} multiple built-in functions:
+         1. {Function_1} is to {Functionality_of_Function_1} 2. {Function_2} is to ...
+         /* Auto generation of tool description */ {ToolDocumentationof‘AviationWeatherCenter’} Tool usage description:
+         ‘Aviation Weather Center’ is a tool which can provide official aviation weather data...
+         II: Tool Function Guidelines Construction
+         /* Task prompt */
+         Your task is to create the scenario that will use the tool.
+         1. You are given a tool with its purpose and its parameters list. The scenario should adopt the parameters in the list.
+         2. If the parameters and parameters are both null, you
+         should set: {"Scenario": XX, "Parameters":{}}.
+         Here is an example:
+         /* Examples */
+         {Tool_name} is a tool that can {General_Purposes}. {Function_i} is to {Functionality_of_Function_i} {Parameter List of Function_i}
+         One scenario for {Function_i} of {Tool_name} is: {"Scenario": XX, "Parameters":{XX:XX}}
+         /* Auto-construction for Tool Function Guidelines */
+         ‘Ebay’ can get products from Ebay in a specific country. ‘Product Details’ in ‘Ebay’ can get the product details for a given product id and a specific country.
+         {Parameter List of ‘Product Details’}
+         One scenario for ‘Product Details’ of ‘Ebay’ is:
+         {"Scenario": "if you want to know the details of the product with product ID 1954 in Germany from Ebay", "Parameters":{"product_id": 1954, "country": "Germany"}}.
+    ```
     <img width="418" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/caed1a08-4761-4809-8a05-c2d026e26281">
 
     **Results** 
