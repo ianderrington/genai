@@ -9,6 +9,28 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 ### Jarvis
 ??? code "[Jarvis](https://github.com/microsoft/JARVIS/) provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." 
+
+??? important "[Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction](https://arxiv.org/pdf/2401.06201.pdf) provides a framework
+transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage"
+
+    **Development**
+    Easy Tool follows a simple pattern of: Task Planning, Tool Retrieval, Tool Selection and Tool Execution, coupled with thoughtful prompting to enable SOT tool usage over multiple models. 
+
+    **Problem**
+    Using new tools, software,  especially can be challenging for LLMs (and people too!), especially with a poor or redundant documentation and a variety of usage manners. 
+    <img width="733" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4b17492e-c227-4633-9620-437fb08ab8c9">
+
+    **Solution**
+    Easy tool provides "a simple method to condense tool documentation into more concise and effective tool instructions."
+    <img width="418" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/caed1a08-4761-4809-8a05-c2d026e26281">
+
+    **Results** 
+    The performance is SOT over multiple models. ChatGPT, ToolLLaMA-7B, Vicuna-7B, Mistral-Instruct-&B and GPT-4
+    <img width="820" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5a4a1b6d-986c-491e-9642-c28f6d56f771">
+
+
+    
+
     
 
 
