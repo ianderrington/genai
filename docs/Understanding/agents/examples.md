@@ -1,20 +1,8 @@
 There are different categories for Agents, which are often either by the environment in which they act or by the manner in which they are used. Because of their variety, it has been found essential to enable end-customization of them. This has been done with numerous commercial ventures, including OpenAI, POE, Character.ai and many others. We discuss some basics below, but if you'd just like to dig into to them, please check out the exmaples for [multiple agent](#multi-agent), and [single agents](#single-agents) to learn about them specifically. 
 
-## Multi-Agent 
 
 Here are a few examples. Because agents are hard to disentangle from core components, we describe more throughout, especially in the section on [cognitive architectures](./
-cognitive_architecture.md)
-
-!!! code "[CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)](https://github.com/camel-ai/camel)"
-
-    Paper: [https://arxiv.org/abs/2303.17760](https://arxiv.org/abs/2303.17760)
-
-    Abstract:
-    "The rapid advancement of conversational and chat-based language models has led to remarkable progress in complex task-solving. However, their success heavily relies on human input to guide the conversation, which can be challenging and time-consuming. This paper explores the potential of building scalable techniques to facilitate autonomous cooperation among communicative agents and provide insight into their "cognitive" processes. To address the challenges of achieving autonomous cooperation, we propose a novel communicative agent framework named role-playing. Our approach involves using inception prompting to guide chat agents toward task completion while maintaining consistency with human intentions. We showcase how role-playing can be used to generate conversational data for studying the behaviors and capabilities of chat agents, providing a valuable resource for investigating conversational language models. Our contributions include introducing a novel communicative agent framework, offering a scalable approach for studying the cooperative behaviors and capabilities of multi-agent systems, and open-sourcing our library to support research on communicative agents and beyond. "
-
-    GitHub: [https://github.com/camel-ai/camel](https://github.com/camel-ai/camel)
-
-    Article: [https://blog.devgenius.io/coded-example-of-langchain-enabled-cooperative-agents-4859d294b197](https://blog.devgenius.io/coded-example-of-langchain-enabled-cooperative-agents-4859d294b197)
+cognitive_architecture.md). We discuss [single agents](#single-agents) here though there are a number of multi-agent [system examples](./systems.md) to consider as well. 
 
 
 ## Single-agents
@@ -95,8 +83,6 @@ cognitive_architecture.md)
         
     ```
 
-
-
 ??? code "[Fresh LLMs](https://github.com/freshllms/freshqa that propose FreshQA, a dynamic QA benchmark, and FreshPrompt that allows LLMs to stay up to date"
     - [Paper](https://arxiv.org/pdf/2310.03214.pdf)
 
@@ -171,8 +157,18 @@ cognitive_architecture.md)
     ![image](https://github.com/ianderrington/genai/assets/76016868/7a9cffc3-1f67-4ea2-8368-8380f323f16a)
     <img width="814" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/af71d9db-a542-4289-a833-d16ca5e9b574">
 
+## Multi-Agent 
 
+!!! code "[CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)](https://github.com/camel-ai/camel)"
 
+    Paper: [https://arxiv.org/abs/2303.17760](https://arxiv.org/abs/2303.17760)
+
+    Abstract:
+    "The rapid advancement of conversational and chat-based language models has led to remarkable progress in complex task-solving. However, their success heavily relies on human input to guide the conversation, which can be challenging and time-consuming. This paper explores the potential of building scalable techniques to facilitate autonomous cooperation among communicative agents and provide insight into their "cognitive" processes. To address the challenges of achieving autonomous cooperation, we propose a novel communicative agent framework named role-playing. Our approach involves using inception prompting to guide chat agents toward task completion while maintaining consistency with human intentions. We showcase how role-playing can be used to generate conversational data for studying the behaviors and capabilities of chat agents, providing a valuable resource for investigating conversational language models. Our contributions include introducing a novel communicative agent framework, offering a scalable approach for studying the cooperative behaviors and capabilities of multi-agent systems, and open-sourcing our library to support research on communicative agents and beyond. "
+
+    GitHub: [https://github.com/camel-ai/camel](https://github.com/camel-ai/camel)
+
+    Article: [https://blog.devgenius.io/coded-example-of-langchain-enabled-cooperative-agents-4859d294b197](https://blog.devgenius.io/coded-example-of-langchain-enabled-cooperative-agents-4859d294b197)
 
 
 
