@@ -8,13 +8,13 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 ## Single-agents
 
 ### Jarvis
-??? code "[Jarvis](https://github.com/microsoft/JARVIS/) provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." 
+??? code "[Jarvis](https://github.com/microsoft/JARVIS/) provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." jarvis
 
 ??? important "[Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction](https://arxiv.org/pdf/2401.06201.pdf) provides a framework
-transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage"
+transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage" easy-tool
 
     **Development**
-    Easy Tool follows a simple pattern of: Task Planning, Tool Retrieval, Tool Selection and Tool Execution, coupled with thoughtful prompting to enable SOT tool usage over multiple models. 
+    Easy Tool follows a simple pattern of: 1. Task Planning, 2. Tool Retrieval, 3. Tool Selection and 4. Tool Execution, coupled with thoughtful prompting to enable SOT tool usage over multiple models. 
 
     **Problem**
     Using new tools, software,  especially can be challenging for LLMs (and people too!), especially with a poor or redundant documentation and a variety of usage manners. 
@@ -59,8 +59,26 @@ transforming diverse and lengthy tool documentation into a unified and concise t
     <img width="820" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5a4a1b6d-986c-491e-9642-c28f6d56f771">
 
 
+??? important "[Hugging GPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face](https://arxiv.org/abs/2303.17580)" hugging-gpt
     
+    **Development** 
+    
+    Hugging GPT enables LLM models to call other models via the Hugging Face Repo
+    
+    **Problem**
+    
+    LLMs are not the best task for all tasks. Enabling LLMS to use task-specific models can improve the quality of the results.
+    
+    **Solution**
+    Hugging GPT provides an intervace for LLMs by breaking it down into 1. Task Planning, 2. Model Selection, 3. Task Execution, and 4. Response Generation 
 
+    <img width="724" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/293351bf-63c8-40d3-a972-90207a5e409a">
+    
+    <img width="740" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a5aa16d3-4468-4413-b537-fb63298b285b">
+    <img width="696" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9cd2a6f8-5d6c-47a0-81f2-74258136880a">
+
+    **Results**
+    The results provide substiantial evidence that HuggingGPT can enable successful single, sequential, and graph-based tasks.
     
 
 
