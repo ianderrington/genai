@@ -4,7 +4,7 @@ Transformers can be used in three general ways: encoder-only, decoder-only and e
 
 In Encoder-only networks, like Bert, the entire input text is used, but is useful for primarily output classification tasks (sequence-to-value). 
 
-As in the original [Transformer ATtention paper], encoder-decoder networks are used to convert sequence to sequences for language translation. In these systems, an encoder will first project information based on the input, generate new outputs, and the new outpus will be used in a recurrent fashion to generate subsequent outputs. 
+As in the original [Transformer attention paper](https://arxiv.org/pdf/1706.03762.pdf), encoder-decoder networks are used to convert sequence to sequences for language translation. In these systems, an encoder will first project information based on the input, generate new outputs, and the new outpus will be used in a recurrent fashion to generate subsequent outputs. 
 
 In Decoder-only networks, like [GPT](gpt.md), because they are _next-token_predictions_, they only require information from words/tokens that have been previously seen. The outputs will be the estimates of the probability of the next word/token. While next-token prediction is singular, this can happen iteratively, and with the proper prompting, the generation of output sequences can perform a varity of sequence-to-sequence tasks, such as language translation. 
 

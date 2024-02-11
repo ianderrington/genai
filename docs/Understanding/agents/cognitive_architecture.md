@@ -20,7 +20,8 @@ Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/
 ### Models
 Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](#prompts), they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used to help model creation with [recurrent training](../architectures/training/recurrent.md).
 
-### Overview
+### Cognitive Architectures
+
 ???+ important "[Cognitive Architectures for Language Agents](https://arxiv.org/pdf/2309.02427.pdf) is a thoughtful understanding of Cognitive Architectures" cognitive-architectures
     They reveal a number of thoughtful perspectives on how to consider agents, considering much of what we have included here. Going further,
     <img width="549" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/16087788-df56-44cd-91be-8755d17fd7c0">
@@ -32,6 +33,7 @@ Models provide the computational core of Agents. Acting like a 'brain' that take
     Prompt engineering as control flow
     <img width="623" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/46c00cc8-6530-4a76-af5d-35e70ae1b1cd">
 
+### Cognitive Topologies
 
 ???+ important "[Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts](https://arxiv.org/pdf/2401.14295.pdf) provide excellent ways of thinking about reasoning." topologies-of-reasoning
     
@@ -47,6 +49,7 @@ Models provide the computational core of Agents. Acting like a 'brain' that take
     5. Graph of Thoughts (GoT)
 
     They consider common concepts such as:
+
     1. Multistep reasoning
     2. Zero-Shot Reasoning
     3. Planning and & Task Decomposition
@@ -58,15 +61,16 @@ Models provide the computational core of Agents. Acting like a 'brain' that take
     <img width="745" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a0775270-66d5-445f-ac7e-4f4a77c7eb0d">
 
     They also summarize the general flow of a prompting interaction. 
-    0. The user sends their prompt
-    1. Preprocessing 
-    2. Adding to into a prompting context
-    3. Input the content to the LLM
-    4. LLM Generation
-    5. Post-processing (Checking NSFW)
-    6. Returning information into the context,  and either
-    7. Iterating before returning to the user
-    8. Reply to the user
+
+    1. The user sends their prompt
+    2. Preprocessing 
+    3. Adding to into a prompting context
+    4. Input the content to the LLM
+    5. LLM Generation
+    6. Post-processing (Checking NSFW)
+    7. Returning information into the context,  and either
+    8. Iterating before returning to the user
+    9. Reply to the user
     
     <img width="729" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4823a84c-32fc-487f-b723-b013cf31a5c7">
 

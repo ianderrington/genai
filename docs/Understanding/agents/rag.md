@@ -62,7 +62,22 @@ https://blog.langchain.dev/semi-structured-multi-modal-rag/.
 
 ### Storing Data
 
-The embedded data is stored for future retrieval and use.
+The embedded data is stored for future retrieval and use. This is done via standarad database methods, with the use of vector embeddings as retrieval addresses. 
+
+### Indexing Data
+
+It is useful to perform parallel indexing that keeps track of records that are put into vector stores. 
+
+!!! info "[Indexing](https://blog.langchain.dev/syncing-data-sources-to-vector-stores/)" indexing-vector-records
+    Indexing helps to improves performance saving time and money by not:
+    * Re-processing unchanged content
+    * Re-computing embeddings of unchanged content 
+    * Inserting duplicated content
+
+
+The langchain [Blog](https://blog.langchain.dev/syncing-data-sources-to-vector-stores/) and docs on [indexing](https://python.langchain.com/docs/modules/data_connection/indexing) provide quality discussions on these topics. 
+
+
 
 ### Retrieving Data
 

@@ -411,7 +411,10 @@ def arg_parser():
 
 def url_downloader(url, base_path, overwrite=False, dry_run=False, verbose=False):
     downloader = DocumentDownloader(base_path, overwrite, dry_run=dry_run, verbose=verbose)
-    downloader.download(url)
+    try: 
+        downloader.download(url)
+    except Exception as e:
+        print(f"Error downloading {url} because of {e}")
 
 def main(args):
     url = args.url

@@ -37,4 +37,6 @@ There are several popular repositories that can serve as a starting point for yo
 - [DemoGPT](https://github.com/melih-unsal/DemoGPT): This tool connects Langchain and Streamlit to create dynamic apps that can be used repeatedly for interacting with Chat-GPTs.
 - [GPT Graph](https://github.com/m-elbably/gpt-graph): This tool allows for a graphical network representation of chat interactions.
 
+-[pyRobBot](git@github.com:paulovcmedeiros/pyRobBot.git)
+
 By understanding your visualization needs and implementing an effective front end, you can ensure that your users have a smooth and intuitive experience when interacting with your AI technology.

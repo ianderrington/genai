@@ -7,7 +7,7 @@ with open("requirements.txt", "r") as file:
 setup(
     name="genai",  # The name of your package
     version="0.1",  # The initial release version
-    packages=find_packages('genai'),  # Searches for Python packages in the current directory
+    packages=find_packages(exclude=['tests', 'docs', 'cloned', 'lib', 'downloads', 'mkdocs-extensions', 'site']),  # Searches for Python packages in the current directory
     install_requires=requirements,  # List of dependencies read from requirements.txt
     url="https://github.com/username/genai",  # The URL of your package's home page (update with your URL)
     author="Ian Derrington",  # Your name

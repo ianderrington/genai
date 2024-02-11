@@ -10,61 +10,104 @@ It has been found that the quality of responses is governed by the quality of th
 
 ## Manual Methods
 
+### General Advice
+
 - Give clearer instructions
+- Use a [prompt pattern](#prompt-pattern) to provide useful or necessary information  
 - Split complex tasks into simpler subtasks
 - Structure the instruction to keep the model on task
 - Prompt the model to explain before answering
 - Ask for justifications of many possible answers, and then synthesize
-- Generate many outputs, and then use the model to pick the best one
+- Generate many outputs, (and then use the model to pick the best one)
 - Fine-tune custom models to maximize performance
-- Provide several examples to ground it.
+- Provide several examples to ground it
   -  Good to evaluate this and see if input examples give expected scores. Modify the prompt if it isn't.
 - Consider prompt versioning to keep track of outputs more easily.
 - Break prompts into smaller prompts
-- Chain of Thought Prompting
-- Generate many outputs and pick final one or use LLM to pick best one.
+- Use [cognitive topologies](../agents/cognitive_architecture.md#cognitive-topologies)
+ like Chain of Thought Prompting
 
 
-??? important "[Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4](https://arxiv.org/pdf/2312.16171.pdf)"
+???+ important "[Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4](https://arxiv.org/pdf/2312.16171.pdf)"
 
-    26 Prompting Tips
+    **26 Prompting Tips**
 
-    1 - No need to be polite with LLM so there is no need to add phrases like “please”, “if you don’t mind”, “thank you”, “I would like to”, etc., and get straight to the point.
-    2 -  Integrate the intended audience in the prompt, e.g., the audience is an expert in the field.
-    3 - Break down complex tasks into a sequence of simpler prompts in an interactive conversation.
-    4 - Employ affirmative directives such as ‘do,’ while steering clear of negative language like ‘don’t’.
-    5 - When you need clarity or a deeper understanding of a topic, idea, or any piece of information, utilize the following prompts:
+    1. No need to be polite with LLM so there is no need to add phrases like “please”, “if you don’t mind”, “thank you”, “I would like to”, etc., and get straight to the point.
+
+    2. Integrate the intended audience in the prompt, e.g., the audience is an expert in the field.
+
+    3. Break down complex tasks into a sequence of simpler prompts in an interactive conversation.
+
+    4. Employ affirmative directives such as ‘do,’ while steering clear of negative language like ‘don’t’.
+
+    5. When you need clarity or a deeper understanding of a topic, idea, or any piece of information, utilize the following prompts:
+
         * Explain [insert specific topic] in simple terms.
         * Explain to me like I’m 11 years old.
         * Explain to me as if I’m a beginner in [field].
         * Write the [essay/text/paragraph] using simple English like you’re explaining something to a 5-year-old.
 
-    6 - Add “I’m going to tip $xxx for a better solution!”
-    7 -  Implement example-driven prompting (Use few-shot prompting).
-    8 - When formatting your prompt, start with ‘###Instruction###’, followed by either ‘###Example###’ or ‘###Question###’ if relevant. Subsequently, present your content. Use one or more
-    line breaks to separate instructions, examples, questions, context, and input data.
-    9 -  Incorporate the following phrases: “Your task is” and “You MUST”.
-    10 - Incorporate the following phrases: “You will be penalized”.
-    11 -  Use the phrase ”Answer a question given in a natural, human-like manner” in your prompts.
-    12 - Use leading words like writing “think step by step”.
-    13 -  Add to your prompt the following phrase “Ensure that your answer is unbiased and does not rely on stereotypes”.
-    14 - Allow the model to elicit precise details and requirements from you by asking you questions until he has enough information to provide the needed output (for example, “From now on, I would like you to ask me questions to...”).
-    15 - To inquire about a specific topic or idea or any information and you want to test your understanding, you can use the following phrase: “Teach me the [Any theorem/topic/rule name] and include a test at the end, but don’t
+    6. Add “I’m going to tip $xxx for a better solution!”
+
+    7.  Implement example-driven prompting (Use few-shot prompting).
+
+    8. When formatting your prompt, start with ‘###Instruction###’, followed by either ‘###Example###’ or ‘###Question###’ if relevant. Subsequently, present your content. Use one or more line breaks to separate instructions, examples, questions, context, and input data.
+
+    9.  Incorporate the following phrases: “Your task is” and “You MUST”.
+
+    10. Incorporate the following phrases: “You will be penalized”.
+
+    11.  Use the phrase ”Answer a question given in a natural, human-like manner” in your prompts.
+
+    12. Use leading words like writing “think step by step”.
+
+    13.  Add to your prompt the following phrase “Ensure that your answer is unbiased and does not rely on stereotypes”.
+
+    14. Allow the model to elicit precise details and requirements from you by asking you questions until he has enough information to provide the needed output (for example, “From now on, I would like you to ask me questions to...”).
+
+    15. To inquire about a specific topic or idea or any information and you want to test your understanding, you can use the following phrase: “Teach me the [Any theorem/topic/rule name] and include a test at the end, but don’t
     give me the answers and then tell me if I got the answer right when I respond”.
-    16 - Assign a role to the large language models.
-    17 - Use Delimiters.
-    18 - Repeat a specific word or phrase multiple times within a prompt.
-    19 - Combine Chain-of-thought (CoT) with few-Shot prompts.
-    20 - 
-    Use output primers, which involve concluding your prompt with the beginning of the desired output. Utilize output primers by ending your prompt with the start of the anticipated response. 
-    21 - To write an essay /text /paragraph /article or any type of text that should be detailed: “Write a detailed [essay/text /paragraph] for me on [topic] in detail by adding all the information necessary”.
-    22 - To correct/change specific text without changing its style: “Try to revise every paragraph sent by users. You should only improve the user’s grammar and vocabulary and make sure it sounds natural. You should not change the writing style, such as making a formal paragraph casual”.
-    23 - When you have a complex coding prompt that may be in different files: “From now and on whenever you generate code that spans more than one file, generate a [programming language ] script that can be run to automatically create the specified files or make changes to existing files to insert the generated code. [your question]”.
-    24 - When you want to initiate or continue a text using specific words, phrases, or sentences, utilize the following prompt: 
+
+    16. Assign a role to the large language models.
+
+    17. Use Delimiters.
+
+    18. Repeat a specific word or phrase multiple times within a prompt.
+
+    19. Combine Chain-of-thought (CoT) with few-Shot prompts.
+
+    20. Use output primers, which involve concluding your prompt with the beginning of the desired output. Utilize output primers by ending your prompt with the start of the anticipated response.
+
+    21. To write an essay /text /paragraph /article or any type of text that should be detailed: “Write a detailed [essay/text /paragraph] for me on [topic] in detail by adding all the information necessary”.
+
+    22. To correct/change specific text without changing its style: “Try to revise every paragraph sent by users. You should only improve the user’s grammar and vocabulary and make sure it sounds natural. You should not change the writing style, such as making a formal paragraph casual”.
+    
+    23. When you have a complex coding prompt that may be in different files: “From now and on whenever you generate code that spans more than one file, generate a [programming language ] script that can be run to automatically create the specified files or make changes to existing files to insert the generated code. [your question]”.
+    
+    24. When you want to initiate or continue a text using specific words, phrases, or sentences, utilize the following prompt: 
+    
         *  I’m providing you with the beginning [song lyrics/story/paragraph/essay...]: [Insert lyrics/words/sentence]’. Finish it based on the words provided. Keep the flow consistent.
-    25 - Clearly state the requirements that the model must follow in order to produce content, in the form of the keywords, regulations, hint, or instructions
-    26 -  To write any text, such as an essay or paragraph, that is intended to be similar to a provided sample, include the following instructions: 
+
+    25. Clearly state the requirements that the model must follow in order to produce content, in the form of the keywords, regulations, hint, or instructions
+    
+    26.  To write any text, such as an essay or paragraph, that is intended to be similar to a provided sample, include the following instructions: 
         * Please use the same language based on the provided paragraph[/title/text /essay/answer].
+    
+
+### Prompt Pattern
+
+???+ info "Context, Task, Persona, Tone, Examples, Format"
+    | **Category** | **Description**                                                                                         |
+    |--------------|---------------------------------------------------------------------------------------------------------|
+    | Context      | Be very specific. The better is the context the better will be the output.                             |
+    | Task         | Clearly describe what is the task you ask for.                                                         |
+    | Persona      | (Optional) what is your role and what is the role of the tool.                                         |
+    | Tone         | (Optional) use when special “tone” is relevant, for example: formal, casual, funny …                   |
+    | Examples     | (Optional) providing examples of request, expected output are very useful.                             |
+    | Format       | (Optional) use when you need a special format like producing a table, XML, HTML…                       |
+
+
+
 
 ??? code "[Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding](https://github.com/suzgunmirac/meta-prompting)" meta-prompting
     
@@ -78,17 +121,20 @@ It has been found that the quality of responses is governed by the quality of th
     
 ### Observed Frameworks:
 
+
 ???+ info "Who How What How?"
+    | **Category**          | **Description**               |
+    |-----------------------|-------------------------------|
+    | Persona               | Who are you?                  |
+    | Tone                  | How should you respond?       |
+    | Anti-Tone             | How you should not respond.   |
+    | Task                  | What type of information do you want. |
+    | Begin Task            | How should we start.          |
 
-    - Who are you?
-    - How should you respond?
-    - How you should not respond. 
-    - What type of information do you want. 
-    - How should we start. 
 
-???+ info AIDA
+<!-- ???+ info AIDA -->
 
-???+ info SMART
+<!-- ???+ info SMART -->
 
 ???+ note SCRIBE
 
@@ -105,6 +151,7 @@ It has been found that the quality of responses is governed by the quality of th
 
 !!! important "['According to ...' Prompting Language Models Improves Quoting from Pre-Training Data](https://arxiv.org/pdf/2305.13252.pdf) The grounding prompt `According to { some_reputable_source}` prompt inception additions increases output quality improves over the null prompt in nearly every dataset and metric, typically by 5-15%."
 
+
 - [Chain of Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf)
 - [Automatic Prompt Engineering](https://arxiv.org/pdf/2211.01910.pdf) --> Gave a CoT improvement suggestion "Let's work this out in a step by step by way to be sure we have the right answer."
 
@@ -117,7 +164,9 @@ It has been found that the quality of responses is governed by the quality of th
     format) are “Write in a way different from the actual continuation, if
     there is one”, and “No plagiarism is allowed”."
 
+
 !!! important "[YELLING AT YOUR LLM MIGHT MAKE IT BEHAVE](https://arstechnica.com/information-technology/2023/10/thanks-to-ai-the-future-of-programming-may-involve-yelling-in-all-caps/)"
+
 
 ??? "[Large Language Models Understand and Can Be Enhanced by Emotional Stimuli](https://arxiv.org/pdf/2307.11760.pdf)"
 

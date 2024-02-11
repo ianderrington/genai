@@ -2,11 +2,15 @@ To go beyond, we will be using Generative AI to create and expand the system wit
 
 There are several layers that will be part of the build plan. They may be considered as follows: 
 
-1. Manual, and automated use of GenAI to [improve and refine](#improve_and_refine_content) content already present. 
-1. Automatic triggering of GenAI to [incorporate new](#incorporate) content coming from external inputs. 
-1. Searching for external inputs based on appropriate information feeds. 
-1. Responsive [Chatty AI Oracle](#chatty-oracle)
+## Goals
+
+1. Manual, and automated use of GenAI to [improve and refine](#improve-and-refine-content) content already present. 
+1. Automatic triggering of GenAI to [incorporate new](#incorporate-new-content) content coming from external inputs. 
+1. Automated [content searches] for information inputs based on appropriate information feeds. 
+1. Responsive [Chatty AI Oracle](#ai-oracle)
 1. Agentic AI Oracle with varying degrees of veracity. 
+
+### Improve and refine content
 
 ## What do I need
 1. To Automatically add or fix content already present: a crawler
@@ -32,49 +36,11 @@ There are several layers that will be part of the build plan. They may be consid
                     - I NEED TO CACHE RESULTS. Caching key values for e
             Better LLMs directly with fine tuning
 
-
-+++ important "Fine tuning to investigate"
-        Llama fine tuning
-
-        Runpod Affiliate Link https://tinyurl.com/yjxbdc9w
-
-        Advanced Fine-tuning and Data-preparation Scripts (Lifetime Membership)
-        Fine-tune LLMs for style, content or structured responses...
-        Learn More: https://trelis.com/advanced-fine-tuni...
-
-        LLM Server Setup Repo Access (Lifetime Membership)
-        - Video: Run Llama 2 on AWS:   
-        ￼
-         • Deploy Llama 2 for your Entire Organi...  
-        - Video: Deploy a Llama API in 5 clicks:   
-        ￼
-         • Deploy an API for Llama 70B in 5 Clicks  
-        - Learn more: https://trelis.com/enterprise-server-...
-
-        - https://arxiv.org/abs/2308.04152
-        - https://www.linkedin.com/pulse/fine-tuning-multi-model-large-language-models-deep-dive-jatasra-vwvrf/
-        - https://github.com/mayooear/gpt4-pdf-chatbot-langchain
-        - https://www.youtube.com/watch?v=JJ5mcdEIbj8
-        - https://www.youtube.com/watch?v=NXevvEF3QVI
-
-
-1. To parse the database --> use embedchain or something similar
-
-This can mirror waht is done in downloads/tomasonjo/llm-movieagent to initialize a graph. 
-
-Run through all of the data using an LLM, to create the data that can be ingested by a database? Or do it in bulk. (Both) 
-
-Command-line add to database. Add to database from a directory... Add to database based on updates since last. 
-
-Neo4j Semantic layer??? 
-
-1. to automatically add n 
-
-
-### Improve and refine content
-
-
 ### Incorporate new content
+
+It will be time consuming to add new content. That is why having an automated system will be necessary to incorporate new content in a thoughtful an accurate manner. 
+
+Here is an example workflow that we might follow: 
 
 ```mermaid 
 
@@ -97,8 +63,43 @@ flowchart TD
 ```
 
 
+## AI Oracle
+We will explore RAG and fine-tuning of chat models models, as well as other cognitive topologies architectures. 
 
-## Detailed Action Plan for GitHub Actions and Knowledge Graph Integration
+### Chatty Oracle
+
+We will first look at using [rag](../understanding/agents/rag.md) to enable lookup of the components within the database. This will rely on understanding gained from building our [self improvement](#self-improvement) architectures. 
+
++++ important "Fine tuning to investigate"
+    Llama fine tuning
+
+    Runpod Affiliate Link https://tinyurl.com/yjxbdc9w
+
+    Advanced Fine-tuning and Data-preparation Scripts (Lifetime Membership)
+    Fine-tune LLMs for style, content or structured responses...
+    Learn More: https://trelis.com/advanced-fine-tuni...
+
+    LLM Server Setup Repo Access (Lifetime Membership)
+    - Video: Run Llama 2 on AWS:   
+    ￼
+     • Deploy Llama 2 for your Entire Organi...  
+    - Video: Deploy a Llama API in 5 clicks:   
+    ￼
+     • Deploy an API for Llama 70B in 5 Clicks  
+    - Learn more: https://trelis.com/enterprise-server-...
+
+    - https://arxiv.org/abs/2308.04152
+    - https://www.linkedin.com/pulse/fine-tuning-multi-model-large-language-models-deep-dive-jatasra-vwvrf/
+    - https://github.com/mayooear/gpt4-pdf-chatbot-langchain
+    - https://www.youtube.com/watch?v=JJ5mcdEIbj8
+    - https://www.youtube.com/watch?v=NXevvEF3QVI
+
+
+
+
+
+
+## Phases 
 
 ### Phase 1: MVP Development
 GitHub Actions for Issue Submission and Initial Evaluation
@@ -108,31 +109,25 @@ GitHub Actions for Issue Submission and Initial Evaluation
 Set up a simple caching mechanism for external sources like GitHub repositories, PDFs, and blogs.
 Manually link these sources to relevant parts of the knowledge graph.
 
-- [x] Download to local files path genai/kg/doc_graph_generation.py and downloader.py
+Status:
+- [x] Download to local files path `genai/kg/doc_graph_generation.py` and downloader.py
 - [x] Simple SQL mapping database. 
 
 
 **Basic Knowledge Graph (KG) Construction**: 
 
-Don't build a knowledge-graph, build an agent graph. 
 
-What is an agent-graph? It is an knowledge graph of 'agents', that allow for structured connections and an 'agent' template that can act on those structured connections. 
 
-It has 'summarizations' and 
-
-Start building a basic KG with a simple schema focusing on key concepts and relations in the existing documentation.
-
-Implement fuzzy and exact match search capabilities.
-Initially, manually identify appropriate locations for new concepts in the documentation tree.
 
 
 **Develop a basic summarization tool** to create summaries of submitted documents.
 Manually integrate these summaries into the appropriate locations in the documentation.
 
-**Develop a GitHub Action** to trigger on issue creation by an approved user.
+ **Develop a GitHub Action** to trigger on issue creation by an approved user.
 The Action should check if the submitted document/concept is already in the documentation tree using a simple keyword-based search.
 If the concept is not present, the Action should tag the issue for further processing.
 
+- [ ] NOTE: This is partially done, but automation relys on more prompt-tuning 
 
 ### Phase 2: Enhanced Functionality and Automation
 Advanced KG Development with Automated Placement
@@ -203,15 +198,24 @@ Using Github to organize our understanding of a fluid field is a notable challen
 Eventually we may shift to other systems (like docusaurus). Before that though, we will be wanting to integrate state-of-the-art updates to understanding while we build our auto-building system. 
 
 
+
+## Components
+
+### Orchestration
+
+### Knowledge Graph
+1. To parse the database --> use embedchain or something similar
+
+This can mirror waht is done in downloads/tomasonjo/llm-movieagent to initialize a graph. 
+Run through all of the data using an LLM, to create the data that can be ingested by a database? Or do it in bulk. (Both) 
+Command-line add to database. Add to database from a directory... Add to database based on updates since last. 
+Neo4j Semantic layer??? 
+
 ## Generative Building
 
 - [x] Enable simple jupyter-notebook calls to improve documents.
     - [ ] Ensure all links are preserved.
     - [ ] Enable multiple LLM integration, for instance with Llama on OSX. 
-- [ ] Enable automatic github PRs based on a continuous feedback system (Like Auto-GPT). 
-- [ ] Enable vector-databasing and other RAG tools to function, focusing on 
-    - [ ] individual github-repositories 
-    - [ ] linked documents
 
 ## Visualization
 

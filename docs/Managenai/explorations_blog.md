@@ -1,3 +1,9 @@
+### 2024-01-31
+TODO: 
+Use LangGraph, With  Streamlit to look at Knowledge Graph
+
+
+
 ### 2024-01-30
 Working on enabling admonitions to be shared so that there is greater viral potential of this. This required building a [mkdocs plugin](../../mkdocs-extensions/mkdocs-shareable-admonition/README.md). 
 The result is any adnomitions will have the potential for a fourth component at the end of the line that gives the share-title. 

@@ -42,6 +42,12 @@ Related to pruning is the use of smaller models that are initialized based on la
     [Paper](https://arxiv.org/pdf/2311.18823.pdf)
     <img width="270" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2c14986f-8edc-430e-bb59-3d3bae4f30d3">
 
+### KV-Cache Optimization
+
+??? important "[MODEL TELLS YOU WHAT TO DISCARD:ADAPTIVE KV CACHE COMPRESSION FOR LLMS](https://openreview.net/pdf?id=uNrFpDPMyo)"
+    
+    This method performs dynamic ablation of KV pairs minimizing the number of computes that need to happen. They just remove K-V cach
+
 
 ### Quantization
 Precision details the manner in which binary bits represent numbers in a computer. Generally, the greater the number of bits, the broader the variety of numbers that can be represented.

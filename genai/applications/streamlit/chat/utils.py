@@ -1,20 +1,20 @@
 import streamlit as st
 
-def get_api_key():
+def get_api_key(key_name="OPENAI_API_KEY"):
     import dotenv
     import os
     dotenv.load_dotenv()
     try:
-        openai_api_key = os.getenv("OPENAI_API_KEY")
+        api_key = os.getenv(key_name)
     except:
-        openai_api_key = None
-    return openai_api_key
+        api_key = None
+    return api_key
 
-def load_api_key():
-    openai_api_key = get_api_key()
+def load_api_key(key_name="OPENAI_API_KEY"):
+    api_key = get_api_key(key_name)
 
-    if not openai_api_key and "openai_api_key" not in st.secrets:
+    if not api_key and key_name not in st.secrets:
         if st.button("Go to settings"):
             st.switch_page("pages/Settings.py")   
 
-    return openai_api_key
+    return api_key
