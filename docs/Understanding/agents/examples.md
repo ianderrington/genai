@@ -19,6 +19,11 @@ cognitive_architecture.md)
 
 ## Single-agents
 
+### Jarvis
+??? important "[Jarvis](https://github.com/microsoft/JARVIS/)" 
+
+
+### Others
 !!! important "[Open GPTs](https://github.com/langchain-ai/opengpts) Provides a similar experience to OpenAI GPTs and assistants, using Langchain components"
 
 ??? code "[Voyager from MineDojo](https://github.com/MineDojo/Voyager)"
