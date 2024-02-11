@@ -4918,6 +4918,11 @@ and
 <p>In generative AI, the raw data—whether it be in binary, text, or a different form—is divided into individual units termed as <em>tokens</em>. These play a crucial role in easing the understanding and manipulation of data for the AI.</p>
 <h2 id="understanding-tokenization">Understanding Tokenization<a class="headerlink" href="#understanding-tokenization" title="Permanent link">&para;</a></h2>
 <p>Tokenization is the process of splitting data into these individual units. The choice of a token largely depends on the data type and the expected outcome of the AI. In text data, for instance, tokens often correspond to single words or subwords. These tokens are then often represented in one-hot encoding. Research may eventually show that <a href="#heirarchichal-tokenization">hierarchical tokenization</a>, either trained, guessed, or otherwise constructed, could minimize token use.</p>
+<p>Tokenization can be have a pre-processing phase, called pre-tokenization that will use regular expressions for defining patterns for text segmentation. GPT-2 and GPT-4 do that as well as one called punct: </p>
+<details class="note" open="open">
+<summary>Pre-tokenization methods</summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/050ce1cc-2d11-4d98-a178-af706d149aa9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="445" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/050ce1cc-2d11-4d98-a178-af706d149aa9"></a></p>
+</details>
 <h3 id="heirarchichal-tokenization">Heirarchichal Tokenization<a class="headerlink" href="#heirarchichal-tokenization" title="Permanent link">&para;</a></h3>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://explosion.ai/blog/floret-vectors">Floret Vectors</a></p>
@@ -4974,6 +4979,12 @@ and
 <li><a href="https://github.com/openai/tiktoken">Tiktoken</a></li>
 <li><a href="https://github.com/alasdairforsythe/tokenmonster">Token Monster</a></li>
 </ul>
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2402.01035.pdf">Getting the most out of your tokenizer for pre-training and domain adaptation</a></summary>
+<p>The authors highlight sub-optimial tokenizers hurt performance and efficiency of models, and reveal specialized Byte-Pair Encoding code tokenizers with a new pre-tokenizer with improved performance. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/96e8d12a-5c95-4270-b41a-8e201335ecdd" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="340" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/96e8d12a-5c95-4270-b41a-8e201335ecdd"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/70403f6b-68d4-4b0e-93c4-3315a91aec24" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="445" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/70403f6b-68d4-4b0e-93c4-3315a91aec24"></a></p>
+</details>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://arxiv.org/pdf/1508.07909.pdf">Neural Machine Translation of Rare Words with Subword Units</a></li>
