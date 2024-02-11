@@ -1,14 +1,15 @@
-There are different categories for Agents, which are often either by the environment in which they act or by the manner in which they are used. Because of their variety, it has been found essential to enable end-customization of them. This has been done with numerous commercial ventures, including OpenAI, POE, Character.ai and many others. We discuss some basics below, but if you'd just like to dig into to them, please check out the exmaples for [multiple agent](#multi-agent), and [single agents](#single-agents) to learn about them specifically. 
+There are different categories for Agents, which are often either by the environment in which they act or by the manner in which they are used. Because of their variety, it has been found essential to enable their end-customization. This has been done with numerous commercial ventures, including OpenAI, POE, Character.ai, etc. We discuss some basics below, but if you'd like to dig into to them, please check out the exmaples for [multiple agent](#multi-agent), and [single agents](#single-agents) to learn about them specifically. 
 
 
 Here are a few examples. Because agents are hard to disentangle from core components, we describe more throughout, especially in the section on [cognitive architectures](./
-cognitive_architecture.md). We discuss [single agents](#single-agents) here though there are a number of multi-agent [system examples](./systems.md) to consider as well. 
+cognitive_architecture.md). We discuss [single agents](#single-agents) here, though there are a number of multi-agent [system examples](./systems.md) to consider as well. 
 
 
 ## Single-agents
 
 ### Jarvis
-??? important "[Jarvis](https://github.com/microsoft/JARVIS/)" 
+??? code "[Jarvis](https://github.com/microsoft/JARVIS/) provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." 
+    
 
 
 ### Others
