@@ -1,6 +1,11 @@
+### 2024-02-13
+Added friday and copilot OS: https://github.com/OS-Copilot/FRIDAY/tree/main?tab=readme-ov-file . NEED TO CHECK THIS OUT
+
 ### 2024-01-31
 TODO: 
 Use LangGraph, With  Streamlit to look at Knowledge Graph
+
+
 
 
 
