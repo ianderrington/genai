@@ -83,6 +83,37 @@ transforming diverse and lengthy tool documentation into a unified and concise t
 
 
 ### Others
+??? important "[OS-Copilot: Towards Generalist Computer Agents with Self-Improvement](https://github.com/OS-Copilot/FRIDAY/tree/main)" os-copilot-friday
+   
+   **Developments** 
+
+   [OS-copilot](https://arxiv.org/abs/2402.07456) enables a conceptual framework for generalist computer agents working on Linux and MacOS, with the design of providing a self-improving AI assistent capable of solving general computer tasks. Upon the framework, they built Fully Responsive Intelligence Devoted to Assisting You, FRIDAY, to enable OS-integration.
+
+   **Solution**
+   
+   The OS-copilot framwork uses the following components:
+
+   **Planner** To break down complex tasks, supporting planning methods [Plan-and-Solve]() but uses a _Directed acyclidc graph-based planner__. 
+
+   **Configurator**
+
+   Takes subtasks and configures it to 'help the actor complete the subtask'. It relies on Delarative Memory, procedural memory, and working memory. The _declaritive memory_ records a User's preferences and habits and semantic knowledge, where it stores past-trajectories as ackuired from the Internet, Users, and OS. The _Procedural memory_ enables skill development, and starts off with a small tool-repository that API-POST requests or python files can be used. _Working memory_ exchanges information with other modules (long-term) and external operations. This is responsible for retrieinv information and updating long-term memory. 
+
+   **Actor**
+
+   The actor _executes_ the task and then _self-criticizes_ to asses the successful completion of a given subtask.
+   
+   The [Front end](https://github.com/OS-Copilot/FRIDAY-front)
+   
+   ![image](https://github.com/ianderrington/genai/assets/76016868/806ad549-dc17-4909-90de-034e5ba716d5)
+   
+   ![image](https://github.com/ianderrington/genai/assets/76016868/c663856d-bace-4b0b-9a87-797bd65ce58c)
+
+   **Results**
+   Significant improvement over other methods ([GIAI](https://huggingface.co/spaces/gaia-benchmark/leaderboard)) 
+
+
+
 !!! important "[Open GPTs](https://github.com/langchain-ai/opengpts) Provides a similar experience to OpenAI GPTs and assistants, using Langchain components"
 
 ??? code "[Voyager from MineDojo](https://github.com/MineDojo/Voyager)"
