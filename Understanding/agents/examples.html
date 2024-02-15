@@ -2399,6 +2399,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -2515,6 +2517,33 @@ and
     
   
     Back end
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying/monitoring.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
   
 
     
@@ -4950,6 +4979,32 @@ Hugging GPT provides an intervace for LLMs by breaking it down into 1. Task Plan
 The results provide substiantial evidence that HuggingGPT can enable successful single, sequential, and graph-based tasks.</p>
 </details>
 <h3 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h3>
+<p><a href="/shared/os-copilot-friday.html" class="page-url" id="page-url-2"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+</div>
+
+<details class="important">
+<summary><a href="https://github.com/OS-Copilot/FRIDAY/tree/main">OS-Copilot: Towards Generalist Computer Agents with Self-Improvement</a></summary>
+</details>
+<p><strong>Developments</strong> </p>
+<p><a href="https://arxiv.org/abs/2402.07456">OS-copilot</a> enables a conceptual framework for generalist computer agents working on Linux and MacOS, with the design of providing a self-improving AI assistent capable of solving general computer tasks. Upon the framework, they built Fully Responsive Intelligence Devoted to Assisting You, FRIDAY, to enable OS-integration.</p>
+<p><strong>Solution</strong></p>
+<p>The OS-copilot framwork uses the following components:</p>
+<p><strong>Planner</strong> To break down complex tasks, supporting planning methods <a href="">Plan-and-Solve</a> but uses a <em>Directed acyclidc graph-based planner_</em>. </p>
+<p><strong>Configurator</strong></p>
+<p>Takes subtasks and configures it to 'help the actor complete the subtask'. It relies on Delarative Memory, procedural memory, and working memory. The <em>declaritive memory</em> records a User's preferences and habits and semantic knowledge, where it stores past-trajectories as ackuired from the Internet, Users, and OS. The <em>Procedural memory</em> enables skill development, and starts off with a small tool-repository that API-POST requests or python files can be used. <em>Working memory</em> exchanges information with other modules (long-term) and external operations. This is responsible for retrieinv information and updating long-term memory. </p>
+<p><strong>Actor</strong></p>
+<p>The actor <em>executes</em> the task and then <em>self-criticizes</em> to asses the successful completion of a given subtask.</p>
+<p>The <a href="https://github.com/OS-Copilot/FRIDAY-front">Front end</a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/806ad549-dc17-4909-90de-034e5ba716d5" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/806ad549-dc17-4909-90de-034e5ba716d5" /></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c663856d-bace-4b0b-9a87-797bd65ce58c" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c663856d-bace-4b0b-9a87-797bd65ce58c" /></a></p>
+<p><strong>Results</strong>
+   Significant improvement over other methods (<a href="https://huggingface.co/spaces/gaia-benchmark/leaderboard">GIAI</a>) </p>
 <div class="admonition important">
 <p class="admonition-title"><a href="https://github.com/langchain-ai/opengpts">Open GPTs</a> Provides a similar experience to OpenAI GPTs and assistants, using Langchain components</p>
 </div>

@@ -2294,6 +2294,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -2410,6 +2412,33 @@ and
     
   
     Back end
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deploying/monitoring.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
   
 
     
@@ -4766,7 +4795,7 @@ and
     Hosting[Deployment] &lt;--&gt; APIorCall[API/Call]
 
     APIorCall &lt;--&gt; Cache
-    APIorCall &lt;--&gt; Record
+    APIorCall &lt;--&gt; Monitor
     APIorCall &lt;--&gt; Clean
 
 
@@ -4776,9 +4805,9 @@ and
         Memory &lt;--&gt; Orchestration
         Prompts --&gt; Orchestration
         CognitiveArchitectures[Cognitive\n Architectures] --&gt; Orchestration
-        Cache --&gt; Orchestration        
-        Record --&gt; Orchestration        
-        Clean --&gt; Orchestration   
+        Cache &lt;--&gt; Orchestration        
+        Monitor &lt;--&gt; Orchestration        
+        Clean &lt;--&gt; Orchestration   
     end
 
 
@@ -4820,7 +4849,7 @@ and
     class Hosting hostingColor;
     class APIorCall hostingColor;
     class Cache hostingColor;
-    class Record hostingColor;
+    class Monitor hostingColor;
     class Clean hostingColor;
 
     class memory finalColor;
@@ -4837,7 +4866,7 @@ and
     click Hosting "./deploying/index.html"
     click APIorCall "./api_call/index.html"
     click Cache "./deploying/caching.html"
-    click Record "./recording/index.html"
+    click Monitor "./deploying/monitoring.html"
     click Clean "./cleaning/index.html"
     click Memory "./agents/memory.html"
     click Prompts "./prompting/index.html"
@@ -4890,7 +4919,7 @@ and
 
     click UC "./overview/use_cases.html"
     click CH "./overview/challenges.html"
-    click BB "./overview/build_or_buy.html"
+    click BB "./overview/building_or_buying.html"
     click Data "./data/index.html"
     click MA "./architectures/index.html"
     click PTM "./architectures/pre_trained_models.html"
