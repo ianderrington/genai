@@ -340,6 +340,8 @@ and
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2290,6 +2292,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -2406,6 +2410,33 @@ and
     
   
     Back end
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deploying/caching.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Caching
   
 
     
@@ -4615,7 +4646,9 @@ and
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -4686,6 +4719,8 @@ and
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
@@ -4706,8 +4741,121 @@ and
 
 
 <h1 id="understanding-genai">🔮 Understanding Gen()AI!<a class="headerlink" href="#understanding-genai" title="Permanent link">&para;</a></h1>
-<p><strong>↖️⬅️ Check out the navigation</strong></p>
-<p><strong>⬇️ Explore in a different way ⬇️</strong></p>
+<p>Here you'll find what you need to know to understand Gen()AI architecture. </p>
+<p><strong>↖️⬅️ View the components here ⬅️↖️</strong></p>
+<p><strong>⬇️ See how the components connect ⬇️</strong></p>
+<details class="tip" open="open">
+<summary>Component of LLM-based GenAI (clickable)</summary>
+<pre class="mermaid"><code>graph TD
+
+  RawData[High Volume Data] --&gt; DataCleaning[Cleaned Data]
+    DataCleaning --&gt; PreTraining 
+    subgraph LLMPreparation[" "]
+        Model --&gt; Architecture
+        PreTraining --&gt; Architecture
+
+        FineTuning &lt;--&gt; Architecture
+        Architecture &lt;--&gt; Optimization 
+    end
+    BehaviorData[Behavior \n Data] --&gt; FineTuning
+    Architecture --&gt; EmbeddingModel
+
+    Architecture &lt;--&gt; Orchestration
+    Architecture --&gt; Hosting
+
+    Hosting[Deployment] &lt;--&gt; APIorCall[API/Call]
+
+    APIorCall &lt;--&gt; Cache
+    APIorCall &lt;--&gt; Record
+    APIorCall &lt;--&gt; Clean
+
+
+    subgraph OrchestrationSubgraph[ ]
+        Agent[Agent]
+        Orchestration
+        Memory &lt;--&gt; Orchestration
+        Prompts --&gt; Orchestration
+        CognitiveArchitectures[Cognitive\n Architectures] --&gt; Orchestration
+        Cache --&gt; Orchestration        
+        Record --&gt; Orchestration        
+        Clean --&gt; Orchestration   
+    end
+
+
+    Orchestration &lt;--&gt; Database
+    Orchestration &lt;--&gt; Environment
+    Orchestration &lt;--&gt; Tools[Tools and \n Plugins]
+
+
+    subgraph memory[" "]
+        RAG[Retrieval \n Augmented \n Generation]
+        DataPipeline[Data\n Preparation] --&gt; EmbeddingModel[Embedding \n Model]         
+        Orchestration --&gt; EmbeddingModel
+        VectorDatabase --&gt; Orchestration
+    end
+
+    ContextData[Context\n Data] --&gt; DataPipeline
+
+    EmbeddingModel --&gt; VectorDatabase[Vector Database]
+            Orchestration &lt;--&gt; FrontEnd
+    FrontEnd[Front End] &lt;--&gt; User
+
+
+    classDef dataColor fill:#e6e6e6,stroke:#333,stroke-width:2px;
+    classDef llmColor fill:#add8e6,stroke:#333,stroke-width:2px;
+    classDef orchestrationColor fill:#f9d5e5,stroke:#333,stroke-width:2px;
+    classDef hostingColor fill:#fada5e,stroke:#333,stroke-width:2px;
+    classDef finalColor fill:#d4edda,stroke:#333,stroke-width:2px;
+
+    class RawData dataColor;
+    class DataCleaning dataColor;
+    class PreTraining dataColor;
+
+    class LLMPreparation llmColor;
+    class Model llmColor;
+    class FineTuning llmColor;
+    class Optimization llmColor;
+
+    class OrchestrationSubgraph orchestrationColor;
+    class Hosting hostingColor;
+    class APIorCall hostingColor;
+    class Cache hostingColor;
+    class Record hostingColor;
+    class Clean hostingColor;
+
+    class memory finalColor;
+    class FrontEnd finalColor;
+    class User finalColor;
+
+    click RawData "./data/index.html"
+    click DataCleaning "./data/selection.html"
+    click Architecture "./architectures/index.html"
+    click PreTraining "./architectures/training/pre-training.html"
+    click Model "./architectures/models/index.html"
+    click FineTuning "./architectures/training/finetuning.html"
+    click Optimization "./architectures/optimization.html"
+    click Hosting "./deploying/index.html"
+    click APIorCall "./api_call/index.html"
+    click Cache "./deploying/caching.html"
+    click Record "./recording/index.html"
+    click Clean "./cleaning/index.html"
+    click Memory "./agents/memory.html"
+    click Prompts "./prompting/index.html"
+    click CognitiveArchitectures "./agents/cognitive_architectures.html"
+    click Tools "./agents/actions_and_tools.html"
+    click Environment "./agents/environments.html"
+    click Database "./agents/memory.html"
+    click DataPipeline "./agents/rag.html#data-preparation"
+    click EmbeddingModel "./data/index.html#embedding"
+    click VectorDatabase "./agents/memory.html#vector-databases"
+    click FrontEnd "./deploying/front_end.html"
+    click User "./user/index.html"
+    click RAG "./agents/rag.html"
+    click Agent "./agents/index.html"</code></pre>
+</details>
+<p><strong>⬇️ See how to start ⬇️</strong></p>
+<details class="tip" open="open">
+<summary>How to go about understanding and building</summary>
 <pre class="mermaid"><code>graph TD
     subgraph Understand["Understand"]
         UC["Use Cases"]
@@ -4767,6 +4915,7 @@ and
     class Buy buyColor;
     class Use coolColor;
 </code></pre>
+</details>
 <p>Generative Artificial Intelligence, and related General AI and General Super AI are components of what already is and may be the future of intelligence 🌟. We must effectively manage these technologies to use them to their highest potential.</p>
 <p>To manage these technologies effectively and responsibly <em>we must understand them</em> 🚀. That is a complex task, especially given the speed at which we are generating novel insights, new discoveries, backed by increasingly powerful hardware. </p>
 <p>We created Managen AI 🔮 to help you <em>understand</em> and <a href="../Using/index.html"><em>use</em></a> Gen()AI. </p>
@@ -4834,10 +4983,15 @@ and
 
 
 
+  
+  
+
 
 
   
 
+
+  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -4925,6 +5079,8 @@ and
   <!-- Link to previous and/or next page -->
   
     
+      
+        
       
       <nav
         class="md-footer__inner md-grid"

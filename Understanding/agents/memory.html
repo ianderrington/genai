@@ -2038,17 +2038,6 @@ and
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#input-prompt-caching" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Input (prompt) Caching
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#parsed-information-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2475,6 +2464,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -2591,6 +2582,33 @@ and
     
   
     Back end
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying/caching.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Caching
   
 
     
@@ -4868,17 +4886,6 @@ and
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#input-prompt-caching" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Input (prompt) Caching
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#parsed-information-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5001,15 +5008,6 @@ and
 <h3 id="semantic-layers">Semantic layers<a class="headerlink" href="#semantic-layers" title="Permanent link">&para;</a></h3>
 <p>Semantic layer plays a powerful role: in interpreting the users question into a memory query, or call. </p>
 <h2 id="uses">Uses<a class="headerlink" href="#uses" title="Permanent link">&para;</a></h2>
-<h3 id="input-prompt-caching">Input (prompt) Caching<a class="headerlink" href="#input-prompt-caching" title="Permanent link">&para;</a></h3>
-<p>Input caching is a technique that leverages memory to improve response time and efficiency. Instead of generating tokens based on the next input, it uses caching to identify responses that may have already been generated for similar prompts. This significantly enhances the efficiency of repeated queries. However, it may cause issues if the initial response was not satisfactory, as the system would return the same cached response.</p>
-<div class="admonition important">
-<p class="admonition-title"><a href="https://arxiv.org/pdf/2311.04934.pdf">PROMPT CACHE: MODULAR ATTENTION REUSE FOR LOW-LATENCY INFERENCE</a></p>
-<p>This stores partial Query, Key, Value pairs to minimize prompt-reuse. </p>
-</div>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/zilliztech/GPTCache">GPTCache</a> to quickly Cache your results to speed second-time queries.</p>
-</div>
 <h3 id="parsed-information-routing">Parsed information routing<a class="headerlink" href="#parsed-information-routing" title="Permanent link">&para;</a></h3>
 <p>Parsed information routing involves directing parsed or processed information to the appropriate destination. This can be particularly useful in systems with multiple agents or complex workflows.</p>
 <h2 id="implementations">Implementations<a class="headerlink" href="#implementations" title="Permanent link">&para;</a></h2>

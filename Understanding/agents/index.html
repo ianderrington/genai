@@ -2294,6 +2294,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -2410,6 +2412,33 @@ and
     
   
     Back end
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying/caching.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Caching
   
 
     
@@ -4804,18 +4833,19 @@ and
   <h1>Agents</h1>
 
 <h2 id="generative-ai-agents">Gen(erative) AI Agents<a class="headerlink" href="#generative-ai-agents" title="Permanent link">&para;</a></h2>
-<p>Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables.</p>
-<p>Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.</p>
+<p>Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.</p>
 <details class="important" open="open">
-<summary><a href="#tldr">tl;dr</a></summary>
-<p>At a very basic level, an Agent does this, </p>
+<summary>What are agents?</summary>
+<p>An computer system that can execute in the general loop 
 <pre class="mermaid"><code>graph LR
     A(Observe Environment) --&gt; B[Evaluate]
     B --&gt; C[Propose action]
     C --&gt; D[Act]
     D --&gt; E[Observe]
-    E --&gt; A</code></pre>
-<p>Though, more generally it includes these components: </p>
+    E --&gt; A</code></pre></p>
+</details>
+<p>What makes an LLM?
+Though, more generally it includes these components: </p>
 <ul>
 <li><a href="../architectures/index.html">LLM models</a> that power information evaluation.</li>
 <li><a href="../prompting/index.html">Prompts</a>,  <a href="cognitive_architecture.html">chains</a>, <a href="memory.html">memory</a> connected with <a href="cognitive_architecture.html">cognition architectures</a>.</li>
@@ -4824,7 +4854,6 @@ and
 <li><a href="cognitive_architecture.html#interpreters">Interpreters and Executors</a> that are used to process input or output.</li>
 <li><a href="systems.html">Systems of Agents</a> that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.</li>
 </ul>
-</details>
 <h2 id="agents-in-in-perspective">Agents in In perspective<a class="headerlink" href="#agents-in-in-perspective" title="Permanent link">&para;</a></h2>
 <p>Based on <a href="https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/">this</a>, Agents can be considered as </p>
 <details class="important" open="open">
@@ -4889,11 +4918,11 @@ and
 <details class="important" open="open">
 <summary>How components interact (clickable)</summary>
 <pre class="mermaid"><code>graph TB
-    Environment[Environment] --&gt;|represented \n by | Information[Information]
+    Environment[Environment] --&gt;|represented \n by | Data[Data]
 
     click Environment "./environments.html"
-    Information --&gt;|interpreted \n with| LLM[LLMs]
-
+    Data --&gt;|interpreted \n with| LLM[LLMs]
+    click Data "../../data/index.html" 
     LLM &lt;--&gt;|uses| CognitiveArchitectures[Cognitive \nArchitectures]
     click LLM "../architectures/models/index.html"
     CognitiveArchitectures &lt;--&gt; |Find, Create, Read\nUpdate, Delete| Memory[Memory]
@@ -4912,7 +4941,7 @@ and
     Interpreter --&gt;|updates| Environment
     click Interpreter "./interpreters.html"
 
-    classDef informationColor fill:#ffcc00,stroke:#333,stroke-width:2px;
+    classDef dataColor fill:#ffcc00,stroke:#333,stroke-width:2px;
     classDef environmentColor fill:#ff9999,stroke:#333,stroke-width:2px;
     classDef llmColor fill:#99ccff,stroke:#333,stroke-width:2px;
     classDef cognitiveColor fill:#cc99ff,stroke:#333,stroke-width:2px;
@@ -4922,7 +4951,7 @@ and
     classDef internal fill:#f996,stroke:#333,stroke-width:2px;
     classDef external fill:#9f6,stroke:#333,stroke-width:2px;
 
-    class Information informationColor;
+    class Data dataColor;
     class Environment environmentColor;
     class LLM llmColor;
     class CognitiveArchitectures cognitiveColor;
@@ -4943,7 +4972,7 @@ and
     style DummyNode fill:#ff9999,stroke:#fff,color:#000;  
 </code></pre>
 </details>
-<p>At the core of agents are information interpreters such as LLMs <a href="../architectures/models/index.html">models</a>, provide the 'brains' that allow for information to be processed, and then acted upon. Actions occur with an <a href="environments.html">environment</a>, with specific <a href="actions_and_tools.html">actions and tools</a>. To be effective, the information interpretation is best accomplished with <a href="cognitive_architecture.html">cognitive architectures</a> that enable reasoning, planning, and interactions with <a href="memory.html">memory</a> sources. To coordinate these components effectively <a href="cognitive_architecture.html#interpreters">interpreters and executors</a>. With one agent is found to work, <a href="systems.html">systems</a> of agents allow for multiple agents to interact with other agents and with people. </p>
+<p>At the core of agents are data interpreters such as LLMs <a href="../architectures/models/index.html">models</a>, provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an <a href="environments.html">environment</a>, with specific <a href="actions_and_tools.html">actions and tools</a>. To be effective, the data interpretation is best accomplished with <a href="cognitive_architecture.html">cognitive architectures</a> that enable reasoning, planning, and interactions with <a href="memory.html">memory</a> sources. To coordinate these components effectively <a href="cognitive_architecture.html#interpreters">interpreters and executors</a>. With one agent is found to work, <a href="systems.html">systems</a> of agents allow for multiple agents to interact with other agents and with people. </p>
 <p>Agents can be quite different! Here are some <a href="examples.html">examples</a> of agents made both in academic and commercial settings.</p>
 <h3 id="example-agent-diagram">Example Agent Diagram:<a class="headerlink" href="#example-agent-diagram" title="Permanent link">&para;</a></h3>
 <p>To enable that it may require more complicated relations between example components. Below is an example representation.</p>
