@@ -1,11 +1,14 @@
 ### 2024-02-13
 Added friday and copilot OS: https://github.com/OS-Copilot/FRIDAY/tree/main?tab=readme-ov-file . NEED TO CHECK THIS OUT
+### 2024-02-11
 
+### 2024-02-10
+Found this streamlit multipage [template](https://github.com/prakharrathi25/data-storyteller) and associated [blog](https://towardsdatascience.com/creating-multipage-applications-using-streamlit-efficiently-b58a58134030)
+
+Found an AMAZING open source multipage, multiLLM frontend [here at pyRobBot](https://github.com/paulovcmedeiros/pyRobBot)
 ### 2024-01-31
 TODO: 
 Use LangGraph, With  Streamlit to look at Knowledge Graph
-
-
 
 
 
