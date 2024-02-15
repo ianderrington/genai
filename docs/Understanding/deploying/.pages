@@ -3,5 +3,7 @@ nav:
   - examples_and_tutorials.md
   - front_end.md
   - back_end.md
+  - monitoring.md
+  - caching.md
   - frameworks.md
   - ...

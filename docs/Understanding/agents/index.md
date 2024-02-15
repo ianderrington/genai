@@ -1,12 +1,9 @@
 ## Gen(erative) AI Agents
 
-Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables.
+Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.
 
-Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.
-
-???+ important "[tl;dr](#tldr)"
-    At a very basic level, an Agent does this, 
-
+???+ important "What are agents?"
+    An computer system that can execute in the general loop 
     ```mermaid
     graph LR
         A(Observe Environment) --> B[Evaluate]
@@ -16,14 +13,15 @@ Similar to bots, or other computerized automata, they may have the ability to ru
         E --> A
     ```
 
-    Though, more generally it includes these components: 
+What makes an LLM?
+Though, more generally it includes these components: 
 
-    * [LLM models](../architectures/index.md) that power information evaluation.
-    * [Prompts](../prompting/index.md),  [chains](./cognitive_architecture.md), [memory](./memory.md) connected with [cognition architectures](./cognitive_architecture.md).
-    * [Environments](environments.md) where an agent can 'act'.
-    * [Tools](./actions_and_tools.md), or aspects of the environment that can be called upon. 
-    * [Interpreters and Executors](./cognitive_architecture.md#interpreters) that are used to process input or output.
-    * [Systems of Agents](systems.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
+* [LLM models](../architectures/index.md) that power information evaluation.
+* [Prompts](../prompting/index.md),  [chains](./cognitive_architecture.md), [memory](./memory.md) connected with [cognition architectures](./cognitive_architecture.md).
+* [Environments](environments.md) where an agent can 'act'.
+* [Tools](./actions_and_tools.md), or aspects of the environment that can be called upon. 
+* [Interpreters and Executors](./cognitive_architecture.md#interpreters) that are used to process input or output.
+* [Systems of Agents](systems.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
 
 
 ## Agents in In perspective
@@ -46,11 +44,11 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
 ???+ important "How components interact (clickable)"
     ```mermaid
     graph TB
-        Environment[Environment] -->|represented \n by | Information[Information]
+        Environment[Environment] -->|represented \n by | Data[Data]
         
         click Environment "./environments.html"
-        Information -->|interpreted \n with| LLM[LLMs]
-        
+        Data -->|interpreted \n with| LLM[LLMs]
+        click Data "../../data/index.html" 
         LLM <-->|uses| CognitiveArchitectures[Cognitive \nArchitectures]
         click LLM "../architectures/models/index.html"
         CognitiveArchitectures <--> |Find, Create, Read\nUpdate, Delete| Memory[Memory]
@@ -69,7 +67,7 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
         Interpreter -->|updates| Environment
         click Interpreter "./interpreters.html"
 
-        classDef informationColor fill:#ffcc00,stroke:#333,stroke-width:2px;
+        classDef dataColor fill:#ffcc00,stroke:#333,stroke-width:2px;
         classDef environmentColor fill:#ff9999,stroke:#333,stroke-width:2px;
         classDef llmColor fill:#99ccff,stroke:#333,stroke-width:2px;
         classDef cognitiveColor fill:#cc99ff,stroke:#333,stroke-width:2px;
@@ -79,7 +77,7 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
         classDef internal fill:#f996,stroke:#333,stroke-width:2px;
         classDef external fill:#9f6,stroke:#333,stroke-width:2px;
 
-        class Information informationColor;
+        class Data dataColor;
         class Environment environmentColor;
         class LLM llmColor;
         class CognitiveArchitectures cognitiveColor;
@@ -101,7 +99,7 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
 
     ```
 
-At the core of agents are information interpreters such as LLMs [models](../architectures/models/index.md), provide the 'brains' that allow for information to be processed, and then acted upon. Actions occur with an [environment](./environments.md), with specific [actions and tools](./actions_and_tools.md). To be effective, the information interpretation is best accomplished with [cognitive architectures](./cognitive_architecture.md) that enable reasoning, planning, and interactions with [memory](./memory.md) sources. To coordinate these components effectively [interpreters and executors](./cognitive_architecture.md#interpreters). With one agent is found to work, [systems](./systems.md) of agents allow for multiple agents to interact with other agents and with people. 
+At the core of agents are data interpreters such as LLMs [models](../architectures/models/index.md), provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an [environment](./environments.md), with specific [actions and tools](./actions_and_tools.md). To be effective, the data interpretation is best accomplished with [cognitive architectures](./cognitive_architecture.md) that enable reasoning, planning, and interactions with [memory](./memory.md) sources. To coordinate these components effectively [interpreters and executors](./cognitive_architecture.md#interpreters). With one agent is found to work, [systems](./systems.md) of agents allow for multiple agents to interact with other agents and with people. 
 
 
 Agents can be quite different! Here are some [examples](./examples.md) of agents made both in academic and commercial settings.

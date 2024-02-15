@@ -24,7 +24,7 @@ Implementing a solution-focused approach involves the following steps:
 
 1. Engage your teams in discussions about how they would like to utilize GenAI, considering different examples of its use. [See examples](examples/index.md).
 2. Understand the common use-cases required by your various employees and teams.
-3. Decide whether to build or buy the necessary AI tools. [See building or buying guide](building_and_buying.md).
+3. Decide whether to build or buy the necessary AI tools. [See building or buying guide](building_or_buying.md).
 4. Ensure your efforts align with the important ethical considerations of using GenAI. [See ethical considerations](ethically/index.md).
 5. Prepare to manage the use of AI in your operations. [See managing guide](managing/index.md).
 6. Learn how to mark your, and detect others', AI-generated content. [See marking and detecting guide](marking_and_detecting.md).
