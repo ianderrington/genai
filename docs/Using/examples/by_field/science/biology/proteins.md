@@ -1,4 +1,10 @@
-Protein language models, PLMs, are useful in predicting structure and function of proteins. These are useful in biological and biotechnological applications.
+Generating or modifying protein sequences to improve behavior, or to create novel behavior, is is a powrful application for AI. Guided through evolutionary-techniques, Bayesian optimization, and/or with the use of language models, they can vasly accelerate the development of biotechnological tools, as well as for identifying targets and avenues for therapeutics. 
+
+Protein language models, PLMs, are increasingly useful in predicting structure and function of proteins. 
+
+## Evolutionary Methods
+
+
 
 ## Models
 
@@ -60,4 +66,11 @@ They evaluate the model on a set of 41 deep mutational scans.
 - [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end.
 
 ### Hybrid Models
+
+## References
+
+!!! code "[Papers on Machine learning for Proteins](https://github.com/yangkky/Machine-learning-for-proteins?tab=readme-ov-file)"
+
+!!! note "[Nucleate AI in Biotech: AI for Protein Design](https://nucleate-hq.notion.site/AI-in-Protein-Design-Resource-Page-8c137f8ba2684402aef9e1e31b85776c)"
+
 
