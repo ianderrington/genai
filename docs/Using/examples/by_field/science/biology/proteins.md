@@ -2,13 +2,29 @@ Generating or modifying protein sequences to improve behavior, or to create nove
 
 Protein language models, PLMs, are increasingly useful in predicting structure and function of proteins. 
 
-## Evolutionary Methods
+## Optimization Targets
+
+- Enzymatic Catalysis
+    - Targeting Polymers
+    - Targeting small molecules
+- Fluorescence
+- Protein Binding
+    - Proteins
+    - Nucleic Acids
+    - Drugs molecules
+    - Metals
 
 
 
-## Models
+## Methods
 
-### Language Models
+### Evolutionary Methods
+
+
+
+### Models
+
+#### Language Models
 ??? code "[Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm)"
     
     **Developments**
@@ -61,11 +77,11 @@ They evaluate the model on a set of 41 deep mutational scans.
     [Paper](https://www.biorxiv.org/content/10.1101/2021.02.12.430858v3.full.pdf)
 
     
-### Structure Models
+#### Structure Models
 
 - [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end.
 
-### Hybrid Models
+#### Hybrid Models
 
 ## References
 
