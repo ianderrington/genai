@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protein function prediction as approximate semantic entailment</title>
+    <title>🧬 Protein function prediction as approximate semantic entailment</title>
     
     
 
     <meta property="og:url" content="https://www.managen.ai//shared/deepgo-se.html">
 
-    <meta property="og:title" content="Protein function prediction as approximate semantic entailment">
+    <meta property="og:title" content="🧬 Protein function prediction as approximate semantic entailment">
     <meta property="og:description" content="**Developments** "">
 
     <meta property="og:type"  content="website" />
     <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa">
     <meta property="og:url" content="https://www.managen.ai//shared/deepgo-se.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Protein function prediction as approximate semantic entailment">
-    <meta name="twitter:description" content="Protein function prediction as approximate semantic entailment">
+    <meta name="twitter:title" content="🧬 Protein function prediction as approximate semantic entailment">
+    <meta name="twitter:description" content="🧬 Protein function prediction as approximate semantic entailment">
     <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa">
     <!--Import stylesheet  -->
     <link rel="stylesheet" href="../../stylesheets/share-card.css">
@@ -61,17 +61,17 @@
 <body>
     
     <div class="blog-content">
-        <h1><p><a href="https://github.com/bio-ontology-research-group/deepgo2">Protein function prediction as approximate semantic entailment</a></p></h1>
+        <h1><p>🧬 <a href="https://github.com/bio-ontology-research-group/deepgo2">Protein function prediction as approximate semantic entailment</a></p></h1>
         <p><strong>Developments</strong> </p>
-<p>Present LLM models for biological sequences like proteins are profound in their ability to predict structure and some other components. However, <a href="https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf">they are not fundamentally transferable</a>, limiting their full potential. The <a href="https://www.nature.com/articles/s42256-024-00795-w">DeepGO-SE</a> model is an innovative AI approach that enhances protein function prediction by integrating protein language models with specific knowledge related to protein function. Breaking down the barriers between explicit representations of knowledge-graphs and implicit representations in next-token prediction, the DeepGO-SE model provides expansive improvement over other models. </p>
+<p>Current LLM models excel at predicting the structure and other attributes of biological sequences like proteins. However, their <a href="https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf">transferability is limited</a>, capping their true potential. The <a href="https://www.nature.com/articles/s42256-024-00795-w">DeepGO-SE</a> model innovates 🚀 by integrating protein language models with specific knowledge on protein function, bridging the gap between knowledge-graphs' explicit representations and next-token prediction's implicit representations, and thereby significantly improving model performance.</p>
 <p><strong>How it works</strong> </p>
 <ul>
-<li>First, to transform a protein sequence into a vector space embedding that a machine-learning model can use it re-uses a large language model ESM2.</li>
-<li>Next, to train a model with a knowledge representation, an ensemble of fitted prediction models are trained to project ESM2 embeddings into an embedding space (ELEmbeddings) generated from the GO axioms. These embeddings represent a world model of geometric shapes and relations that correspond to a Σ algebra, that can determine a statement truth.</li>
-<li>During estimation of a statement such as "protein has function C", when the ensemble of fitted models reaches truth consensus, the semantic estimation is considered true.</li>
+<li>🔄 First, DeepGO-SE reuses the ESM2 large language model to convert a protein sequence into a vector space embedding, prepping it for machine learning application.</li>
+<li>🧠 Next, an ensemble of fitted prediction models is trained to align ESM2 embeddings with an embedding space (ELEmbeddings) derived from GO axioms, creating a world model filled with geometric shapes and relations akin to a Σ algebra, which can verify the truth of a statement.</li>
+<li>✅ Finally, for statements such as "protein has function C", when the ensemble reaches a consensus on truth, the semantic truth estimation is then accepted as valid.</li>
 </ul>
-<p><img width="1121" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa"></p>
-<p>The authors show that this method enhances the prediction of molecular functions. They also show that complex biological processes benefit considerably from training with protein-protein interactions. They show that the prediction of biological process characteristics requires only knowing their molecular functions, likely enabling a more generalized method that would be valuable to consider in other situations.</p>
+<p><img alt="DeepGO-SE Model Overview" src="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa" /></p>
+<p>The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.</p>
     </div>
     <a href="https://www.managen.ai//shared/deepgo-se.html" class="page-url" id="page-url"></a>
     <!-- Clipboard copy icon/button -->

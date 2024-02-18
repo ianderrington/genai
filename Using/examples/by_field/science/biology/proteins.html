@@ -3388,17 +3388,6 @@ and
 </li>
       
         <li class="md-nav__item">
-  <a href="#studies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Studies
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#components" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5217,17 +5206,6 @@ and
 </li>
       
         <li class="md-nav__item">
-  <a href="#studies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Studies
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#components" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5323,6 +5301,8 @@ and
 
   <h1>Proteins</h1>
 
+<p>🚧 Under construction 🦺</p>
+<p><strong>Please consider contributing modifications or suggestions to improve this <a href="https://github.com/ianderrington/genai">here</a></strong></p>
 <p>Generating or modifying protein sequences to improve behavior, or to create novel behavior, is is a powrful application for AI. Guided through evolutionary-techniques, Bayesian optimization, and/or with the use of language models, they can vasly accelerate the development of biotechnological tools, as well as for identifying targets and avenues for therapeutics. </p>
 <p>Protein language models, PLMs, are increasingly useful in predicting structure and function of proteins. </p>
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
@@ -5399,30 +5379,18 @@ They find the attention heads focus on highly variable colums, correlating with 
 </div>
 
 <div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/bio-ontology-research-group/deepgo2">Protein function prediction as approximate semantic entailment</a></p>
+<p class="admonition-title">🧬 <a href="https://github.com/bio-ontology-research-group/deepgo2">Protein function prediction as approximate semantic entailment</a></p>
 <p><strong>Developments</strong> </p>
-<p>Present LLM models for biological sequences like proteins are profound in their ability to predict structure and some other components. However, <a href="https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf">they are not fundamentally transferable</a>, limiting their full potential. The <a href="https://www.nature.com/articles/s42256-024-00795-w">DeepGO-SE</a> model is an innovative AI approach that enhances protein function prediction by integrating protein language models with specific knowledge related to protein function. Breaking down the barriers between explicit representations of knowledge-graphs and implicit representations in next-token prediction, the DeepGO-SE model provides expansive improvement over other models. </p>
+<p>Current LLM models excel at predicting the structure and other attributes of biological sequences like proteins. However, their <a href="https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf">transferability is limited</a>, capping their true potential. The <a href="https://www.nature.com/articles/s42256-024-00795-w">DeepGO-SE</a> model innovates 🚀 by integrating protein language models with specific knowledge on protein function, bridging the gap between knowledge-graphs' explicit representations and next-token prediction's implicit representations, and thereby significantly improving model performance.</p>
 <p><strong>How it works</strong> </p>
 <ul>
-<li>First, to transform a protein sequence into a vector space embedding that a machine-learning model can use it re-uses a large language model ESM2.</li>
-<li>Next, to train a model with a knowledge representation, an ensemble of fitted prediction models are trained to project ESM2 embeddings into an embedding space (ELEmbeddings) generated from the GO axioms. These embeddings represent a world model of geometric shapes and relations that correspond to a Σ algebra, that can determine a statement truth.</li>
-<li>During estimation of a statement such as "protein has function C", when the ensemble of fitted models reaches truth consensus, the semantic estimation is considered true.</li>
+<li>🔄 First, DeepGO-SE reuses the ESM2 large language model to convert a protein sequence into a vector space embedding, prepping it for machine learning application.</li>
+<li>🧠 Next, an ensemble of fitted prediction models is trained to align ESM2 embeddings with an embedding space (ELEmbeddings) derived from GO axioms, creating a world model filled with geometric shapes and relations akin to a Σ algebra, which can verify the truth of a statement.</li>
+<li>✅ Finally, for statements such as "protein has function C", when the ensemble reaches a consensus on truth, the semantic truth estimation is then accepted as valid.</li>
 </ul>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1121" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa"></a></p>
-<p>The authors show that this method enhances the prediction of molecular functions. They also show that complex biological processes benefit considerably from training with protein-protein interactions. They show that the prediction of biological process characteristics requires only knowing their molecular functions, likely enabling a more generalized method that would be valuable to consider in other situations.</p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeepGO-SE Model Overview" src="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa" /></a></p>
+<p>The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.</p>
 </div>
-<h2 id="studies">Studies<a class="headerlink" href="#studies" title="Permanent link">&para;</a></h2>
-<details class="tip">
-<summary><a href="https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf">Feature Reuse and Scaling: Understanding Transfer Learning with Protein Language Models</a></summary>
-<p>The authors reveal that task performance does not scale with pretraining and 'primarily relies on low-level features learned early in pretraining'. 
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2770a02f-0359-4685-890c-2499f0dab537" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="675" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2770a02f-0359-4685-890c-2499f0dab537"></a>
-The results predict "that scaling PLMs under current pretraining paradigms may not improve performance on many protein function prediction tasks and charts a direction for identifying new, better-aligned pretraining tasks."
-They do see that:</p>
-<ul>
-<li>Structure Prediction benefits from Masked Language Modeling (MLM) (because in alignment) and scales. </li>
-<li></li>
-</ul>
-</details>
 <h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
 <h3 id="search-and-alignment">Search and Alignment<a class="headerlink" href="#search-and-alignment" title="Permanent link">&para;</a></h3>
 <p>Searching is essential to find similar sequences that may aid in the training or fine-tuning of models. This can be done with sequence-based alignment, as well as structure-based alignment. Here are a few references of highly-relevant tools for search/alignment. </p>
