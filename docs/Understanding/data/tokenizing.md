@@ -51,7 +51,9 @@ It is regarded that tokenizing is a bit arbitrary and has disadvantages. There a
 
 Examples of coding tools that facilitate tokenization include [Tiktoken](https://github.com/openai/tiktoken) which utilizes Byte Pair Encoding (BPE) for tokenization and is purportedly used in GPT models. An alternative tool is [^n1], which takes a unique top-down approach and results in almost 35% less tokens as opposed to the standard bottom-up approach.
 
-## Important Open Source Tokenizers
+
+!!! important "[Fully open source tokenizer: Nomic](https://github.com/nomic-ai/contrastors)"
+    [Nomic](https://blog.nomic.ai/posts/nomic-embed-text-v1) provides a disruptive tokenizer that is fully open source, with code and weights!
 
 - [Sentence Piece](https://github.com/google/sentencepiece) implements subword units (e.g., byte-pair-encoding (BPE) ) and unigram language model [^kudo]
 - [Tiktoken](https://github.com/openai/tiktoken)

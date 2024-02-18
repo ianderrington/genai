@@ -9,9 +9,13 @@ hide:
 
 Here you'll find what you need to know to understand Gen()AI architecture. 
 
-**↖️⬅️ View the components here ⬅️↖️**
 
-**⬇️ See how the components connect ⬇️**
+[See the primary components!](#see-how-the-components-connect){ .md-button .md-button--primary }
+[Start where you'd like!](#start-where-it-makes-the-most-sense){ .md-button }
+## ↖️⬅️ View the components here ⬅️↖️
+
+
+## ⬇️ See how the components connect ⬇️
 
 ???+ tip "Component of LLM-based GenAI (clickable)"
     ```mermaid
@@ -123,8 +127,7 @@ Here you'll find what you need to know to understand Gen()AI architecture.
         click Agent "./agents/index.html"
     ```
 
-**⬇️ See how to start ⬇️**
-
+## ⬇️ Start where it makes the most sense ⬇️ 
 
 ???+ tip "How to go about understanding and building"
     ```mermaid
@@ -189,6 +192,7 @@ Here you'll find what you need to know to understand Gen()AI architecture.
 
     ```
 
+## What is this about?
 
 Generative Artificial Intelligence, and related General AI and General Super AI are components of what already is and may be the future of intelligence 🌟. We must effectively manage these technologies to use them to their highest potential.
 
@@ -215,6 +219,7 @@ Getting into it, you will find the following outline:
 ### What is important to understand about Gen()AI?
 
 !!! tip "Start with these"
+
     - [🌐 Data](data/index.md) provides the backbone connecting computation to our recorded reality. 
     - [🧠 Models](architectures/index.md) allow the data to be understood and used. [^n1] 
     - [💬 Prompts](prompting/index.md) govern how we interact with the models. 
@@ -241,4 +246,4 @@ If you are working on commercial projects, be sure to look at the Licenses to en
 Generative AI is a subset of machine learning that aim to creates new data samples or information based on an input. This technology has gained significant attention recently because they have been able to produce high-quality, realistic data across various domains, from images and videos to text and audio. 🌈
 
 !!! warning "Presentation bias"
-    This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../
+    This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../contributing.md)
