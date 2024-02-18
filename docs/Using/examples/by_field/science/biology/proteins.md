@@ -101,6 +101,25 @@ Protein language models, PLMs, are increasingly useful in predicting structure a
 
 Knowledge representations
 
+!!! "[Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2)" deepgo-se
+
+    **Developments** 
+    Present LLM models for biological sequences like proteins are profound in their ability to predict structure and some other components. However, [they are not fundamentally transferable](https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf), limiting their full potential. The [DeepGO-SE](https://www.nature.com/articles/s42256-024-00795-w) model is an innovative AI approach that enhances protein function prediction by integrating protein language models with specific knowledge related to protein function. Breaking down the barriers between explicit representations of knowledge-graphs and implicit representations in next-token prediction, the DeepGO-SE model provides expansive improvement over other models. 
+
+    
+    ** How it works** 
+    
+    * First, to transform a protein sequence into a vector space embedding that a machine-learning model can use it re-uses a large language model ESM2.
+    * Next, to train a model with a knowledge representation, an ensemble of fitted prediction models are trained to project ESM2 embeddings into an embedding space (ELEmbeddings) generated from the GO axioms. These embeddings represent a world model of geometric shapes and relations that correspond to a Σ algebra, that can determine a statement truth.
+    * During estimation, when the ensemble of fitted models reaches truth consensus, the semantic truth estimation is considered true.
+
+    <img width="1121" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa">
+    
+    The authors show that this method enhances the prediction of molecular functions. They also show that complex biological processes benefit considerably from training with protein-protein interactions. They show that the prediction of biological process characteristics requires only knowing their molecular functions, likely enabling a more generalized method that would be valuable to consider in other situations.
+
+
+
+
 
 
 
