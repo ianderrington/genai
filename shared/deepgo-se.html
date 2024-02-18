@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein function prediction as approximate semantic entailment</title>
+    
+    
+
+    <meta property="og:url" content="https://www.managen.ai//shared/deepgo-se.html">
+
+    <meta property="og:title" content="Protein function prediction as approximate semantic entailment">
+    <meta property="og:description" content="**Developments** "">
+
+    <meta property="og:type"  content="website" />
+    <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa">
+    <meta property="og:url" content="https://www.managen.ai//shared/deepgo-se.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Protein function prediction as approximate semantic entailment">
+    <meta name="twitter:description" content="Protein function prediction as approximate semantic entailment">
+    <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa">
+    <!--Import stylesheet  -->
+    <link rel="stylesheet" href="../../stylesheets/share-card.css">
+    <style>
+        .page-url { display: block; }
+        .iframe .backlink-url { display: none; }
+   
+
+     </style>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config",""),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+<script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+    <script>
+       (function(d, w) {
+          if (w.self !== w.top) {
+             d.className += " iframe";
+          }
+       }(document.documentElement, window));
+
+        window.onload = function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].target = '_blank';
+            }
+        };
+        function copyToClipboard(elementId) {
+            var url = document.getElementById(elementId).href;
+            navigator.clipboard.writeText(url).then(function() {
+                // Show copied popup
+                var popup = document.getElementById("copied-popup");
+                popup.classList.add("show");
+
+                // Hide popup after 2 seconds
+                setTimeout(function() { popup.classList.remove("show"); }, 2000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="blog-content">
+        <h1><p><a href="https://github.com/bio-ontology-research-group/deepgo2">Protein function prediction as approximate semantic entailment</a></p></h1>
+        <p><strong>Developments</strong> 
+Present LLM models for biological sequences like proteins are profound in their ability to predict structure and some other components. However, <a href="https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf">they are not fundamentally transferable</a>, limiting their full potential. The <a href="https://www.nature.com/articles/s42256-024-00795-w">DeepGO-SE</a> model is an innovative AI approach that enhances protein function prediction by integrating protein language models with specific knowledge related to protein function. Breaking down the barriers between explicit representations of knowledge-graphs and implicit representations in next-token prediction, the DeepGO-SE model provides expansive improvement over other models. </p>
+<p>** How it works** </p>
+<ul>
+<li>First, to transform a protein sequence into a vector space embedding that a machine-learning model can use it re-uses a large language model ESM2.</li>
+<li>Next, to train a model with a knowledge representation, an ensemble of fitted prediction models are trained to project ESM2 embeddings into an embedding space (ELEmbeddings) generated from the GO axioms. These embeddings represent a world model of geometric shapes and relations that correspond to a Σ algebra, that can determine a statement truth.</li>
+<li>During estimation, when the ensemble of fitted models reaches truth consensus, the semantic truth estimation is considered true.</li>
+</ul>
+<p><img width="1121" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa"></p>
+<p>The authors show that this method enhances the prediction of molecular functions. They also show that complex biological processes benefit considerably from training with protein-protein interactions. They show that the prediction of biological process characteristics requires only knowing their molecular functions, likely enabling a more generalized method that would be valuable to consider in other situations.</p>
+    </div>
+    <a href="https://www.managen.ai//shared/deepgo-se.html" class="page-url" id="page-url"></a>
+    <!-- Clipboard copy icon/button -->
+    <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
+    <!-- Copied popup -->
+    <div class="copied-popup" id="copied-popup">Link copied!</div>
+    <a href="https://www.managen.ai//Using/examples/by_field/science/biology/proteins.html" class="backlink-url" id="backlink-url">See the main site!</a>
+</body>
+</html>
