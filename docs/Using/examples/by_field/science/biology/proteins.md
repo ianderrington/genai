@@ -2,29 +2,38 @@ Generating or modifying protein sequences to improve behavior, or to create nove
 
 Protein language models, PLMs, are increasingly useful in predicting structure and function of proteins. 
 
+## Methods
+
+### Sequence prediction 
+#### Transformers
+#### Diffusion
+
+### GANS
+
+### Non-LLM based
+#### Evolutionary
+
 ## Optimization Targets
 
-- Enzymatic Catalysis
-    - Targeting Polymers
-    - Targeting small molecules
+- [Structure](#structure)
+- [Function](#function)
+    - Enzymatic Catalysis
 - Fluorescence
-- Protein Binding
+- [Protein Binding](#binding)
     - Proteins
     - Nucleic Acids
     - Drugs molecules
     - Metals
 
+## Targets
+    
+#### Structure
+
+- [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end.
 
 
-## Methods
+#### Function
 
-### Evolutionary Methods
-
-
-
-### Models
-
-#### Language Models
 ??? code "[Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm)"
     
     **Developments**
@@ -76,12 +85,50 @@ They evaluate the model on a set of 41 deep mutational scans.
 
     [Paper](https://www.biorxiv.org/content/10.1101/2021.02.12.430858v3.full.pdf)
 
-    
-#### Structure Models
 
-- [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end.
+#### Binding
+
+??? code "[DL Protein Binder](https://github.com/nrbennet/dl_binder_design)"
+    ![image](https://github.com/ianderrington/genai/assets/76016868/a998c262-0cd8-490f-b1af-078ccf535c7a)
+
 
 #### Hybrid Models
+
+
+
+## Studies
+
+??? tip "[Feature Reuse and Scaling: Understanding Transfer Learning with Protein Language Models](https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf)"
+    The authors reveal that task performance does not scale with pretraining and 'primarily relies on low-level features learned early in pretraining'. 
+    <img width="675" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2770a02f-0359-4685-890c-2499f0dab537">
+    The results predict "that scaling PLMs under current pretraining paradigms may not improve performance on many protein function prediction tasks and charts a direction for identifying new, better-aligned pretraining tasks."
+    They do see that:
+
+    * Structure Prediction benefits from Masked Language Modeling (MLM) (because in alignment) and scales. 
+    * 
+    
+
+
+## Components 
+
+### Search and Alignment
+
+Searching is essential to find similar sequences that may aid in the training or fine-tuning of models. This can be done with sequence-based alignment, as well as structure-based alignment. Here are a few references of highly-relevant tools for search/alignment. 
+
+!!! tip "[Fast and accurate protein structure search with: Foldseek](https://search.foldseek.com/search)"
+    Foldseek "aligns the structure of a query protein against a database by describing tertiary amino acid interactions within proteins as sequences over a structural alphabet".
+    [Paper](https://www.nature.com/articles/s41587-023-01773-0)
+
+
+### Tools
+
+!!! tip "[ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign)"
+
+
+    
+
+## Companies
+- [Deepchain.bio]
 
 ## References
 
