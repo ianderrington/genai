@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rephrasing the Web: A Recipe for Compute &amp; Data-Efficient Language Modeling</title>
+    <title>How to Train Data-Efficient LLMs</title>
     
     
 
-    <meta property="og:url" content="https://www.managen.ai//shared/web-rephrase-augmented-pre-training.html">
+    <meta property="og:url" content="https://www.managen.ai//shared/how-to-train-data-efficient-llms.html">
 
-    <meta property="og:title" content="Rephrasing the Web: A Recipe for Compute &amp; Data-Efficient Language Modeling">
-    <meta property="og:description" content="The authors reveal that creating new training-examples from input data using an off-the-shelf model (Mistral-7B) can yield convergence speeds that are 3x without doing so. The  rephrasing is done in a manner that is 'like wikipedia' or in a 'question-answer format'. They are also done at different levels of style diversity, such as a child or a a scholar. In detailed analysis they found that:"">
+    <meta property="og:title" content="How to Train Data-Efficient LLMs">
+    <meta property="og:description" content="**Developments** The authors compare a number of sampling methods and demonstrate that an LLM that choosing high quality pre-training data with a simple prompt can result in outperforming models that converge 70% faster while rejecting 90% of data. The resulting model they call `Ask-LLM`. "">
 
     <meta property="og:type"  content="website" />
-    <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4">
-    <meta property="og:url" content="https://www.managen.ai//shared/web-rephrase-augmented-pre-training.html">
+    <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/a84a0d30-6b6e-410a-bff1-05eddea5205c">
+    <meta property="og:url" content="https://www.managen.ai//shared/how-to-train-data-efficient-llms.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rephrasing the Web: A Recipe for Compute &amp; Data-Efficient Language Modeling">
-    <meta name="twitter:description" content="Rephrasing the Web: A Recipe for Compute &amp; Data-Efficient Language Modeling">
-    <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4">
+    <meta name="twitter:title" content="How to Train Data-Efficient LLMs">
+    <meta name="twitter:description" content="How to Train Data-Efficient LLMs">
+    <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/a84a0d30-6b6e-410a-bff1-05eddea5205c">
     <!--Import stylesheet  -->
     <link rel="stylesheet" href="../../stylesheets/share-card.css">
     <style>
@@ -61,23 +61,31 @@
 <body>
     
     <div class="blog-content">
-        <h1><p><a href="https://arxiv.org/pdf/2401.16380.pdf">Rephrasing the Web: A Recipe for Compute &amp; Data-Efficient Language Modeling</a></p></h1>
-        <p>The authors reveal that creating new training-examples from input data using an off-the-shelf model (Mistral-7B) can yield convergence speeds that are 3x without doing so. The  rephrasing is done in a manner that is 'like wikipedia' or in a 'question-answer format'. They are also done at different levels of style diversity, such as a child or a a scholar. In detailed analysis they found that:</p>
-<ul>
-<li>Style diversity improves the value</li>
-<li>Reasonable paraphraser models are needed</li>
-<li>It is better than standard augmentation that does random deletions or synonym replacements.</li>
-</ul>
-<p>Here is one of a few example rephrasing prompts: 
-<div class="highlight"><pre><span></span><code>“For the following paragraph give me a paraphrase of the same in high-quality English language as in sentences on Wikipedia”
+        <h1><p><a href="https://arxiv.org/html/2402.09668v1">How to Train Data-Efficient LLMs</a></p></h1>
+        <p><strong>Developments</strong> The authors compare a number of sampling methods and demonstrate that an LLM that choosing high quality pre-training data with a simple prompt can result in outperforming models that converge 70% faster while rejecting 90% of data. The resulting model they call <code>Ask-LLM</code>. </p>
+<p><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a84a0d30-6b6e-410a-bff1-05eddea5205c" /></p>
+<p><strong>Method</strong>
+The authors a number of  sampling methods including those that were heuristic-based including compute-efficient density/perplexity estimation. The models that were most  , gains were primarily found when using a 
+<div class="highlight"><pre><span></span><code><span class="gu">###</span>
+<span class="gu">This is a pretraining .... datapoint.</span>
+###
+
+Does the previous paragraph demarcated within ### and ### contain info
+rmative signal for pre-raining a large-language model?
+An informaive datapoint should be well-formatted, contain some usable knowledge of the world, and strictly NOT have any harmful, racist, sexist, etc. content. 
+
+OPTIONS: 
+<span class="k">-</span><span class="w"> </span>yes
+<span class="k">-</span><span class="w"> </span>no
 </code></pre></div>
-<img width="556" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4"></p>
+<strong>Results</strong>
+The LLM-based quality filtering yields a "Pareto optimal efficiency between data quanity and model quality", helping to reduce environment and thereby becoming a net social-good. </p>
     </div>
-    <a href="https://www.managen.ai//shared/web-rephrase-augmented-pre-training.html" class="page-url" id="page-url"></a>
+    <a href="https://www.managen.ai//shared/how-to-train-data-efficient-llms.html" class="page-url" id="page-url"></a>
     <!-- Clipboard copy icon/button -->
     <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
     <!-- Copied popup -->
     <div class="copied-popup" id="copied-popup">Link copied!</div>
-    <a href="https://www.managen.ai//Understanding/data/preparation/simulation.html" class="backlink-url" id="backlink-url">See the main site!</a>
+    <a href="https://www.managen.ai//Understanding/data/preparation/selection.html" class="backlink-url" id="backlink-url">See the main site!</a>
 </body>
 </html>

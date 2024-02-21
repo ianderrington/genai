@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling</title>
+    
+    
+
+    <meta property="og:url" content="https://www.managen.ai//shared/rephrasing-the-web.html">
+
+    <meta property="og:title" content="Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling">
+    <meta property="og:description" content="**Developments** The authors demonstrate Web Rephrase Augmented Pre-training (WRAP) an instruction-tuned model prompted to paraphrase documents for pre-training LLMs on real and synthetic rephrases. They demonstrate speed up of pretraining by about 3-fold, while demonstrating model performance gains of more than 2%, due to incorporating style diversity reflective of downstream evaluation style, and because it is higher quality than web-scraped data. "">
+
+    <meta property="og:type"  content="website" />
+    <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/970ced84-ad1d-464b-8fbf-cc92ddc26406">
+    <meta property="og:url" content="https://www.managen.ai//shared/rephrasing-the-web.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling">
+    <meta name="twitter:description" content="Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling">
+    <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/970ced84-ad1d-464b-8fbf-cc92ddc26406">
+    <!--Import stylesheet  -->
+    <link rel="stylesheet" href="../../stylesheets/share-card.css">
+    <style>
+        .page-url { display: block; }
+        .iframe .backlink-url { display: none; }
+   
+
+     </style>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config",""),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+<script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+    <script>
+       (function(d, w) {
+          if (w.self !== w.top) {
+             d.className += " iframe";
+          }
+       }(document.documentElement, window));
+
+        window.onload = function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].target = '_blank';
+            }
+        };
+        function copyToClipboard(elementId) {
+            var url = document.getElementById(elementId).href;
+            navigator.clipboard.writeText(url).then(function() {
+                // Show copied popup
+                var popup = document.getElementById("copied-popup");
+                popup.classList.add("show");
+
+                // Hide popup after 2 seconds
+                setTimeout(function() { popup.classList.remove("show"); }, 2000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="blog-content">
+        <h1><p><a href="https://arxiv.org/html/2401.16380v1">Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling</a></p></h1>
+        <p><strong>Developments</strong> The authors demonstrate Web Rephrase Augmented Pre-training (WRAP) an instruction-tuned model prompted to paraphrase documents for pre-training LLMs on real and synthetic rephrases. They demonstrate speed up of pretraining by about 3-fold, while demonstrating model performance gains of more than 2%, due to incorporating style diversity reflective of downstream evaluation style, and because it is higher quality than web-scraped data. </p>
+<p><img width="888" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/970ced84-ad1d-464b-8fbf-cc92ddc26406"></p>
+<p><strong>Method</strong> They repharse documents on the web in four different styles: "(i) Easy (text that even a toddler will understand); (ii) Medium (in high quality English such as that found on Wikipedia); (iii) Hard (in terse and abstruse language); (iv) Q/A (in conversation question-answering format)." Here are the prompts:</p>
+<p><strong>Easy Style</strong></p>
+<p>A style designed to generate content understandable by toddlers.</p>
+<div class="highlight"><pre><span></span><code>A<span class="w"> </span>chat<span class="w"> </span>between<span class="w"> </span>a<span class="w"> </span>curious<span class="w"> </span>user<span class="w"> </span>and<span class="w"> </span>an<span class="w"> </span>artificial<span class="w"> </span>intelligence<span class="w"> </span>assistant.<span class="w"> </span>The<span class="w"> </span>assistant<span class="w"> </span>gives<span class="w"> </span>helpful,<span class="w"> </span>detailed,<span class="w"> </span>and<span class="w"> </span>polite<span class="w"> </span>answers<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>questions.<span class="w"> </span>USER:<span class="w"> </span>For<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>paragraph<span class="w"> </span>give<span class="w"> </span>me<span class="w"> </span>a<span class="w"> </span>paraphrase<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>using<span class="w"> </span>a<span class="w"> </span>very<span class="w"> </span>small<span class="w"> </span>vocabulary<span class="w"> </span>and<span class="w"> </span>extremely<span class="w"> </span>simple<span class="w"> </span>sentences<span class="w"> </span>that<span class="w"> </span>a<span class="w"> </span>toddler<span class="w"> </span>will<span class="w"> </span>understand:
+</code></pre></div>
+<p><strong>Hard Style</strong></p>
+<p>A style designed to generate content comprehensible primarily to scholars using arcane language.
+<div class="highlight"><pre><span></span><code>A<span class="w"> </span>chat<span class="w"> </span>between<span class="w"> </span>a<span class="w"> </span>curious<span class="w"> </span>user<span class="w"> </span>and<span class="w"> </span>an<span class="w"> </span>artificial<span class="w"> </span>intelligence<span class="w"> </span>assistant.<span class="w"> </span>The<span class="w"> </span>assistant<span class="w"> </span>gives<span class="w"> </span>helpful,<span class="w"> </span>detailed,<span class="w"> </span>and<span class="w"> </span>polite<span class="w"> </span>answers<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>questions.<span class="w"> </span>USER:<span class="w"> </span>For<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>paragraph<span class="w"> </span>give<span class="w"> </span>me<span class="w"> </span>a<span class="w"> </span>paraphrase<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>using<span class="w"> </span>very<span class="w"> </span>terse<span class="w"> </span>and<span class="w"> </span>abstruse<span class="w"> </span>language<span class="w"> </span>that<span class="w"> </span>only<span class="w"> </span>an<span class="w"> </span>erudite<span class="w"> </span>scholar<span class="w"> </span>will<span class="w"> </span>understand.<span class="w"> </span>Replace<span class="w"> </span>simple<span class="w"> </span>words<span class="w"> </span>and<span class="w"> </span>phrases<span class="w"> </span>with<span class="w"> </span>rare<span class="w"> </span>and<span class="w"> </span>complex<span class="w"> </span>ones:
+</code></pre></div></p>
+<p><strong>Medium Style</strong></p>
+<p>A style designed to generate content comparable to standard encyclopedic entries.</p>
+<div class="highlight"><pre><span></span><code>A<span class="w"> </span>chat<span class="w"> </span>between<span class="w"> </span>a<span class="w"> </span>curious<span class="w"> </span>user<span class="w"> </span>and<span class="w"> </span>an<span class="w"> </span>artificial<span class="w"> </span>intelligence<span class="w"> </span>assistant.<span class="w"> </span>The<span class="w"> </span>assistant<span class="w"> </span>gives<span class="w"> </span>helpful,<span class="w"> </span>detailed,<span class="w"> </span>and<span class="w"> </span>polite<span class="w"> </span>answers<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>questions.<span class="w"> </span>USER:<span class="w"> </span>For<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>paragraph<span class="w"> </span>give<span class="w"> </span>me<span class="w"> </span>a<span class="w"> </span>diverse<span class="w"> </span>paraphrase<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span><span class="k">in</span><span class="w"> </span>high<span class="w"> </span>quality<span class="w"> </span>English<span class="w"> </span>language<span class="w"> </span>as<span class="w"> </span><span class="k">in</span><span class="w"> </span>sentences<span class="w"> </span>on<span class="w"> </span>Wikipedia:
+</code></pre></div>
+<p><strong>Q/A Style</strong></p>
+<p>A style intended to convert narratives into a conversational format.</p>
+<div class="highlight"><pre><span></span><code>A<span class="w"> </span>chat<span class="w"> </span>between<span class="w"> </span>a<span class="w"> </span>curious<span class="w"> </span>user<span class="w"> </span>and<span class="w"> </span>an<span class="w"> </span>artificial<span class="w"> </span>intelligence<span class="w"> </span>assistant.<span class="w"> </span>The<span class="w"> </span>assistant<span class="w"> </span>gives<span class="w"> </span>helpful,<span class="w"> </span>detailed,<span class="w"> </span>and<span class="w"> </span>polite<span class="w"> </span>answers<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>questions.<span class="w"> </span>USER:<span class="w"> </span>Convert<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>paragraph<span class="w"> </span>into<span class="w"> </span>a<span class="w"> </span>conversational<span class="w"> </span>format<span class="w"> </span>with<span class="w"> </span>multiple<span class="w"> </span>tags<span class="w"> </span>of<span class="w"> </span><span class="s2">&quot;Question:&quot;</span><span class="w"> </span>followed<span class="w"> </span>by<span class="w"> </span><span class="s2">&quot;Answer:&quot;</span>:
+</code></pre></div>
+    </div>
+    <a href="https://www.managen.ai//shared/rephrasing-the-web.html" class="page-url" id="page-url"></a>
+    <!-- Clipboard copy icon/button -->
+    <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
+    <!-- Copied popup -->
+    <div class="copied-popup" id="copied-popup">Link copied!</div>
+    <a href="https://www.managen.ai//Understanding/data/preparation/augmentation.html" class="backlink-url" id="backlink-url">See the main site!</a>
+</body>
+</html>
