@@ -1,51 +1,52 @@
-Agent memory is considered a state associated with a llm-call and effects the ability of LLM to respond, thereby helping to enable agentic ability. Memory augmented models enhance the capabilities of language models by ___ to improve their performance and efficiency. TODO: Read trillions of tokens paper.
+Just like people, memory plays a crucial role in enhancing the efficiency of information generation. Memory can either be _global_ or external to the existence of an agent or an agent-network, or _internal_ to the network, and gained by [experiences](#xperiential-memory) it gained during from the agent or agent-network's  efforts. Each of these types of memories are useful to extract information that is then placed into the LLM's [prompt-context](../prompting/index.md) and allowing a more accurate generation of information. 
+
+Here we discuss _experiential memory_ based on the activity or action action of one or many agents. 
+
+Recipients of LLM chat-interfaces with multiple sessions may benefit from stored experiential memory. Guarded by any default or manual firewalls, experiential memory may allow focused and enduring `memory tracks` that have more specific focuses. For instance, when a recipient is has used time to create something from scratch in a most effective manner, when that 'effective manner' needs to be understood to minimize the time necessary to do the same thing, or something similar. This is not unlikely why OpenAI enabled [memory for their agents](https://openai.com/blog/memory-and-new-controls-for-chatgpt). The way this memory is managed, and accessed is of prime importance to retention and `experiential transfer`, the sharing of experiences between different Agents without having to 'repeat' information. 
+
+## Experiential Memory
+
+Types of memory include simple aspects such as _conversation buffers_ to keep track of what has been said be employed to keep track of information. These buffers, can be 'private',  can facilitate communication between any agents, storing response stacks that include agent-environment interactions. 
+
+For text-based memory can consist of verbatim text record or some form compressed summary to reduce memory overhead. The memory may be stored in simple file-based formats, or more complexe databases, both eith or without some form of schema that allow for generally structured representation. 
+
+Here are some general types of memory:
+
+* Conversaton Buffers
+* Scratch-pads
+* Gists
+* Action-success lookups 
 
 
 
+## Storage and Retrieval Methods
+
+Memory can be retrieved via look up methodes that involve data-base queries (SQL, Graph), though they can also use [vector lookups](#vector-databaes). They can also be stored in simple ascii documents and search for via key-word lookups. 
+
+### Traditional databases
+
+Databases that rely on query-languages such as SQL or non-SQL based databases, or even 'csv-type' information stores can be accessed and generated using agents.
 
 
-## Memory Considerations
+### Graph Databases
 
-Memory plays a crucial role in enhancing the efficiency of information recall and routing for different chains and agent interactions.
+Graph Databases provide the ability to put information in relational contexts. Both native and not, they can allow for rich understandings of how things are connected, though sometimes overly complex. Often interacted with using query languages like [Cypher](https://neo4j.com/developer/cypher/), these can be sometimes challenging to extract the appropriate information, making their query very powerful. 
 
-In systems comprising Agents (and People), _conversation buffers_ may be employed to keep track of information. These buffers, can be 'private',  can facilitate communication between any agents, storing response stacks that include agent-environment interactions.
+[Neo4j](https://towardsdatascience.com/enhancing-interaction-between-language-models-and-graph-databases-via-a-semantic-layer-0a78ad3eba49) has formed a semantic layer, as shown in the `tomasonjo/llm-movieagent` repository. 
 
-For text-based memory can consist of perfect text record or compressed summaries, that may or may not follow some form of memory-schema.
+y by an interpreter, though it is not guaranteed that the queries will be accurate. [TODO: Find reference some_reference_on_LLM_SQL]
 
-Memory can be pushed (into prompt templates) and requested (based on GET memory requests from an LLM agent).
-
-
-## Interpreters 
-Interactions with memory will require certain commands. That is why it structured outputs, that can be interpreted and used are very important. This interface between information is also called a [_semantic layer_](#semantic-layers). 
-
-### Semantic layers
-Semantic layer plays a powerful role: in interpreting the users question into a memory query, or call. 
-
-
-## Uses
-
-
-
-
-### Parsed information routing
-
-Parsed information routing involves directing parsed or processed information to the appropriate destination. This can be particularly useful in systems with multiple agents or complex workflows.
-
-
-
-## Implementations
-
-Memory implementations can be based on memory types serialized and stored in many ways. Semantic searches can happen by looking at similar embeddings.
-
-These can be global or private, and structured inside agent classes or inside system message boards. They can be 'limited' or 'unlimited' (within appropriately established allocation limits). They can be in memory and stored on disk or in the cloud. They allow informaion to be routed at the appropriate time, and 'skipped' if necessary to work within context-window limitations.
-
-Memory implementations can vary based on the type of memory used, and how it's serialized and stored. Semantic searches can be performed by comparing embeddings for similarity. These memory systems can be global or private, and can be structured within agent classes or within system message boards. They can be 'limited' or 'unlimited' (within appropriately established allocation limits). They can exist in memory, stored on disk, or in the cloud. They allow information to be routed at the appropriate time, and 'skipped' if necessary to work within context-window limitations.
-
-## Types
+!!! references
+    For more information on memory implementations and caching, refer to the following resources:
+    - [Langchain `memory`](https://python.langchain.com/docs/modules/memory/)
+    - [Langchain `llm_caching`](https://python.langchain.com/docs/modules/model_io/architectures/llms/integrations/llm_caching)
+    
 
 ### Vector databases
 
 Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milvus, and ScaNN, use embeddings to create query vector databases. These databases allow for efficient semantic searches.
+
+- [Improving language models by retrieving from trillions of tokens](https://arxiv.org/pdf/2112.04426.pdf)
 
 !!! example "Example vector databases"
 
@@ -55,21 +56,30 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
     - [Website](https://www.deeplake.ai/) [Github](https://github.com/activeloopai/deeplake)
 
 
-### Graph Databases
 
-Graph Databases provide the ability to put information in relational contexts. Both native and not, they can allow for rich understandings of how things are connected, though sometimes overly complex. Often interacted with using query languages like [Cypher](https://neo4j.com/developer/cypher/), these can be sometimes challenging to extract the appropriate information, making their query very powerful. 
+## Text-
 
-[Neo4j](https://towardsdatascience.com/enhancing-interaction-between-language-models-and-graph-databases-via-a-semantic-layer-0a78ad3eba49) has formed a sematnic layer, as shown in the `tomasonjo/llm-movieagent` repository. 
+??? code "[Read-agent: A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts](git@github.com:read-agent/read-agent.github.io.git)" read-agent
+    
+    **Developments**
+    
+    The authors reveal a manner of reading long documents and summarizing it using Gist memory to deal with Long Contexts.
+    
+    **Problem**
+    
+    Context length of long inputs limits the ability for model to perform effectively and efficienntly. 
 
-### Traditional databases
+    **Solution** 
 
-Databases that rely on query-languages such as SQL or non-SQL based databases, or even 'csv-type' information stores can be accessed and generated using agents.
+    With inspiration in how people interactively read long documents, the authors implement a simple prompting-based system that 
 
-The models may generate queries that can be executed by by an interpreter, though it is not guaranteed that the queries will be accurate. [TODO: Find reference some_reference_on_LLM_SQL)
+    1. Decides what content should be stored togeter in a memory episode
+    2. Compresses those memories into short episodic memories called _gist memories_ and 
+    3. Takes actions to look up sections in the original text if memory needs to be refreshed
 
-!!! references
-    For more information on memory implementations and caching, refer to the following resources:
+    **Results**
+    The simple method improves reading comperhension tasks at the same time as enabling context windows that are 3-20x bigger.
 
-    - [Langchain `memory`](https://python.langchain.com/docs/modules/memory/)
-    - [Langchain `llm_caching`](https://python.langchain.com/docs/modules/model_io/architectures/llms/integrations/llm_caching)
-    - [Improving language models by retrieving from trillions of tokens](https://arxiv.org/pdf/2112.04426.pdf)
+    [Paper](https://arxiv.org/pdf/2402.09727.pdf)
+
+

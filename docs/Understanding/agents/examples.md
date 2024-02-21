@@ -83,6 +83,11 @@ transforming diverse and lengthy tool documentation into a unified and concise t
 
 
 ### Others
+
+??? code "[L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.](https://github.com/l3vels/ L3AGI) l3agi
+    
+
+
 ??? important "[OS-Copilot: Towards Generalist Computer Agents with Self-Improvement](https://github.com/OS-Copilot/FRIDAY/tree/main)" os-copilot-friday
    
    **Developments** 

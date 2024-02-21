@@ -9,13 +9,7 @@ Tokenization can be have a pre-processing phase, called pre-tokenization that wi
 ???+ note "Pre-tokenization methods"
     <img width="445" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/050ce1cc-2d11-4d98-a178-af706d149aa9">
 
-
-### Heirarchichal Tokenization
-!!! code "[Floret Vectors](https://explosion.ai/blog/floret-vectors)"
-
-??? tip "[Superbloom: Bloom filter meets Transformer](https://arxiv.org/pdf/2002.04723.pdf)"
-    Wherein a bloom filter is used to create tokens/embeddings.
-    ![image](https://github.com/ianderrington/genai/assets/76016868/5ba71e69-7eaa-416c-b09a-940e016db145)
+??? code "[Minimal BPE tokenizer by Andrej Karpathy](https://github.com/karpathy/minbpe) provides a understandable and efficient demonstration of several modern tokenizing methods including BPE, RegExp, BPE and GPT-4. "
 
 ### Subword Units
 
@@ -46,6 +40,14 @@ Multimodal tokenization is an area of tokenization that focuses on incorporating
 ## Tokenizing might not be necessary
 
 It is regarded that tokenizing is a bit arbitrary and has disadvantages. There are promising results using methods without tokenization [MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185) that "show that MEGABYTE allows byte-level models to perform competitively with subword models on long context language modeling"
+
+
+## Heirarchichal Tokenization
+!!! code "[Floret Vectors](https://explosion.ai/blog/floret-vectors)"
+
+??? tip "[Superbloom: Bloom filter meets Transformer](https://arxiv.org/pdf/2002.04723.pdf)"
+    Wherein a bloom filter is used to create tokens/embeddings.
+    ![image](https://github.com/ianderrington/genai/assets/76016868/5ba71e69-7eaa-416c-b09a-940e016db145)
 
 ## Tools
 

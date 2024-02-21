@@ -9,8 +9,7 @@ Managing GenAI effectively requires a strategic approach that aligns with your b
 ## Practical Application and Usage
 
 ### Task-Focused Approach
-
-Implementing a task-focused approach involves the following steps:
+Takeing a task-focused approach involves the following steps:
 
 1. Break down the jobs of your company's employees into individual tasks. [See examples](examples/by_modality/index.md).
 2. Identify potential for AI assistance or automation for each task using tools such as supervised learning or generative AI.

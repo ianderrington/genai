@@ -12,8 +12,7 @@ Here you'll find what you need to know to understand Gen()AI architecture.
 
 [See the primary components!](#see-how-the-components-connect){ .md-button .md-button--primary }
 [Start where you'd like!](#start-where-it-makes-the-most-sense){ .md-button }
-## ↖️⬅️ View the components here ⬅️↖️
-
+[What is this about?](#what-is-this-about){ .md-button .md-button--primary }
 
 ## ⬇️ See how the components connect ⬇️
 
@@ -202,34 +201,19 @@ We created Managen AI 🔮 to help you _understand_ and [_use_](../Using/index.m
 
 What do you need to know?
 
-???+ important "[tl;dr] What do you need to know about Gen()AI" need-to-know
+???+ important "See these first" 
     - 🤔 Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it. 
     - 📊 Understand the [**data**](./data/index.md) and collect data that you need. 
     - 🚢 Consider [**Model Architectures**](./architectures/index.md) use [**pre-trained**](./architectures/pre_trained_models.md) models if possible. 
-    - 🏗️ [**Deploy**](./deploying/index.md) your model. 
-    - 🤖 Build and use [agents](./agents/index.md) to do more. 
-    - ✅ [**Use**](../Using/index.md) your Gen()AI efficiently, compliantly, and ethically. 
+    - [💬 Prompts](prompting/index.md) govern how we interact with the models. 
+    - [🔧 Optimize](architectures/optimization.md) your model for better performance and efficiency. 
+    
+    - [🛠️ Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
+    - [🧭 Consider Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies. 
+    - 🏗️ [Deploy](./deploying/index.md) your model. 
+    
 
 In the documents you read here, you will be able to see an increasingly consistent and understandable discussion of Gen()AI technologies, enabled by Gen()AI technologies herein described. Like most powerful technology, Gen()AI can be a two-edged sword and effective use requires responsible and thoughtful understanding. ⚖️
-
-## The base components of Gen()AI
-
-Getting into it, you will find the following outline:
-
-### What is important to understand about Gen()AI?
-
-!!! tip "Start with these"
-
-    - [🌐 Data](data/index.md) provides the backbone connecting computation to our recorded reality. 
-    - [🧠 Models](architectures/index.md) allow the data to be understood and used. [^n1] 
-    - [💬 Prompts](prompting/index.md) govern how we interact with the models. 
-    - [🛠️ Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
-    
-    - [📚 Studies](studies/studies.md) help us to understand Gen()AI from an experimental and theoretical basis. 
-
-!!! tip "A little more advanced"
-    - [🧭 Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies. 
-    - [🔧 Optimize](architectures/optimization.md) your model for better performance and efficiency. 
 
 ### How do you do stuff with Gen()AI?
 
