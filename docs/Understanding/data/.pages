@@ -1,6 +1,6 @@
 nav:
     - index.md
-    - selection.md
+    - preparation
     - tokenizing.md
     - privacy.md
     - sources.md

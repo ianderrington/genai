@@ -4,7 +4,7 @@ Training GenAI will generally be domain/modality specific.
 
 1. Self-supervised [pre-training](pre-training.md) to predict the next token with reasonable likelihoods.
 1. 
-1. Supervised or self-supervised [Finetuning](./finetuning.md) on higher quality data sets sometimes [recurrently](./recurrent.md) using [simulated data](../../data/simulation.md),
+1. Supervised or self-supervised [Finetuning](./finetuning.md) on higher quality data sets sometimes [recurrently](./recurrent.md) using [simulated data](../../data/preparation/simulation.md),
 1. [Feedback](feedback.md) to more accurately train a model to produce output that is is more globally accurate to the input prompts.  
 
 Basics: [Distributed Training](https://neptune.ai/blog/distributed-training)

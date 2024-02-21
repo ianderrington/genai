@@ -1,5 +1,5 @@
 MANAGEN(Provide intro and give a general description of recurrent training: where models are used to generate data that use models)
-refer to [data simulation](../../data/simulation.md)
+refer to [data simulation](../../data/preparation/simulation.md)
 
 The process of data simulation for AI typically involves two main steps:
 

@@ -1,6 +1,8 @@
 Science in the Loop Optimizaton enables for the creation and optimization of scientific-related components. Generally related to manual or semiautonomous autonomous biological, biochemistry, or chemistry laboratories, they may extend to other domains.
 
-??? important "[Emergent autonomous scientific research capabilities of large language models](arxiv.org/pdf/2304.05332.pdf)"
+??? tip "[Emergent autonomous scientific research](https://arxiv.org/pdf/2304.05332.pdf)"
+    <img width="658" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656">
+
     **Developments**
 
     The authors show an AI agent that can design, plan, and execute scientific experiments using quality reasoning and design. 
