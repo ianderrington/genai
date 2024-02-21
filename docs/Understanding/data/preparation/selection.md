@@ -31,3 +31,30 @@ In order to train an effective Generative AI model, it's important to balance yo
 ### Automated Data Selection
 
 Automated machine learning tools can greatly simplify data selection by providing features for automatic feature selection, data cleaning and preprocessing.
+
+??? important "[How to Train Data-Efficient LLMs](https://arxiv.org/html/2402.09668v1)" how-to-train-data-efficient-llms
+    
+    **Developments** The authors compare a number of sampling methods and demonstrate that an LLM that choosing high quality pre-training data with a simple prompt can result in outperforming models that converge 70% faster while rejecting 90% of data. The resulting model they call `Ask-LLM`. 
+
+    ![image](https://github.com/ianderrington/genai/assets/76016868/a84a0d30-6b6e-410a-bff1-05eddea5205c)
+
+    **Method**
+    The authors a number of  sampling methods including those that were heuristic-based including compute-efficient density/perplexity estimation. The models that were most  , gains were primarily found when using a 
+    ```markdown
+    ###
+    This is a pretraining .... datapoint.
+    ###
+
+    Does the previous paragraph demarcated within ### and ### contain info
+    rmative signal for pre-raining a large-language model?
+    An informaive datapoint should be well-formatted, contain some usable knowledge of the world, and strictly NOT have any harmful, racist, sexist, etc. content. 
+
+    OPTIONS: 
+    - yes
+    - no
+    ```
+    **Results**
+    The LLM-based quality filtering yields a "Pareto optimal efficiency between data quanity and model quality", helping to reduce environment and thereby becoming a net social-good. 
+
+
+     
