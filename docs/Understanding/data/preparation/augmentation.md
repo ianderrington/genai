@@ -24,7 +24,7 @@ Data augmentation is important for several reasons:
 
 Both heuristics and AI can be used to augment data, thought predominantly AI is used for augmentation of text-based LLMS. 
 
-### AI-enabled 
+### AI-enabled Augmentation
 
 ??? code "[Reformatted Alignment](https://github.com/GAIR-NLP/ReAlign) demonstrates that reformatting responses of instruction data with to pre-established criteria and collated evidence improves alignment, factuality, and readability." realign-reformatted-alignment
 
@@ -37,9 +37,9 @@ Both heuristics and AI can be used to augment data, thought predominantly AI is 
 
     [Paper](https://arxiv.org/pdf/2402.12219.pdf)
 
-??? tip "[Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling](https://arxiv.org/html/2401.16380v1)"
+??? tip "[Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling](https://arxiv.org/html/2401.16380v1)" rephrasing-the-web
     
-    **Developments** BThe authors demonstrate Web Rephrase Augmented Pre-training (WRAP) an instruction-tuned model prompted to paraphrase documents for pre-training LLMs on real and synthetic rephrases. They demonstrate speed up of pretraining by about 3-fold, while demonstrating model performance gains of more than 2%, due to incorporating style diversity reflective of downstream evaluation style, and because it is higher quality than web-scraped data. 
+    **Developments** The authors demonstrate Web Rephrase Augmented Pre-training (WRAP) an instruction-tuned model prompted to paraphrase documents for pre-training LLMs on real and synthetic rephrases. They demonstrate speed up of pretraining by about 3-fold, while demonstrating model performance gains of more than 2%, due to incorporating style diversity reflective of downstream evaluation style, and because it is higher quality than web-scraped data. 
     
     <img width="888" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/970ced84-ad1d-464b-8fbf-cc92ddc26406">
 

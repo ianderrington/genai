@@ -1,0 +1,45 @@
+Data preparation is essential for all aspects of GenAI. It spans from [pre-training](../../architectures/training/pre-training.md) to [fine-tuning](../../architectures/training/finetuning.md) to [retrieval-augmented generation](../../agents/rag.md), embodying a multifaceted process that ensures the data is optimized for AI training and application. The journey of data preparation involves several critical steps, each tailored to enhance the quality and effectiveness of the data used.
+
+Below is a clickable overview of the data preparation process, 
+
+```mermaid
+graph LR
+    style A fill:#b8e2f2,stroke:#1e81b0,stroke-width:2px
+    style B fill:#f9edbe,stroke:#f0b429,stroke-width:2px
+    style C fill:#f4b6c2,stroke:#ec407a,stroke-width:2px
+    style D fill:#88d8b0,stroke:#26a69a,stroke-width:2px
+    style E fill:#80cbc4,stroke:#00897b,stroke-width:2px
+    style F fill:#ffcc80,stroke:#ffa726,stroke-width:2px
+
+
+    A(Data Identification) --> B(Data Collection)
+    A --> E(Simulation)
+    B --> C(Data Selection and Filtering)
+    C --> D(Data Augmentation)
+    C --> F{Use}
+    D --> F
+    E --> F
+
+    click A href "../sources.html" "Data Identification"
+    click B href "data_collection.html" "Data Collection"
+    click C href "selection.html" "Data Selection and Filtering"
+    click D href "augmentation.html" "Data Augmentation"
+    click E href "simulation.html" "Data Simulation"
+
+```
+
+### Data Preparation Steps:
+
+1. **Data Identification**: The initial stage involves identifying the relevant data sources and types that are essential for training the AI model. This step is foundational, setting the stage for subsequent processes. [Learn more](../sources.md).
+
+2. **Data Collection**: Once the necessary data sources are identified, the next step is to collect data from these sources. This phase ensures a robust dataset that reflects the diversity and complexity of real-world scenarios. [Learn more](collection.md).
+
+3. **Data Selection and Filtering**: After collecting a substantial dataset, the selection and filtering process begins. This step involves refining the dataset, removing irrelevant, redundant, or low-quality data to ensure the efficiency and effectiveness of the training process. [Learn more](selection.md).
+
+4. **Data Augmentation**: To further enhance the dataset, data augmentation techniques are applied. This involves generating new data points from existing ones through various transformations, thereby increasing the quality, diversity and volume of the training data. [Learn more](augmentation.md).
+
+5. **Data Simulation**: To provide data in domains where there is limited relevance, it can be useful to generate completely new data for training. While this method may induce potential failures due to loss of epistemic groundedness, it can have merit by providing examples in training data that might never exist. [Learn more](./simulation.md)
+
+
+
+Each of these steps plays a crucial role in preparing data that is not only comprehensive and relevant but also optimized for training AI models efficiently and effectively. By following the links provided in the Mermaid diagram, you can explore each component of the data preparation process in greater detail.

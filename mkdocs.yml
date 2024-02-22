@@ -95,11 +95,12 @@ theme:
   favicon: assets/genai_logo_edited.svg
   #icon:
     # logo: genai_logo_edited
-
+google_tag: !ENV GOOGLE_ANALYTICS_KEY
 # Plugins
 plugins:
   - search
   - shareable_admonition
+      
   - awesome-pages
   - meta
   #- redirects:

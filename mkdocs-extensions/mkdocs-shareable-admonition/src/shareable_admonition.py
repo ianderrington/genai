@@ -170,6 +170,7 @@ class ShareableAdmonitionPlugin(BasePlugin):
         full_page_url = config['site_url']+os.path.join('/', page.url, shareable_html_path)
         page_url = config['site_url'] + full_page_url
         backlink_url = config['site_url'] + f'/{page.url}'
+        
         if not title:
             title = 'Sharing information from www.managen.ai'
         if not description:
@@ -187,6 +188,7 @@ class ShareableAdmonitionPlugin(BasePlugin):
             image_url=image_url, 
             page_url=full_page_url, 
             # backlink_url=full_page_url)
+            # google_tag=google_tag,
             backlink_url=backlink_url, 
             config=config)
 
@@ -208,7 +210,8 @@ class ShareableAdmonitionPlugin(BasePlugin):
             description=description,
             image_url=image_url,
             page_url=page_url,
-            backlink_url=backlink_url
+            backlink_url=backlink_url,
+            google_tag=config['google_tag']
         )
         with open(path, 'w') as f:
             f.write(html_content)
