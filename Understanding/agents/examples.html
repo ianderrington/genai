@@ -2809,6 +2809,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -4518,6 +4520,33 @@ and
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Using/rewrite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Rewrite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -4532,7 +4561,7 @@ and
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
         
           
           
@@ -4554,14 +4583,14 @@ and
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4612,9 +4641,27 @@ and
   
   
   
-    <li class="md-nav__item">
-      <a href="../../Using/interfacing_layers/web_plugins.html" class="md-nav__link">
+    
+    
+      
         
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Using/interfacing_layers/integrations.html" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     
@@ -4627,7 +4674,56 @@ and
   
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interfacing layers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/interfacing_layers/web_plugins.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Web plugins
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -5046,20 +5142,25 @@ and
 <details class="code">
 <summary><a href="https://github.com/microsoft/JARVIS/">Jarvis</a> provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present.</summary>
 </details>
-<p>??? important "<a href="https://arxiv.org/pdf/2401.06201.pdf">Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction</a> provides a framework
-transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage" easy-tool</p>
-<div class="highlight"><pre><span></span><code>**Development**
-Easy Tool follows a simple pattern of: 1. Task Planning, 2. Tool Retrieval, 3. Tool Selection and 4. Tool Execution, coupled with thoughtful prompting to enable SOT tool usage over multiple models.
+<p><a href="/shared/easy-tool.html" class="page-url" id="page-url-1"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-**Problem**
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+</div>
+
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2401.06201.pdf">Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction</a> provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage</summary>
+<p><strong>Development</strong>
+Easy Tool follows a simple pattern of: 1. Task Planning, 2. Tool Retrieval, 3. Tool Selection and 4. Tool Execution, coupled with thoughtful prompting to enable SOT tool usage over multiple models. </p>
+<p><strong>Problem</strong>
 Using new tools, software,  especially can be challenging for LLMs (and people too!), especially with a poor or redundant documentation and a variety of usage manners. 
-&lt;img width=&quot;733&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/4b17492e-c227-4633-9620-437fb08ab8c9&quot;&gt;
-
-**Solution**
-Easy tool provides &quot;a simple method to condense tool documentation into more concise and effective tool instructions.&quot;
-
-```markdown
-     I: Tool Description Generation
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/4b17492e-c227-4633-9620-437fb08ab8c9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="733" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4b17492e-c227-4633-9620-437fb08ab8c9"></a></p>
+<p><strong>Solution</strong>
+Easy tool provides "a simple method to condense tool documentation into more concise and effective tool instructions."</p>
+<p><div class="highlight"><pre><span></span><code>     I: Tool Description Generation
      /* I: Task prompt */
      Your task is to create a concise and effective tool usage description based on the tool documentation. You should ensure the description only contains the purposes of the
      tool without irrelevant information. Here is an example:
@@ -5068,14 +5169,14 @@ Easy tool provides &quot;a simple method to condense tool documentation into mor
      Tool usage description:
      {Tool_name} is a tool that can {General_Purposes}.
      This tool has {Number} multiple built-in functions:
-     1. {Function_1} is to {Functionality_of_Function_1} 2. {Function_2} is to ...
+<span class="w">     </span><span class="k">1.</span> {Function_1} is to {Functionality_of_Function_1} 2. {Function_2} is to ...
      /* Auto generation of tool description */ {ToolDocumentationof‘AviationWeatherCenter’} Tool usage description:
      ‘Aviation Weather Center’ is a tool which can provide official aviation weather data...
      II: Tool Function Guidelines Construction
      /* Task prompt */
      Your task is to create the scenario that will use the tool.
-     1. You are given a tool with its purpose and its parameters list. The scenario should adopt the parameters in the list.
-     2. If the parameters and parameters are both null, you
+<span class="w">     </span><span class="k">1.</span> You are given a tool with its purpose and its parameters list. The scenario should adopt the parameters in the list.
+<span class="w">     </span><span class="k">2.</span> If the parameters and parameters are both null, you
      should set: {&quot;Scenario&quot;: XX, &quot;Parameters&quot;:{}}.
      Here is an example:
      /* Examples */
@@ -5086,20 +5187,19 @@ Easy tool provides &quot;a simple method to condense tool documentation into mor
      {Parameter List of ‘Product Details’}
      One scenario for ‘Product Details’ of ‘Ebay’ is:
      {&quot;Scenario&quot;: &quot;if you want to know the details of the product with product ID 1954 in Germany from Ebay&quot;, &quot;Parameters&quot;:{&quot;product_id&quot;: 1954, &quot;country&quot;: &quot;Germany&quot;}}.
-```
-&lt;img width=&quot;418&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/caed1a08-4761-4809-8a05-c2d026e26281&quot;&gt;
-
-**Results** 
-The performance is SOT over multiple models. ChatGPT, ToolLLaMA-7B, Vicuna-7B, Mistral-Instruct-&amp;B and GPT-4
-&lt;img width=&quot;820&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/5a4a1b6d-986c-491e-9642-c28f6d56f771&quot;&gt;
 </code></pre></div>
-<p><a href="/shared/hugging-gpt.html" class="page-url" id="page-url-1"></a></p>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/caed1a08-4761-4809-8a05-c2d026e26281" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="418" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/caed1a08-4761-4809-8a05-c2d026e26281"></a></p>
+<p><strong>Results</strong> 
+The performance is SOT over multiple models. ChatGPT, ToolLLaMA-7B, Vicuna-7B, Mistral-Instruct-&amp;B and GPT-4
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/5a4a1b6d-986c-491e-9642-c28f6d56f771" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="820" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5a4a1b6d-986c-491e-9642-c28f6d56f771"></a></p>
+</details>
+<p><a href="/shared/hugging-gpt.html" class="page-url" id="page-url-2"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
 </div>
 
 <details class="important">
@@ -5118,13 +5218,13 @@ The results provide substiantial evidence that HuggingGPT can enable successful 
 </details>
 <h3 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h3>
 <p>??? code "<a href="https://github.com/l3vels/ L3AGI">L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.</a> l3agi</p>
-<p><a href="/shared/os-copilot-friday.html" class="page-url" id="page-url-2"></a></p>
+<p><a href="/shared/os-copilot-friday.html" class="page-url" id="page-url-3"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
 </div>
 
 <details class="important">
@@ -5156,10 +5256,6 @@ The results provide substiantial evidence that HuggingGPT can enable successful 
 <p class="admonition-title"><a href="https://github.com/assafelovic/gpt-researcher">GPT researcher</a> is an autonomous agent designed for comprehensive online research on a variety of tasks.</p>
 <p>LOOK INTO THIS</p>
 </div>
-<details class="tip">
-<summary><a href="https://arxiv.org/pdf/2304.05332.pdf">Emergent autonomous scientific research</a></summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="658" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656"></a></p>
-</details>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/sweepai/sweep/tree/main">Sweep Dev (product)</a> provides a service for improving code-bases.</p>
 <p><a href="https://github.com/sweepai/sweep/blob/main/sdk/src/agent.py">Example Agent</a>

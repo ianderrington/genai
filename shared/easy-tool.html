@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage</title>
+    
+    
+
+    <meta property="og:url" content="https://www.managen.ai//shared/easy-tool.html">
+
+    <meta property="og:title" content="Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage">
+    <meta property="og:description" content="**Development**"">
+
+    <meta property="og:type"  content="website" />
+    <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/4b17492e-c227-4633-9620-437fb08ab8c9">
+    <meta property="og:url" content="https://www.managen.ai//shared/easy-tool.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage">
+    <meta name="twitter:description" content="Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage">
+    <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/4b17492e-c227-4633-9620-437fb08ab8c9">
+    <!--Import stylesheet  -->
+    <link rel="stylesheet" href="../../stylesheets/share-card.css">
+    <style>
+        .page-url { display: block; }
+        .iframe .backlink-url { display: none; }
+   
+
+     </style>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config",""),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MPQ831MCNS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+<script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+    <script>
+       (function(d, w) {
+          if (w.self !== w.top) {
+             d.className += " iframe";
+          }
+       }(document.documentElement, window));
+
+        window.onload = function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].target = '_blank';
+            }
+        };
+        function copyToClipboard(elementId) {
+            var url = document.getElementById(elementId).href;
+            navigator.clipboard.writeText(url).then(function() {
+                // Show copied popup
+                var popup = document.getElementById("copied-popup");
+                popup.classList.add("show");
+
+                // Hide popup after 2 seconds
+                setTimeout(function() { popup.classList.remove("show"); }, 2000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="blog-content">
+        <h1><p><a href="https://arxiv.org/pdf/2401.06201.pdf">Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction</a> provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage</p></h1>
+        <p><strong>Development</strong>
+Easy Tool follows a simple pattern of: 1. Task Planning, 2. Tool Retrieval, 3. Tool Selection and 4. Tool Execution, coupled with thoughtful prompting to enable SOT tool usage over multiple models. </p>
+<p><strong>Problem</strong>
+Using new tools, software,  especially can be challenging for LLMs (and people too!), especially with a poor or redundant documentation and a variety of usage manners. 
+<img width="733" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4b17492e-c227-4633-9620-437fb08ab8c9"></p>
+<p><strong>Solution</strong>
+Easy tool provides "a simple method to condense tool documentation into more concise and effective tool instructions."</p>
+<p><div class="highlight"><pre><span></span><code>     I: Tool Description Generation
+     /* I: Task prompt */
+     Your task is to create a concise and effective tool usage description based on the tool documentation. You should ensure the description only contains the purposes of the
+     tool without irrelevant information. Here is an example:
+     /* Examples */
+     {Tool Documentation}
+     Tool usage description:
+     {Tool_name} is a tool that can {General_Purposes}.
+     This tool has {Number} multiple built-in functions:
+<span class="w">     </span><span class="k">1.</span> {Function_1} is to {Functionality_of_Function_1} 2. {Function_2} is to ...
+     /* Auto generation of tool description */ {ToolDocumentationof‘AviationWeatherCenter’} Tool usage description:
+     ‘Aviation Weather Center’ is a tool which can provide official aviation weather data...
+     II: Tool Function Guidelines Construction
+     /* Task prompt */
+     Your task is to create the scenario that will use the tool.
+<span class="w">     </span><span class="k">1.</span> You are given a tool with its purpose and its parameters list. The scenario should adopt the parameters in the list.
+<span class="w">     </span><span class="k">2.</span> If the parameters and parameters are both null, you
+     should set: {&quot;Scenario&quot;: XX, &quot;Parameters&quot;:{}}.
+     Here is an example:
+     /* Examples */
+     {Tool_name} is a tool that can {General_Purposes}. {Function_i} is to {Functionality_of_Function_i} {Parameter List of Function_i}
+     One scenario for {Function_i} of {Tool_name} is: {&quot;Scenario&quot;: XX, &quot;Parameters&quot;:{XX:XX}}
+     /* Auto-construction for Tool Function Guidelines */
+     ‘Ebay’ can get products from Ebay in a specific country. ‘Product Details’ in ‘Ebay’ can get the product details for a given product id and a specific country.
+     {Parameter List of ‘Product Details’}
+     One scenario for ‘Product Details’ of ‘Ebay’ is:
+     {&quot;Scenario&quot;: &quot;if you want to know the details of the product with product ID 1954 in Germany from Ebay&quot;, &quot;Parameters&quot;:{&quot;product_id&quot;: 1954, &quot;country&quot;: &quot;Germany&quot;}}.
+</code></pre></div>
+<img width="418" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/caed1a08-4761-4809-8a05-c2d026e26281"></p>
+<p><strong>Results</strong> 
+The performance is SOT over multiple models. ChatGPT, ToolLLaMA-7B, Vicuna-7B, Mistral-Instruct-&amp;B and GPT-4
+<img width="820" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5a4a1b6d-986c-491e-9642-c28f6d56f771"></p>
+    </div>
+    <a href="https://www.managen.ai//shared/easy-tool.html" class="page-url" id="page-url"></a>
+    <!-- Clipboard copy icon/button -->
+    <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
+    <!-- Copied popup -->
+    <div class="copied-popup" id="copied-popup">Link copied!</div>
+    <a href="https://www.managen.ai//Understanding/agents/examples.html" class="backlink-url" id="backlink-url">See the main site!</a>
+</body>
+</html>
