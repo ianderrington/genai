@@ -68,34 +68,7 @@ We will explore RAG and fine-tuning of chat models models, as well as other cogn
 
 ### Chatty Oracle
 
-We will first look at using [rag](../understanding/agents/rag.md) to enable lookup of the components within the database. This will rely on understanding gained from building our [self improvement](#self-improvement) architectures. 
-
-+++ important "Fine tuning to investigate"
-    Llama fine tuning
-
-    Runpod Affiliate Link https://tinyurl.com/yjxbdc9w
-
-    Advanced Fine-tuning and Data-preparation Scripts (Lifetime Membership)
-    Fine-tune LLMs for style, content or structured responses...
-    Learn More: https://trelis.com/advanced-fine-tuni...
-
-    LLM Server Setup Repo Access (Lifetime Membership)
-    - Video: Run Llama 2 on AWS:   
-    ￼
-     • Deploy Llama 2 for your Entire Organi...  
-    - Video: Deploy a Llama API in 5 clicks:   
-    ￼
-     • Deploy an API for Llama 70B in 5 Clicks  
-    - Learn more: https://trelis.com/enterprise-server-...
-
-    - https://arxiv.org/abs/2308.04152
-    - https://www.linkedin.com/pulse/fine-tuning-multi-model-large-language-models-deep-dive-jatasra-vwvrf/
-    - https://github.com/mayooear/gpt4-pdf-chatbot-langchain
-    - https://www.youtube.com/watch?v=JJ5mcdEIbj8
-    - https://www.youtube.com/watch?v=NXevvEF3QVI
-
-
-
+We will first look at using [rag](../Understand/agents/rag.md) to enable lookup of the components within the database. This will rely on understanding gained from building our [self improvement](#self-improvement) architectures. 
 
 
 
@@ -222,7 +195,7 @@ Neo4j Semantic layer???
 We can make this easier to read
 
 - [ ] Improve landing page and header bar to be more modern. 
-- [ ] Build interactive graph representation of this site that includes summary information. Check [this out](https://towardsdatascience.com/making-network-graphs-interactive-with-python-and-pyvis-b754c22c270) and the [examples](../Using/examples/index.md)
+- [ ] Build interactive graph representation of this site that includes summary information. Check [this out](https://towardsdatascience.com/making-network-graphs-interactive-with-python-and-pyvis-b754c22c270) and the [examples](../Use/examples/index.md)
 - [ ] https://melaniewalsh.github.io/Intro-Cultural-Analytics/06-Network-Analysis/02-Making-Network-Viz-with-Bokeh.html
 - [ ] build with https://docusaurus.io/
 - [ ] Integrate example python notebooks and build with https://github.com/outerbounds/nbdoc

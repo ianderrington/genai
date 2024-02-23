@@ -10,8 +10,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 ### Jarvis
 ??? code "[Jarvis](https://github.com/microsoft/JARVIS/) provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." jarvis
 
-??? important "[Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction](https://arxiv.org/pdf/2401.06201.pdf) provides a framework
-transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage" easy-tool
+??? important "[Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction](https://arxiv.org/pdf/2401.06201.pdf) provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage" easy-tool
 
     **Development**
     Easy Tool follows a simple pattern of: 1. Task Planning, 2. Tool Retrieval, 3. Tool Selection and 4. Tool Execution, coupled with thoughtful prompting to enable SOT tool usage over multiple models. 
@@ -129,8 +128,6 @@ transforming diverse and lengthy tool documentation into a unified and concise t
 !!! code "[GPT researcher](https://github.com/assafelovic/gpt-researcher) is an autonomous agent designed for comprehensive online research on a variety of tasks."
     LOOK INTO THIS
 
-??? tip "[Emergent autonomous scientific research](https://arxiv.org/pdf/2304.05332.pdf)"
-    <img width="658" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656">
 
 
 !!! code "[Sweep Dev (product)](https://github.com/sweepai/sweep/tree/main) provides a service for improving code-bases."

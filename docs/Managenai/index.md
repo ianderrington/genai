@@ -13,7 +13,7 @@ Working as a relevant information hub, Managing Generative AI will provide an ex
 
 ## How to use this site
 
-Right now, you can learn from [the present understandings](../Understanding/index.md) where you can learn the deep and wide components of both building Generative AI, and building _with_ Gen()AI. Eventually, you'll be able to work with ManagenAI to both create and help you to create the GenAI-solution that works best for your needs.
+Right now, you can learn from [the present understandings](../Understand/index.md) where you can learn the deep and wide components of both building Generative AI, and building _with_ Gen()AI. Eventually, you'll be able to work with ManagenAI to both create and help you to create the GenAI-solution that works best for your needs.
 
 ## How will it improve?
 [Contribute](./contributing.md) to this project.

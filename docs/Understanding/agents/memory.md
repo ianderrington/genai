@@ -17,7 +17,7 @@ Here are some general types of memory:
 * Gists
 * Action-success lookups 
 
-
+For example Open AI has launched [memory](https://openai.com/blog/memory-and-new-controls-for-chatgpt) for chatGPT, that stores relevant memory in a manner that allows the user control of what can be stored. It does not, yet, allow for memory compartmentalization of memories into groups that could help to focus relevance to generated content.
 
 ## Storage and Retrieval Methods
 
