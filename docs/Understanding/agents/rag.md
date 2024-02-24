@@ -2,24 +2,49 @@
 
 Large Language Models (LLMs) can be made more useful by enabling them to access a set of information relevant to the prompt at hand. This can be achieved by extracting information from vector, SQL, and no-SQL [memory](./memory.md) and feeding it into the LLM. This approach, known as Retrieval-Augmented Generation (RAG), was introduced in 2020 in [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf). It has shown impressive results in improving the generation of content. However, it is still an area of active development and research, and fully optimized solutions are not always available.
 
+## Why use RAG?
+
+Large foundation models are trained on large corporas of public (and sometimes private) data. Models may lose effective semantic grounding because of the breadth of implicing knowledge they have codified in the next-token predictors. To improve the groundedness and appropriateness of the desired output, RAG fetches appropriate information that can be combined with the prompt context in order for the LLM to generate appropriate results. This can be particularly important when there is information that my be changing, and needs to be incorporated quickly. 
+
+Importantly, iou can use RAG to help with for data summarization, question-answeering, and the ability to 'know how' information is generated in a somewhat more interpretable manner. 
+
+!!! important "Use RAG because: "
+    * You need knowledge beyond the LLM's training set
+    * You want to minimize hallucinations
+    * Your data can be highly dynamic
+    * The results need to interpretable
+    * You don't have training data available
+
+### Why not use RAG? 
+
+The primary challenges regarding rag may be related to organizational or functional challenges. 
+
+!!! warning "Don't use RAG because:"
+    * You have Latency requirements that RAG retrieval may induce.
+    * You don't want to pay for, or maintain and support a RAG database. 
+    * There are ethical or privacy concerns relating to sending data to a third-party API
+    * 
+
+
 ## RAG Process
 
 The RAG process can be divided into two main stages: Preparation (offline) and Retrieval and Generation (online).
 
 ```mermaid
     graph TB
-        A[Proprietary Data] -->|Format | B(Embedding Model)
+        A[Prepare \n Relevant \n Data] -->|Format | B(Embedding Model)
+        B --> I[Indexing]
+        I --> |Store| D
         C[User Question] --> |Transform| Q(Query)
         Q --> B
-        B -->|Store| D[Vector Database]
-        B --> |Search|D
+        B -->|Find| D[Vector Database]
+        %% B --> |Search|D
         D --> |Retrieve| E[Assemble relevant documents]
         E --> F[Prompt: Original Question + Context]
         C --> F
         F -->|Generate| G[LLM]
         G --> H[Answer]
 ```
-
 ### Preparation (offline)
 
 The preparation stage involves the following steps:
@@ -43,26 +68,36 @@ The retrieval and generation stage involves the following steps:
 
 Users should only access data that is appropriate for their application. However, including too much information might be unnecessary or harmful to retrieval if the [retrieval](#retrieval) cannot handle the volume or complexity of data. It is also crucial to ensure data privacy when providing data that might not be appropriate (or legal) to access.
 
-### Loading Data
+
+
+### Indexing Data
+
+Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  identified data into 
+
+#### Loading Data
 
 Different data types require different loaders. Raw text, PDFs, spreadsheets, and more proprietary formats need to be processed in a way that the information is of highest relevance to data. Text is easy to process, but some data, especially multimodal data like PDFs, may need to be formatted with a schema to allow for more effective searching.
 
-### Splitting Data
+
+#### Splitting Data
 
 Once data has been loaded in a way that a model can process it, it must be split. There are several ways of splitting data:
 
 1. By the max size a model can handle.
-2. By some heuristic break, such as `\n` return characters or `\p` paragraphs or newlines.
+2. By some heuristic break, such as `.` sentences, `\n` return characters or `\p` paragraphs or newlines.
 3. In a manner that maximizes the topic coherence. In this case, splitting and embedding may happen simultaneously.
 
-### Embedding Data
+#### Embedding Data
 
-Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). See blog:
-https://blog.langchain.dev/semi-structured-multi-modal-rag/.
+Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). [Read more](https://blog.langchain.dev/semi-structured-multi-modal-rag/.)
 
-### Storing Data
+#### Adding metadata
 
-The embedded data is stored for future retrieval and use. This is done via standarad database methods, with the use of vector embeddings as retrieval addresses. 
+Information such as dates, chapters, or key words can allow for filtering and key-word lookup. 
+
+#### Storing Data
+
+The embedded data is stored for future retrieval and use. This is done via standarad database methods, with the use of embeddings as vector retrieval addresses as well as meta-data for more traditional search (key-word) methods.
 
 ### Indexing Data
 
@@ -74,9 +109,7 @@ It is useful to perform parallel indexing that keeps track of records that are p
     * Re-computing embeddings of unchanged content 
     * Inserting duplicated content
 
-
 The langchain [Blog](https://blog.langchain.dev/syncing-data-sources-to-vector-stores/) and docs on [indexing](https://python.langchain.com/docs/modules/data_connection/indexing) provide quality discussions on these topics. 
-
 
 
 ### Retrieving Data
@@ -94,8 +127,6 @@ Query transformations can be done in several ways, including:
     ??? important "[Query Rewriting for Retrieval-Augmented Large Language Models](https://arxiv.org/pdf/2305.14283.pdf)"
 
         <img width="630" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b518994c-a419-4cc3-b065-065c0ca625d1">
-
-
 
 2. **Step Back Prompting:** This method generates an intermediate context that helps to 'abstract' the information. Once generated, the additional context can be used.
 
@@ -131,11 +162,18 @@ Query transformations can be done in several ways, including:
 
 #### Routing
 
-Queries may need to be routed to different data sources depending on what is being asked. Recent blog reviewing OpenAI's RAG strategies provides some guidance on question routing: https://blog.langchain.dev/applying-openai-rag/
+Depending on the question asked, queries may need to be routed to different sources of data. OpenAI's [RAG strategies](https://blog.langchain.dev/applying-openai-rag/) provides some guidance on question routing: 
 
 #### Matching
 
-Matching involves aligning the query with the appropriately stored information.
+Matching involves aligning the query with the appropriately stored information. This can be done with vector-only, or
+
+
+##### Small to big lookup
+
+#### Reranking
+
+Reranking 
 
 ### Generating
 
@@ -272,6 +310,13 @@ The final step is generating an output using a prompt that integrates the query 
 
     * Use things like [Llama Guard](https://towardsdatascience.com/safeguarding-your-rag-pipelines-a-step-by-step-guide-to-implementing-llama-guard-with-llamaindex-6f80a2e07756?sk=c6cc48013bac60924548dd4e1363fa9e)
 
+## Resources
+!!! code "[Advanced Rag small to big](https://colab.research.google.com/github/sophiamyang/demos/blob/main/advanced_rag_small_to_big.ipynb)" 
+    [Blog](https://towardsdatascience.com/advanced-rag-01-small-to-big-retrieval-172181b396d4)
+    
+!!! code "[Advanced Retreival Augmented Generation from Theory to Llamaindex](https://github.com/weaviate/recipes/blob/main/integrations/llamaindex/retrieval-augmented-generation/advanced_rag.ipynb)"
+    [Blog](https://towardsdatascience.com/advanced-retrieval-augmented-generation-from-theory-to-llamaindex-implementation-4de1464a9930)
 
+!!! note "[RAG vs finetuning](https://towardsdatascience.com/rag-vs-finetuning-which-is-the-best-tool-to-boost-your-llm-application-94654b1eaba7)"
 
     
