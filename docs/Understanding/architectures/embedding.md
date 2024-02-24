@@ -32,8 +32,12 @@ In order to separate the representation, allowing greater freedom in evaluating 
 
 
 ??? code "[ELE Embeddings](https://github.com/bio-ontology-research-group/el-embeddings?tab=readme-ov-file)"
+    ELE Provides spherical embeddings based on descriptional logic. This allows for representation which works nicely with knoelged-graphs and ontologies.  
+    
+    <img width="654" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/079f294f-72f3-4f89-a36f-e65f496d8e98">
+
+
     [Paper](https://arxiv.org/abs/1902.10499)
-    <img width="884" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/89967aaa-929d-4167-a0c1-1bef7db9cfe2">
 
 ### Blogs and posts
 - [Openai GPT-3 text embeddings](https://medium.com/@nils_reimers/openai-gpt-3-text-embeddings-really-a-new-state-of-the-art-in-dense-text-embeddings-6571fe3ec9d9)
