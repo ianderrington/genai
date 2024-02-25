@@ -121,11 +121,11 @@ Here are some known thought structures that are improving agentic output.
     Effectively Observe, Think, Act, Repeat.
     [Paper](https://arxiv.org/pdf/2210.03629.pdf)
 
-???+ tip "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
+???+ code "[Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
     - [Paper](https://arxiv.org/pdf/2303.11366.pdf)
-    - [Inspired github](https://github.com/GammaTauAI/reflexion-human-eval)
+    - [Another Inspired github](https://github.com/GammaTauAI/reflexion-human-eval)
 
 ??? important "[The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps](https://arxiv.org/abs/2401.04925)"
     Appending "you must think more steps" to "Let’s think step by step" increases the reasoning steps and signficantly improves the accuracy on various reasoning tasks.

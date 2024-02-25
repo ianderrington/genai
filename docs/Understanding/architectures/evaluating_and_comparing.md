@@ -1,20 +1,56 @@
-TODO: Fix this up
-There are many ways that you can evaluate your model, and the manner of evaluation will generally  depend on your use case.
-
-As a general principle in ML, it is important to have your evaluation or test ing data thoroughly separated from your training data. If this is not done, it may be considered an improper test because the model will have had a chance to 'learn' the answers directly, and the test may not thoroughly represent any form of generalization that the model may have achieved. If needed, the 'contamination' of data may be removed with [automated methods](https://lmsys.org/blog/2023-11-14-llm-decontaminator/).
+Evaluating and comparing models is essential to enabling quality outcomes. There are a number of ways that models can be evaluated, and in many domains. The manners of evaluation will depend on the intended use-cases of the model.
 
 
-## Metrics
-- Exact Match (EM)
-TODO: Finish this
+## Leaderboards
 
-While single-LLM calls are useful to evaluate, [comparing and evaluating](../agents/evaluating_and_comparing.md) system-evaluation will likely be essential to ensure successful [deployment](../deploying/index.md).
+Here are a few boards that help to aggregate and test models that have been released.
+
+- [Hugging Face LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) An essential chart for documenting the model performance across multiple models.
+- [lmsys.org leader board](https://lmsys.org/blog/2023-06-22-leaderboard/)
+
+### Domain expertise
+There are several domains of expertise where it may be essential to measure Model's performance. 
 
 
+### Hallucination
+Hallucinations remain a core problem with LLMs as they may generate linguistic and syntatically correct statements, that lack epistemic or factually grounded understanding. 
+
+??? important "Hugging faces [leaderboard](https://huggingface.co/blog/leaderboards-on-the-hub-hallucinations) on hallucinations provides a comparison of different models' hallucinations". 
+    Much is based on [awesome-hallucination-detection](https://github.com/EdinburghNLP/awesome-hallucination-detection) 
+
+### Generalization
+It may be important for your modal to have generalization beyond your training data. If so, it is important to thoroughly separate any testing data from the training data. To remove this, you will want to work on your [data](../data/index.md) preparation. If needed, the 'contamination' of data may be removed with [automated methods](https://lmsys.org/blog/2023-11-14-llm-decontaminator/).
+
+
+### Finding information
+
+The ability for an LLM to 'recall' information within its context window is an integral part of its ability function with contextually relevant information, and to act as effective retrieval mechanisms. To evaluate this ability, the _needle-in-a-haystack_ test can be used. In it the following occur: 
+
+1. Place a random fact or statement (the 'needle') in the middle of a long context window (the 'haystack')
+2. Ask the model to retrieve this statement
+3. Iterate over various document depths (where the needle is placed) and context lengths to measure performance
+
+In ideal systems, context retrieval will be independent of the position within the context, and of the content itself. 
+
+??? important "[Testing with LLMTest_NeedleInAHaystack repo](https://github.com/gkamradt/LLMTest_NeedleInAHaystack) shows where in the context space that LLMs may fail at context retrieval." 
+    As demonstrated additionally in the authors' [youtube](https://www.youtube.com/watch?v=KwRRuiCCdmc)
+
+It was, however Anthropic found, that [LLMs can perform better](https://www.anthropic.com/news/claude-2-1-prompting) context retrieval when phrases are added: 
+
+```markdown
+ “Here is the most relevant sentence in the context:” 
+```
+
+### Sycophancy
+
+Sycophancy is the degree to which a model mirrors biases, large or small, that are put into input queries by the user. In ideal systems, sycophancy will be minimized to prevent _echo-chamber_ amplification of innaccuracies. 
+
+!!! code "The repo [Sycophancy-eval](https://github.com/meg-tong/sycophancy-eval) offers manners and methods of evaluating sycophancy. "
 
 ### General Discussions
 ??? tip "[How do we know how smart AI systems are?](https://www.science.org/doi/10.1126/science.adj5957)"
     “AI systems, especially generative language systems like GPT-4, will become increasingly influential in our lives, as will claims about their cognitive capacities. Thus, designing methods to properly assess their intelligence—and associated capabilities and limitations—is an urgent matter. To scientifically evaluate claims of humanlike and even superhuman machine intelligence, we need more transparency on the ways these models are trained, and better experimental methods and benchmarks. Transparency will rely on the development of open-source (rather than closed, commercial) AI models. Better experimental methods and benchmarks will be brought about through collaborations between AI researchers and cognitive scientists who have long investigated how to do robust tests for intelligence, understanding, and other cognitive capabilities in children, animals, and other “alien” intelligences.”
+
 
 ## Evaluation Methods and Libraries
 ### General
@@ -47,6 +83,7 @@ The evaluation of models helps us to identify which, if any, model to use for a 
 
 TODO: COMPLETE THIS
 
-* Hallucinations
-* Logic/Math
-* Sycophancy, or the degree to which a model mirrors biases, large or small, put into input queries. The repo, [sycophancy-eval](https://github.com/meg-tong/sycophancy-eval) offers some ability to evaluate this.
+## References
+
+??? important "[LLM Eval survey, paper collection](https://github.com/MLGroupJLU/LLM-eval-survey)"
+    [Paper](https://arxiv.org/abs/2307.03109)

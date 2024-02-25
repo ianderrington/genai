@@ -1,24 +1,23 @@
-TODO:
-There are a vast number of both open and closed-source models that can be used. A number of them can be downloaded and run on the appropriate hardware, others may be accessed through APIs.
+## 🚧 It is impossible to keep up manually 🚧 
 
-It is essential to [compare and evaluate](evaluating_and_comparing.md) the models for your intended use-cases to ensure they meet technical, customer, and organizational requirements.
+Because it is not possible to manually maintain open-source references, we refer the reader to the [Hugging face OPen LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
 
-## Leaderboards and comparisons
+Still, below, we relay several important and foundational ones. 
 
-Here are a few boards that help to aggregate and test models that have been released.
+## Pre trained models
 
-- [Hugging Face LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) An essential chart for documenting the model performance across multiple models.
-- [lmsys.org leader board](https://lmsys.org/blog/2023-06-22-leaderboard/)
+Because of the costs associated with aggregating sufficient data and performing large-scale [training](../architectures/training/index.md) it is often preferrable to start with pre-trained models. They can be both [open source](#open-source) and [closed source](#closed-source) in origin, and choosing between the two of them will be an important decisions related to project requirements. 
+
+Whatever pre-trained model that you use, to ensure they meet technical, customer, and organizational requirements it is important to  by [compare and evaluate](evaluating_and_comparing.md) them. 
+
+Below we share important models. 
 
 ## Open Source
 
 ### Text-focused
 
-
 ??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/pdf/2307.09288.pdf) A nearly open source set of 7B-70B models with quality performance"
     <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
-
-
 
 ??? code "**Sept, 2023** [Mistral Transformer](https://github.com/mistralai/mistral-src)"
 
