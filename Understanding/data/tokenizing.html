@@ -706,9 +706,10 @@ and
 <details class="code">
 <summary><a href="https://github.com/google/sentencepiece">Sentence Piece</a> implements subword units (e.g., byte-pair-encoding (BPE) and unigram language model</summary>
 </details>
-<p>??? important "<a href="https://arxiv.org/pdf/1804.10959.pdf">Unigram Language Model (Kudo)</a> introduces subword regularization, which trains the model with multiple subword segmentations probabilistically sampled during training". </p>
-<div class="highlight"><pre><span></span><code>Effectively, this takes aliasing-like effects that cause different tokenization. It is more effective because it breaks it down in different ways.
-</code></pre></div>
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/1804.10959.pdf">Unigram Language Model (Kudo)</a> introduces subword regularization, which trains the model with multiple subword segmentations probabilistically sampled during training</summary>
+<p>Effectively, this takes aliasing-like effects that cause different tokenization. It is more effective because it breaks it down in different ways.</p>
+</details>
 <div class="admonition important">
 <p class="admonition-title"><a href="https://github.com/nomic-ai/contrastors">Fully open source tokenizer: Nomic</a></p>
 <p><a href="https://blog.nomic.ai/posts/nomic-embed-text-v1">Nomic</a> provides a disruptive tokenizer that is fully open source, with code and weights!</p>
