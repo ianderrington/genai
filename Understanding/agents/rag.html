@@ -474,6 +474,34 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-use-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why use RAG?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why use RAG?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-not-use-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why not use RAG?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rag-process" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -536,6 +564,18 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#indexing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indexing Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indexing Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#loading-data" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -569,6 +609,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#adding-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#storing-data" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -579,8 +630,13 @@ and
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#indexing-data" class="md-nav__link">
+  <a href="#indexing-data_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Indexing Data
@@ -633,6 +689,34 @@ and
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Matching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#small-to-big-lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Small to big lookup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reranking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reranking
+      
+    </span>
+  </a>
+  
 </li>
         
       </ul>
@@ -678,6 +762,17 @@ and
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -713,14 +808,40 @@ and
 
 <h1 id="retrieval-augmented-generation-rag">Retrieval-Augmented Generation (RAG)<a class="headerlink" href="#retrieval-augmented-generation-rag" title="Permanent link">&para;</a></h1>
 <p>Large Language Models (LLMs) can be made more useful by enabling them to access a set of information relevant to the prompt at hand. This can be achieved by extracting information from vector, SQL, and no-SQL <a href="memory.html">memory</a> and feeding it into the LLM. This approach, known as Retrieval-Augmented Generation (RAG), was introduced in 2020 in <a href="https://arxiv.org/pdf/2005.11401.pdf">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a>. It has shown impressive results in improving the generation of content. However, it is still an area of active development and research, and fully optimized solutions are not always available.</p>
+<h2 id="why-use-rag">Why use RAG?<a class="headerlink" href="#why-use-rag" title="Permanent link">&para;</a></h2>
+<p>Large foundation models are trained on large corporas of public (and sometimes private) data. Models may lose effective semantic grounding because of the breadth of implicing knowledge they have codified in the next-token predictors. To improve the groundedness and appropriateness of the desired output, RAG fetches appropriate information that can be combined with the prompt context in order for the LLM to generate appropriate results. This can be particularly important when there is information that my be changing, and needs to be incorporated quickly. </p>
+<p>Importantly, iou can use RAG to help with for data summarization, question-answeering, and the ability to 'know how' information is generated in a somewhat more interpretable manner. </p>
+<div class="admonition important">
+<p class="admonition-title">Use RAG because: </p>
+<ul>
+<li>You need knowledge beyond the LLM's training set</li>
+<li>You want to minimize hallucinations</li>
+<li>Your data can be highly dynamic</li>
+<li>The results need to interpretable</li>
+<li>You don't have training data available</li>
+</ul>
+</div>
+<h3 id="why-not-use-rag">Why not use RAG?<a class="headerlink" href="#why-not-use-rag" title="Permanent link">&para;</a></h3>
+<p>The primary challenges regarding rag may be related to organizational or functional challenges. </p>
+<div class="admonition warning">
+<p class="admonition-title">Don't use RAG because:</p>
+<ul>
+<li>You have Latency requirements that RAG retrieval may induce.</li>
+<li>You don't want to pay for, or maintain and support a RAG database. </li>
+<li>There are ethical or privacy concerns relating to sending data to a third-party API</li>
+<li></li>
+</ul>
+</div>
 <h2 id="rag-process">RAG Process<a class="headerlink" href="#rag-process" title="Permanent link">&para;</a></h2>
 <p>The RAG process can be divided into two main stages: Preparation (offline) and Retrieval and Generation (online).</p>
 <pre class="mermaid"><code>    graph TB
-        A[Proprietary Data] --&gt;|Format | B(Embedding Model)
+        A[Prepare \n Relevant \n Data] --&gt;|Format | B(Embedding Model)
+        B --&gt; I[Indexing]
+        I --&gt; |Store| D
         C[User Question] --&gt; |Transform| Q(Query)
         Q --&gt; B
-        B --&gt;|Store| D[Vector Database]
-        B --&gt; |Search|D
+        B --&gt;|Find| D[Vector Database]
+        %% B --&gt; |Search|D
         D --&gt; |Retrieve| E[Assemble relevant documents]
         E --&gt; F[Prompt: Original Question + Context]
         C --&gt; F
@@ -744,21 +865,24 @@ and
 <h2 id="detailed-steps">Detailed Steps<a class="headerlink" href="#detailed-steps" title="Permanent link">&para;</a></h2>
 <h3 id="data-selection">Data Selection<a class="headerlink" href="#data-selection" title="Permanent link">&para;</a></h3>
 <p>Users should only access data that is appropriate for their application. However, including too much information might be unnecessary or harmful to retrieval if the <a href="#retrieval">retrieval</a> cannot handle the volume or complexity of data. It is also crucial to ensure data privacy when providing data that might not be appropriate (or legal) to access.</p>
-<h3 id="loading-data">Loading Data<a class="headerlink" href="#loading-data" title="Permanent link">&para;</a></h3>
+<h3 id="indexing-data">Indexing Data<a class="headerlink" href="#indexing-data" title="Permanent link">&para;</a></h3>
+<p>Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  identified data into </p>
+<h4 id="loading-data">Loading Data<a class="headerlink" href="#loading-data" title="Permanent link">&para;</a></h4>
 <p>Different data types require different loaders. Raw text, PDFs, spreadsheets, and more proprietary formats need to be processed in a way that the information is of highest relevance to data. Text is easy to process, but some data, especially multimodal data like PDFs, may need to be formatted with a schema to allow for more effective searching.</p>
-<h3 id="splitting-data">Splitting Data<a class="headerlink" href="#splitting-data" title="Permanent link">&para;</a></h3>
+<h4 id="splitting-data">Splitting Data<a class="headerlink" href="#splitting-data" title="Permanent link">&para;</a></h4>
 <p>Once data has been loaded in a way that a model can process it, it must be split. There are several ways of splitting data:</p>
 <ol>
 <li>By the max size a model can handle.</li>
-<li>By some heuristic break, such as <code>\n</code> return characters or <code>\p</code> paragraphs or newlines.</li>
+<li>By some heuristic break, such as <code>.</code> sentences, <code>\n</code> return characters or <code>\p</code> paragraphs or newlines.</li>
 <li>In a manner that maximizes the topic coherence. In this case, splitting and embedding may happen simultaneously.</li>
 </ol>
-<h3 id="embedding-data">Embedding Data<a class="headerlink" href="#embedding-data" title="Permanent link">&para;</a></h3>
-<p>Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). See blog:
-<a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/">https://blog.langchain.dev/semi-structured-multi-modal-rag/</a>.</p>
-<h3 id="storing-data">Storing Data<a class="headerlink" href="#storing-data" title="Permanent link">&para;</a></h3>
-<p>The embedded data is stored for future retrieval and use. This is done via standarad database methods, with the use of vector embeddings as retrieval addresses. </p>
-<h3 id="indexing-data">Indexing Data<a class="headerlink" href="#indexing-data" title="Permanent link">&para;</a></h3>
+<h4 id="embedding-data">Embedding Data<a class="headerlink" href="#embedding-data" title="Permanent link">&para;</a></h4>
+<p>Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). <a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/.">Read more</a></p>
+<h4 id="adding-metadata">Adding metadata<a class="headerlink" href="#adding-metadata" title="Permanent link">&para;</a></h4>
+<p>Information such as dates, chapters, or key words can allow for filtering and key-word lookup. </p>
+<h4 id="storing-data">Storing Data<a class="headerlink" href="#storing-data" title="Permanent link">&para;</a></h4>
+<p>The embedded data is stored for future retrieval and use. This is done via standarad database methods, with the use of embeddings as vector retrieval addresses as well as meta-data for more traditional search (key-word) methods.</p>
+<h3 id="indexing-data_1">Indexing Data<a class="headerlink" href="#indexing-data_1" title="Permanent link">&para;</a></h3>
 <p>It is useful to perform parallel indexing that keeps track of records that are put into vector stores. </p>
 <p><a href="/shared/indexing-vector-records.html" class="page-url" id="page-url-0"></a></p>
 <!-- Clipboard copy icon/button -->
@@ -826,9 +950,12 @@ Answer:
 </li>
 </ol>
 <h4 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h4>
-<p>Queries may need to be routed to different data sources depending on what is being asked. Recent blog reviewing OpenAI's RAG strategies provides some guidance on question routing: <a href="https://blog.langchain.dev/applying-openai-rag/">https://blog.langchain.dev/applying-openai-rag/</a></p>
+<p>Depending on the question asked, queries may need to be routed to different sources of data. OpenAI's <a href="https://blog.langchain.dev/applying-openai-rag/">RAG strategies</a> provides some guidance on question routing: </p>
 <h4 id="matching">Matching<a class="headerlink" href="#matching" title="Permanent link">&para;</a></h4>
-<p>Matching involves aligning the query with the appropriately stored information.</p>
+<p>Matching involves aligning the query with the appropriately stored information. This can be done with vector-only, or</p>
+<h5 id="small-to-big-lookup">Small to big lookup<a class="headerlink" href="#small-to-big-lookup" title="Permanent link">&para;</a></h5>
+<h4 id="reranking">Reranking<a class="headerlink" href="#reranking" title="Permanent link">&para;</a></h4>
+<p>Reranking </p>
 <h3 id="generating">Generating<a class="headerlink" href="#generating" title="Permanent link">&para;</a></h3>
 <p>The final step is generating an output using a prompt that integrates the query and retrieved data.</p>
 <h2 id="other-topics">Other Topics<a class="headerlink" href="#other-topics" title="Permanent link">&para;</a></h2>
@@ -970,6 +1097,18 @@ Answer:
 <li>Use things like <a href="https://towardsdatascience.com/safeguarding-your-rag-pipelines-a-step-by-step-guide-to-implementing-llama-guard-with-llamaindex-6f80a2e07756?sk=c6cc48013bac60924548dd4e1363fa9e">Llama Guard</a></li>
 </ul>
 </details>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://colab.research.google.com/github/sophiamyang/demos/blob/main/advanced_rag_small_to_big.ipynb">Advanced Rag small to big</a></p>
+<p><a href="https://towardsdatascience.com/advanced-rag-01-small-to-big-retrieval-172181b396d4">Blog</a></p>
+</div>
+<div class="admonition code">
+<p class="admonition-title"><a href="https://github.com/weaviate/recipes/blob/main/integrations/llamaindex/retrieval-augmented-generation/advanced_rag.ipynb">Advanced Retreival Augmented Generation from Theory to Llamaindex</a></p>
+<p><a href="https://towardsdatascience.com/advanced-retrieval-augmented-generation-from-theory-to-llamaindex-implementation-4de1464a9930">Blog</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title"><a href="https://towardsdatascience.com/rag-vs-finetuning-which-is-the-best-tool-to-boost-your-llm-application-94654b1eaba7">RAG vs finetuning</a></p>
+</div>
 
 
 

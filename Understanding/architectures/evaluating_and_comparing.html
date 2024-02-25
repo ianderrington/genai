@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#metrics" class="md-skip">
+        <a href="#leaderboards" class="md-skip">
           Skip to content
         </a>
       
@@ -472,16 +472,71 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#metrics" class="md-nav__link">
+  <a href="#leaderboards" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Metrics
+        Leaderboards
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Metrics">
+    <nav class="md-nav" aria-label="Leaderboards">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#domain-expertise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain expertise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hallucination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hallucination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generalization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding information
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sycophancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sycophancy
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#general-discussions" class="md-nav__link">
@@ -549,6 +604,17 @@ and
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -584,14 +650,41 @@ and
 
   <h1>Evaluating and comparing</h1>
 
-<p>There are many ways that you can evaluate your model, and the manner of evaluation will generally  depend on your use case.</p>
-<p>As a general principle in ML, it is important to have your evaluation or test ing data thoroughly separated from your training data. If this is not done, it may be considered an improper test because the model will have had a chance to 'learn' the answers directly, and the test may not thoroughly represent any form of generalization that the model may have achieved. If needed, the 'contamination' of data may be removed with <a href="https://lmsys.org/blog/2023-11-14-llm-decontaminator/">automated methods</a>.</p>
-<h2 id="metrics">Metrics<a class="headerlink" href="#metrics" title="Permanent link">&para;</a></h2>
+<p>Evaluating and comparing models is essential to enabling quality outcomes. There are a number of ways that models can be evaluated, and in many domains. The manners of evaluation will depend on the intended use-cases of the model.</p>
+<h2 id="leaderboards">Leaderboards<a class="headerlink" href="#leaderboards" title="Permanent link">&para;</a></h2>
+<p>Here are a few boards that help to aggregate and test models that have been released.</p>
 <ul>
-<li>Exact Match (EM)
-TODO: Finish this</li>
+<li><a href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard">Hugging Face LLM leaderboard</a> An essential chart for documenting the model performance across multiple models.</li>
+<li><a href="https://lmsys.org/blog/2023-06-22-leaderboard/">lmsys.org leader board</a></li>
 </ul>
-<p>While single-LLM calls are useful to evaluate, <a href="../agents/evaluating_and_comparing.html">comparing and evaluating</a> system-evaluation will likely be essential to ensure successful <a href="../deploying/index.html">deployment</a>.</p>
+<h3 id="domain-expertise">Domain expertise<a class="headerlink" href="#domain-expertise" title="Permanent link">&para;</a></h3>
+<p>There are several domains of expertise where it may be essential to measure Model's performance. </p>
+<h3 id="hallucination">Hallucination<a class="headerlink" href="#hallucination" title="Permanent link">&para;</a></h3>
+<p>Hallucinations remain a core problem with LLMs as they may generate linguistic and syntatically correct statements, that lack epistemic or factually grounded understanding. </p>
+<p>??? important "Hugging faces <a href="https://huggingface.co/blog/leaderboards-on-the-hub-hallucinations">leaderboard</a> on hallucinations provides a comparison of different models' hallucinations". 
+    Much is based on <a href="https://github.com/EdinburghNLP/awesome-hallucination-detection">awesome-hallucination-detection</a> </p>
+<h3 id="generalization">Generalization<a class="headerlink" href="#generalization" title="Permanent link">&para;</a></h3>
+<p>It may be important for your modal to have generalization beyond your training data. If so, it is important to thoroughly separate any testing data from the training data. To remove this, you will want to work on your <a href="../data/index.html">data</a> preparation. If needed, the 'contamination' of data may be removed with <a href="https://lmsys.org/blog/2023-11-14-llm-decontaminator/">automated methods</a>.</p>
+<h3 id="finding-information">Finding information<a class="headerlink" href="#finding-information" title="Permanent link">&para;</a></h3>
+<p>The ability for an LLM to 'recall' information within its context window is an integral part of its ability function with contextually relevant information, and to act as effective retrieval mechanisms. To evaluate this ability, the <em>needle-in-a-haystack</em> test can be used. In it the following occur: </p>
+<ol>
+<li>Place a random fact or statement (the 'needle') in the middle of a long context window (the 'haystack')</li>
+<li>Ask the model to retrieve this statement</li>
+<li>Iterate over various document depths (where the needle is placed) and context lengths to measure performance</li>
+</ol>
+<p>In ideal systems, context retrieval will be independent of the position within the context, and of the content itself. </p>
+<details class="important">
+<summary><a href="https://github.com/gkamradt/LLMTest_NeedleInAHaystack">Testing with LLMTest_NeedleInAHaystack repo</a> shows where in the context space that LLMs may fail at context retrieval.</summary>
+<p>As demonstrated additionally in the authors' <a href="https://www.youtube.com/watch?v=KwRRuiCCdmc">youtube</a></p>
+</details>
+<p>It was, however Anthropic found, that <a href="https://www.anthropic.com/news/claude-2-1-prompting">LLMs can perform better</a> context retrieval when phrases are added: </p>
+<div class="highlight"><pre><span></span><code> “Here is the most relevant sentence in the context:” 
+</code></pre></div>
+<h3 id="sycophancy">Sycophancy<a class="headerlink" href="#sycophancy" title="Permanent link">&para;</a></h3>
+<p>Sycophancy is the degree to which a model mirrors biases, large or small, that are put into input queries by the user. In ideal systems, sycophancy will be minimized to prevent <em>echo-chamber</em> amplification of innaccuracies. </p>
+<div class="admonition code">
+<p class="admonition-title">The repo <a href="https://github.com/meg-tong/sycophancy-eval">Sycophancy-eval</a> offers manners and methods of evaluating sycophancy. </p>
+</div>
 <h3 id="general-discussions">General Discussions<a class="headerlink" href="#general-discussions" title="Permanent link">&para;</a></h3>
 <details class="tip">
 <summary><a href="https://www.science.org/doi/10.1126/science.adj5957">How do we know how smart AI systems are?</a></summary>
@@ -624,20 +717,17 @@ Models tend to perform better on photos and paintings🖼️ than on diagrams an
 <p>The evaluation of models helps us to identify which, if any, model to use for a particular task at hand. Directly related to the manner of pre-training, fine-tuning, and any RLHF, the ways that we consider the output can also be used to improve the models.</p>
 <h2 id="measure-what-matters">Measure what matters<a class="headerlink" href="#measure-what-matters" title="Permanent link">&para;</a></h2>
 <p>TODO: COMPLETE THIS</p>
-<ul>
-<li>Hallucinations</li>
-<li>Logic/Math</li>
-<li>Sycophancy, or the degree to which a model mirrors biases, large or small, put into input queries. The repo, <a href="https://github.com/meg-tong/sycophancy-eval">sycophancy-eval</a> offers some ability to evaluate this.</li>
-</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<details class="important">
+<summary><a href="https://github.com/MLGroupJLU/LLM-eval-survey">LLM Eval survey, paper collection</a></summary>
+<p><a href="https://arxiv.org/abs/2307.03109">Paper</a></p>
+</details>
 
 
 
 
 
 
-
-  
-  
 
 
 
