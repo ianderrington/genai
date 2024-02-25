@@ -20,7 +20,7 @@ There are several popular repositories that can serve as a starting point for yo
 #### Streamlit
 [Streamlit](https://blog.streamlit.io/langchain-streamlit/): This platform allows you to build machine learning and data science apps.
 
-[Streamlit agent](git@github.com:langchain-ai/streamlit-agent.git)
+[Streamlit agent](https://github.com/langchain-ai/streamlit-agent)
 
 #### Others
 - [Fly.io](https://www.fly.io)
@@ -37,6 +37,6 @@ There are several popular repositories that can serve as a starting point for yo
 - [DemoGPT](https://github.com/melih-unsal/DemoGPT): This tool connects Langchain and Streamlit to create dynamic apps that can be used repeatedly for interacting with Chat-GPTs.
 - [GPT Graph](https://github.com/m-elbably/gpt-graph): This tool allows for a graphical network representation of chat interactions.
 
--[pyRobBot](git@github.com:paulovcmedeiros/pyRobBot.git)
+-[pyRobBot](https://github.com/paulovcmedeiros/pyRobBot)
 
 By understanding your visualization needs and implementing an effective front end, you can ensure that your users have a smooth and intuitive experience when interacting with your AI technology.

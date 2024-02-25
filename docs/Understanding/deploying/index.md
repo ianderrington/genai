@@ -12,7 +12,7 @@ The client's necessities are determined by the specific target audience you're c
 
 The models must be capable of delivering the required content with an acceptable latency to meet your model's marketing requirements.
 
-To create a serviceable model, you may need to [optimize](../../Understand/architectures/optimization.md) your models' serving.
+To create a serviceable model, you may need to [optimize](../../Understanding/architectures/optimization.md) your models' serving.
 
 ### [Compute Requirements](#compute-needs)
 
@@ -22,7 +22,7 @@ Consider these general factors (as suggested by AWS) when assessing the requirem
 
 ### [Budget Constraints](#budget-available)
 
-The allocated budget will affect your tool's monetization strategy. Highly dependent on your business model, it is crucial to optimize [model serving](../../Understand/architectures/optimization.md) to avoid excessive computing needs. Using services that try to optimize this for you, like [OpenRouter](https://openrouter.ai/) may be helpful.
+The allocated budget will affect your tool's monetization strategy. Highly dependent on your business model, it is crucial to optimize [model serving](../../Understanding/architectures/optimization.md) to avoid excessive computing needs. Using services that try to optimize this for you, like [OpenRouter](https://openrouter.ai/) may be helpful.
 
 ### [Back-end Computing](#compute-back-end)
 

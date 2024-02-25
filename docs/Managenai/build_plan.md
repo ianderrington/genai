@@ -68,7 +68,7 @@ We will explore RAG and fine-tuning of chat models models, as well as other cogn
 
 ### Chatty Oracle
 
-We will first look at using [rag](../Understand/agents/rag.md) to enable lookup of the components within the database. This will rely on understanding gained from building our [self improvement](#self-improvement) architectures. 
+We will first look at using [rag](../Understanding/agents/rag.md) to enable lookup of the components within the database. This will rely on understanding gained from building our [self improvement](#self-improvement) architectures. 
 
 
 
@@ -195,7 +195,7 @@ Neo4j Semantic layer???
 We can make this easier to read
 
 - [ ] Improve landing page and header bar to be more modern. 
-- [ ] Build interactive graph representation of this site that includes summary information. Check [this out](https://towardsdatascience.com/making-network-graphs-interactive-with-python-and-pyvis-b754c22c270) and the [examples](../Use/examples/index.md)
+- [ ] Build interactive graph representation of this site that includes summary information. Check [this out](https://towardsdatascience.com/making-network-graphs-interactive-with-python-and-pyvis-b754c22c270) and the [examples](../Using/examples/index.md)
 - [ ] https://melaniewalsh.github.io/Intro-Cultural-Analytics/06-Network-Analysis/02-Making-Network-Viz-with-Bokeh.html
 - [ ] build with https://docusaurus.io/
 - [ ] Integrate example python notebooks and build with https://github.com/outerbounds/nbdoc

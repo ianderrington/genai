@@ -30,7 +30,7 @@ There are a number of issues related to modle accuracy that pose challenges for 
     * [Copywrite and IP](#copywrite-and-ip)
     * [Dual Use](#dual-use)
 
-In general [ethical use](../../Use/ethically/index.md) of GenAI will necessarily be considered to address all or most of these challenges.
+In general [ethical use](../../Using/ethically/index.md) of GenAI will necessarily be considered to address all or most of these challenges.
 
 At a high level, the concerns for displacement and capture of people's jobs must be taken into consideration. With arguments both minimizing and amplifying the concern, estimates still have around 300 million jobs replaced by AI, [according to a Goldman Sachs report](https://www.goldmansachs.com/intelligence/pages/generative-ai-could-raise-global-gdp-by-7-percent.html). AT the same time GDP could be increased by 7% and lift productivity. It is still apparent that [upskilling](#upskilling) to enable people to work with AI as an enabling tool is important to consider.
 

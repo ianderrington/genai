@@ -8,7 +8,7 @@ Before delving into the details, let's first understand what Gen()AI is.
 
 Gen()AI is a term that encapsulates both **Generative** and **General** AI. Each of these technologies has the capability to generate new information. Generative AI uses data, such as text, images, and videos, to create new content. On the other hand, General AI, also known as Artificial General Intelligence (AGI), is often viewed as a goal. It aims to generate information across almost all domains in a manner that is indistinguishable from, or even superior to, human-created content. 
 
-Recent advancements in Generative AI have positioned it as a potential stepping stone towards AGI. Given the [profound implications](../../Use/ethically/index.md) of Gen()AI on individuals and society, it is crucial to understand these technologies. 
+Recent advancements in Generative AI have positioned it as a potential stepping stone towards AGI. Given the [profound implications](../../Using/ethically/index.md) of Gen()AI on individuals and society, it is crucial to understand these technologies. 
 
 Generative AI is a subset of [AI in general](ai_and_ml_basics/index.md), as illustrated in the diagram below.
 

@@ -170,14 +170,14 @@ Here you'll find what you need to know to understand Gen()AI architecture.
         click PTM "./architectures/pre_trained_models.html"
         click Deploy "./deploying/index.html"
         click AG "./agents/index.html"
-        click CM "../Use/commercial_markets.html"
-        click SL "../Use/solution_licensing.html"
-        click VI "../Use/vendor_integration.html"
-        click Business "../Use/business.md"
-        click Ethical "../Use/ethically/index.md"
-        click Examples "../Use/examples/index.md"
-        click Interfacing "../Use/interfacing_layers/web_plugins.md"
-        click Marking "../Use/marking_and_detecting.md"
+        click CM "../Using/commercial_markets.html"
+        click SL "../Using/solution_licensing.html"
+        click VI "../Using/vendor_integration.html"
+        click Business "../Using/business.md"
+        click Ethical "../Using/ethically/index.md"
+        click Examples "../Using/examples/index.md"
+        click Interfacing "../Using/interfacing_layers/web_plugins.md"
+        click Marking "../Using/marking_and_detecting.md"
 
         classDef warmColor fill:#f9d5e5,stroke:#333,stroke-width:2px;
         classDef midColor fill:#f0e5d8,stroke:#333,stroke-width:2px;
@@ -197,7 +197,7 @@ Generative Artificial Intelligence, and related General AI and General Super AI 
 
 To manage these technologies effectively and responsibly _we must understand them_ 🚀. That is a complex task, especially given the speed at which we are generating novel insights, new discoveries, backed by increasingly powerful hardware. 
 
-We created Managen AI 🔮 to help you _understand_ and [_use_](../Use/index.md) Gen()AI. 
+We created Managen AI 🔮 to help you _understand_ and [_use_](../Using/index.md) Gen()AI. 
 
 What do you need to know?
 
@@ -209,7 +209,7 @@ What do you need to know?
     - [🔧 Optimize](architectures/optimization.md) your model for better performance and efficiency. 
     
     - [🛠️ Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
-    - [🧭 Consider Ethical concerns](../Use/ethically/index.md) help us to temper the responsible use of these powerful technologies. 
+    - [🧭 Consider Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies. 
     - 🏗️ [Deploy](./deploying/index.md) your model. 
     
 
@@ -217,7 +217,7 @@ In the documents you read here, you will be able to see an increasingly consiste
 
 ### How do you do stuff with Gen()AI?
 
-🛠️ As part of understanding, you'll learn a number of 'how-to's, in this section. You will also want to look at the [using guide](../Use/index.md) which will help you to directly use GenAI without needing to wade too-deeply into the complexities of research and engineering associated with Gen()AI. 
+🛠️ As part of understanding, you'll learn a number of 'how-to's, in this section. You will also want to look at the [using guide](../Using/index.md) which will help you to directly use GenAI without needing to wade too-deeply into the complexities of research and engineering associated with Gen()AI. 
 
 ⾾ Competition is fierce to create the 'best' (based on certain metrics) Gen()AI, so much knowledge may not be known to protect IP and other secrets.
 
@@ -225,7 +225,7 @@ Still, these trained foundation models may be used, with varying degrees of open
 
 If you are working on commercial projects, be sure to look at the Licenses to ensure you are legally compliant.
 
-🚨 And please, whatever you do, be cognisant of the [ethical concerns](../Use/ethically/index.md) 
+🚨 And please, whatever you do, be cognisant of the [ethical concerns](../Using/ethically/index.md) 
 
 Generative AI is a subset of machine learning that aim to creates new data samples or information based on an input. This technology has gained significant attention recently because they have been able to produce high-quality, realistic data across various domains, from images and videos to text and audio. 🌈
 

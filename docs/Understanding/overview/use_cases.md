@@ -17,11 +17,11 @@ The following table provides an overview of the general modalities in which Gene
 | Multidimensional Temporal sequences | Weather, Brain Recordings, Stock Market |
 | Multimodal variants | Combination of the above methods |
 
-For a more detailed description of these modalities, refer to [this section](../../Use/examples/by_modality/index.md).
+For a more detailed description of these modalities, refer to [this section](../../Using/examples/by_modality/index.md).
 
 ## General Activities
 
-Because at its core, GenAI works on Information, there several core ways numerous ways in which Generative AI can be used. The application often depends on the [field](../../Use/examples/by_field/index.md). Here are some activities that can be used in many, if not all, fields of applications:
+Because at its core, GenAI works on Information, there several core ways numerous ways in which Generative AI can be used. The application often depends on the [field](../../Using/examples/by_field/index.md). Here are some activities that can be used in many, if not all, fields of applications:
 
 ### Creating information 
 

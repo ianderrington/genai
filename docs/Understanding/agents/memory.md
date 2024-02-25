@@ -59,8 +59,8 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
 ## Text-
 
-??? code "[Read-agent: A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts](git@github.com:read-agent/read-agent.github.io.git)" read-agent
-    
+??? code "[Read-agent: A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts](https://github.com/read-agent/read-agent.github.io/)" read-agent
+    [Jupyter notebook](https://github.com/read-agent/read-agent.github.io/blob/main/assets/read_agent_demo.ipynb)
     **Developments**
     
     The authors reveal a manner of reading long documents and summarizing it using Gist memory to deal with Long Contexts.
