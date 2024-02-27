@@ -28,6 +28,11 @@ Implementing a solution-focused approach involves the following steps:
 5. Prepare to manage the use of AI in your operations. [See managing guide](managing/index.md).
 6. Learn how to mark your, and detect others', AI-generated content. [See marking and detecting guide](marking_and_detecting.md).
 
+### Wild-west Approach
+
+A 'wild-west' approach involves allowing individual teams and developers to work on their own use-cases and needs so that their problems may be more effectivel solved on reasonable timescales and timelines. While there may be different manners and methods of achieving similar results, detailed nuances may be built into their solutions that are hard to immediately incorporate in general solutions. When there are solutions that are found that may share a high-degree of similarity or overlap, it will be economical to consolidate components of those solutions, including components such as [computation](../Understanding/Deploying/computation.md), [orchestration](), and [front-ends]
+
+
 ## Introduction and Relevance
 
 As GenAI continues to evolve, it is becoming an integral part of many business operations. However, managing GenAI effectively requires a strategic approach that aligns with your business operations and culture. This guide provides insights into two primary methods: the task-focused approach and the solution-focused approach. 
