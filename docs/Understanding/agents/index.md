@@ -48,7 +48,7 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
         
         click Environment "./environments.html"
         Data -->|interpreted \n with| LLM[LLMs]
-        click Data "../../data/index.html" 
+        click Data "../../data/index.html"
         LLM <-->|uses| CognitiveArchitectures[Cognitive \nArchitectures]
         click LLM "../architectures/models/index.html"
         CognitiveArchitectures <--> |Find, Create, Read\nUpdate, Delete| Memory[Memory]
