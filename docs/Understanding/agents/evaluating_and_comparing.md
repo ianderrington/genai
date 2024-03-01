@@ -27,7 +27,7 @@ Below are some tools that you can use to help with this!
 
     <img width="1198" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/48305f8b-7d79-4c36-b731-2aacd035fa49">
 
-??? code tip "[AgentBench: Evaluating LLMs as Agents](https://github.com/THUDM/AgentBench)"
+??? code "[AgentBench: Evaluating LLMs as Agents](https://github.com/THUDM/AgentBench)"
     A comprehensive 8-environment evaluation for different agents from different models.
     [Paper](https://arxiv.org/pdf/2308.03688.pdf)
     ![image](https://github.com/ianderrington/genai/assets/76016868/b6d3e2d8-7548-4336-b9ae-ced2844aa6ae)
@@ -35,3 +35,11 @@ Below are some tools that you can use to help with this!
 ??? code "[JudgeLM: Fine-tuned Large Language Models are Scalable Judges](https://github.com/baaivision/judgelm) trains LLMs to judge the outputs of LLMs based on reference examples and achieves greater coherence than human rating"
     Also provides a great example GUI and interface using GradIO
     ![image](https://github.com/ianderrington/genai/assets/76016868/4a3ca49f-39d0-453c-98f5-3498d743afa1)
+
+??? tip "[Evaluating Very Long-Term Conversational Memory of LLM Agents](https://arxiv.org/pdf/2402.17753.pdf)"
+    **Developments** The authors create a pipeline that combines people and AI to evaluate very-long multi-turn dialogues to determine rhw xpviiliry od unswearnsinf long-range temporal and causal dynamics. They create a dataset complete with human assesment. Finally, they show that longer-context models, and RAG can improve answers byconsiderable amounts. 
+    ![image](https://github.com/ianderrington/genai/assets/76016868/96c71458-be87-4e9d-9a7e-2cbe6b3ee9cd)
+    **Method**
+    The most successful results involved using incremental summarizaton to iteratively 'create a summary of precdding sessions and then use that summary as a basis to summarize the subsequent sessions, based on [BooookScore](https://arxiv.org/abs/2310.00785)
+    [Code to be found here](https://github.com/snap-research/LoCoMo)
+
