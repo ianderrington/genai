@@ -8,6 +8,23 @@ Here are a few boards that help to aggregate and test models that have been rele
 - [Hugging Face LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) An essential chart for documenting the model performance across multiple models.
 - [lmsys.org leader board](https://lmsys.org/blog/2023-06-22-leaderboard/)
 
+### Multi-criteria evaluation
+
+??? important "[HELM Instruct: A Multidimensional Instruction Following Evaluation Framework with Absolute Ratings](https://crfm.stanford.edu/2024/02/18/helm-instruct.html)" helm-instruct
+    **Developments** The authors create HELM instruct to use multiple LLMs to evaluate multiple model for given input instructions. They evaluate around the following criteria: _Helpfulness, Understandability, Completeness, COnciseness, and Harmlessness_. 
+
+    ![image](https://github.com/ianderrington/genai/assets/76016868/2217abd4-bf6a-4513-86c9-a229f40c3f62)
+    The evaluation rubric is as follows
+    ![image](https://github.com/ianderrington/genai/assets/76016868/6b7fd52e-9c93-46a8-9d3e-b321e430b698)
+    
+    **Results** They find that GPT-4 generally performs the best in all metrics. Interestingly, however, they do not find high consistency amongst evaluators.
+    ![image](https://github.com/ianderrington/genai/assets/76016868/cc53d97d-86f3-43a6-9899-d06dcb33feff)
+
+
+
+        
+        
+
 ### Domain expertise
 There are several domains of expertise where it may be essential to measure Model's performance. 
 
