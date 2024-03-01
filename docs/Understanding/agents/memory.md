@@ -14,7 +14,7 @@ Here are some general types of memory:
 
 * Conversaton Buffers
 * Scratch-pads
-* Gists
+* Gists and Summarizaton
 * Action-success lookups 
 
 For example Open AI has launched [memory](https://openai.com/blog/memory-and-new-controls-for-chatgpt) for chatGPT, that stores relevant memory in a manner that allows the user control of what can be stored. It does not, yet, allow for memory compartmentalization of memories into groups that could help to focus relevance to generated content.
@@ -26,7 +26,6 @@ Memory can be retrieved via look up methodes that involve data-base queries (SQL
 ### Traditional databases
 
 Databases that rely on query-languages such as SQL or non-SQL based databases, or even 'csv-type' information stores can be accessed and generated using agents.
-
 
 ### Graph Databases
 
@@ -57,7 +56,14 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
 
 
-## Text-
+## Text
+
+??? code "[BooookScore: A systematic exploration of book-length summarization in the era of LLMs](https://github.com/lilakk/BooookScore)" BooookScore
+    **Developments** The authors reveal an effective manner of providing effective summaries of long books using two methods: 1. Hierarchichal merging of chunk-level summaries, and 2. Incremental update using a running summary. 
+    ![image](https://github.com/ianderrington/genai/assets/76016868/2c711b18-d76f-4c75-b7fe-7960d8e7ef93)
+    **Results** Human evaluation shows that "hierarchical merging produces more coherent summaries but may lack detail compared to incremental updating; closedsource models like GPT-4 and Claude 2 generate the most coherent summaries; and increasing chunk size can significantly improve incremental updating"
+    [Paper](https://arxiv.org/abs/2310.00785)
+    
 
 ??? code "[Read-agent: A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts](https://github.com/read-agent/read-agent.github.io/)" read-agent
     [Jupyter notebook](https://github.com/read-agent/read-agent.github.io/blob/main/assets/read_agent_demo.ipynb)
