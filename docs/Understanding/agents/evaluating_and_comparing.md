@@ -4,6 +4,8 @@ Below are some tools that you can use to help with this!
 
 ## Repositories
 
+!!! code "[Truthful - QA](https://github.com/sylinrl/TruthfulQA) helpes to Measuring How Models Mimic Human Falsehoods" 
+
 ??? code "[Helm](https://github.com/stanford-crfm/helm) contains code used in the Holistic Evaluation of Language Models project"
     [Paper](https://arxiv.org/pdf/2211.09110.pdf)
     <img width="817" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/40b280b6-749e-49fd-8e72-3b51c38d06b9">

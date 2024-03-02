@@ -1,5 +1,5 @@
 nav:
   - index.md
-  - augmentation.md
   - selection.md
-  - simulation.md
+  - augmentation.md
+  - synthetic.md

@@ -85,7 +85,15 @@ MANAGEN: (Table with this the characteristic chart of the different methods to h
 
 
 ??? code "[PB-LLM: Partially Binarized Large Language Models](https://github.com/hahnyuan/PB-LLM) to compress identified model weights into a single bit, while allowing others to only be partially compressed."
+
     [Paper](https://github.com/hahnyuan/PB-LLM)
+
+??? code "[GPTVQ: The Blessing of Dimensionality for LLM Quantization](https://arxiv.org/pdf/2402.15319.pdf)"
+
+    The authors "show that the size versus accuracy trade-off of neural network quantization can be significantly improved by increasing the quantization dimensionality. We propose the GPTVQ method, a new fast method for post-training vector quantization (VQ) that scales well to Large Language Models (LLMs). Our method interleaves quantization of one or more columns with updates to the remaining unquantized weights, using information from the Hessian of the per-layer output reconstruction MSE. Quantization codebooks are initialized using an efficient data-aware version of the EM algorithm. The codebooks are then updated, and further compressed by using integer quantization and SVD-based compression. GPTVQ establishes a new state-of-the art in the size vs accuracy trade-offs on a wide range of LLMs such as Llama-v2 and Mistral. Furthermore, our method is efficient: on a single H100 it takes between 3 and 11 hours to process a Llamav2-70B model, depending on quantization setting. Lastly, with on-device timings for VQ decompression on a mobile CPU we show that VQ leads to improved latency compared to using a 4-bit integer format."
+
+
+    [Code](https://github.com/qualcomm-ai-research/gptvq) [Code](https://github.com/Qualcomm-AI-research/transformer-quantization)
 
 ### Knowledge Distillation
 

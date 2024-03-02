@@ -3,7 +3,7 @@ Data augmentation is a strategy that enables practitioners to increase the quali
 
 ## What is Data Augmentation?
 
-Data augmentation is a process of creating new data from the existing data for model [pre-training](../../architectures/training/pre-training.md) and [fine-tuning](../../architectures/training/finetuning.md). It is a form of [synthetic data](simulation.md) generation that can be used to improve the performance of machine learning models. The main idea behind data augmentation is to create variations in or structure from original data, that can capture different perspectives and scenarios, thereby enriching the dataset. Data augmentation has shown direct value in nearly all domains and modalities it has been explored in. We focus here primarily on text-LLM augmentation. 
+Data augmentation is a process of creating new data from the existing data for model [pre-training](../../architectures/training/pre-training.md) and [fine-tuning](../../architectures/training/finetuning.md). It is a form of [synthetic data](synthetic.md) generation that can be used to improve the performance of machine learning models. The main idea behind data augmentation is to create variations in or structure from original data, that can capture different perspectives and scenarios, thereby enriching the dataset. Data augmentation has shown direct value in nearly all domains and modalities it has been explored in. We focus here primarily on text-LLM augmentation. 
 
 ### Why is Data Augmentation Important?
 

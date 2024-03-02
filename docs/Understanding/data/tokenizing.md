@@ -37,7 +37,7 @@ The paper titled [Neural Machine Translation of Rare Words with Subword Units](h
 
 ??? code "[Sentence Piece](https://github.com/google/sentencepiece) implements subword units (e.g., byte-pair-encoding (BPE) and unigram language model"
 
-??? important "[Unigram Language Model (Kudo)](https://arxiv.org/pdf/1804.10959.pdf) introduces subword regularization, which trains the model with multiple subword segmentations probabilistically sampled during training". 
+??? important "[Unigram Language Model (Kudo)](https://arxiv.org/pdf/1804.10959.pdf) introduces subword regularization, which trains the model with multiple subword segmentations probabilistically sampled during training" 
 
     Effectively, this takes aliasing-like effects that cause different tokenization. It is more effective because it breaks it down in different ways.
 
@@ -83,6 +83,7 @@ It is regarded that tokenizing is a bit arbitrary and has disadvantages. There a
 ## Interesting research
 
 ??? important "[Getting the most out of your tokenizer for pre-training and domain adaptation](https://arxiv.org/pdf/2402.01035.pdf)"
+
     The authors highlight sub-optimial tokenizers hurt performance and efficiency of models, and reveal specialized Byte-Pair Encoding code tokenizers with a new pre-tokenizer with improved performance. 
     <img width="340" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/96e8d12a-5c95-4270-b41a-8e201335ecdd">
     <img width="445" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/70403f6b-68d4-4b0e-93c4-3315a91aec24">
