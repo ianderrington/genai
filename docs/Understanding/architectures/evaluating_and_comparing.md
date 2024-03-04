@@ -58,6 +58,14 @@ It was, however Anthropic found, that [LLMs can perform better](https://www.anth
  “Here is the most relevant sentence in the context:” 
 ```
 
+### Deception
+??? "[Role play with large language models (Murray Shanahan et al., November 2023)](https://www.nature.com/articles/s41586-023-06647-8)"
+
+   Abstract:
+   "As dialogue agents become increasingly human-like in their performance, we must develop effective ways to describe their behaviour in high-level terms without falling into the trap of anthropomorphism. Here we foreground the concept of role play. Casting dialogue-agent behaviour in terms of role play allows us to draw on familiar folk psychological terms, without ascribing human characteristics to language models that they in fact lack. Two important cases of dialogue-agent behaviour are addressed this way, namely,         
+ (apparent) deception and (apparent) self-awareness."
+
+
 ### Sycophancy
 
 Sycophancy is the degree to which a model mirrors biases, large or small, that are put into input queries by the user. In ideal systems, sycophancy will be minimized to prevent _echo-chamber_ amplification of innaccuracies. 
