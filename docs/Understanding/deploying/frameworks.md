@@ -95,6 +95,9 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 !!! tip "[Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model."
 
+??? code "[LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀](https://github.com/Alpha-VLLM/LLaMA2-Accessory)
+    🚀LLaMA2-Accessory is an open-source toolkit for pretraining, finetuning and deployment of Large Language Models (LLMs) and multimodal LLMs. This repo is mainly inherited from LLaMA-Adapter with more advanced features.🧠
+    ![image](https://github.com/ianderrington/genai/assets/76016868/d55e274a-13af-40bd-9586-3bf56557175b)
 
 ??? code "Code and models surrounding Llama"
     - [LlamaGPT](https://github.com/getumbrel/llama-gpt) A self-hosted, offline, ChatGPT-like chatbot, powered by Llama 2. 100% private, with no data leaving your device.
