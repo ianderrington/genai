@@ -26,6 +26,12 @@ Generative AI has one of the most powerful potentials for science by enabling ra
 
 Science in the Loop Optimizaton enables for the creation and optimization of scientific-related components. Generally related to manual or semiautonomous autonomous biological, biochemistry, or chemistry laboratories, they may extend to other domains.
 
+
+!!! tip "[Autonomous chemical research with large language models](https://www.nature.com/articles/s41586-023-06792-0)"
+    **Developments** The authors reveal how a 'Coscientist' architecture can assist in the development of more effective research results.
+    <img width="741" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5baa36c3-a3b0-4021-82da-c1f1aa6ea2a7">
+    
+
 ??? tip "[Emergent autonomous scientific research](https://arxiv.org/pdf/2304.05332.pdf)"
     <img width="658" alt="image" src="https://github.com/ianderrington/general/assets/76016868/7fd5c4ce-9468-4cf2-a9b9-d3913b66e656">
 
