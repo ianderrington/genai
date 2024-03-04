@@ -6,6 +6,11 @@ Generating or modifying protein sequences to improve behavior, or to create nove
 
 Protein language models, PLMs, are increasingly useful in predicting structure and function of proteins. 
 
+### General methods of optimization 
+
+There are two general targets to consider in optimizing proteins: **Evolutionary**, that starts from a specific protein and aims to optimize it, and **De Novo**, which builds more indirectly around a particular goal or outcome without specific reference to an individual protein. 
+
+
 ## Methods
 
 ### Sequence prediction 
@@ -35,8 +40,14 @@ Protein language models, PLMs, are increasingly useful in predicting structure a
 
 - [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end.
 
-
 #### Function
+
+??? tip "[De novo design of luciferases using deep learning](https://www.nature.com/articles/s41586-023-05696-3)"
+    ![image](https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278)
+
+
+
+
 
 ??? code "[Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm)"
     
