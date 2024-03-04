@@ -117,6 +117,21 @@ They improve computation complexity in one of several ways:
 - Inclusion of a recurrent RNN-style that permits memory to be retained.
 - Memory retrieval systems.
 
+??? code "[HyperAttention: Long-context Attention in Near-Linear Time](https://github.com/insuhan/hyper-attn)" hyperattention
+    
+    **Developments** The authors reveal a new method of attention that allows for very-long context lengths which they call 'hyperattention'. This algorithm finds (1) larger entries in the attention matrix using `sorted locality sensitive hashing`, and then performs column subsampling to rearrange the matrices to provide block-diagonal approximation.
+    
+    ![image](https://github.com/ianderrington/genai/assets/76016868/88f96542-7b29-4646-8672-81d4a19ae177)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/d8af04f8-0100-4f41-b79d-177212b237eb)
+    
+    **Results** While not without a tradeoff for perplexity, the speedup for long context lengths can be considerable. 
+    <img width="651" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3800a0b1-8344-4f91-bf1e-4f1a208f7ec7">
+
+    <img width="646" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/516835c5-a421-4906-ba0d-919c1f7ad2c4">
+
+    
+    [Paper](https://arxiv.org/pdf/2310.05869.pdf)
+
 ??? code "[Generating Long Sequences with Sparse Transformers](https://arxiv.org/pdf/1904.10509.pdf) provides simple solutions to generate longer sequences."
     <img width="662" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/86d4dc29-7711-490d-a2a8-99c4a4d34027">
 
