@@ -6,35 +6,55 @@ Generating or modifying protein sequences to improve behavior, or to create nove
 
 Protein language models, PLMs, are increasingly useful in predicting structure and function of proteins. 
 
-### General methods of optimization 
+### Methods of optimization 
 
 There are two general targets to consider in optimizing proteins: **Evolutionary**, that starts from a specific protein and aims to optimize it, and **De Novo**, which builds more indirectly around a particular goal or outcome without specific reference to an individual protein. 
 
+### Considerations of optimization 
 
-## Methods
+#### Sequence optimization 
+The protein protein sequence may is a primary target of optimization because the sequence has direct impact over the enzyme's structure and function. 
 
-### Sequence prediction 
-#### Transformers
-#### Diffusion
+#### Reagent conditions
 
-### GANS
+Proteins do not function in isolation, but in a surrounding environment of agents and reagents. While protein sequences are of immediate itnerest because of potential gains of information, rea-gent types and  concentrations will powerfully govern the quality of synthesized products. A protein that has been evaluated in one condition, is unlikely  to be optimial in another condition, and similarly, an protein that is optimized based on sequence, may not be optimal in new conditions. It may be useful to use reagent-optimization to reduce or eliminate potentially harmful or toxic material. 
 
-### Non-LLM based
-#### Evolutionary
+
+
+#### Protocol planning
+
+Similarly to _reagents_, the overall protocol in how a reagent or set of reagents are combined may significantly impact not just the quality of the results, but costs and disposal considerations that may need to be considered as well. The protocols may be followed by people, or for more fully automous systems, written into code or pseudo-code that can be injested by robotic systems. For both practical and ethical reasons, it is important to _evaluate_ protocols before following them, lest the results be a potentially avoidable waste of time due to failed outcomes, or potentially harmful because they are not effectively understood. 
+
+??? code "[BioPlanner: Automatic Evaluation of LLMs on Protocol Planning in Biology](https://github.com/bioplanner/bioplanner)"
+
+    <img width="642" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3a7cfe64-03b9-4ecb-aeac-f18c66902c91">
+    
+    Abstract: The ability to automatically generate accurate protocols for scientific experiments would represent a major step towards the automation of science. Large Language Models (LLMs) have impressive capabilities on a wide range of tasks, such as question answering and the generation of coherent text and code. However, LLMs can struggle with multi-step problems and long-term planning, which are crucial for designing scientific experiments. Moreover, evaluation of the accuracy of scientific protocols is challenging, because experiments can be described correctly in many different ways, require expert knowledge to evaluate, and cannot usually be executed automatically. Here we present an automatic evaluation framework for the task of planning experimental protocols, and we introduce BioProt: a dataset of biology protocols with corresponding pseudocode representations. To measure performance on generating scientific protocols, we use an LLM to convert a natural language protocol into pseudocode, and then evaluate an LLM's ability to reconstruct the pseudocode from a high-level description and a list of admissible pseudocode functions. We evaluate GPT-3 and GPT-4 on this task and explore their robustness. We externally validate the utility of pseudocode representations of text by generating accurate novel protocols using retrieved pseudocode, and we run a generated protocol successfully in our biological laboratory. Our framework is extensible to the evaluation and improvement of language model planning abilities in other areas of science or other areas that lack automatic evaluation.
+    [Paper](https://arxiv.org/pdf/2310.10632.pdf)
+
+#### Candidate Identification
+
+Particularly for evolutionary methods, it is essential to know _where to start_ optimizing from. GenAI can be used to identify candidates based on databases of prior candidates. 
+
+## Architectures
+#### Traditional
+#### Deep
+##### LLMs
+###### Diffusion
+##### GANS
 
 ## Optimization Targets
-
+There are several optimization targets of direct interest 
 - [Structure](#structure)
 - [Function](#function)
     - Enzymatic Catalysis
-- Fluorescence
+    - Fluorescence
 - [Protein Binding](#binding)
     - Proteins
     - Nucleic Acids
     - Drugs molecules
     - Metals
-
-## Targets
+- Relevancy 
     
 #### Structure
 
@@ -44,9 +64,6 @@ There are two general targets to consider in optimizing proteins: **Evolutionary
 
 ??? tip "[De novo design of luciferases using deep learning](https://www.nature.com/articles/s41586-023-05696-3)"
     ![image](https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278)
-
-
-
 
 
 ??? code "[Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm)"
