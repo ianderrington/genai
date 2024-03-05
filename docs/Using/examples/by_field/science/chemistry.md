@@ -5,7 +5,7 @@ Chemistry optimization is useful for drugs, materials synthesis.
 ### Dual use
 It is important to first consider dual-use and potential intentional or accidental harm that could come from the generation steps. Any GenAI enabled solution must necessarily have guardrails to prevent the synthesis of chemicals or byproducts that are harmful to people or to the environment. 
 
-!!! tip "[Dual use of artificial-intelligence-powered drug discovery](https://www.nature.com/articles/s42256-022-00465-9https://www.nature.com/articles/s42256-022-00465-9)
+!!! tip "[Dual use of artificial-intelligence-powered drug discovery](https://www.nature.com/articles/s42256-022-00465-9https://www.nature.com/articles/s42256-022-00465-9)"
 
 
 ### Drugs
