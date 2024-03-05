@@ -43,6 +43,13 @@ One of the most successful examples of this is [Instruct GPT](https://arxiv.org/
 
 
 ## RLHF
+
+!!! important "[Training language models to follow instructions with human feedback](https://arxiv.org/pdf/2203.02155.pdf)"
+    Instruct GPT allows for following of instructions. InstructGPT, established a powerful paradigm of LLM performance
+    <img width="1006" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f8eccb3c-0afe-4f8f-a477-4269c5b93fb0">
+
+
+
 ??? note  "[Learning to summarize from human feedback](https://proceedings.neurips.cc/paper/2020/file/1f89885d556929e98d3ef9b86448f951-Paper.pdf) Provides initial successful examples using PPO and human feedback to improve summaries."
 
 
