@@ -1,23 +1,25 @@
-TODO: This needs to split up in to pre-training, finetuning and optimization
-
 Training GenAI will generally be domain/modality specific.
 
 1. Self-supervised [pre-training](pre-training.md) to predict the next token with reasonable likelihoods.
-1. 
-1. Supervised or self-supervised [Finetuning](./finetuning.md) on higher quality data sets sometimes [recurrently](./recurrent.md) using [simulated data](../../data/preparation/synthetic.md),
-1. [Feedback](feedback.md) to more accurately train a model to produce output that is is more globally accurate to the input prompts.  
+1. Supervised or self-supervised [Finetuning](./finetuning.md) on higher quality data sets.
+    - These datasets may be done so [recurrently](./recurrent.md) using [simulated data](../../data/preparation/synthetic.md).
+1. [Automatically correcting](#automatic-correction) models to more accurately train a model to produce output that is is more globally accurate to the input prompts.
 
-Basics: [Distributed Training](https://neptune.ai/blog/distributed-training)
-https://neptune.ai/blog/distributed-training-frameworks-and-tools
+## Automatically Correcting 
 
+Foundationally, the use of [reinforcement learning with human feedback (RLHF)](./feedback.md#rlhf) has enabled highly successful models that are aligned with tasks and requirements. The automated improvement of GenAI can be bbroken down into improving the models during _training time_ and then during _generation time_. 
 
+!!! important "[Automatically Correcting Large Language Models: Surveying the landscape of diverse self-correction strategies](https://arxiv.org/pdf/2308.03188.pdf)"
+    **Developments** The authors reveal a comprehensive set of solutions to iteratively improve models.
+    <img width="657" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/961478b0-a40a-4c61-8ff7-f86c93633954">
 
-!!! important "[Training language models to follow instructions with human feedback](https://arxiv.org/pdf/2203.02155.pdf)"
-    Instruct GPT allows for following of instructions. InstructGPT, established a powerful paradigm of LLM performance
-    <img width="1006" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f8eccb3c-0afe-4f8f-a477-4269c5b93fb0">
 
 
 ### Frameworks
+
+- Basics: [Distributed Training](https://neptune.ai/blog/distributed-training)
+https://neptune.ai/blog/distributed-training-frameworks-and-tools
+
 
 - [Levanter (not just LLMS) ](https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html) Codebase for training FMs with JAX. Using Haliax for naming tensors field names instead of indexes. (for example Batch, Feature....). Full sharding and distributable/parallelizable.
 -  [DeepSpeed ZeRO++](https://www.microsoft.com/en-us/research/blog/deepspeed-zero-a-leap-in-speed-for-llm-and-chat-model-training-with-4x-less-communication/) A framework for accelerating model pre-training, finetuning, RLHF updating.  by minimizing communication overhead. A likely essential concept to be very familiar with.
@@ -26,17 +28,3 @@ https://neptune.ai/blog/distributed-training-frameworks-and-tools
 
 
 
-## Mixture of Experts.
-
-- [Scaling Expert Language Models with Unsupervised Domain Discovery](https://arxiv.org/pdf/2303.14177.pdf) "parse language models on arbitrary text corpora. Our method clusters a corpus into sets of related documents, trains a separate expert language model on each cluster, and combines them in a sparse ensemble for inference. This approach generalizes embarrassingly parallel training by automatically discovering the domains for each expert, and eliminates nearly all the communication overhead of existing sparse language models. "
-
-<img width="680" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f4ec7e2e-bf27-4fc0-b420-0010e1caef71">
-
-## General Training Improvements
-
-
-
-### Pruning and compression
-
-- [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](https://arxiv.org/pdf/2301.00774.pdf) Remove up to ~50% parameters preserving
-- [SqueezeLLM](https://arxiv.org/pdf/2306.07629.pdf) They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' [Github](https://github.com/SqueezeAILab/SqueezeLLM)
