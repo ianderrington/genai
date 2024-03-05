@@ -142,6 +142,23 @@ There are several optimization targets of direct interest
 
     [Paper](https://www.biorxiv.org/content/10.1101/2021.02.12.430858v3.full.pdf)
 
+
+??? note "[ForceGen: End-to-end de novo protein generation based on nonlinear mechanical unfolding responses using a language diffusion model
+](https://www.science.org/doi/10.1126/sciadv.adl4000)"
+      **Developments**  The authors present ForceGen, an end-to-end algorithm for de novo protein generation based on nonlinear mechanical unfolding responses. Rooted in the physics of protein mechanics, this generative strategy provides a powerful way to design new proteins rapidly, including exquisite and rapid predictions about their dynamical behavior.
+      
+      Proteins, like any other mechanical object, respond to forces in peculiar ways. Think of the different response you'd get from pulling on a steel cable versus pulling on a rubber band, or the difference between honey and glass. Now, we can design proteins with a set of desirable mechanical characteristics, with applications from health to sustainable plastics.
+
+      <img width="701" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3af9d0de-93dd-4591-9967-ebb856307618">
+
+      <img width="727" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f985357c-2b3b-4092-875c-93648ab167f0">
+
+      The key to solving this problem was to integrate a **protein language model with denoising diffusion methods**, and using accurate atomistic-level physical simulation data to endow the model a first-principles understanding. ForceGen can solve both forward and inverse tasks: In the forward task, we can predict how stable a protein is, how it will unfold and what the forces involved are, all given just the sequence of amino acids. In the inverse task, we can design new proteins that meet complex nonlinear mechanical signature targets.
+      
+      With the new generative model they can directly design proteins to meet complex nonlinear mechanical property-design objectives by leveraging deep knowledge on protein sequences from a pretrained protein language model and maps mechanical unfolding responses to create proteins.
+      
+      Via full-atom molecular simulations for direct validation from physical and chemical principles, we demonstrate that the designed proteins are de novo, and fulfill the targeted mechanical properties, including unfolding energy and mechanical strength, and a detailed unfolding force-separation curves. 
+
     
 #### Structure Models
 
