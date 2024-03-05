@@ -28,7 +28,9 @@ Science in the Loop Optimizaton enables for the creation and optimization of sci
 
 There are components of include 
 
-- [Protocol optimization](#protocol)
+- [Protocol optimization](#protocol-optimization)
+- [Molecule optimization](#molecule-optimization)
+- [Measurement optimization](#measurement-optimization)
 
 
 !!! tip "[Autonomous chemical research with large language models](https://github.com/gomesgroup/coscientist)" coscientist
@@ -53,6 +55,13 @@ Molecule optimization focuses on the improvement of generally single component w
 
 ### Measurement Optimization
 
-Measurement optimization involves improving the ability to measure something. For example diagnostics equipment. 
+Measurement optimization involves improving the ability to measure something. This includes tuning physical parameters within a
+
+
+### Robotic automation
+
+Autonomous laboratories are controlled by different robotics setups and automation languages including specific ones Lua or more general in-house control systems. 
+
+
 
 
