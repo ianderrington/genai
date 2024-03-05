@@ -25,9 +25,12 @@ The following are some of the commonly used methods for optimizing AI models:
 7. [Hardware enabled optimization](#hardware-enabled-optimization)
 8. [Compression](#compression)
 
+
 ### Pruning
 
 Pruning is a technique that eliminates weights that do not consistently produce highly impactful outputs.
+
+!!! tip "[SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](https://arxiv.org/pdf/2301.00774.pdf) Remove up to ~50% parameters preserving quality"
 
 ??? important "[Fast as Chita: Neural network pruning with combinatorial optimization](https://blog.research.google/2023/08/neural-network-pruning-with.html)"
 
@@ -100,10 +103,17 @@ MANAGEN: (Table with this the characteristic chart of the different methods to h
 Train a new smaller model using the output of bigger models.
 (TODO)
 
+
+### Fusion approaches 
 ??? code "[QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models](https://github.com/yuhuixu1993/qa-lora)"
     ![image](https://github.com/ianderrington/genai/assets/76016868/87219990-b7e8-4895-a274-a55584f2cb9e)
 
 [Knowledge Distillation and Compression Demo.ipynb](https://colab.research.google.com/drive/1A0SWlfcd6ISzsc0gLBIr4N_vECHhUAst#scrollTo=6v59Uu9pb_wM)
+
+
+
+??? code "[SqueezeLLM](https://github.com/SqueezeAILab/SqueezeLLM)  They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' 
+    [SqueezeLLM](https://arxiv.org/pdf/2306.07629.pdf)
 
 ### Low rank and sparsity approximations
 TODO
@@ -112,6 +122,12 @@ TODO
 ### Mixture of Experts
 
 MOE provides the ability to use different smaller models that have better performance in certain domains. Their use is notable, as it has been stated that GPT-4 is powered by 8 different agents.
+
+??? tip "[Scaling Expert Language Models with Unsupervised Domain Discovery](https://arxiv.org/pdf/2303.14177.pdf)"
+    **Developments**  "Our method clusters a corpus into sets of related documents, trains a separate expert language model on each cluster, and combines them in a sparse ensemble for inference. This approach generalizes embarrassingly parallel training by automatically discovering the domains for each expert, and eliminates nearly all the communication overhead of existing sparse language models. "
+
+    <img width="680" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f4ec7e2e-bf27-4fc0-b420-0010e1caef71">
+
 
 ??? code "[SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention](https://github.com/robertcsordas/moe_attention)"
     [Paper](https://arxiv.org/pdf/2312.07987.pdf)
