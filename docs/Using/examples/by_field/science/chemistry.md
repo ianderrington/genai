@@ -1,6 +1,22 @@
 ## Use cases
+
+Chemistry optimization is useful for drugs, materials synthesis. 
+
+### Dual use
+It is important to first consider dual-use and potential intentional or accidental harm that could come from the generation steps. Any GenAI enabled solution must necessarily have guardrails to prevent the synthesis of chemicals or byproducts that are harmful to people or to the environment. 
+
+!!! tip "[Dual use of artificial-intelligence-powered drug discovery](https://www.nature.com/articles/s42256-022-00465-9https://www.nature.com/articles/s42256-022-00465-9)
+
+
+### Drugs
+- [Deep learning-guided discovery of an antibiotic targeting Acinetobacter baumannii](https://www.nature.com/articles/s41589-023-01349-8)
+
+## Components
+
 ### Protocol Optimization 
+
 ??? code "[BAYESIAN OPTIMIZATION OF CATALYSTS WITH IN-CONTEXT LEARNING](https://github.com/ur-whitelab/BO-LIFT) Uses LLMs to optimize synthesis procedures and prediction of properties. They allow for in-context learning."
+
    <img width="653" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/522cffed-3016-41f1-b073-f2d1e77cbdb6">
 
    [Paper](https://arxiv.org/pdf/2304.05341.pdf)
@@ -20,14 +36,16 @@
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/08779ac3-d63f-4c69-a18b-95327e7eef0e)
 
-
 ??? tip "[Optimizing Chemical Reactions with Deep Reinforcement Learning (2017)](https://pubs.acs.org/doi/epdf/10.1021/acscentsci.7b00492)" deep-reaction-optimizer
     The authors reveal the use of models that iteratively improve outcomes for [lab in loop optimization](./index.md#lab-in-loop-optimization) using deep learning models. Using RNN-enabled re-inforcement learning. The resulting Deep Reaction Optimizer (DRO) is supposed to "guide interactive decision-making procedure in optimizing reactions" by combining deep RL with chemistry domain knowledge.
     <img width="418" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4de4e2e2-fbca-4fe9-8c1e-a3b3af1d71e0">
  
 ## Models
 
-[ChemLLM: A Chemical Large Language Model](https://arxiv.org/abs/2402.06852)
+??? code "[ChemLLM: A Chemical Large Language Model](https://huggingface.co/AI4Chem/ChemLLM-7B-Chat)"
+    <img width="589" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/fd81410c-fc59-47a1-95f1-346bfd380ef2">
+
+    [Paper](https://arxiv.org/abs/2402.06852)
 
 ## Frameworks
 
