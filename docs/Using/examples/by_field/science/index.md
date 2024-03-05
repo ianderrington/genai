@@ -47,6 +47,8 @@ Optimized protocols first need to start from having protocols. Protocols may sta
 
 ??? tip "[ProtoCode: Leveraging Large Language Models for Automated Generation of Machine-Readable Protocols from Scientific Publications](https://arxiv.org/pdf/2312.06241.pdf)"
     **Developments** The authors develop Protocode to finetune LLMs to convert protocols from literature into operational files for a thermal cycler system. 
+    <img width="625" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/8fd92c6c-1e14-4cc8-8187-99c56ab929fc">
+
 
 ### Molecule Optimization 
 
