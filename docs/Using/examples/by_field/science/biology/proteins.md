@@ -20,6 +20,11 @@ The protein protein sequence may is a primary target of optimization because the
 Proteins do not function in isolation, but in a surrounding environment of agents and reagents. While protein sequences are of immediate itnerest because of potential gains of information, rea-gent types and  concentrations will powerfully govern the quality of synthesized products. A protein that has been evaluated in one condition, is unlikely  to be optimial in another condition, and similarly, an protein that is optimized based on sequence, may not be optimal in new conditions. It may be useful to use reagent-optimization to reduce or eliminate potentially harmful or toxic material. 
 
 
+??? tip "[Exploring Optimal Reaction Conditions Guided by Graph Neural Networks and Bayesian Optimization (2022)](https://pubs.acs.org/doi/10.1021/acsomega.2c05165)"
+    **Developments** The authors present a n approach that determines `suitable` conditions for organic reactions using Bayesina Optimization that is guided by Graph Neural Networks trained on organic synthesis data. The resulting algorithm is better than other state of art and human-optimization by over 8%. 
+
+
+
 
 #### Protocol planning
 
@@ -36,11 +41,26 @@ Similarly to _reagents_, the overall protocol in how a reagent or set of reagent
 
 Particularly for evolutionary methods, it is essential to know _where to start_ optimizing from. GenAI can be used to identify candidates based on databases of prior candidates. 
 
+Searching is essential to find similar sequences that may aid in the training or fine-tuning of models. This can be done with sequence-based alignment, as well as structure-based alignment. Here are a few references of highly-relevant tools for search/alignment. 
+
+??? tip "[Fast and accurate protein structure search with: Foldseek](https://search.foldseek.com/search)"
+    Foldseek "aligns the structure of a query protein against a database by describing tertiary amino acid interactions within proteins as sequences over a structural alphabet".
+    [Paper](https://www.nature.com/articles/s41587-023-01773-0)
+
+
+##### Candidate alignment
+It is not necessarily just enough to identify a potential candidate but to have a degree of _alignment_ with of the candidate with starting or suggested candidates. This allows for a degree of interpretability to by people. 
+
+
+
+
 ## Architectures
 #### Traditional
-#### Deep
-##### LLMs
-###### Diffusion
+#### Deep / LLMS
+#### VAE
+#### MaxEnt Maximum Entropy Models
+
+##### Diffusion
 ##### GANS
 
 ## Optimization Targets
@@ -122,12 +142,8 @@ There are several optimization targets of direct interest
 
     [Paper](https://www.biorxiv.org/content/10.1101/2021.02.12.430858v3.full.pdf)
 
-
-
-
     
 #### Structure Models
-
 
 #### Hybrid Models
 
@@ -149,15 +165,6 @@ There are several optimization targets of direct interest
     The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.
 
 
-## Components 
-
-### Search and Alignment
-
-Searching is essential to find similar sequences that may aid in the training or fine-tuning of models. This can be done with sequence-based alignment, as well as structure-based alignment. Here are a few references of highly-relevant tools for search/alignment. 
-
-??? tip "[Fast and accurate protein structure search with: Foldseek](https://search.foldseek.com/search)"
-    Foldseek "aligns the structure of a query protein against a database by describing tertiary amino acid interactions within proteins as sequences over a structural alphabet".
-    [Paper](https://www.nature.com/articles/s41587-023-01773-0)
 
 
 ### Tools
@@ -171,7 +178,9 @@ Searching is essential to find similar sequences that may aid in the training or
 - [Deepchain.bio]
 - [https://310.ai/]
 
-## References
+## Quality reviews and references
+
+!!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
 
 !!! code "[Papers on Machine learning for Proteins](https://github.com/yangkky/Machine-learning-for-proteins?tab=readme-ov-file)"
 
