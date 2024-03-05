@@ -8,8 +8,13 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 - [Code AI consulting](https://github.com/AI-Citizen/SolidGPT) Allows you to 'query your code' in a chatlike manner.
 
 
+??? code "[RECURSIVELY SELF-IMPROVING CODE GENERATION](https://github.com/microsoft/stop)" self-taught-optimizer
+    "In this work, we use a language-model-infused scaffolding program to improve itself. We start with a seed "improver" that improves an input program according to a given utility function by querying a language model several times and returning the best solution. We then run this seed improver to improve itself. "
+    [Paper](https://arxiv.org/abs/2310.02304)
+
 ## Coding
-!!! code "[Octopack](https://github.com/bigcode-project/octopack) [Github](https://arxiv.org/pdf/2308.07124.pdf)s"
+!!! code "[Octopack](https://github.com/bigcode-project/octopack) [Github](https://arxiv.org/pdf/2308.07124.pdf)"
+
 
 
 !!! code "[Open Copilot](https://github.com/openchatai/opencopilot)"
