@@ -1870,6 +1870,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#fusion-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fusion approaches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#low-rank-and-sparsity-approximations" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3473,6 +3484,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -3520,6 +3533,33 @@ and
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/examples/by_field/science/biology/genetics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Genetics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -5346,6 +5386,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#fusion-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fusion approaches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#low-rank-and-sparsity-approximations" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5501,6 +5552,9 @@ and
 </ol>
 <h3 id="pruning">Pruning<a class="headerlink" href="#pruning" title="Permanent link">&para;</a></h3>
 <p>Pruning is a technique that eliminates weights that do not consistently produce highly impactful outputs.</p>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2301.00774.pdf">SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot</a> Remove up to ~50% parameters preserving quality</p>
+</div>
 <details class="important">
 <summary><a href="https://blog.research.google/2023/08/neural-network-pruning-with.html">Fast as Chita: Neural network pruning with combinatorial optimization</a></summary>
 <p><a href="https://arxiv.org/pdf/2302.14623.pdf">Arxiv paper</a>
@@ -5558,15 +5612,23 @@ Here are the benefit chart for each method each kind:</p>
 <h3 id="knowledge-distillation">Knowledge Distillation<a class="headerlink" href="#knowledge-distillation" title="Permanent link">&para;</a></h3>
 <p>Train a new smaller model using the output of bigger models.
 (TODO)</p>
+<h3 id="fusion-approaches">Fusion approaches<a class="headerlink" href="#fusion-approaches" title="Permanent link">&para;</a></h3>
 <details class="code">
 <summary><a href="https://github.com/yuhuixu1993/qa-lora">QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models</a></summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/87219990-b7e8-4895-a274-a55584f2cb9e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/87219990-b7e8-4895-a274-a55584f2cb9e" /></a></p>
 </details>
 <p><a href="https://colab.research.google.com/drive/1A0SWlfcd6ISzsc0gLBIr4N_vECHhUAst#scrollTo=6v59Uu9pb_wM">Knowledge Distillation and Compression Demo.ipynb</a></p>
+<p>??? code "<a href="https://github.com/SqueezeAILab/SqueezeLLM">SqueezeLLM</a>  They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' 
+    <a href="https://arxiv.org/pdf/2306.07629.pdf">SqueezeLLM</a></p>
 <h3 id="low-rank-and-sparsity-approximations">Low rank and sparsity approximations<a class="headerlink" href="#low-rank-and-sparsity-approximations" title="Permanent link">&para;</a></h3>
 <p>TODO</p>
 <h3 id="mixture-of-experts">Mixture of Experts<a class="headerlink" href="#mixture-of-experts" title="Permanent link">&para;</a></h3>
 <p>MOE provides the ability to use different smaller models that have better performance in certain domains. Their use is notable, as it has been stated that GPT-4 is powered by 8 different agents.</p>
+<details class="tip">
+<summary><a href="https://arxiv.org/pdf/2303.14177.pdf">Scaling Expert Language Models with Unsupervised Domain Discovery</a></summary>
+<p><strong>Developments</strong>  "Our method clusters a corpus into sets of related documents, trains a separate expert language model on each cluster, and combines them in a sparse ensemble for inference. This approach generalizes embarrassingly parallel training by automatically discovering the domains for each expert, and eliminates nearly all the communication overhead of existing sparse language models. "</p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f4ec7e2e-bf27-4fc0-b420-0010e1caef71" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="680" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f4ec7e2e-bf27-4fc0-b420-0010e1caef71"></a></p>
+</details>
 <details class="code">
 <summary><a href="https://github.com/robertcsordas/moe_attention">SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention</a></summary>
 <p><a href="https://arxiv.org/pdf/2312.07987.pdf">Paper</a></p>

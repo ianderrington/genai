@@ -18,7 +18,7 @@
         <link rel="prev" href="../healthcare.html">
       
       
-        <link rel="next" href="proteins.html">
+        <link rel="next" href="genetics.html">
       
       
         
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#biology" class="md-skip">
+        <a href="#methods-of-optimization" class="md-skip">
           Skip to content
         </a>
       
@@ -3243,6 +3243,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -3290,6 +3292,33 @@ and
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="genetics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Genetics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -5021,24 +5050,80 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#biology" class="md-nav__link">
+  <a href="#methods-of-optimization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Biology
+        Methods of optimization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods of optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#considerations-of-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Considerations of optimization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerations of optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sequence-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequence optimization
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#kinesiology" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#reagent-optimization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kinesiology
+        Reagent optimization
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocol optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To File
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5077,15 +5162,39 @@ and
 
   <h1>Biology</h1>
 
-<h3 id="biology">Biology<a class="headerlink" href="#biology" title="Permanent link">&para;</a></h3>
+<h2 id="methods-of-optimization">Methods of optimization<a class="headerlink" href="#methods-of-optimization" title="Permanent link">&para;</a></h2>
+<p>There are two general targets to consider in optimizing proteins: <strong>Evolutionary</strong>, that starts from a specific protein and aims to optimize it, and <strong>De Novo</strong>, which builds more indirectly around a particular goal or outcome without specific reference to an individual protein. </p>
+<h3 id="considerations-of-optimization">Considerations of optimization<a class="headerlink" href="#considerations-of-optimization" title="Permanent link">&para;</a></h3>
+<p>There are components of include </p>
+<ul>
+<li><a href="#protocol-optimization">Protocol optimization</a></li>
+<li><a href="#molecule-optimization">Sequence optimization</a></li>
+<li><a href="#measurement-optimization">Reagent optimization</a></li>
+</ul>
+<h4 id="sequence-optimization">Sequence optimization<a class="headerlink" href="#sequence-optimization" title="Permanent link">&para;</a></h4>
+<p>The protein protein sequence may is a primary target of optimization because the sequence has direct impact over the enzyme's structure and function. </p>
+<h4 id="reagent-optimization">Reagent optimization<a class="headerlink" href="#reagent-optimization" title="Permanent link">&para;</a></h4>
+<p>Proteins do not function in isolation, but in a surrounding environment of agents and reagents. While protein sequences are of immediate itnerest because of potential gains of information, rea-gent types and  concentrations will powerfully govern the quality of synthesized products. A protein that has been evaluated in one condition, is unlikely  to be optimial in another condition, and similarly, an protein that is optimized based on sequence, may not be optimal in new conditions. It may be useful to use reagent-optimization to reduce or eliminate potentially harmful or toxic material. </p>
+<details class="tip">
+<summary><a href="https://pubs.acs.org/doi/10.1021/acsomega.2c05165">Exploring Optimal Reaction Conditions Guided by Graph Neural Networks and Bayesian Optimization (2022)</a></summary>
+<p><strong>Developments</strong> The authors present a n approach that determines <code>suitable</code> conditions for organic reactions using Bayesina Optimization that is guided by Graph Neural Networks trained on organic synthesis data. The resulting algorithm is better than other state of art and human-optimization by over 8%. </p>
+</details>
+<h4 id="protocol-optimization">Protocol optimization<a class="headerlink" href="#protocol-optimization" title="Permanent link">&para;</a></h4>
+<p>Similarly to <em>reagents</em>, the overall protocol in how a reagent or set of reagents are combined may significantly impact not just the quality of the results, but costs and disposal considerations that may need to be considered as well. The protocols may be followed by people, or for more fully automous systems, written into code or pseudo-code that can be injested by robotic systems. For both practical and ethical reasons, it is important to <em>evaluate</em> protocols before following them, lest the results be a potentially avoidable waste of time due to failed outcomes, or potentially harmful because they are not effectively understood. </p>
+<details class="code">
+<summary><a href="https://github.com/bioplanner/bioplanner">BioPlanner: Automatic Evaluation of LLMs on Protocol Planning in Biology</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/3a7cfe64-03b9-4ecb-aeac-f18c66902c91" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="642" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3a7cfe64-03b9-4ecb-aeac-f18c66902c91"></a></p>
+<p>Abstract: The ability to automatically generate accurate protocols for scientific experiments would represent a major step towards the automation of science. Large Language Models (LLMs) have impressive capabilities on a wide range of tasks, such as question answering and the generation of coherent text and code. However, LLMs can struggle with multi-step problems and long-term planning, which are crucial for designing scientific experiments. Moreover, evaluation of the accuracy of scientific protocols is challenging, because experiments can be described correctly in many different ways, require expert knowledge to evaluate, and cannot usually be executed automatically. Here we present an automatic evaluation framework for the task of planning experimental protocols, and we introduce BioProt: a dataset of biology protocols with corresponding pseudocode representations. To measure performance on generating scientific protocols, we use an LLM to convert a natural language protocol into pseudocode, and then evaluate an LLM's ability to reconstruct the pseudocode from a high-level description and a list of admissible pseudocode functions. We evaluate GPT-3 and GPT-4 on this task and explore their robustness. We externally validate the utility of pseudocode representations of text by generating accurate novel protocols using retrieved pseudocode, and we run a generated protocol successfully in our biological laboratory. Our framework is extensible to the evaluation and improvement of language model planning abilities in other areas of science or other areas that lack automatic evaluation.
+<a href="https://arxiv.org/pdf/2310.10632.pdf">Paper</a></p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://www.mdpi.com/2079-3197/9/10/107">A Language for Modeling and Optimizing Experimental Biological Protocols</a> presents a Gaussian process model to optimize experimental protocols</p>
+</div>
+<h3 id="to-file">To File<a class="headerlink" href="#to-file" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://arxiv.org/pdf/2303.16416.pdf">https://arxiv.org/pdf/2303.16416.pdf</a></li>
 <li><a href="https://arxiv.org/pdf/2304.02496.pdf">https://arxiv.org/pdf/2304.02496.pdf</a></li>
 <li><a href="https://www.biorxiv.org/content/10.1101/2023.06.16.545235v1.full.pdf">Biomedical simulation</a></li>
-</ul>
-<h3 id="kinesiology">Kinesiology<a class="headerlink" href="#kinesiology" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/openmotionlab/motiongpt">Motion GPT</a></li>
 </ul>
 
 
@@ -5219,16 +5328,16 @@ and
         
           
           <a
-            href="proteins.html"
+            href="genetics.html"
             class="md-footer__link md-footer__link--next"
-            aria-label="Next: Proteins"
+            aria-label="Next: Genetics"
           >
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Proteins
+                Genetics
               </div>
             </div>
             <div class="md-footer__button md-icon">

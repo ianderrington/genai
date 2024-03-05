@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#frameworks" class="md-skip">
+        <a href="#automatically-correcting" class="md-skip">
           Skip to content
         </a>
       
@@ -3239,6 +3239,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -3286,6 +3288,33 @@ and
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Using/examples/by_field/science/biology/genetics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Genetics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -5017,44 +5046,22 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#automatically-correcting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatically Correcting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatically Correcting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#frameworks" class="md-nav__link">
     <span class="md-ellipsis">
       
         Frameworks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mixture-of-experts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mixture of Experts.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-training-improvements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        General Training Improvements
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="General Training Improvements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pruning-and-compression" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pruning and compression
       
     </span>
   </a>
@@ -5104,20 +5111,28 @@ and
 <p>Training GenAI will generally be domain/modality specific.</p>
 <ol>
 <li>Self-supervised <a href="pre-training.html">pre-training</a> to predict the next token with reasonable likelihoods.</li>
-<li></li>
-<li>Supervised or self-supervised <a href="finetuning.html">Finetuning</a> on higher quality data sets sometimes <a href="recurrent.html">recurrently</a> using <a href="../../data/preparation/synthetic.html">simulated data</a>,</li>
-<li><a href="feedback.html">Feedback</a> to more accurately train a model to produce output that is is more globally accurate to the input prompts.  </li>
+<li>Supervised or self-supervised <a href="finetuning.html">Finetuning</a> on higher quality data sets.<ul>
+<li>These datasets may be done so <a href="recurrent.html">recurrently</a> using <a href="../../data/preparation/synthetic.html">simulated data</a>.</li>
+</ul>
+</li>
+<li><a href="#automatic-correction">Automatically correcting</a> models to more accurately train a model to produce output that is is more globally accurate to the input prompts.</li>
 </ol>
-<p>Basics: <a href="https://neptune.ai/blog/distributed-training">Distributed Training</a>
-<a href="https://neptune.ai/blog/distributed-training-frameworks-and-tools">https://neptune.ai/blog/distributed-training-frameworks-and-tools</a></p>
+<h2 id="automatically-correcting">Automatically Correcting<a class="headerlink" href="#automatically-correcting" title="Permanent link">&para;</a></h2>
+<p>Foundationally, the use of <a href="feedback.html#rlhf">reinforcement learning with human feedback (RLHF)</a> has enabled highly successful models that are aligned with tasks and requirements. The automated improvement of GenAI can be bbroken down into improving the models during <em>training time</em> and then during <em>generation time</em>. </p>
 <div class="admonition important">
-<p class="admonition-title"><a href="https://arxiv.org/pdf/2203.02155.pdf">Training language models to follow instructions with human feedback</a></p>
-<p>Instruct GPT allows for following of instructions. InstructGPT, established a powerful paradigm of LLM performance
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f8eccb3c-0afe-4f8f-a477-4269c5b93fb0" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1006" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f8eccb3c-0afe-4f8f-a477-4269c5b93fb0"></a></p>
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2308.03188.pdf">Automatically Correcting Large Language Models: Surveying the landscape of diverse self-correction strategies</a></p>
+<p><strong>Developments</strong> The authors reveal a comprehensive set of solutions to iteratively improve models.
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/961478b0-a40a-4c61-8ff7-f86c93633954" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="657" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/961478b0-a40a-4c61-8ff7-f86c93633954"></a></p>
 </div>
 <h3 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html">Levanter (not just LLMS) </a> Codebase for training FMs with JAX. Using Haliax for naming tensors field names instead of indexes. (for example Batch, Feature....). Full sharding and distributable/parallelizable.</li>
+<li>
+<p>Basics: <a href="https://neptune.ai/blog/distributed-training">Distributed Training</a>
+<a href="https://neptune.ai/blog/distributed-training-frameworks-and-tools">https://neptune.ai/blog/distributed-training-frameworks-and-tools</a></p>
+</li>
+<li>
+<p><a href="https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html">Levanter (not just LLMS) </a> Codebase for training FMs with JAX. Using Haliax for naming tensors field names instead of indexes. (for example Batch, Feature....). Full sharding and distributable/parallelizable.</p>
+</li>
 <li>
 <p><a href="https://www.microsoft.com/en-us/research/blog/deepspeed-zero-a-leap-in-speed-for-llm-and-chat-model-training-with-4x-less-communication/">DeepSpeed ZeRO++</a> A framework for accelerating model pre-training, finetuning, RLHF updating.  by minimizing communication overhead. A likely essential concept to be very familiar with.</p>
 </li>
@@ -5125,26 +5140,12 @@ and
 <p><a href="https://github.com/allenai/RL4LMs/tree/main">RL4LMs by microsoft</a> A modular RL library to fine-tune language models to human preferences. <a href="https://arxiv.org/pdf/2305.08844.pdf">paper</a></p>
 </li>
 </ul>
-<h2 id="mixture-of-experts">Mixture of Experts.<a class="headerlink" href="#mixture-of-experts" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://arxiv.org/pdf/2303.14177.pdf">Scaling Expert Language Models with Unsupervised Domain Discovery</a> "parse language models on arbitrary text corpora. Our method clusters a corpus into sets of related documents, trains a separate expert language model on each cluster, and combines them in a sparse ensemble for inference. This approach generalizes embarrassingly parallel training by automatically discovering the domains for each expert, and eliminates nearly all the communication overhead of existing sparse language models. "</li>
-</ul>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f4ec7e2e-bf27-4fc0-b420-0010e1caef71" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="680" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f4ec7e2e-bf27-4fc0-b420-0010e1caef71"></a></p>
-<h2 id="general-training-improvements">General Training Improvements<a class="headerlink" href="#general-training-improvements" title="Permanent link">&para;</a></h2>
-<h3 id="pruning-and-compression">Pruning and compression<a class="headerlink" href="#pruning-and-compression" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://arxiv.org/pdf/2301.00774.pdf">SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot</a> Remove up to ~50% parameters preserving</li>
-<li><a href="https://arxiv.org/pdf/2306.07629.pdf">SqueezeLLM</a> They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' <a href="https://github.com/SqueezeAILab/SqueezeLLM">Github</a></li>
-</ul>
 
 
 
 
 
 
-
-  
-  
 
 
 
