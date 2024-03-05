@@ -1,3 +1,10 @@
+## Use cases
+### Protocol Optimization 
+??? code "[BAYESIAN OPTIMIZATION OF CATALYSTS WITH IN-CONTEXT LEARNING](https://github.com/ur-whitelab/BO-LIFT) Uses LLMs to optimize synthesis procedures and prediction of properties. They allow for in-context learning."
+   <img width="653" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/522cffed-3016-41f1-b073-f2d1e77cbdb6">
+
+   [Paper](https://arxiv.org/pdf/2304.05341.pdf)
+
 
 ### Reaction Optimization 
 
@@ -17,7 +24,10 @@
 ??? tip "[Optimizing Chemical Reactions with Deep Reinforcement Learning (2017)](https://pubs.acs.org/doi/epdf/10.1021/acscentsci.7b00492)" deep-reaction-optimizer
     The authors reveal the use of models that iteratively improve outcomes for [lab in loop optimization](./index.md#lab-in-loop-optimization) using deep learning models. Using RNN-enabled re-inforcement learning. The resulting Deep Reaction Optimizer (DRO) is supposed to "guide interactive decision-making procedure in optimizing reactions" by combining deep RL with chemistry domain knowledge.
     <img width="418" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4de4e2e2-fbca-4fe9-8c1e-a3b3af1d71e0">
-    
+ 
+## Models
+
+[ChemLLM: A Chemical Large Language Model](https://arxiv.org/abs/2402.06852)
 
 ## Frameworks
 
@@ -26,5 +36,5 @@
 !!! code "[RDKit is a collection of cheminformatics and machine-learning software written in C++ and Python.](https://www.rdkit.org/)"
 
 
-### To Sort
-- https://arxiv.org/abs/2402.06852
+
+
