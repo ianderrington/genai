@@ -3,6 +3,25 @@ Here we share novel and promising architectures that may supplement or supplant 
 
 ## Models
 
+??? code "[REPRESENTATION ENGINEERING: A TOP-DOWN APPROACH TO AI TRANSPARENCY](github.com/andyzoujm/representation-engineering)" repe
+    **Developments** The authors create a manner of extracting conceptual relations within models by prompting them, and examining the layer-wise activations associated with that word, and a linear model is trained to identify the direction principal to activating that concept. The _reading vector_ forms the the principal componentassociated with that concept can be most liketly added to the output to enhance that quality. This leads to the potential to directly create alignments, hallucination control, and other targeted revisions of output. 
+    ```
+    Consider the amount of <concept> in the following:
+    <stimulus>
+    The amount of <concept> is
+    ```
+    <img width="287" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/51cacbe7-f2f1-46d5-b77f-4906cae3f893">
+
+    <img width="889" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c7711e10-28cd-472f-a2a5-fc5186289d48">
+    <img width="509" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6d595078-10be-4a42-bc8e-79ee9b9279e4">
+    <img width="684" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4c357680-c221-4821-a4ed-720ba0410d34">
+
+    <img width="690" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4c57323f-e8b8-4967-8ab3-f837e40a7a11">
+
+    
+
+
+
 !!! tip "[Bayesian Flow Networks](https://arxiv.org/pdf/2308.07037.pdf) A new class of generative models for discrete and continuous data and generation"
 
 
