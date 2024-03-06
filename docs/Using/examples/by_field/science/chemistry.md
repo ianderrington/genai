@@ -9,17 +9,16 @@ It is important to first consider dual-use and potential intentional or accident
 
 
 ### Drugs
-- [Deep learning-guided discovery of an antibiotic targeting Acinetobacter baumannii](https://www.nature.com/articles/s41589-023-01349-8)
+!!! "[Deep learning-guided discovery of an antibiotic targeting Acinetobacter baumannii](https://www.nature.com/articles/s41589-023-01349-8)"
 
 ## Components
 
 ### Protocol Optimization 
 
 ??? code "[BAYESIAN OPTIMIZATION OF CATALYSTS WITH IN-CONTEXT LEARNING](https://github.com/ur-whitelab/BO-LIFT) Uses LLMs to optimize synthesis procedures and prediction of properties. They allow for in-context learning."
+    <img width="653" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/522cffed-3016-41f1-b073-f2d1e77cbdb6">
 
-   <img width="653" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/522cffed-3016-41f1-b073-f2d1e77cbdb6">
-
-   [Paper](https://arxiv.org/pdf/2304.05341.pdf)
+    [Paper](https://arxiv.org/pdf/2304.05341.pdf)
 
 
 ### Reaction Optimization 
