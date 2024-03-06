@@ -39,5 +39,25 @@ In order to separate the representation, allowing greater freedom in evaluating 
 
     [Paper](https://arxiv.org/abs/1902.10499)
 
+??? code "[Fastembed with qdrant](https://github.com/qdrant/fastembed)"
+    Light & Fast embedding model
+    ```
+    Quantized model weights
+    ONNX Runtime, no PyTorch dependency
+    CPU-first design
+    Data-parallelism for encoding of large datasets
+    Accuracy/Recall
+
+    Better than OpenAI Ada-002
+    Default is Flag Embedding, which is top of the MTEB leaderboard
+    List of supported models - including multilingual models
+    ```
+
+
+### Evaluating
+
+??? code "[Massive Text Embedding Benchmark](https://github.com/embeddings-benchmark/mteb)"
+    [Paper](https://arxiv.org/pdf/2210.07316.pdf)
+
 ### Blogs and posts
 - [Openai GPT-3 text embeddings](https://medium.com/@nils_reimers/openai-gpt-3-text-embeddings-really-a-new-state-of-the-art-in-dense-text-embeddings-6571fe3ec9d9)

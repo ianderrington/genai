@@ -20,6 +20,8 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
     [Medium](https://medium.com/@m-elbably/gpt-graph-a-simple-tool-for-knowledge-graph-exploration-70e0e3861716)
 
 
+
+
 ### Description of Graphs for LLMs
 ??? tip "[Unifying Large Language Models and Knowledge Graphs: A Roadmap](https://arxiv.org/pdf/2306.08302.pdf)"
 

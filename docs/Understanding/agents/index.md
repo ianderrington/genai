@@ -154,6 +154,45 @@ Agents can exist in different 'domains' all
     ```
 
 ## Other concepts
+
+
+### Task Planning & Management
+**Methods for generating and tracking tasks:** Autonomous agents can create tasks using handcrafted sequences where the designer explicitly chains them, or through emergent methods like Chains of Thought (CoT), where tasks are generated one at a time in response to evolving circumstances. For example, a navigation agent might have a handcrafted sequence to reach a destination, while an AI in a dynamic environment might use CoT to adapt to new obstacles.
+**Knowledge graph utilization:** A knowledge graph serves as a structural memory that can greatly enhance an agent's ability to plan and execute tasks by understanding the relationships between different entities and concepts. An AI agent using a knowledge graph might navigate a user query more efficiently by understanding related topics or concepts.
+**Learning from past tasklists:** Implementing machine learning techniques allows agents to analyze previous task lists and outcomes to improve future performance. For instance, an AI learning from past interactions could start to predict user needs and prepare relevant tasks in advance.
+
+### Task Execution & Routing
+**Execution strategies:** The choice between specialized agents for specific tasks or a more generalist approach has significant implications for efficiency and adaptability. For example, an assembly line robot might be highly specialized, while a customer service AI might need to route tasks to various internal or external tools and databases.
+**Routing methods to appropriate execution points:** Effective task routing ensures that tasks are executed by the most appropriate resource, be it an AI system or a human agent. For instance, a support ticket might be automatically routed to either a FAQ bot or a human agent based on its complexity.
+**Ensuring correct execution and handling failures:** Continuous monitoring of task execution and outcome validation is crucial. An AI system might apply error-checking algorithms to ensure a task has been executed correctly and have fallback procedures in case of failure.
+
+### Tool Usage & Learning
+**Integration with external tools and models:** Autonomous agents often require integration with specialized tools and models to perform specific functions. For example, an AI might use a natural language processing tool to understand user inquiries better.
+**Tool accessibility and connection:** The mechanisms by which an agent accesses and utilizes tools can significantly impact its effectiveness. Ensuring that tools are easily accessible and that the agent has clear methods for interfacing with them is essential for seamless operation.
+**Adoption of new tools and leveraging existing libraries:** An adaptable agent should not only utilize existing tools effectively but also have the capability to learn and integrate new ones as they become available, similar to how a recommendation system might improve over time as it incorporates new algorithms.
+
+### Memory & Knowledge
+**Storage and recall of information:** Effective storage structures, such as databases or in-memory data grids, are essential for recalling past actions, task lists, results, and feedback. This memory can be structured in a way that mirrors human short-term and long-term memory, with different retention and recall strategies.
+**Long-term and short-term memory considerations:** Just as humans rely on both short-term and long-term memory, autonomous agents can be designed with volatile memory for immediate recall and persistent storage for long-term knowledge retention, optimizing response times and data durability.
+**Information value decay and efficient retrieval:** Implementing algorithms that recognize the decay in the value of information over time can help maintain the relevance of an agent's knowledge base. For example, a weather prediction agent must prioritize recent data as older information quickly becomes obsolete.
+
+### Self-Improvement
+
+**Utilizing successes and failures to enhance performance:** By analyzing the outcomes of past actions, an autonomous agent can refine its algorithms and improve its decision-making processes. For example, a navigation AI that encountered traffic jams might learn to avoid certain routes at peak times.
+
+**Development of better task lists and tool selection:** Continuous optimization of task lists and tool usage allows an agent to become more efficient. An AI might refine its task list generation by identifying which tasks are most frequently successful and prioritizing similar types of tasks in the future.
+
+**Tracking and measuring improvements:** Setting up key performance indicators and tracking changes over time enables the assessment of an agent's self-improvement. For instance, measuring the reduction in the number of failed tasks after each iteration could indicate the agent's growing proficiency.
+
+### UI/UX (Input/Output)
+
+**Interaction mechanisms with users:** The design of an agent's UI/UX profoundly impacts its accessibility and user satisfaction. For instance, an AI with a natural language interface allows for more intuitive interaction compared to command-line inputs.
+
+**Frequency and methods of communication:** Determining how often and through which channels an agent communicates can balance user engagement and annoyance. An agent might use push notifications for important alerts while aggregating less critical updates for a daily summary.
+
+**Additional sensors for environmental interaction:** An agent equipped with sensors, such as cameras or microphones, can interact with its environment in more nuanced ways. A home assistant device might use such sensors to detect when
+
+
 !!! note "Push vs Pull: how an agent gets its ability to perform the next action"
     If an agent requests something, then it is able to act based on a 'pull' action. If it is given everything to begin with, it has a 'push' action. From this Langchain [blog](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)
 
