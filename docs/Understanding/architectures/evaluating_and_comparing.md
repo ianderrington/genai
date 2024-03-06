@@ -21,6 +21,8 @@ Here are a few boards that help to aggregate and test models that have been rele
     ![image](https://github.com/ianderrington/genai/assets/76016868/cc53d97d-86f3-43a6-9899-d06dcb33feff)
 
 
+??? code "[Lighteval by Hugging Face](https://github.com/huggingface/lighteval) provides lightweight framework for LLM evaluation"
+
 
         
         
