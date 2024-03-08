@@ -34,7 +34,9 @@ It is not necessarily just enough to identify a potential candidate but to have 
 ##### GANS
 
 ## Optimization Targets
+
 There are several optimization targets of direct interest 
+
 
 - [Structure](#structure)
 - [Function](#function)
@@ -47,10 +49,12 @@ There are several optimization targets of direct interest
     - Drugs molecules
     - Metals
 - Relevancy 
+
     
 #### Structure
 
-- [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end.
+!!! tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end"
+
 
 #### Function
 
