@@ -45,6 +45,9 @@ Related to pruning is the use of smaller models that are initialized based on la
     [Paper](https://arxiv.org/pdf/2311.18823.pdf)
     <img width="270" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2c14986f-8edc-430e-bb59-3d3bae4f30d3">
 
+??? code "[Transformer Compression with SliceGPT](https://github.com/microsoft/TransformerCompression)" slicegpt
+    **Developments** In their [paper](https://arxiv.org/pdf/2401.15024.pdf) the authors reveal that a manner of replacing matrices with dense smaller dense matrices reducing the embedding dimensions. This can eliminate up to 25% of parameters (and embeddings) for LLama-2, and maintain 99% zero shot task performance across multiple models. 
+
 ### KV-Cache Optimization
 
 ??? important "[MODEL TELLS YOU WHAT TO DISCARD:ADAPTIVE KV CACHE COMPRESSION FOR LLMS](https://openreview.net/pdf?id=uNrFpDPMyo)"

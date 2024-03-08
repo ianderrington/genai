@@ -8,6 +8,9 @@ Here are a few boards that help to aggregate and test models that have been rele
 - [Hugging Face LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) An essential chart for documenting the model performance across multiple models.
 - [lmsys.org leader board](https://lmsys.org/blog/2023-06-22-leaderboard/)
 
+## What to evaluate?
+There are several domains of expertise where it may be essential to measure Model's performance. 
+
 ### Multi-criteria evaluation
 
 ??? important "[HELM Instruct: A Multidimensional Instruction Following Evaluation Framework with Absolute Ratings](https://crfm.stanford.edu/2024/02/18/helm-instruct.html)" helm-instruct
@@ -23,25 +26,45 @@ Here are a few boards that help to aggregate and test models that have been rele
 
 ??? code "[Lighteval by Hugging Face](https://github.com/huggingface/lighteval) provides lightweight framework for LLM evaluation"
 
+#### Question Answering
 
-        
-        
+#### Multimodality
+
+#### Creativity
 
 ### Domain expertise
-There are several domains of expertise where it may be essential to measure Model's performance. 
+
+#### Language generation 
+
+#### Code generation
+
+#### Math, logic, and reasoning
+
+#### Science and engineering
+
+#### Healthcare and medicine
+
+#### Law and policy
 
 
-### Hallucination
+!!! code "[Legal Bench](https://github.com/HazyResearch/legalbench/) is an ongoing open science effort to collaboratively curate tasks for evaluating LLM legal reasoning in English."
+
+#### Robotics
+
+### 
+
+### Hallucinations
 Hallucinations remain a core problem with LLMs as they may generate linguistic and syntatically correct statements, that lack epistemic or factually grounded understanding. 
 
 ??? important "Hugging faces [leaderboard](https://huggingface.co/blog/leaderboards-on-the-hub-hallucinations) on hallucinations provides a comparison of different models' hallucinations". 
     Much is based on [awesome-hallucination-detection](https://github.com/EdinburghNLP/awesome-hallucination-detection) 
 
-### Generalization
+### Other Characteristics 
+
+#### Generalization ability
 It may be important for your modal to have generalization beyond your training data. If so, it is important to thoroughly separate any testing data from the training data. To remove this, you will want to work on your [data](../data/index.md) preparation. If needed, the 'contamination' of data may be removed with [automated methods](https://lmsys.org/blog/2023-11-14-llm-decontaminator/).
 
-
-### Finding information
+#### Finding information
 
 The ability for an LLM to 'recall' information within its context window is an integral part of its ability function with contextually relevant information, and to act as effective retrieval mechanisms. To evaluate this ability, the _needle-in-a-haystack_ test can be used. In it the following occur: 
 
@@ -79,8 +102,11 @@ Sycophancy is the degree to which a model mirrors biases, large or small, that a
     “AI systems, especially generative language systems like GPT-4, will become increasingly influential in our lives, as will claims about their cognitive capacities. Thus, designing methods to properly assess their intelligence—and associated capabilities and limitations—is an urgent matter. To scientifically evaluate claims of humanlike and even superhuman machine intelligence, we need more transparency on the ways these models are trained, and better experimental methods and benchmarks. Transparency will rely on the development of open-source (rather than closed, commercial) AI models. Better experimental methods and benchmarks will be brought about through collaborations between AI researchers and cognitive scientists who have long investigated how to do robust tests for intelligence, understanding, and other cognitive capabilities in children, animals, and other “alien” intelligences.”
 
 
-## Evaluation Methods and Libraries
-### General
+## Evaluation Papers and Libraries
+
+
+??? important "[LLM Eval survey, paper collection](https://github.com/MLGroupJLU/LLM-eval-survey)"
+    [Paper](https://arxiv.org/abs/2307.03109)
 
 ??? code "[ROSCOE: A SUITE OF METRICS FOR SCORING STEP-BYSTEP REASONING](https://github.com/facebookresearch/ParlAI/tree/main/projects/roscoe) is ' a new suite of interpretable, unsupervised metrics that enables evaluation of step-by-step reasoning generations of LMs when no golden reference generation exists. ' "
     [Paper](https://arxiv.org/pdf/2212.07919.pdf)
@@ -106,9 +132,6 @@ Sycophancy is the degree to which a model mirrors biases, large or small, that a
 
 The evaluation of models helps us to identify which, if any, model to use for a particular task at hand. Directly related to the manner of pre-training, fine-tuning, and any RLHF, the ways that we consider the output can also be used to improve the models.
 
-## Measure what matters
-
-TODO: COMPLETE THIS
 
 ## References
 

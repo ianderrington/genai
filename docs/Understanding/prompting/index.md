@@ -273,7 +273,7 @@ MANAGEN Make the below into Admonitions
 
 - [A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/pdf/2302.11382.pdf)
 - [LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide) based on [paper](https://arxiv.org/pdf/2304.13712.pdf).
-- [Prompting Guide](https://www.promptingguide.ai/)
+- 
 
 - [Prompt Engineering by Lillian Wang](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)
 - [OPEN AI best practices](https://platform.openai.com/docs/guides/gpt-best-practices/)
@@ -282,8 +282,8 @@ MANAGEN Make the below into Admonitions
 - [Prompt Engineering Guide](https://www.promptingguide.ai/)
 - [Best practices for prompt engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)
 
-
-
+??? code "[Prompting Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)"
+    [Website](https://www.promptingguide.ai/)
 
 ## To Sort
 

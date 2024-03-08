@@ -45,9 +45,10 @@ The RAG process can be divided into two main stages: Preparation (offline) and R
         F -->|Generate| G[LLM]
         G --> H[Answer]
 ```
-### Preparation (offline)
 
-The preparation stage involves the following steps:
+### Data Preparation 
+
+The preparation stage involves the following steps in an offline manner
 
 1. **Data Selection:** Choose the appropriate data to ingest.
 2. **Loading Data:** Load the data in a manner that can be consumed by the models.
@@ -78,8 +79,7 @@ Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metad
 
 Different data types require different loaders. Raw text, PDFs, spreadsheets, and more proprietary formats need to be processed in a way that the information is of highest relevance to data. Text is easy to process, but some data, especially multimodal data like PDFs, may need to be formatted with a schema to allow for more effective searching.
 
-
-#### Splitting Data
+### Splitting Data
 
 Once data has been loaded in a way that a model can process it, it must be split. There are several ways of splitting data:
 
@@ -109,7 +109,9 @@ It is useful to perform parallel indexing that keeps track of records that are p
     * Re-computing embeddings of unchanged content 
     * Inserting duplicated content
 
+
 The langchain [Blog](https://blog.langchain.dev/syncing-data-sources-to-vector-stores/) and docs on [indexing](https://python.langchain.com/docs/modules/data_connection/indexing) provide quality discussions on these topics. 
+
 
 
 ### Retrieving Data
@@ -127,6 +129,8 @@ Query transformations can be done in several ways, including:
     ??? important "[Query Rewriting for Retrieval-Augmented Large Language Models](https://arxiv.org/pdf/2305.14283.pdf)"
 
         <img width="630" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b518994c-a419-4cc3-b065-065c0ca625d1">
+
+
 
 2. **Step Back Prompting:** This method generates an intermediate context that helps to 'abstract' the information. Once generated, the additional context can be used.
 
@@ -318,5 +322,6 @@ The final step is generating an output using a prompt that integrates the query 
     [Blog](https://towardsdatascience.com/advanced-retrieval-augmented-generation-from-theory-to-llamaindex-implementation-4de1464a9930)
 
 !!! note "[RAG vs finetuning](https://towardsdatascience.com/rag-vs-finetuning-which-is-the-best-tool-to-boost-your-llm-application-94654b1eaba7)"
+
 
     

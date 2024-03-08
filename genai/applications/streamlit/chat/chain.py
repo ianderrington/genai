@@ -88,13 +88,13 @@ Standalone Question:"""
 #     expose_headers=["*"],
 # )
 
-WEAVIATE_URL = os.environ["WEAVIATE_URL"]
-WEAVIATE_API_KEY = os.environ["WEAVIATE_API_KEY"]
+# WEAVIATE_URL = os.environ["WEAVIATE_URL"]
+# WEAVIATE_API_KEY = os.environ["WEAVIATE_API_KEY"]
 
-# RECORD_MANAGER_DB_URL = os.environ["RECORD_MANAGER_DB_URL"]
+# # RECORD_MANAGER_DB_URL = os.environ["RECORD_MANAGER_DB_URL"]
 
-print(f"hiya WEAVIATE_URL = {WEAVIATE_URL}")
-print(f"WEAVIATE_API_KEY = {WEAVIATE_API_KEY}")
+# print(f"hiya WEAVIATE_URL = {WEAVIATE_URL}")
+# print(f"WEAVIATE_API_KEY = {WEAVIATE_API_KEY}")
 # print(f"RECORD_MANAGER_DB_URL = {RECORD_MANAGER_DB_URL}")
 
 
@@ -108,6 +108,8 @@ def get_embeddings_model() -> Embeddings:
         return VoyageEmbeddings(model=os.environ["VOYAGE_AI_MODEL"])
     return OpenAIEmbeddings(chunk_size=200)
 
+from genai.applications.streamlit.chat.utils import load_api_key
+WEAVIATE_API_KEY = load_api_key("WEAVIATE_API_KEY")
 
 def get_retriever(weaviate_url, weaviate_docs_index_name) -> BaseRetriever:
     weaviate_client = weaviate.Client(

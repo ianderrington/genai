@@ -20,4 +20,3 @@ models, there can be a degradation in performance, known as _model collapse_.
 
 ## Alignment with GenAI
 
-- [Model Collapse Explained](https://www.techtarget.com/whatis/feature/Model-collapse-explained-How-synthetic-training-data-breaks-AI?Offer=abt_pubpro_AI-Insider)

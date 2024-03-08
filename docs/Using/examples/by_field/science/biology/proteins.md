@@ -35,10 +35,12 @@ It is not necessarily just enough to identify a potential candidate but to have 
 
 ## Optimization Targets
 There are several optimization targets of direct interest 
+
 - [Structure](#structure)
 - [Function](#function)
     - Enzymatic Catalysis
     - Fluorescence
+- [Hybrid](#hybrid-targets)
 - [Protein Binding](#binding)
     - Proteins
     - Nucleic Acids
@@ -51,6 +53,8 @@ There are several optimization targets of direct interest
 - [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end.
 
 #### Function
+
+!!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
 
 ??? tip "[De novo design of luciferases using deep learning](https://www.nature.com/articles/s41586-023-05696-3)"
     ![image](https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278)
@@ -128,13 +132,11 @@ There are several optimization targets of direct interest
       
       Via full-atom molecular simulations for direct validation from physical and chemical principles, we demonstrate that the designed proteins are de novo, and fulfill the targeted mechanical properties, including unfolding energy and mechanical strength, and a detailed unfolding force-separation curves. 
 
-    
-#### Structure Models
 
-#### Hybrid Models
+#### Hybrid Targets
 
 
-???+ code "🧬 [Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2)" deepgo-se
+??? code "🧬 [Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2)" deepgo-se
 
     **Developments** 
 

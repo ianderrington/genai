@@ -14,7 +14,7 @@ Here you'll find what you need to know to understand Gen()AI architecture.
 [Start where you'd like!](#start-where-it-makes-the-most-sense){ .md-button }
 [What is this about?](#what-is-this-about){ .md-button .md-button--primary }
 
-## ⬇️ See how the components connect ⬇️
+## ⬇️ See how the components connect 
 
 ???+ tip "Component of LLM-based GenAI (clickable)"
     ```mermaid

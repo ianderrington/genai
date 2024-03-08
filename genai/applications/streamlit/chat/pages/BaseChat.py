@@ -41,9 +41,11 @@ from genai.tools.print_directory import get_structure
 
 openai_api_key = load_api_key()
 
-WEAVIATE_URL = os.environ["WEAVIATE_URL"]
-WEAVIATE_API_KEY = os.environ["WEAVIATE_API_KEY"]
+# WEAVIATE_URL = os.environ["WEAVIATE_URL"]
+# WEAVIATE_API_KEY = os.environ["WEAVIATE_API_KEY"]
 
+WEAVIATE_URL = load_api_key("WEAVIATE_URL")
+WEAVIATE_API_KEY = load_api_key("WEAVIATE_API_KEY")
 # RECORD_MANAGER_DB_URL = os.environ["RECORD_MANAGER_DB_URL"]
 
 # e
