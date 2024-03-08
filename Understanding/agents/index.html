@@ -3999,9 +3999,27 @@ and
   
   
   
-    <li class="md-nav__item">
-      <a href="../../Using/examples/by_use_case/data_extraction.html" class="md-nav__link">
+    
+    
+      
         
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Using/examples/by_use_case/data_extraction.html" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     
@@ -4014,7 +4032,56 @@ and
   
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    By use case
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/examples/by_use_case/forecasting.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Forecasting
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -5105,24 +5172,85 @@ and
 </li>
       
         <li class="md-nav__item">
-  <a href="#models" class="md-nav__link">
+  <a href="#general-oncepts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Models
+        General oncepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General oncepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-planning-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Planning &amp; Management
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#other-concepts" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#task-execution-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Other concepts
+        Task Execution &amp; Routing
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-usage-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Usage &amp; Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory &amp; Knowledge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-Improvement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uiux-inputoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI/UX (Input/Output)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5138,27 +5266,16 @@ and
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#useful-resources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        References
+        Useful Resources
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="References">
+    <nav class="md-nav" aria-label="Useful Resources">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reviews-and-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reviews and Lists
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#other" class="md-nav__link">
@@ -5386,7 +5503,38 @@ Though, more generally it includes these components: </p>
 <li>Do a complex task that may require simple things. Very likely enduring, especially if they are expert systems..</li>
 <li>Doing a list set of complex tasks, perhaps more continuously enduring.</li>
 </ul>
-<h2 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h2>
+<h2 id="general-oncepts">General oncepts<a class="headerlink" href="#general-oncepts" title="Permanent link">&para;</a></h2>
+<h3 id="task-planning-management">Task Planning &amp; Management<a class="headerlink" href="#task-planning-management" title="Permanent link">&para;</a></h3>
+<p><strong>Methods for generating and tracking tasks:</strong> Autonomous agents can create tasks using handcrafted sequences where the designer explicitly chains them, or through emergent methods like Chains of Thought (CoT), where tasks are generated one at a time in response to evolving circumstances. For example, a navigation agent might have a handcrafted sequence to reach a destination, while an AI in a dynamic environment might use CoT to adapt to new obstacles.</p>
+<p><strong>Knowledge graph utilization:</strong> A knowledge graph serves as a structural memory that can greatly enhance an agent's ability to plan and execute tasks by understanding the relationships between different entities and concepts. An AI agent using a knowledge graph might navigate a user query more efficiently by understanding related topics or concepts.</p>
+<p><strong>Learning from past tasklists:</strong> Implementing machine learning techniques allows agents to analyze previous task lists and outcomes to improve future performance. For instance, an AI learning from past interactions could start to predict user needs and prepare relevant tasks in advance.</p>
+<h3 id="task-execution-routing">Task Execution &amp; Routing<a class="headerlink" href="#task-execution-routing" title="Permanent link">&para;</a></h3>
+<p><strong>Execution strategies:</strong> The choice between specialized agents for specific tasks or a more generalist approach has significant implications for efficiency and adaptability. For example, an assembly line robot might be highly specialized, while a customer service AI might need to route tasks to various internal or external tools and databases.</p>
+<p><strong>Routing methods to appropriate execution points:</strong> Effective task routing ensures that tasks are executed by the most appropriate resource, be it an AI system or a human agent. For instance, a support ticket might be automatically routed to either a FAQ bot or a human agent based on its complexity.</p>
+<p><strong>Ensuring correct execution and handling failures:</strong> Continuous monitoring of task execution and outcome validation is crucial. An AI system might apply error-checking algorithms to ensure a task has been executed correctly and have fallback procedures in case of failure.</p>
+<h3 id="tool-usage-learning">Tool Usage &amp; Learning<a class="headerlink" href="#tool-usage-learning" title="Permanent link">&para;</a></h3>
+<p><strong>Integration with external tools and models:</strong> Autonomous agents often require integration with specialized tools and models to perform specific functions. For example, an AI might use a natural language processing tool to understand user inquiries better.</p>
+<p><strong>Tool accessibility and connection:</strong> The mechanisms by which an agent accesses and utilizes tools can significantly impact its effectiveness. Ensuring that tools are easily accessible and that the agent has clear methods for interfacing with them is essential for seamless operation.</p>
+<p><strong>Adoption of new tools and leveraging existing libraries:</strong> An adaptable agent should not only utilize existing tools effectively but also have the capability to learn and integrate new ones as they become available, similar to how a recommendation system might improve over time as it incorporates new algorithms.</p>
+<h3 id="memory-knowledge">Memory &amp; Knowledge<a class="headerlink" href="#memory-knowledge" title="Permanent link">&para;</a></h3>
+<p><strong>Storage and recall of information:</strong> Effective storage structures, such as databases or in-memory data grids, are essential for recalling past actions, task lists, results, and feedback. This memory can be structured in a way that mirrors human short-term and long-term memory, with different retention and recall strategies.</p>
+<p><strong>Long-term and short-term memory considerations:</strong> Just as humans rely on both short-term and long-term memory, autonomous agents can be designed with volatile memory for immediate recall and persistent storage for long-term knowledge retention, optimizing response times and data durability.</p>
+<p><strong>Information value decay and efficient retrieval:</strong> Implementing algorithms that recognize the decay in the value of information over time can help maintain the relevance of an agent's knowledge base. For example, a weather prediction agent must prioritize recent data as older information quickly becomes obsolete.</p>
+<h3 id="self-improvement">Self-Improvement<a class="headerlink" href="#self-improvement" title="Permanent link">&para;</a></h3>
+<p><strong>Utilizing successes and failures to enhance performance:</strong> By analyzing the outcomes of past actions, an autonomous agent can refine its algorithms and improve its decision-making processes. For example, a navigation AI that encountered traffic jams might learn to avoid certain routes at peak times.</p>
+<p><strong>Development of better task lists and tool selection:</strong> Continuous optimization of task lists and tool usage allows an agent to become more efficient. An AI might refine its task list generation by identifying which tasks are most frequently successful and prioritizing similar types of tasks in the future.</p>
+<p><strong>Tracking and measuring improvements:</strong> Setting up key performance indicators and tracking changes over time enables the assessment of an agent's self-improvement. For instance, measuring the reduction in the number of failed tasks after each iteration could indicate the agent's growing proficiency.</p>
+<h3 id="uiux-inputoutput">UI/UX (Input/Output)<a class="headerlink" href="#uiux-inputoutput" title="Permanent link">&para;</a></h3>
+<p><strong>Interaction mechanisms with users:</strong> The design of an agent's UI/UX profoundly impacts its accessibility and user satisfaction. For instance, an AI with a natural language interface allows for more intuitive interaction compared to command-line inputs.</p>
+<p><strong>Frequency and methods of communication:</strong> Determining how often and through which channels an agent communicates can balance user engagement and annoyance. An agent might use push notifications for important alerts while aggregating less critical updates for a daily summary.</p>
+<p><strong>Additional sensors for environmental interaction:</strong> An agent equipped with sensors, such as cameras or microphones, can interact with its environment in more nuanced ways. A home assistant device might use such sensors to detect when</p>
+<div class="admonition note">
+<p class="admonition-title">Push vs Pull: how an agent gets its ability to perform the next action</p>
+<p>If an agent requests something, then it is able to act based on a 'pull' action. If it is given everything to begin with, it has a 'push' action. From this Langchain <a href="https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/">blog</a></p>
+</div>
+<h2 id="the-future">The Future<a class="headerlink" href="#the-future" title="Permanent link">&para;</a></h2>
+<p>It is possible that limitations fundamental to static agents are not goin to be universally optimal. Different cognitive architecutres and enabling tools will provide different degrees of success. That is where cognitive agents that are able to able to 'pull' new skills, and ways of working, into their realm of agency, will be able to bypass limitations inherent in in their original configurations.</p>
+<h2 id="useful-resources">Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">&para;</a></h2>
 <details class="important">
 <summary><a href="https://arxiv.org/abs/2205.00445">https://arxiv.org/abs/2205.00445</a></summary>
 </details>
@@ -5396,15 +5544,6 @@ Though, more generally it includes these components: </p>
 <div class="highlight"><pre><span></span><code>&quot;Huge language models (LMs) have ushered in a new era for AI, serving as a gateway to natural-language-based knowledge tasks. Although an essential element of modern AI, LMs are also inherently limited in a number of ways. We discuss these limitations and how they can be avoided by adopting a systems approach. Conceptualizing the challenge as one that involves knowledge and reasoning in addition to linguistic processing, we define a flexible architecture with multiple neural models, complemented by discrete knowledge and reasoning modules. We describe this neuro-symbolic architecture, dubbed the Modular Reasoning, Knowledge and Language (MRKL, pronounced &quot;miracle&quot;) system, some of the technical challenges in implementing it, and Jurassic-X, AI21 Labs&#39; MRKL system implementation.
 </code></pre></div></p>
 </details>
-<h2 id="other-concepts">Other concepts<a class="headerlink" href="#other-concepts" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Push vs Pull: how an agent gets its ability to perform the next action</p>
-<p>If an agent requests something, then it is able to act based on a 'pull' action. If it is given everything to begin with, it has a 'push' action. From this Langchain <a href="https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/">blog</a></p>
-</div>
-<h2 id="the-future">The Future<a class="headerlink" href="#the-future" title="Permanent link">&para;</a></h2>
-<p>It is possible that limitations fundamental to static agents are not goin to be universally optimal. Different cognitive architecutres and enabling tools will provide different degrees of success. That is where cognitive agents that are able to able to 'pull' new skills, and ways of working, into their realm of agency, will be able to bypass limitations inherent in in their original configurations.</p>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<h3 id="reviews-and-lists">Reviews and Lists<a class="headerlink" href="#reviews-and-lists" title="Permanent link">&para;</a></h3>
 <div class="admonition important">
 <p class="admonition-title"><a href="https://github.com/WooooDyy/LLM-Agent-Paper-List">LLM-Agent-Papers</a></p>
 </div>

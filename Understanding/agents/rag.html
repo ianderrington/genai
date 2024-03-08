@@ -2241,10 +2241,10 @@ and
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preparation-offline" class="md-nav__link">
+  <a href="#data-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Preparation (offline)
+        Data Preparation
       
     </span>
   </a>
@@ -2313,6 +2313,11 @@ and
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#splitting-data" class="md-nav__link">
     <span class="md-ellipsis">
@@ -2322,7 +2327,8 @@ and
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Splitting Data">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#embedding-data" class="md-nav__link">
@@ -4345,9 +4351,27 @@ and
   
   
   
-    <li class="md-nav__item">
-      <a href="../../Using/examples/by_use_case/data_extraction.html" class="md-nav__link">
+    
+    
+      
         
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Using/examples/by_use_case/data_extraction.html" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     
@@ -4360,7 +4384,56 @@ and
   
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    By use case
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/examples/by_use_case/forecasting.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Forecasting
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -5432,10 +5505,10 @@ and
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preparation-offline" class="md-nav__link">
+  <a href="#data-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Preparation (offline)
+        Data Preparation
       
     </span>
   </a>
@@ -5504,6 +5577,11 @@ and
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#splitting-data" class="md-nav__link">
     <span class="md-ellipsis">
@@ -5513,7 +5591,8 @@ and
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Splitting Data">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#embedding-data" class="md-nav__link">
@@ -5765,8 +5844,8 @@ and
         C --&gt; F
         F --&gt;|Generate| G[LLM]
         G --&gt; H[Answer]</code></pre>
-<h3 id="preparation-offline">Preparation (offline)<a class="headerlink" href="#preparation-offline" title="Permanent link">&para;</a></h3>
-<p>The preparation stage involves the following steps:</p>
+<h3 id="data-preparation">Data Preparation<a class="headerlink" href="#data-preparation" title="Permanent link">&para;</a></h3>
+<p>The preparation stage involves the following steps in an offline manner</p>
 <ol>
 <li><strong>Data Selection:</strong> Choose the appropriate data to ingest.</li>
 <li><strong>Loading Data:</strong> Load the data in a manner that can be consumed by the models.</li>
@@ -5787,7 +5866,7 @@ and
 <p>Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  identified data into </p>
 <h4 id="loading-data">Loading Data<a class="headerlink" href="#loading-data" title="Permanent link">&para;</a></h4>
 <p>Different data types require different loaders. Raw text, PDFs, spreadsheets, and more proprietary formats need to be processed in a way that the information is of highest relevance to data. Text is easy to process, but some data, especially multimodal data like PDFs, may need to be formatted with a schema to allow for more effective searching.</p>
-<h4 id="splitting-data">Splitting Data<a class="headerlink" href="#splitting-data" title="Permanent link">&para;</a></h4>
+<h3 id="splitting-data">Splitting Data<a class="headerlink" href="#splitting-data" title="Permanent link">&para;</a></h3>
 <p>Once data has been loaded in a way that a model can process it, it must be split. There are several ways of splitting data:</p>
 <ol>
 <li>By the max size a model can handle.</li>

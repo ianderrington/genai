@@ -1809,17 +1809,6 @@ and
 </li>
         
           <li class="md-nav__item">
-  <a href="#kv-cache-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        KV-Cache Optimization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#quantization" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1946,6 +1935,17 @@ and
     <span class="md-ellipsis">
       
         Compression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caching
       
     </span>
   </a>
@@ -4246,9 +4246,27 @@ and
   
   
   
-    <li class="md-nav__item">
-      <a href="../../Using/examples/by_use_case/data_extraction.html" class="md-nav__link">
+    
+    
+      
         
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Using/examples/by_use_case/data_extraction.html" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     
@@ -4261,7 +4279,56 @@ and
   
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    By use case
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/examples/by_use_case/forecasting.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Forecasting
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -5325,17 +5392,6 @@ and
 </li>
         
           <li class="md-nav__item">
-  <a href="#kv-cache-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        KV-Cache Optimization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#quantization" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5469,6 +5525,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tooling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5549,6 +5616,7 @@ and
 <li>Neural Architecture Search (NAS)</li>
 <li><a href="#hardware-enabled-optimization">Hardware enabled optimization</a></li>
 <li><a href="#compression">Compression</a></li>
+<li><a href="#caching">Caching</a></li>
 </ol>
 <h3 id="pruning">Pruning<a class="headerlink" href="#pruning" title="Permanent link">&para;</a></h3>
 <p>Pruning is a technique that eliminates weights that do not consistently produce highly impactful outputs.</p>
@@ -5568,10 +5636,21 @@ and
 <a href="https://arxiv.org/pdf/2311.18823.pdf">Paper</a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2c14986f-8edc-430e-bb59-3d3bae4f30d3" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="270" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2c14986f-8edc-430e-bb59-3d3bae4f30d3"></a></p>
 </details>
-<h3 id="kv-cache-optimization">KV-Cache Optimization<a class="headerlink" href="#kv-cache-optimization" title="Permanent link">&para;</a></h3>
-<details class="important">
-<summary><a href="https://openreview.net/pdf?id=uNrFpDPMyo">MODEL TELLS YOU WHAT TO DISCARD:ADAPTIVE KV CACHE COMPRESSION FOR LLMS</a></summary>
-<p>This method performs dynamic ablation of KV pairs minimizing the number of computes that need to happen. They just remove K-V cach</p>
+<p><a href="/shared/slicegpt.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
+
+<details class="code">
+<summary><a href="https://github.com/microsoft/TransformerCompression">Transformer Compression with SliceGPT</a></summary>
+<p><strong>Developments</strong> In their <a href="https://arxiv.org/pdf/2401.15024.pdf">paper</a> the authors reveal that a manner of replacing matrices with dense smaller dense matrices reducing the embedding dimensions. This can eliminate up to 25% of parameters (and embeddings) for LLama-2, and maintain 99% zero shot task performance across multiple models. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/7f01e175-f18b-4f69-b39a-d876375061b9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="547" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7f01e175-f18b-4f69-b39a-d876375061b9"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0f971929-396b-4ec8-9816-6ec239f6b863" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="278" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0f971929-396b-4ec8-9816-6ec239f6b863"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/991b7842-3a37-45c3-90eb-b8b01d0628ed" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="281" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/991b7842-3a37-45c3-90eb-b8b01d0628ed"></a></p>
 </details>
 <h3 id="quantization">Quantization<a class="headerlink" href="#quantization" title="Permanent link">&para;</a></h3>
 <p>Precision details the manner in which binary bits represent numbers in a computer. Generally, the greater the number of bits, the broader the variety of numbers that can be represented.</p>
@@ -5673,6 +5752,12 @@ Here is the algorithm:</p>
 <div class="admonition tip">
 <p class="admonition-title"><a href="https://arxiv.org/pdf/2304.08467.pdf">Learning to Compress Prompts with Gist Tokens</a>. Can enable 26x compression and 40% FLOP reduction and improvements by training 'gist tokens' to summarize information.</p>
 </div>
+<h3 id="caching">Caching<a class="headerlink" href="#caching" title="Permanent link">&para;</a></h3>
+<p>KV-Cache Optimization</p>
+<details class="important">
+<summary><a href="https://openreview.net/pdf?id=uNrFpDPMyo">MODEL TELLS YOU WHAT TO DISCARD:ADAPTIVE KV CACHE COMPRESSION FOR LLMS</a></summary>
+<p>This method performs dynamic ablation of KV pairs minimizing the number of computes that need to happen. They just remove K-V cach</p>
+</details>
 <h2 id="tooling">Tooling<a class="headerlink" href="#tooling" title="Permanent link">&para;</a></h2>
 <div class="admonition code">
 <p class="admonition-title"><a href="https://github.com/TimDettmers/bitsandbytes">Bitsandbytes</a> by provides a lightweight wrapper around CUDA custom functions, in particular 8-bit optimizers, matrix multiplication (LLM.int8()), and quantization functions.</p>
