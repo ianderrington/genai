@@ -24,6 +24,7 @@ The following are some of the commonly used methods for optimizing AI models:
 6. Neural Architecture Search (NAS)
 7. [Hardware enabled optimization](#hardware-enabled-optimization)
 8. [Compression](#compression)
+9. [Caching](#caching)
 
 
 ### Pruning
@@ -47,12 +48,6 @@ Related to pruning is the use of smaller models that are initialized based on la
 
 ??? code "[Transformer Compression with SliceGPT](https://github.com/microsoft/TransformerCompression)" slicegpt
     **Developments** In their [paper](https://arxiv.org/pdf/2401.15024.pdf) the authors reveal that a manner of replacing matrices with dense smaller dense matrices reducing the embedding dimensions. This can eliminate up to 25% of parameters (and embeddings) for LLama-2, and maintain 99% zero shot task performance across multiple models. 
-
-### KV-Cache Optimization
-
-??? important "[MODEL TELLS YOU WHAT TO DISCARD:ADAPTIVE KV CACHE COMPRESSION FOR LLMS](https://openreview.net/pdf?id=uNrFpDPMyo)"
-    
-    This method performs dynamic ablation of KV pairs minimizing the number of computes that need to happen. They just remove K-V cach
 
 
 ### Quantization
@@ -176,6 +171,16 @@ MOE provides the ability to use different smaller models that have better perfor
 ### Compression
 
 !!! tip "[Learning to Compress Prompts with Gist Tokens](https://arxiv.org/pdf/2304.08467.pdf). Can enable 26x compression and 40% FLOP reduction and improvements by training 'gist tokens' to summarize information."
+
+### Caching
+
+
+KV-Cache Optimization
+??? important "[MODEL TELLS YOU WHAT TO DISCARD:ADAPTIVE KV CACHE COMPRESSION FOR LLMS](https://openreview.net/pdf?id=uNrFpDPMyo)"
+    
+    This method performs dynamic ablation of KV pairs minimizing the number of computes that need to happen. They just remove K-V cach
+
+
 
 ## Tooling
 
