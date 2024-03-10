@@ -7,21 +7,6 @@ Generating or modifying protein sequences to improve behavior, or to create nove
 Protein language models, PLMs, are increasingly useful in predicting structure and function of proteins. 
 
 
-#### Candidate Identification
-
-Particularly for evolutionary methods, it is essential to know _where to start_ optimizing from. GenAI can be used to identify candidates based on databases of prior candidates. 
-
-Searching is essential to find similar sequences that may aid in the training or fine-tuning of models. This can be done with sequence-based alignment, as well as structure-based alignment. Here are a few references of highly-relevant tools for search/alignment. 
-
-??? tip "[Fast and accurate protein structure search with: Foldseek](https://search.foldseek.com/search)"
-    Foldseek "aligns the structure of a query protein against a database by describing tertiary amino acid interactions within proteins as sequences over a structural alphabet".
-    [Paper](https://www.nature.com/articles/s41587-023-01773-0)
-
-
-##### Candidate alignment
-It is not necessarily just enough to identify a potential candidate but to have a degree of _alignment_ with of the candidate with starting or suggested candidates. This allows for a degree of interpretability to by people. 
-
-
 
 
 ## Architectures
@@ -42,15 +27,16 @@ There are several optimization targets of direct interest
 - [Function](#function)
     - Enzymatic Catalysis
     - Fluorescence
-- [Hybrid](#hybrid-targets)
 - [Protein Binding](#binding)
     - Proteins
     - Nucleic Acids
     - Drugs molecules
     - Metals
-- Relevancy 
+- [Candidate Identification](#candidate-identification) and [alignment](#candidate-alignment)
+- ... and _hybrid_ versions to optimize the targets jointly
 
-    
+
+
 #### Structure
 
 !!! tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end"
@@ -137,8 +123,6 @@ There are several optimization targets of direct interest
       Via full-atom molecular simulations for direct validation from physical and chemical principles, we demonstrate that the designed proteins are de novo, and fulfill the targeted mechanical properties, including unfolding energy and mechanical strength, and a detailed unfolding force-separation curves. 
 
 
-#### Hybrid Targets
-
 
 ??? code "🧬 [Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2)" deepgo-se
 
@@ -156,6 +140,21 @@ There are several optimization targets of direct interest
 
     The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.
 
+
+
+#### Candidate Identification
+
+Particularly for evolutionary methods, it is essential to know _where to start_ optimizing from. GenAI can be used to identify candidates based on databases of prior candidates. 
+
+Searching is essential to find similar sequences that may aid in the training or fine-tuning of models. This can be done with sequence-based alignment, as well as structure-based alignment. Here are a few references of highly-relevant tools for search/alignment. 
+
+??? tip "[Fast and accurate protein structure search with: Foldseek](https://search.foldseek.com/search)"
+    Foldseek "aligns the structure of a query protein against a database by describing tertiary amino acid interactions within proteins as sequences over a structural alphabet".
+    [Paper](https://www.nature.com/articles/s41587-023-01773-0)
+
+
+###### Candidate alignment
+It is not necessarily just enough to identify a potential candidate but to have a degree of _alignment_ with of the candidate with starting or suggested candidates. This allows for a degree of interpretability to by people. 
 
 
 

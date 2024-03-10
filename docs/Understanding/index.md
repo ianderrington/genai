@@ -36,10 +36,7 @@ Here you'll find what you need to know to understand Gen()AI architecture.
         Architecture --> Hosting
         
         Hosting[Deployment] <--> APIorCall[API/Call]
-        
-        APIorCall <--> Cache
-        APIorCall <--> Monitor
-        APIorCall <--> Clean
+        APIorCall <--> Orchestration
 
         
         subgraph OrchestrationSubgraph[ ]
@@ -113,7 +110,7 @@ Here you'll find what you need to know to understand Gen()AI architecture.
         click Clean "./cleaning/index.html"
         click Memory "./agents/memory.html"
         click Prompts "./prompting/index.html"
-        click CognitiveArchitectures "./agents/cognitive_architectures.html"
+        click CognitiveArchitectures "./agents/cognitive_architecture.html"
         click Tools "./agents/actions_and_tools.html"
         click Environment "./agents/environments.html"
         click Database "./agents/memory.html"

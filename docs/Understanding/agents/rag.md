@@ -201,11 +201,8 @@ The final step is generating an output using a prompt that integrates the query 
 ???+ important "[12 RAG Pain Points and Proposed Solutions](https://arxiv.org/pdf/2401.05856.pdf)" 12-rag-pain-points-and-solutions
     Things that might lead to failure of RAG pipeline. Mostly taken from the [blog]( https://towardsdatascience.com/12-rag-pain-points-and-proposed-solutions-43709939a28c)
     
-    !!! test "this is a test"
-        hi abou
-
     Pain point:
-      And solutions
+      * and solutions
     
     1: Missing Content:
 

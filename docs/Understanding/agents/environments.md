@@ -32,8 +32,18 @@ In a chat environment the GenAI receives text information from a user and then r
     [Webpage](https://webarena.dev/)
 
 ### Social Simulations
-!!! example "A town simulation"
+??? example "A town simulation"
     In [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf) A town is simulated to provide observable information and an interaction world with/between other agents.
+
+??? example "[Chat Arena](https://github.com/Farama-Foundation/chatarena)"
+    
+
+
+### Operating Systems
+The versatility and interpretability of an cursor and keyboard interface to software and programs within an OS, it provides a integral environment for AI agents to augment and automated otherwise hard-to-program tasks. 
+
+??? code "[Self Operating Computer](https://github.com/OthersideAI/self-operating-computer)"
+
 
 ### Embodied environments
 
