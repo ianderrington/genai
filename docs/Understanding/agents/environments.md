@@ -35,8 +35,16 @@ In a chat environment the GenAI receives text information from a user and then r
 ??? example "A town simulation"
     In [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf) A town is simulated to provide observable information and an interaction world with/between other agents.
 
-??? example "[Chat Arena](https://github.com/Farama-Foundation/chatarena)"
-    
+??? code "[Chat Arena](https://github.com/Farama-Foundation/chatarena)"
+    ![image](https://github.com/ianderrington/genai/assets/76016868/d722c347-9505-4930-8325-d2b074bc43c8)
+
+
+
+??? example "[Generative agent-based modeling with actions grounded in physical, social, or digital space using Concordia (Google DeepMind, December 2023)
+](https://github.com/google-deepmind/concordia)"
+    Abstract:
+    "Agent-based modeling has been around for decades, and applied widely across the social and natural sciences. The scope of this research method is now poised to grow dramatically as it absorbs the new affordances provided by Large Language Models (LLM)s. Generative Agent-Based Models (GABM) are not just classic Agent-Based Models (ABM)s where the agents talk to one another. Rather, GABMs are constructed using an LLM to apply common sense to situations, act "reasonably", recall common semantic knowledge, produce API calls to control digital technologies like apps, and communicate both within the simulation and to researchers viewing it from the outside. Here we present Concordia, a library to facilitate constructing and working with GABMs. Concordia makes it easy to construct language-mediated simulations of physically- or digitally-grounded environments. Concordia agents produce their behavior using a flexible component system which mediates between two fundamental operations: LLM calls and associative memory retrieval. A special agent called the Game Master (GM), which was inspired by tabletop role-playing games, is responsible for simulating the environment where the agents interact. Agents take actions by describing what they want to do in natural language. The GM then translates their actions into appropriate implementations. In a simulated physical world, the GM checks the physical plausibility of agent actions and describes their effects. In digital environments simulating technologies such as apps and services, the GM may handle API calls to integrate with external tools such as general AI assistants (e.g., Bard, ChatGPT), and digital apps (e.g., Calendar, Email, Search, etc.). Concordia was designed to support a wide array of applications both in scientific research and for evaluating performance of real digital services by simulating users and/or generating synthetic data."
+    [Paper](https://arxiv.org/abs/2312.03664)
 
 
 ### Operating Systems
