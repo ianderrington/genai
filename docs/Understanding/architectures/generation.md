@@ -35,6 +35,17 @@ Speculative sampling is a technique that relies on speedups due to generation pa
 
 ??? paper "[Accelerating Large Language Model Decoding with Speculative Sampling](https://arxiv.org/pdf/2302.01318.pdf)"
     <img width="665" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/948d7e87-b71c-465e-b3c5-28177e85ef6c">
-
+    
 
 !!! code "[Speculative Decoding implementation by Lucidrains](https://github.com/lucidrains/speculative-decoding)"
+    
+
+## Joint decoding
+
+??? code "[Co-LLM: Learning to Decode Collaboratively with Multiple Language Models](https://github.com/clinicalml/co-llm)" co-llm
+    **Developments** The author show in their [paper](https://arxiv.org/pdf/2403.03870.pdf) that the use of multiple models to improve generated content using the outputs of one as context for the others. 
+    
+    <img width="1158" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5dc9a6bf-d3bc-4e58-a895-abe8c5aaa093">
+
+    ![image](https://github.com/ianderrington/genai/assets/76016868/80437470-f1dd-40ad-8f9a-6082c52aea97)
+
