@@ -56,6 +56,12 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
 
 
+??? code "[VectorHub: Evaluation of multiple Vector databases](https://github.com/superlinked/VectorHub)" 
+    "Vector Hub is a free and open-sourced learning hub for people interested in adding vector retrieval to their ML stack. On VectorHub you will find practical resources to help you"
+    [VDB comparisons](https://superlinked.com/vector-db-comparison/)
+    
+
+
 ## Text
 
 ??? code "[BooookScore: A systematic exploration of book-length summarization in the era of LLMs](https://github.com/lilakk/BooookScore)" BooookScore
