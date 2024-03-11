@@ -15,7 +15,9 @@ An LLM in isolation can have value, but it is often much easier to use when inte
     * Monitoring to ensure value is being derived
     * Effective (defensive) UX to ensure the models can be used well.
     ![image](https://github.com/ianderrington/genai/assets/76016868/fd03db2c-c695-4f52-8306-062fad5c3779)
+    
 
+??? tip "[Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/pdf/2307.10169.pdf) This is a well-done and comprehensive review."
 
 ## Reference Materials
 
