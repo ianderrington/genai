@@ -261,6 +261,11 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     ![image](https://github.com/ianderrington/genai/assets/76016868/7a9cffc3-1f67-4ea2-8368-8380f323f16a)
     <img width="814" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/af71d9db-a542-4289-a833-d16ca5e9b574">
 
+??? code "[A](https://github.com/daveshap/ACE_Framework)" ace-framework
+   ![image](https://github.com/ianderrington/genai/assets/76016868/cd7a4ec3-146c-4129-bf14-7b60e1558f5b)
+
+??? code "[Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. ](https://github.com/DataBassGit/AgentForge?tab=readme-ov-file)" agent-forge
+
 ## Multi-Agent 
 
 !!! code "[CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)](https://github.com/camel-ai/camel)"
