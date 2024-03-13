@@ -234,7 +234,10 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
     ![image](https://github.com/ianderrington/genai/assets/76016868/48bf16aa-efde-4e38-b7e1-30963f74aa66)
 
 
-## Open Source Implementations (unpublished)
+## Swarms
+
+??? code "[Heirarchichal Autonomous Agent Swarm: HAAS](https://github.com/daveshap/OpenAI_Agent_Swarm) to create self-direct, self-correcting, and self-improving agent systems." HAAS
+    
 
 !!! tip "[Swarms](https://medium.com/@kyeg/swarms-of-ai-agents-automating-everything-c554f5be421b )"
     Very thoughtful next-level systems focusing on large-dimensions of swarms. Very initial stages but has a lot of promise.
