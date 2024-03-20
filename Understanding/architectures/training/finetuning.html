@@ -66,7 +66,7 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config",""),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-MPQ831MCNS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-MPQ831MCNS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MPQ831MCNS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
   
     <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
   
@@ -74,15 +74,17 @@
     
     
    <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1489,6 +1491,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1814,6 +1818,33 @@ and
     
   
     Recurrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="distributed.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed
   
 
     
@@ -5720,7 +5751,7 @@ One manner of doing this is through the use of <a href="#adaptermodel-changes-fo
 </div>
 <h3 id="low-rank-adaption-lora">Low Rank Adaption (LoRA)<a class="headerlink" href="#low-rank-adaption-lora" title="Permanent link">&para;</a></h3>
 <p>Instead of interleaving a trainable layer in between various layers, <a href="https://arxiv.org/pdf/2106.09685.pdf">Low-Rank Adaption</a> (LoRA) uses the notion that changes to outputs of a given layer <span class="arithmatex">\(W\)</span> will likely be small <span class="arithmatex">\(\Delta W\)</span>. Instead of computing all those weights a low-rank vector matrix decomposition where <span class="arithmatex">\(\Delta W = A B\)</span> for two LoRA matrices <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. With a common inner-dimension variable <em>rank</em>, <span class="arithmatex">\(r\)</span>, is the matrix parameter counts can be appropriately minimized to have a small fraction of the original model <span class="arithmatex">\(W\)</span>.</p>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9" /></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e16c056-0fa7-4112-85e0-e1f7cb0866e9" /></a></p>
 <h3 id="practical-tips">Practical Tips<a class="headerlink" href="#practical-tips" title="Permanent link">&para;</a></h3>
 <p>These are tips mostly from <a href="https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms">Practical Tips for Finetuning LLMS</a>.</p>
 <h4 id="data-quality-and-size">Data Quality and Size<a class="headerlink" href="#data-quality-and-size" title="Permanent link">&para;</a></h4>
@@ -5751,15 +5782,15 @@ weight += (L2_B \times L2_A) * scale2 \\
 <p>Fine-tuning can lead to significant improvements in both instruction following and helpfulness of models. This is demonstrated in the research paper <a href="https://arxiv.org/pdf/2310.12962.pdf">An Emulator for Fine-Tuning Large Language Models using Small Language Models</a>. The paper also suggests that combining fine-tuning with speculative decoding can speed up larger models by a factor of 2.5.</p>
 <details class="note">
 <summary>Research Paper: An Emulator for Fine-Tuning Large Language Models using Small Language Models</summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="1088" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf"></a>
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/5ae8af02-02f9-43ab-a545-16b7709935e8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="1017" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5ae8af02-02f9-43ab-a545-16b7709935e8"></a>
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="431" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1088" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f6b84225-3a5c-4545-8ad3-d8f40b7536cf"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/5ae8af02-02f9-43ab-a545-16b7709935e8" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1017" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5ae8af02-02f9-43ab-a545-16b7709935e8"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="431" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887"></a></p>
 </details>
 <p>There are also several tools available that can assist in the fine-tuning process.</p>
 <details class="code">
 <summary><a href="https://github.com/OpenPipe/OpenPipe">Open Pipe</a> allows you to use powerful but expensive LLMs to fine-tune smaller and cheaper models</summary>
 <p>You can evaluate the model and prompt combinations in the playground, query your past requests, and export optimized training data.
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e"></a></p>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e"></a></p>
 </details>
 <ul>
 <li><a href="https://github.com/openlmlab/lomo">Full Parameter Fine-Tuning for Large Language Models with Limited Resources.</a> Introduces LOMO: LOw-Memory Optimization to fuse</li>

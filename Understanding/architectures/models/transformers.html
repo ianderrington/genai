@@ -66,7 +66,7 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config",""),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-MPQ831MCNS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-MPQ831MCNS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MPQ831MCNS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
   
     <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
   
@@ -74,15 +74,17 @@
     
     
    <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1831,6 +1833,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1947,6 +1951,33 @@ and
     
   
     Recurrent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training/distributed.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed
   
 
     
@@ -5981,7 +6012,7 @@ and
 <details class="note">
 <summary><a href="https://bbycroft.net/llm">Visualizing Large Transformers</a></summary>
 <p>A very interesting visual representation of transformers.
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/ecca4ace-6623-4341-b223-c12be4de3c11" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="785" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ecca4ace-6623-4341-b223-c12be4de3c11"></a></p>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/ecca4ace-6623-4341-b223-c12be4de3c11" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="785" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ecca4ace-6623-4341-b223-c12be4de3c11"></a></p>
 </details>
 <h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
 <ol>
@@ -6077,16 +6108,16 @@ They improve computation complexity in one of several ways:</p>
 <details class="code">
 <summary><a href="https://github.com/insuhan/hyper-attn">HyperAttention: Long-context Attention in Near-Linear Time</a></summary>
 <p><strong>Developments</strong> The authors reveal a new method of attention that allows for very-long context lengths which they call 'hyperattention'. This algorithm finds (1) larger entries in the attention matrix using <code>sorted locality sensitive hashing</code>, and then performs column subsampling to rearrange the matrices to provide block-diagonal approximation.</p>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/88f96542-7b29-4646-8672-81d4a19ae177" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/88f96542-7b29-4646-8672-81d4a19ae177" /></a>
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d8af04f8-0100-4f41-b79d-177212b237eb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d8af04f8-0100-4f41-b79d-177212b237eb" /></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/88f96542-7b29-4646-8672-81d4a19ae177" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/88f96542-7b29-4646-8672-81d4a19ae177" /></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d8af04f8-0100-4f41-b79d-177212b237eb" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d8af04f8-0100-4f41-b79d-177212b237eb" /></a></p>
 <p><strong>Results</strong> While not without a tradeoff for perplexity, the speedup for long context lengths can be considerable. 
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/3800a0b1-8344-4f91-bf1e-4f1a208f7ec7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="651" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3800a0b1-8344-4f91-bf1e-4f1a208f7ec7"></a></p>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/516835c5-a421-4906-ba0d-919c1f7ad2c4" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="646" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/516835c5-a421-4906-ba0d-919c1f7ad2c4"></a></p>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/3800a0b1-8344-4f91-bf1e-4f1a208f7ec7" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="651" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3800a0b1-8344-4f91-bf1e-4f1a208f7ec7"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/516835c5-a421-4906-ba0d-919c1f7ad2c4" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="646" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/516835c5-a421-4906-ba0d-919c1f7ad2c4"></a></p>
 <p><a href="https://arxiv.org/pdf/2310.05869.pdf">Paper</a></p>
 </details>
 <details class="code">
 <summary><a href="https://arxiv.org/pdf/1904.10509.pdf">Generating Long Sequences with Sparse Transformers</a> provides simple solutions to generate longer sequences.</summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/86d4dc29-7711-490d-a2a8-99c4a4d34027" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="662" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/86d4dc29-7711-490d-a2a8-99c4a4d34027"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/86d4dc29-7711-490d-a2a8-99c4a4d34027" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="662" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/86d4dc29-7711-490d-a2a8-99c4a4d34027"></a></p>
 </details>
 <details class="code">
 <summary><a href="https://github.com/neuro-inc/ml-recipe-hier-attention">Heirarchichal Attention</a></summary>
@@ -6098,30 +6129,30 @@ They improve computation complexity in one of several ways:</p>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2305.07185.pdf">MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers</a></summary>
 <p>MEGABYTE segments sequences into patches and uses a local submodel within patches and a global model between patches. Very nice demonstration that allows for <span class="arithmatex">\(O(N^{4/3}\)</span> scaling directly on bytes, thereby bypassing tokenization requirements found with traditional transformers.</p>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="446" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c2ea874-5257-4ed8-9abb-73b8f969f356"></a></p>
 <p>An open source version made by <code>lucidrains</code>: <a href="https://github.com/lucidrains/MEGABYTE-pytorch">Megabyte Github implementation for PyTorch</a></p>
 </details>
 <details class="code">
 <summary><a href="https://github.com/deep-spin/infinite-former">Infinite Former</a> Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions.</summary>
 <p><a href="https://arxiv.org/pdf/2109.00301.pdf">Paper</a>
-<a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Infinity Former" loading="lazy" src="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" width="300" /></a></p>
+<a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="left" alt="Infinity Former" loading="lazy" src="https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80" width="300" /></a></p>
 </details>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2308.16137.pdf">LM-INfinite: Simple On-the-Fly Length Generalization for Large Language Models</a> provides an O(n) time/space extension allows LMMs to ability to go to 32k tokens and 2.7x speedup.</summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="545" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8"></a>
-    <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1"></a>
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="863" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="545" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d3c4ccbb-9fc9-4bc5-9b54-7b2270c26cc8"></a>
+    <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5d-b409-4b98-95c0-e712fd186dc1"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="863" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61"></a></p>
 </details>
 <details class="code">
 <summary><a href="https://github.com/mit-han-lab/streaming-llm">Efficient Streaming Language Models with Attention Sinks</a></summary>
 <p><a href="https://arxiv.org/pdf/2309.17453.pdf">Paper</a>
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a" /></a></p>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a" /></a></p>
 </details>
 <h3 id="computation-reduction">Computation Reduction<a class="headerlink" href="#computation-reduction" title="Permanent link">&para;</a></h3>
 <details class="code">
 <summary><a href="https://github.com/bobby-he/simplified_transformers">Simplified Transformers</a> that removes the 'value' parameter-set to increase speed by 14% with potentially minimal accuracy reduction</summary>
 <p>Herein the authors reveal a variation of transformers that removes the 'value' parameter to yield notable speed gains at the same performance level.
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/16a8b01d-10df-4188-addd-345128ba4156" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="632" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/16a8b01d-10df-4188-addd-345128ba4156"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/16a8b01d-10df-4188-addd-345128ba4156" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="632" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/16a8b01d-10df-4188-addd-345128ba4156"></a>
 <a href="https://arxiv.org/pdf/2311.01906.pdf">Paper</a></p>
 </details>
 <p><a href="https://arxiv.org/pdf/2306.03078v1.pdf">SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression</a></p>
@@ -6129,14 +6160,14 @@ They improve computation complexity in one of several ways:</p>
 <p>Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.</p>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2305.08298.pdf">Symbol Tuning Improves in-context learning in Language Models</a></summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5"></a></p>
 </details>
 <h2 id="other-modalities">Other modalities<a class="headerlink" href="#other-modalities" title="Permanent link">&para;</a></h2>
 <h3 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">&para;</a></h3>
 <h3 id="graphs">Graphs<a class="headerlink" href="#graphs" title="Permanent link">&para;</a></h3>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2302.00049.pdf">Transformers Meet Directed Graphs</a> introduces a variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs</summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc"></a></p>
 </details>
 <h2 id="training-variations">Training variations<a class="headerlink" href="#training-variations" title="Permanent link">&para;</a></h2>
 <h3 id="fairness-enablement">Fairness Enablement<a class="headerlink" href="#fairness-enablement" title="Permanent link">&para;</a></h3>
@@ -6150,7 +6181,7 @@ They improve computation complexity in one of several ways:</p>
 <h3 id="multimodal">Multimodal<a class="headerlink" href="#multimodal" title="Permanent link">&para;</a></h3>
 <details class="important">
 <summary><a href="https://arxiv.org/pdf/2312.12423.pdf">Jack of All Tasks, Master of Many: Designing General-purpose Coarse-to-Fine Vision-Language Model</a></summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/61e04782-ee50-4964-829b-270cd8a0041c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="672" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/61e04782-ee50-4964-829b-270cd8a0041c"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/61e04782-ee50-4964-829b-270cd8a0041c" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="672" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/61e04782-ee50-4964-829b-270cd8a0041c"></a></p>
 <blockquote>
 <p>In this work, we present VistaLLM, the first generalpurpose vision model that addresses coarse- and finegrained vision-language reasoning and grounding tasks over single and multiple input images. We unify these tasks by converting them into an instruction-following sequenceto-sequence format. We efficiently transform binary masks into a sequence of points by proposing a gradient-aware adaptive contour sampling scheme, which significantly improves over the naive uniform sampling technique previously used for sequence-to-sequence segmentation tasks</p>
 </blockquote>
@@ -6163,8 +6194,8 @@ They improve computation complexity in one of several ways:</p>
 <h3 id="graph">Graph<a class="headerlink" href="#graph" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title"><a href="https://arxiv.org/pdf/2312.07859.pdf">Invariant Graph Transformer</a></p>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/43ab8576-6c74-4f1d-ba67-8c0a6e728c27" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="348" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/43ab8576-6c74-4f1d-ba67-8c0a6e728c27"></a></p>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/66251260-2113-47d1-a416-2d160d7a2bef" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="695" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/66251260-2113-47d1-a416-2d160d7a2bef"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/43ab8576-6c74-4f1d-ba67-8c0a6e728c27" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="348" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/43ab8576-6c74-4f1d-ba67-8c0a6e728c27"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/66251260-2113-47d1-a416-2d160d7a2bef" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="695" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/66251260-2113-47d1-a416-2d160d7a2bef"></a></p>
 </div>
 <h2 id="abstractions">Abstractions<a class="headerlink" href="#abstractions" title="Permanent link">&para;</a></h2>
 <ul>
