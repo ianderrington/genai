@@ -1,8 +1,73 @@
 # Retrieval-Augmented Generation (RAG)
 
-Large Language Models (LLMs) can be made more useful by enabling them to access a set of information relevant to the prompt at hand. This can be achieved by extracting information from vector, SQL, and no-SQL [memory](./memory.md) and feeding it into the LLM. This approach, known as Retrieval-Augmented Generation (RAG), was introduced in 2020 in [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf). It has shown impressive results in improving the generation of content. However, it is still an area of active development and research, and fully optimized solutions are not always available.
+Trained and fine-tuned LLMs can generate high quality results, though their generated results will be generally confined to the information they have been trained on. Additionally, their responses can suffer from:
 
-## Why use RAG?
+* **Hallucinations** that create false or inaccurate information 
+* Lack of **attributon** making it difficult to ascertain validity
+* **Staleness** due to new or updated information 
+
+Retrieval-Augmented Generation (RAG) helps to solve that by coupling the information to external memory.  Here is a basic comparison. 
+
+<div class ="grid cards" markdown>
+
+=== "Without RAG"
+```mermaid
+graph LR
+ style Input fill:#FFA500,stroke:#333,stroke-width:2px
+ style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
+ style Generator fill:#0000FF,stroke:#333,stroke-width:2px
+ style Output fill:#800080,stroke:#333,stroke-width:2px
+
+ Input --> Generator
+ Prompt --> Generator
+ Generator --> Output
+```
+
+=== "With RAG"
+```mermaid
+graph LR
+    style Docs fill:#FF0000,stroke:#333,stroke-width:2px
+    style QueryEncoder fill:#FF0000,stroke:#333,stroke-width:2px
+    style DocEncoder fill:#FF0000,stroke:#333,stroke-width:2px
+    style Retriever fill:#FF0000,stroke:#333,stroke-width:2px
+    style Input fill:#FFA500,stroke:#333,stroke-width:2px
+    style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
+    style Context fill:#FFA500,stroke:#333,stroke-width:2px
+    style Generator fill:#0000FF,stroke:#333,stroke-width:2px
+    style Output fill:#800080,stroke:#333,stroke-width:2px
+
+    QueryEncoder --> Retriever
+    Input --> Generator
+    Input --> QueryEncoder
+    Docs --> DocEncoder
+    DocEncoder --> Retriever
+    
+    Retriever --> Context
+    
+    Prompt --> Generator
+    Context --> Generator
+    Generator --> Output
+```
+</div>
+
+Original inceptions of RAG involve queries that involve connecting with [../architectures/embedding.md] based lookups, though other lookup mechanisms, including key-word searches and other lookups from [memory](./memory.md) sources may also be possible. 
+
+!!! warning "RAG is still an area of optimization with a number of components that may be optimized"
+   These areas of optimization include:
+   
+   * Manner of document encoding and chunking
+   * Manner of query encoding when and what to retrieve.
+   * How to combine the contexts with the prompts
+
+One of the seminal papers on RAG, [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduced a complete solution for enabled training the models themselves for embeddings that would better-enable retrieval. Many present incarnations of RAG append information based on document lookup methods that do not include model fine-tuning to improve the document embedding. 
+
+## RAG vs Finetuning
+
+
+??? code "[Rag vs Finetuning](https://github.com/informagi/RAGvsFT) reveals Fine tuning boosts performance over RAG"  
+   [Paper](https://arxiv.org/abs/2403.01432)
+   
+### Why use RAG?
 
 Large foundation models are trained on large corporas of public (and sometimes private) data. Models may lose effective semantic grounding because of the breadth of implicing knowledge they have codified in the next-token predictors. To improve the groundedness and appropriateness of the desired output, RAG fetches appropriate information that can be combined with the prompt context in order for the LLM to generate appropriate results. This can be particularly important when there is information that my be changing, and needs to be incorporated quickly. 
 
@@ -26,7 +91,7 @@ The primary challenges regarding rag may be related to organizational or functio
     * 
 
 
-## RAG Process
+## RAG in Detail
 
 The RAG process can be divided into two main stages: Preparation (offline) and Retrieval and Generation (online).
 
@@ -191,6 +256,15 @@ The final step is generating an output using a prompt that integrates the query 
 * **Multi-Modal:** This approach is used for RAG on a substack that has many images of densely packed tables, graphs. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Multi_modal_RAG.ipynb) is an example implementation.
 
 * **Semi-Structured:** This approach is used for RAG on documents with tables, which can be split using naive RAG text-splitting that does not explicitly preserve them. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_Structured_RAG.ipynb) is an example implementation.
+
+## Important references
+
+??? important "[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduces a complete solution for enabling improved response generation with LLMs."
+
+    <img width="1153" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/493156fe-322d-42e6-8b26-98e199676cb6">
+    The authors reveal that allowing for fine tuning of the models when equipped with RAG improved the results. 
+    <img width="598" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/05ffefbd-4fd7-4d4e-9ec4-0719e66e1791">
+
 
 ## Tutorials and Blogs
 
