@@ -37,6 +37,7 @@ graph LR
     style Output fill:#800080,stroke:#333,stroke-width:2px
 
     QueryEncoder --> Retriever
+    Prompt --> Generator
     Input --> Generator
     Input --> QueryEncoder
     Docs --> DocEncoder
@@ -44,7 +45,6 @@ graph LR
     
     Retriever --> Context
     
-    Prompt --> Generator
     Context --> Generator
     Generator --> Output
 ```
@@ -59,10 +59,9 @@ Original inceptions of RAG involve queries that involve connecting with [../arch
    * Manner of query encoding when and what to retrieve.
    * How to combine the contexts with the prompts
 
-One of the seminal papers on RAG, [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduced a complete solution for enabled training the models themselves for embeddings that would better-enable retrieval. Many present incarnations of RAG append information based on document lookup methods that do not include model fine-tuning to improve the document embedding. 
+One of the seminal papers on RAG, [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduced a solution for end-to-end training of models involving training document and query encoding, lookup and demosntrated revealing [improved results](https://contextual.ai/introducing-rag2/) over solutions where model components were frozen. For reasons of simplicity, however, a generally standard approach uses models that are frozen to embed and query documents. 
 
 ## RAG vs Finetuning
-
 
 ??? code "[Rag vs Finetuning](https://github.com/informagi/RAGvsFT) reveals Fine tuning boosts performance over RAG"  
    [Paper](https://arxiv.org/abs/2403.01432)
@@ -88,7 +87,6 @@ The primary challenges regarding rag may be related to organizational or functio
     * You have Latency requirements that RAG retrieval may induce.
     * You don't want to pay for, or maintain and support a RAG database. 
     * There are ethical or privacy concerns relating to sending data to a third-party API
-    * 
 
 
 ## RAG in Detail
@@ -135,10 +133,9 @@ The retrieval and generation stage involves the following steps:
 Users should only access data that is appropriate for their application. However, including too much information might be unnecessary or harmful to retrieval if the [retrieval](#retrieval) cannot handle the volume or complexity of data. It is also crucial to ensure data privacy when providing data that might not be appropriate (or legal) to access.
 
 
-
 ### Indexing Data
 
-Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  identified data into 
+Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  
 
 #### Loading Data
 
@@ -178,26 +175,31 @@ It is useful to perform parallel indexing that keeps track of records that are p
 The langchain [Blog](https://blog.langchain.dev/syncing-data-sources-to-vector-stores/) and docs on [indexing](https://python.langchain.com/docs/modules/data_connection/indexing) provide quality discussions on these topics. 
 
 
-
 ### Retrieving Data
 
 The decision and act to retrieve the documents will depend on the additional contexts that the agents may need to be aware of.
 
 It might not always be necessary to retrieve documents. When it is necessary to retrieve the document, it is important to know where to retrieve from [routing](#routing), and then [matching](#matching) the query to the appropriately stored information. Both of these may involve [rewriting](#query-transformations) the prompt to be more effective in the manner the data is retrieved.
 
-#### Query Transformations
+#### Query Optimization
 
-Query transformations can be done in several ways, including:
+In production settings, the queries that users ask are unlikely to be optimal for retrieval. This can be due to a combination of challenges such as questions that are. 
 
-1. **Rewrite-Retrieve-Read:** This approach involves rewriting the query for better retrieval and reading of the relevant documents.
+* Irrelevant
+* Vague
+* Not related to retrieval
+* Are made of multiple questions
+
+**Optimization** of queries, looks to improve these queries in several manners. Here are a several with other greater descriptions written in [Langchain's query analysis](se_cases/query_analysis/). 
+
+* **Rewrite-Retrieve-Read:** This approach involves rewriting the query for better retrieval and reading of the relevant documents.
 
     ??? important "[Query Rewriting for Retrieval-Augmented Large Language Models](https://arxiv.org/pdf/2305.14283.pdf)"
 
         <img width="630" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b518994c-a419-4cc3-b065-065c0ca625d1">
 
 
-
-2. **Step Back Prompting:** This method generates an intermediate context that helps to 'abstract' the information. Once generated, the additional context can be used.
+* **Step Back Prompting:** This method generates an intermediate context that helps to 'abstract' the information. Once generated, the additional context can be used.
 
     ???+ example "[Step back](https://smith.langchain.com/hub/langchain-ai/stepback-answer)"
         ```markdown
@@ -214,7 +216,7 @@ Query transformations can be done in several ways, including:
 
         ![image](https://github.com/ianderrington/genai/assets/76016868/970df1c9-cdfc-4a9e-9dcf-f83944e6102c)
 
-4. **Question Rephrasing:** Particularly in chat settings, it's important to include all of the appropriate context to create an effective search query.
+* **Query Rephrasing:** Particularly in chat settings, it's important to include all of the appropriate context to create an effective search query.
 
     ???+ example "[Rephrase question](https://smith.langchain.com/hub/langchain-ai/weblangchain-search-query)"
 
@@ -227,11 +229,18 @@ Query transformations can be done in several ways, including:
             Standalone Question:
         ```
 
-5. **Question Partitioning:** Some questions may require individual pieces of information to be found to answer the question. This means breaking the question apart into multiple pieces.
+* **Query Decomposition** When questions are directly made of multiple questions, or the effective answer to these questions involves answering several sub-questions, breaking the questions into multiple queries may be essential. This may involve performing sequential queries that are created based on retrieved information, or queries that can be run irrespective of other results.
+
+* **Query Expasion** Can generate multiple rephrased versions of the query to increas the likelihood of a hit, or use the advanced retrieval methods to triangulate higher quality hits.
+
+* **Query Clarifying** Particularly in chat settings when questions are vague, asking follow-up questions can be instrumental in ensuring the lookup can be as effective as possible. 
+
+* **Query structuring** When answers to queries can be 'filtered' using meta-data based on elements of the queries can be highly valuable. This can include attributes such as _date_, _location_, _subjects_. See [Langchain's Query construction](https://blog.langchain.dev/query-construction/) for additional information related to this.
+
 
 #### Routing
 
-Depending on the question asked, queries may need to be routed to different sources of data. OpenAI's [RAG strategies](https://blog.langchain.dev/applying-openai-rag/) provides some guidance on question routing: 
+Depending on the question asked, queries may need to be routed to different sources of data, or indexes. OpenAI's [RAG strategies](https://blog.langchain.dev/applying-openai-rag/) provides some guidance on question routing: 
 
 #### Matching
 
@@ -244,9 +253,25 @@ Matching involves aligning the query with the appropriately stored information. 
 
 Reranking 
 
-### Generating
+### Generating responses
 
 The final step is generating an output using a prompt that integrates the query and retrieved data.
+
+Challenges in generating responses can involve
+
+* Not having enough information: RAG can help minimize response generation of non-factual information, but only if retrieved information provides sufficient context to answer theq estion properly. If the question cannot be answered with a reasonable degree of certainty, then the response should be along the lines of _"I don't know."_ 
+* Conflicting information: When retrieved results contain different responses to the same question, a difinitive response may not be possible
+* Stale information: When information is no longer relevant.
+
+
+## Evaluating and Comparing
+
+Because of the large number of manners of performing RAG, it is important to evaluate the quality of the implemented solution. 
+
+??? code "[Rag Arena](https://github.com/mendableai/rag-arena) Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses." 
+    
+
+
 
 ## Other Topics
 ??? code "[Time stamp aware vector storage](https://github.com/timescale/tsv-timemachine)"
