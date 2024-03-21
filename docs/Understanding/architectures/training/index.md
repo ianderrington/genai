@@ -13,5 +13,7 @@ Foundationally, the use of [reinforcement learning with human feedback (RLHF)](.
     **Developments** The authors reveal a comprehensive set of solutions to iteratively improve models.
     <img width="657" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/961478b0-a40a-4c61-8ff7-f86c93633954">
 
+## Distributed Training
+[Distributed Training](https://neptune.ai/blog/distributed-training)
 
-
+### References
