@@ -1,3 +1,6 @@
+
+- [Aman.ai](http://prompt.aman.ai) provides a comprehensive summary important research and libraries
+
 ### Quality Recordings
 
 
@@ -6,6 +9,7 @@
 - [AI Explained](https://www.youtube.com/@ai-explained-)
 - [Yannic Kilcher](https://www.youtube.com/@YannicKilcher)
 
-### Expansive Ddatasets
+
+### Expansive Datasets
 
 - [Prompting Guide](https://www.promptingguide.ai/)
