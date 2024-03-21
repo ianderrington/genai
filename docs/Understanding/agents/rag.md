@@ -229,7 +229,7 @@ In production settings, the queries that users ask are unlikely to be optimal fo
             Standalone Question:
         ```
 
-* **Query Decomposition** When questions are directly made of multiple questions, or the effective answer to these questions involves answering several sub-questions, breaking the questions into multiple queries may be essential. This may involve performing sequential queries that are created based on retrieved information, or queries that can be run irrespective of other results.
+* **Query Decomposition** When questions are directly made of multiple questions, or the effective answer to these questions involves answering several sub-questions, breaking the questions into multiple queries may be essential. This may involve performing sequential queries that are created based on retrieved information, or queries that can be run irrespective of other results, in [multi hop rag](#multi-hop-rag). 
 
 * **Query Expasion** Can generate multiple rephrased versions of the query to increas the likelihood of a hit, or use the advanced retrieval methods to triangulate higher quality hits.
 
@@ -244,13 +244,24 @@ Depending on the question asked, queries may need to be routed to different sour
 
 #### Matching
 
-Matching involves aligning the query with the appropriately stored information. This can be done with vector-only, or
+Matching involves aligning the query with the appropriately stored information. 
+
+#### Multi-Hop RAG
+
+In order to effectively answer some queries, retrieval of evidence from multiple documents may be needed. This is known as **multi-hop** rag. 
+
+??? code "[MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries](https://github.com/yixuantt/MultiHop-RAG) provides a dataset for evaluating multihop rag"
+    "MultiHop-RAG: a QA dataset to evaluate retrieval and reasoning across documents with metadata in the RAG pipelines. It contains 2556 queries, with evidence for each query distributed across 2 to 4 documents. The queries also involve document metadata, reflecting complex scenarios commonly found in real-world RAG applications."
+    
+    <img width="331" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/80db5bd9-510b-4c23-bf46-4d4679e1929b">
 
 
 ##### Small to big lookup
+TODO xxx
 
 #### Reranking
 
+TODO xxx
 Reranking 
 
 ### Generating responses
@@ -262,15 +273,6 @@ Challenges in generating responses can involve
 * Not having enough information: RAG can help minimize response generation of non-factual information, but only if retrieved information provides sufficient context to answer theq estion properly. If the question cannot be answered with a reasonable degree of certainty, then the response should be along the lines of _"I don't know."_ 
 * Conflicting information: When retrieved results contain different responses to the same question, a difinitive response may not be possible
 * Stale information: When information is no longer relevant.
-
-
-## Evaluating and Comparing
-
-Because of the large number of manners of performing RAG, it is important to evaluate the quality of the implemented solution. 
-
-??? code "[Rag Arena](https://github.com/mendableai/rag-arena) Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses." 
-    
-
 
 
 ## Multimodal Rag
@@ -297,6 +299,13 @@ Natural-language lookup with RAG can be improved by allowing other modalities, s
 * **Multi-Modal:** This approach is used for RAG on a substack that has many images of densely packed tables, graphs. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Multi_modal_RAG.ipynb) is an example implementation, and [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_structured_multi_modal_RAG_LLaMA2.ipynb) is one that works with private data. 
 
 * **Semi-Structured:** This approach is used for RAG on documents with tables, which can be split using naive RAG text-splitting that does not explicitly preserve them. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_Structured_RAG.ipynb) is an example implementation.
+
+## Evaluating and Comparing
+
+Because of the large number of manners of performing RAG, it is important to evaluate the quality of the implemented solution. 
+
+??? code "[Rag Arena](https://github.com/mendableai/rag-arena) Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses." 
+
 
 ## Important references
 
