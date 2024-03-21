@@ -59,8 +59,6 @@ Models Phi# like [Phi-2](https://huggingface.co/microsoft/phi-2) have revealed h
     <img width="556" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4">
 
 
-
-
 ??? code "[Reformatted Alignment](https://github.com/GAIR-NLP/ReAlign) demonstrates that reformatting responses of instruction data with to pre-established criteria and collated evidence improves alignment, factuality, and readability." realign-reformatted-alignment
 
     **Develpoments** By reformatting instruction data in a consistent manner, and connecting it with a Google Search API, the results are able to generate higher quality data that is ReAligned' resulting in improvements over several models, judged both by GPT-4 and people. 
@@ -110,7 +108,6 @@ Models Phi# like [Phi-2](https://huggingface.co/microsoft/phi-2) have revealed h
     ```bash
     A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the questions. USER: Convert the following paragraph into a conversational format with multiple tags of "Question:" followed by "Answer:":
     ```
-    
 
 
 ## Useful Resources
