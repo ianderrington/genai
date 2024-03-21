@@ -30,7 +30,19 @@ In order to train an effective Generative AI model, it's important to balance yo
 
 ### Automated Data Selection
 
-Automated machine learning tools can greatly simplify data selection by providing features for automatic feature selection, data cleaning and preprocessing.
+
+
+## Filtering 
+
+### Applying labels 
+??? important "[TnT-LLM: Text Mining at Scale with Large Language Models](https://arxiv.org/html/2403.12173v1) uses an LLM to provide taxonomy and annotate data with text clasifiers."
+    
+    <img width="866" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/02e4559d-77e2-471f-8dcc-0b3f6653772d">
+    <img width="856" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bffff5f8-0c69-401f-bb63-887c08fb9d39">
+    <img width="861" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6f14e6e5-26b7-45b4-b4f4-d2259c83b6ac">
+
+
+
 
 ??? important "[How to Train Data-Efficient LLMs](https://arxiv.org/html/2402.09668v1)" how-to-train-data-efficient-llms
     
