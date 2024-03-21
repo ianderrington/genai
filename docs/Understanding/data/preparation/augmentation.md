@@ -77,4 +77,45 @@ Both heuristics and AI can be used to augment data, thought predominantly AI is 
     ```
     
 
+The reverse of the phrase "garbage in, garbage out", is "goodness in, goodness out". While we can use [selection](./selection.md) to improve the quality of data, the  data simulation can help expand the 'goodness' that can be enabled. Data simulation can be used in areas where data is specialized, real-world, costly, scarce, or not sufficiently diverse. It can also be used to reformat or improve upon general input data by highlighting particular components about that data. It can also be used to generated higher quality data that can improve the behavior of LLM's in various manners. Large volumes of synthetic data, which can be used to train highly task-specific models.  The use of synthetic data can be considered [recurrent](./recurrent.md).
+
+## Benefits
+Models, Phi-# have revealed how modifying the training data can enable significantly smaller models to perform similarly or better than much better models, as was done in 'Textbooks are all you need'. 
+
+
+??? tip "[Textbooks are all you need](https://arxiv.org/pdf/2306.11644.pdf)"
+    This study utilized a large volume of generated data and transformer-classifiers to filter the data and create a high-quality model. The model was trained over four days on eight A-100s and achieved outperforming results. 
+
+??? note "[Rephrasing the Web: A Recipe for Compute & Data-Efficient Language Modeling](https://arxiv.org/pdf/2401.16380.pdf)" web-rephrase-augmented-pre-training
+
+    The authors reveal that creating new training-examples from input data using an off-the-shelf model (Mistral-7B) can yield convergence speeds that are 3x without doing so. The  rephrasing is done in a manner that is 'like wikipedia' or in a 'question-answer format'. They are also done at different levels of style diversity, such as a child or a a scholar. In detailed analysis they found that:
+    
+    * Style diversity improves the value
+    * Reasonable paraphraser models are needed
+    * It is better than standard augmentation that does random deletions or synonym replacements.
+    
+    Here is one of a few example rephrasing prompts: 
+    ```markdown
+    “For the following paragraph give me a paraphrase of the same in high-quality English language as in sentences on Wikipedia”
+    ```
+    <img width="556" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4">
+
+
+
+## Resources
+
+The field of data simulation in AI has been enriched by several resources and studies. Here are a few notable ones:
+
+
+
+!!! code "[StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners](https://github.com/google-research/syn-rep-learn)"
+    This research paper by Google Research delves into the use of synthetic images generated from text-to-image models for training visual representation learners.
+
+!!! code "[Madrona](https://github.com/shacklettbp/madrona)"
+    Madrona is a prototype game engine designed for creating high-throughput, GPU-accelerated simulators. These simulators can run thousands of virtual environment instances and generate millions of aggregate simulation steps per second on a single GPU.
+
+!!! code "[TuNA](https://replit.com/@olafblitz/tuna-asyncio?v=1&ref=blog.langchain.dev#main.py) for using LangChain to create volumes of synthetic data pairs."
+    [Blog](https://blog.langchain.dev/introducing-tuna-a-tool-for-rapidly-generating-synthetic-fine-tuning-datasets/)
+
+
 
