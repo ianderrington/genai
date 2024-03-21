@@ -273,12 +273,28 @@ Because of the large number of manners of performing RAG, it is important to eva
 
 
 
-## Other Topics
-??? code "[Time stamp aware vector storage](https://github.com/timescale/tsv-timemachine)"
+## Multimodal Rag
+Natural-language lookup with RAG can be improved by allowing other modalities, such as tables and images, at the same time. There are several ways that this may be accomplished as described in[Langchain's multi modal rag](https://blog.langchain.dev/semi-structured-multi-modal-rag/): 
 
+  Option 1:
+  
+  Use multimodal embeddings (such as CLIP) to embed images and text
+  Retrieve both using similarity search
+  Pass raw images and text chunks to a multimodal LLM for answer synthesis
+  
+  Option 2:
+  
+  Use a multimodal LLM (such as GPT4-V, LLaVA, or FUYU-8b) to produce text summaries from images
+  Embed and retrieve text
+  Pass text chunks to an LLM for answer synthesis
+  
+  Option 3:
+  
+  Use a multimodal LLM (such as GPT4-V, LLaVA, or FUYU-8b) to produce text summaries from images
+  Embed and retrieve image summaries with a reference to the raw image
+  Pass raw images and text chunks to a multimodal LLM for answer synthesis
 
-
-* **Multi-Modal:** This approach is used for RAG on a substack that has many images of densely packed tables, graphs. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Multi_modal_RAG.ipynb) is an example implementation.
+* **Multi-Modal:** This approach is used for RAG on a substack that has many images of densely packed tables, graphs. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Multi_modal_RAG.ipynb) is an example implementation, and [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_structured_multi_modal_RAG_LLaMA2.ipynb) is one that works with private data. 
 
 * **Semi-Structured:** This approach is used for RAG on documents with tables, which can be split using naive RAG text-splitting that does not explicitly preserve them. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_Structured_RAG.ipynb) is an example implementation.
 
@@ -296,6 +312,8 @@ Because of the large number of manners of performing RAG, it is important to eva
 - [Langchain Question Answering](https://python.langchain.com/docs/use_cases/question_answering/)
 - [RAG demystified](https://github.com/pchunduri6/rag-demystified/blob/main/complex_qa.py)
 - [Mastering RAG: How To Architect An Enterprise RAG System](https://www.rungalileo.io/blog/mastering-rag-how-to-architect-an-enterprise-rag-system)
+- [RAG chatbot with Chat Embedding and Reranking (cohere)](https://txt.cohere.com/rag-chatbot/) and [Notebook](https://colab.research.google.com/github/cohere-ai/notebooks/blob/main/notebooks/RAG_Chatbot_with_Chat_Embed_Rerank.ipynb)
+- 
 
 ???+ important "[12 RAG Pain Points and Proposed Solutions](https://arxiv.org/pdf/2401.05856.pdf)" 12-rag-pain-points-and-solutions
     Things that might lead to failure of RAG pipeline. Mostly taken from the [blog]( https://towardsdatascience.com/12-rag-pain-points-and-proposed-solutions-43709939a28c)
