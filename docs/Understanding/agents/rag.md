@@ -9,45 +9,49 @@ Trained and fine-tuned LLMs can generate high quality results, though their gene
 Retrieval-Augmented Generation (RAG) helps to solve that by coupling the information to external memory.  Here is a basic comparison. 
 
 <div class ="grid cards" markdown>
+- "Without RAG"
 
-=== "Without RAG"
-```mermaid
-graph LR
- style Input fill:#FFA500,stroke:#333,stroke-width:2px
- style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
- style Generator fill:#0000FF,stroke:#333,stroke-width:2px
- style Output fill:#800080,stroke:#333,stroke-width:2px
-
- Input --> Generator
- Prompt --> Generator
- Generator --> Output
-```
-
-=== "With RAG"
-```mermaid
-graph LR
-    style Docs fill:#FF0000,stroke:#333,stroke-width:2px
-    style QueryEncoder fill:#FF0000,stroke:#333,stroke-width:2px
-    style DocEncoder fill:#FF0000,stroke:#333,stroke-width:2px
-    style Retriever fill:#FF0000,stroke:#333,stroke-width:2px
+   ---
+   
+   ```mermaid
+   graph LR
     style Input fill:#FFA500,stroke:#333,stroke-width:2px
     style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
-    style Context fill:#FFA500,stroke:#333,stroke-width:2px
     style Generator fill:#0000FF,stroke:#333,stroke-width:2px
     style Output fill:#800080,stroke:#333,stroke-width:2px
-
-    QueryEncoder --> Retriever
-    Prompt --> Generator
+   
     Input --> Generator
-    Input --> QueryEncoder
-    Docs --> DocEncoder
-    DocEncoder --> Retriever
-    
-    Retriever --> Context
-    
-    Context --> Generator
+    Prompt --> Generator
     Generator --> Output
-```
+   ```
+
+- "With RAG"
+
+   ---
+   ```mermaid
+   graph LR
+       style Docs fill:#FF0000,stroke:#333,stroke-width:2px
+       style QueryEncoder fill:#FF0000,stroke:#333,stroke-width:2px
+       style DocEncoder fill:#FF0000,stroke:#333,stroke-width:2px
+       style Retriever fill:#FF0000,stroke:#333,stroke-width:2px
+       style Input fill:#FFA500,stroke:#333,stroke-width:2px
+       style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
+       style Context fill:#FFA500,stroke:#333,stroke-width:2px
+       style Generator fill:#0000FF,stroke:#333,stroke-width:2px
+       style Output fill:#800080,stroke:#333,stroke-width:2px
+   
+       QueryEncoder --> Retriever
+       Prompt --> Generator
+       Input --> Generator
+       Input --> QueryEncoder
+       Docs --> DocEncoder
+       DocEncoder --> Retriever
+       
+       Retriever --> Context
+       
+       Context --> Generator
+       Generator --> Output
+   ```
 </div>
 
 Original inceptions of RAG involve queries that involve connecting with [../architectures/embedding.md] based lookups, though other lookup mechanisms, including key-word searches and other lookups from [memory](./memory.md) sources may also be possible. 
@@ -64,7 +68,7 @@ One of the seminal papers on RAG, [Retrieval-Augmented Generation for Knowledge-
 ## RAG vs Finetuning
 
 ??? code "[Rag vs Finetuning](https://github.com/informagi/RAGvsFT) reveals Fine tuning boosts performance over RAG"  
-   [Paper](https://arxiv.org/abs/2403.01432)
+    [Paper](https://arxiv.org/abs/2403.01432)
    
 ### Why use RAG?
 
@@ -192,14 +196,18 @@ In production settings, the queries that users ask are unlikely to be optimal fo
 
 **Optimization** of queries, looks to improve these queries in several manners. Here are a several with other greater descriptions written in [Langchain's query analysis](se_cases/query_analysis/). 
 
-* **Rewrite-Retrieve-Read:** This approach involves rewriting the query for better retrieval and reading of the relevant documents.
+##### Rewrite-Retrieve-Read
+
+This approach involves rewriting the query for better retrieval and reading of the relevant documents.
 
     ??? important "[Query Rewriting for Retrieval-Augmented Large Language Models](https://arxiv.org/pdf/2305.14283.pdf)"
 
         <img width="630" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b518994c-a419-4cc3-b065-065c0ca625d1">
 
 
-* **Step Back Prompting:** This method generates an intermediate context that helps to 'abstract' the information. Once generated, the additional context can be used.
+##### Step Back Prompting
+
+This method generates an intermediate context that helps to 'abstract' the information. Once generated, the additional context can be used.
 
     ???+ example "[Step back](https://smith.langchain.com/hub/langchain-ai/stepback-answer)"
         ```markdown
@@ -216,7 +224,9 @@ In production settings, the queries that users ask are unlikely to be optimal fo
 
         ![image](https://github.com/ianderrington/genai/assets/76016868/970df1c9-cdfc-4a9e-9dcf-f83944e6102c)
 
-* **Query Rephrasing:** Particularly in chat settings, it's important to include all of the appropriate context to create an effective search query.
+##### Query Rephrasing
+
+Particularly in chat settings, it's important to include all of the appropriate context to create an effective search query.
 
     ???+ example "[Rephrase question](https://smith.langchain.com/hub/langchain-ai/weblangchain-search-query)"
 
@@ -229,13 +239,21 @@ In production settings, the queries that users ask are unlikely to be optimal fo
             Standalone Question:
         ```
 
-* **Query Decomposition** When questions are directly made of multiple questions, or the effective answer to these questions involves answering several sub-questions, breaking the questions into multiple queries may be essential. This may involve performing sequential queries that are created based on retrieved information, or queries that can be run irrespective of other results, in [multi hop rag](#multi-hop-rag). 
+##### Query Decomposition
 
-* **Query Expasion** Can generate multiple rephrased versions of the query to increas the likelihood of a hit, or use the advanced retrieval methods to triangulate higher quality hits.
+When questions are directly made of multiple questions, or the effective answer to these questions involves answering several sub-questions, breaking the questions into multiple queries may be essential. This may involve performing sequential queries that are created based on retrieved information, or queries that can be run irrespective of other results. [Langchain Query decomposition](https://python.langchain.com/docs/use_cases/query_analysis/techniques/decomposition)
 
-* **Query Clarifying** Particularly in chat settings when questions are vague, asking follow-up questions can be instrumental in ensuring the lookup can be as effective as possible. 
+##### Query Expasion
 
-* **Query structuring** When answers to queries can be 'filtered' using meta-data based on elements of the queries can be highly valuable. This can include attributes such as _date_, _location_, _subjects_. See [Langchain's Query construction](https://blog.langchain.dev/query-construction/) for additional information related to this.
+Can generate multiple rephrased versions of the query to increas the likelihood of a hit, or use the advanced retrieval methods to triangulate higher quality hits.
+
+##### Query Clarifying
+
+Particularly in chat settings when questions are vague, asking follow-up questions can be instrumental in ensuring the lookup can be as effective as possible. 
+
+##### Query structuring
+
+When answers to queries can be 'filtered' using meta-data based on elements of the queries can be highly valuable. This can include attributes such as _date_, _location_, _subjects_. See [Langchain's Query construction](https://blog.langchain.dev/query-construction/) for additional information related to this.
 
 
 #### Routing
