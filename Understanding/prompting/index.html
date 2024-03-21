@@ -5858,8 +5858,11 @@ The authors demonstrate the use of smaller language models to identify and remov
 <summary><a href="https://github.com/dair-ai/Prompt-Engineering-Guide">Prompting Guide</a></summary>
 <p><a href="https://www.promptingguide.ai/">Website</a></p>
 </details>
-<h2 id="to-sort">To Sort<a class="headerlink" href="#to-sort" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2304.14670.pdf">Prompt Engineering for Healthcare: Methodologies and Applications</a></p>
+</div>
 <p><a href="https://cameronrwolfe.substack.com/p/advanced-prompt-engineering">A good description of advanced prompt tuning</a></p>
+<h2 id="to-sort">To Sort<a class="headerlink" href="#to-sort" title="Permanent link">&para;</a></h2>
 <p>AutoPrompt [5] combines the original prompt input with a set of shared (across all input data) “trigger tokens” that are selected via a gradient-based search to improve performance.</p>
 <p>Prefix Tuning [6] adds several “prefix” tokens to the prompt embedding in both input and hidden layers, then trains the parameters of this prefix (leaving model parameters fixed) with gradient descent as a parameter-efficient fine-tuning strategy.</p>
 <p>Prompt Tuning [7] is similar to prefix tuning, but prefix tokens are only added to the input layer. These tokens are fine-tuned on each task that the language model solves, allowing prefix tokens to condition the model for a given task.</p>

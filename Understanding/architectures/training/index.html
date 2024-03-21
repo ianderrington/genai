@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#automatically-correcting" class="md-skip">
+        <a href="#important-concepts" class="md-skip">
           Skip to content
         </a>
       
@@ -5309,6 +5309,45 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#important-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is done
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-training-is-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How training is done
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#automatically-correcting" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5372,14 +5411,20 @@ and
   <h1>Training</h1>
 
 <p>Training GenAI will generally be domain/modality specific.</p>
-<ol>
-<li>Self-supervised <a href="pre-training.html">pre-training</a> to predict the next token with reasonable likelihoods.</li>
+<h2 id="important-concepts">Important concepts<a class="headerlink" href="#important-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-done">What is done<a class="headerlink" href="#what-is-done" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Self-supervised <a href="pre-training.html"><strong>pre-training</strong></a> to predict the next token with reasonable likelihoods.</li>
 <li>Supervised or self-supervised <a href="finetuning.html">Finetuning</a> on higher quality data sets.<ul>
 <li>These datasets may be done so <a href="recurrent.html">recurrently</a> using <a href="../../data/preparation/synthetic.html">simulated data</a>.</li>
 </ul>
 </li>
-<li><a href="#automatic-correction">Automatically correcting</a> models to more accurately train a model to produce output that is is more globally accurate to the input prompts.</li>
-</ol>
+<li><a href="#automatic-correction"><strong>Automatically correcting</strong></a> models to more accurately train a model to produce output that is is more globally accurate to the input prompts.</li>
+</ul>
+<h3 id="how-training-is-done">How training is done<a class="headerlink" href="#how-training-is-done" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="distributed.html"><strong>Distributed training</strong></a> describes the manner in which models and data can be effeciently computed with. </li>
+</ul>
 <h2 id="automatically-correcting">Automatically Correcting<a class="headerlink" href="#automatically-correcting" title="Permanent link">&para;</a></h2>
 <p>Foundationally, the use of <a href="feedback.html#rlhf">reinforcement learning with human feedback (RLHF)</a> has enabled highly successful models that are aligned with tasks and requirements. The automated improvement of GenAI can be bbroken down into improving the models during <em>training time</em> and then during <em>generation time</em>. </p>
 <div class="admonition important">
