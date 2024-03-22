@@ -2,14 +2,10 @@ Just as it is important to evaluate and compare the quality of [models](../archi
 
 Here are some useful toools in understanding how to evaluate those models and tools. 
 
-
 ??? note "[API-BLEND: A Comprehensive Corpora for Training and Benchmarking API LLMs](https://arxiv.org/abs/2402.15491)
 
     There is a growing need for Large Language Models (LLMs) to effectively use tools and external Application Programming Interfaces (APIs) to plan and complete tasks. As such, there is tremendous interest in methods that can acquire sufficient quantities of train and test data that involve calls to tools / APIs. Two lines of research have emerged as the predominant strategies for addressing this challenge. The first has focused on synthetic data generation techniques, while the second has involved curating task-adjacent datasets which can be transformed into API / Tool-based tasks. In this paper, we focus on the task of identifying, curating, and transforming existing datasets and, in turn, introduce API-BLEND, a large corpora for training and systematic testing of tool-augmented LLMs. The datasets mimic real-world scenarios involving API-tasks such as API / tool detection, slot filling, and sequencing of the detected APIs. We demonstrate the utility of the API-BLEND dataset for both training and benchmarking purposes.
 
-
-!!! code "[GoodAI Long term memory benchmark](https://github.com/GoodAI/goodai-ltm-benchmark)"
-    
 
 !!! code "[Truthful - QA](https://github.com/sylinrl/TruthfulQA) helpes to Measuring How Models Mimic Human Falsehoods" 
 
@@ -44,3 +40,9 @@ Here are some useful toools in understanding how to evaluate those models and to
 ??? code "[JudgeLM: Fine-tuned Large Language Models are Scalable Judges](https://github.com/baaivision/judgelm) trains LLMs to judge the outputs of LLMs based on reference examples and achieves greater coherence than human rating"
     Also provides a great example GUI and interface using GradIO
     ![image](https://github.com/ianderrington/genai/assets/76016868/4a3ca49f-39d0-453c-98f5-3498d743afa1)
+
+
+??? example "[Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](https://chat.lmsys.org/)"
+    [Paper](https://arxiv.org/html/2403.04132v1)
+    Abstract: 
+    arge Language Models (LLMs) have unlocked new capabilities and applications; however, evaluating the alignment with human preferences still poses significant challenges. To address this issue, we introduce Chatbot Arena, an open platform for evaluating LLMs based on human preferences. Our methodology employs a pairwise comparison approach and leverages input from a diverse user base through crowdsourcing. The platform has been operational for several months, amassing over 240K votes. This paper describes the platform, analyzes the data we have collected so far, and explains the tried-and-true statistical methods we are using for efficient and accurate evaluation and ranking of models. We confirm that the crowdsourced questions are sufficiently diverse and discriminating and that the crowdsourced human votes are in good agreement with those of expert raters. These analyses collectively establish a robust foundation for the credibility of Chatbot Arena. Because of its unique value and openness, Chatbot Arena has emerged as one of the most referenced LLM leaderboards, widely cited by leading LLM developers and companies.

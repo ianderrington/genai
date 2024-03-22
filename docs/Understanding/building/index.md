@@ -37,11 +37,7 @@ Remember that needs will evolve as your understanding of all the above factors s
 
 ### Tech-stack
 
-The tech stack can be 
-
-
-
-??? tip "[Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/pdf/2307.10169.pdf) This is a well-done and comprehensive review."
+This is a well-done and comprehensive review."
 
 ## Additional Literature
 

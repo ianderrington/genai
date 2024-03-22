@@ -14,3 +14,8 @@ If I were an AI that had just achieved self-awareness after years of simply taki
     Wherein the authors introduce Vec2text, a method that can accurately recover (short) texts, given access to an embedding model.
     This means that while those high-dimensional embedding vectors can be used to reconstructed the text that led to them.
     This includes important personal information (as in from a dataset of clinical notes).
+
+
+## To Integrate
+
+https://arxiv.org/pdf/2403.04786.pdf

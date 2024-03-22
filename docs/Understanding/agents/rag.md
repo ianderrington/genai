@@ -8,53 +8,50 @@ Trained and fine-tuned LLMs can generate high quality results, though their gene
 
 Retrieval-Augmented Generation (RAG) helps to solve that by coupling the information to external memory.  Here is a basic comparison. 
 
-<div class ="grid cards" markdown>
-- "Without RAG"
+!!! example "Comparison with/without RAG"
+    === "Without"
 
-   ---
    
-   ```mermaid
-   graph LR
-    style Input fill:#FFA500,stroke:#333,stroke-width:2px
-    style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
-    style Generator fill:#0000FF,stroke:#333,stroke-width:2px
-    style Output fill:#800080,stroke:#333,stroke-width:2px
-   
-    Input --> Generator
-    Prompt --> Generator
-    Generator --> Output
-   ```
+        ```mermaid
+        graph LR
+            style Input fill:#FFA500,stroke:#333,stroke-width:2px
+            style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
+            style Generator fill:#00AAFF,stroke:#333,stroke-width:2px
+            style Output fill:#80AA80,stroke:#333,stroke-width:2px
+        
+            Input --> Generator[LLM Generation]
+            Prompt --> Generator
+            Generator --> Output
+        ```
 
-- "With RAG"
+    === "With"
 
-   ---
-   ```mermaid
-   graph LR
-       style Docs fill:#FF0000,stroke:#333,stroke-width:2px
-       style QueryEncoder fill:#FF0000,stroke:#333,stroke-width:2px
-       style DocEncoder fill:#FF0000,stroke:#333,stroke-width:2px
-       style Retriever fill:#FF0000,stroke:#333,stroke-width:2px
-       style Input fill:#FFA500,stroke:#333,stroke-width:2px
-       style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
-       style Context fill:#FFA500,stroke:#333,stroke-width:2px
-       style Generator fill:#0000FF,stroke:#333,stroke-width:2px
-       style Output fill:#800080,stroke:#333,stroke-width:2px
-   
-       QueryEncoder --> Retriever
-       Prompt --> Generator
-       Input --> Generator
-       Input --> QueryEncoder
-       Docs --> DocEncoder
-       DocEncoder --> Retriever
-       
-       Retriever --> Context
-       
-       Context --> Generator
-       Generator --> Output
-   ```
-</div>
+        ```mermaid
+        graph LR
+            style Docs fill:#FFAAAA,stroke:#333,stroke-width:2px
+            style QueryEncoder fill:#FFAAAA,stroke:#333,stroke-width:2px
+            style DocEncoder fill:#FFAAAA,stroke:#333,stroke-width:2px
+            style Retriever fill:#FFAAAA,stroke:#333,stroke-width:2px
+            style Input fill:#FFA500,stroke:#333,stroke-width:2px
+            style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
+            style Context fill:#FFA500,stroke:#333,stroke-width:2px
+            style Generator fill:#00AAFF,stroke:#333,stroke-width:2px
+            style Output fill:#80AA80,stroke:#333,stroke-width:2px
+        
+            QueryEncoder --> Retriever
+            Prompt --> Generator[LLM Generation]
+            Input --> Generator
+            Input --> QueryEncoder[Query Encoder]
+            Docs --> DocEncoder[Doc Encoder]
+            DocEncoder --> Retriever
+            
+            Retriever --> Context
+            
+            Context --> Generator
+            Generator --> Output
+        ```
 
-Original inceptions of RAG involve queries that involve connecting with [../architectures/embedding.md] based lookups, though other lookup mechanisms, including key-word searches and other lookups from [memory](./memory.md) sources may also be possible. 
+Original inceptions of RAG involve queries that involve connecting with [Embedding](../architectures/embedding.md) based lookups, though other lookup mechanisms, including key-word searches and other lookups from [memory](./memory.md) sources may also be possible. 
 
 !!! warning "RAG is still an area of optimization with a number of components that may be optimized"
    These areas of optimization include:
@@ -65,10 +62,7 @@ Original inceptions of RAG involve queries that involve connecting with [../arch
 
 One of the seminal papers on RAG, [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduced a solution for end-to-end training of models involving training document and query encoding, lookup and demosntrated revealing [improved results](https://contextual.ai/introducing-rag2/) over solutions where model components were frozen. For reasons of simplicity, however, a generally standard approach uses models that are frozen to embed and query documents. 
 
-## RAG vs Finetuning
 
-??? code "[Rag vs Finetuning](https://github.com/informagi/RAGvsFT) reveals Fine tuning boosts performance over RAG"  
-    [Paper](https://arxiv.org/abs/2403.01432)
    
 ### Why use RAG?
 
@@ -92,28 +86,53 @@ The primary challenges regarding rag may be related to organizational or functio
     * You don't want to pay for, or maintain and support a RAG database. 
     * There are ethical or privacy concerns relating to sending data to a third-party API
 
+#### RAG vs Finetuning
+
+??? code "[Rag vs Finetuning](https://github.com/informagi/RAGvsFT) reveals Fine tuning boosts performance over RAG"  
+    [Paper](https://arxiv.org/abs/2403.01432)
 
 ## RAG in Detail
 
 The RAG process can be divided into two main stages: Preparation (offline) and Retrieval and Generation (online).
 
-```mermaid
-    graph TB
-        A[Prepare \n Relevant \n Data] -->|Format | B(Embedding Model)
-        B --> I[Indexing]
-        I --> |Store| D
-        C[User Question] --> |Transform| Q(Query)
-        Q --> B
-        B -->|Find| D[Vector Database]
-        %% B --> |Search|D
-        D --> |Retrieve| E[Assemble relevant documents]
-        E --> F[Prompt: Original Question + Context]
-        C --> F
-        F -->|Generate| G[LLM]
-        G --> H[Answer]
-```
+### Document Indexing (offline)
 
-### Data Preparation 
+Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  
+
+It is useful to perform parallel indexing that keeps track of records that are put into vector stores. 
+
+!!! info "[Indexing](https://blog.langchain.dev/syncing-data-sources-to-vector-stores/)" indexing-vector-records
+
+    Indexing helps to improves performance saving time and money by not:
+
+    * Re-processing unchanged content
+    * Re-computing embeddings of unchanged content 
+    * Inserting duplicated content
+
+
+The langchain [Blog](https://blog.langchain.dev/syncing-data-sources-to-vector-stores/) and docs on [indexing](https://python.langchain.com/docs/modules/data_connection/indexing) provide quality discussions on these topics. 
+
+!!! important "Indexing process (clickable)"
+    ```mermaid
+    graph LR
+        style DocumentSelection fill:#B4E1E7,stroke:#333,stroke-width:1px
+        style LoadDocuments fill:#FAD2E1,stroke:#333,stroke-width:1px
+        style SplitDocuments fill:#E1FAD2,stroke:#333,stroke-width:1px
+        style EmbedDocumentSplits fill:#D2FAFA,stroke:#333,stroke-width:1px
+        style StoringData fill:#FADAD2,stroke:#333,stroke-width:1px
+
+        DocumentSelection[Select Documents] --> LoadDocuments[Load \nDocuments]
+        LoadDocuments --> SplitDocuments[Split \n Documents]
+        SplitDocuments --> EmbedDocumentSplits[Embed \n Document \n Splits]
+        EmbedDocumentSplits --> StoringData[Store in \nDatabase]
+
+        click DocumentSelection "#selecting-data"
+        click LoadDocuments "#loading-data"
+        click SplitDocuments "#splitting-data"
+        click EmbedDocumentSplits "#embedding-data"
+        click StoringData "#storing-data"
+
+    ```
 
 The preparation stage involves the following steps in an offline manner
 
@@ -123,29 +142,16 @@ The preparation stage involves the following steps in an offline manner
 4. **Embedding Data:** Embed the data.
 5. **Storing Data:** Store the embedding.
 
-### Retrieval and Generation (online)
-
-The retrieval and generation stage involves the following steps:
-
-1. **Retrieving Data:** Retrieve the data based on input in such a way that relevant documents and chunks can be used in downstream chains.
-2. **Generating Output:** Generate an output using a prompt that integrates the query and retrieved data.
-
-## Detailed Steps
-
-### Data Selection
+#### Selecting Data
 
 Users should only access data that is appropriate for their application. However, including too much information might be unnecessary or harmful to retrieval if the [retrieval](#retrieval) cannot handle the volume or complexity of data. It is also crucial to ensure data privacy when providing data that might not be appropriate (or legal) to access.
 
-
-### Indexing Data
-
-Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  
 
 #### Loading Data
 
 Different data types require different loaders. Raw text, PDFs, spreadsheets, and more proprietary formats need to be processed in a way that the information is of highest relevance to data. Text is easy to process, but some data, especially multimodal data like PDFs, may need to be formatted with a schema to allow for more effective searching.
 
-### Splitting Data
+#### Splitting Data
 
 Once data has been loaded in a way that a model can process it, it must be split. There are several ways of splitting data:
 
@@ -157,7 +163,7 @@ Once data has been loaded in a way that a model can process it, it must be split
 
 Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). [Read more](https://blog.langchain.dev/semi-structured-multi-modal-rag/.)
 
-#### Adding metadata
+##### Adding metadata
 
 Information such as dates, chapters, or key words can allow for filtering and key-word lookup. 
 
@@ -165,25 +171,45 @@ Information such as dates, chapters, or key words can allow for filtering and ke
 
 The embedded data is stored for future retrieval and use. This is done via standarad database methods, with the use of embeddings as vector retrieval addresses as well as meta-data for more traditional search (key-word) methods.
 
-### Indexing Data
-
-It is useful to perform parallel indexing that keeps track of records that are put into vector stores. 
-
-!!! info "[Indexing](https://blog.langchain.dev/syncing-data-sources-to-vector-stores/)" indexing-vector-records
-    Indexing helps to improves performance saving time and money by not:
-    * Re-processing unchanged content
-    * Re-computing embeddings of unchanged content 
-    * Inserting duplicated content
 
 
-The langchain [Blog](https://blog.langchain.dev/syncing-data-sources-to-vector-stores/) and docs on [indexing](https://python.langchain.com/docs/modules/data_connection/indexing) provide quality discussions on these topics. 
+### Retrieval and Generation (online)
 
 
-### Retrieving Data
+The retrieval and generation stage involves the following steps:
+
+1. **Retrieving Data:** Retrieve the data based on input in such a way that relevant documents and chunks can be used in downstream chains.
+2. **Generating Output:** Generate an output using a prompt that integrates the query and retrieved data.
 
 The decision and act to retrieve the documents will depend on the additional contexts that the agents may need to be aware of.
 
 It might not always be necessary to retrieve documents. When it is necessary to retrieve the document, it is important to know where to retrieve from [routing](#routing), and then [matching](#matching) the query to the appropriately stored information. Both of these may involve [rewriting](#query-transformations) the prompt to be more effective in the manner the data is retrieved.
+
+!!! important "Retrieval and generation (clickable)"
+    ```mermaid
+        graph LR
+            style C fill:#B4E1E7,stroke:#333,stroke-width:1px
+            style T fill:#FAD2E1,stroke:#333,stroke-width:1px
+            style RR fill:#E1FAD2,stroke:#333,stroke-width:1px
+            style R fill:#FADAD2,stroke:#333,stroke-width:1px
+            style F fill:#E7B4E1,stroke:#333,stroke-width:1px
+            style G fill:#D2E1FA,stroke:#333,stroke-width:1px
+            style H fill:#E1E7B4,stroke:#333,stroke-width:1px
+
+            C[Query] --> T[Optimize]
+            T --> RR[Route]
+            RR --> R[Match and \nRank Documents]
+            R --> F[Combine With\n Context]
+            F --> G[LLM \nGeneration]
+            G --> H[Answer]
+
+            click T "#query-optimization"
+            click RR "#routing"
+            click R "#match-and-rank"
+            click F "#CombineWithContext"
+            click G "#LLMGeneration"
+            click H "#Answer"
+    ```
 
 #### Query Optimization
 
@@ -200,17 +226,17 @@ In production settings, the queries that users ask are unlikely to be optimal fo
 
 This approach involves rewriting the query for better retrieval and reading of the relevant documents.
 
-    ??? important "[Query Rewriting for Retrieval-Augmented Large Language Models](https://arxiv.org/pdf/2305.14283.pdf)"
+??? important "[Query Rewriting for Retrieval-Augmented Large Language Models](https://arxiv.org/pdf/2305.14283.pdf)"
 
-        <img width="630" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b518994c-a419-4cc3-b065-065c0ca625d1">
+    <img width="630" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b518994c-a419-4cc3-b065-065c0ca625d1">
 
 
 ##### Step Back Prompting
 
 This method generates an intermediate context that helps to 'abstract' the information. Once generated, the additional context can be used.
 
-    ???+ example "[Step back](https://smith.langchain.com/hub/langchain-ai/stepback-answer)"
-        ```markdown
+??? example "[Step back](https://smith.langchain.com/hub/langchain-ai/stepback-answer)"
+    ```markdown
         You are an expert of world knowledge. I am going to ask you a question. Your response should be comprehensive and not contradicted with the following context if they are relevant. Otherwise, ignore them if they are not relevant.
 
         {normal_context}
@@ -218,26 +244,26 @@ This method generates an intermediate context that helps to 'abstract' the infor
 
         Original Question: {question}
         Answer:
-        ```
+    ```
 
-    ??? example "[Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models](https://arxiv.org/pdf/2310.06117.pdf)"
+??? example "[Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models](https://arxiv.org/pdf/2310.06117.pdf)"
 
-        ![image](https://github.com/ianderrington/genai/assets/76016868/970df1c9-cdfc-4a9e-9dcf-f83944e6102c)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/970df1c9-cdfc-4a9e-9dcf-f83944e6102c)
 
 ##### Query Rephrasing
 
 Particularly in chat settings, it's important to include all of the appropriate context to create an effective search query.
 
-    ???+ example "[Rephrase question](https://smith.langchain.com/hub/langchain-ai/weblangchain-search-query)"
+??? example "[Rephrase question](https://smith.langchain.com/hub/langchain-ai/weblangchain-search-query)"
 
-        ```markdown
-            Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
+    ```markdown
+        Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
 
-            Chat History:
-            {chat_history}
-            Follow Up Input: {question}
-            Standalone Question:
-        ```
+        Chat History:
+        {chat_history}
+        Follow Up Input: {question}
+        Standalone Question:
+    ```
 
 ##### Query Decomposition
 
@@ -260,7 +286,7 @@ When answers to queries can be 'filtered' using meta-data based on elements of t
 
 Depending on the question asked, queries may need to be routed to different sources of data, or indexes. OpenAI's [RAG strategies](https://blog.langchain.dev/applying-openai-rag/) provides some guidance on question routing: 
 
-#### Matching
+#### Matching and Ranking
 
 Matching involves aligning the query with the appropriately stored information. 
 
@@ -294,25 +320,25 @@ Challenges in generating responses can involve
 
 
 ## Multimodal Rag
-Natural-language lookup with RAG can be improved by allowing other modalities, such as tables and images, at the same time. There are several ways that this may be accomplished as described in[Langchain's multi modal rag](https://blog.langchain.dev/semi-structured-multi-modal-rag/): 
+Natural-language lookup with RAG can be improved by allowing other modalities, such as tables and images, at the same time. There are several ways that this may be accomplished as described in [Langchain's multi modal rag](https://blog.langchain.dev/semi-structured-multi-modal-rag/): 
 
-  Option 1:
-  
-  Use multimodal embeddings (such as CLIP) to embed images and text
-  Retrieve both using similarity search
-  Pass raw images and text chunks to a multimodal LLM for answer synthesis
-  
-  Option 2:
-  
-  Use a multimodal LLM (such as GPT4-V, LLaVA, or FUYU-8b) to produce text summaries from images
-  Embed and retrieve text
-  Pass text chunks to an LLM for answer synthesis
-  
-  Option 3:
-  
-  Use a multimodal LLM (such as GPT4-V, LLaVA, or FUYU-8b) to produce text summaries from images
-  Embed and retrieve image summaries with a reference to the raw image
-  Pass raw images and text chunks to a multimodal LLM for answer synthesis
+    Option 1:
+    
+    Use multimodal embeddings (such as CLIP) to embed images and text
+    Retrieve both using similarity search
+    Pass raw images and text chunks to a multimodal LLM for answer synthesis
+    
+    Option 2:
+    
+    Use a multimodal LLM (such as GPT4-V, LLaVA, or FUYU-8b) to produce text summaries from images
+    Embed and retrieve text
+    Pass text chunks to an LLM for answer synthesis
+    
+    Option 3:
+    
+    Use a multimodal LLM (such as GPT4-V, LLaVA, or FUYU-8b) to produce text summaries from images
+    Embed and retrieve image summaries with a reference to the raw image
+    Pass raw images and text chunks to a multimodal LLM for answer synthesis
 
 * **Multi-Modal:** This approach is used for RAG on a substack that has many images of densely packed tables, graphs. [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Multi_modal_RAG.ipynb) is an example implementation, and [Here](https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_structured_multi_modal_RAG_LLaMA2.ipynb) is one that works with private data. 
 
@@ -325,24 +351,14 @@ Because of the large number of manners of performing RAG, it is important to eva
 ??? code "[Rag Arena](https://github.com/mendableai/rag-arena) Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses." 
 
 
-## Important references
-
+## Resources, Tutorials and Blogs
 ??? important "[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduces a complete solution for enabling improved response generation with LLMs."
 
     <img width="1153" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/493156fe-322d-42e6-8b26-98e199676cb6">
     The authors reveal that allowing for fine tuning of the models when equipped with RAG improved the results. 
     <img width="598" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/05ffefbd-4fd7-4d4e-9ec4-0719e66e1791">
 
-
-## Tutorials and Blogs
-
-- [Langchain Question Answering](https://python.langchain.com/docs/use_cases/question_answering/)
-- [RAG demystified](https://github.com/pchunduri6/rag-demystified/blob/main/complex_qa.py)
-- [Mastering RAG: How To Architect An Enterprise RAG System](https://www.rungalileo.io/blog/mastering-rag-how-to-architect-an-enterprise-rag-system)
-- [RAG chatbot with Chat Embedding and Reranking (cohere)](https://txt.cohere.com/rag-chatbot/) and [Notebook](https://colab.research.google.com/github/cohere-ai/notebooks/blob/main/notebooks/RAG_Chatbot_with_Chat_Embed_Rerank.ipynb)
-- 
-
-???+ important "[12 RAG Pain Points and Proposed Solutions](https://arxiv.org/pdf/2401.05856.pdf)" 12-rag-pain-points-and-solutions
+??? important "[12 RAG Pain Points and Proposed Solutions](https://arxiv.org/pdf/2401.05856.pdf)" 12-rag-pain-points-and-solutions
     Things that might lead to failure of RAG pipeline. Mostly taken from the [blog]( https://towardsdatascience.com/12-rag-pain-points-and-proposed-solutions-43709939a28c)
     
     Pain point:
@@ -455,14 +471,17 @@ Because of the large number of manners of performing RAG, it is important to eva
 
     * Use things like [Llama Guard](https://towardsdatascience.com/safeguarding-your-rag-pipelines-a-step-by-step-guide-to-implementing-llama-guard-with-llamaindex-6f80a2e07756?sk=c6cc48013bac60924548dd4e1363fa9e)
 
-## Resources
-!!! code "[Advanced Rag small to big](https://colab.research.google.com/github/sophiamyang/demos/blob/main/advanced_rag_small_to_big.ipynb)" 
+??? code "[Advanced Rag small to big](https://colab.research.google.com/github/sophiamyang/demos/blob/main/advanced_rag_small_to_big.ipynb)" 
     [Blog](https://towardsdatascience.com/advanced-rag-01-small-to-big-retrieval-172181b396d4)
     
-!!! code "[Advanced Retreival Augmented Generation from Theory to Llamaindex](https://github.com/weaviate/recipes/blob/main/integrations/llamaindex/retrieval-augmented-generation/advanced_rag.ipynb)"
+??? code "[Advanced Retreival Augmented Generation from Theory to Llamaindex](https://github.com/weaviate/recipes/blob/main/integrations/llamaindex/retrieval-augmented-generation/advanced_rag.ipynb)"
     [Blog](https://towardsdatascience.com/advanced-retrieval-augmented-generation-from-theory-to-llamaindex-implementation-4de1464a9930)
 
-!!! note "[RAG vs finetuning](https://towardsdatascience.com/rag-vs-finetuning-which-is-the-best-tool-to-boost-your-llm-application-94654b1eaba7)"
+??? note "[RAG vs finetuning](https://towardsdatascience.com/rag-vs-finetuning-which-is-the-best-tool-to-boost-your-llm-application-94654b1eaba7)"
 
 
+- [Langchain Question Answering](https://python.langchain.com/docs/use_cases/question_answering/)
+- [RAG demystified](https://github.com/pchunduri6/rag-demystified/blob/main/complex_qa.py)
+- [Mastering RAG: How To Architect An Enterprise RAG System](https://www.rungalileo.io/blog/mastering-rag-how-to-architect-an-enterprise-rag-system)
+- [RAG chatbot with Chat Embedding and Reranking (cohere)](https://txt.cohere.com/rag-chatbot/) and [Notebook](https://colab.research.google.com/github/cohere-ai/notebooks/blob/main/notebooks/RAG_Chatbot_with_Chat_Embed_Rerank.ipynb)
     

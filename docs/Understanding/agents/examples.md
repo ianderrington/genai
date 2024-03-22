@@ -83,6 +83,10 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 ### Others
 
+??? code "[Critic: Large Language Models can Self-correct with TOol-INteractive Critiquing](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)"
+    [Paper](https://arxiv.org/pdf/2305.11738.pdf)
+    
+
 ??? code "[L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.](https://github.com/l3vels/ L3AGI) l3agi
     
 

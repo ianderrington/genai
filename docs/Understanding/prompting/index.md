@@ -285,11 +285,11 @@ MANAGEN Make the below into Admonitions
 ??? code "[Prompting Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)"
     [Website](https://www.promptingguide.ai/)
 
-## To Sort
+!!! tip "[Prompt Engineering for Healthcare: Methodologies and Applications](https://arxiv.org/pdf/2304.14670.pdf)"
 
 [A good description of advanced prompt tuning](https://cameronrwolfe.substack.com/p/advanced-prompt-engineering)
 
-
+## To Sort
 AutoPrompt [5] combines the original prompt input with a set of shared (across all input data) “trigger tokens” that are selected via a gradient-based search to improve performance.
 
 Prefix Tuning [6] adds several “prefix” tokens to the prompt embedding in both input and hidden layers, then trains the parameters of this prefix (leaving model parameters fixed) with gradient descent as a parameter-efficient fine-tuning strategy.
