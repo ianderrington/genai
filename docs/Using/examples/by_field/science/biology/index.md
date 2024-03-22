@@ -13,6 +13,10 @@ There are components of include
 #### Sequence optimization 
 The protein protein sequence may is a primary target of optimization because the sequence has direct impact over the enzyme's structure and function. 
 
+??? code "[Evo: DNA foundation modeling from molecular to genome scale](https://github.com/evo-design/evo)" evo
+    **Developments**
+    [Paper](https://www.biorxiv.org/content/10.1101/2024.02.27.582234v2.full.pdf)
+
 #### Reagent optimization
 
 Proteins do not function in isolation, but in a surrounding environment of agents and reagents. While protein sequences are of immediate itnerest because of potential gains of information, rea-gent types and  concentrations will powerfully govern the quality of synthesized products. A protein that has been evaluated in one condition, is unlikely  to be optimial in another condition, and similarly, an protein that is optimized based on sequence, may not be optimal in new conditions. It may be useful to use reagent-optimization to reduce or eliminate potentially harmful or toxic material. 
@@ -39,6 +43,8 @@ Similarly to _reagents_, the overall protocol in how a reagent or set of reagent
     [Paper](https://arxiv.org/pdf/2310.10632.pdf)
 
 !!! tip "[A Language for Modeling and Optimizing Experimental Biological Protocols](https://www.mdpi.com/2079-3197/9/10/107) presents a Gaussian process model to optimize experimental protocols"
+
+
 
 ### To File
 
