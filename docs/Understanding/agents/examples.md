@@ -85,6 +85,13 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 ??? code "[Critic: Large Language Models can Self-correct with TOol-INteractive Critiquing](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)"
     [Paper](https://arxiv.org/pdf/2305.11738.pdf)
+    Predominantly uses multi-shot approaches and tool use to critique answers. Uses context additions such as
+    ```markdown
+    What's the problem with the above answer?
+    Plausability:
+    ```
+    <img width="568" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2f72e4ad-3a49-4bd2-aa1a-e63a57c42343">
+
     
 
 ??? code "[L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.](https://github.com/l3vels/ L3AGI) l3agi
