@@ -60,3 +60,5 @@ Toolkits consist of tool pairings that often work together well. For instance, b
 
 !!! code "[Tool LLM](https://huggingface.co/papers/2307.16789) This describes a novel approach enabling over 16000 API's to be called through an intelligent routing mechanism. [Github](https://github.com/OpenBMB/ToolBench) Uses RapidAPI connector to do so. "
 
+!!! code "[Web search tools that allow a number of search engines to be used](https://github.com/ZubinGou/llm-agent-web-tools)"
+
