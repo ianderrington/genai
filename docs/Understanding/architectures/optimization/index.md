@@ -190,6 +190,8 @@ MOE provides the ability to use different smaller models that have better perfor
 
 ??? code "[🐟 Evolutionary Optimization of Model Merging Recipes](https://github.com/SakanaAI/evolutionary-model-merge)"
     **Developments:** The authors demosntrate a "a new paradigm for automated model composition, paving the way for exploring alternative, efficient approaches to foundation model development" by merging models. 
+    ![image](https://github.com/ianderrington/genai/assets/76016868/be153c45-2d6d-4fdc-8d0d-5ff721b83d64)
+
     [Paper](https://arxiv.org/abs/2403.13187)
 
 ### Combination Approaches
