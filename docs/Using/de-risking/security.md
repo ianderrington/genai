@@ -18,4 +18,4 @@ If I were an AI that had just achieved self-awareness after years of simply taki
 
 ## To Integrate
 
-https://arxiv.org/pdf/2403.04786.pdf
+-[Breaking Down the Defenses: A Comparative Survey of Attacks on Large Language Models](https://arxiv.org/pdf/2403.04786.pdf)

@@ -1,4 +1,4 @@
-TODO: THorough research and add /change with optimization.md
+TODO: THorough research and add /change with optimization/index.md
 
 Fine-tuning adapt's  foundation model to improve its domain performance by using training with high-quality data. The adapted model may be architecturally equivalent, or a variation of the original model. The [data](#data-for-fine-tuning) that is used to update the model may be natural or [synthetically-created](#using-simulated-data) and it is often domain-specific or intentionally constructed.
 

@@ -3,6 +3,6 @@ nav:
     - models
     - training
     - llm_systems.md
-    - optimization.md
+    - optimization
     - evaluating_and_comparing.md
     - ...
