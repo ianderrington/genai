@@ -16,7 +16,7 @@ class AbstractPersistentShell(ABC):
         self.working_dir = Path(starting_dir).resolve()
         self.base_dir = self.working_dir
         self.max_parents = max_parents
-        self.history = [self.working_dir]
+        self.history = []
         self.command_history = deque(maxlen=history_limit)  # Limited command history
         self.output_history = deque(maxlen=history_limit)  # Limited output history
         self.process = None  # To be initialized in subclasses
@@ -25,8 +25,10 @@ class AbstractPersistentShell(ABC):
 
     @abstractmethod
     def execute(self, command):
-        pass
+        raise NotImplementedError("Subclasses must implement this method.")
 
+    def cleanup(self):
+        raise NotImplementedError("Subclasses must implement this method.")
 
     def capture_output(self, stream, stop_signal):
         while not stop_signal.is_set():
@@ -46,9 +48,16 @@ class AbstractPersistentShell(ABC):
         self.stderr_thread = threading.Thread(target=self.capture_output, args=(self.process.stderr, self.stop_signal))
         self.stdout_thread.start()
         self.stderr_thread.start()
+    
+    def __enter__(self):
+        # For most context managers, simply return self
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        raise NotImplementedError("Subclasses must implement this method.")
+        self.cleanup()
+
+    def __del__(self):
+        self.cleanup()
        
 
 
@@ -56,26 +65,61 @@ class AbstractPersistentShell(ABC):
 class BashShell(AbstractPersistentShell):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.process = subprocess.Popen(["/bin/bash"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=str(self.working_dir), bufsize=1, universal_newlines=True, shell=False)
+        self.process = subprocess.Popen(["/bin/bash"], stdin=subprocess.PIPE, 
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, 
+            cwd=str(self.working_dir), bufsize=1, universal_newlines=True, shell=False)
         self.cleaned_up = False
         self.start_output_capture()  # Start capturing stdout and stderr
 
-    def __enter__(self):
-        # For most context managers, simply return self
-        return self
-
-    def execute(self, command):
-        self.command_history.append(command)  # Record command
-        
+    def parse_command(self, command):
         # Special handling for 'cd' to update working_dir
+        # Note that this does not work for 'shell scripts or multi line commands'
         if command.startswith('cd'):
             new_dir = command.split(maxsplit=1)[1]
             self.working_dir = Path(self.working_dir, new_dir).resolve()
-            return
+        flush_command ='; sys.stdout.flush()\n'
+        return command
+
+    def execute(self, command):
+        # Ensure command ends with a newline
+        command = self.parse_command(command)
+
+        if not command.endswith('\n'):
+            command += '\n'
         
-        self.process.stdin.write(command + "\n")
+        self.command_history.append(command)  # Record command
+
+        # Write the command to the bash subprocess
+        self.process.stdin.write(command)
+
+        # Capture the command's output
+        output_lines = []
+        count = 0
+        while True:
+            count += 1
+            print(f"Count: {count}")
+            # Use select to wait for output to be available
+            
+            ready, _, _ = select.select([self.process.stdout], [], [], 0.1)
+            if ready:
+                print('Ready')
+                # this sometimes hangs here or produces None
+                output_line = self.process.stdout.readline()
+                print(f"Output line: {output_line}")
+                if output_line:
+                    output_lines.append(output_line)
+                else:  # No more output
+                    break
+            else:
+                # No output ready, the command has likely finished executing
+                break
         self.process.stdin.flush()
+
+        
+        # Return the captured output as a single string
         time.sleep(0.1)  
+
+        return ''.join(output_lines)
     
     def cleanup(self):
         if not self.cleaned_up:
@@ -107,12 +151,6 @@ class BashShell(AbstractPersistentShell):
             if self.stdout_thread.is_alive() or self.stderr_thread.is_alive():
                 print("Warning: Output capture threads did not exit cleanly.")
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.cleanup()
-
-    def __del__(self):
-        self.cleanup()
-
 
 
 class CondaShell(BashShell):
@@ -135,6 +173,7 @@ class CondaShell(BashShell):
         self.command_history.append(activate_command)
         print(f"Activating Conda environment '{self.env_name}'...")
         self.execute(activate_command)
+        print(f"Conda environment '{self.env_name}' is ready.")
 
     def execute(self, command):
         super().execute(command)

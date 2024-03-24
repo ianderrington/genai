@@ -21,8 +21,11 @@ class TestPersistentShell(unittest.TestCase):
             self.assertTrue(Path(temp_dir, 'temp_file.txt').exists())
             # Test changing directory within the temporary directory
             # os.mkdir(Path(temp_dir, 'subdir'))
-            bash.shell.execute(f'mkdir {temp_dir}/subdir')
+            bash_shell.execute(f'mkdir {temp_dir}/subdir')
             bash_shell.execute('cd subdir')
+            print(bash_shell.working_dir)
+            print(Path(temp_dir, 'subdir').resolve())
+
             self.assertEqual(bash_shell.working_dir, Path(temp_dir, 'subdir').resolve())
             bash_shell.__exit__(None, None, None)  # Cleanly exit the shell
 
@@ -41,18 +44,27 @@ class TestPersistentShell(unittest.TestCase):
             bash_shell.__exit__(None, None, None)
             os.rmdir(permanent_dir)  # Remove the directory after the test
 
-    # def test_history_limit(self):
-    #     """Test that the history limit is enforced."""
-    #     with BashShell(starting_dir=".") as bash_shell:
-    #         for i in range(150):  # Exceed the default history limit
-    #             bash_shell.execute(f'echo "Command {i}"')
-    #         self.assertEqual(len(bash_shell.command_history), 100)  # Assuming the default limit is 100
-    #         self.assertEqual(len(bash_shell.output_history), 100)
+    def test_output_capture(self):
+        """Test capturing output from the shell."""
+        with BashShell() as bash_shell:
+            output = bash_shell.execute('echo "Hello, world!"')
+            self.assertEqual(output, 'Hello, world!\n')
+
+    def test_history_limit(self):
+        """Test that the history limit is enforced."""
+        with BashShell(starting_dir=".") as bash_shell:
+            number_of_commands = 6
+            for i in range(number_of_commands):  # Exceed the default history limit
+                command_i = f"Command {i}"
+                output = bash_shell.execute(f'echo {command_i}')
+                self.assertEqual(output, f'{command_i}\n')
+            self.assertEqual(len(bash_shell.command_history), number_of_commands)  # Assuming the default limit is 100
+            # self.assertEqual(len(bash_shell.output_history), 100)
 
 
 
-# class TestCondaShell(unittest.TestCase):
-#     test_env_name = "test_condashell_env"
+class TestCondaShell(unittest.TestCase):
+    test_env_name = "test_condashell_env"
 
 #     @classmethod
 #     def setUpClass(cls):
@@ -80,16 +92,17 @@ class TestPersistentShell(unittest.TestCase):
 #             # This can be a command that only succeeds if the correct environment is activated
 #             conda_shell.execute('python -c "import sys; print(sys.executable)"')
 #             # Assuming history capturing is correctly implemented
-#             last_output = conda_shell.output_history[-1].strip()
-#             self.assertIn(self.test_env_name, last_output)
+#             # last_output = conda_shell.output_history[-1].strip()
+#             output= conda_shell.execute('conda env list')
+#             self.assertIn(self.test_env_name, output)
+#             # self.assertIn(self.test_env_name, last_output)
 
-#     def test_command_execution_in_conda_environment(self):
-#         """Test executing a command within the created Conda environment."""
-#         with CondaShell(env_name=self.test_env_name) as conda_shell:
-#             # Example: check if the correct Python version is being used
-#             conda_shell.execute('python --version')
-#             python_version_output = conda_shell.output_history[-1].strip()
-#             self.assertTrue(python_version_output.startswith("Python"))
+    # def test_command_execution_in_conda_environment(self):
+    #     """Test executing a command within the created Conda environment."""
+    #     with CondaShell(env_name=self.test_env_name) as conda_shell:
+    #         # Example: check if the correct Python version is being used
+    #         output = conda_shell.execute('python --version')
+    #         self.assertTrue(output.startswith("Python"))
 
 if __name__ == '__main__':
     unittest.main()
