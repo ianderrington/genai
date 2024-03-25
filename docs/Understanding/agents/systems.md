@@ -53,7 +53,7 @@ Here are a few frameworks of importance.
 
 #### OpenAI
 
-OpenAI released their ability to integrate or call different [AI assistants](https://platform.openai.com/docs/assistants/overvie) be called within a chat using the `@` symbol. Similar to tagging in chat-interfaces, with a human 
+OpenAI released their ability to integrate or call different [AI assistants](https://platform.openai.com/docs/assistants/overview) be called within a chat using the `@` symbol. Similar to tagging in chat-interfaces, with a human 
 
 
 ## Theoretical Classifications
@@ -65,6 +65,12 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
     This system consists of multiple agents, and they engage in ongoing discussions about their daily activities. They also receive regular updates about their environment. An example of this type of system can be viewed in [this paper](https://arxiv.org/pdf/2304.03442.pdf).
 
 ## Papers
+
+??? important "[Polaris: A Safety-focused LLM Constellation Architecture for Healthcare](https://arxiv.org/html/2403.13313v1)" polaris
+    **Description** The authors reval a LLM agent system to ensure safe and compliant AI chatbots for healthcare 
+    <img width="870" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2fada51f-d5e0-4288-bf6d-940fd5ab1fd8">
+    <img width="891" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b8234adb-d86e-4118-aee3-3f72fa461bc7">
+
 
 
 ??? important "[Society of Minds: To Enable Societal Interactions to Improve Output](https://arxiv.org/pdf/2305.17066.pdf)" ai-society-of-minds
