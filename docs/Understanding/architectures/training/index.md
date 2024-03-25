@@ -3,12 +3,32 @@ Training GenAI will generally be domain/modality specific.
 
 
 ## Important concepts
+### Training Objectives
+
+- Next token
+- Masked token
+- Embedding similarity
 
 ### What is done 
 - Self-supervised [**pre-training**](pre-training.md) to predict the next token with reasonable likelihoods.
 - Supervised or self-supervised [Finetuning](./finetuning.md) on higher quality data sets.
     - These datasets may be done so [recurrently](./recurrent.md) using [simulated data](../../data/preparation/synthetic.md).
 - [**Automatically correcting**](#automatic-correction) models to more accurately train a model to produce output that is is more globally accurate to the input prompts.
+
+#### Fusion Methods
+
+??? code "[Generative Representational Instruction Tuning](https://github.com/ContextualAI/gritlm)" gritlm
+ 
+    **Developments** The authors reveal in their [paper](https://arxiv.org/pdf/2402.09906.pdf) the ability to simultaneously train generation and embedding models, revealing improved performance in both domains, and enhancement of RAG performance by not requiring separate retrieval and generation models.
+    <img width="564" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f2411adc-e760-4e50-9c2f-637ea159e40c">
+    <img width="571" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9f3001fd-968b-4f8e-9658-dce3bdbfb333">
+
+    <img width="565" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7a14ce3b-193c-4605-aced-75c2f1a5afcd">
+    <img width="553" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/98380c59-7308-449c-8592-6643e3fb7198">
+
+
+
+
 
 ### How training is done
 
