@@ -23,13 +23,10 @@ Train on model trains a new model on the output of a new model.
 
 ??? code "[Alpaca ](https://github.com/tatsu-lab/stanford_alpaca)"
 
-??? tip "[Shepherd: A Critic for Language Model Generation](https://arxiv.org/pdf/2308.04592.pdf) A 7B model trained to critique outputs"
-
-    **Example chat response**
-    <img width="560" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c207939b-9bd7-4a20-b747-ea46d13534f7">
 
 
 ??? tip "[Shepherd: A Critic for Language Model Generation](https://arxiv.org/pdf/2308.04592.pdf) A 7B model trained to critique outputs"
+
     **Example chat response**
     <img width="560" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c207939b-9bd7-4a20-b747-ea46d13534f7">
 

@@ -190,6 +190,8 @@ for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
 if prompt := st.chat_input(placeholder="Ask a question or type a command using '/' to begin"):
+    with st.chat_message("user"):
+        st.write(prompt)
     prompt = route_prompt(prompt)
 
 

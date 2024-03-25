@@ -10,11 +10,13 @@ One manner of doing this is through the use of [adapter layers](#adaptermodel-ch
 
     Summary (with links internal to this project):
     **Why you shouldn't**
+
     1. Few Shot examples and better [prompts](../../prompting/index.md) (and [chains](../../agents/cognitive_architecture.md) helps a great deal.
     2. [Retrieval Augmented Generation](../../agents/rag.md) will get you all the way there.
 
 
     **Why you should**
+    
     1. High accuracy requirements
     2. Don't care about speed
     3. Methods above don't work

@@ -484,4 +484,5 @@ Because of the large number of manners of performing RAG, it is important to eva
 - [RAG demystified](https://github.com/pchunduri6/rag-demystified/blob/main/complex_qa.py)
 - [Mastering RAG: How To Architect An Enterprise RAG System](https://www.rungalileo.io/blog/mastering-rag-how-to-architect-an-enterprise-rag-system)
 - [RAG chatbot with Chat Embedding and Reranking (cohere)](https://txt.cohere.com/rag-chatbot/) and [Notebook](https://colab.research.google.com/github/cohere-ai/notebooks/blob/main/notebooks/RAG_Chatbot_with_Chat_Embed_Rerank.ipynb)
-    
+
+- [https://github.com/the-full-stack/ask-fsdl?tab=readme-ov-file] 

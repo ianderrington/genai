@@ -10,11 +10,76 @@ hide:
 Here you'll find what you need to know to understand Gen()AI architecture. 
 
 
-[See the primary components!](#see-how-the-components-connect){ .md-button .md-button--primary }
-[Start where you'd like!](#start-where-it-makes-the-most-sense){ .md-button }
+[Choose your adventure!](#choose-your-adventure){ .md-button }
+[See the primary components!](#component-interactions){ .md-button .md-button--primary }
 [What is this about?](#what-is-this-about){ .md-button .md-button--primary }
 
-## ⬇️ See how the components connect 
+## Choose your adventure
+
+???+ tip "How to go about understanding and building"
+    ```mermaid
+    graph TD
+        subgraph Understand["Understand your"]
+            UC["Use Cases"]
+            CH["Challenges"]
+            BB["Build or Buy"]
+        end
+
+        subgraph Build["Build"]
+            Data["Data"]
+            MA["Architecture"]
+            MD["Models"]
+            Deploy["Deploy"]
+            AG["Agents"]
+        end
+
+        subgraph Buy["Buy"]
+            CM["Commercial Markets"]
+            SL["Solution Licensing"]
+            VI["Vendor Integration"]
+        end
+
+        subgraph Use["Use"]
+            Business["Business Considerations"]
+            Ethical["Ethical Considerations"]
+            Examples["Examples & Case Studies"]
+            Interfacing["Interfacing Layers"]
+            Marking["Marking and Detecting"]
+        end
+
+        Understand --> Build --> Use
+        Understand --> Buy --> Use
+
+        click UC "./overview/use_cases.html"
+        click CH "./overview/challenges.html"
+        click BB "./overview/building_or_buying.html"
+        click Data "./data/index.html"
+        click MA "./architectures/index.html"
+        click MD "./architectures/models/index.html"
+        click Deploy "./deploying/index.html"
+        click AG "./agents/index.html"
+        click CM "../Using/commercial_markets.html"
+        click SL "../Using/solution_licensing.html"
+        click VI "../Using/vendor_integration.html"
+        click Business "../Using/business.html"
+        click Ethical "../Using/ethically/index.html"
+        click Examples "../Using/examples/index.html"
+        click Interfacing "../Using/interfacing_layers/web_plugins.html"
+        click Marking "../Using/marking_and_detecting.html"
+
+        classDef warmColor fill:#f9d5e5,stroke:#333,stroke-width:2px;
+        classDef midColor fill:#f0e5d8,stroke:#333,stroke-width:2px;
+        classDef buyColor fill:#f4e7d3,stroke:#333,stroke-width:2px;
+        classDef coolColor fill:#d5e8d4,stroke:#333,stroke-width:2px;
+
+        class Understand warmColor;
+        class Build midColor;
+        class Buy buyColor;
+        class Use coolColor;
+
+    ```
+
+## Component interactions
 
 ???+ tip "Component of LLM-based GenAI (clickable)"
     ```mermaid
@@ -123,70 +188,7 @@ Here you'll find what you need to know to understand Gen()AI architecture.
         click Agent "./agents/index.html"
     ```
 
-## ⬇️ Start where it makes the most sense ⬇️ 
 
-???+ tip "How to go about understanding and building"
-    ```mermaid
-    graph TD
-        subgraph Understand["Understand"]
-            UC["Use Cases"]
-            CH["Challenges"]
-            BB["Build or Buy"]
-        end
-
-        subgraph Build["Build"]
-            Data["Data"]
-            MA["Architecture"]
-            MD["Models"]
-            Deploy["Deploy"]
-            AG["Agents"]
-        end
-
-        subgraph Buy["Buy"]
-            CM["Commercial Markets"]
-            SL["Solution Licensing"]
-            VI["Vendor Integration"]
-        end
-
-        subgraph Use["Use"]
-            Business["Business Considerations"]
-            Ethical["Ethical Considerations"]
-            Examples["Examples & Case Studies"]
-            Interfacing["Interfacing Layers"]
-            Marking["Marking and Detecting"]
-        end
-
-        Understand --> Build --> Use
-        Understand --> Buy --> Use
-
-        click UC "./overview/use_cases.html"
-        click CH "./overview/challenges.html"
-        click BB "./overview/building_or_buying.html"
-        click Data "./data/index.html"
-        click MA "./architectures/index.html"
-        click PTM "./architectures/pre_trained_models.html"
-        click Deploy "./deploying/index.html"
-        click AG "./agents/index.html"
-        click CM "../Using/commercial_markets.html"
-        click SL "../Using/solution_licensing.html"
-        click VI "../Using/vendor_integration.html"
-        click Business "../Using/business.md"
-        click Ethical "../Using/ethically/index.md"
-        click Examples "../Using/examples/index.md"
-        click Interfacing "../Using/interfacing_layers/web_plugins.md"
-        click Marking "../Using/marking_and_detecting.md"
-
-        classDef warmColor fill:#f9d5e5,stroke:#333,stroke-width:2px;
-        classDef midColor fill:#f0e5d8,stroke:#333,stroke-width:2px;
-        classDef buyColor fill:#f4e7d3,stroke:#333,stroke-width:2px;
-        classDef coolColor fill:#d5e8d4,stroke:#333,stroke-width:2px;
-
-        class Understand warmColor;
-        class Build midColor;
-        class Buy buyColor;
-        class Use coolColor;
-
-    ```
 
 ## What is this about?
 
@@ -228,3 +230,14 @@ Generative AI is a subset of machine learning that aim to creates new data sampl
 
 !!! warning "Presentation bias"
     This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../contributing.md)
+
+
+## Useful Resources
+
+If you can't get enough here, check out the following resources
+
+!!! important "[Awesome Generative AI Guide](https://github.com/aishwaryanr/awesome-generative-ai-guide)"
+
+!!! important "[Awesome AGI](https://github.com/EmbraceAGI/Awesome-AGI/blob/main/README.md)"
+
+!!! important "[LLLM bootcamp](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/)"
