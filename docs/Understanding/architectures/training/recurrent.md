@@ -15,7 +15,13 @@ graph LR
 ## Example 
 
 Train on model trains a new model on the output of a new model.
-??? [Alpaca ](https://github.com/tatsu-lab/stanford_alpaca)
+
+??? code "[LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement](https://github.com/SqueezeAILab/LLM2LLM)"
+    **Developments** The authors reveal in their [paper](https://arxiv.org/pdf/2403.15042.pdf) a solution an iterative training and generation approach that enable effective fine tuning on low-data regimes. 
+    <img width="1033" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c8d8e420-69e3-435a-a854-7f1f43bff09b">
+
+
+??? code "[Alpaca ](https://github.com/tatsu-lab/stanford_alpaca)"
 
 ??? tip "[Shepherd: A Critic for Language Model Generation](https://arxiv.org/pdf/2308.04592.pdf) A 7B model trained to critique outputs"
 
