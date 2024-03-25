@@ -22,3 +22,5 @@ actions-runner/
 lib/
 
 *.egg-info
+
+models

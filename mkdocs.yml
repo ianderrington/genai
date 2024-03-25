@@ -97,7 +97,16 @@ theme:
     # logo: genai_logo_edited
 google_tag: !ENV GOOGLE_ANALYTICS_KEY
 # Plugins
+
+# Plugins
+# plugins:
+#   - blog
+#   - search:
+#       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+#   - minify:
+#       minify_html: true
 plugins:
+  - blog
   - search
   - shareable_admonition
       
@@ -120,7 +129,7 @@ plugins:
   ## Categories are better than tags but they don't link to the right place
   # - tags
       # tags_file: tags.md
-  - section-index
+  # - section-index # DOES NOT WORK WITH BLOG
   - table-reader:
       data_path: "docs"
   - macros

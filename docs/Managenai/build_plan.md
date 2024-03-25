@@ -4,18 +4,27 @@ There are several layers that will be part of the build plan. They may be consid
 
 ## Goals
 
-1. Manual, and automated use of GenAI to [improve and refine](#improve-and-refine-content) content already present. 
+1. Manual, and automated effective use of GenAI to [improve and refine](#improve-and-refine-content) content, and code, already present. 
 1. Automatic triggering of GenAI to [incorporate new](#incorporate-new-content) content coming from external inputs. 
 1. Automated [content searches] for information inputs based on appropriate information feeds. 
 1. Responsive [Chatty AI Oracle](#ai-oracle)
 1. Agentic AI Oracle with varying degrees of veracity. 
 
+## Methods
+1. Use AI to create as many components of this as possible. 
+    - Copilot and GPT4 for manual-enabled coding.
+    - Explore autocoding solutions already on market
+    - Build with autocoding solutions already on market.
+        - Share evaluations in Blogs
+    
+
 
 ## Needs
+
 - To Automatically specific content fix content already present: 
     - [x] Basic by file
-    - [ ] High quality by file
-    - [ ] a crawler
+    - [ ] High quality by file --> Prompt optimizations
+    - [ ] A crawler
 - [Incorporate new content](#incorporate-new-content) 
     - [ ] (In progress) Establish Indexing and measured effective retrieval
     - [ ] To Identify content locations to file
@@ -64,18 +73,17 @@ flowchart TD
 ```
 
 ## AI Oracle
-We will explore RAG and fine-tuning of chat models models, as well as other cognitive topologies architectures. 
+We will explore RAG and fine-tuning of chat models models, as well as cognitive topologies architectures. 
 
 ### Chatty Oracle
 
 We will first look at using [rag](../Understanding/agents/rag.md) to enable lookup of the components within the database. This will rely on understanding gained from building our [self improvement](#self-improvement) architectures. 
 
-
-
-### Phase 2: Enhanced Functionality and Automation
-Advanced KG Development with Automated Placement
-
 ## Components
+
+### Evaluations 
+Automatic prompt and chain optimization systems.
+- LLM-enabled 
 
 ### Chains
 #### Summarization 
@@ -105,8 +113,7 @@ Run through all of the data using an LLM, to create the data that can be ingeste
 The Action should check if the submitted document/concept is already in the documentation tree using a simple keyword-based search.
 If the concept is not present, the Action should tag the issue for further processing.
 
-- [ ] NOTE: This is partially done, but automation relys on more prompt-tuning 
-
+- [ ] NOTE: This is done with 
 
 
 ## Brainstorms 

@@ -203,7 +203,7 @@ What do you need to know?
     - 📊 Understand the [**data**](./data/index.md) and collect data that you need. 
     - 🚢 Consider [**Model Architectures**](./architectures/index.md) use [**pre-trained**](./architectures/pre_trained_models.md) models if possible. 
     - [💬 Prompts](prompting/index.md) govern how we interact with the models. 
-    - [🔧 Optimize](architectures/optimization/index.md) your model for better performance and efficiency. 
+    - [🔧 Optimize](./architectures/optimization/index.md) your model for better performance and efficiency. 
     
     - [🛠️ Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
     - [🧭 Consider Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies. 

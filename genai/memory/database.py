@@ -3,6 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
 from dotenv import load_dotenv
+import json
 load_dotenv()
 
 Base = declarative_base()
@@ -25,7 +26,7 @@ class Metadata(Base):
     primary_category = Column(String)
     categories = Column(String)
     links = Column(String)
-import json
+
 class DatabaseManager:
     def __init__(self):
         db_name = os.getenv("DB_NAME")
