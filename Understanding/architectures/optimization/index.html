@@ -6272,8 +6272,8 @@ Here are the benefit chart for each method each kind:</p>
 <p>Training LLMs often requires the use of preconditioned optimization algorithms such as Adam to achieve rapid convergence. These algorithms accumulate extensive gradient statistics, proportional to the model's parameter size, making the storage of these optimizer states the primary memory constraint during training. Instead of focusing just on engineering and system efforts to reduce memory consumption, we went back to fundamentals. </p>
 <p>We looked at the slow-changing low-rank structure of the gradient matrix during training.  We introduce a novel approach that leverages the low-rank nature of gradients via Gradient Low-Rank Projection (GaLore). So instead of expressing the weight matrix as low rank, which leads to a big performance degradation during pretraining, we instead express the gradient weight matrix as low rank without performance degradation, while significantly reducing memory requirements."</p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/05166538-7af7-4239-a194-03496760dbf5" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="352" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/05166538-7af7-4239-a194-03496760dbf5"></a></p>
-</details>
 <h3 id="mixture-of-experts">Mixture of Experts<a class="headerlink" href="#mixture-of-experts" title="Permanent link">&para;</a></h3>
+</details>
 <p>MOE provides the ability to use different smaller models that have better performance in certain domains. Their use is notable, as it has been stated that GPT-4 is powered by 8 different agents.</p>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2303.14177.pdf">Scaling Expert Language Models with Unsupervised Domain Discovery</a></summary>
