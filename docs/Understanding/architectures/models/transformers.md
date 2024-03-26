@@ -167,11 +167,15 @@ They improve computation complexity in one of several ways:
     ![image](https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a)
 
 
-### Information resolutions
+### Advanced Transformer Blocks 
 
 ??? code "[DenseFormer: Enhancing Information Flow in Transformers via Depth Weighted Averaging](https://github.com/epfml/DenseFormer)" denseformer
-    **Developments** The authors reveal in their [paper](https://arxiv.org/pdf/2402.02622.pdf) a variation of the transformer that yields improved results at reduced 
 
+    **Developments** The authors reveal in their [paper](https://arxiv.org/pdf/2402.02622.pdf) a variation of the transformer that yields improved results by introducing 'Depth Weighted Averaging' that averages weights at layer (i) with the output from the current block $B_i$ (ii) the output of all previous blocks $B_{j<i}$, and (iii) the embedded input $X_0$.
+    <img width="1289" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e386d9ab-f337-4df9-b2d2-2f4168eb8945">
+    <img width="664" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ce207f67-e4d9-4698-b5f2-47f5a6cb2e80">
+
+  
 
 ### Computation Reduction
 
@@ -182,15 +186,7 @@ They improve computation complexity in one of several ways:
     [Paper](https://arxiv.org/pdf/2311.01906.pdf)
 
 
-[SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](https://arxiv.org/pdf/2306.03078v1.pdf)
-
-### Fine Tuning
-
-Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.
-
-
-??? tip "[Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)"
-    <img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5">
+??? note "[SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](https://arxiv.org/pdf/2306.03078v1.pdf)"
 
 
 ## Other modalities
