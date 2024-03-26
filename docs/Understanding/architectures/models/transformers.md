@@ -102,6 +102,8 @@ Important discussion revealing the components of Transformers.
 
 ## Enhancements and variations
 
+
+
 ### Context length Improvements
 
 In its vanilla state, Transformers are $O(N^2)$ in their computation with self-complexity. This makes long context lengths increasingly costly to train and generate.
@@ -165,6 +167,10 @@ They improve computation complexity in one of several ways:
     ![image](https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a)
 
 
+### Information resolutions
+
+??? code "[DenseFormer: Enhancing Information Flow in Transformers via Depth Weighted Averaging](https://github.com/epfml/DenseFormer)" denseformer
+    **Developments** The authors reveal in their [paper](https://arxiv.org/pdf/2402.02622.pdf) a variation of the transformer that yields improved results at reduced 
 
 
 ### Computation Reduction

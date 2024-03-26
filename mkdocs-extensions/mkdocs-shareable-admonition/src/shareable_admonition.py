@@ -58,7 +58,7 @@ class ShareableAdmonitionPlugin(BasePlugin):
         for line_num, line in enumerate(mkd_split):
             matches = self.RE.match(line)
             if in_admonition:                
-                if in_admonition_space_count > 1 or line.startswith('!!!') or line.startswith('???') or line.startswith('???+') or matches:
+                if in_admonition_space_count > 2 or line.startswith('!!!') or line.startswith('???') or line.startswith('???+') or matches:
                     in_admonition_space_count = 0
                     end_block = True
                 elif line_num == len(mkd_split) - 1:
@@ -73,14 +73,14 @@ class ShareableAdmonitionPlugin(BasePlugin):
                     admonition_block.append(line.lstrip('\t'))
                     in_admonition_space_count = 0
                     end_block = False
-                elif line == '': 
+                else:
+                # elif line == '': 
                     admonition_block.append(line)
                     in_admonition_space_count += 1
                     end_block = False
-                
-                else:
-                    in_admonition_space_count = 0
-                    end_block = True
+                # else:
+                    # in_admonition_space_count = 0
+                    # end_block = True
                     
                 if end_block:
                     in_admonition = False

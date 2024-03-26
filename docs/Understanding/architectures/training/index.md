@@ -17,9 +17,10 @@ Training GenAI will generally be domain/modality specific.
 
 #### Fusion Methods
 
-??? code "[Generative Representational Instruction Tuning](https://github.com/ContextualAI/gritlm)" gritlm
+??? code "[GRIT: Generative Representational Instruction Tuning](https://github.com/ContextualAI/gritlm)" grit-lm
  
-    **Developments** The authors reveal in their [paper](https://arxiv.org/pdf/2402.09906.pdf) the ability to simultaneously train generation and embedding models, revealing improved performance in both domains, and enhancement of RAG performance by not requiring separate retrieval and generation models.
+    **Developments** The authors reveal in their [paper](https://arxiv.org/pdf/2402.09906.pdf) the ability to simultaneously train generation and embedding models, revealing improved performance in both domains, and enhancement of RAG performance by not requiring separate retrieval and generation models. 
+    
     <img width="564" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f2411adc-e760-4e50-9c2f-637ea159e40c">
     <img width="571" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9f3001fd-968b-4f8e-9658-dce3bdbfb333">
 

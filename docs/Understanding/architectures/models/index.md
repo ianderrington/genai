@@ -64,7 +64,7 @@ Vision Language models are among the most prominent of models beyond language mo
 
 ## Model Fusion
 
-??? code "[KNOWLEDGE FUSION OF LARGE LANGUAGE MODELS](https://github.com/fanqiwan/fusellm?tab=readme-ov-file]" fuse-llm
+??? code "[KNOWLEDGE FUSION OF LARGE LANGUAGE MODELS](https://github.com/fanqiwan/fusellm?tab=readme-ov-file)" fuse-llm
     **Developments** FuseLM provides a manner and method of combining different LLMs to train a new `fused` model based on the probabilistic output of each of the different LLMs. 
     <img width="1269" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/30e0e6ab-1976-4a26-af60-17df09fe2b05">
     <img width="972" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/edc7593e-2eab-4916-ac27-291f28eba122">
