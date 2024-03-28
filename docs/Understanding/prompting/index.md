@@ -254,6 +254,7 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 
 !!! tip "[Prompt Royale](https://github.com/meistrari/prompts-royale) Provides the ability to automatically generate prompts to test around the same general theme."
 
+- [Llangchain prompthub](https://smith.langchain.com/hub)
 - [Awesome Prompts](https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md)
 - [Prompt Hub](https://app.prompthub.studio/) For Generating image prompts
 - [Wolfram Prompt Repo](https://writings.stephenwolfram.com/2023/06/prompts-for-work-play-launching-the-wolfram-prompt-repository/?mibextid=Zxz2cZ)
@@ -273,7 +274,7 @@ MANAGEN Make the below into Admonitions
 
 - [A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/pdf/2302.11382.pdf)
 - [LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide) based on [paper](https://arxiv.org/pdf/2304.13712.pdf).
-- 
+
 
 - [Prompt Engineering by Lillian Wang](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)
 - [OPEN AI best practices](https://platform.openai.com/docs/guides/gpt-best-practices/)
