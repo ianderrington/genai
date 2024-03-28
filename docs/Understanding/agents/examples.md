@@ -8,7 +8,10 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 ### Frameworks
 
-!!! important "[Open GPTs](https://github.com/langchain-ai/opengpts) Provides a similar experience to OpenAI GPTs and assistants, using Langchain components"
+!!! code "[Open GPTs](https://github.com/langchain-ai/opengpts) Enables the creation of agents and assistants, using Langchain components"
+
+??? code "[The Open Source AI Assistant Framework & API](https://github.com/superagent-ai/superagent)" superagent
+    [Docs](https://docs.superagent.sh/overview/overview/introduction)
 
 ??? code "[Agenta-AI](https://github.com/Agenta-AI/agenta?tab=readme-ov-file) provides end-to-end LLM developer platform. It provides the tools for prompt engineering and management, ⚖️ evaluation, human annotation, and 🚀 deployment. All without imposing any restrictions on your choice of framework, library, or model." 
 
