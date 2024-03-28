@@ -81,7 +81,10 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     
 
 
-### Others
+??? code "[🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4](https://github.com/lupantech/chameleon-llm?tab=readme-ov-file)"
+   [Paper](https://arxiv.org/pdf/2304.09842.pdf)
+   <img width="892" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0deb10a1-ca97-4bc3-925d-707585fbf297">
+
 
 ??? code "[Critic: Large Language Models can Self-correct with TOol-INteractive Critiquing](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)"
     [Paper](https://arxiv.org/pdf/2305.11738.pdf)
