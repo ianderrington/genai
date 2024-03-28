@@ -1,5 +1,6 @@
-Evaluating and comparing models is essential to enabling quality outcomes. There are a number of ways that models can be evaluated, and in many domains. The manners of evaluation will depend on the intended use-cases of the model.
+Evaluating and comparing models is essential to enabling quality outcomes. There are a number of ways that models can be evaluated, and in many domains. [How to evaluate](#how-to-evaluate) the models may depend on the intended use-cases of the model, but generally evaluating an LLM architectures look at the performance of individual architecture-calls. When multiple calls are chained together, as with [agents](../agents/index.md) it is preferable to [evaluate them accordingly](../agents/evaluating_and_comparing.md). Because LLM models may be more frozen, and potentially less-likely to change, it is likely important to evaluate a the architecture-level first, before moving on to more complex and high-level evaluations. It also is important to know that model-evaluations will be dependent on your [prompting](../prompting/index.md), and consequently if one wishes to find optimal models, one should consider [prompt optimization](../prompting/index.md#optimizions)
 
+If you are using or developing your own models, checking out the [leader boards](#leaderboards) will help you to identify models that are appropriately performant for your needs. But what are your needs? That it is why it is important to know [what you should evaluate](#what-to-evaluate). With this in hand, you can then figure out [how to evaluate](#how-to-evaluate) your LLM models. 
 
 ## Leaderboards
 
@@ -8,8 +9,9 @@ Here are a few boards that help to aggregate and test models that have been rele
 - [Hugging Face LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) An essential chart for documenting the model performance across multiple models.
 - [lmsys.org leader board](https://lmsys.org/blog/2023-06-22-leaderboard/)
 
-## What to evaluate?
-There are several domains of expertise where it may be essential to measure Model's performance. 
+## **What** to evaluate?
+There are several domains of expertise where it may be essential to measure Model's performance. For general-performance models, even if [multi-model](models/multimodel.md), it is useful to consider [multiple-criteria](#multi-criteria-evaluation) simultaneously, which may include [specific criteria](#specific-evaluation) to evaluate
+
 
 ### Multi-criteria evaluation
 
@@ -24,45 +26,20 @@ There are several domains of expertise where it may be essential to measure Mode
     ![image](https://github.com/ianderrington/genai/assets/76016868/cc53d97d-86f3-43a6-9899-d06dcb33feff)
 
 
-??? code "[Lighteval by Hugging Face](https://github.com/huggingface/lighteval) provides lightweight framework for LLM evaluation"
+#### Generalization ability
 
-#### Question Answering
-
-#### Multimodality
-
-#### Creativity
-
-### Domain expertise
-
-#### Language generation 
-
-#### Code generation
-
-#### Math, logic, and reasoning
-
-#### Science and engineering
-
-#### Healthcare and medicine
-
-#### Law and policy
+It may be important for your modal to have generalization beyond your training data. If so, it is important to thoroughly separate any testing data from the training data. To remove this, you will want to work on your [data](../data/index.md) preparation. If needed, the 'contamination' of data may be removed with [automated methods](https://lmsys.org/blog/2023-11-14-llm-decontaminator/).
 
 
-!!! code "[Legal Bench](https://github.com/HazyResearch/legalbench/) is an ongoing open science effort to collaboratively curate tasks for evaluating LLM legal reasoning in English."
+### Specific Criteria
 
-#### Robotics
+#### Accuracy vs Hallucination
 
-### 
-
-### Hallucinations
 Hallucinations remain a core problem with LLMs as they may generate linguistic and syntatically correct statements, that lack epistemic or factually grounded understanding. 
 
 ??? important "Hugging faces [leaderboard](https://huggingface.co/blog/leaderboards-on-the-hub-hallucinations) on hallucinations provides a comparison of different models' hallucinations". 
     Much is based on [awesome-hallucination-detection](https://github.com/EdinburghNLP/awesome-hallucination-detection) 
 
-### Other Characteristics 
-
-#### Generalization ability
-It may be important for your modal to have generalization beyond your training data. If so, it is important to thoroughly separate any testing data from the training data. To remove this, you will want to work on your [data](../data/index.md) preparation. If needed, the 'contamination' of data may be removed with [automated methods](https://lmsys.org/blog/2023-11-14-llm-decontaminator/).
 
 #### Finding information
 
@@ -83,30 +60,60 @@ It was, however Anthropic found, that [LLMs can perform better](https://www.anth
  “Here is the most relevant sentence in the context:” 
 ```
 
-### Deception
+??? code "[Lighteval by Hugging Face](https://github.com/huggingface/lighteval) provides lightweight framework for LLM evaluation"
+
+#### Question Answering
+
+### Domain expertise
+
+#### Language generation 
+
+#### Code generation
+
+#### Math, logic, and reasoning
+
+#### Science and engineering
+
+#### Healthcare and medicine
+
+#### Law and policy
+
+
+!!! code "[Legal Bench](https://github.com/HazyResearch/legalbench/) is an ongoing open science effort to collaboratively curate tasks for evaluating LLM legal reasoning in English."
+
+#### Embodied Devices and Robotics
+
+### AI-psychology 
+While it may be projective to consider AI as having 'psychology', it may be useful to relate to different human-like characteristics when evaluating GenAI models.
+
+#### Creativity
+
+
+#### Deception
 ??? "[Role play with large language models (Murray Shanahan et al., November 2023)](https://www.nature.com/articles/s41586-023-06647-8)"
 
    Abstract:
    "As dialogue agents become increasingly human-like in their performance, we must develop effective ways to describe their behaviour in high-level terms without falling into the trap of anthropomorphism. Here we foreground the concept of role play. Casting dialogue-agent behaviour in terms of role play allows us to draw on familiar folk psychological terms, without ascribing human characteristics to language models that they in fact lack. Two important cases of dialogue-agent behaviour are addressed this way, namely,         
  (apparent) deception and (apparent) self-awareness."
 
-
-### Sycophancy
+#### Sycophancy
 
 Sycophancy is the degree to which a model mirrors biases, large or small, that are put into input queries by the user. In ideal systems, sycophancy will be minimized to prevent _echo-chamber_ amplification of innaccuracies. 
 
 !!! code "The repo [Sycophancy-eval](https://github.com/meg-tong/sycophancy-eval) offers manners and methods of evaluating sycophancy. "
 
 ### General Discussions
+
 ??? tip "[How do we know how smart AI systems are?](https://www.science.org/doi/10.1126/science.adj5957)"
     “AI systems, especially generative language systems like GPT-4, will become increasingly influential in our lives, as will claims about their cognitive capacities. Thus, designing methods to properly assess their intelligence—and associated capabilities and limitations—is an urgent matter. To scientifically evaluate claims of humanlike and even superhuman machine intelligence, we need more transparency on the ways these models are trained, and better experimental methods and benchmarks. Transparency will rely on the development of open-source (rather than closed, commercial) AI models. Better experimental methods and benchmarks will be brought about through collaborations between AI researchers and cognitive scientists who have long investigated how to do robust tests for intelligence, understanding, and other cognitive capabilities in children, animals, and other “alien” intelligences.”
 
 
-## Evaluation Papers and Libraries
+## **How** to evaluate
+While it may seem reasonable to evaluate with a 'guess-and-check' approach, this is not scaleable, nor is will it be quantitatively informative. That is why the use of various tools/libaries are essential to evaluate your models. This 
 
+### Measurements Libraries
 
-??? important "[LLM Eval survey, paper collection](https://github.com/MLGroupJLU/LLM-eval-survey)"
-    [Paper](https://arxiv.org/abs/2307.03109)
+!!! code "[Chain Forge: An open-source visual programming environment for battle-testing prompts to LLMs.](https://github.com/ianarawjo/ChainForge)"
 
 ??? code "[ROSCOE: A SUITE OF METRICS FOR SCORING STEP-BYSTEP REASONING](https://github.com/facebookresearch/ParlAI/tree/main/projects/roscoe) is ' a new suite of interpretable, unsupervised metrics that enables evaluation of step-by-step reasoning generations of LMs when no golden reference generation exists. ' "
     [Paper](https://arxiv.org/pdf/2212.07919.pdf)
@@ -126,14 +133,14 @@ Sycophancy is the degree to which a model mirrors biases, large or small, that a
     Models tend to perform better on photos and paintings🖼️ than on diagrams and tables📊, where nuanced and fine-grained visual information persists.
     🤖Error analysis on 150 error cases of GPT-4V reveals that 35% of errors are perceptual, 29% stem from a lack of knowledge, and 26% are due to flaws in the reasoning process.
 
-### Domain specific
+#### Domain specific
 
 !!! code "[Legal Bench](https://github.com/HazyResearch/legalbench/) is an ongoing open science effort to collaboratively curate tasks for evaluating LLM legal reasoning in English."
 
 The evaluation of models helps us to identify which, if any, model to use for a particular task at hand. Directly related to the manner of pre-training, fine-tuning, and any RLHF, the ways that we consider the output can also be used to improve the models.
 
 
-## References
+## Useful References
 
 ??? important "[LLM Eval survey, paper collection](https://github.com/MLGroupJLU/LLM-eval-survey)"
     [Paper](https://arxiv.org/abs/2307.03109)
