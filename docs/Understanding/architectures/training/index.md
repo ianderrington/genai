@@ -15,7 +15,8 @@ Training GenAI will generally be domain/modality specific.
     - These datasets may be done so [recurrently](./recurrent.md) using [simulated data](../../data/preparation/synthetic.md).
 - [**Automatically correcting**](#automatic-correction) models to more accurately train a model to produce output that is is more globally accurate to the input prompts.
 
-#### Fusion Methods
+#### Retrieval Aware Training
+
 
 ??? code "[GRIT: Generative Representational Instruction Tuning](https://github.com/ContextualAI/gritlm)" grit-lm
  
@@ -27,6 +28,10 @@ Training GenAI will generally be domain/modality specific.
     <img width="565" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7a14ce3b-193c-4605-aced-75c2f1a5afcd">
     <img width="553" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/98380c59-7308-449c-8592-6643e3fb7198">
 
+??? note "[Retriever-Aware Training (RAT): Are LLMs memorizing or understanding?](https://gorilla.cs.berkeley.edu/blogs/3_retriever_aware_training.html)"
+    Retrieval aware training uses the fact that it is useful to use up-to-date information at generation time and hence considers retrievers as part of the training.
+    <img width="952" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/285ea9b4-75e8-4762-b1bf-b63597a463f1">
+ 
 
 
 
