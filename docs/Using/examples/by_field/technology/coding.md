@@ -18,7 +18,7 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 
 !!! code "[Octopack](https://github.com/bigcode-project/octopack) [Github](https://arxiv.org/pdf/2308.07124.pdf)"
 
-
+!!! code "[Codel](https://github.com/semanser/codel?tab=readme-ov-file)"
 
 !!! code "[Open Copilot](https://github.com/openchatai/opencopilot)"
 
