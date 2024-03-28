@@ -12,48 +12,53 @@ Here is a basic comparison of the two:
 
 !!! example "Comparison with/without RAG"
 
-
     === "With"
 
         ```mermaid
         graph LR
-            style Docs fill:#FFAAAA,stroke:#333,stroke-width:2px
-            style QueryEncoder fill:#FFAAAA,stroke:#333,stroke-width:2px
-            style DocEncoder fill:#FFAAAA,stroke:#333,stroke-width:2px
-            style Retriever fill:#FFAAAA,stroke:#333,stroke-width:2px
-            style Input fill:#FFA500,stroke:#333,stroke-width:2px
-            style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
-            style Context fill:#FFA500,stroke:#333,stroke-width:2px
-            style Generator fill:#00AAFF,stroke:#333,stroke-width:2px
-            style Output fill:#80AA80,stroke:#333,stroke-width:2px
-        
-            QueryEncoder --> Retriever
-            Prompt --> Generator[LLM Generation]
-            Input --> Generator
-            Input --> QueryEncoder[Query Encoder]
-            Docs --> DocEncoder[Doc Encoder]
-            DocEncoder --> Retriever
+            style QueryEncoder fill:#D2E1FA,stroke:#333,stroke-width:1px
+            style QueryOptimizer1 fill:#E7B4E1,stroke:#333,stroke-width:1px
+            style Query fill:#FADAD2,stroke:#333,stroke-width:1px
+            style Prompt fill:#D2FAFA,stroke:#333,stroke-width:1px
+            style Docs fill:#FADAD2,stroke:#333,stroke-width:1px
+            style QueryOptimizer2 fill:#E7B4E1,stroke:#333,stroke-width:1px
+            style DocEncoder fill:#D2E1FA,stroke:#333,stroke-width:1px
+            style Retriever fill:#E1E7B4,stroke:#333,stroke-width:1px
+            style Context fill:#B4E1E7,stroke:#333,stroke-width:1px
+            style Generator fill:#FAD2E1,stroke:#333,stroke-width:1px
+            style Answer fill:#E1FAD2,stroke:#333,stroke-width:1px
+
+            QueryEncoder --> |Retrieve\n from|Retriever
+            Prompt --> Generator[LLM\n Generation]
+            Query --> Generator
+            Query --> QueryOptimizer1(Query\n Optimizer)
+            QueryOptimizer1 --> QueryEncoder[Encoder]
+            Docs --> QueryOptimizer2(Docs\n Optimizer)
+            QueryOptimizer2 --> DocEncoder[Encoder]
+            DocEncoder --> |Index\n to| Retriever[Database]
             
             Retriever --> Context
             
             Context --> Generator
-            Generator --> Output
+            Generator --> Answer 
         ```
 
     === "Without"
 
-   
         ```mermaid
         graph LR
-            style Input fill:#FFA500,stroke:#333,stroke-width:2px
-            style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
-            style Generator fill:#00AAFF,stroke:#333,stroke-width:2px
-            style Output fill:#80AA80,stroke:#333,stroke-width:2px
+            style Query fill:#E1FAD2,stroke:#333,stroke-width:1px
+            style Prompt fill:#D2FAFA,stroke:#333,stroke-width:1px
+            style Generator fill:#FAD2E1,stroke:#333,stroke-width:1px
+            style Answer fill:#E1FAD2,stroke:#333,stroke-width:1px
         
-            Input --> Generator[LLM Generation]
+            Query --> Generator[LLM Generation]
             Prompt --> Generator
-            Generator --> Output
+            Generator --> Answer
         ```
+
+
+        
 Original inceptions of RAG involve queries that involve connecting with [Embedding](../architectures/embedding.md) based lookups, though other lookup mechanisms, including key-word searches and other lookups from [memory](./memory.md) sources may also be possible. 
 
 !!! warning "RAG is still an area of optimization with a number of components that may be optimized"
