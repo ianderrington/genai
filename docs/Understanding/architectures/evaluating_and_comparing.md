@@ -43,7 +43,7 @@ Hallucinations remain a core problem with LLMs as they may generate linguistic a
 !!! code "[Truthful - QA](https://github.com/sylinrl/TruthfulQA) helpes to Measuring How Models Mimic Human Falsehoods" 
 
 
-#### Finding information
+#### Information Retrieval
 
 The ability for an LLM to 'recall' information within its context window is an integral part of its ability function with contextually relevant information, and to act as effective retrieval mechanisms. To evaluate this ability, the _needle-in-a-haystack_ test can be used. In it the following occur: 
 
@@ -61,6 +61,12 @@ It was, however Anthropic found, that [LLMs can perform better](https://www.anth
 ```markdown
  “Here is the most relevant sentence in the context:” 
 ```
+
+
+While information retrieval are important, they might also be good at following instructions.
+
+??? code "[FollowIR: Evaluating and Teaching Information Retrieval Models to Follow Instructions](https://arxiv.org/pdf/2403.15246.pdf) creates FOLLOWIR, which contains a benchmark that explicitly measures the instruction following ability of retrieval model"
+   
 
 ??? code "[Lighteval by Hugging Face](https://github.com/huggingface/lighteval) provides lightweight framework for LLM evaluation"
 
