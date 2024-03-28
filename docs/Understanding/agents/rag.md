@@ -90,8 +90,17 @@ The primary challenges regarding rag may be related to organizational or functio
 
 #### RAG vs Finetuning
 
+Because finetuning can enable intrisic knowledge to be ingrained in an LLM, it generally leads to improved performance. 
+
 ??? code "[Rag vs Finetuning](https://github.com/informagi/RAGvsFT) reveals Fine tuning boosts performance over RAG"  
     [Paper](https://arxiv.org/abs/2403.01432)
+
+That said, it can be seen that using RAG to informe fine tuning, in Retrieval Augmented Fine Tuning (RAFT), as variations are done with [mixture of experts](../architectures/models/mixture_of_experts.md) can lead to even improved performance. 
+
+??? code "[🦍 RAFT: Adapting Language Model to Domain Specific RAG](https://github.com/ShishirPatil/gorilla/blob/main/raft/raft.py)" raft
+    <img width="676" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/813c5a4e-8a6f-408d-8629-e78df15d6c04">
+    [Blog post](https://gorilla.cs.berkeley.edu/blogs/9_raft.html)
+    [Paper](https://arxiv.org/abs/2403.10131)
 
 ## RAG in Detail
 
