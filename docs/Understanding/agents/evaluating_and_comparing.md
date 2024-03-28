@@ -16,6 +16,11 @@ There is a lot of similarity of [what to evaluate](../architectures/evaluating_a
     Use as a CLI, library, or in CI/CD
     Use OpenAI, Anthropic, Azure, Google, HuggingFace, open-source models like Llama, or integrate custom API providers for any LLM API
 
+??? code "[DeepEval](https://github.com/mr-gpt/deepeval) provides a Pythonic way to run offline evaluations on your LLM pipelines"
+    "... so you can launch comfortably into production. The guiding philosophy is a "Pytest for LLM" that aims to make productionizing and evaluating LLMs as easy as ensuring all tests pass."
+    ![image](https://github.com/mr-gpt/deepeval/blob/main/assets/synthetic-query-generation.png)
+    It integrates with Llama index [here](https://docs.confident-ai.com/docs/integrations-llamaindex)
+
 ??? note "[API-BLEND: A Comprehensive Corpora for Training and Benchmarking API LLMs](https://arxiv.org/abs/2402.15491)
 
     There is a growing need for Large Language Models (LLMs) to effectively use tools and external Application Programming Interfaces (APIs) to plan and complete tasks. As such, there is tremendous interest in methods that can acquire sufficient quantities of train and test data that involve calls to tools / APIs. Two lines of research have emerged as the predominant strategies for addressing this challenge. The first has focused on synthetic data generation techniques, while the second has involved curating task-adjacent datasets which can be transformed into API / Tool-based tasks. In this paper, we focus on the task of identifying, curating, and transforming existing datasets and, in turn, introduce API-BLEND, a large corpora for training and systematic testing of tool-augmented LLMs. The datasets mimic real-world scenarios involving API-tasks such as API / tool detection, slot filling, and sequencing of the detected APIs. We demonstrate the utility of the API-BLEND dataset for both training and benchmarking purposes.
@@ -30,9 +35,7 @@ There is a lot of similarity of [what to evaluate](../architectures/evaluating_a
     ![image](https://github.com/ianderrington/genai/assets/76016868/377d86c7-9ebf-4828-8e6a-582b86a499f9)
     ![image](https://github.com/ianderrington/genai/assets/76016868/081f14b5-f2b7-47e6-985b-a886ed66eaf1)
 
-??? code "[DeepEval](https://github.com/mr-gpt/deepeval) provides a Pythonic way to run offline evaluations on your LLM pipelines"
-    "... so you can launch comfortably into production. The guiding philosophy is a "Pytest for LLM" that aims to make productionizing and evaluating LLMs as easy as ensuring all tests pass."
-    ![image](https://github.com/mr-gpt/deepeval/blob/main/assets/synthetic-query-generation.png)
+
 
 ??? code "[Auto Evaluator (Langchain)](https://autoevaluator.langchain.com/) with [github](https://github.com/rlancemartin/auto-evaluator) to evaluate appropriate components of chains to enable best performance"
     ![image](https://blog.langchain.dev/content/images/size/w1600/2023/04/auto-eval.png)
