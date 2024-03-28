@@ -4,10 +4,14 @@ There are different categories for Agents, which are often either by the environ
 Here are a few examples. Because agents are hard to disentangle from core components, we describe more throughout, especially in the section on [cognitive architectures](./
 cognitive_architecture.md). We discuss [single agents](#single-agents) here, though there are a number of multi-agent [system examples](./systems.md) to consider as well. 
 
+## Examples
 
-## Single-agents
+### Frameworks
 
-### Jarvis
+!!! important "[Open GPTs](https://github.com/langchain-ai/opengpts) Provides a similar experience to OpenAI GPTs and assistants, using Langchain components"
+
+??? code "[Agenta-AI](https://github.com/Agenta-AI/agenta?tab=readme-ov-file) provides end-to-end LLM developer platform. It provides the tools for prompt engineering and management, ⚖️ evaluation, human annotation, and 🚀 deployment. All without imposing any restrictions on your choice of framework, library, or model." 
+
 ??? code "[Jarvis](https://github.com/microsoft/JARVIS/) provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." jarvis
 
 ??? important "[Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction](https://arxiv.org/pdf/2401.06201.pdf) provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage" easy-tool
@@ -85,6 +89,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
    [Paper](https://arxiv.org/pdf/2304.09842.pdf)
    <img width="892" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0deb10a1-ca97-4bc3-925d-707585fbf297">
 
+### Examples
 
 ??? code "[Critic: Large Language Models can Self-correct with TOol-INteractive Critiquing](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)"
     [Paper](https://arxiv.org/pdf/2305.11738.pdf)
@@ -130,9 +135,6 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
    **Results**
    Significant improvement over other methods ([GIAI](https://huggingface.co/spaces/gaia-benchmark/leaderboard)) 
 
-
-
-!!! important "[Open GPTs](https://github.com/langchain-ai/opengpts) Provides a similar experience to OpenAI GPTs and assistants, using Langchain components"
 
 ??? code "[Voyager from MineDojo](https://github.com/MineDojo/Voyager)"
     Enables expandable tool-usage for a life-long learning agent working within the Minecraft Environment. 
@@ -207,7 +209,6 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     <img width="558" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b9cc4b22-3f98-40db-adfe-728a434abb72">
     It also includes question-premise checking to help minimize hallucination
     <img width="555" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e272bc63-a0a0-4735-a2d6-da79b6840107">
-
 
 
 ??? code "[Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning](https://github.com/RManLuo/reasoning-on-graphs)"
