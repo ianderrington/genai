@@ -11,20 +11,7 @@ Trained and fine-tuned LLMs can generate high quality results, though their gene
 Here is a basic comparison of the two: 
 
 !!! example "Comparison with/without RAG"
-    === "Without"
 
-   
-        ```mermaid
-        graph LR
-            style Input fill:#FFA500,stroke:#333,stroke-width:2px
-            style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
-            style Generator fill:#00AAFF,stroke:#333,stroke-width:2px
-            style Output fill:#80AA80,stroke:#333,stroke-width:2px
-        
-            Input --> Generator[LLM Generation]
-            Prompt --> Generator
-            Generator --> Output
-        ```
 
     === "With"
 
@@ -53,6 +40,20 @@ Here is a basic comparison of the two:
             Generator --> Output
         ```
 
+    === "Without"
+
+   
+        ```mermaid
+        graph LR
+            style Input fill:#FFA500,stroke:#333,stroke-width:2px
+            style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
+            style Generator fill:#00AAFF,stroke:#333,stroke-width:2px
+            style Output fill:#80AA80,stroke:#333,stroke-width:2px
+        
+            Input --> Generator[LLM Generation]
+            Prompt --> Generator
+            Generator --> Output
+        ```
 Original inceptions of RAG involve queries that involve connecting with [Embedding](../architectures/embedding.md) based lookups, though other lookup mechanisms, including key-word searches and other lookups from [memory](./memory.md) sources may also be possible. 
 
 !!! warning "RAG is still an area of optimization with a number of components that may be optimized"
