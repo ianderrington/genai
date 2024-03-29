@@ -194,4 +194,6 @@ KV-Cache Optimization
 ## Overview References
 
 ??? tip "[A Survey on Model Compression for Large Language Models](https://arxiv.org/pdf/2308.07633.pdf)"
+
+??? tip "[Make LLMs go faster](https://vgel.me/posts/faster-inference/)"
  
