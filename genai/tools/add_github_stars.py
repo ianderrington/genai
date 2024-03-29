@@ -10,13 +10,18 @@ def replace_github_links_in_file(file_path):
 
     # Replacement function that checks if do_not_match is in the matched string
     def replacement(match):
-        # If do_not_match is found in the line, return the original match
-        if do_not_match in match.string:
-            return match.group(0)  # Returns the entire match if do_not_match is present
+        # Check if the line starts with ??? or !!!
+        if match.string.strip().startswith(('???', '!!!')):
+            # If do_not_match is found in the line, return the original match
+            if '![GitHub Repo stars]' in match.string:
+                return match.group(0)  # Returns the entire match if do_not_match is present
+            else:
+                # Otherwise, proceed with creating a replacement string
+                repo_name = match.group(2)
+                return f'![GitHub Repo stars](https://badgen.net/github/stars/{repo_name}) [{match.group(1)}]({match.group(0)})'
         else:
-            # Otherwise, proceed with creating a replacement string
-            repo_name = match.group(2)
-            return f'![GitHub Repo stars](https://badgen.net/github/stars/{repo_name}) [{match.group(1)}]({match.group(0)})'
+            # If the line does not start with ??? or !!!, return the original match
+            return match.group(0)
 
     with open(file_path, 'r+', encoding='utf-8') as file:
         lines = file.readlines()
