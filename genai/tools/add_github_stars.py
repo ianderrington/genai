@@ -2,38 +2,37 @@ import argparse
 import os
 import re
 
-def replace_github_links_in_file(file_path):
-    with open(file_path, 'r+', encoding='utf-8') as file:
-        # content = file.read()
-        # if not content.startswith('???') or not content.endswith('!!!'):
-        ensure_starts_with = ['???', '!!!']
-        github_link_pattern = r'\[([^\]]+)\]\(https://github\.com/([^/]+/[^/]+)\)'
-        do_not_match = '![GitHub Repo stars]'
-        # Go line by line ensure it starts with the expected strings
-        # Ensure it doesn't have the do_not_match string
-        # Replace any github links with the extended version
-        def replacement(match):
-            repo_name = match.group(2)
-            repo_base= f'https://github.com/{repo_name}'
-            # ensure do_not_match is not in the content
-            if do_not_match not in content:
-                return f'![GitHub Repo stars](https://badgen.net/github/stars/{repo_name})  [{match.group(1)}]' + f'({repo_base})'
+import re
 
-   
-        # readlines
-        new_lines = []
+def replace_github_links_in_file(file_path):
+    github_link_pattern = r'\[([^\]]+)\]\(https://github\.com/([^/]+/[^/]+)\)'
+    do_not_match = '![GitHub Repo stars]'
+
+    # Replacement function that checks if do_not_match is in the matched string
+    def replacement(match):
+        # If do_not_match is found in the line, return the original match
+        if do_not_match in match.string:
+            return match.group(0)  # Returns the entire match if do_not_match is present
+        else:
+            # Otherwise, proceed with creating a replacement string
+            repo_name = match.group(2)
+            return f'![GitHub Repo stars](https://badgen.net/github/stars/{repo_name}) [{match.group(1)}]({match.group(0)})'
+
+    with open(file_path, 'r+', encoding='utf-8') as file:
         lines = file.readlines()
+        new_lines = []
         for line in lines:
-            if not line.startswith('???') or not line.endswith('!!!'):
-                pass 
-            elif do_not_match in line:
-                pass 
-            else:
-                line = re.sub(github_link_pattern, replacement, line)
-            new_lines.append(line)
+            # Apply the replacement function to each line
+            new_line = re.sub(github_link_pattern, replacement, line)
+            new_lines.append(new_line)
+        
+        # Go back to the start of the file and write the new content
         file.seek(0)
-        file.write('\n'.join(new_lines))
+        file.writelines(new_lines)  # Use writelines to maintain original line endings
         file.truncate()
+
+# This script assumes the presence of the `re` module for regex operations and modifies the file in-place.
+
 
 
 
