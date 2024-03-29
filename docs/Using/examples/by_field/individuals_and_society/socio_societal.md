@@ -1,5 +1,5 @@
 
-??? tip "[humanscript](https://github.com/lukechilds/humanscript) A script interpreter that infers the meaning behind commands written in natural language using large language models. Human writeable commands are translated into code that is then executed on the fly."
+??? tip "![GitHub Repo stars](https://badgen.net/github/stars/lukechilds/humanscript) [humanscript]([humanscript](https://github.com/lukechilds/humanscript)) A script interpreter that infers the meaning behind commands written in natural language using large language models. Human writeable commands are translated into code that is then executed on the fly."
 
     <img width="857" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/20157442-988a-4fb0-bf5c-1ddc3698e221">
 

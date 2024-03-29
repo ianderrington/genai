@@ -11,7 +11,7 @@ There are many types of tokenizers, including Byte-Pair Encoding (BPE), WordPIec
 ???+ note "Pre-tokenization methods"
     <img width="445" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/050ce1cc-2d11-4d98-a178-af706d149aa9">
 
-??? abstract "[Minimal BPE tokenizer by Andrej Karpathy](https://github.com/karpathy/minbpe) provides a understandable and efficient demonstration of several modern tokenizing methods including BPE, RegExp, BPE and GPT-4. "
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/karpathy/minbpe) [Minimal BPE tokenizer by Andrej Karpathy]([Minimal BPE tokenizer by Andrej Karpathy](https://github.com/karpathy/minbpe)) provides a understandable and efficient demonstration of several modern tokenizing methods including BPE, RegExp, BPE and GPT-4. "
 
 
 ### Character Tokenizers
@@ -30,18 +30,18 @@ A subword unit, or a part of a word, can be a token in itself.
 The paper titled [Neural Machine Translation of Rare Words with Subword Units](https://arxiv.org/pdf/1508.07909.pdf) introduced Byte-Pair encoding to create subword to allowing for highly common character patterns to be compressed into tokens, thereby reducing vocabulary-size requirements. 
 
 
-??? abstract "[Tiktoken](https://github.com/openai/tiktoken) is a fast BPE tokenizer for use with OpenAI models"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/openai/tiktoken) [Tiktoken]([Tiktoken](https://github.com/openai/tiktoken)) is a fast BPE tokenizer for use with OpenAI models"
 
-??? abstract "[Token Monster](https://github.com/alasdairforsythe/tokenmonster) is an ungreedy subword tokenizer and vocabulary generator, enabling language models to run faster, cheaper, smarter and generate longer streams of text. " token-monster
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/alasdairforsythe/tokenmonster) [Token Monster]([Token Monster](https://github.com/alasdairforsythe/tokenmonster)) is an ungreedy subword tokenizer and vocabulary generator, enabling language models to run faster, cheaper, smarter and generate longer streams of text. " token-monster
     ![image](https://github.com/ianderrington/genai/assets/76016868/97a33624-1281-49d9-aa3a-9a4bedd689f0)
 
-??? abstract "[Sentence Piece](https://github.com/google/sentencepiece) implements subword units (e.g., byte-pair-encoding (BPE) and unigram language model"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/google/sentencepiece) implements subword units (e.g., byte-pair-encoding (BPE) [Sentence Piece]([Sentence Piece](https://github.com/google/sentencepiece) implements subword units (e.g., byte-pair-encoding (BPE)) and unigram language model"
 
 ??? important "[Unigram Language Model (Kudo)](https://arxiv.org/pdf/1804.10959.pdf) introduces subword regularization, which trains the model with multiple subword segmentations probabilistically sampled during training" 
 
     Effectively, this takes aliasing-like effects that cause different tokenization. It is more effective because it breaks it down in different ways.
 
-!!! important "[Fully open source tokenizer: Nomic](https://github.com/nomic-ai/contrastors)"
+!!! important "![GitHub Repo stars](https://badgen.net/github/stars/nomic-ai/contrastors) [Fully open source tokenizer: Nomic]([Fully open source tokenizer: Nomic](https://github.com/nomic-ai/contrastors))"
     [Nomic](https://blog.nomic.ai/posts/nomic-embed-text-v1) provides a disruptive tokenizer that is fully open source, with code and weights!
 
 
@@ -60,7 +60,7 @@ There are special tokens that are used by high-level interpreters on what next t
 
 ### Speech tokenization
 
-??? abstract "[Speech Tokenizer](https://github.com/zhangxinfd/speechtokenizer)  is a unified speech tokenizer for speech language models, which adopts the Encoder-Decoder architecture with residual vector quantization (RVQ)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/zhangxinfd/speechtokenizer)  is a unified speech tokenizer for speech language models, which adopts the Encoder-Decoder architecture with residual vector quantization (RVQ) [Speech Tokenizer]([Speech Tokenizer](https://github.com/zhangxinfd/speechtokenizer)  is a unified speech tokenizer for speech language models, which adopts the Encoder-Decoder architecture with residual vector quantization (RVQ))"
 
     ![image](https://github.com/ZhangXInFD/SpeechTokenizer/raw/main/images/speechtokenizer_framework.jpg)
 

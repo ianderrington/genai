@@ -109,7 +109,7 @@ It has been found that the quality of responses is governed by the quality of th
 
 
 
-??? abstract "[Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding](https://github.com/suzgunmirac/meta-prompting)" meta-prompting
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/suzgunmirac/meta-prompting) [Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding]([Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding](https://github.com/suzgunmirac/meta-prompting))" meta-prompting
     
     The method uses an LLM to generate a prompt that allows for specific task refinement yielding improved zero-shot and zero-shot-chain-of-thought improvements.
     <img width="650" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ba009c4b-7d68-404f-ac4c-3414f834c301">
@@ -200,7 +200,7 @@ It has been found that the quality of responses is governed by the quality of th
     <img width="713" alt="image" src="https://github.com/ianderrington/general/assets/76016868/3ac44e13-2444-4f1e-ae3b-800c9d32ce59">
 
 
-??? abstract "[GPT Prompt Engineer](https://github.com/mshumer/gpt-prompt-engineer)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mshumer/gpt-prompt-engineer) [GPT Prompt Engineer]([GPT Prompt Engineer](https://github.com/mshumer/gpt-prompt-engineer))"
     A fairly simple automation tool to create the best prompts
 
     ```python
@@ -219,7 +219,7 @@ It has been found that the quality of responses is governed by the quality of th
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f02a9f3e-4f4c-49de-9b35-1702df65d618)
 
-??? abstract "[PAP-REC: Personalized Automatic Prompt for Recommendation Language Model](https://github.com/rutgerswiselab/PAP-REC)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/rutgerswiselab/PAP-REC) [PAP-REC: Personalized Automatic Prompt for Recommendation Language Model]([PAP-REC: Personalized Automatic Prompt for Recommendation Language Model](https://github.com/rutgerswiselab/PAP-REC))"
     The authors in their [paper](https://arxiv.org/pdf/2402.00284v1.pdf) reveal a method of automatically generating prompts for recommender language models with better performance results than manually constructed prompts and results baseline recommendation models.
 
 ### Retrieval Augmented  Prompting 
@@ -230,7 +230,7 @@ Retrieval based prompting use [RAG](../agents/rag.md) lookup to identify appropr
 
 Prompt compression provides methods of compressing prompt inputs in such a way that it will yield equivalent results for downstream result generation. 
 
-??? abstract "[(Long)LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://github.com/microsoft/LLMLingua?)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/LLMLingua?) [(Long)LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models]([(Long)LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://github.com/microsoft/LLMLingua?))"
 
     [Paper: LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression](https://arxiv.org/pdf/2310.06839.pdf)
     [Paper: LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://arxiv.org/pdf/2310.05736.pdf)
@@ -252,7 +252,7 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 
 ## Libraries and collections
 
-!!! tip "[Prompt Royale](https://github.com/meistrari/prompts-royale) Provides the ability to automatically generate prompts to test around the same general theme."
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/meistrari/prompts-royale) [Prompt Royale]([Prompt Royale](https://github.com/meistrari/prompts-royale)) Provides the ability to automatically generate prompts to test around the same general theme."
 
 - [Llangchain prompthub](https://smith.langchain.com/hub)
 - [Awesome Prompts](https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md)
@@ -283,7 +283,7 @@ MANAGEN Make the below into Admonitions
 - [Prompt Engineering Guide](https://www.promptingguide.ai/)
 - [Best practices for prompt engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)
 
-??? abstract "[Prompting Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/dair-ai/Prompt-Engineering-Guide) [Prompting Guide]([Prompting Guide](https://github.com/dair-ai/Prompt-Engineering-Guide))"
     [Website](https://www.promptingguide.ai/)
 
 !!! tip "[Prompt Engineering for Healthcare: Methodologies and Applications](https://arxiv.org/pdf/2304.14670.pdf)"

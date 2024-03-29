@@ -212,14 +212,14 @@ It is possible that limitations fundamental to static agents are not goin to be 
     "Huge language models (LMs) have ushered in a new era for AI, serving as a gateway to natural-language-based knowledge tasks. Although an essential element of modern AI, LMs are also inherently limited in a number of ways. We discuss these limitations and how they can be avoided by adopting a systems approach. Conceptualizing the challenge as one that involves knowledge and reasoning in addition to linguistic processing, we define a flexible architecture with multiple neural models, complemented by discrete knowledge and reasoning modules. We describe this neuro-symbolic architecture, dubbed the Modular Reasoning, Knowledge and Language (MRKL, pronounced "miracle") system, some of the technical challenges in implementing it, and Jurassic-X, AI21 Labs' MRKL system implementation.
     ```
 
-!!! important "[LLM-Agent-Papers](https://github.com/WooooDyy/LLM-Agent-Paper-List)"
+!!! important "![GitHub Repo stars](https://badgen.net/github/stars/WooooDyy/LLM-Agent-Paper-List) [LLM-Agent-Papers]([LLM-Agent-Papers](https://github.com/WooooDyy/LLM-Agent-Paper-List))"
 
 ??? note "[The Rise and Potential of Large Language Model Based Agents:A Survey](https://arxiv.org/pdf/2309.07864.pdf) Providess a comprehensive overview of thoughtful ways of considering LLMs."
 
 ??? tip "[Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent)"
      As usual, a splendid post by Lilian Weng
 
-!!! abstract "[Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of a nicely curated list of systems using agents"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/e2b-dev/awesome-ai-agents) [Awesome Agents]([Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents)) of a nicely curated list of systems using agents"
 
 ### Other
 

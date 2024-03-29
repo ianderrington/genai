@@ -88,7 +88,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     
 
 
-??? code "[🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4](https://github.com/lupantech/chameleon-llm?tab=readme-ov-file)"
+??? code "![GitHub Repo stars](https://badgen.net/github/stars/lupantech/chameleon-llm?tab=readme-ov-file) [🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4]([🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4](https://github.com/lupantech/chameleon-llm?tab=readme-ov-file))"
    [Paper](https://arxiv.org/pdf/2304.09842.pdf)
    <img width="892" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0deb10a1-ca97-4bc3-925d-707585fbf297">
 
@@ -105,7 +105,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
     
 
-??? code "[L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.](https://github.com/l3vels/ L3AGI) l3agi
+??? code "![GitHub Repo stars](https://badgen.net/github/stars/l3vels/ L3AGI) [L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.]([L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.](https://github.com/l3vels/ L3AGI)) l3agi
     
 
 
@@ -139,12 +139,15 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
    Significant improvement over other methods ([GIAI](https://huggingface.co/spaces/gaia-benchmark/leaderboard)) 
 
 
-??? code "[Voyager from MineDojo](https://github.com/MineDojo/Voyager)"
+
+!!! important "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/opengpts) [Open GPTs]([Open GPTs](https://github.com/langchain-ai/opengpts)) Provides a similar experience to OpenAI GPTs and assistants, using Langchain components"
+
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/MineDojo/Voyager) [Voyager from MineDojo]([Voyager from MineDojo](https://github.com/MineDojo/Voyager))"
     Enables expandable tool-usage for a life-long learning agent working within the Minecraft Environment. 
     ![image](https://github.com/MineDojo/Voyager/raw/main/images/pull.png)
 
 
-!!! abstract "[GPT researcher](https://github.com/assafelovic/gpt-researcher) is an autonomous agent designed for comprehensive online research on a variety of tasks."
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher) [GPT researcher]([GPT researcher](https://github.com/assafelovic/gpt-researcher)) is an autonomous agent designed for comprehensive online research on a variety of tasks."
     LOOK INTO THIS
 
 
@@ -157,7 +160,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 
 
-??? code "[Professor Synapse (ProfSynapse)](https://github.com/ProfSynapse/Synapse_CoR?) is an agent embodying the instructive channel for teaching people about Agents, and LLMs and how to work with new technology"
+??? code "![GitHub Repo stars](https://badgen.net/github/stars/ProfSynapse/Synapse_CoR?) [Professor Synapse (ProfSynapse)]([Professor Synapse (ProfSynapse)](https://github.com/ProfSynapse/Synapse_CoR?)) is an agent embodying the instructive channel for teaching people about Agents, and LLMs and how to work with new technology"
     Apart from the Github above, Here are several relevant and imporant links related to synth minds. 
     - https://www.synthminds.ai/
     - https://www.youtube.com/watch?v=pFPZFmOTgtA&t=232s
@@ -214,13 +217,14 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     <img width="555" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e272bc63-a0a0-4735-a2d6-da79b6840107">
 
 
-??? code "[Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning](https://github.com/RManLuo/reasoning-on-graphs)"
+
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/RManLuo/reasoning-on-graphs) [Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning]([Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning](https://github.com/RManLuo/reasoning-on-graphs))"
     In their [paper](https://browse.arxiv.org/pdf/2310.01061.pdf) they present a Planning-Retrieval-Reasoning framework that called 'Reasoning on Graphs' or RoG.
     RoG generates ground plans enabled by KGs which are then used to retrieve reasoning paths for the LLM.
     <img width="576" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a05f9e37-72ab-421d-8a54-0c3ef78c9302">
 
 
-??? tip "[Large language models as tool makers](https://arxiv.org/pdf/2305.17126.pdf) [Github](https://github.com/ctlllll/llm-toolmaker) Allows high-quality tools to be reused by more lightweight models."
+??? tip "[Large language models as tool makers](https://arxiv.org/pdf/2305.17126.pdf) ![GitHub Repo stars](https://badgen.net/github/stars/ctlllll/llm-toolmaker) [Github]([Github](https://github.com/ctlllll/llm-toolmaker)) Allows high-quality tools to be reused by more lightweight models."
     <img width="545" alt="image" src="https://github.com/ianderrington/general/assets/76016868/fc0d79fd-54b7-493b-93a4-5eafd76584a6">
 
 
@@ -229,17 +233,17 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     <img width="1012" alt="image" src="https://github.com/ianderrington/general/assets/76016868/81b88f7e-af2e-424e-9cb8-0e377bc141c0">
 
 
-??? tip "[smolai](https://github.com/ThomasEwing04/SMOL_AI) https://www.youtube.com/watch?v=zsxyqz6SYp8&t=1s An interesting example"
+??? tip "![GitHub Repo stars](https://badgen.net/github/stars/ThomasEwing04/SMOL_AI) [smolai]([smolai](https://github.com/ThomasEwing04/SMOL_AI)) https://www.youtube.com/watch?v=zsxyqz6SYp8&t=1s An interesting example"
 
-??? code "[Agent-GPT](https://github.com/reworkd/AgentGPT)"
+??? code "![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT) [Agent-GPT]([Agent-GPT](https://github.com/reworkd/AgentGPT))"
     [Website](https://agentgpt.reworkd.ai/)
 
-!!! tip "[GPT Engineer (AntonOsika)](https://github.com/AntonOsika/gpt-engineer)"
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/AntonOsika/gpt-engineer) [GPT Engineer (AntonOsika)]([GPT Engineer (AntonOsika)](https://github.com/AntonOsika/gpt-engineer))"
 
-!!! tip "[GPT Engineer (gpt-engineer-org)](https://github.com/gpt-engineer-org/gpt-engineer)"
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/gpt-engineer-org/gpt-engineer) [GPT Engineer (gpt-engineer-org)]([GPT Engineer (gpt-engineer-org)](https://github.com/gpt-engineer-org/gpt-engineer))"
 
 
-??? tip "[DevOpsGPT](https://github.com/kuafuai/DevOpsGPT)"
+??? tip "![GitHub Repo stars](https://badgen.net/github/stars/kuafuai/DevOpsGPT) [DevOpsGPT]([DevOpsGPT](https://github.com/kuafuai/DevOpsGPT))"
     ```
     Through the above introduction and Demo demonstration, you must be curious about how DevOpsGPT achieves the entire process of automated requirement development in an existing project. Below is a brief overview of the entire process:
     ```
@@ -263,7 +267,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     https://github.com/universal-ner/universal-ner
 
 
-??? important "[Suspicion-Agent: Playing imperfect Information Games with Theory of Mind Aware GPT-4](https://github.com/CR-Gjx/Suspicion-Agent)"
+??? important "![GitHub Repo stars](https://badgen.net/github/stars/CR-Gjx/Suspicion-Agent) [Suspicion-Agent: Playing imperfect Information Games with Theory of Mind Aware GPT-4]([Suspicion-Agent: Playing imperfect Information Games with Theory of Mind Aware GPT-4](https://github.com/CR-Gjx/Suspicion-Agent))"
     Introduces directly into the prompts a Theory-of-Mind about their awareness and own estimations and will update accordingly."
     <img width="648" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7d3d171c-5bae-4942-9469-ace20c4ef62b">
     <img width="678" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c1a762f6-5729-4d4f-8bb8-c288d7d639a0">
@@ -279,14 +283,14 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     ![image](https://github.com/ianderrington/genai/assets/76016868/7a9cffc3-1f67-4ea2-8368-8380f323f16a)
     <img width="814" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/af71d9db-a542-4289-a833-d16ca5e9b574">
 
-??? code "[A](https://github.com/daveshap/ACE_Framework)" ace-framework
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/daveshap/ACE_Framework) [A]([A](https://github.com/daveshap/ACE_Framework))" ace-framework
    ![image](https://github.com/ianderrington/genai/assets/76016868/cd7a4ec3-146c-4129-bf14-7b60e1558f5b)
 
-??? code "[Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. ](https://github.com/DataBassGit/AgentForge?tab=readme-ov-file)" agent-forge
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/DataBassGit/AgentForge?tab=readme-ov-file) [Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. ]([Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. ](https://github.com/DataBassGit/AgentForge?tab=readme-ov-file))" agent-forge
 
 ## Multi-Agent 
 
-!!! abstract "[CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)](https://github.com/camel-ai/camel)"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/camel-ai/camel) [CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)]([CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)](https://github.com/camel-ai/camel))"
 
     Paper: [https://arxiv.org/abs/2303.17760](https://arxiv.org/abs/2303.17760)
 
@@ -300,11 +304,11 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 
 ## Libraries
-!!! abstract "[Awesome LLM Powered Agent](https://github.com/hyp1231/awesome-llm-powered-agent)"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/hyp1231/awesome-llm-powered-agent) [Awesome LLM Powered Agent]([Awesome LLM Powered Agent](https://github.com/hyp1231/awesome-llm-powered-agent))"
 
-!!! abstract "[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/rokstrnisa/Robo-GPT) [Robo GPT]([Robo GPT](https://github.com/rokstrnisa/Robo-GPT))"
 
-!!! abstract "[Chrome-GPT](https://github.com/richardyc/Chrome-GPT): an experimental AutoGPT agent that interacts with Chrome"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/richardyc/Chrome-GPT) [Chrome-GPT]([Chrome-GPT](https://github.com/richardyc/Chrome-GPT)): an experimental AutoGPT agent that interacts with Chrome"
 
 !!! important "[GPT prompts](https://github.com/friuns2/Leaked-GPTs/)"
 

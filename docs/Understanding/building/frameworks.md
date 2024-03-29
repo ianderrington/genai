@@ -66,9 +66,9 @@ Enterprise expansions with LangSmith, LangChainHub and more
 
 !!! tip "[Langchain](https://python.langchain.com/en/latest/#) Is a thorough python and javascript orchestration language for adaptable, memory and tooling-equipped calls that can enable agentic AI."
 
-!!! tip "[LangServe](https://github.com/langchain-ai/langserve) will provide a hosted version of LangServe for one-click deployments of LangChain applications."
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/langserve) [LangServe]([LangServe](https://github.com/langchain-ai/langserve)) will provide a hosted version of LangServe for one-click deployments of LangChain applications."
 
-!!! tip "[OpenGPTs](https://github.com/langchain-ai/opengpts) Provides an open-source effort to integrate multiple LLMs, and builds upon Langchain, LangServe, and LangSmith"
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/opengpts) [OpenGPTs]([OpenGPTs](https://github.com/langchain-ai/opengpts)) Provides an open-source effort to integrate multiple LLMs, and builds upon Langchain, LangServe, and LangSmith"
 
 **Their Stack**
 
@@ -94,7 +94,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
     [Model parallelism](https://lightning.ai/docs/pytorch/stable/advanced/model_parallel.html)
 
-??? abstract "[Deep Speed (by MSFT)](https://github.com/microsoft/DeepSpeed) empowers ChatGPT-like model training with a single click, offering 15x speedup over SOTA RLHF systems with unprecedented cost reduction at all scales"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/DeepSpeed) [Deep Speed (by MSFT)]([Deep Speed (by MSFT)](https://github.com/microsoft/DeepSpeed)) empowers ChatGPT-like model training with a single click, offering 15x speedup over SOTA RLHF systems with unprecedented cost reduction at all scales"
     [Blog on Deepspeed Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
     ![image](https://github.com/microsoft/DeepSpeed/raw/master/blogs/assets/images/ds-chat-overview.png)
 

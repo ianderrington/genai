@@ -16,11 +16,11 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/peterw/Chat-with-Github-Repo)  [Chat with github repo](https://github.com/peterw/Chat-with-Github-Repo)"
 
-!!! abstract "[Octopack](https://github.com/bigcode-project/octopack) [Github](https://arxiv.org/pdf/2308.07124.pdf)"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/bigcode-project/octopack) [Octopack]([Octopack](https://github.com/bigcode-project/octopack)) [Github](https://arxiv.org/pdf/2308.07124.pdf)"
 
-!!! abstract "[Codel](https://github.com/semanser/codel?tab=readme-ov-file)"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/semanser/codel?tab=readme-ov-file) [Codel]([Codel](https://github.com/semanser/codel?tab=readme-ov-file))"
 
-!!! abstract "[Open Copilot](https://github.com/openchatai/opencopilot)"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/openchatai/opencopilot) [Open Copilot]([Open Copilot](https://github.com/openchatai/opencopilot))"
 
     ![image](https://user-images.githubusercontent.com/32633162/263495581-a0cdc888-d2de-46b7-8c0b-96e876050b6e.png)
 

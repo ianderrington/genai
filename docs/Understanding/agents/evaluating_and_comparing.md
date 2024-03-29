@@ -16,7 +16,7 @@ There is a lot of similarity of [what to evaluate](../architectures/evaluating_a
     Use as a CLI, library, or in CI/CD
     Use OpenAI, Anthropic, Azure, Google, HuggingFace, open-source models like Llama, or integrate custom API providers for any LLM API
 
-??? abstract "[DeepEval](https://github.com/mr-gpt/deepeval) provides a Pythonic way to run offline evaluations on your LLM pipelines"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mr-gpt/deepeval) [DeepEval]([DeepEval](https://github.com/mr-gpt/deepeval)) provides a Pythonic way to run offline evaluations on your LLM pipelines"
     "... so you can launch comfortably into production. The guiding philosophy is a "Pytest for LLM" that aims to make productionizing and evaluating LLMs as easy as ensuring all tests pass."
     ![image](https://github.com/mr-gpt/deepeval/blob/main/assets/synthetic-query-generation.png)
     It integrates with Llama index [here](https://docs.confident-ai.com/docs/integrations-llamaindex)
@@ -26,18 +26,18 @@ There is a lot of similarity of [what to evaluate](../architectures/evaluating_a
     There is a growing need for Large Language Models (LLMs) to effectively use tools and external Application Programming Interfaces (APIs) to plan and complete tasks. As such, there is tremendous interest in methods that can acquire sufficient quantities of train and test data that involve calls to tools / APIs. Two lines of research have emerged as the predominant strategies for addressing this challenge. The first has focused on synthetic data generation techniques, while the second has involved curating task-adjacent datasets which can be transformed into API / Tool-based tasks. In this paper, we focus on the task of identifying, curating, and transforming existing datasets and, in turn, introduce API-BLEND, a large corpora for training and systematic testing of tool-augmented LLMs. The datasets mimic real-world scenarios involving API-tasks such as API / tool detection, slot filling, and sequencing of the detected APIs. We demonstrate the utility of the API-BLEND dataset for both training and benchmarking purposes.
 
 
-??? abstract "[Helm](https://github.com/stanford-crfm/helm) contains code used in the Holistic Evaluation of Language Models project"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/stanford-crfm/helm) [Helm]([Helm](https://github.com/stanford-crfm/helm)) contains code used in the Holistic Evaluation of Language Models project"
     [Paper](https://arxiv.org/pdf/2211.09110.pdf)
     <img width="817" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/40b280b6-749e-49fd-8e72-3b51c38d06b9">
 
-??? abstract "[Arthur.ai Bench](https://github.com/arthur-ai/bench) Bench is a tool for evaluating LLMs for production use cases. "
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/arthur-ai/bench) [Arthur.ai Bench]([Arthur.ai Bench](https://github.com/arthur-ai/bench)) Bench is a tool for evaluating LLMs for production use cases. "
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/377d86c7-9ebf-4828-8e6a-582b86a499f9)
     ![image](https://github.com/ianderrington/genai/assets/76016868/081f14b5-f2b7-47e6-985b-a886ed66eaf1)
 
 
 
-??? abstract "[Auto Evaluator (Langchain)](https://autoevaluator.langchain.com/) with [github](https://github.com/rlancemartin/auto-evaluator) to evaluate appropriate components of chains to enable best performance"
+??? abstract "[Auto Evaluator (Langchain)](https://autoevaluator.langchain.com/) with ![GitHub Repo stars](https://badgen.net/github/stars/rlancemartin/auto-evaluator) [github]([github](https://github.com/rlancemartin/auto-evaluator)) to evaluate appropriate components of chains to enable best performance"
     ![image](https://blog.langchain.dev/content/images/size/w1600/2023/04/auto-eval.png)
 
 
@@ -46,12 +46,12 @@ There is a lot of similarity of [what to evaluate](../architectures/evaluating_a
 
     <img width="1198" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/48305f8b-7d79-4c36-b731-2aacd035fa49">
 
-??? abstract tip "[AgentBench: Evaluating LLMs as Agents](https://github.com/THUDM/AgentBench)"
+??? abstract tip "![GitHub Repo stars](https://badgen.net/github/stars/THUDM/AgentBench) [AgentBench: Evaluating LLMs as Agents]([AgentBench: Evaluating LLMs as Agents](https://github.com/THUDM/AgentBench))"
     A comprehensive 8-environment evaluation for different agents from different models.
     [Paper](https://arxiv.org/pdf/2308.03688.pdf)
     ![image](https://github.com/ianderrington/genai/assets/76016868/b6d3e2d8-7548-4336-b9ae-ced2844aa6ae)
 
-??? abstract "[JudgeLM: Fine-tuned Large Language Models are Scalable Judges](https://github.com/baaivision/judgelm) trains LLMs to judge the outputs of LLMs based on reference examples and achieves greater coherence than human rating"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/baaivision/judgelm) [JudgeLM: Fine-tuned Large Language Models are Scalable Judges]([JudgeLM: Fine-tuned Large Language Models are Scalable Judges](https://github.com/baaivision/judgelm)) trains LLMs to judge the outputs of LLMs based on reference examples and achieves greater coherence than human rating"
     Also provides a great example GUI and interface using GradIO
     ![image](https://github.com/ianderrington/genai/assets/76016868/4a3ca49f-39d0-453c-98f5-3498d743afa1)
 

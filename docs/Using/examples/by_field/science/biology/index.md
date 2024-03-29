@@ -13,7 +13,7 @@ There are components of include
 #### Sequence optimization 
 The protein protein sequence may is a primary target of optimization because the sequence has direct impact over the enzyme's structure and function. 
 
-??? abstract "[Evo: DNA foundation modeling from molecular to genome scale](https://github.com/evo-design/evo)" evo
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/evo-design/evo) [Evo: DNA foundation modeling from molecular to genome scale]([Evo: DNA foundation modeling from molecular to genome scale](https://github.com/evo-design/evo))" evo
     **Developments**
     [Paper](https://www.biorxiv.org/content/10.1101/2024.02.27.582234v2.full.pdf)
 
@@ -35,7 +35,7 @@ Similarly to _reagents_, the overall protocol in how a reagent or set of reagent
 
    
 
-??? abstract "[BioPlanner: Automatic Evaluation of LLMs on Protocol Planning in Biology](https://github.com/bioplanner/bioplanner)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/bioplanner/bioplanner) [BioPlanner: Automatic Evaluation of LLMs on Protocol Planning in Biology]([BioPlanner: Automatic Evaluation of LLMs on Protocol Planning in Biology](https://github.com/bioplanner/bioplanner))"
 
     <img width="642" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3a7cfe64-03b9-4ecb-aeac-f18c66902c91">
     

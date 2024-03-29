@@ -9,13 +9,13 @@ MOE provides the ability to use different smaller models that have better perfor
     <img width="680" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f4ec7e2e-bf27-4fc0-b420-0010e1caef71">
 
 
-??? code "[SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention](https://github.com/robertcsordas/moe_attention)"
+??? code "![GitHub Repo stars](https://badgen.net/github/stars/robertcsordas/moe_attention) [SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention]([SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention](https://github.com/robertcsordas/moe_attention))"
     [Paper](https://arxiv.org/pdf/2312.07987.pdf)
 
     <img width="568" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/8cdb5b54-c0b3-47b3-bef0-8535cd0106a4">
 
 
-??? code "[Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning](https://github.com/for-ai/parameter-efficient-moe)"
+??? code "![GitHub Repo stars](https://badgen.net/github/stars/for-ai/parameter-efficient-moe) [Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning]([Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning](https://github.com/for-ai/parameter-efficient-moe))"
 
     "The codebase is built on T5X, which defines the model and training loop; Flaxformer, which defines the model computation; Flax, which defines the low level model layers; and Jax, which provides the execution."
     [Paper](https://arxiv.org/pdf/2309.05444.pdf)

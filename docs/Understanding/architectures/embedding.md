@@ -26,12 +26,12 @@ In order to separate the representation, allowing greater freedom in evaluating 
     [Paper](https://arxiv.org/abs/1908.10084)
 
 
-??? abstract "[Matryoshka Representation Learning](https://github.com/RAIVNLab/MRL)" matryoshka-representation-learning
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/RAIVNLab/MRL) [Matryoshka Representation Learning]([Matryoshka Representation Learning](https://github.com/RAIVNLab/MRL))" matryoshka-representation-learning
     The authors demonstrate MLR, which can encode information at different granularities allowing a single embedding to be be used for different downstream tasks.
     <img width="336" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/58bea190-459b-409d-b1ca-5f495ed8b30a">
 
 
-??? abstract "[ELE Embeddings](https://github.com/bio-ontology-research-group/el-embeddings?tab=readme-ov-file)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/bio-ontology-research-group/el-embeddings?tab=readme-ov-file) [ELE Embeddings]([ELE Embeddings](https://github.com/bio-ontology-research-group/el-embeddings?tab=readme-ov-file))"
     ELE Provides spherical embeddings based on descriptional logic. This allows for representation which works nicely with knoelged-graphs and ontologies.  
     
     <img width="654" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/079f294f-72f3-4f89-a36f-e65f496d8e98">
@@ -39,7 +39,7 @@ In order to separate the representation, allowing greater freedom in evaluating 
 
     [Paper](https://arxiv.org/abs/1902.10499)
 
-??? abstract "[Fastembed with qdrant](https://github.com/qdrant/fastembed)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/qdrant/fastembed) [Fastembed with qdrant]([Fastembed with qdrant](https://github.com/qdrant/fastembed))"
     Light & Fast embedding model
     ```
     Quantized model weights
@@ -56,7 +56,7 @@ In order to separate the representation, allowing greater freedom in evaluating 
 
 ### Evaluating
 
-??? abstract "[Massive Text Embedding Benchmark](https://github.com/embeddings-benchmark/mteb)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/embeddings-benchmark/mteb) [Massive Text Embedding Benchmark]([Massive Text Embedding Benchmark](https://github.com/embeddings-benchmark/mteb))"
     [Paper](https://arxiv.org/pdf/2210.07316.pdf)
 
 ### Blogs and posts

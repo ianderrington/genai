@@ -1,5 +1,5 @@
 nav:
   - index.md
+  - collection.md
   - selection.md
   - augmentation.md
-  - synthetic.md

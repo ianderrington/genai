@@ -18,7 +18,7 @@ Training GenAI will generally be domain/modality specific.
 #### Retrieval Aware Training
 
 
-??? abstract "[GRIT: Generative Representational Instruction Tuning](https://github.com/ContextualAI/gritlm)" grit-lm
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/ContextualAI/gritlm) [GRIT: Generative Representational Instruction Tuning]([GRIT: Generative Representational Instruction Tuning](https://github.com/ContextualAI/gritlm))" grit-lm
  
     **Developments** The authors reveal in their [paper](https://arxiv.org/pdf/2402.09906.pdf) the ability to simultaneously train generation and embedding models, revealing improved performance in both domains, and enhancement of RAG performance by not requiring separate retrieval and generation models. 
     

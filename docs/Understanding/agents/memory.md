@@ -56,7 +56,7 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
 
 
-??? abstract "[VectorHub: Evaluation of multiple Vector databases](https://github.com/superlinked/VectorHub)" 
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/superlinked/VectorHub) [VectorHub: Evaluation of multiple Vector databases]([VectorHub: Evaluation of multiple Vector databases](https://github.com/superlinked/VectorHub))" 
     "Vector Hub is a free and open-sourced learning hub for people interested in adding vector retrieval to their ML stack. On VectorHub you will find practical resources to help you"
     [VDB comparisons](https://superlinked.com/vector-db-comparison/)
     
@@ -64,7 +64,7 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
 ## Text
 
-??? abstract "[BooookScore: A systematic exploration of book-length summarization in the era of LLMs](https://github.com/lilakk/BooookScore)" BooookScore
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/lilakk/BooookScore) [BooookScore: A systematic exploration of book-length summarization in the era of LLMs]([BooookScore: A systematic exploration of book-length summarization in the era of LLMs](https://github.com/lilakk/BooookScore))" BooookScore
     **Developments** The authors reveal an effective manner of providing effective summaries of long books using two methods: 1. Hierarchichal merging of chunk-level summaries, and 2. Incremental update using a running summary. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/2c711b18-d76f-4c75-b7fe-7960d8e7ef93)
     **Results** Human evaluation shows that "hierarchical merging produces more coherent summaries but may lack detail compared to incremental updating; closedsource models like GPT-4 and Claude 2 generate the most coherent summaries; and increasing chunk size can significantly improve incremental updating"

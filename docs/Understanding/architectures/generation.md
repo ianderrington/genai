@@ -16,7 +16,7 @@ Demonstrates large improvements by using differences between better and worse mo
     <img width="312" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f53b6aa3-a2d7-40d8-841a-822344bcb962">
 
 
-??? abstract "[Dola: Decoding by Contrasting Layers Improves Factuality in Large Language Models](https://github.com/voidism/DoLa) "
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/voidism/DoLa) [Dola: Decoding by Contrasting Layers Improves Factuality in Large Language Models]([Dola: Decoding by Contrasting Layers Improves Factuality in Large Language Models](https://github.com/voidism/DoLa)) "
     [Paper](https://arxiv.org/pdf/2309.03883.pdf)
     <img width="594" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ae1873a8-3d44-4a61-b409-049de25f91c2">
     ```
@@ -37,12 +37,12 @@ Speculative sampling is a technique that relies on speedups due to generation pa
     <img width="665" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/948d7e87-b71c-465e-b3c5-28177e85ef6c">
     
 
-!!! abstract "[Speculative Decoding implementation by Lucidrains](https://github.com/lucidrains/speculative-decoding)"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/lucidrains/speculative-decoding) [Speculative Decoding implementation by Lucidrains]([Speculative Decoding implementation by Lucidrains](https://github.com/lucidrains/speculative-decoding))"
     
 
 ## Joint decoding
 
-??? abstract "[Co-LLM: Learning to Decode Collaboratively with Multiple Language Models](https://github.com/clinicalml/co-llm)" co-llm
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/clinicalml/co-llm) [Co-LLM: Learning to Decode Collaboratively with Multiple Language Models]([Co-LLM: Learning to Decode Collaboratively with Multiple Language Models](https://github.com/clinicalml/co-llm))" co-llm
     **Developments** The author show in their [paper](https://arxiv.org/pdf/2403.03870.pdf) that the use of multiple models to improve generated content using the outputs of one as context for the others. 
     
     <img width="1158" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5dc9a6bf-d3bc-4e58-a895-abe8c5aaa093">

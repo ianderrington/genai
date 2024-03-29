@@ -45,12 +45,12 @@ Pruning is a technique that eliminates weights that do not consistently produce 
 
 Related to pruning is the use of smaller models that are initialized based on larger ones
 
-??? abstract "[Weight Selection](https://github.com/OscarXZQ/weight-selection)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/OscarXZQ/weight-selection) [Weight Selection]([Weight Selection](https://github.com/OscarXZQ/weight-selection))"
     A nice way to initialize smaller models from bigger ones
     [Paper](https://arxiv.org/pdf/2311.18823.pdf)
     <img width="270" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2c14986f-8edc-430e-bb59-3d3bae4f30d3">
 
-??? abstract "[Transformer Compression with SliceGPT](https://github.com/microsoft/TransformerCompression)" slice-gpt
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/TransformerCompression) [Transformer Compression with SliceGPT]([Transformer Compression with SliceGPT](https://github.com/microsoft/TransformerCompression))" slice-gpt
 
     **Developments** In their [paper](https://arxiv.org/pdf/2401.15024.pdf) the authors reveal that a manner of replacing matrices with dense smaller dense matrices reducing the embedding dimensions. This can eliminate up to 25% of parameters (and embeddings) for LLama-2, and maintain 99% zero shot task performance across multiple models. 
     <img width="547" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7f01e175-f18b-4f69-b39a-d876375061b9">
@@ -90,7 +90,7 @@ MANAGEN: (Table with this the characteristic chart of the different methods to h
 
 #### Examples
 
-??? abstract "[SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs](https://github.com/mit-han-lab/smoothquant)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mit-han-lab/smoothquant) [SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs]([SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs](https://github.com/mit-han-lab/smoothquant))"
     Using some post-training smoothing, they shift the weights in such a way that they are easier to quantize.
     [Paper](https://arxiv.org/pdf/2211.10438.pdf.pdf)
     <img width="337" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ed34f663-5792-471f-9927-f3622f3243a3">
@@ -99,7 +99,7 @@ MANAGEN: (Table with this the characteristic chart of the different methods to h
     [Paper](https://arxiv.org/pdf/2309.14717.pdf)
 
 
-??? abstract "[PB-LLM: Partially Binarized Large Language Models](https://github.com/hahnyuan/PB-LLM) to compress identified model weights into a single bit, while allowing others to only be partially compressed."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/hahnyuan/PB-LLM) [PB-LLM: Partially Binarized Large Language Models]([PB-LLM: Partially Binarized Large Language Models](https://github.com/hahnyuan/PB-LLM)) to compress identified model weights into a single bit, while allowing others to only be partially compressed."
 
     [Paper](https://github.com/hahnyuan/PB-LLM)
 
@@ -121,14 +121,14 @@ Train a new smaller model using the output of bigger models.
 
 
 ### Fusion approaches 
-??? abstract "[QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models](https://github.com/yuhuixu1993/qa-lora)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/yuhuixu1993/qa-lora) [QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models]([QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models](https://github.com/yuhuixu1993/qa-lora))"
     ![image](https://github.com/ianderrington/genai/assets/76016868/87219990-b7e8-4895-a274-a55584f2cb9e)
 
 [Knowledge Distillation and Compression Demo.ipynb](https://colab.research.google.com/drive/1A0SWlfcd6ISzsc0gLBIr4N_vECHhUAst#scrollTo=6v59Uu9pb_wM)
 
 
 
-??? abstract "[SqueezeLLM](https://github.com/SqueezeAILab/SqueezeLLM)  They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' 
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SqueezeAILab/SqueezeLLM) [SqueezeLLM]([SqueezeLLM](https://github.com/SqueezeAILab/SqueezeLLM))  They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' 
     [SqueezeLLM](https://arxiv.org/pdf/2306.07629.pdf)
 
 ### Low rank and sparsity approximations
@@ -152,7 +152,7 @@ TODO
 
 #### Model Merging
 
-??? abstract "[🐟 Evolutionary Optimization of Model Merging Recipes](https://github.com/SakanaAI/evolutionary-model-merge)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SakanaAI/evolutionary-model-merge) [🐟 Evolutionary Optimization of Model Merging Recipes]([🐟 Evolutionary Optimization of Model Merging Recipes](https://github.com/SakanaAI/evolutionary-model-merge))"
     **Developments:** The authors demosntrate a "a new paradigm for automated model composition, paving the way for exploring alternative, efficient approaches to foundation model development" by merging models. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/be153c45-2d6d-4fdc-8d0d-5ff721b83d64)
 
@@ -161,7 +161,7 @@ TODO
 ### Combination Approaches
 
 
-??? abstract "[QLoRA: Efficient Finetuning of Quantized LLms](https://github.com/artidoro/qlora) uses Quantization and Low-Rank Adapters to enable SoTA models with even smaller models"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/artidoro/qlora) [QLoRA: Efficient Finetuning of Quantized LLms]([QLoRA: Efficient Finetuning of Quantized LLms](https://github.com/artidoro/qlora)) uses Quantization and Low-Rank Adapters to enable SoTA models with even smaller models"
     [Paper](https://arxiv.org/pdf/2305.14314.pdf)
     [Example HF 4bit transformers](https://huggingface.co/blog/4bit-transformers-bitsandbytes)
 
@@ -187,7 +187,7 @@ KV-Cache Optimization
 
 ## Tooling
 
-!!! abstract "[Bitsandbytes](https://github.com/TimDettmers/bitsandbytes) by provides a lightweight wrapper around CUDA custom functions, in particular 8-bit optimizers, matrix multiplication (LLM.int8()), and quantization functions."
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/TimDettmers/bitsandbytes) by provides a lightweight wrapper around CUDA custom functions, in particular 8-bit optimizers, matrix multiplication (LLM.int8()) [Bitsandbytes]([Bitsandbytes](https://github.com/TimDettmers/bitsandbytes) by provides a lightweight wrapper around CUDA custom functions, in particular 8-bit optimizers, matrix multiplication (LLM.int8())), and quantization functions."
 
 
 

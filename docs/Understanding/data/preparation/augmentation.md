@@ -59,7 +59,7 @@ Models Phi# like [Phi-2](https://huggingface.co/microsoft/phi-2) have revealed h
     <img width="556" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4">
 
 
-??? abstract "[Reformatted Alignment](https://github.com/GAIR-NLP/ReAlign) demonstrates that reformatting responses of instruction data with to pre-established criteria and collated evidence improves alignment, factuality, and readability." realign-reformatted-alignment
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/GAIR-NLP/ReAlign) [Reformatted Alignment]([Reformatted Alignment](https://github.com/GAIR-NLP/ReAlign)) demonstrates that reformatting responses of instruction data with to pre-established criteria and collated evidence improves alignment, factuality, and readability." realign-reformatted-alignment
 
     **Develpoments** By reformatting instruction data in a consistent manner, and connecting it with a Google Search API, the results are able to generate higher quality data that is ReAligned' resulting in improvements over several models, judged both by GPT-4 and people. 
     
@@ -112,10 +112,10 @@ Models Phi# like [Phi-2](https://huggingface.co/microsoft/phi-2) have revealed h
 
 ## Useful Resources
 
-!!! abstract "[StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners](https://github.com/google-research/syn-rep-learn)"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/google-research/syn-rep-learn) [StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners]([StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners](https://github.com/google-research/syn-rep-learn))"
     This research paper by Google Research delves into the use of synthetic images generated from text-to-image models for training visual representation learners.
 
-!!! abstract "[Madrona](https://github.com/shacklettbp/madrona)"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/shacklettbp/madrona) [Madrona]([Madrona](https://github.com/shacklettbp/madrona))"
     Madrona is a prototype game engine designed for creating high-throughput, GPU-accelerated simulators. These simulators can run thousands of virtual environment instances and generate millions of aggregate simulation steps per second on a single GPU.
 
 !!! abstract "[TuNA](https://replit.com/@olafblitz/tuna-asyncio?v=1&ref=blog.langchain.dev#main.py) for using LangChain to create volumes of synthetic data pairs."

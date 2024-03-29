@@ -20,7 +20,7 @@ Manual red teaming involves human testers who attempt to exploit the vulnerabili
 
 Automated red teaming uses programmed scripts or tools to test the AI model. This approach can cover a wide range of scenarios in a short amount of time, making it suitable for large-scale models. However, it may not be able to cover as many unique and creative scenarios as manual testing.
 
-??? abstract "[Custom GPT Security Analysis](https://github.com/sherdencooper/prompt-injection) provides research and systems to use adversarial prompts to evaluate GPT's"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/sherdencooper/prompt-injection) [Custom GPT Security Analysis]([Custom GPT Security Analysis](https://github.com/sherdencooper/prompt-injection)) provides research and systems to use adversarial prompts to evaluate GPT's"
    <img width="575" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4b99aae5-4f96-4f37-a30a-6c214a379a4d">
    [Paper](https://arxiv.org/pdf/2311.11538.pdf)
 

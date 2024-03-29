@@ -1,6 +1,6 @@
 #### Orchestration
 
-??? abstract "[EmbedChain](https://github.com/embedchain/embedchain)  is a framework to easily create LLM powered bots over any dataset."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/embedchain/embedchain) [EmbedChain]([EmbedChain](https://github.com/embedchain/embedchain))  is a framework to easily create LLM powered bots over any dataset."
     Example:
     ```python
         import os
@@ -20,7 +20,7 @@
         # Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook.
     ```
 
-??? tip "[txtai](https://github.com/neuml/txtai) 'is an all-in-one embeddings database for semantic search, LLM orchestration and language model workflows."
+??? tip "![GitHub Repo stars](https://badgen.net/github/stars/neuml/txtai) [txtai]([txtai](https://github.com/neuml/txtai)) 'is an all-in-one embeddings database for semantic search, LLM orchestration and language model workflows."
 
     ![image](https://raw.githubusercontent.com/neuml/txtai/master/docs/images/architecture.png#gh-light-mode-only)
 
@@ -32,14 +32,14 @@
 - [Chatall](https://github.com/sunner/ChatALL) To interact with multiple chatbots at the same time.
 - [LocalAI](https://github.com/go-skynet/LocalAI) drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
 
-!!! abstract "[Open Agent](https://github.com/dot-agent/openagent) IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/dot-agent/openagent) [Open Agent]([Open Agent](https://github.com/dot-agent/openagent)) IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents"
 
-??? abstract "[DSPY](https://github.com/stanfordnlp/dspy) is a framework for solving advanced tasks with language models and retrieval models"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/stanfordnlp/dspy) [DSPY]([DSPY](https://github.com/stanfordnlp/dspy)) is a framework for solving advanced tasks with language models and retrieval models"
     Useful for exploring automatic prompt opteimization.
 
 
 ### Language-like interfaces
-??? abstract "[LMQL](https://github.com/eth-sri/lmql) is a query language that enables simplified representations of chats and agents with minimal code. "
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/eth-sri/lmql) [LMQL]([LMQL](https://github.com/eth-sri/lmql)) is a query language that enables simplified representations of chats and agents with minimal code. "
     ```
     "Greet LMQL:[GREETINGS]\n" where stops_at(GREETINGS, ".") and not "\n" in GREETINGS
 
@@ -63,7 +63,7 @@
 
 ### Retrieval Augmentation focus
 
-!!! abstract "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) [RAGAS]([RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG)) pipelines"
 
 
 ## Monitoring Gen()AI
@@ -77,13 +77,13 @@ For reasons related to quality, ethics, and regulation, it is both useful, and a
 
 #### Llama ecosystem
 
-!!! abstract "[Llamaindex](https://github.com/run-llama/llama_index) Provides an orchestration framework for with multiple connectors"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/run-llama/llama_index) [Llamaindex]([Llamaindex](https://github.com/run-llama/llama_index)) Provides an orchestration framework for with multiple connectors"
 
-!!! abstract "[Llama Lab](https://github.com/run-llama/llama-lab) enables flexible tools to use and indesx various tools"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/run-llama/llama-lab) [Llama Lab]([Llama Lab](https://github.com/run-llama/llama-lab)) enables flexible tools to use and indesx various tools"
 
 !!! tip "[Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model."
 
-??? abstract "[LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀](https://github.com/Alpha-VLLM/LLaMA2-Accessory)
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/Alpha-VLLM/LLaMA2-Accessory) [LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀]([LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀](https://github.com/Alpha-VLLM/LLaMA2-Accessory))
     🚀LLaMA2-Accessory is an open-source toolkit for pretraining, finetuning and deployment of Large Language Models (LLMs) and multimodal LLMs. This repo is mainly inherited from LLaMA-Adapter with more advanced features.🧠
     ![image](https://github.com/ianderrington/genai/assets/76016868/d55e274a-13af-40bd-9586-3bf56557175b)
 
@@ -103,7 +103,7 @@ For reasons related to quality, ethics, and regulation, it is both useful, and a
 
 ### Haystack
 
-!!! abstract "[Haystack](https://github.com/deepset-ai/haystack) is an e2e llm orchestration framework that allows a number of versatile interactions."
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/deepset-ai/haystack) [Haystack]([Haystack](https://github.com/deepset-ai/haystack)) is an e2e llm orchestration framework that allows a number of versatile interactions."
     Open source by DeepSet
     Designed for scaleable search and retrieval
     Evaluation pipelines for system eval
@@ -111,7 +111,7 @@ For reasons related to quality, ethics, and regulation, it is both useful, and a
 
 ### Griptape
 
-!!! abstract "[Griptape](https://github.com/griptape-ai/griptape) an enterprise alternative to Langchain"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/griptape-ai/griptape) [Griptape]([Griptape](https://github.com/griptape-ai/griptape)) an enterprise alternative to Langchain"
     Open source / managemed
     Commercial Support
     Optimized for scalability and cloud

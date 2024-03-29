@@ -26,6 +26,6 @@ Monitoring the speed at which a model infers results can aid in optimizing its e
 
 ## Libraries and Tools
 
-!!! example "[E2B's](https://github.com/e2b-dev/e2b) integration in AI agent technology stacks opens up new avenues, where it comfortably sits at the bottom, and is agnostic to the framework it operates in."
+!!! example "![GitHub Repo stars](https://badgen.net/github/stars/e2b-dev/e2b) [E2B's]([E2B's](https://github.com/e2b-dev/e2b)) integration in AI agent technology stacks opens up new avenues, where it comfortably sits at the bottom, and is agnostic to the framework it operates in."
 
-!!! example "[llmonitor](https://github.com/llmonitor/llmonitor) provides self-hosted model monitoring for costs/users/requrets, feedback, etc..."
+!!! example "![GitHub Repo stars](https://badgen.net/github/stars/llmonitor/llmonitor) [llmonitor]([llmonitor](https://github.com/llmonitor/llmonitor)) provides self-hosted model monitoring for costs/users/requrets, feedback, etc..."
