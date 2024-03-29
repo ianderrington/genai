@@ -1314,6 +1314,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1540,6 +1542,33 @@ and
     
   
     Hybrid models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/mixture_of_experts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Mixture of experts
   
 
     
@@ -6362,7 +6391,7 @@ One manner of doing this is through the use of <a href="#adaptermodel-changes-fo
 <p>The simplest manner of fine-tuning a model involves updating all of the original weights based on the fine-tuning dataset. This is less preferred because of the additional computational requirements. To minimize the compute, some number of layers can be 'frozen'. While helpful, the computational savings given the performance gains may not be considerable. (TODO FIND CITATIONS FOR THIS)</p>
 <h3 id="adapter-layers">Adapter layers<a class="headerlink" href="#adapter-layers" title="Permanent link">&para;</a></h3>
 <p>If all of the layers are frozen, it is possible to adapt the model using relatively simple models that rescale or adapt outputs.</p>
-<div class="admonition code">
+<div class="admonition abstract">
 <p class="admonition-title"><a href="https://arxiv.org/pdf/2007.07779.pdf">AdapterHub: A Framework for Adapting Transformers</a> <a href="https://adapterhub.ml/">Website</a></p>
 </div>
 <h3 id="low-rank-adaption-lora">Low Rank Adaption (LoRA)<a class="headerlink" href="#low-rank-adaption-lora" title="Permanent link">&para;</a></h3>
@@ -6403,7 +6432,7 @@ weight += (L2_B \times L2_A) * scale2 \\
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="431" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c9a25085-2e3e-4cfb-912c-09d978310887"></a></p>
 </details>
 <p>There are also several tools available that can assist in the fine-tuning process.</p>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/OpenPipe/OpenPipe">Open Pipe</a> allows you to use powerful but expensive LLMs to fine-tune smaller and cheaper models</summary>
 <p>You can evaluate the model and prompt combinations in the playground, query your past requests, and export optimized training data.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e"></a></p>
@@ -6418,7 +6447,7 @@ weight += (L2_B \times L2_A) * scale2 \\
 <summary><a href="https://arxiv.org/pdf/2305.08298.pdf">Symbol Tuning Improves in-context learning in Language Models</a></summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5"></a></p>
 </details>
-<div class="admonition code">
+<div class="admonition abstract">
 <p class="admonition-title"><a href="https://github.com/okuvshynov/slowllama">Slow Llama</a> for finetuning on a M1/M2 mac</p>
 </div>
 <p>In conclusion, fine-tuning is a crucial step in the development of AI models. It allows models to specialize and improve their performance on specific tasks, leading to more accurate and efficient AI systems.</p>

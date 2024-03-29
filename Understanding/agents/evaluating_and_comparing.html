@@ -95,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#how-to-evaluate" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1307,6 +1312,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1533,6 +1540,33 @@ and
     
   
     Hybrid models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/models/mixture_of_experts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Mixture of experts
   
 
     
@@ -2448,6 +2482,23 @@ and
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluating and comparing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="evaluating_and_comparing.html" class="md-nav__link md-nav__link--active">
         
   
@@ -2463,6 +2514,34 @@ and
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-evaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Evaluate
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5893,6 +5972,25 @@ and
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-evaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Evaluate
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5926,54 +6024,63 @@ and
 
   <h1>Evaluating and comparing</h1>
 
-<p>Just as it is important to evaluate and compare the quality of <a href="../architectures/evaluating_and_comparing.html">models</a> it is important to evaluate and compare augmented-LLMs. </p>
-<p>Here are some useful toools in understanding how to evaluate those models and tools. </p>
+<p>Because LLMs generally are part of broader agent systems, it is important to evaluate them. While <a href="../architectures/evaluating_and_comparing.html">model evaluation</a> and <a href="#../prompting/index.md">prompt</a> evaluation is essential to understanding optimizing individual components, it is essential to evaluate the higher-level agents and agent systems. </p>
+<p>There is a lot of similarity of <a href="../architectures/evaluating_and_comparing.html#what-to-evaluate">what to evaluate</a> for models, so we primarily focus on tools and methods of <a href="#how-to-evaluate">how to evaluate</a> </p>
+<h2 id="how-to-evaluate"><strong>How to Evaluate</strong><a class="headerlink" href="#how-to-evaluate" title="Permanent link">&para;</a></h2>
+<details class="abstract">
+<summary><a href="https://github.com/promptfoo/promptfoo">Promptfoo: a tool for testing and evaluating LLM output quality</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c318311a-f65f-49a5-8636-e3f977d4a1f3" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c318311a-f65f-49a5-8636-e3f977d4a1f3" /></a></p>
+<p>With promptfoo, you can:</p>
+<p>Systematically test prompts, models, and RAGs with predefined test cases
+Evaluate quality and catch regressions by comparing LLM outputs side-by-side
+Speed up evaluations with caching and concurrency
+Score outputs automatically by defining test cases
+Use as a CLI, library, or in CI/CD
+Use OpenAI, Anthropic, Azure, Google, HuggingFace, open-source models like Llama, or integrate custom API providers for any LLM API</p>
+</details>
+<details class="abstract">
+<summary><a href="https://github.com/mr-gpt/deepeval">DeepEval</a> provides a Pythonic way to run offline evaluations on your LLM pipelines</summary>
+<p>"... so you can launch comfortably into production. The guiding philosophy is a "Pytest for LLM" that aims to make productionizing and evaluating LLMs as easy as ensuring all tests pass."
+<a class="glightbox" href="https://github.com/mr-gpt/deepeval/blob/main/assets/synthetic-query-generation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/mr-gpt/deepeval/blob/main/assets/synthetic-query-generation.png" /></a>
+It integrates with Llama index <a href="https://docs.confident-ai.com/docs/integrations-llamaindex">here</a></p>
+</details>
 <p>??? note "<a href="https://arxiv.org/abs/2402.15491">API-BLEND: A Comprehensive Corpora for Training and Benchmarking API LLMs</a></p>
 <div class="highlight"><pre><span></span><code>There is a growing need for Large Language Models (LLMs) to effectively use tools and external Application Programming Interfaces (APIs) to plan and complete tasks. As such, there is tremendous interest in methods that can acquire sufficient quantities of train and test data that involve calls to tools / APIs. Two lines of research have emerged as the predominant strategies for addressing this challenge. The first has focused on synthetic data generation techniques, while the second has involved curating task-adjacent datasets which can be transformed into API / Tool-based tasks. In this paper, we focus on the task of identifying, curating, and transforming existing datasets and, in turn, introduce API-BLEND, a large corpora for training and systematic testing of tool-augmented LLMs. The datasets mimic real-world scenarios involving API-tasks such as API / tool detection, slot filling, and sequencing of the detected APIs. We demonstrate the utility of the API-BLEND dataset for both training and benchmarking purposes.
 </code></pre></div>
-<div class="admonition code">
-<p class="admonition-title"><a href="https://github.com/sylinrl/TruthfulQA">Truthful - QA</a> helpes to Measuring How Models Mimic Human Falsehoods</p>
-</div>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/stanford-crfm/helm">Helm</a> contains code used in the Holistic Evaluation of Language Models project</summary>
 <p><a href="https://arxiv.org/pdf/2211.09110.pdf">Paper</a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/40b280b6-749e-49fd-8e72-3b51c38d06b9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="817" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/40b280b6-749e-49fd-8e72-3b51c38d06b9"></a></p>
 </details>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/arthur-ai/bench">Arthur.ai Bench</a> Bench is a tool for evaluating LLMs for production use cases. </summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/377d86c7-9ebf-4828-8e6a-582b86a499f9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/377d86c7-9ebf-4828-8e6a-582b86a499f9" /></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/081f14b5-f2b7-47e6-985b-a886ed66eaf1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/081f14b5-f2b7-47e6-985b-a886ed66eaf1" /></a></p>
 </details>
-<details class="code">
-<summary><a href="https://github.com/mr-gpt/deepeval">DeepEval</a> provides a Pythonic way to run offline evaluations on your LLM pipelines</summary>
-<p>"... so you can launch comfortably into production. The guiding philosophy is a "Pytest for LLM" that aims to make productionizing and evaluating LLMs as easy as ensuring all tests pass."
-<a class="glightbox" href="https://github.com/mr-gpt/deepeval/blob/main/assets/synthetic-query-generation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/mr-gpt/deepeval/blob/main/assets/synthetic-query-generation.png" /></a></p>
-</details>
-<details class="code">
-<summary><a href="https://autoevaluator.langchain.com/">Auto Evaluator</a> with <a href="https://github.com/rlancemartin/auto-evaluator">github</a> to evaluate appropriate components of chains to enable best performance</summary>
+<details class="abstract">
+<summary><a href="https://autoevaluator.langchain.com/">Auto Evaluator (Langchain)</a> with <a href="https://github.com/rlancemartin/auto-evaluator">github</a> to evaluate appropriate components of chains to enable best performance</summary>
 <p><a class="glightbox" href="https://blog.langchain.dev/content/images/size/w1600/2023/04/auto-eval.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://blog.langchain.dev/content/images/size/w1600/2023/04/auto-eval.png" /></a></p>
 </details>
-<details class="code tip">
+<details class="abstract tip">
 <summary><a href="https://arxiv.org/pdf/2309.15817.pdf">Identifying the Risks of LM Agents with an LM-Emulated Sandbox</a></summary>
 <p>Where in their <a href="https://arxiv.org/pdf/2309.15817.pdf">paper</a> they demonstrate an emulation container to evaluate the safety of an Agent.</p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/48305f8b-7d79-4c36-b731-2aacd035fa49" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1198" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/48305f8b-7d79-4c36-b731-2aacd035fa49"></a></p>
 </details>
-<details class="code tip">
+<details class="abstract tip">
 <summary><a href="https://github.com/THUDM/AgentBench">AgentBench: Evaluating LLMs as Agents</a></summary>
 <p>A comprehensive 8-environment evaluation for different agents from different models.
 <a href="https://arxiv.org/pdf/2308.03688.pdf">Paper</a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b6d3e2d8-7548-4336-b9ae-ced2844aa6ae" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b6d3e2d8-7548-4336-b9ae-ced2844aa6ae" /></a></p>
 </details>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/baaivision/judgelm">JudgeLM: Fine-tuned Large Language Models are Scalable Judges</a> trains LLMs to judge the outputs of LLMs based on reference examples and achieves greater coherence than human rating</summary>
 <p>Also provides a great example GUI and interface using GradIO
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/4a3ca49f-39d0-453c-98f5-3498d743afa1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4a3ca49f-39d0-453c-98f5-3498d743afa1" /></a></p>
 </details>
 <details class="example">
 <summary><a href="https://chat.lmsys.org/">Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference</a></summary>
-<p><a href="https://arxiv.org/html/2403.04132v1">Paper</a>
-Abstract: 
-arge Language Models (LLMs) have unlocked new capabilities and applications; however, evaluating the alignment with human preferences still poses significant challenges. To address this issue, we introduce Chatbot Arena, an open platform for evaluating LLMs based on human preferences. Our methodology employs a pairwise comparison approach and leverages input from a diverse user base through crowdsourcing. The platform has been operational for several months, amassing over 240K votes. This paper describes the platform, analyzes the data we have collected so far, and explains the tried-and-true statistical methods we are using for efficient and accurate evaluation and ranking of models. We confirm that the crowdsourced questions are sufficiently diverse and discriminating and that the crowdsourced human votes are in good agreement with those of expert raters. These analyses collectively establish a robust foundation for the credibility of Chatbot Arena. Because of its unique value and openness, Chatbot Arena has emerged as one of the most referenced LLM leaderboards, widely cited by leading LLM developers and companies.</p>
+<p><strong>Abstract:</strong> Large Language Models (LLMs) have unlocked new capabilities and applications; however, evaluating the alignment with human preferences still poses significant challenges. To address this issue, we introduce Chatbot Arena, an open platform for evaluating LLMs based on human preferences. Our methodology employs a pairwise comparison approach and leverages input from a diverse user base through crowdsourcing. The platform has been operational for several months, amassing over 240K votes. This paper describes the platform, analyzes the data we have collected so far, and explains the tried-and-true statistical methods we are using for efficient and accurate evaluation and ranking of models. We confirm that the crowdsourced questions are sufficiently diverse and discriminating and that the crowdsourced human votes are in good agreement with those of expert raters. These analyses collectively establish a robust foundation for the credibility of Chatbot Arena. Because of its unique value and openness, Chatbot Arena has emerged as one of the most referenced LLM leaderboards, widely cited by leading LLM developers and companies.
+<a href="https://arxiv.org/html/2403.04132v1">Paper</a></p>
 </details>
 
 

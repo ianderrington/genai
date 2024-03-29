@@ -1517,6 +1517,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1743,6 +1745,33 @@ and
     
   
     Hybrid models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/models/mixture_of_experts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Mixture of experts
   
 
     
@@ -6304,7 +6333,7 @@ and
 <summary>Pre-tokenization methods</summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/050ce1cc-2d11-4d98-a178-af706d149aa9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="445" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/050ce1cc-2d11-4d98-a178-af706d149aa9"></a></p>
 </details>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/karpathy/minbpe">Minimal BPE tokenizer by Andrej Karpathy</a> provides a understandable and efficient demonstration of several modern tokenizing methods including BPE, RegExp, BPE and GPT-4. </summary>
 </details>
 <h3 id="character-tokenizers">Character Tokenizers<a class="headerlink" href="#character-tokenizers" title="Permanent link">&para;</a></h3>
@@ -6315,7 +6344,7 @@ and
 <p>A subword unit, or a part of a word, can be a token in itself. </p>
 <h4 id="byte-pair-encoding">Byte-Pair Encoding<a class="headerlink" href="#byte-pair-encoding" title="Permanent link">&para;</a></h4>
 <p>The paper titled <a href="https://arxiv.org/pdf/1508.07909.pdf">Neural Machine Translation of Rare Words with Subword Units</a> introduced Byte-Pair encoding to create subword to allowing for highly common character patterns to be compressed into tokens, thereby reducing vocabulary-size requirements. </p>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/openai/tiktoken">Tiktoken</a> is a fast BPE tokenizer for use with OpenAI models</summary>
 </details>
 <p><a href="/shared/token-monster.html" class="page-url" id="page-url-0"></a></p>
@@ -6327,11 +6356,11 @@ and
 <div class="copied-popup" id="popup-page-url-0">Link copied!</div>
 </div>
 
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/alasdairforsythe/tokenmonster">Token Monster</a> is an ungreedy subword tokenizer and vocabulary generator, enabling language models to run faster, cheaper, smarter and generate longer streams of text. </summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/97a33624-1281-49d9-aa3a-9a4bedd689f0" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/97a33624-1281-49d9-aa3a-9a4bedd689f0" /></a></p>
 </details>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/google/sentencepiece">Sentence Piece</a> implements subword units (e.g., byte-pair-encoding (BPE) and unigram language model</summary>
 </details>
 <details class="important">
@@ -6372,7 +6401,7 @@ and
 </table>
 <h2 id="other-modalities">Other modalities<a class="headerlink" href="#other-modalities" title="Permanent link">&para;</a></h2>
 <h3 id="speech-tokenization">Speech tokenization<a class="headerlink" href="#speech-tokenization" title="Permanent link">&para;</a></h3>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/zhangxinfd/speechtokenizer">Speech Tokenizer</a>  is a unified speech tokenizer for speech language models, which adopts the Encoder-Decoder architecture with residual vector quantization (RVQ)</summary>
 <p><a class="glightbox" href="https://github.com/ZhangXInFD/SpeechTokenizer/raw/main/images/speechtokenizer_framework.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ZhangXInFD/SpeechTokenizer/raw/main/images/speechtokenizer_framework.jpg" /></a></p>
 </details>
@@ -6381,7 +6410,7 @@ and
 <h3 id="tokenizing-might-not-be-necessary">Tokenizing might not be necessary<a class="headerlink" href="#tokenizing-might-not-be-necessary" title="Permanent link">&para;</a></h3>
 <p>It is regarded that tokenizing is a bit arbitrary and has disadvantages. There are promising results using methods without tokenization <a href="https://arxiv.org/pdf/2305.07185">MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers</a> that "show that MEGABYTE allows byte-level models to perform competitively with subword models on long context language modeling"</p>
 <h3 id="heirarchichal-tokenization">Heirarchichal Tokenization<a class="headerlink" href="#heirarchichal-tokenization" title="Permanent link">&para;</a></h3>
-<div class="admonition code">
+<div class="admonition abstract">
 <p class="admonition-title"><a href="https://explosion.ai/blog/floret-vectors">Floret Vectors</a></p>
 </div>
 <details class="tip">

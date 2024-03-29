@@ -1314,6 +1314,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1540,6 +1542,33 @@ and
     
   
     Hybrid models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/mixture_of_experts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Mixture of experts
   
 
     
@@ -5934,10 +5963,10 @@ and
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fusion-methods" class="md-nav__link">
+  <a href="#retrieval-aware-training" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fusion Methods
+        Retrieval Aware Training
       
     </span>
   </a>
@@ -6056,7 +6085,7 @@ and
 </li>
 <li><a href="#automatic-correction"><strong>Automatically correcting</strong></a> models to more accurately train a model to produce output that is is more globally accurate to the input prompts.</li>
 </ul>
-<h4 id="fusion-methods">Fusion Methods<a class="headerlink" href="#fusion-methods" title="Permanent link">&para;</a></h4>
+<h4 id="retrieval-aware-training">Retrieval Aware Training<a class="headerlink" href="#retrieval-aware-training" title="Permanent link">&para;</a></h4>
 <p><a href="/shared/grit-lm.html" class="page-url" id="page-url-0"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
@@ -6066,13 +6095,18 @@ and
 <div class="copied-popup" id="popup-page-url-0">Link copied!</div>
 </div>
 
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/ContextualAI/gritlm">GRIT: Generative Representational Instruction Tuning</a></summary>
 <p><strong>Developments</strong> The authors reveal in their <a href="https://arxiv.org/pdf/2402.09906.pdf">paper</a> the ability to simultaneously train generation and embedding models, revealing improved performance in both domains, and enhancement of RAG performance by not requiring separate retrieval and generation models. </p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f2411adc-e760-4e50-9c2f-637ea159e40c" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="564" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f2411adc-e760-4e50-9c2f-637ea159e40c"></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/9f3001fd-968b-4f8e-9658-dce3bdbfb333" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="571" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9f3001fd-968b-4f8e-9658-dce3bdbfb333"></a></p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/7a14ce3b-193c-4605-aced-75c2f1a5afcd" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="565" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7a14ce3b-193c-4605-aced-75c2f1a5afcd"></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/98380c59-7308-449c-8592-6643e3fb7198" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="553" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/98380c59-7308-449c-8592-6643e3fb7198"></a></p>
+</details>
+<details class="note">
+<summary><a href="https://gorilla.cs.berkeley.edu/blogs/3_retriever_aware_training.html">Retriever-Aware Training (RAT): Are LLMs memorizing or understanding?</a></summary>
+<p>Retrieval aware training uses the fact that it is useful to use up-to-date information at generation time and hence considers retrievers as part of the training.
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/285ea9b4-75e8-4762-b1bf-b63597a463f1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="952" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/285ea9b4-75e8-4762-b1bf-b63597a463f1"></a></p>
 </details>
 <h3 id="how-training-is-done">How training is done<a class="headerlink" href="#how-training-is-done" title="Permanent link">&para;</a></h3>
 <ul>

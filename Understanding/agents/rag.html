@@ -1312,6 +1312,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1538,6 +1540,33 @@ and
     
   
     Hybrid models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/models/mixture_of_experts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Mixture of experts
   
 
     
@@ -6706,45 +6735,50 @@ and
 <li>Lack of <strong>attributon</strong> making it difficult to ascertain validity</li>
 <li><strong>Staleness</strong> due to new or updated information </li>
 </ul>
-<p>Retrieval-Augmented Generation (RAG) helps to solve that by coupling the information to external memory.  Here is a basic comparison. </p>
+<p><strong>Retrieval-Augmented Generation (RAG) helps to solve these</strong> by coupling the information to external memory.  </p>
+<p>Here is a basic comparison of the two: </p>
 <div class="admonition example">
 <p class="admonition-title">Comparison with/without RAG</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Without</label><label for="__tabbed_1_2">With</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With</label><label for="__tabbed_1_2">Without</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="mermaid"><code>graph LR
-    style Input fill:#FFA500,stroke:#333,stroke-width:2px
-    style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
-    style Generator fill:#00AAFF,stroke:#333,stroke-width:2px
-    style Output fill:#80AA80,stroke:#333,stroke-width:2px
+    style QueryEncoder fill:#D2E1FA,stroke:#333,stroke-width:1px
+    style QueryOptimizer1 fill:#E7B4E1,stroke:#333,stroke-width:1px
+    style Query fill:#FADAD2,stroke:#333,stroke-width:1px
+    style Prompt fill:#D2FAFA,stroke:#333,stroke-width:1px
+    style Docs fill:#FADAD2,stroke:#333,stroke-width:1px
+    style QueryOptimizer2 fill:#E7B4E1,stroke:#333,stroke-width:1px
+    style DocEncoder fill:#D2E1FA,stroke:#333,stroke-width:1px
+    style Retriever fill:#E1E7B4,stroke:#333,stroke-width:1px
+    style Context fill:#B4E1E7,stroke:#333,stroke-width:1px
+    style Generator fill:#FAD2E1,stroke:#333,stroke-width:1px
+    style Answer fill:#E1FAD2,stroke:#333,stroke-width:1px
 
-    Input --&gt; Generator[LLM Generation]
-    Prompt --&gt; Generator
-    Generator --&gt; Output</code></pre>
-</div>
-<div class="tabbed-block">
-<pre class="mermaid"><code>graph LR
-    style Docs fill:#FFAAAA,stroke:#333,stroke-width:2px
-    style QueryEncoder fill:#FFAAAA,stroke:#333,stroke-width:2px
-    style DocEncoder fill:#FFAAAA,stroke:#333,stroke-width:2px
-    style Retriever fill:#FFAAAA,stroke:#333,stroke-width:2px
-    style Input fill:#FFA500,stroke:#333,stroke-width:2px
-    style Prompt fill:#FFA500,stroke:#333,stroke-width:2px
-    style Context fill:#FFA500,stroke:#333,stroke-width:2px
-    style Generator fill:#00AAFF,stroke:#333,stroke-width:2px
-    style Output fill:#80AA80,stroke:#333,stroke-width:2px
-
-    QueryEncoder --&gt; Retriever
-    Prompt --&gt; Generator[LLM Generation]
-    Input --&gt; Generator
-    Input --&gt; QueryEncoder[Query Encoder]
-    Docs --&gt; DocEncoder[Doc Encoder]
-    DocEncoder --&gt; Retriever
+    QueryEncoder --&gt; |Retrieve\n from|Retriever
+    Prompt --&gt; Generator[LLM\n Generation]
+    Query --&gt; Generator
+    Query --&gt; QueryOptimizer1(Query\n Optimizer)
+    QueryOptimizer1 --&gt; QueryEncoder[Encoder]
+    Docs --&gt; QueryOptimizer2(Docs\n Optimizer)
+    QueryOptimizer2 --&gt; DocEncoder[Encoder]
+    DocEncoder --&gt; |Index\n to| Retriever[Database]
 
     Retriever --&gt; Context
 
     Context --&gt; Generator
-    Generator --&gt; Output</code></pre>
+    Generator --&gt; Answer </code></pre>
+</div>
+<div class="tabbed-block">
+<pre class="mermaid"><code>graph LR
+    style Query fill:#E1FAD2,stroke:#333,stroke-width:1px
+    style Prompt fill:#D2FAFA,stroke:#333,stroke-width:1px
+    style Generator fill:#FAD2E1,stroke:#333,stroke-width:1px
+    style Answer fill:#E1FAD2,stroke:#333,stroke-width:1px
+
+    Query --&gt; Generator[LLM Generation]
+    Prompt --&gt; Generator
+    Generator --&gt; Answer</code></pre>
 </div>
 </div>
 </div>
@@ -6760,6 +6794,9 @@ and
 <li>How to combine the contexts with the prompts</li>
 </ul>
 <p>One of the seminal papers on RAG, <a href="https://arxiv.org/pdf/2005.11401.pdf">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a> introduced a solution for end-to-end training of models involving training document and query encoding, lookup and demosntrated revealing <a href="https://contextual.ai/introducing-rag2/">improved results</a> over solutions where model components were frozen. For reasons of simplicity, however, a generally standard approach uses models that are frozen to embed and query documents. </p>
+<div class="admonition danger">
+<p class="admonition-title">It is important to <a href="evaluating_and_comparing.html">Evaluate your system</a> to ensure efficient efforts in using RAG.</p>
+</div>
 <h3 id="why-use-rag">Why use RAG?<a class="headerlink" href="#why-use-rag" title="Permanent link">&para;</a></h3>
 <p>Large foundation models are trained on large corporas of public (and sometimes private) data. Models may lose effective semantic grounding because of the breadth of implicing knowledge they have codified in the next-token predictors. To improve the groundedness and appropriateness of the desired output, RAG fetches appropriate information that can be combined with the prompt context in order for the LLM to generate appropriate results. This can be particularly important when there is information that my be changing, and needs to be incorporated quickly. </p>
 <p>Importantly, iou can use RAG to help with for data summarization, question-answeering, and the ability to 'know how' information is generated in a somewhat more interpretable manner. </p>
@@ -6784,22 +6821,39 @@ and
 </ul>
 </div>
 <h4 id="rag-vs-finetuning">RAG vs Finetuning<a class="headerlink" href="#rag-vs-finetuning" title="Permanent link">&para;</a></h4>
-<details class="code">
+<p>Because finetuning can enable intrisic knowledge to be ingrained in an LLM, it generally leads to improved performance. </p>
+<details class="abstract">
 <summary><a href="https://github.com/informagi/RAGvsFT">Rag vs Finetuning</a> reveals Fine tuning boosts performance over RAG</summary>
 <p><a href="https://arxiv.org/abs/2403.01432">Paper</a></p>
 </details>
-<h2 id="rag-in-detail">RAG in Detail<a class="headerlink" href="#rag-in-detail" title="Permanent link">&para;</a></h2>
-<p>The RAG process can be divided into two main stages: Preparation (offline) and Retrieval and Generation (online).</p>
-<h3 id="document-indexing-offline">Document Indexing (offline)<a class="headerlink" href="#document-indexing-offline" title="Permanent link">&para;</a></h3>
-<p>Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  </p>
-<p>It is useful to perform parallel indexing that keeps track of records that are put into vector stores. </p>
-<p><a href="/shared/indexing-vector-records.html" class="page-url" id="page-url-0"></a></p>
+<p>That said, it can be seen that using RAG to informe fine tuning, in Retrieval Augmented Fine Tuning (RAFT), as variations are done with <a href="../architectures/models/mixture_of_experts.html">mixture of experts</a> can lead to even improved performance. </p>
+<p><a href="/shared/raft.html" class="page-url" id="page-url-0"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
 <span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
 <!-- Copied popup -->
 <div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a href="https://github.com/ShishirPatil/gorilla/blob/main/raft/raft.py">🦍 RAFT: Adapting Language Model to Domain Specific RAG</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/813c5a4e-8a6f-408d-8629-e78df15d6c04" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="676" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/813c5a4e-8a6f-408d-8629-e78df15d6c04"></a>
+<a href="https://gorilla.cs.berkeley.edu/blogs/9_raft.html">Blog post</a>
+<a href="https://arxiv.org/abs/2403.10131">Paper</a></p>
+<h2 id="rag-in-detail">RAG in Detail<a class="headerlink" href="#rag-in-detail" title="Permanent link">&para;</a></h2>
+</details>
+<p>The RAG process can be divided into two main stages: Preparation (offline) and Retrieval and Generation (online).</p>
+<h3 id="document-indexing-offline">Document Indexing (offline)<a class="headerlink" href="#document-indexing-offline" title="Permanent link">&para;</a></h3>
+<p>Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  </p>
+<p>It is useful to perform parallel indexing that keeps track of records that are put into vector stores. </p>
+<p><a href="/shared/indexing-vector-records.html" class="page-url" id="page-url-1"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
 </div>
 
 <div class="admonition info">
@@ -6949,7 +7003,7 @@ and
 <p>Matching involves aligning the query with the appropriately stored information. </p>
 <h4 id="multi-hop-rag">Multi-Hop RAG<a class="headerlink" href="#multi-hop-rag" title="Permanent link">&para;</a></h4>
 <p>In order to effectively answer some queries, retrieval of evidence from multiple documents may be needed. This is known as <strong>multi-hop</strong> rag. </p>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/yixuantt/MultiHop-RAG">MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries</a> provides a dataset for evaluating multihop rag</summary>
 <p>"MultiHop-RAG: a QA dataset to evaluate retrieval and reasoning across documents with metadata in the RAG pipelines. It contains 2556 queries, with evidence for each query distributed across 2 to 4 documents. The queries also involve document metadata, reflecting complex scenarios commonly found in real-world RAG applications."</p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/80db5bd9-510b-4c23-bf46-4d4679e1929b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="331" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/80db5bd9-510b-4c23-bf46-4d4679e1929b"></a></p>
@@ -6997,7 +7051,7 @@ Pass raw images and text chunks to a multimodal LLM for answer synthesis
 </ul>
 <h2 id="evaluating-and-comparing">Evaluating and Comparing<a class="headerlink" href="#evaluating-and-comparing" title="Permanent link">&para;</a></h2>
 <p>Because of the large number of manners of performing RAG, it is important to evaluate the quality of the implemented solution. </p>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/mendableai/rag-arena">Rag Arena</a> Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses.</summary>
 </details>
 <h2 id="resources-tutorials-and-blogs">Resources, Tutorials and Blogs<a class="headerlink" href="#resources-tutorials-and-blogs" title="Permanent link">&para;</a></h2>
@@ -7007,13 +7061,13 @@ Pass raw images and text chunks to a multimodal LLM for answer synthesis
 The authors reveal that allowing for fine tuning of the models when equipped with RAG improved the results. 
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/05ffefbd-4fd7-4d4e-9ec4-0719e66e1791" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="598" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/05ffefbd-4fd7-4d4e-9ec4-0719e66e1791"></a></p>
 </details>
-<p><a href="/shared/12-rag-pain-points-and-solutions.html" class="page-url" id="page-url-1"></a></p>
+<p><a href="/shared/12-rag-pain-points-and-solutions.html" class="page-url" id="page-url-2"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
 </div>
 
 <details class="important">
@@ -7124,11 +7178,11 @@ The authors reveal that allowing for fine tuning of the models when equipped wit
 <li>Use things like <a href="https://towardsdatascience.com/safeguarding-your-rag-pipelines-a-step-by-step-guide-to-implementing-llama-guard-with-llamaindex-6f80a2e07756?sk=c6cc48013bac60924548dd4e1363fa9e">Llama Guard</a></li>
 </ul>
 </details>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://colab.research.google.com/github/sophiamyang/demos/blob/main/advanced_rag_small_to_big.ipynb">Advanced Rag small to big</a></summary>
 <p><a href="https://towardsdatascience.com/advanced-rag-01-small-to-big-retrieval-172181b396d4">Blog</a></p>
 </details>
-<details class="code">
+<details class="abstract">
 <summary><a href="https://github.com/weaviate/recipes/blob/main/integrations/llamaindex/retrieval-augmented-generation/advanced_rag.ipynb">Advanced Retreival Augmented Generation from Theory to Llamaindex</a></summary>
 <p><a href="https://towardsdatascience.com/advanced-retrieval-augmented-generation-from-theory-to-llamaindex-implementation-4de1464a9930">Blog</a></p>
 </details>
