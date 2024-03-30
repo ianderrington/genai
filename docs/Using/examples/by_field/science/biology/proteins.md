@@ -26,7 +26,9 @@ There are several optimization targets of direct interest
 - [Structure](#structure)
 - [Function](#function)
     - Enzymatic Catalysis
+    - Thermocompatibility
     - Fluorescence
+    
 - [Protein Binding](#binding)
     - Proteins
     - Nucleic Acids
@@ -37,12 +39,14 @@ There are several optimization targets of direct interest
 
 
 
-#### Structure
+### Structure
 
 !!! tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end"
 
 
-#### Function
+### Function
+
+#### Enzymatic Catalysis
 
 !!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
 
@@ -140,9 +144,26 @@ There are several optimization targets of direct interest
 
     The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.
 
+#### Thermostability
 
+??? abstract "[ProLaTherm: Protein Language Model-based Thermophilicity Predictor
+](https://github.com/grimmlab/ProLaTherm)" prolatherm
+    
+    **Developments** The authors reveal in their [paper](https://academic.oup.com/nargab/article/5/4/lqad087/7306664) a model that is good at predicting thermal stability as well as an augmented dataset to enable their good predictive control 
+    
+    ![image](https://github.com/ianderrington/genai/assets/76016868/0c9b9576-b753-459b-9016-c40a7aaccde0)
+    
+    Data: Collected from multiple sources to create new sets. " 9422 UniProt identifiers and 9363 corresponding amino acid sequences from 16 thermophilic and 16 mesophilic organisms" Filtered
 
-#### Candidate Identification
+    Models: Trained multiple models including PLM with embedding and output layer to predict Thermal stability ranges. 
+    Training: From scratch.
+
+    Results: High performance of PLM 97% accuracy over other models, though this accuracy is reduced when reducing train/test set homology.
+    
+
+    
+
+### Candidate Identification
 
 Particularly for evolutionary methods, it is essential to know _where to start_ optimizing from. GenAI can be used to identify candidates based on databases of prior candidates. 
 
@@ -153,12 +174,12 @@ Searching is essential to find similar sequences that may aid in the training or
     [Paper](https://www.nature.com/articles/s41587-023-01773-0)
 
 
-###### Candidate alignment
+#### Candidate alignment
 It is not necessarily just enough to identify a potential candidate but to have a degree of _alignment_ with of the candidate with starting or suggested candidates. This allows for a degree of interpretability to by people. 
 
 
 
-### Tools
+## Tools
 
 !!! tip "[ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign)"
 
