@@ -11,7 +11,7 @@ https://arxiv.org/pdf/2308.01814.pdf
 
 
 
-??? code "[The Tensor Programs: 1](https://arxiv.org/pdf/1910.12478.pdf)"
+??? abstract "[The Tensor Programs: 1](https://arxiv.org/pdf/1910.12478.pdf)"
 
     Ouput embeddings of two samples will be i.I.d. under randompermutations.
     Introduces generalization to Tensors and creates
@@ -33,7 +33,7 @@ https://arxiv.org/pdf/2308.01814.pdf
     <img width="893" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4f06e713-f86f-476c-8dda-01ff9d8cf49f">
 
 
-??? code "[Tensor Programs IVb: Adaptive Optimization in the ∞-Width Limit](https://arxiv.org/pdf/2308.01814.pdf) Demonstrates how to scale hyperparameters when changing widths of feature parameters generally"
+??? abstract "[Tensor Programs IVb: Adaptive Optimization in the ∞-Width Limit](https://arxiv.org/pdf/2308.01814.pdf) Demonstrates how to scale hyperparameters when changing widths of feature parameters generally"
 
     [Micro update](https://github.com/microsoft/mup)
     <img width="317" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/70fca938-0004-4885-a929-d11e06fe6658">

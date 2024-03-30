@@ -32,7 +32,7 @@ def replace_github_links_in_file(file_path):
                 line = re.sub(github_link_pattern, replacement, line)
             new_lines.append(line)
         file.seek(0)
-        file.write(''.join(new_lines))
+        file.write('\n'.join(new_lines))
         file.truncate()
 
 

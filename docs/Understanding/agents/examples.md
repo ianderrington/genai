@@ -8,7 +8,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 ### Frameworks
 
-!!! code "[Open GPTs](https://github.com/langchain-ai/opengpts) Enables the creation of agents and assistants, using Langchain components"
+!!! abstract "[Open GPTs](https://github.com/langchain-ai/opengpts) Enables the creation of agents and assistants, using Langchain components"
 
 ??? code "[The Open Source AI Assistant Framework & API](https://github.com/superagent-ai/superagent)" superagent
     [Docs](https://docs.superagent.sh/overview/overview/introduction)
@@ -144,12 +144,12 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     ![image](https://github.com/MineDojo/Voyager/raw/main/images/pull.png)
 
 
-!!! code "[GPT researcher](https://github.com/assafelovic/gpt-researcher) is an autonomous agent designed for comprehensive online research on a variety of tasks."
+!!! abstract "[GPT researcher](https://github.com/assafelovic/gpt-researcher) is an autonomous agent designed for comprehensive online research on a variety of tasks."
     LOOK INTO THIS
 
 
 
-!!! code "[Sweep Dev (product)](https://github.com/sweepai/sweep/tree/main) provides a service for improving code-bases."
+!!! abstract "[Sweep Dev (product)](https://github.com/sweepai/sweep/tree/main) provides a service for improving code-bases."
     [Example Agent](https://github.com/sweepai/sweep/blob/main/sdk/src/agent.py)
     [Website](https://sweep.dev)
     Cognitive Architecture:  [from their blog](https://docs.sweep.dev/blogs/sweeps-core-algo?ref=blog.langchain.dev).
@@ -286,7 +286,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 ## Multi-Agent 
 
-!!! code "[CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)](https://github.com/camel-ai/camel)"
+!!! abstract "[CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)](https://github.com/camel-ai/camel)"
 
     Paper: [https://arxiv.org/abs/2303.17760](https://arxiv.org/abs/2303.17760)
 
@@ -300,11 +300,11 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 
 ## Libraries
-!!! code "[Awesome LLM Powered Agent](https://github.com/hyp1231/awesome-llm-powered-agent)"
+!!! abstract "[Awesome LLM Powered Agent](https://github.com/hyp1231/awesome-llm-powered-agent)"
 
-!!! code "[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
+!!! abstract "[Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
 
-!!! code "[Chrome-GPT](https://github.com/richardyc/Chrome-GPT): an experimental AutoGPT agent that interacts with Chrome"
+!!! abstract "[Chrome-GPT](https://github.com/richardyc/Chrome-GPT): an experimental AutoGPT agent that interacts with Chrome"
 
 !!! important "[GPT prompts](https://github.com/friuns2/Leaked-GPTs/)"
 

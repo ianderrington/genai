@@ -1,2 +1,2 @@
 
-!!! code "[Lag-llama](https://github.com/time-series-foundation-models/lag-llama)
+!!! abstract "[Lag-llama](https://github.com/time-series-foundation-models/lag-llama)

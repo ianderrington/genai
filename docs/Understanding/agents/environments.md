@@ -22,7 +22,7 @@ In a chat environment the GenAI receives text information from a user and then r
 
 ### Web environments
 
-??? code "[Webarena:](https://github.com/web-arena-x/webarena)" webarena
+??? abstract "[Webarena:](https://github.com/web-arena-x/webarena)" webarena
 
     **Developments** "WebArena is a standalone, self-hostable web environment for building autonomous agents. WebArena creates websites from four popular categories with functionality and data mimicking their real-world equivalents. To emulate human problem-solving, WebArena also embeds tools and knowledge resources as independent websites. WebArena introduces a benchmark on interpreting high-level realistic natural language command to concrete web-based interactions. We provide annotated programs designed to programmatically validate the functional correctness of each task."
 
@@ -37,7 +37,7 @@ In a chat environment the GenAI receives text information from a user and then r
 ??? example "[Chat Arena](https://github.com/Farama-Foundation/chatarena) ChatArena is a library that provides multi-agent language game environments."
 
 
-??? code "[Chat Arena](https://github.com/Farama-Foundation/chatarena)"
+??? abstract "[Chat Arena](https://github.com/Farama-Foundation/chatarena)"
     ![image](https://github.com/ianderrington/genai/assets/76016868/d722c347-9505-4930-8325-d2b074bc43c8)
 
 
@@ -51,7 +51,7 @@ In a chat environment the GenAI receives text information from a user and then r
 ### Operating Systems
 The versatility and interpretability of an cursor and keyboard interface to software and programs within an OS, it provides a integral environment for AI agents to augment and automated otherwise hard-to-program tasks. 
 
-??? code "[Self Operating Computer](https://github.com/OthersideAI/self-operating-computer)"
+??? abstract "[Self Operating Computer](https://github.com/OthersideAI/self-operating-computer)"
 
 
 ### Embodied environments
@@ -63,9 +63,9 @@ Embodied environments involve acuiring information from reality using recording 
 Self aware embodiments involve knowing a measured of an actuating device, such as the angle or extension of a robotic limb. 
 
 ### Gaming
-!!! code "[Madrona Game Enging](https://madrona-engine.github.io/)"
+!!! abstract "[Madrona Game Enging](https://madrona-engine.github.io/)"
 
-??? code "[Voyager, an Agent in Minecraft](https://github.com/MineDojo/Voyager)"
+??? abstract "[Voyager, an Agent in Minecraft](https://github.com/MineDojo/Voyager)"
     [Website](https://voyager.minedojo.org/)
     [Paper](https://arxiv.org/pdf/2305.16291.pdf)
 

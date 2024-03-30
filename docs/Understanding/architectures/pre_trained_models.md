@@ -19,7 +19,7 @@ Below we share important models.
 ??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/pdf/2307.09288.pdf) A nearly open source set of 7B-70B models with quality performance"
     <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
 
-??? code "**Sept, 2023** [Mistral Transformer](https://github.com/mistralai/mistral-src)"
+??? abstract "**Sept, 2023** [Mistral Transformer](https://github.com/mistralai/mistral-src)"
 
     [Announcement](https://mistral.ai/news/announcing-mistral-7b/)
     [Hugging Face](https://huggingface.co/mistralai)
@@ -37,7 +37,7 @@ Below we share important models.
 - [GPT4all](https://gpt4all.io/index.html)
 - [DoctorGPT](https://github.com/llSourcell/DoctorGPT)
 
-??? code "[Qwen]"
+??? abstract "[Qwen]"
 
     Open-source : Qwen-72B and Qwen-1.8B! Including Base, Chat and Quantized versions.
 
@@ -55,7 +55,7 @@ Below we share important models.
 
 
 
-!!! code 
+!!! abstract 
     https://arxiv.org/pdf/2403.17297.pdf
     The evolution of Large Language Models (LLMs) like ChatGPT and GPT-4 has sparked discussions on the advent of Artificial General Intelligence (AGI). However, replicating such advancements in open-source models has been challenging. This paper introduces InternLM2, an open-source LLM that outperforms its predecessors in comprehensive evaluations across 6 dimensions and 30 benchmarks, long-context modeling, and open-ended subjective evaluations through innovative pre-training and optimization techniques. The pre-training process of InternLM2 is meticulously detailed, highlighting the preparation of diverse data types including text, code, and long-context data. InternLM2 efficiently captures long-term dependencies, initially trained on 4k tokens before advancing to 32k tokens in pre-training and fine-tuning stages, exhibiting remarkable performance on the 200k ``Needle-in-a-Haystack" test. InternLM2 is further aligned using Supervised Fine-Tuning (SFT) and a novel Conditional Online Reinforcement Learning from Human Feedback (COOL RLHF) strategy that addresses conflicting human preferences and reward hacking. By releasing InternLM2 models in different training stages and model sizes, we provide the community with insights into the model's evolution.
 

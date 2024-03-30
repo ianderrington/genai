@@ -8,19 +8,19 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 - [Code AI consulting](https://github.com/AI-Citizen/SolidGPT) Allows you to 'query your code' in a chatlike manner.
 
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/stop)  [RECURSIVELY SELF-IMPROVING CODE GENERATION](https://github.com/microsoft/stop)" self-taught-optimizer
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/stop)  [RECURSIVELY SELF-IMPROVING CODE GENERATION](https://github.com/microsoft/stop)" self-taught-optimizer
     "In this work, we use a language-model-infused scaffolding program to improve itself. We start with a seed "improver" that improves an input program according to a given utility function by querying a language model several times and returning the best solution. We then run this seed improver to improve itself. "
     [Paper](https://arxiv.org/abs/2310.02304)
 
 ## Coding
 
-!!! code "![GitHub Repo stars](https://badgen.net/github/stars/peterw/Chat-with-Github-Repo)  [Chat with github repo](https://github.com/peterw/Chat-with-Github-Repo)"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/peterw/Chat-with-Github-Repo)  [Chat with github repo](https://github.com/peterw/Chat-with-Github-Repo)"
 
-!!! code "[Octopack](https://github.com/bigcode-project/octopack) [Github](https://arxiv.org/pdf/2308.07124.pdf)"
+!!! abstract "[Octopack](https://github.com/bigcode-project/octopack) [Github](https://arxiv.org/pdf/2308.07124.pdf)"
 
-!!! code "[Codel](https://github.com/semanser/codel?tab=readme-ov-file)"
+!!! abstract "[Codel](https://github.com/semanser/codel?tab=readme-ov-file)"
 
-!!! code "[Open Copilot](https://github.com/openchatai/opencopilot)"
+!!! abstract "[Open Copilot](https://github.com/openchatai/opencopilot)"
 
     ![image](https://user-images.githubusercontent.com/32633162/263495581-a0cdc888-d2de-46b7-8c0b-96e876050b6e.png)
 

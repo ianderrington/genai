@@ -98,12 +98,12 @@ The primary challenges regarding rag may be related to organizational or functio
 
 Because finetuning can enable intrisic knowledge to be ingrained in an LLM, it generally leads to improved performance. 
 
-??? code "[Rag vs Finetuning](https://github.com/informagi/RAGvsFT) reveals Fine tuning boosts performance over RAG"  
+??? abstract "[Rag vs Finetuning](https://github.com/informagi/RAGvsFT) reveals Fine tuning boosts performance over RAG"  
     [Paper](https://arxiv.org/abs/2403.01432)
 
 That said, it can be seen that using RAG to informe fine tuning, in Retrieval Augmented Fine Tuning (RAFT), as variations are done with [mixture of experts](../architectures/models/mixture_of_experts.md) can lead to even improved performance. 
 
-??? code "[🦍 RAFT: Adapting Language Model to Domain Specific RAG](https://github.com/ShishirPatil/gorilla/blob/main/raft/raft.py)" raft
+??? abstract "[🦍 RAFT: Adapting Language Model to Domain Specific RAG](https://github.com/ShishirPatil/gorilla/blob/main/raft/raft.py)" raft
     <img width="676" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/813c5a4e-8a6f-408d-8629-e78df15d6c04">
     [Blog post](https://gorilla.cs.berkeley.edu/blogs/9_raft.html)
     [Paper](https://arxiv.org/abs/2403.10131)
@@ -311,7 +311,7 @@ Matching involves aligning the query with the appropriately stored information.
 
 In order to effectively answer some queries, retrieval of evidence from multiple documents may be needed. This is known as **multi-hop** rag. 
 
-??? code "[MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries](https://github.com/yixuantt/MultiHop-RAG) provides a dataset for evaluating multihop rag"
+??? abstract "[MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries](https://github.com/yixuantt/MultiHop-RAG) provides a dataset for evaluating multihop rag"
     "MultiHop-RAG: a QA dataset to evaluate retrieval and reasoning across documents with metadata in the RAG pipelines. It contains 2556 queries, with evidence for each query distributed across 2 to 4 documents. The queries also involve document metadata, reflecting complex scenarios commonly found in real-world RAG applications."
     
     <img width="331" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/80db5bd9-510b-4c23-bf46-4d4679e1929b">
@@ -365,7 +365,7 @@ Natural-language lookup with RAG can be improved by allowing other modalities, s
 
 Because of the large number of manners of performing RAG, it is important to evaluate the quality of the implemented solution. 
 
-??? code "[Rag Arena](https://github.com/mendableai/rag-arena) Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses." 
+??? abstract "[Rag Arena](https://github.com/mendableai/rag-arena) Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses." 
 
 
 ## Resources, Tutorials and Blogs
@@ -488,10 +488,10 @@ Because of the large number of manners of performing RAG, it is important to eva
 
     * Use things like [Llama Guard](https://towardsdatascience.com/safeguarding-your-rag-pipelines-a-step-by-step-guide-to-implementing-llama-guard-with-llamaindex-6f80a2e07756?sk=c6cc48013bac60924548dd4e1363fa9e)
 
-??? code "[Advanced Rag small to big](https://colab.research.google.com/github/sophiamyang/demos/blob/main/advanced_rag_small_to_big.ipynb)" 
+??? abstract "[Advanced Rag small to big](https://colab.research.google.com/github/sophiamyang/demos/blob/main/advanced_rag_small_to_big.ipynb)" 
     [Blog](https://towardsdatascience.com/advanced-rag-01-small-to-big-retrieval-172181b396d4)
     
-??? code "[Advanced Retreival Augmented Generation from Theory to Llamaindex](https://github.com/weaviate/recipes/blob/main/integrations/llamaindex/retrieval-augmented-generation/advanced_rag.ipynb)"
+??? abstract "[Advanced Retreival Augmented Generation from Theory to Llamaindex](https://github.com/weaviate/recipes/blob/main/integrations/llamaindex/retrieval-augmented-generation/advanced_rag.ipynb)"
     [Blog](https://towardsdatascience.com/advanced-retrieval-augmented-generation-from-theory-to-llamaindex-implementation-4de1464a9930)
 
 ??? note "[RAG vs finetuning](https://towardsdatascience.com/rag-vs-finetuning-which-is-the-best-tool-to-boost-your-llm-application-94654b1eaba7)"

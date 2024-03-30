@@ -16,7 +16,7 @@
 !!! tip "[Fully GenAI pharmacist from scripts, images and videos](https://github.com/kennethleungty/Generative-AI-Pharmacist)"
 
 
-!!! code "[Doctor GPT](https://github.com/FeatureBaseDB/DoctorGPT) implements advanced LLM prompting for organizing, indexing and discussing PDFs, and does so without using any type of opinionated prompt processing frameworks "“
+!!! abstract "[Doctor GPT](https://github.com/FeatureBaseDB/DoctorGPT) implements advanced LLM prompting for organizing, indexing and discussing PDFs, and does so without using any type of opinionated prompt processing frameworks "“
 
 
 !!! important "[Foundation models for Retinas](https://www.nature.com/articles/s41586-023-06555-x)"

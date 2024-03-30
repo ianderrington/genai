@@ -1,6 +1,6 @@
 #### Orchestration
 
-??? code "[EmbedChain](https://github.com/embedchain/embedchain)  is a framework to easily create LLM powered bots over any dataset."
+??? abstract "[EmbedChain](https://github.com/embedchain/embedchain)  is a framework to easily create LLM powered bots over any dataset."
     Example:
     ```python
         import os
@@ -32,14 +32,14 @@
 - [Chatall](https://github.com/sunner/ChatALL) To interact with multiple chatbots at the same time.
 - [LocalAI](https://github.com/go-skynet/LocalAI) drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
 
-!!! code "[Open Agent](https://github.com/dot-agent/openagent) IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents"
+!!! abstract "[Open Agent](https://github.com/dot-agent/openagent) IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents"
 
-??? code "[DSPY](https://github.com/stanfordnlp/dspy) is a framework for solving advanced tasks with language models and retrieval models"
+??? abstract "[DSPY](https://github.com/stanfordnlp/dspy) is a framework for solving advanced tasks with language models and retrieval models"
     Useful for exploring automatic prompt opteimization.
 
 
 ### Language-like interfaces
-??? code "[LMQL](https://github.com/eth-sri/lmql) is a query language that enables simplified representations of chats and agents with minimal code. "
+??? abstract "[LMQL](https://github.com/eth-sri/lmql) is a query language that enables simplified representations of chats and agents with minimal code. "
     ```
     "Greet LMQL:[GREETINGS]\n" where stops_at(GREETINGS, ".") and not "\n" in GREETINGS
 
@@ -63,7 +63,7 @@
 
 ### Retrieval Augmentation focus
 
-!!! code "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
+!!! abstract "[RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
 
 
 ## Monitoring Gen()AI
@@ -77,17 +77,17 @@ For reasons related to quality, ethics, and regulation, it is both useful, and a
 
 #### Llama ecosystem
 
-!!! code "[Llamaindex](https://github.com/run-llama/llama_index) Provides an orchestration framework for with multiple connectors"
+!!! abstract "[Llamaindex](https://github.com/run-llama/llama_index) Provides an orchestration framework for with multiple connectors"
 
-!!! code "[Llama Lab](https://github.com/run-llama/llama-lab) enables flexible tools to use and indesx various tools"
+!!! abstract "[Llama Lab](https://github.com/run-llama/llama-lab) enables flexible tools to use and indesx various tools"
 
 !!! tip "[Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model."
 
-??? code "[LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀](https://github.com/Alpha-VLLM/LLaMA2-Accessory)
+??? abstract "[LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀](https://github.com/Alpha-VLLM/LLaMA2-Accessory)
     🚀LLaMA2-Accessory is an open-source toolkit for pretraining, finetuning and deployment of Large Language Models (LLMs) and multimodal LLMs. This repo is mainly inherited from LLaMA-Adapter with more advanced features.🧠
     ![image](https://github.com/ianderrington/genai/assets/76016868/d55e274a-13af-40bd-9586-3bf56557175b)
 
-??? code "Code and models surrounding Llama"
+??? abstract "Code and models surrounding Llama"
     - [LlamaGPT](https://github.com/getumbrel/llama-gpt) A self-hosted, offline, ChatGPT-like chatbot, powered by Llama 2. 100% private, with no data leaving your device.
     - [Lit-Llama](https://github.com/Lightning-AI/lit-llama)
     - [MedAlpaca](https://github.com/kbressem/medAlpaca)
@@ -103,7 +103,7 @@ For reasons related to quality, ethics, and regulation, it is both useful, and a
 
 ### Haystack
 
-!!! code "[Haystack](https://github.com/deepset-ai/haystack) is an e2e llm orchestration framework that allows a number of versatile interactions."
+!!! abstract "[Haystack](https://github.com/deepset-ai/haystack) is an e2e llm orchestration framework that allows a number of versatile interactions."
     Open source by DeepSet
     Designed for scaleable search and retrieval
     Evaluation pipelines for system eval
@@ -111,7 +111,7 @@ For reasons related to quality, ethics, and regulation, it is both useful, and a
 
 ### Griptape
 
-!!! code "[Griptape](https://github.com/griptape-ai/griptape) an enterprise alternative to Langchain"
+!!! abstract "[Griptape](https://github.com/griptape-ai/griptape) an enterprise alternative to Langchain"
     Open source / managemed
     Commercial Support
     Optimized for scalability and cloud

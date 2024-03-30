@@ -26,7 +26,7 @@ There are other requirements as well that are necessary for effective backend. T
 
 For a practical understanding of these concepts, you can refer to the following tutorial:
 
-!!! code "[Deploying locally with Ollama](https://ollama.ai/blog/building-llm-powered-web-apps)"
+!!! abstract "[Deploying locally with Ollama](https://ollama.ai/blog/building-llm-powered-web-apps)"
 
 ## Essential Reading Material
 

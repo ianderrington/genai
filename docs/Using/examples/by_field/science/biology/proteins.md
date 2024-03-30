@@ -54,7 +54,7 @@ There are several optimization targets of direct interest
     ![image](https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278)
 
 
-??? code "[Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm)"
+??? abstract "[Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm)"
     
     **Developments**
 
@@ -75,7 +75,7 @@ There are several optimization targets of direct interest
     [Paper](https://www.biorxiv.org/content/10.1101/2021.07.09.450648v2.full.pdf)
 
 
-??? code "[MSA Transformer](https://github.com/facebookresearch/esm)"
+??? abstract "[MSA Transformer](https://github.com/facebookresearch/esm)"
 
     The author's demonstrate training an unsupervised PLM that operates on sets of aligned sequences. 
     Self-supervision helps to reconstruct the corrupted MSA. 
@@ -128,7 +128,7 @@ There are several optimization targets of direct interest
 
 
 
-??? code "🧬 [Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2)" deepgo-se
+??? abstract "🧬 [Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2)" deepgo-se
 
     **Developments** 
 
@@ -194,7 +194,7 @@ It is not necessarily just enough to identify a potential candidate but to have 
 
 !!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
 
-!!! code "[Papers on Machine learning for Proteins](https://github.com/yangkky/Machine-learning-for-proteins?tab=readme-ov-file)"
+!!! abstract "[Papers on Machine learning for Proteins](https://github.com/yangkky/Machine-learning-for-proteins?tab=readme-ov-file)"
 
 !!! note "[Nucleate AI in Biotech: AI for Protein Design](https://nucleate-hq.notion.site/AI-in-Protein-Design-Resource-Page-8c137f8ba2684402aef9e1e31b85776c)"
 

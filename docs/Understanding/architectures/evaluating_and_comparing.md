@@ -40,7 +40,7 @@ Hallucinations remain a core problem with LLMs as they may generate linguistic a
 ??? important "Hugging faces [leaderboard](https://huggingface.co/blog/leaderboards-on-the-hub-hallucinations) on hallucinations provides a comparison of different models' hallucinations". 
     Much is based on [awesome-hallucination-detection](https://github.com/EdinburghNLP/awesome-hallucination-detection) 
 
-!!! code "[Truthful - QA](https://github.com/sylinrl/TruthfulQA) helpes to Measuring How Models Mimic Human Falsehoods" 
+!!! abstract "[Truthful - QA](https://github.com/sylinrl/TruthfulQA) helpes to Measuring How Models Mimic Human Falsehoods" 
 
 
 #### Information Retrieval
@@ -65,10 +65,10 @@ It was, however Anthropic found, that [LLMs can perform better](https://www.anth
 
 While information retrieval are important, they might also be good at following instructions.
 
-??? code "[FollowIR: Evaluating and Teaching Information Retrieval Models to Follow Instructions](https://arxiv.org/pdf/2403.15246.pdf) creates FOLLOWIR, which contains a benchmark that explicitly measures the instruction following ability of retrieval model"
+??? abstract "[FollowIR: Evaluating and Teaching Information Retrieval Models to Follow Instructions](https://arxiv.org/pdf/2403.15246.pdf) creates FOLLOWIR, which contains a benchmark that explicitly measures the instruction following ability of retrieval model"
    
 
-??? code "[Lighteval by Hugging Face](https://github.com/huggingface/lighteval) provides lightweight framework for LLM evaluation"
+??? abstract "[Lighteval by Hugging Face](https://github.com/huggingface/lighteval) provides lightweight framework for LLM evaluation"
 
 #### Question Answering
 
@@ -87,7 +87,7 @@ While information retrieval are important, they might also be good at following 
 #### Law and policy
 
 
-!!! code "[Legal Bench](https://github.com/HazyResearch/legalbench/) is an ongoing open science effort to collaboratively curate tasks for evaluating LLM legal reasoning in English."
+!!! abstract "[Legal Bench](https://github.com/HazyResearch/legalbench/) is an ongoing open science effort to collaboratively curate tasks for evaluating LLM legal reasoning in English."
 
 #### Embodied Devices and Robotics
 
@@ -108,7 +108,7 @@ While it may be projective to consider AI as having 'psychology', it may be usef
 
 Sycophancy is the degree to which a model mirrors biases, large or small, that are put into input queries by the user. In ideal systems, sycophancy will be minimized to prevent _echo-chamber_ amplification of innaccuracies. 
 
-!!! code "The repo [Sycophancy-eval](https://github.com/meg-tong/sycophancy-eval) offers manners and methods of evaluating sycophancy. "
+!!! abstract "The repo [Sycophancy-eval](https://github.com/meg-tong/sycophancy-eval) offers manners and methods of evaluating sycophancy. "
 
 ### General Discussions
 
@@ -121,9 +121,9 @@ While it may seem reasonable to evaluate with a 'guess-and-check' approach, this
 
 ### Measurements Libraries
 
-!!! code "[Chain Forge: An open-source visual programming environment for battle-testing prompts to LLMs.](https://github.com/ianarawjo/ChainForge)"
+!!! abstract "[Chain Forge: An open-source visual programming environment for battle-testing prompts to LLMs.](https://github.com/ianarawjo/ChainForge)"
 
-??? code "[ROSCOE: A SUITE OF METRICS FOR SCORING STEP-BYSTEP REASONING](https://github.com/facebookresearch/ParlAI/tree/main/projects/roscoe) is ' a new suite of interpretable, unsupervised metrics that enables evaluation of step-by-step reasoning generations of LMs when no golden reference generation exists. ' "
+??? abstract "[ROSCOE: A SUITE OF METRICS FOR SCORING STEP-BYSTEP REASONING](https://github.com/facebookresearch/ParlAI/tree/main/projects/roscoe) is ' a new suite of interpretable, unsupervised metrics that enables evaluation of step-by-step reasoning generations of LMs when no golden reference generation exists. ' "
     [Paper](https://arxiv.org/pdf/2212.07919.pdf)
 
 
@@ -143,7 +143,7 @@ While it may seem reasonable to evaluate with a 'guess-and-check' approach, this
 
 #### Domain specific
 
-!!! code "[Legal Bench](https://github.com/HazyResearch/legalbench/) is an ongoing open science effort to collaboratively curate tasks for evaluating LLM legal reasoning in English."
+!!! abstract "[Legal Bench](https://github.com/HazyResearch/legalbench/) is an ongoing open science effort to collaboratively curate tasks for evaluating LLM legal reasoning in English."
 
 The evaluation of models helps us to identify which, if any, model to use for a particular task at hand. Directly related to the manner of pre-training, fine-tuning, and any RLHF, the ways that we consider the output can also be used to improve the models.
 

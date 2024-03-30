@@ -6,4 +6,4 @@ Input caching is a technique that leverages memory to improve response time and 
     This stores partial Query, Key, Value pairs to minimize prompt-reuse. 
     
 
-!!! code "[GPTCache](https://github.com/zilliztech/GPTCache) to quickly Cache your results to speed second-time queries."
+!!! abstract "[GPTCache](https://github.com/zilliztech/GPTCache) to quickly Cache your results to speed second-time queries."

@@ -45,7 +45,7 @@ The simplest manner of fine-tuning a model involves updating all of the original
 ### Adapter layers
 
 If all of the layers are frozen, it is possible to adapt the model using relatively simple models that rescale or adapt outputs.
-!!! code "[AdapterHub: A Framework for Adapting Transformers](https://arxiv.org/pdf/2007.07779.pdf) [Website](https://adapterhub.ml/)"
+!!! abstract "[AdapterHub: A Framework for Adapting Transformers](https://arxiv.org/pdf/2007.07779.pdf) [Website](https://adapterhub.ml/)"
 
 ### Low Rank Adaption (LoRA)
 
@@ -104,7 +104,7 @@ Fine-tuning can lead to significant improvements in both instruction following a
 
 There are also several tools available that can assist in the fine-tuning process.
 
-??? code "[Open Pipe](https://github.com/OpenPipe/OpenPipe) allows you to use powerful but expensive LLMs to fine-tune smaller and cheaper models"
+??? abstract "[Open Pipe](https://github.com/OpenPipe/OpenPipe) allows you to use powerful but expensive LLMs to fine-tune smaller and cheaper models"
     You can evaluate the model and prompt combinations in the playground, query your past requests, and export optimized training data.
     <img width="839" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/54d6ace2-522e-44af-a554-64f8bbfb383e">
 
@@ -124,7 +124,7 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
 
 
-!!! code "[Slow Llama](https://github.com/okuvshynov/slowllama) for finetuning on a M1/M2 mac"
+!!! abstract "[Slow Llama](https://github.com/okuvshynov/slowllama) for finetuning on a M1/M2 mac"
 
 In conclusion, fine-tuning is a crucial step in the development of AI models. It allows models to specialize and improve their performance on specific tasks, leading to more accurate and efficient AI systems.
 

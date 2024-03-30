@@ -219,7 +219,7 @@ It is possible that limitations fundamental to static agents are not goin to be 
 ??? tip "[Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent)"
      As usual, a splendid post by Lilian Weng
 
-!!! code "[Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of a nicely curated list of systems using agents"
+!!! abstract "[Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of a nicely curated list of systems using agents"
 
 ### Other
 

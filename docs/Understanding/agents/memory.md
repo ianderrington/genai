@@ -56,7 +56,7 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
 
 
-??? code "[VectorHub: Evaluation of multiple Vector databases](https://github.com/superlinked/VectorHub)" 
+??? abstract "[VectorHub: Evaluation of multiple Vector databases](https://github.com/superlinked/VectorHub)" 
     "Vector Hub is a free and open-sourced learning hub for people interested in adding vector retrieval to their ML stack. On VectorHub you will find practical resources to help you"
     [VDB comparisons](https://superlinked.com/vector-db-comparison/)
     
@@ -64,14 +64,14 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
 ## Text
 
-??? code "[BooookScore: A systematic exploration of book-length summarization in the era of LLMs](https://github.com/lilakk/BooookScore)" BooookScore
+??? abstract "[BooookScore: A systematic exploration of book-length summarization in the era of LLMs](https://github.com/lilakk/BooookScore)" BooookScore
     **Developments** The authors reveal an effective manner of providing effective summaries of long books using two methods: 1. Hierarchichal merging of chunk-level summaries, and 2. Incremental update using a running summary. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/2c711b18-d76f-4c75-b7fe-7960d8e7ef93)
     **Results** Human evaluation shows that "hierarchical merging produces more coherent summaries but may lack detail compared to incremental updating; closedsource models like GPT-4 and Claude 2 generate the most coherent summaries; and increasing chunk size can significantly improve incremental updating"
     [Paper](https://arxiv.org/abs/2310.00785)
     
 
-??? code "[Read-agent: A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts](https://github.com/read-agent/read-agent.github.io/)" read-agent
+??? abstract "[Read-agent: A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts](https://github.com/read-agent/read-agent.github.io/)" read-agent
     [Jupyter notebook](https://github.com/read-agent/read-agent.github.io/blob/main/assets/read_agent_demo.ipynb)
     **Developments**
     

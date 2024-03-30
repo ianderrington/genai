@@ -16,7 +16,7 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
     <img width="965" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/01bb7b6a-73d5-4969-a46f-ee1a35666082">
     <img width="544" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2dde6920-f3a1-453b-bce2-76d5926e3ed4">
 
-!!! code "[GPT for knowledge graphs](https://github.com/m-elbably/gpt-graph)"
+!!! abstract "[GPT for knowledge graphs](https://github.com/m-elbably/gpt-graph)"
     [Medium](https://medium.com/@m-elbably/gpt-graph-a-simple-tool-for-knowledge-graph-exploration-70e0e3861716)
 
 
@@ -27,7 +27,7 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
     <img width="570" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/63d90af4-6475-4622-9da9-ec90c979d745">
 
-!!! code "[GPT4Graph: Can Large Language Models Understand Graph sTructure Data? An Empirical Evaluation and Benchmarking"]"
+!!! abstract "[GPT4Graph: Can Large Language Models Understand Graph sTructure Data? An Empirical Evaluation and Benchmarking"]"
 
     <img width="543" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7be33fc1-ff46-4717-9208-15941be23b96">
     <img width="1107" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/77e8aa02-a435-4f8a-8bbf-a4d0dc4afecf">
@@ -35,7 +35,7 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 ### Other examples
 
-??? code "[Enhancing LLMs with Semantic-layers](https://github.com/tomasonjo/llm-movieagent)"
+??? abstract "[Enhancing LLMs with Semantic-layers](https://github.com/tomasonjo/llm-movieagent)"
     [Blog](https://towardsdatascience.com/enhancing-interaction-between-language-models-and-graph-databases-via-a-semantic-layer-0a78ad3eba49)
     Enhancing Interaction between Language Models and Graph Databases via a Semantic Layer
 
@@ -45,7 +45,7 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 
 !!! note "[Ontology mapping](https://medium.com/@peter.lawrence_47665/encouraging-results-for-knowledge-graph-extraction-by-llm-ontology-prompting-60a7e5dcaf0a)"
 
-??? code "[OntoGPT](https://github.com/monarch-initiative/ontogpt) uses two different methods to query knowledge graphs using LLMS"
+??? abstract "[OntoGPT](https://github.com/monarch-initiative/ontogpt) uses two different methods to query knowledge graphs using LLMS"
 
     Uses [SPIRES: Structured Prompt Interrogation and Recursive Extraction of Semantics](https://arxiv.org/pdf/2304.02711.pdf)
     A Zero-shot learning (ZSL) approach to extracting nested semantic structures from text
@@ -54,17 +54,17 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
     [SPINDOCTOR: Structured Prompt Interpolation of Narrative Descriptions Or Controlled Terms for Ontological Reporting](https://arxiv.org/pdf/2305.13338.pdf)
 
 
-??? code "[Universal Preprocessing Operators for Embedding Knowledge Graphs with Literals](https://arxiv.org/pdf/2309.03023.pdf) proposes a set of preprocessing operators that can transform KGs to be embedded within any method."
+??? abstract "[Universal Preprocessing Operators for Embedding Knowledge Graphs with Literals](https://arxiv.org/pdf/2309.03023.pdf) proposes a set of preprocessing operators that can transform KGs to be embedded within any method."
 
     [Github](https://gitlab.com/patryk.preisner/mkga/)
     <img width="584" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4316fd44-acd3-4cad-81fd-7568c88cb69b">
 
 ### Other Papers and utilities
 
-!!! code "[Diffbot + Langchain for KG creation](https://python.langchain.com/docs/use_cases/more/graph/diffbot_graphtransformer)"
+!!! abstract "[Diffbot + Langchain for KG creation](https://python.langchain.com/docs/use_cases/more/graph/diffbot_graphtransformer)"
 
 
-??? code "[Multimodal learning with graphs](https://yashaektefaie.github.io/mgl/)"
+??? abstract "[Multimodal learning with graphs](https://yashaektefaie.github.io/mgl/)"
     [Preprint](https://arxiv.org/pdf/2209.03299.pdf)
     [Nature](https://www.nature.com/articles/s42256-023-00624-6)
     While not strictly GenAI focused, this introduces a comprehensive manner of combining cross-modal dependencies using geometric relationships.

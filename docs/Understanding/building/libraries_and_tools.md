@@ -19,23 +19,23 @@ This section provides a selection of repositories that enable the creation of mo
 - [Chatall](https://github.com/sunner/ChatALL): This tool allows interaction with multiple chatbots at the same time.
 - [LocalAI](https://github.com/go-skynet/LocalAI): This is a drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
 
-??? code "[Tool Bench](https://github.com/OpenBMB/ToolBench) 'This project (ToolLLM) aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability.'"
+??? abstract "[Tool Bench](https://github.com/OpenBMB/ToolBench) 'This project (ToolLLM) aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability.'"
 
     ![image](https://github.com/OpenBMB/ToolBench/blob/master/assets/overview.png)
 
 ### Serving
-!!! code "[Open LLM](https://github.com/bentoml/OpenLLM) to run inference with any open-source large-language models, deploy to the cloud or on-premises, and build powerful AI apps."
+!!! abstract "[Open LLM](https://github.com/bentoml/OpenLLM) to run inference with any open-source large-language models, deploy to the cloud or on-premises, and build powerful AI apps."
 
 #### Distributed
 
-??? code "[Petals](https://github.com/bigscience-workshop/petals) Run large language models at home, BitTorrent-style."
+??? abstract "[Petals](https://github.com/bigscience-workshop/petals) Run large language models at home, BitTorrent-style."
 
     Generate text with distributed LLaMA 2 (70B), Stable Beluga 2, Guanaco-65B or BLOOM-176B and fine‑tune them for your own tasks — right from your desktop computer or Google Cola
     [Launch your own swarm](https://github.com/bigscience-workshop/petals/wiki/Launch-your-own-swarm)
 
 ### Programming Convenience
 
-??? code "[Magentic](https://github.com/jackmpcollins/magentic) for decorators"
+??? abstract "[Magentic](https://github.com/jackmpcollins/magentic) for decorators"
     A nice and simple plugin that allows a `@prompt` decorator to call functions as an llm, including function-choice calls.
     Their example](https://github.com/jackmpcollins/magentic)
     ```python
@@ -71,11 +71,11 @@ This section provides a selection of repositories that enable the creation of mo
 !!! tip "[Integrating with Azure Services](https://www.youtube.com/watch?v=tW2EA4aZ_YQ)"
 
 
-!!! code "[AGent Smith AI](https://github.com/monarch-initiative/agent-smith-ai) makes it easy to instantiate AI agents that can safely and easily call APIs and locally defined functions to interact with the world."
+!!! abstract "[AGent Smith AI](https://github.com/monarch-initiative/agent-smith-ai) makes it easy to instantiate AI agents that can safely and easily call APIs and locally defined functions to interact with the world."
 
-!!! code "[Monarch Assistant](https://github.com/monarch-initiative/monarch-assistant) Uses AGent Smith for RAG purposes"
+!!! abstract "[Monarch Assistant](https://github.com/monarch-initiative/monarch-assistant) Uses AGent Smith for RAG purposes"
 
-!!! code "[Curage GPT](https://github.com/monarch-initiative/curate-gpt)"
+!!! abstract "[Curage GPT](https://github.com/monarch-initiative/curate-gpt)"
 
 
 

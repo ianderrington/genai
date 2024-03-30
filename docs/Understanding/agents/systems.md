@@ -35,15 +35,15 @@ Here are a few frameworks of importance.
 ???+ important "[Crew.ai](https://github.com/joaomdmoura/crewai) is a framework for "
 
 
-??? code "[ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
+??? abstract "[ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
     Works with Camel to create agentic systems and has some generally good results. It is certainly not full-fledged software but provides a solid framework for creating systems of agents to produce software-enabled products.
 
-??? code "[Agency Swarm](https://github.com/VRSEN/agency-swarm) provides a language creating interacting systems of agents."
+??? abstract "[Agency Swarm](https://github.com/VRSEN/agency-swarm) provides a language creating interacting systems of agents."
     
 
-??? code "[MetaGPT](https://github.com/geekan/MetaGPT) enables different agents to interact and generate meaningful outputs based on varying tasks and personas."
+??? abstract "[MetaGPT](https://github.com/geekan/MetaGPT) enables different agents to interact and generate meaningful outputs based on varying tasks and personas."
 
-!!! code "[Reworkd/AgentGPT](https://github.com/reworkd/AgentGPT) '🤖 Assemble, configure, and deploy autonomous AI Agent(s) in your browser. 🤖'"
+!!! abstract "[Reworkd/AgentGPT](https://github.com/reworkd/AgentGPT) '🤖 Assemble, configure, and deploy autonomous AI Agent(s) in your browser. 🤖'"
 
 
 !!! tip "[Self-play GPT](https://arxiv.org/pdf/2305.10142.pdf)"
@@ -235,14 +235,14 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
     ![image](https://github.com/chain-ml/council/raw/main/docs/source/introduction/engine_flow.png)
 
 
-??? code "[SocraticAI](https://github.com/RunzheYang/SocraticAI/tree/main) to use the power of conversation to solve problems. Very interesting"
+??? abstract "[SocraticAI](https://github.com/RunzheYang/SocraticAI/tree/main) to use the power of conversation to solve problems. Very interesting"
     [Description](https://princeton-nlp.github.io/SocraticAI/)
     ![image](https://github.com/ianderrington/genai/assets/76016868/48bf16aa-efde-4e38-b7e1-30963f74aa66)
 
 
 ## Swarms
 
-??? code "[Heirarchichal Autonomous Agent Swarm: HAAS](https://github.com/daveshap/OpenAI_Agent_Swarm) to create self-direct, self-correcting, and self-improving agent systems." HAAS
+??? abstract "[Heirarchichal Autonomous Agent Swarm: HAAS](https://github.com/daveshap/OpenAI_Agent_Swarm) to create self-direct, self-correcting, and self-improving agent systems." HAAS
     
 
 !!! tip "[Swarms](https://medium.com/@kyeg/swarms-of-ai-agents-automating-everything-c554f5be421b )"

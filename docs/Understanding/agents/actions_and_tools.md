@@ -19,30 +19,30 @@ Actions can be thought of interacting in an environment, this environment can ha
 
 
 
-??? code "[On the Tool Manipulation Capability of Open-source Large Language Models](https://github.com/sambanova/toolbench/tree/main)"
+??? abstract "[On the Tool Manipulation Capability of Open-source Large Language Models](https://github.com/sambanova/toolbench/tree/main)"
     [Paper](https://arxiv.org/pdf/2305.16504.pdf)
     Provides a method to allow open-source LLMs to work with tools for real-world tasks.
 
 
-??? code "[Langchain Toolkits](https://github.com/langchain-ai/langchain/tree/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent_toolkits)"
+??? abstract "[Langchain Toolkits](https://github.com/langchain-ai/langchain/tree/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent_toolkits)"
     <img width="971" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/65e22011-f815-4f19-8d78-24bc2c731b08">
 
 
 
 !!! tip "[Tool Documentation Enables Zero-Shot Tool-Usage with Large Language Models](https://arxiv.org/pdf/2308.00675.pdf) Demonstrates that presenting documentation of tool usage is likely more valuable than providing examples."
 
-!!! code "[Local LLM Function Calling](https://github.com/rizerphe/local-llm-function-calling) enforces json semantics for calls to functions"
+!!! abstract "[Local LLM Function Calling](https://github.com/rizerphe/local-llm-function-calling) enforces json semantics for calls to functions"
 
-!!! code "[Tool LLM](https://huggingface.co/papers/2307.16789) This describes a novel approach enabling over 16000 API's to be called through an intelligent routing mechanism. [Github](https://github.com/OpenBMB/ToolBench) Uses RapidAPI connector to do so. "
+!!! abstract "[Tool LLM](https://huggingface.co/papers/2307.16789) This describes a novel approach enabling over 16000 API's to be called through an intelligent routing mechanism. [Github](https://github.com/OpenBMB/ToolBench) Uses RapidAPI connector to do so. "
 
-!!! code "[Web search tools that allow a number of search engines to be used](https://github.com/ZubinGou/llm-agent-web-tools)"
+!!! abstract "[Web search tools that allow a number of search engines to be used](https://github.com/ZubinGou/llm-agent-web-tools)"
 
 
 ### Executors
 
 The action that an agent may take is enabled by an `AgentExecutor` or [interpreter](./cognitive_architecture.md/#interpreters) of the LLM output, that coordinates the call to perform the action.
 
-!!! code "[Langchain Agent Executor](https://github.com/langchain-ai/langchain/blob/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent.py#L637)"
+!!! abstract "[Langchain Agent Executor](https://github.com/langchain-ai/langchain/blob/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent.py#L637)"
 
 ###  Interpeters and Routers
 
@@ -55,12 +55,12 @@ Interpreting Such efforts can be used to reduce input complexity, token-count, t
 
 #### Libraries
 
-!!! code "[Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts."
+!!! abstract "[Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts."
 
-!!! code "[Semantic Kernel](https://github.com/microsoft/semantic-kernel/tree/main)"
+!!! abstract "[Semantic Kernel](https://github.com/microsoft/semantic-kernel/tree/main)"
     [Github](https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb),
 
-!!! code "️[Guidance](https://github.com/microsoft/guidance/) Interleaving generation, prompting and logical control to single  continuous flow."
+!!! abstract "️[Guidance](https://github.com/microsoft/guidance/) Interleaving generation, prompting and logical control to single  continuous flow."
 
 
 
