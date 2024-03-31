@@ -1,13 +1,10 @@
 There are many numerous use cases by field and modality, but they tend to follow in the following end-uses.
 
-## Summarizaton 
+### Assistants
+Assistants are those who do complete tasks, much like agents in [baby AGI](../../Understanding/agents/examples.md). Their domain of function may be limited primarly by the [tools and plugins](../../Understanding/agents/actions_and_tools.md).
 
-## Text summarization
 
-### Audio summarization
- 
-### Video summarization
-
+??? abstract "[Skyvern](https://github.com/Skyvern-AI/skyvern) automates browser-based workflows using LLMs and computer vision. It provides a simple API endpoint to fully automate manual workflows, replacing brittle or unreliable automation solutions."
 
 ## References
 

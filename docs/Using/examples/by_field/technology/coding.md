@@ -14,6 +14,8 @@ Very powerfully it can generate code to accomplish a task based on natural langu
 
 ## Coding
 
+??? abstract "[Open Devin](https://github.com/OpenDevin/OpenDevin) to provide a powerful GUI-enablement resembling the commercial devin code assistant" 
+
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/peterw/Chat-with-Github-Repo)  [Chat with github repo](https://github.com/peterw/Chat-with-Github-Repo)"
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/bigcode-project/octopack) [Octopack]([Octopack](https://github.com/bigcode-project/octopack)) [Github](https://arxiv.org/pdf/2308.07124.pdf)"

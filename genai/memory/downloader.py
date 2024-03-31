@@ -297,8 +297,9 @@ import re
 
 class GitHubDocument(Document):
     @staticmethod
-    def return_is_doc_type(url):
-        if "github.com" in parsed_url.netloc:
+    def return_is_doc_type(parsed_url):
+        if "github.com" in parsed_url.netloc and "badgen" not in parsed_url.netloc:
+            
             return True
         return False
 
