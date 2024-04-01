@@ -2871,6 +2871,12 @@ and
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3063,6 +3069,33 @@ and
   
   
     <li class="md-nav__item">
+      <a href="../../building/alignment.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Alignment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../building/commercial_products.html" class="md-nav__link">
         
   
@@ -3070,6 +3103,33 @@ and
     
   
     Platforms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../building/compliance.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Compliance
   
 
     
@@ -3117,13 +3177,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../building/data_backbone.html" class="md-nav__link">
+      <a href="../../building/data.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Data backbone
+    Data
   
 
     
@@ -3198,6 +3258,33 @@ and
   
   
     <li class="md-nav__item">
+      <a href="../../building/model_serving.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Model serving
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../building/orchestrating.html" class="md-nav__link">
         
   
@@ -3225,13 +3312,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../building/serving.html" class="md-nav__link">
+      <a href="../../building/training_and_finetuning.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Serving
+    Training and finetuning
   
 
     
@@ -3252,13 +3339,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../building/training_and_finetuning.html" class="md-nav__link">
+      <a href="../../building/vector_databases.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Training and finetuning
+    Vector databases
   
 
     
@@ -6182,9 +6269,9 @@ and
 
   <h1>Augmentation</h1>
 
-<p>The reverse of the phrase "garbage in, garbage out", is "goodness in, goodness out". While we can use <a href="selection.html">selection</a> to improve the quality of data, the  data augmentation can help expand the 'goodness' that can be enabled. Data augmentation can be used in areas where data is specialized, real-world, costly, scarce, or not sufficiently diverse. It can also be used to reformat or improve upon general input data by highlighting particular components about that data. It can also be used to generated higher quality data that can improve the behavior of LLM's in various manners. Large volumes of synthetic data, which can be used to train highly task-specific models.  The use of synthetic data can be considered <a href="./recurrent.md">recurrent</a>.</p>
+<p>The reverse of the phrase "garbage in, garbage out", is "goodness in, goodness out". While we can use <a href="selection.html">selection</a> to improve the quality of data, the  data augmentation can help expand the 'goodness' that can be enabled. Data augmentation can be used in areas where data is specialized, real-world, costly, scarce, or not sufficiently diverse. It can also be used to reformat or improve upon general input data by highlighting particular components about that data. It can also be used to generated higher quality data that can improve the behavior of LLM's in various manners. Large volumes of synthetic data, which can be used to train highly task-specific models.  The use of synthetic data can be considered <a href="../../architectures/training/recurrent.html">recurrent</a>.</p>
 <h2 id="what-is-data-augmentation">What is Data Augmentation?<a class="headerlink" href="#what-is-data-augmentation" title="Permanent link">&para;</a></h2>
-<p>Data augmentation is a process of creating new data from the existing data for model <a href="../../architectures/training/pre-training.html">pre-training</a> and <a href="../../architectures/training/finetuning.html">fine-tuning</a>. It is a form of <a href="synthetic.md">synthetic data</a> generation that can be used to improve the performance of machine learning models. The main idea behind data augmentation is to create variations in or structure from original data, that can capture different perspectives and scenarios, thereby enriching the dataset. Both heuristics and AI-enabled algorithms be used to augment data, thought predominantly AI is used for augmentation of text-based LLMS. Data augmentation has shown direct value in nearly all domains and modalities it has been explored in. We focus here primarily on text-LLM augmentation. </p>
+<p>Data augmentation is a process of creating new data from the existing data for model <a href="../../architectures/training/pre-training.html">pre-training</a> and <a href="../../architectures/training/finetuning.html">fine-tuning</a>. It is a form of data that can be used to improve the performance of machine learning models. The main idea behind data augmentation is to create variations in or structure from original data, that can capture different perspectives and scenarios, thereby enriching the dataset. Both heuristics and AI-enabled algorithms be used to augment data, thought predominantly AI is used for augmentation of text-based LLMS. Data augmentation has shown direct value in nearly all domains and modalities it has been explored in. We focus here primarily on text-LLM augmentation. </p>
 <h3 id="what-does-data-augmentation-do">What does Data augmentation do?<a class="headerlink" href="#what-does-data-augmentation-do" title="Permanent link">&para;</a></h3>
 <ul>
 <li>

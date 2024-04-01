@@ -241,6 +241,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.managen.ai/Understanding/building/alignment.html</loc>
+         <lastmod>2024-04-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.managen.ai/Understanding/building/back_end.html</loc>
          <lastmod>2024-04-01</lastmod>
          <changefreq>daily</changefreq>
@@ -251,12 +256,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.managen.ai/Understanding/building/compliance.html</loc>
+         <lastmod>2024-04-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.managen.ai/Understanding/building/computation.html</loc>
          <lastmod>2024-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.managen.ai/Understanding/building/data_backbone.html</loc>
+         <loc>https://www.managen.ai/Understanding/building/data.html</loc>
          <lastmod>2024-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -286,6 +296,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.managen.ai/Understanding/building/model_serving.html</loc>
+         <lastmod>2024-04-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.managen.ai/Understanding/building/monitoring.html</loc>
          <lastmod>2024-04-01</lastmod>
          <changefreq>daily</changefreq>
@@ -296,12 +311,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.managen.ai/Understanding/building/serving.html</loc>
+         <loc>https://www.managen.ai/Understanding/building/training_and_finetuning.html</loc>
          <lastmod>2024-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.managen.ai/Understanding/building/training_and_finetuning.html</loc>
+         <loc>https://www.managen.ai/Understanding/building/vector_databases.html</loc>
          <lastmod>2024-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
