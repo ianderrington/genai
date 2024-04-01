@@ -18,7 +18,7 @@
         <link rel="prev" href="selection.html">
       
       
-        <link rel="next" href="synthetic.html">
+        <link rel="next" href="../tokenizing.html">
       
       
         
@@ -1004,6 +1004,33 @@ and
   
   
     <li class="md-nav__item">
+      <a href="collection.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Collection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="selection.html" class="md-nav__link">
         
   
@@ -1177,33 +1204,6 @@ and
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="synthetic.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Synthetic
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -6184,7 +6184,7 @@ and
 
 <p>The reverse of the phrase "garbage in, garbage out", is "goodness in, goodness out". While we can use <a href="selection.html">selection</a> to improve the quality of data, the  data augmentation can help expand the 'goodness' that can be enabled. Data augmentation can be used in areas where data is specialized, real-world, costly, scarce, or not sufficiently diverse. It can also be used to reformat or improve upon general input data by highlighting particular components about that data. It can also be used to generated higher quality data that can improve the behavior of LLM's in various manners. Large volumes of synthetic data, which can be used to train highly task-specific models.  The use of synthetic data can be considered <a href="./recurrent.md">recurrent</a>.</p>
 <h2 id="what-is-data-augmentation">What is Data Augmentation?<a class="headerlink" href="#what-is-data-augmentation" title="Permanent link">&para;</a></h2>
-<p>Data augmentation is a process of creating new data from the existing data for model <a href="../../architectures/training/pre-training.html">pre-training</a> and <a href="../../architectures/training/finetuning.html">fine-tuning</a>. It is a form of <a href="synthetic.html">synthetic data</a> generation that can be used to improve the performance of machine learning models. The main idea behind data augmentation is to create variations in or structure from original data, that can capture different perspectives and scenarios, thereby enriching the dataset. Both heuristics and AI-enabled algorithms be used to augment data, thought predominantly AI is used for augmentation of text-based LLMS. Data augmentation has shown direct value in nearly all domains and modalities it has been explored in. We focus here primarily on text-LLM augmentation. </p>
+<p>Data augmentation is a process of creating new data from the existing data for model <a href="../../architectures/training/pre-training.html">pre-training</a> and <a href="../../architectures/training/finetuning.html">fine-tuning</a>. It is a form of <a href="synthetic.md">synthetic data</a> generation that can be used to improve the performance of machine learning models. The main idea behind data augmentation is to create variations in or structure from original data, that can capture different perspectives and scenarios, thereby enriching the dataset. Both heuristics and AI-enabled algorithms be used to augment data, thought predominantly AI is used for augmentation of text-based LLMS. Data augmentation has shown direct value in nearly all domains and modalities it has been explored in. We focus here primarily on text-LLM augmentation. </p>
 <h3 id="what-does-data-augmentation-do">What does Data augmentation do?<a class="headerlink" href="#what-does-data-augmentation-do" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -6258,7 +6258,7 @@ and
 </div>
 
 <details class="abstract">
-<summary><a href="https://github.com/GAIR-NLP/ReAlign">Reformatted Alignment</a> demonstrates that reformatting responses of instruction data with to pre-established criteria and collated evidence improves alignment, factuality, and readability.</summary>
+<summary><a class="glightbox" href="https://badgen.net/github/stars/GAIR-NLP/ReAlign" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/GAIR-NLP/ReAlign" /></a> <a href="[Reformatted Alignment](https://github.com/GAIR-NLP/ReAlign)">Reformatted Alignment</a> demonstrates that reformatting responses of instruction data with to pre-established criteria and collated evidence improves alignment, factuality, and readability.</summary>
 <p><strong>Develpoments</strong> By reformatting instruction data in a consistent manner, and connecting it with a Google Search API, the results are able to generate higher quality data that is ReAligned' resulting in improvements over several models, judged both by GPT-4 and people. </p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0e024b17-a3bf-440f-9605-54636db1d81b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="619" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0e024b17-a3bf-440f-9605-54636db1d81b"></a></p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/1953f494-583e-47bd-8dca-8958cc9020ce" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="656" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/1953f494-583e-47bd-8dca-8958cc9020ce"></a>
@@ -6298,11 +6298,11 @@ and
 <h2 id="useful-resources">Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">&para;</a></h2>
 </details>
 <div class="admonition abstract">
-<p class="admonition-title"><a href="https://github.com/google-research/syn-rep-learn">StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners</a></p>
+<p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/google-research/syn-rep-learn" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/google-research/syn-rep-learn" /></a> <a href="[StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners](https://github.com/google-research/syn-rep-learn)">StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners</a></p>
 <p>This research paper by Google Research delves into the use of synthetic images generated from text-to-image models for training visual representation learners.</p>
 </div>
 <div class="admonition abstract">
-<p class="admonition-title"><a href="https://github.com/shacklettbp/madrona">Madrona</a></p>
+<p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/shacklettbp/madrona" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/shacklettbp/madrona" /></a> <a href="[Madrona](https://github.com/shacklettbp/madrona)">Madrona</a></p>
 <p>Madrona is a prototype game engine designed for creating high-throughput, GPU-accelerated simulators. These simulators can run thousands of virtual environment instances and generate millions of aggregate simulation steps per second on a single GPU.</p>
 </div>
 <div class="admonition abstract">
@@ -6441,16 +6441,16 @@ and
         
           
           <a
-            href="synthetic.html"
+            href="../tokenizing.html"
             class="md-footer__link md-footer__link--next"
-            aria-label="Next: Synthetic"
+            aria-label="Next: Tokenizing"
           >
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Synthetic
+                Tokenizing
               </div>
             </div>
             <div class="md-footer__button md-icon">

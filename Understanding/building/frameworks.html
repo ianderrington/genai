@@ -1000,6 +1000,33 @@ and
   
   
     <li class="md-nav__item">
+      <a href="../data/preparation/collection.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Collection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../data/preparation/selection.html" class="md-nav__link">
         
   
@@ -1034,33 +1061,6 @@ and
     
   
     Augmentation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/preparation/synthetic.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Synthetic
   
 
     
@@ -2968,15 +2968,15 @@ and
 </li>
       
         <li class="md-nav__item">
-  <a href="#frameworks" class="md-nav__link">
+  <a href="#layer-1-foundation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Frameworks
+        Layer 1: Foundation
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Frameworks">
+    <nav class="md-nav" aria-label="Layer 1: Foundation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -6079,15 +6079,15 @@ and
 </li>
       
         <li class="md-nav__item">
-  <a href="#frameworks" class="md-nav__link">
+  <a href="#layer-1-foundation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Frameworks
+        Layer 1: Foundation
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Frameworks">
+    <nav class="md-nav" aria-label="Layer 1: Foundation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -6246,20 +6246,20 @@ and
 <tr>
 <td>Layer 3: Deployment</td>
 <td>Evaluation</td>
-<td>Systems for assessing the performance and effectiveness of AI models.</td>
-<td>MANAGEN: FIND EVALUATION SYSTEMS</td>
+<td>Systems for assessing the performance and effectiveness of AI systems.</td>
+<td><a href="../agents/evaluating_and_comparing.html">System evaluators</a></td>
 </tr>
 <tr>
 <td></td>
 <td>Prompt Management</td>
 <td>Systems to manage and refine the prompts used in conversational AI.</td>
-<td>Prompt Management System</td>
+<td><a href="../prompting/index.html#libraries-and-collections">Prompt Management System</a></td>
 </tr>
 <tr>
 <td></td>
 <td>Orchestration</td>
 <td>Tools for managing complex workflows and processes in AI operations.</td>
-<td>Orchestration Tool</td>
+<td><a href="orchestrating.html">Orchestration Tools</a></td>
 </tr>
 <tr>
 <td></td>
@@ -6274,7 +6274,31 @@ and
 <td><a href="https://gradio.app">Gradio</a>, <a href="https://streamlit.io">streamlit.io</a></td>
 </tr>
 <tr>
-<td>Layer 2: Data</td>
+<td></td>
+<td>Model Serving</td>
+<td>Services to deploy AI models and perform inference at scale.</td>
+<td><a href="./model_serving.md">Model Serving</a></td>
+</tr>
+<tr>
+<td>Layer 2: Model building</td>
+<td>Model comparisons</td>
+<td>Manners of evaluating and comparing models across baselines and benchmarks</td>
+<td><a href="../architectures/evaluating_and_comparing.html">Model comparisons</a></td>
+</tr>
+<tr>
+<td></td>
+<td>Foundation Models</td>
+<td>Pre-built models offering a range of capabilities and uses.</td>
+<td><a href="../architectures/pre_trained_models.html">Models</a></td>
+</tr>
+<tr>
+<td></td>
+<td>GPU Providers</td>
+<td>Providers of computational resources, specifically GPUs, for AI processing.</td>
+<td><a href="computation.html">Computation</a></td>
+</tr>
+<tr>
+<td>Layer 1: Data</td>
 <td>Data Pre-processing</td>
 <td>Tools for cleaning, normalizing, and preparing data for analysis.</td>
 <td><a href="https://cleanlab.ai">cleanlab.ai</a>, <a href="https://unstructured.io/">unstructured.io</a></td>
@@ -6282,46 +6306,40 @@ and
 <tr>
 <td></td>
 <td>ETL + Data Pipelines</td>
-<td>Tools to extract, transform, and load data, and to manage data flow.</td>
-<td>ETL &amp; Data Pipeline Tool</td>
+<td>Tools to find, extract, transform, and load data, and to manage data flow.</td>
+<td><a href="../data/sources.html">Data set solutions</a></td>
 </tr>
 <tr>
 <td></td>
 <td>Databases</td>
 <td>Services for structured data storage, including vector databases and caches.</td>
-<td>Database Service</td>
+<td>[Google]</td>
 </tr>
 <tr>
-<td>Layer 1: Foundation</td>
-<td>Model Deployment + Inference</td>
-<td>Services to deploy AI models and perform inference at scale.</td>
-<td>Model Deployment Service</td>
-</tr>
-<tr>
+<td>Layer 0: Languages</td>
 <td></td>
-<td>Foundation Models</td>
-<td>Pre-built models offering a range of capabilities and uses.</td>
-<td>Foundation Model</td>
-</tr>
-<tr>
 <td></td>
-<td>GPU Providers</td>
-<td>Providers of computational resources, specifically GPUs, for AI processing.</td>
-<td>GPU Provider</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>Table modified from <a href="https://menlovc.com/perspective/the-modern-ai-stack-design-principles-for-the-future-of-enterprise-ai-architectures/">here</a></p>
-<h2 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h2>
+<h2 id="layer-1-foundation">Layer 1: Foundation<a class="headerlink" href="#layer-1-foundation" title="Permanent link">&para;</a></h2>
 <p>Starting with base programming languages, increasingly higher-level frameworks enable training and calling of AI models. Higher-level orchestration libraries and platforms allow creating and evaluating chains, agents, and systems that sometimes use visual interfaces. These can often be augmented with various tools/packages/repositories. On top of these involve mostly or all-complete frameworks and platforms that enable nearly complete.</p>
 <h3 id="base-languages">Base languages<a class="headerlink" href="#base-languages" title="Permanent link">&para;</a></h3>
-<p>Prominent languages include <a href="https://www.python.org">python</a>, <a href="https://en.wikipedia.org/wiki/CUDA">C++/CUDA</a>, and <a href="https://www.javascript.com">Javascript</a>. Due to its popularity, this project will be python-focused.</p>
+<p>Prominent languages include <a href="https://www.python.org">python</a>, <a href="https://en.wikipedia.org/wiki/CUDA">C++/CUDA</a>, and <a href="https://www.javascript.com">Javascript</a>.</p>
 <h3 id="ai-level-software-libraries">AI-level software libraries<a class="headerlink" href="#ai-level-software-libraries" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://pytorch.org/">PyTorch</a> is a popular python-focused system for creating and using AI.</li>
-<li><a href="https://tensorflow.org">Tensorflow</a> is a popular multi-language eco-system for creating and using AI.</li>
-<li><a href="https://spacy.io/">spAcy</a> is a library for advanced Natural Language Processing in Python and Cython.</li>
-</ul>
+<details class="abstract">
+<summary><a href="https://pytorch.org/">PyTorch</a> is a popular python-focused system for creating and using AI.</summary>
+</details>
+<details class="abstract">
+<summary><a href="https://tensorflow.org">Tensorflow</a> is a popular multi-language eco-system for creating and using AI.</summary>
+</details>
+<details class="abstract">
+<summary><a href="https://github.com/google/jax">JAX</a> is a library enabling composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more</summary>
+</details>
+<details class="abstract">
+<summary><a href="https://spacy.io/">spAcy</a> is a library for advanced Natural Language Processing in Python and Cython.</summary>
+</details>
 <h3 id="apis-based-model-usage">APIs based model usage<a class="headerlink" href="#apis-based-model-usage" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://github.com/openai/openai-python">OpenAI</a></li>
@@ -6339,10 +6357,10 @@ Enterprise expansions with LangSmith, LangChainHub and more</li>
 <p class="admonition-title"><a href="https://python.langchain.com/en/latest/#">Langchain</a> Is a thorough python and javascript orchestration language for adaptable, memory and tooling-equipped calls that can enable agentic AI.</p>
 </div>
 <div class="admonition tip">
-<p class="admonition-title"><a href="https://github.com/langchain-ai/langserve">LangServe</a> will provide a hosted version of LangServe for one-click deployments of LangChain applications.</p>
+<p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/langchain-ai/langserve" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/langchain-ai/langserve" /></a> <a href="[LangServe](https://github.com/langchain-ai/langserve)">LangServe</a> will provide a hosted version of LangServe for one-click deployments of LangChain applications.</p>
 </div>
 <div class="admonition tip">
-<p class="admonition-title"><a href="https://github.com/langchain-ai/opengpts">OpenGPTs</a> Provides an open-source effort to integrate multiple LLMs, and builds upon Langchain, LangServe, and LangSmith</p>
+<p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/langchain-ai/opengpts" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/langchain-ai/opengpts" /></a> <a href="[OpenGPTs](https://github.com/langchain-ai/opengpts)">OpenGPTs</a> Provides an open-source effort to integrate multiple LLMs, and builds upon Langchain, LangServe, and LangSmith</p>
 </div>
 <p><strong>Their Stack</strong></p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c66bf027-8556-43e6-8e73-de59c5e58d95" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c66bf027-8556-43e6-8e73-de59c5e58d95" /></a></p>
@@ -6363,8 +6381,9 @@ Enterprise expansions with LangSmith, LangChainHub and more</li>
 <summary><a href="https://lightning.ai/docs/pytorch/latest/">Pytorch Lightning</a> Enables model training with Pytorch and minimizes the boilerplate</summary>
 <p><a href="https://lightning.ai/docs/pytorch/stable/advanced/model_parallel.html">Model parallelism</a></p>
 </details>
+<p>??? abstract "<a href="https://github.com/Lightning-AI/lightning-thunder?tab=readme-ov-file">Pytorch Lightning THunder</a></p>
 <details class="abstract">
-<summary><a href="https://github.com/microsoft/DeepSpeed">Deep Speed (by MSFT)</a> empowers ChatGPT-like model training with a single click, offering 15x speedup over SOTA RLHF systems with unprecedented cost reduction at all scales</summary>
+<summary><a class="glightbox" href="https://badgen.net/github/stars/microsoft/DeepSpeed" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/microsoft/DeepSpeed" /></a> <a href="[Deep Speed (by MSFT)](https://github.com/microsoft/DeepSpeed)">Deep Speed (by MSFT)</a> empowers ChatGPT-like model training with a single click, offering 15x speedup over SOTA RLHF systems with unprecedented cost reduction at all scales</summary>
 <p><a href="https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses">Blog on Deepspeed Ulysses</a>
 <a class="glightbox" href="https://github.com/microsoft/DeepSpeed/raw/master/blogs/assets/images/ds-chat-overview.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/microsoft/DeepSpeed/raw/master/blogs/assets/images/ds-chat-overview.png" /></a></p>
 <p>DeepSpeed-Ulysses uses a simple, portable, and effective methodology for enabling highly efficient and scalable LLM training with extremely long sequence lengths
