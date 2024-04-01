@@ -10,7 +10,7 @@ Here are a few boards that help to aggregate and test models that have been rele
 - [lmsys.org leader board](https://lmsys.org/blog/2023-06-22-leaderboard/)
 
 ## **What** to evaluate?
-There are several domains of expertise where it may be essential to measure Model's performance. For general-performance models, even if [multi-model](models/multimodel.md), it is useful to consider [multiple-criteria](#multi-criteria-evaluation) simultaneously, which may include [specific criteria](#specific-evaluation) to evaluate
+There are several domains of expertise where it may be essential to measure Model's performance. For general-performance models, even if not [multi-model](models/multimodal.md), it is useful to consider [multiple-criteria](#multi-criteria-evaluation) simultaneously, which may include [specific criteria](#specific-evaluation) to evaluate
 
 
 ### Multi-criteria evaluation

@@ -209,7 +209,7 @@ What do you need to know?
     
     - [🛠️ Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
     - [🧭 Consider Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies. 
-    - 🏗️ [Deploy](./deploying/index.md) your model. 
+    - 🏗️ [Building](./building/index.md) your model. 
     
 
 In the documents you read here, you will be able to see an increasingly consistent and understandable discussion of Gen()AI technologies, enabled by Gen()AI technologies herein described. Like most powerful technology, Gen()AI can be a two-edged sword and effective use requires responsible and thoughtful understanding. ⚖️

@@ -15,7 +15,7 @@ The challenges associated with GenAI can be broadly categorized into [technical 
     * Develop GPU alternatives
     * Making [agents](../agents/index.md) usable
     * Improve learning from human preferences
-    * Improving [interfaces](../deploying/front_end.md) with GenAI
+    * Improving [UI/UX experience](../building/front_end.md) with GenAI
     
 ### Hallucinations
 

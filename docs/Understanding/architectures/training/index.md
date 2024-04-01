@@ -12,7 +12,7 @@ Training GenAI will generally be domain/modality specific.
 ### What is done 
 - Self-supervised [**pre-training**](pre-training.md) to predict the next token with reasonable likelihoods.
 - Supervised or self-supervised [Finetuning](./finetuning.md) on higher quality data sets.
-    - These datasets may be done so [recurrently](./recurrent.md) using [simulated data](../../data/preparation/synthetic.md).
+    - These datasets may be done so [recurrently](./recurrent.md) using [simulated data](../../data/preparation/augmentation.md).
 - [**Automatically correcting**](#automatic-correction) models to more accurately train a model to produce output that is is more globally accurate to the input prompts.
 
 #### Retrieval Aware Training

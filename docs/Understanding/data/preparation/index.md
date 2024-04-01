@@ -38,7 +38,6 @@ graph LR
 
 4. **Data Augmentation**: To further enhance the dataset, data augmentation techniques are applied. This involves generating new data points from existing ones through various transformations, thereby increasing the quality, diversity and volume of the training data. [Learn more](augmentation.md).
 
-5. **Data Simulation**: To provide data in domains where there is limited relevance, it can be useful to generate completely new data for training. While this method may induce potential failures due to loss of epistemic groundedness, it can have merit by providing examples in training data that might never exist. [Learn more](./synthetic.md)
 
 
 

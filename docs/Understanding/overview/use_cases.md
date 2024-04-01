@@ -25,7 +25,7 @@ Because at its core, GenAI works on Information, there several core ways numerou
 
 ### Creating information 
 
-At it's base, Generative AI is used to create information, such as new text or images. The information that is created can have two general uses: for direct muse by people or other algorithms, or for the use in the training or improving Gen()AI using [simulated](../data/preparation/synthetic.md) data. 
+At it's base, Generative AI is used to create information, such as new text or images. The information that is created can have two general uses: for direct muse by people or other algorithms, or for the use in the training or improving Gen()AI using [simulated](../data/preparation/augmentation.md) data. 
 
 ### Converting Information
 

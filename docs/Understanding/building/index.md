@@ -1,8 +1,37 @@
-Deploying models allows callers, people or other applications, to utilize them. It initially involves making the model accessible for calling. However, it's essential to look at the deployment of the model separately from the deployment of the model's encapsulating project, even though the two are closely related.
+---
+hide:
 
-There can be multiple components involved, especially for clients with higher requirements. The desired models should be stored in a file and then made available for service. Users' input is directed to the hosted model, optionally batched to enhance average request latency, and the results are returned and appropriately redirected to the users.
+  - toc
+---
 
-When developing AI-enabled products, consider the following components:
+Building a GenAI application 'from scratch' can be a very daunting process considering the [the stack](#the-stack) that is involved. Quite fortunately, many tools, services, and libraries exist to accelerate a full-stack GenAI solution. Lets first look at the components that need to be put together. 
+
+## The stack 
+| Layer             | Component            | Description                                                                 | 
+|-------------------|----------------------|-----------------------------------------------------------------------------|
+| Layer 4: Management | [Monitoring](./monitoring.md)        | Tools for monitoring the AI system's performance and health.            |
+|                   | [Compliance](./compliance.md)            | Uses observability to ensure the system is operating with legal and ethical boundaries |                  
+| Layer 3: Application | [UI/UX Front ends](./front_end.md)       | Guis and interfaces are specifically designed for streamlined connection with GenAI models.         |
+|                   | [System evaluators](../agents/evaluating_and_comparing.md)            | Systems for assessing the performance and effectiveness of AI systems.      |   
+|                   |  [Orchestration Tools](./orchestrating.md)          |  Languages and services to create and coordinate LLM- chains, agents workflows involving memory          |
+|                   | [Vector Database](./vector_databases.md)              | Manners of methods of storing/indexing and retrieving documents.         |
+|                   | [Prompt Management](../prompting/index.md#libraries-and-collections)  | Systems to manage and refine the prompts used in conversational AI.          |   
+|                   | [Model Optimization](../architectures/optimization/index.md) | Manners and methods of enabling models to fulfil customer requirements | 
+|                   | [Model Serving](./model_serving.md) | Services to deploy AI models and perform inference at scale.       |  
+| Layer 2: Models   | [Computation](./computation.md)          | Providers of computational resources, specifically GPUs, for AI processing.  |              
+|                   | [AI Alignment](./alignment.md)          | Tools and services to ensure the safety of AI systems.            |
+|                   | Model comparison methods | Manners of evaluating and comparing models across baselines and benchmarks| [Model comparisons](../architectures/evaluating_and_comparing.md) |
+|                   |[ML Ops](#ml-ops)    |  ML operations enables efficient coordination around Model training and tracking | 
+|                   | [Pretrained Models](../architectures/pre_trained_models.md)   | Pre-built models offering a range of capabilities and uses.                  |        
+|                   | [AI software libraries](#ai-software-libraries)   | Higher level languages that enable AI/ML training                 | 
+| Layer 1: Data     | [Data Processing](./data.md)  | Tools for cleaning, normalizing, and preparing data for analysis.            |   |
+|                   | [ETL + Data Pipelines](./data.md#etl-pipelines) | Tools to find, extract, transform, and load data, and to manage data flow.    |
+|                   | Databases        | Services for structured data storage. |            |
+|                   | [Data set solutions](./../data/sources.md)  | Places where one can obtain data for training and using models effecectively. |
+
+## How do we decide on what components?
+
+When developing AI-enabled products, consider the following components
 
 ### 1. [Customer Needs](#caller-needs)
 
@@ -16,9 +45,10 @@ To create a serviceable model, you may need to [optimize](../../Understanding/ar
 
 ### [Compute Requirements](#compute-needs)
 
-Consider these general factors (as suggested by AWS) when assessing the requirements for model deployment.
+Consider these general factors when assessing the requirements for model deployment.
 
-![image](https://github.com/ianderrington/genai/assets/76016868/9b379996-e311-4b9b-a35e-9020702fa050.png)
+- Latency
+- Accuracy
 
 ### [Budget Constraints](#budget-available)
 
@@ -35,11 +65,7 @@ Finally, you'll need to present the results to the end-user effectively. Look in
 Remember that needs will evolve as your understanding of all the above factors shifts. So it's crucial to start with a base that you can iterate from, especially if your solution involves a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
 
 
-### Tech-stack
-
-This is a well-done and comprehensive review."
-
-## Additional Literature
+## Useful References
 
 Here are some other overviews to assist you in understanding the practical aspects of Generative AI, particularly with regards to GPT and large language models.
 
