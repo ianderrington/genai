@@ -32,7 +32,8 @@ def get_index_from_symbol(answer):
 
 
 def quality_gutenberg_parser(raw_article):
-  """Parse Gutenberg articles in the QuALITY dataset."""
+  """Parse Gutenberg articles in the QuALITY dataset.
+  """
   lines = []
   previous_line = None
   for i, line in enumerate(raw_article.split('\n')):
@@ -89,7 +90,6 @@ def quality_pagination(example, query_model,
   title = example['title']
   print(f"[Pagination][Article {title}]")
   paragraphs = quality_gutenberg_parser(article).split('\n')
-
   i = 0
   pages = []
   while i < len(paragraphs):
@@ -106,6 +106,7 @@ def quality_pagination(example, query_model,
     passage.append(f"<{j}>")
     end_tag = "" if j == len(paragraphs) else paragraphs[j] + "\n..."
 
+    import ipdb; ipdb.set_trace()
     pause_point = None
     if wcount < 350:
       pause_point = len(paragraphs)
