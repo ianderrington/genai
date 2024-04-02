@@ -23,4 +23,4 @@ lib/
 
 *.egg-info
 
-models
+models/*
