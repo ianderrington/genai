@@ -93,18 +93,13 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: assets/genai_logo_edited.svg
-  #icon:
-    # logo: genai_logo_edited
+  icon:
+    logo: genai_logo_edited
 google_tag: !ENV GOOGLE_ANALYTICS_KEY
 # Plugins
 
 # Plugins
-# plugins:
-#   - blog
-#   - search:
-#       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-#   - minify:
-#       minify_html: true
+
 plugins:
   - blog
   - search
@@ -112,12 +107,19 @@ plugins:
       
   - awesome-pages
   - meta
-  #- redirects:
-      #redirect_maps:
-        #changelog/insiders.md: insiders/changelog.md
-        #upgrading.md: upgrade.md
-        #reference/variables.md: https://mkdocs-macros-plugin.readthedocs.io/
-        #sponsorship.md: insiders/index.md
+  # Doesn't build 
+  # - rss:
+  #   match_path: blog/posts/.*
+  #   date_from_meta:
+  #     as_creation: date
+  #   categories:
+  #     - categories
+  #     - tags
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  # Doesn't build 
+  # - social:
+  #     cards_layout: default/variant
   ## Allows for linking like this: This works the same as [a normal link to that heading](../doc1.md#hello-world).
   - autorefs
   - minify:
@@ -204,15 +206,19 @@ markdown_extensions:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
-#  - pymdownx.emoji:
-#      emoji_index: !!python/name:materialx.emoji.twemoji
-#      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
+      normalize_issue_symbols: true
       repo_url_shorthand: true
-      user: squidfunk
+      user: ianderrington
       repo: mkdocs-material
   - pymdownx.mark
   - pymdownx.smartsymbols
@@ -228,6 +234,12 @@ markdown_extensions:
 
   - pymdownx.tabbed:
       alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tilde
 
 extra_css:
