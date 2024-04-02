@@ -35,6 +35,10 @@ Pruning is a technique that eliminates weights that do not consistently produce 
 
 ======
 
+??? tip "[The Unreasonable Ineffectiveness of the Deeper Layers](https://arxiv.org/abs/2403.17887v1)"
+    Using a pruning strategy informed by similarity, the authors demonstrate that eliminating up to 40% of for Llama models, does not yield significant reduction in accuracy.
+    ![image](https://github.com/ianderrington/genai/assets/76016868/4569d71b-af04-4fac-a93b-d36d78f34042
+
 !!! tip "[SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](https://arxiv.org/pdf/2301.00774.pdf) Remove up to ~50% parameters preserving quality"
 
 ??? important "[Fast as Chita: Neural network pruning with combinatorial optimization](https://blog.research.google/2023/08/neural-network-pruning-with.html)"
