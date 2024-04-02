@@ -125,13 +125,19 @@ Here are some known thought structures that are improving agentic output.
     The authors reveal in their [paper](https://arxiv.org/pdf/2303.17651.pdf) that LLMs can generate feedback on their work, to repeatedly improve the output.
     ![image](https://github.com/ianderrington/genai/assets/76016868/e680022f-1f52-4cd1-a074-4eba542b2ba4)
 
-    
+
 
 ???+ code "![GitHub Repo stars](https://badgen.net/github/stars/noahshinn024/reflexion) [Reflexion: an autonomous agent with dynamic memory and self-reflection]([Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion)) an agent with dynamic memory and self-reflection capabilities"
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
     - [Paper](https://arxiv.org/pdf/2303.11366.pdf)
     - [Another Inspired github](https://github.com/GammaTauAI/reflexion-human-eval)
+
+
+??? abstract "[Thread of Thought Unraveling Chaotic Contexts](https://arxiv.org/pdf/2311.08734v1.pdf) helps to summarize and deal with 'chaotic contexts' (tangents) "
+    <img width="966" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7b5c18e0-6adb-407b-a765-30095cbff850">
+
+
 
 ??? important "[The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps](https://arxiv.org/abs/2401.04925)"
     Appending "you must think more steps" to "Let’s think step by step" increases the reasoning steps and signficantly improves the accuracy on various reasoning tasks.
