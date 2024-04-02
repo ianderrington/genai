@@ -113,6 +113,7 @@ There are also several tools available that can assist in the fine-tuning proces
 
 
 Another tool, [Slow Llama](https://github.com/okuvshynov/slowllama), is particularly useful for fine-tuning on M1/M2 Macs.
+
 ### Fine Tuning
 
 Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.
@@ -121,14 +122,10 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 ??? tip "[Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)"
     <img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5">
 
-
-
-
+## Useful Libraries
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/okuvshynov/slowllama) [Slow Llama]([Slow Llama](https://github.com/okuvshynov/slowllama)) for finetuning on a M1/M2 mac"
 
-In conclusion, fine-tuning is a crucial step in the development of AI models. It allows models to specialize and improve their performance on specific tasks, leading to more accurate and efficient AI systems.
 
+!!! abstract "[Finetune Mistral, Gemma, Llama 2-5x faster with 70% less memory!](https://github.com/unslothai/unsloth)
 
-### Essential Libraries 
-
-- [Adapters for Hugging Face](https://adapterhub.ml/): This is a tool for finetuning Hugging Face models.
+!!! abstract" [Adapters for Hugging Face](https://adapterhub.ml/): This is a tool for finetuning Hugging Face models."
