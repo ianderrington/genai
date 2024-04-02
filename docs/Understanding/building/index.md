@@ -31,6 +31,8 @@ Lets first look at the components that need to be put together.
 |                   | **🗃 Databases**        | Services for **structured data storage** and retrieval. |            |
 |                   | [**📈 Data set solutions**](./../data/sources.md)  | Places where one can obtain data for **training** and **using** models effectively. |
 
+
+
 ## How do we decide on what components?
 
 When developing AI-enabled products, consider the following components
@@ -74,8 +76,33 @@ It should have been done yesterday, yes. But how soon is the solution actually n
 
 The allocated budget will affect your tool's monetization strategy. 
 
-
 ## Useful References
+!!! important "[LLMs from scratch](https://github.com/rasbt/LLMs-from-scratch/tree/main) provides a quality series of Jupyter notebooks revealing how to build LLMs from scratch."
+
+
+??? tip "[Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A detailed discussion of the components and their interactions using orchestration systems."
+
+    ![image](https://github.com/ianderrington/genai/assets/76016868/f287eaef-6b86-4846-8885-2b3ad3cd614b) 
+
+
+???+ tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
+    Important patterns mentioned (references to discussions herein):
+
+    
+    * [Evaluating and comparing](evaluating_and_comparing.md)
+    * [Retreival Augmented Generation (RAG)](../agents/rag.md)
+    * [Fine tuning](optimization/index.md#finetuning)
+    * [Caching](../agents/memory.md#caching) to reduce latency.
+    * [Guardrails](../agents/cognitive_architecture.md#guardrails) to ensure output (and input) quality.
+    * Data Flywheel to use data collection and feedback to improve model and experience
+    * Cascade Breaking models up into smaller simpler tasks instead of big ones.
+    * Monitoring to ensure value is being derived
+    * Effective (defensive) UX to ensure the models can be used well.
+    ![image](https://github.com/ianderrington/genai/assets/76016868/fd03db2c-c695-4f52-8306-062fad5c3779)
+    
+
+
+
 
 Here are some other overviews to assist you in understanding the practical aspects of Generative AI, particularly with regards to GPT and large language models.
 

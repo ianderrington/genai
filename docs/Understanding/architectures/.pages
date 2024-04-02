@@ -2,7 +2,7 @@ nav:
     - index.md
     - models
     - training
-    - llm_systems.md
+    - gpt.md
     - optimization
     - evaluating_and_comparing.md
     - ...

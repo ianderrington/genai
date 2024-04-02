@@ -70,6 +70,9 @@ Language models (LMs) are a type of generative model trained to predict the next
 
 **Large Language Models (LLMs)** are a subset of language models that are trained on vast amounts of text data. Due to their size and the diversity of data they're trained on, LLMs can understand and generate a wide range of textual content, from prose and poetry to code and beyond.
 
+??? tip "[Challenges and Applications of Large Language Models Kaddour et al](https://arxiv.org/pdf/2307.10169.pdf) This is a well-done and comprehensive review."
+
+
 #### GPT architectures
 
 Generative AI models are of two general categories: self-supervised, and Externally-supervised, and hybrid models.

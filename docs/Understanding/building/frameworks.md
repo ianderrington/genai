@@ -1,8 +1,4 @@
----
-hide:
 
-  - toc
----
 
 The big-bang like expansion of AI has led to a surge in services, methods, frameworks, and tools that enhance the creation and deployment of models from start to finish. Although there are end-to-end providers for generating valuable GenAI solutions, there is immense value in implementing and experimenting with your own stacks.
 

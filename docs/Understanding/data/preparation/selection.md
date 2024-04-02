@@ -20,6 +20,10 @@ There are several strategies to ensure the data used for training Generative AI 
 
 Before selecting data, take time to understand the data you have. Analyzing the data to identify patterns, trends or anomalies will give some direction on what data to use.
 
+??? abstract "[WHAT’S IN MY BIG DATA?](https://github.com/allenai/wimbd) provides a nice way of looking at data from common text corpora."
+    **Developments** The [authors](https://arxiv.org/pdf/2310.20707.pdf) show that there are a lot of artifacts in common corpora like winograd, and open source the artifacts that they find.
+    
+
 ### Choosing Relevant Data
 
 Relevancy of data to the problem at hand is crucial. Inappropriate data can lead to inaccurate results and will impede the model’s performance.
