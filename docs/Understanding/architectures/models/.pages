@@ -1,6 +1,8 @@
 nav:
     - index.md
     - transformers.md
-    - diffusers.md
+    - multimodal.md
+    - diffusion_models.md
+    - developing_architectures.md
     - gans.md
     - ...

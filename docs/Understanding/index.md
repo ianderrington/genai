@@ -5,14 +5,14 @@ hide:
 ---
 
 
-# 🔮 Understanding Gen()AI! 
+#  Understanding Gen🔮AI! 
 
-Here you'll find what you need to know to understand Gen()AI architecture. 
+Here you'll find what you need to know to understand (eventually) everything you need to know about creating and using Gen()AI. 
 
 
-[Choose your adventure!](#choose-your-adventure){ .md-button }
+[Choose your adventure!](#choose-your-adventure){ .md-button .md-button--primary }
 [See the primary components!](#component-interactions){ .md-button .md-button--primary }
-[What is this about?](#what-is-this-about){ .md-button .md-button--primary }
+[What is this about?](#what-is-this-about){ .md-button  }
 
 ## Choose your adventure
 
@@ -25,15 +25,15 @@ Here you'll find what you need to know to understand Gen()AI architecture.
             BB["Build or Buy"]
         end
 
-        subgraph Build["Build"]
-            Data["Data"]
-            MA["Architecture"]
-            MD["Models"]
+        subgraph Build["Build it"]
+            Data["Get Data"]
+            MA["Create\nArchitecture"]
+
             Deploy["Deploy"]
             AG["Agents"]
         end
 
-        subgraph Buy["Buy"]
+        subgraph Buy["Buy it"]
             CM["Commercial Markets"]
             SL["Solution Licensing"]
             VI["Vendor Integration"]
@@ -55,7 +55,6 @@ Here you'll find what you need to know to understand Gen()AI architecture.
         click BB "./overview/building_or_buying.html"
         click Data "./data/index.html"
         click MA "./architectures/index.html"
-        click MD "./architectures/models/index.html"
         click Deploy "./deploying/index.html"
         click AG "./agents/index.html"
         click CM "../Using/commercial_markets.html"
@@ -209,7 +208,7 @@ What do you need to know?
     
     - [🛠️ Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
     - [🧭 Consider Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies. 
-    - 🏗️ [Building](./building/index.md) your model. 
+    - 🏗️ [](./building/index.md) your model. 
     
 
 In the documents you read here, you will be able to see an increasingly consistent and understandable discussion of Gen()AI technologies, enabled by Gen()AI technologies herein described. Like most powerful technology, Gen()AI can be a two-edged sword and effective use requires responsible and thoughtful understanding. ⚖️
