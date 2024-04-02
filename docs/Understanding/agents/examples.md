@@ -235,7 +235,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 ??? tip "![GitHub Repo stars](https://badgen.net/github/stars/ThomasEwing04/SMOL_AI) [smolai]([smolai](https://github.com/ThomasEwing04/SMOL_AI)) https://www.youtube.com/watch?v=zsxyqz6SYp8&t=1s An interesting example"
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT) [Agent-GPT]([Agent-GPT](https://github.com/reworkd/AgentGPT))"
+??? code "![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT) [Agent-GPT](https://github.com/reworkd/AgentGPT)"
     [Website](https://agentgpt.reworkd.ai/)
 
 !!! tip "![GitHub Repo stars](https://badgen.net/github/stars/AntonOsika/gpt-engineer) [GPT Engineer (AntonOsika)]([GPT Engineer (AntonOsika)](https://github.com/AntonOsika/gpt-engineer))"
