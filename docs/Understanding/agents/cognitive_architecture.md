@@ -121,9 +121,10 @@ Here are some known thought structures that are improving agentic output.
     Effectively Observe, Think, Act, Repeat.
     [Paper](https://arxiv.org/pdf/2210.03629.pdf)
 
-???+ abstract "[Self-Refine: Iterative Refinement with Self-Feedback
-](https://github.com/madaan/self-refine)"
-    The authors reveal in their [paper](https://arxiv.org/pdf/2303.17651.pdf)
+???+ abstract "[Self-Refine: Iterative Refinement with Self-Feedback](https://github.com/madaan/self-refine)" self-refine
+    The authors reveal in their [paper](https://arxiv.org/pdf/2303.17651.pdf) that LLMs can generate feedback on their work, to repeatedly improve the output.
+    ![image](https://github.com/ianderrington/genai/assets/76016868/e680022f-1f52-4cd1-a074-4eba542b2ba4)
+
     
 
 ???+ code "![GitHub Repo stars](https://badgen.net/github/stars/noahshinn024/reflexion) [Reflexion: an autonomous agent with dynamic memory and self-reflection]([Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion)) an agent with dynamic memory and self-reflection capabilities"
