@@ -49,7 +49,7 @@ There are several optimization targets of direct interest
 
 ### ESM based
 
-??? abstract "[Genome-wide prediction of disease variant effects with a deep protein language model]((https://github.com/ntranoslab/esm-variants)"
+??? abstract "[Genome-wide prediction of disease variant effects with a deep protein language model](https://github.com/ntranoslab/esm-variants)"
     The authors show int heir [paper](https://www.nature.com/articles/s41588-023-01465-0) a workflow using ESM1b, a 650-million-parameter protein language model, to predict all ~450 million possible missense variant effects in the human genome, and made all predictions available on a web portal.
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [Language models enable zero-shot prediction of the effects of mutations on protein function]([Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm))"
