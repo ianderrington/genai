@@ -25,6 +25,7 @@ There are several optimization targets of direct interest
     - Contact prediction
     - Secondary structure
     - Remote cohomology
+    - (mis)Folding (missense)
     
 - [Function](#function)
     - Enzymatic Catalysis
@@ -37,6 +38,8 @@ There are several optimization targets of direct interest
     - Nucleic Acids
     - Drugs molecules
     - Metals
+ 
+-
 
 - [Candidate Identification](#candidate-identification) and [alignment](#candidate-alignment)
 - ... and _hybrid_ versions to optimize the targets jointly
@@ -44,7 +47,10 @@ There are several optimization targets of direct interest
 
 ## Foundation models
 
-### ESM
+### ESM + variations
+
+??? abstract "[Genome-wide prediction of disease variant effects with a deep protein language model]((https://github.com/ntranoslab/esm-variants)"
+    The authors show int heir [paper](https://www.nature.com/articles/s41588-023-01465-0) a workflow using ESM1b, a 650-million-parameter protein language model, to predict all ~450 million possible missense variant effects in the human genome, and made all predictions available on a web portal.
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [Language models enable zero-shot prediction of the effects of mutations on protein function]([Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm))"
     
