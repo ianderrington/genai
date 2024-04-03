@@ -212,6 +212,15 @@ It is not necessarily just enough to identify a potential candidate but to have 
     architectures (BERT, ALBERT, XLNet) and two distinct protein datasets. We
     also present a three-dimensional visualization of the interaction between attention and protein structure"
 
+    They see the following:
+    
+    * Attention aligns strongly with contact maps in the deepest layers.
+    * Attention targets binding sites throughout most layers of the models.
+    * Attention targets Post-translational modifications in a small number of heads.
+    * Attention targets higher-level properties in deeper layers.
+    * Attention heads specialize in particular amino acids. 
+    * Attention is consistent with substitution relationships
+
 ### Colab Design
 !!! tip "![GitHub Repo stars](https://badgen.net/github/stars/sokrypton/ColabDesign) [ColabDesign: Making Protein Design accessible to all via Google Colab!]([ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign))"
 
