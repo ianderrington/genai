@@ -22,16 +22,22 @@ There are several optimization targets of direct interest
 
 
 - [Structure](#structure)
+    - Contact prediction
+    - Secondary structure
+    - Remote cohomology
+    
 - [Function](#function)
     - Enzymatic Catalysis
     - Thermocompatibility
     - Fluorescence
+    - Remote cohomology
     
 - [Protein Binding](#binding)
     - Proteins
     - Nucleic Acids
     - Drugs molecules
     - Metals
+
 - [Candidate Identification](#candidate-identification) and [alignment](#candidate-alignment)
 - ... and _hybrid_ versions to optimize the targets jointly
 
@@ -112,6 +118,10 @@ There are several optimization targets of direct interest
 
 ??? note "[TRANSFORMER PROTEIN LANGUAGE MODELS ARE UNSUPERVISED STRUCTURE LEARNERS](https://www.biorxiv.org/content/10.1101/2020.12.15.422761v1.full.pdf)"
     <img width="973" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b">
+
+### Tape
+??? abstract "[Tasks Assessing Protein Embeddings (TAPE)](https://github.com/songlab-cal/tape)"
+    
 
 
 ### Structure
