@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enabling Gen() AI to be well understood and effectively used.">
+        <meta name="description" content="Enabling Generative and General AI to be well understood and effectively used.">
       
       
         <meta name="author" content="Ian Derrington">
@@ -6523,9 +6523,9 @@ One manner of doing this is through the use of <a href="#adaptermodel-changes-fo
 <p>Enabling the LoRA for all layers appears may be valuable, though it hasn't been thoroughly explored.</p>
 <h4 id="choice-of-parameters">Choice of parameters<a class="headerlink" href="#choice-of-parameters" title="Permanent link">&para;</a></h4>
 <p>The <a href="https://arxiv.org/pdf/2106.09685.pdf">original paper</a> has both the rank and a scaling factor <span class="arithmatex">\(\alpha\)</span>.</p>
-<p><div class="highlight"><pre><span></span><code>scaling = alpha / r
-weight += (lora_B @ lora_A) * scaling
-</code></pre></div>
+<p><div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>scaling = alpha / r
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>weight += (lora_B @ lora_A) * scaling
+</span></code></pre></div>
 Both of these will need to be explored, but it may be beneficial to set <span class="arithmatex">\(\alpha \approx r\)</span></p>
 <p>Selecting the rank to be <em>too large</em> may result in overfitting, but too small may not provide enough additional model capacity to capture the characteristics of the data.</p>
 <h4 id="combining-lora-weights">Combining LoRA weights<a class="headerlink" href="#combining-lora-weights" title="Permanent link">&para;</a></h4>

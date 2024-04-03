@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enabling Gen() AI to be well understood and effectively used.">
+        <meta name="description" content="Enabling Generative and General AI to be well understood and effectively used.">
       
       
         <meta name="author" content="Ian Derrington">
@@ -6855,7 +6855,7 @@ and
 <p>Here is a basic comparison of the two: </p>
 <div class="admonition example">
 <p class="admonition-title">Comparison with/without RAG</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With</label><label for="__tabbed_1_2">Without</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="retrieval-augmented-generation-rag-with" name="__tabbed_1" type="radio" /><input id="retrieval-augmented-generation-rag-without" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="retrieval-augmented-generation-rag-with">With</label><label for="retrieval-augmented-generation-rag-without">Without</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="mermaid"><code>graph LR
@@ -7080,14 +7080,14 @@ and
 <p>This method generates an intermediate context that helps to 'abstract' the information. Once generated, the additional context can be used.</p>
 <details class="example">
 <summary><a href="https://smith.langchain.com/hub/langchain-ai/stepback-answer">Step back</a></summary>
-<div class="highlight"><pre><span></span><code>    You are an expert of world knowledge. I am going to ask you a question. Your response should be comprehensive and not contradicted with the following context if they are relevant. Otherwise, ignore them if they are not relevant.
-
-    {normal_context}
-    {step_back_context}
-
-    Original Question: {question}
-    Answer:
-</code></pre></div>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    You are an expert of world knowledge. I am going to ask you a question. Your response should be comprehensive and not contradicted with the following context if they are relevant. Otherwise, ignore them if they are not relevant.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    {normal_context}
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    {step_back_context}
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    Original Question: {question}
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    Answer:
+</span></code></pre></div>
 </details>
 <details class="example">
 <summary><a href="https://arxiv.org/pdf/2310.06117.pdf">Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models</a></summary>
@@ -7097,13 +7097,13 @@ and
 <p>Particularly in chat settings, it's important to include all of the appropriate context to create an effective search query.</p>
 <details class="example">
 <summary><a href="https://smith.langchain.com/hub/langchain-ai/weblangchain-search-query">Rephrase question</a></summary>
-<div class="highlight"><pre><span></span><code>    Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
-
-    Chat History:
-    {chat_history}
-    Follow Up Input: {question}
-    Standalone Question:
-</code></pre></div>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    Chat History:
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    {chat_history}
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    Follow Up Input: {question}
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    Standalone Question:
+</span></code></pre></div>
 </details>
 <h5 id="query-decomposition">Query Decomposition<a class="headerlink" href="#query-decomposition" title="Permanent link">&para;</a></h5>
 <p>When questions are directly made of multiple questions, or the effective answer to these questions involves answering several sub-questions, breaking the questions into multiple queries may be essential. This may involve performing sequential queries that are created based on retrieved information, or queries that can be run irrespective of other results. <a href="https://python.langchain.com/docs/use_cases/query_analysis/techniques/decomposition">Langchain Query decomposition</a></p>
@@ -7139,7 +7139,7 @@ Reranking </p>
 </ul>
 <h2 id="multimodal-rag">Multimodal Rag<a class="headerlink" href="#multimodal-rag" title="Permanent link">&para;</a></h2>
 <p>Natural-language lookup with RAG can be improved by allowing other modalities, such as tables and images, at the same time. There are several ways that this may be accomplished as described in <a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/">Langchain's multi modal rag</a>: </p>
-<div class="highlight"><pre><span></span><code>Option 1:
+<div class="language-text highlight"><pre><span></span><code>Option 1:
 
 Use multimodal embeddings (such as CLIP) to embed images and text
 Retrieve both using similarity search
@@ -7200,21 +7200,21 @@ The authors reveal that allowing for fine tuning of the models when equipped wit
 <ul>
 <li>Hyperparameter tuning for <code>chunk_size</code> and <code>similarity_top_k</code> as in <a href="https://docs.llamaindex.ai/en/stable/examples/param_optimizer/param_optimizer.html">Hyperparameter Optimization for RAG</a>. </li>
 <li>Reranking <a href="https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/CohereRerank.html">notebook</a> usses <a href="https://blog.llamaindex.ai/improving-retrieval-performance-by-fine-tuning-cohere-reranker-with-llamaindex-16c0c1f9b33b">Improving Retrieval Performance by Fine-tuning Cohere Reranker with LlamaIndex</a> and <code>CohereRank</code> to rerank the results 
-<div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">os</span>
-    <span class="kn">from</span> <span class="nn">llama_index.postprocessor.cohere_rerank</span> <span class="kn">import</span> <span class="n">CohereRerank</span>
-
-    <span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;COHERE_API_KEY&quot;</span><span class="p">]</span>
-    <span class="n">cohere_rerank</span> <span class="o">=</span> <span class="n">CohereRerank</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span> <span class="n">top_n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># return top 2 nodes from reranker</span>
-
-    <span class="n">query_engine</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">as_query_engine</span><span class="p">(</span>
-        <span class="n">similarity_top_k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="c1"># we can set a high top_k here to ensure maximum relevant retrieval</span>
-        <span class="n">node_postprocessors</span><span class="o">=</span><span class="p">[</span><span class="n">cohere_rerank</span><span class="p">],</span> <span class="c1"># pass the reranker to node_postprocessors</span>
-    <span class="p">)</span>
-
-    <span class="n">response</span> <span class="o">=</span> <span class="n">query_engine</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
-        <span class="s2">&quot;What did Sam Altman do in this essay?&quot;</span><span class="p">,</span>
-    <span class="p">)</span>
-</code></pre></div></li>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    <span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="kn">from</span> <span class="nn">llama_index.postprocessor.cohere_rerank</span> <span class="kn">import</span> <span class="n">CohereRerank</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;COHERE_API_KEY&quot;</span><span class="p">]</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">cohere_rerank</span> <span class="o">=</span> <span class="n">CohereRerank</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span> <span class="n">top_n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># return top 2 nodes from reranker</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">query_engine</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">as_query_engine</span><span class="p">(</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="n">similarity_top_k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="c1"># we can set a high top_k here to ensure maximum relevant retrieval</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="n">node_postprocessors</span><span class="o">=</span><span class="p">[</span><span class="n">cohere_rerank</span><span class="p">],</span> <span class="c1"># pass the reranker to node_postprocessors</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="p">)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">query_engine</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="s2">&quot;What did Sam Altman do in this essay?&quot;</span><span class="p">,</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="p">)</span>
+</span></code></pre></div></li>
 </ul>
 <p>3: Not in Context — Consolidation Strategy Limitations</p>
 <ul>
@@ -7261,34 +7261,34 @@ The authors reveal that allowing for fine tuning of the models when equipped wit
 </ul>
 <p>11: Fallback Model(s):  Use a model router like
 -  <a href="https://platform.neutrinoapp.com/">Neutrino</a> </p>
-<div class="highlight"><pre><span></span><code>    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">Neutrino</span>
-    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">ChatMessage</span>
-
-    <span class="n">llm</span> <span class="o">=</span> <span class="n">Neutrino</span><span class="p">(</span>
-        <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;&lt;your-Neutrino-api-key&gt;&quot;</span><span class="p">,</span> 
-        <span class="n">router</span><span class="o">=</span><span class="s2">&quot;test&quot;</span>  <span class="c1"># A &quot;test&quot; router configured in Neutrino dashboard. You treat a router as a LLM. You can use your defined router, or &#39;default&#39; to include all supported models.</span>
-    <span class="p">)</span>
-
-    <span class="n">response</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="s2">&quot;What is large language model?&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Optimal model: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">Neutrino</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">ChatMessage</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">llm</span> <span class="o">=</span> <span class="n">Neutrino</span><span class="p">(</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;&lt;your-Neutrino-api-key&gt;&quot;</span><span class="p">,</span> 
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="n">router</span><span class="o">=</span><span class="s2">&quot;test&quot;</span>  <span class="c1"># A &quot;test&quot; router configured in Neutrino dashboard. You treat a router as a LLM. You can use your defined router, or &#39;default&#39; to include all supported models.</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="s2">&quot;What is large language model?&quot;</span><span class="p">)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Optimal model: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li><a href="https://docs.llamaindex.ai/en/stable/examples/llm/openrouter.html#openrouter">Openrouter</a></li>
 </ul>
-<div class="highlight"><pre><span></span><code>    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">OpenRouter</span>
-    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">ChatMessage</span>
-
-    <span class="n">llm</span> <span class="o">=</span> <span class="n">OpenRouter</span><span class="p">(</span>
-        <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;&lt;your-OpenRouter-api-key&gt;&quot;</span><span class="p">,</span>
-        <span class="n">max_tokens</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
-        <span class="n">context_window</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span>
-        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gryphe/mythomax-l2-13b&quot;</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="n">message</span> <span class="o">=</span> <span class="n">ChatMessage</span><span class="p">(</span><span class="n">role</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Tell me a joke&quot;</span><span class="p">)</span>
-    <span class="n">resp</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">chat</span><span class="p">([</span><span class="n">message</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">OpenRouter</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">ChatMessage</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">llm</span> <span class="o">=</span> <span class="n">OpenRouter</span><span class="p">(</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;&lt;your-OpenRouter-api-key&gt;&quot;</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="n">max_tokens</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="n">context_window</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gryphe/mythomax-l2-13b&quot;</span><span class="p">,</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">message</span> <span class="o">=</span> <span class="n">ChatMessage</span><span class="p">(</span><span class="n">role</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Tell me a joke&quot;</span><span class="p">)</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">resp</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">chat</span><span class="p">([</span><span class="n">message</span><span class="p">])</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+</span></code></pre></div>
 <p>12: LLM Security</p>
 <ul>
 <li>Use things like <a href="https://towardsdatascience.com/safeguarding-your-rag-pipelines-a-step-by-step-guide-to-implementing-llama-guard-with-llamaindex-6f80a2e07756?sk=c6cc48013bac60924548dd4e1363fa9e">Llama Guard</a></li>

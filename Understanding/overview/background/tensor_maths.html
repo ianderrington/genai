@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enabling Gen() AI to be well understood and effectively used.">
+        <meta name="description" content="Enabling Generative and General AI to be well understood and effectively used.">
       
       
         <meta name="author" content="Ian Derrington">
@@ -6083,12 +6083,12 @@ and
 Introduces generalization to Tensors and creates
 NETSOR  Computation Programs
 Introduces three general mapping types of function variables.</p>
-<div class="highlight"><pre><span></span><code>NETSOR programs are straight-line programs, where each variable follows one of three types, G, H, or A (such variables are called G-vars, H-vars, and A-vars), and after input variables, new variables can be introduced by one of the rules MatMul, LinComb, Nonlin to be discussed shortly. G and H are vector types and A is a matrix type; intuitively, G-vars should be thought of as vectors that are asymptotically Gaussian, H-vars are images of G-vars by coordinatewise nonlinearities, and A-vars are random matrices with iid Gaussian entries. Each type is annotated by dimensionality information:
-
-If x is a (vector) variable of type G (or H) and has dimension n, we write x : G(n) (or x : H(n)).
-If A is a (matrix) variable of type A and has size n1 × n2, we write A : A(n1, n2)
-G is a subtype of H, so that x : G(n) implies x : H(n).
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>NETSOR programs are straight-line programs, where each variable follows one of three types, G, H, or A (such variables are called G-vars, H-vars, and A-vars), and after input variables, new variables can be introduced by one of the rules MatMul, LinComb, Nonlin to be discussed shortly. G and H are vector types and A is a matrix type; intuitively, G-vars should be thought of as vectors that are asymptotically Gaussian, H-vars are images of G-vars by coordinatewise nonlinearities, and A-vars are random matrices with iid Gaussian entries. Each type is annotated by dimensionality information:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>If x is a (vector) variable of type G (or H) and has dimension n, we write x : G(n) (or x : H(n)).
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>If A is a (matrix) variable of type A and has size n1 × n2, we write A : A(n1, n2)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>G is a subtype of H, so that x : G(n) implies x : H(n).
+</span></code></pre></div>
 <p>G is petty much a ‘pass through’ like an activation function.</p>
 <p>This a <a href="https://github.com/thegregyang/GP4A">Github</a> implementation
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/4f06e713-f86f-476c-8dda-01ff9d8cf49f" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="893" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4f06e713-f86f-476c-8dda-01ff9d8cf49f"></a></p>

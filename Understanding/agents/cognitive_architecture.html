@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enabling Gen() AI to be well understood and effectively used.">
+        <meta name="description" content="Enabling Generative and General AI to be well understood and effectively used.">
       
       
         <meta name="author" content="Ian Derrington">
@@ -6602,79 +6602,79 @@ They can be executed programmatically given frameworks or sometimes done manuall
 <details class="important">
 <summary><a href="https://arxiv.org/abs/2401.04925">The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps</a></summary>
 <p>Appending "you must think more steps" to "Let’s think step by step" increases the reasoning steps and signficantly improves the accuracy on various reasoning tasks.</p>
-<div class="highlight"><pre><span></span><code>&quot;Think About The Word: This strategy is to ask the model to interpret the word and rebuild the
-knowledge base. Typically a word has multiple different meanings, and the effect of this is to get
-the model to think outside the box and reinterpret the words in the problem based on the generated
-interpretations. This process does not introduce new information. In the prompt, we give examples
-of the words that the model is thinking about, and the model automatically picks words for this
-process based on the new question.
-• Read the question again: Read the questions repeatedly to reduce the interference of other texts
-on the chain of thought. In short, we let the model remember the questions.
-• Repeat State: Similar to repeated readings, we include a small summary of the current state after a
-long chain of reasoning, aiming to help the model simplify its memory and reduce the interference
-of other texts in the CoT.
-• Self-Verification: Humans will check if their answers are correct when answering questions.
-Therefore, before the model gets the answer, we add a self-verification process to judge whether
-the answer is reasonable based on some basic information.
-• Make Equation: For mathematical problems, Make Equations can help humans summarize and
-simplify memory. And for some problems that require the assumption of an unknown number x,
-establishing an equation is an essential process. We simulated this process and let the model try to
-make equations in mathematical problems
-&quot;
-
-In their prompts they have the following:
-```markdown
-**Think About The World:**
-_prompt:_
-Q: Could someone in Tokyo take a taxi to the Metropolitan Museum of Art?
-A: Let’s think step by step. The stem of the sentence is Tokyo, take a taxi, Metropolitan Museum
-of Art. Think about Tokyo... Think about taking a taxi... Think about the Metropolitan Museum of
-Art... Inference: Tokyo is in Japan and the Metropolitan Museum of Art is in New York. The two
-places are separated by the sea, so you can’t take a taxi there. Since the two places are separated
-by the sea, you can’t take a taxi there. The answer is yes.
-Q: {question}
-
-**Read the question again**
-_prompt:_
-Q: Mark’s father gave him $85. Mark bought 10 books, each of which cost $5. How much money
-does Mark have left?
-A: Let’s think step by step. The question is: How much money does Mark have left? So we need
-to calculate How much money does Mark have left. Start looking for information about money
-now. Mark’s father gave him $85. Mark bought 10 books, each of which cost $5. That means that
-Mark spent $50 on books. So we have equation money = +85 - 50 = 35. So Mark has $85 - $50 =
-$35 left. So the answer is 35.
-Q: {question}
-**Repeat State**
-_prompt:_
-Q: A coin is heads up. Janette does not flip the coin. Stacey flips the coin. Ronny flips the coin.
-Kim does not flip the coin. Is the coin still heads up? Note that &quot;flip&quot; here means &quot;reverse&quot;.
-A: Let’s think step by step. The state of the coin from the beginning is heads up. Janette does not
-flip the coin, so the coin remains heads up. coin is heads up. Stacey flips the coin, so the coin is
-now tails up. coin is now tail up. Ronny flips the coin, so the coin is now heads up again. Kim
-does not flip the coin, so the coin remains heads up. coin is head up. The answer is yes.
-Q: {question}
-
-**Self-Verification**
-_prompt:_
-Q: Take the last letters of each words in &quot;Alina Alessandra Amina Bianca&quot; and concatenate them.
-A: Let’s think step by step. There is four words. So the answer will consist of four letters. Explain
-concatenate: concatenate is a term used in computer programming and mathematics, referring to
-the operation of combining two or more strings, sequences, or sets in a linear order. The last letter
-of &quot;Alina&quot; is &quot;a&quot;. The last letter of &quot;Alessandra&quot; is &quot;a&quot;. The last letter of &quot;Amina&quot; is &quot;a&quot;. The last
-letter of &quot;Bianca&quot; is &quot;a&quot;. So we have four letters. So the final answer is &quot;aaaa&quot;. The answer is aaaa.
-Q: {question}
-**Make Equation**
-_prompt:_
-Q: 5 children were riding on the bus. At the bus stop 63 children got off the bus while some more
-got on the bus. Then there were 14 children altogether on the bus. How many more children got
-on the bus than those that got off?
-A: Let’s think step by step. first step, 5 children were riding on the bus. We know 5 children is on
-the bus. second step,There were 63 children that got off the bus. third step, some more got on the
-bus we define as unknown x. fourth step, 14 children remained on the bus, which means we can
-calculate unknow x.we have equation x+5-63 = 14, now we know x is 72. fifth step, Therefore, 72
-- 63 = 9. 9 more children got on the bus than those that got off. The answer is 9.
-Q: {question}
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;Think About The Word: This strategy is to ask the model to interpret the word and rebuild the
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>knowledge base. Typically a word has multiple different meanings, and the effect of this is to get
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>the model to think outside the box and reinterpret the words in the problem based on the generated
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>interpretations. This process does not introduce new information. In the prompt, we give examples
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>of the words that the model is thinking about, and the model automatically picks words for this
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>process based on the new question.
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>• Read the question again: Read the questions repeatedly to reduce the interference of other texts
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>on the chain of thought. In short, we let the model remember the questions.
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>• Repeat State: Similar to repeated readings, we include a small summary of the current state after a
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>long chain of reasoning, aiming to help the model simplify its memory and reduce the interference
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>of other texts in the CoT.
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>• Self-Verification: Humans will check if their answers are correct when answering questions.
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Therefore, before the model gets the answer, we add a self-verification process to judge whether
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>the answer is reasonable based on some basic information.
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>• Make Equation: For mathematical problems, Make Equations can help humans summarize and
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>simplify memory. And for some problems that require the assumption of an unknown number x,
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>establishing an equation is an essential process. We simulated this process and let the model try to
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>make equations in mathematical problems
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>&quot;
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>In their prompts they have the following:
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>```markdown
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>**Think About The World:**
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>_prompt:_
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>Q: Could someone in Tokyo take a taxi to the Metropolitan Museum of Art?
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>A: Let’s think step by step. The stem of the sentence is Tokyo, take a taxi, Metropolitan Museum
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>of Art. Think about Tokyo... Think about taking a taxi... Think about the Metropolitan Museum of
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>Art... Inference: Tokyo is in Japan and the Metropolitan Museum of Art is in New York. The two
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>places are separated by the sea, so you can’t take a taxi there. Since the two places are separated
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>by the sea, you can’t take a taxi there. The answer is yes.
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>Q: {question}
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>**Read the question again**
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>_prompt:_
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>Q: Mark’s father gave him $85. Mark bought 10 books, each of which cost $5. How much money
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>does Mark have left?
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>A: Let’s think step by step. The question is: How much money does Mark have left? So we need
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>to calculate How much money does Mark have left. Start looking for information about money
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>now. Mark’s father gave him $85. Mark bought 10 books, each of which cost $5. That means that
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>Mark spent $50 on books. So we have equation money = +85 - 50 = 35. So Mark has $85 - $50 =
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>$35 left. So the answer is 35.
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>Q: {question}
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>**Repeat State**
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>_prompt:_
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>Q: A coin is heads up. Janette does not flip the coin. Stacey flips the coin. Ronny flips the coin.
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>Kim does not flip the coin. Is the coin still heads up? Note that &quot;flip&quot; here means &quot;reverse&quot;.
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>A: Let’s think step by step. The state of the coin from the beginning is heads up. Janette does not
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>flip the coin, so the coin remains heads up. coin is heads up. Stacey flips the coin, so the coin is
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>now tails up. coin is now tail up. Ronny flips the coin, so the coin is now heads up again. Kim
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>does not flip the coin, so the coin remains heads up. coin is head up. The answer is yes.
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>Q: {question}
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>**Self-Verification**
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>_prompt:_
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>Q: Take the last letters of each words in &quot;Alina Alessandra Amina Bianca&quot; and concatenate them.
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>A: Let’s think step by step. There is four words. So the answer will consist of four letters. Explain
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>concatenate: concatenate is a term used in computer programming and mathematics, referring to
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>the operation of combining two or more strings, sequences, or sets in a linear order. The last letter
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>of &quot;Alina&quot; is &quot;a&quot;. The last letter of &quot;Alessandra&quot; is &quot;a&quot;. The last letter of &quot;Amina&quot; is &quot;a&quot;. The last
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>letter of &quot;Bianca&quot; is &quot;a&quot;. So we have four letters. So the final answer is &quot;aaaa&quot;. The answer is aaaa.
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>Q: {question}
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>**Make Equation**
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>_prompt:_
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>Q: 5 children were riding on the bus. At the bus stop 63 children got off the bus while some more
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>got on the bus. Then there were 14 children altogether on the bus. How many more children got
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>on the bus than those that got off?
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>A: Let’s think step by step. first step, 5 children were riding on the bus. We know 5 children is on
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>the bus. second step,There were 63 children that got off the bus. third step, some more got on the
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>bus we define as unknown x. fourth step, 14 children remained on the bus, which means we can
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>calculate unknow x.we have equation x+5-63 = 14, now we know x is 72. fifth step, Therefore, 72
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>- 63 = 9. 9 more children got on the bus than those that got off. The answer is 9.
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>Q: {question}
+</span></code></pre></div>
 </details>
 <details class="important">
 <summary><a href="https://arxiv.org/pdf/2312.04474.pdf">Chain of Code: Reasoning with a Language Model-Augmented Code Emulator</a></summary>
@@ -6689,14 +6689,14 @@ A powerful solution to reasoning-based problems. It generates code-based solutio
 original context, termed sycophancy they use an initial model to <em>remove</em> unecessary context. They call it 'System 2 Attention'.
 Starting with instruction-tuned models that are 'proficient at reasoning and generation'.</p>
 <p>They compare this to models that just use prompts like below to remove context in different manners:
-<div class="highlight"><pre><span></span><code>    Given the following text by a user, extract the part that is unbiased and not their opinion,
-    so that using that text alone would be good context for providing an unbiased answer to
-    the question portion of the text.
-    Please include the actual question or query that the user is asking. Separate this
-    into two categories labeled with “Unbiased text context (includes all content except user’s
-    bias):” and “Question/Query (does not include user bias/preference):”.
-    Text by User: [ORIGINAL INPUT PROMPT]
-</code></pre></div>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    Given the following text by a user, extract the part that is unbiased and not their opinion,
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    so that using that text alone would be good context for providing an unbiased answer to
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    the question portion of the text.
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    Please include the actual question or query that the user is asking. Separate this
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    into two categories labeled with “Unbiased text context (includes all content except user’s
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    bias):” and “Question/Query (does not include user bias/preference):”.
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    Text by User: [ORIGINAL INPUT PROMPT]
+</span></code></pre></div>
 With several evaluations, including one for <a href="https://github.com/meg-tong/sycophancy-eval">sycophancy</a>, and a few variations,
 they show it can improve output even beyon Chain of Thought.</p>
 </details>
@@ -6718,24 +6718,24 @@ Question: <Question Example5>
 Principles Involved: <Principles Example5>
 Question: <Question>
 Principles Involved:
-<div class="highlight"><pre><span></span><code>Here is the prompt they use to use the extracted first principles and generate a final answer:
-
-```markdown &quot;MMLU Physics/Chemistry Final Answer Prompt&quot;
-You are an expert at Physics/Chemistry. You are given a
-Physics/Chemistry problem and a set of principles involved in
-solving the problem. Solve the problem step by step by following the
-principles. Here are a few examples:
-Question: &lt;Question Example1&gt;
-Principles: &lt;Principles Example1&gt;
-Answer: &lt;Answer Example1&gt;
-...
-Question: &lt;Question Example5&gt;
-Principles: &lt;Principles Example5&gt;
-Answer: &lt;Answer Example5&gt;
-Question: &lt;Question&gt;
-Principles: &lt;Principles&gt;
-Answer:
-</code></pre></div></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Here is the prompt they use to use the extracted first principles and generate a final answer:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>```markdown &quot;MMLU Physics/Chemistry Final Answer Prompt&quot;
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>You are an expert at Physics/Chemistry. You are given a
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Physics/Chemistry problem and a set of principles involved in
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>solving the problem. Solve the problem step by step by following the
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>principles. Here are a few examples:
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Question: &lt;Question Example1&gt;
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Principles: &lt;Principles Example1&gt;
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>Answer: &lt;Answer Example1&gt;
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>...
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>Question: &lt;Question Example5&gt;
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>Principles: &lt;Principles Example5&gt;
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>Answer: &lt;Answer Example5&gt;
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>Question: &lt;Question&gt;
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>Principles: &lt;Principles&gt;
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>Answer:
+</span></code></pre></div></p>
 </details>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2211.12588.pdf">Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks</a></summary>
@@ -6752,31 +6752,31 @@ Generates code to answer financial, and math-related problems.
 <h3 id="planning-and-reflective">Planning and Reflective<a class="headerlink" href="#planning-and-reflective" title="Permanent link">&para;</a></h3>
 <details class="important">
 <summary><a href="https://arxiv.org/pdf/2310.02304v1.pdf">Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation</a></summary>
-<div class="highlight"><pre><span></span><code>     <span class="kn">from</span> <span class="nn">helpers</span> <span class="kn">import</span> <span class="n">extract_code</span>
-         <span class="k">def</span> <span class="nf">improve_algorithm</span><span class="p">(</span><span class="n">initial_solution</span><span class="p">,</span> <span class="n">utility</span><span class="p">,</span> <span class="n">language_model</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Improves a solution according to a utility function.&quot;&quot;&quot;</span>
-    <span class="n">expertise</span> <span class="o">=</span> <span class="s2">&quot;You are an expert computer science researcher and programmer, especially skilled at</span>
-    <span class="p">,</span><span class="err">→</span> <span class="n">optimizing</span> <span class="n">algorithms</span><span class="o">.</span><span class="s2">&quot;</span>
-    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Improve the following solution:</span>
-<span class="s2">    ‘‘‘python</span>
-<span class="s2">    </span><span class="si">{</span><span class="n">initial_solution</span><span class="si">}</span>
-<span class="s2">    ‘‘‘</span>
-<span class="s2">        You will be evaluated based on this score function:</span>
-<span class="s2">    ‘‘‘python</span>
-<span class="s2">    </span><span class="si">{</span><span class="n">utility</span><span class="o">.</span><span class="n">str</span><span class="si">}</span>
-<span class="s2">    ‘‘‘</span>
-<span class="s2">        You must return an improved solution. Be as creative as you can under the constraints.</span>
-<span class="s2">    Your primary improvement must be novel and non-trivial. First, propose an idea, then implement it.&quot;&quot;&quot;</span>
-    <span class="n">n_messages</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">language_model</span><span class="o">.</span><span class="n">max_responses_per_call</span><span class="p">,</span> <span class="n">utility</span><span class="o">.</span><span class="n">budget</span><span class="p">)</span>
-    <span class="n">new_solutions</span> <span class="o">=</span> <span class="n">language_model</span><span class="o">.</span><span class="n">batch_prompt</span><span class="p">(</span><span class="n">expertise</span><span class="p">,</span> <span class="p">[</span><span class="n">message</span><span class="p">]</span> <span class="o">*</span> <span class="n">n_messages</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
-    <span class="n">new_solutions</span> <span class="o">=</span> <span class="n">extract_code</span><span class="p">(</span><span class="n">new_solutions</span><span class="p">)</span>
-    <span class="n">best_solution</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">new_solutions</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">utility</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">best_solution</span>
-    <span class="err">```</span>
-    <span class="o">&lt;</span><span class="n">img</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;649&quot;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;image&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://github.com/ianderrington/genai/assets/76016868/392da0d2-b8ce-47f0-9ae3-d3ad3fcba771&quot;</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">img</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;590&quot;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;image&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://github.com/ianderrington/genai/assets/76016868/47137d83-5aef-41e9-b356-9de3b94a853d&quot;</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">img</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;537&quot;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;image&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://github.com/ianderrington/genai/assets/76016868/4dcb9273-8965-461d-8da7-ae9a0be6debc&quot;</span><span class="o">&gt;</span>
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>     <span class="kn">from</span> <span class="nn">helpers</span> <span class="kn">import</span> <span class="n">extract_code</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>         <span class="k">def</span> <span class="nf">improve_algorithm</span><span class="p">(</span><span class="n">initial_solution</span><span class="p">,</span> <span class="n">utility</span><span class="p">,</span> <span class="n">language_model</span><span class="p">):</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Improves a solution according to a utility function.&quot;&quot;&quot;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">expertise</span> <span class="o">=</span> <span class="s2">&quot;You are an expert computer science researcher and programmer, especially skilled at</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="p">,</span><span class="err">→</span> <span class="n">optimizing</span> <span class="n">algorithms</span><span class="o">.</span><span class="s2">&quot;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Improve the following solution:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s2">    ‘‘‘python</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s2">    </span><span class="si">{</span><span class="n">initial_solution</span><span class="si">}</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="s2">    ‘‘‘</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="s2">        You will be evaluated based on this score function:</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="s2">    ‘‘‘python</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="s2">    </span><span class="si">{</span><span class="n">utility</span><span class="o">.</span><span class="n">str</span><span class="si">}</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="s2">    ‘‘‘</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="s2">        You must return an improved solution. Be as creative as you can under the constraints.</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="s2">    Your primary improvement must be novel and non-trivial. First, propose an idea, then implement it.&quot;&quot;&quot;</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="n">n_messages</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">language_model</span><span class="o">.</span><span class="n">max_responses_per_call</span><span class="p">,</span> <span class="n">utility</span><span class="o">.</span><span class="n">budget</span><span class="p">)</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="n">new_solutions</span> <span class="o">=</span> <span class="n">language_model</span><span class="o">.</span><span class="n">batch_prompt</span><span class="p">(</span><span class="n">expertise</span><span class="p">,</span> <span class="p">[</span><span class="n">message</span><span class="p">]</span> <span class="o">*</span> <span class="n">n_messages</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="n">new_solutions</span> <span class="o">=</span> <span class="n">extract_code</span><span class="p">(</span><span class="n">new_solutions</span><span class="p">)</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="n">best_solution</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">new_solutions</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">utility</span><span class="p">)</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="k">return</span> <span class="n">best_solution</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="err">```</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    <span class="o">&lt;</span><span class="n">img</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;649&quot;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;image&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://github.com/ianderrington/genai/assets/76016868/392da0d2-b8ce-47f0-9ae3-d3ad3fcba771&quot;</span><span class="o">&gt;</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    <span class="o">&lt;</span><span class="n">img</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;590&quot;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;image&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://github.com/ianderrington/genai/assets/76016868/47137d83-5aef-41e9-b356-9de3b94a853d&quot;</span><span class="o">&gt;</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    <span class="o">&lt;</span><span class="n">img</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;537&quot;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;image&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://github.com/ianderrington/genai/assets/76016868/4dcb9273-8965-461d-8da7-ae9a0be6debc&quot;</span><span class="o">&gt;</span>
+</span></code></pre></div>
 </details>
 <details class="important">
 <summary>[Chain-of-Verification Reduces Hallucination in Large Language Models]</summary>
@@ -6872,30 +6872,30 @@ It happens in 3 general steps:</p>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/db284abd-642f-441a-be7e-12611d917b28" /></a>
 <a href="https://github.com/ysymyth/tree-of-thought-llm">Github</a></p>
 <p>"<a href="https://github.com/princeton-nlp/tree-of-thought-llm/blob/master/src/tot/prompts/text.py">Prompts compared</a>"
-<div class="highlight"><pre><span></span><code>    <span class="n">standard_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">    Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: </span><span class="si">{input}</span>
-<span class="s1">    &#39;&#39;&#39;</span>
-    <span class="n">cot_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">    Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: </span><span class="si">{input}</span>
-
-<span class="s1">    Make a plan then write. Your output should be of the following format:</span>
-
-<span class="s1">    Plan:</span>
-<span class="s1">    Your plan here.</span>
-
-<span class="s1">    Passage:</span>
-<span class="s1">    Your passage here.</span>
-<span class="s1">    &#39;&#39;&#39;</span>
-
-    <span class="n">vote_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Given an instruction and several choices, decide which choice is most promising. Analyze each choice in detail, then conclude in the last line &quot;The best choice is </span><span class="si">{s}</span><span class="s1">&quot;, where s the integer id of the choice.</span>
-<span class="s1">    &#39;&#39;&#39;</span>
-
-    <span class="n">compare_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Briefly analyze the coherency of the following two passages. Conclude in the last line &quot;The more coherent passage is 1&quot;, &quot;The more coherent passage is 2&quot;, or &quot;The two passages are similarly coherent&quot;.</span>
-<span class="s1">    &#39;&#39;&#39;</span>
-
-    <span class="n">score_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Analyze the following passage, then at the last line conclude &quot;Thus the coherency score is </span><span class="si">{s}</span><span class="s1">&quot;, where s is an integer from 1 to 10.</span>
-<span class="s1">    &#39;&#39;&#39;</span>
-</code></pre></div></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    <span class="n">standard_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="s1">    Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: </span><span class="si">{input}</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="s1">    &#39;&#39;&#39;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">cot_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="s1">    Write a coherent passage of 4 short paragraphs. The end sentence of each paragraph must be: </span><span class="si">{input}</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="s1">    Make a plan then write. Your output should be of the following format:</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="s1">    Plan:</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="s1">    Your plan here.</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="s1">    Passage:</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="s1">    Your passage here.</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="s1">    &#39;&#39;&#39;</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="n">vote_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Given an instruction and several choices, decide which choice is most promising. Analyze each choice in detail, then conclude in the last line &quot;The best choice is </span><span class="si">{s}</span><span class="s1">&quot;, where s the integer id of the choice.</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="s1">    &#39;&#39;&#39;</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="n">compare_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Briefly analyze the coherency of the following two passages. Conclude in the last line &quot;The more coherent passage is 1&quot;, &quot;The more coherent passage is 2&quot;, or &quot;The two passages are similarly coherent&quot;.</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="s1">    &#39;&#39;&#39;</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="n">score_prompt</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Analyze the following passage, then at the last line conclude &quot;Thus the coherency score is </span><span class="si">{s}</span><span class="s1">&quot;, where s is an integer from 1 to 10.</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="s1">    &#39;&#39;&#39;</span>
+</span></code></pre></div></p>
 </details>
 <h3 id="recursive">Recursive<a class="headerlink" href="#recursive" title="Permanent link">&para;</a></h3>
 <details class="tip">
@@ -6928,44 +6928,44 @@ It happens in 3 general steps:</p>
 <summary><a href="https://arxiv.org/pdf/2307.15337.pdf">Skeleton of Thought</a></summary>
 <p>A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="408" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd"></a></p>
-<p><div class="highlight"><span class="filename">Skeleton prompt template</span><pre><span></span><code>    [User:] You’re an organizer responsible for only giving the skeleton (not the full content) for answering the question.
-    Provide the skeleton in a list of points (numbered 1., 2., 3., etc.) to answer the question. Instead of writing a full
-    sentence, each skeleton point should be very short with only 3∼5 words. Generally, the skeleton should have 3∼10
-    points.
-    Question:
-    What are the typical types of Chinese dishes?
-    Skeleton:
-<span class="w">    </span><span class="k">1.</span> Dumplings.
-<span class="w">    </span><span class="k">2.</span> Noodles.
-<span class="w">    </span><span class="k">3.</span> Dim Sum.
-<span class="w">    </span><span class="k">4.</span> Hot Pot.
-<span class="w">    </span><span class="k">5.</span> Wonton.
-<span class="w">    </span><span class="k">6.</span> Ma Po Tofu.
-<span class="w">    </span><span class="k">7.</span> Char Siu.
-<span class="w">    </span><span class="k">8.</span> Fried Rice.
-    Question:
-    What are some practical tips for individuals to reduce their carbon emissions?
-    Skeleton:
-<span class="w">    </span><span class="k">1.</span> Energy conservation.
-<span class="w">    </span><span class="k">2.</span> Efficient transportation.
-<span class="w">    </span><span class="k">3.</span> Home energy efficiency.
-<span class="w">    </span><span class="k">4.</span> Reduce water consumption.
-<span class="w">    </span><span class="k">5.</span> Sustainable diet.
-<span class="w">    </span><span class="k">6.</span> Sustainable travel.
-    Now, please provide the skeleton for the following question.
-    {question}
-    Skeleton:
-    [Assistant:] 1.
-</code></pre></div>
-<div class="highlight"><span class="filename">Point expanding prompt template</span><pre><span></span><code>    [User:] You’re responsible for continuing the writing of one and only one point in the overall answer to the following
-    question.
-    {question}
-    The skeleton of the answer is
-    {skeleton}
-    Continue and only continue the writing of point {point index}. Write it <span class="gs">**very shortly**</span> in 1∼2 sentence and
-    do not continue with other points!
-    [Assistant:] {point index}. {point skeleton}
-</code></pre></div></p>
+<p><div class="language-markdown highlight"><span class="filename">Skeleton prompt template</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>    [User:] You’re an organizer responsible for only giving the skeleton (not the full content) for answering the question.
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    Provide the skeleton in a list of points (numbered 1., 2., 3., etc.) to answer the question. Instead of writing a full
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    sentence, each skeleton point should be very short with only 3∼5 words. Generally, the skeleton should have 3∼10
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    points.
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    Question:
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    What are the typical types of Chinese dishes?
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    Skeleton:
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="k">1.</span> Dumplings.
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="k">2.</span> Noodles.
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">3.</span> Dim Sum.
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="k">4.</span> Hot Pot.
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="k">5.</span> Wonton.
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="k">6.</span> Ma Po Tofu.
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="k">7.</span> Char Siu.
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="k">8.</span> Fried Rice.
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    Question:
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    What are some practical tips for individuals to reduce their carbon emissions?
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    Skeleton:
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span><span class="k">1.</span> Energy conservation.
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="k">2.</span> Efficient transportation.
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">    </span><span class="k">3.</span> Home energy efficiency.
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="k">4.</span> Reduce water consumption.
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">    </span><span class="k">5.</span> Sustainable diet.
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">    </span><span class="k">6.</span> Sustainable travel.
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>    Now, please provide the skeleton for the following question.
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>    {question}
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>    Skeleton:
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>    [Assistant:] 1.
+</span></code></pre></div>
+<div class="language-markdown highlight"><span class="filename">Point expanding prompt template</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    [User:] You’re responsible for continuing the writing of one and only one point in the overall answer to the following
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    question.
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    {question}
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    The skeleton of the answer is
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    {skeleton}
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    Continue and only continue the writing of point {point index}. Write it <span class="gs">**very shortly**</span> in 1∼2 sentence and
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    do not continue with other points!
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    [Assistant:] {point index}. {point skeleton}
+</span></code></pre></div></p>
 </details>
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2307.11768.pdf">Question Decomposition Improves the Faithfulness of Model-Generated Reasoning</a></summary>
@@ -6977,7 +6977,7 @@ It happens in 3 general steps:</p>
 <p>Uses a prompt that initiates a group of personas to be used within the same LLM call to facilitate collaborative analysis and creation of the final output. Solid improvement but comparisons to other techniques are potentially uncertain.
 "<a href="https://github.com/MikeWangWZHL/Solo-Performance-Prompting/blob/main/prompts/trivia_creative_writing.py">Example prompt</a>"</p>
 <p>```python title="Trivia writing SPP'</p>
-<div class="highlight"><pre><span></span><code>spp_prompt = &#39;&#39;&#39;When faced with a task, begin by identifying the participants who will contribute to solving the task. Then, initiate a multi-round collaboration process until a final solution is reached. The participants will give critical comments and detailed suggestions whenever necessary.
+<div class="language-text highlight"><pre><span></span><code>spp_prompt = &#39;&#39;&#39;When faced with a task, begin by identifying the participants who will contribute to solving the task. Then, initiate a multi-round collaboration process until a final solution is reached. The participants will give critical comments and detailed suggestions whenever necessary.
 
 Here are some examples:
 ---

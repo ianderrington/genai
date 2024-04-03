@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enabling Gen() AI to be well understood and effectively used.">
+        <meta name="description" content="Enabling Generative and General AI to be well understood and effectively used.">
       
       
         <meta name="author" content="Ian Derrington">
@@ -6506,12 +6506,12 @@ r1 --&gt;|transition-record| r2
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2304.03442.pdf">Generative Agents: Interactive Simulacra of Human Behavior</a> in a simulated town!!!</summary>
 <p>This paper discusses a simulation involving different agents exhibiting different personalities. The dynamic environment, shared in <a href="https://github.com/a16z-infra/ai-town">code</a> can be manipulated by these agents. The paper explores various challenges and proposed solutions including:
-<div class="highlight"><pre><span></span><code><span class="gs">**Remembering**</span>
-    <span class="ge">_Observation Memory_</span> This is a memory stream that maintains a record of past experiences. These experiences are stored in &quot;memory objects&quot;, which are described in natural language, and timestamped. The importance of each memory object is determined using metrics such as <span class="ge">_recency_</span>, <span class="ge">_importance_</span>, and <span class="ge">_relevance_</span>.
-    <span class="ge">_Reflection Memory_</span> This memory type allows the agent to generate more abstract thoughts. These thoughts can be included along with reflections. This process is hardcoded to occur when the sum of importance scores exceeds a certain threshold.
-<span class="gs">**Planning and Reacting**</span>
-    <span class="ge">_Recursive Planning_</span> In this process, the agent divides the day into chunks of &quot;goals&quot;, which are further broken down into smaller time frames. The ability to adjust these plans based on interactions is a key feature of this mechanism.
-</code></pre></div></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gs">**Remembering**</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="ge">_Observation Memory_</span> This is a memory stream that maintains a record of past experiences. These experiences are stored in &quot;memory objects&quot;, which are described in natural language, and timestamped. The importance of each memory object is determined using metrics such as <span class="ge">_recency_</span>, <span class="ge">_importance_</span>, and <span class="ge">_relevance_</span>.
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="ge">_Reflection Memory_</span> This memory type allows the agent to generate more abstract thoughts. These thoughts can be included along with reflections. This process is hardcoded to occur when the sum of importance scores exceeds a certain threshold.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gs">**Planning and Reacting**</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="ge">_Recursive Planning_</span> In this process, the agent divides the day into chunks of &quot;goals&quot;, which are further broken down into smaller time frames. The ability to adjust these plans based on interactions is a key feature of this mechanism.
+</span></code></pre></div></p>
 </details>
 <div class="admonition tip">
 <p class="admonition-title"><a href="https://arxiv.org/pdf/2010.08531.pdf">Multi-Agent Collaboration via Reward Attribution Decomposition</a></p>
@@ -6537,12 +6537,12 @@ r1 --&gt;|transition-record| r2
 <details class="tip">
 <summary><a href="https://arxiv.org/pdf/2305.14325.pdf">Improving Factuality and Reasoning in Language Models through Multiagent Debate</a> where multiple language model instances propose and debate their individual responses and reasoning processes over multiple rounds to arrive at a common final answer.</summary>
 <p>They tried both concatenation or <em>summarization</em> of other results. Summarization reduces length and improves quality.
-<div class="highlight"><pre><span></span><code>    <span class="c1"># Debate Length Prompt</span>
-    <span class="n">short_prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; These are the solutions to the problem from other agents: </span><span class="si">{other_answers}</span>
-<span class="s2">        Based off the opinion of other agents, can you give an updated response . . .&quot;&quot;&quot;</span>
-    <span class="n">long_prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; These are the solutions to the problem from other agents: </span><span class="si">{other_answers}</span>
-<span class="s2">        Using the opinion of other agents as additional advice, can you give an updated response . . .&quot;&quot;&quot;</span>
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    <span class="c1"># Debate Length Prompt</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">short_prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; These are the solutions to the problem from other agents: </span><span class="si">{other_answers}</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s2">        Based off the opinion of other agents, can you give an updated response . . .&quot;&quot;&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">long_prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; These are the solutions to the problem from other agents: </span><span class="si">{other_answers}</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s2">        Using the opinion of other agents as additional advice, can you give an updated response . . .&quot;&quot;&quot;</span>
+</span></code></pre></div>
 <a href="https://github.com/composable-architectures/llm_multiagent_debate">Github</a></p>
 </details>
 <details class="tip">
