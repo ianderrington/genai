@@ -205,7 +205,9 @@ There are several optimization targets of direct interest
     
     Data: Collected from multiple sources to create new sets. " 9422 UniProt identifiers and 9363 corresponding amino acid sequences from 16 thermophilic and 16 mesophilic organisms" Filtered
 
-    Models: Trained multiple models including PLM with embedding and output layer to predict Thermal stability ranges. 
+    Models: 
+    They considered several first, we consider feature-based models that rely on manually engineered features, such as physicochemical properties. Second, we include hybrid sequence-based models that use amino acid features to learn sequence embeddings. Third, we consider approaches that are purely sequence-based, similarly to ProLaTherm, but in contrast train sequence embeddings from scratch.  The final model used a simplified transformer solution that used 1024 sequence enbeddings that were put into a self-attention network resulting in an output embedding that was averaged and put into an ReLU activation that then went to a a batch norm and logistic predction of whether the protein was a thermophile. 
+    
     Training: From scratch.
 
     Results: High performance of PLM 97% accuracy over other models, though this accuracy is reduced when reducing train/test set homology.
