@@ -3965,8 +3965,41 @@ and
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Optimization Targets">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foundation-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundation models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Foundation models">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esm-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESM based
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tape
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#structure" class="md-nav__link">
@@ -4059,6 +4092,34 @@ and
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colab-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colab Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6404,8 +6465,41 @@ and
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Optimization Targets">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foundation-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundation models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Foundation models">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esm-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESM based
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tape
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#structure" class="md-nav__link">
@@ -6499,6 +6593,34 @@ and
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colab-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colab Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -6572,13 +6694,22 @@ and
 <h2 id="optimization-targets">Optimization Targets<a class="headerlink" href="#optimization-targets" title="Permanent link">&para;</a></h2>
 <p>There are several optimization targets of direct interest </p>
 <ul>
-<li><a href="#structure">Structure</a></li>
+<li>
+<p><a href="#structure">Structure</a></p>
+<ul>
+<li>Contact prediction</li>
+<li>Secondary structure</li>
+<li>Remote cohomology</li>
+<li>(mis)Folding (missense)</li>
+</ul>
+</li>
 <li>
 <p><a href="#function">Function</a></p>
 <ul>
 <li>Enzymatic Catalysis</li>
 <li>Thermocompatibility</li>
 <li>Fluorescence</li>
+<li>Remote cohomology</li>
 </ul>
 </li>
 <li>
@@ -6590,21 +6721,17 @@ and
 <li>Metals</li>
 </ul>
 </li>
+</ul>
+<p>-</p>
+<ul>
 <li><a href="#candidate-identification">Candidate Identification</a> and <a href="#candidate-alignment">alignment</a></li>
 <li>... and <em>hybrid</em> versions to optimize the targets jointly</li>
 </ul>
-<h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
-<div class="admonition tip">
-<p class="admonition-title"><a href="https://www.science.org/doi/10.1126/science.ade2574">Evolutionary-scale prediction of atomic-level protein structure with a language model</a> End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end</p>
-</div>
-<h3 id="function">Function<a class="headerlink" href="#function" title="Permanent link">&para;</a></h3>
-<h4 id="enzymatic-catalysis">Enzymatic Catalysis<a class="headerlink" href="#enzymatic-catalysis" title="Permanent link">&para;</a></h4>
-<div class="admonition tip">
-<p class="admonition-title"><a href="https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf">Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering</a></p>
-</div>
-<details class="tip">
-<summary><a href="https://www.nature.com/articles/s41586-023-05696-3">De novo design of luciferases using deep learning</a></summary>
-<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278" /></a></p>
+<h2 id="foundation-models">Foundation models<a class="headerlink" href="#foundation-models" title="Permanent link">&para;</a></h2>
+<h3 id="esm-based">ESM based<a class="headerlink" href="#esm-based" title="Permanent link">&para;</a></h3>
+<details class="abstract">
+<summary>[Genome-wide prediction of disease variant effects with a deep protein language model]((<a href="https://github.com/ntranoslab/esm-variants">https://github.com/ntranoslab/esm-variants</a>)</summary>
+<p>The authors show int heir <a href="https://www.nature.com/articles/s41588-023-01465-0">paper</a> a workflow using ESM1b, a 650-million-parameter protein language model, to predict all ~450 million possible missense variant effects in the human genome, and made all predictions available on a web portal.</p>
 </details>
 <details class="abstract">
 <summary><a class="glightbox" href="https://badgen.net/github/stars/facebookresearch/esm" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/facebookresearch/esm" /></a> <a href="[Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm)">Language models enable zero-shot prediction of the effects of mutations on protein function</a></summary>
@@ -6620,8 +6747,7 @@ and
 </details>
 <details class="abstract">
 <summary><a class="glightbox" href="https://badgen.net/github/stars/facebookresearch/esm" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/facebookresearch/esm" /></a> <a href="[MSA Transformer](https://github.com/facebookresearch/esm)">MSA Transformer</a></summary>
-<p>The author's demonstrate training an unsupervised PLM that operates on sets of aligned sequences. 
-Self-supervision helps to reconstruct the corrupted MSA. </p>
+<p>The author's demonstrate in their <a href="https://www.biorxiv.org/content/10.1101/2021.02.12.430858v3.full.pdf">paper</a> training an unsupervised PLM that operates on sets of aligned sequences. Self-supervision helps to reconstruct the corrupted MSA. </p>
 <p><strong>Developments</strong></p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/e87edf1e-49eb-4a19-bf08-093060e87220" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="334" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e87edf1e-49eb-4a19-bf08-093060e87220"></a></p>
 <p>** Architecture**</p>
@@ -6637,7 +6763,48 @@ Self-supervision helps to reconstruct the corrupted MSA. </p>
 <p>They show that a logistic regression with 144 parameters fit on 20 training structures could predict the contact maps of almost 15k other structures almost unsupervised. 
 They show a supervised contact prediction map can improve the contact-prediction maps. 
 They find the attention heads focus on highly variable colums, correlating with the per-column entropy of MSA.  </p>
-<p><a href="https://www.biorxiv.org/content/10.1101/2021.02.12.430858v3.full.pdf">Paper</a></p>
+</details>
+<details class="abstract">
+<summary><a href="https://www.biorxiv.org/content/10.1101/622803v4.full.pdf">Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences</a></summary>
+<p>The authors used masked languaged prediction with transformer models to train a foundation model capable of multiple downstream tasks.</p>
+<div class="language-text highlight"><pre><span></span><code>&quot;To this end we use unsupervised learning to train a deep contextual language model on
+86 billion amino acids across 250 million protein
+sequences spanning evolutionary diversity. The
+resulting model contains information about biological properties in its representations. The representations are learned from sequence data alone.
+The learned representation space has a multi-scale
+organization reflecting structure from the level
+of biochemical properties of amino acids to remote homology of proteins. Information about
+secondary and tertiary structure is encoded in the
+representations and can be identified by linear projections. &quot;
+
+&lt;img width=&quot;329&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/27df578a-50ab-42ac-b675-58f7d740be4a&quot;&gt;
+</code></pre></div>
+</details>
+<details class="note">
+<summary><a href="https://www.biorxiv.org/content/10.1101/2020.12.15.422761v1.full.pdf">TRANSFORMER PROTEIN LANGUAGE MODELS ARE UNSUPERVISED STRUCTURE LEARNERS</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="973" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b"></a></p>
+</details>
+<details class="note">
+<summary><a href="https://yanglab.nankai.edu.cn/trRosetta/benchmark_single/">Single-sequence protein structure prediction using supervised transformer protein language models</a></summary>
+<p>The authors show in their [paper[(<a href="https://nature.com/articles/s43588-022-00373-3">https://nature.com/articles/s43588-022-00373-3</a>) the ability to generate high quality predictions outperforming AlphaFold2, with a model called trRosettaX-Single using ESM to generate representations and attention maps  that can be trained for distance+energy maps, </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c06d4a40-117f-4b86-9deb-ee9d29fc8f70" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c06d4a40-117f-4b86-9deb-ee9d29fc8f70" /></a></p>
+</details>
+<h3 id="tape">Tape<a class="headerlink" href="#tape" title="Permanent link">&para;</a></h3>
+<details class="abstract">
+<summary><a href="https://github.com/songlab-cal/tape">Tasks Assessing Protein Embeddings (TAPE)</a></summary>
+</details>
+<h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://www.science.org/doi/10.1126/science.ade2574">Evolutionary-scale prediction of atomic-level protein structure with a language model</a> End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end</p>
+</div>
+<h3 id="function">Function<a class="headerlink" href="#function" title="Permanent link">&para;</a></h3>
+<h4 id="enzymatic-catalysis">Enzymatic Catalysis<a class="headerlink" href="#enzymatic-catalysis" title="Permanent link">&para;</a></h4>
+<div class="admonition tip">
+<p class="admonition-title"><a href="https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf">Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering</a></p>
+</div>
+<details class="tip">
+<summary><a href="https://www.nature.com/articles/s41586-023-05696-3">De novo design of luciferases using deep learning</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278" /></a></p>
 </details>
 <p><a href="/shared/forcegen.html" class="page-url" id="page-url-0"></a></p>
 <!-- Clipboard copy icon/button -->
@@ -6681,20 +6848,25 @@ They find the attention heads focus on highly variable colums, correlating with 
 <p>The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.</p>
 <h4 id="thermostability">Thermostability<a class="headerlink" href="#thermostability" title="Permanent link">&para;</a></h4>
 </details>
-<p>??? abstract "<a href="https://github.com/grimmlab/ProLaTherm">ProLaTherm: Protein Language Model-based Thermophilicity Predictor
-</a>" prolatherm</p>
-<div class="language-text highlight"><pre><span></span><code>**Developments** The authors reveal in their [paper](https://academic.oup.com/nargab/article/5/4/lqad087/7306664) a model that is good at predicting thermal stability as well as an augmented dataset to enable their good predictive control
+<p><a href="/shared/prolatherm.html" class="page-url" id="page-url-2"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-![image](https://github.com/ianderrington/genai/assets/76016868/0c9b9576-b753-459b-9016-c40a7aaccde0)
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+</div>
 
-Data: Collected from multiple sources to create new sets. &quot; 9422 UniProt identifiers and 9363 corresponding amino acid sequences from 16 thermophilic and 16 mesophilic organisms&quot; Filtered
-
-Models: Trained multiple models including PLM with embedding and output layer to predict Thermal stability ranges. 
-Training: From scratch.
-
-Results: High performance of PLM 97% accuracy over other models, though this accuracy is reduced when reducing train/test set homology.
-</code></pre></div>
+<details class="abstract">
+<summary><a href="https://github.com/grimmlab/ProLaTherm">ProLaTherm: Protein Language Model-based Thermophilicity Predictor</a></summary>
+<p><strong>Developments</strong> The authors reveal in their <a href="https://academic.oup.com/nargab/article/5/4/lqad087/7306664">paper</a> a model that is good at predicting thermal stability as well as an augmented dataset to enable their good predictive control </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0c9b9576-b753-459b-9016-c40a7aaccde0" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0c9b9576-b753-459b-9016-c40a7aaccde0" /></a></p>
+<p>Data: Collected from multiple sources to create new sets. " 9422 UniProt identifiers and 9363 corresponding amino acid sequences from 16 thermophilic and 16 mesophilic organisms" Filtered</p>
+<p>Models: Trained multiple models including PLM with embedding and output layer to predict Thermal stability ranges. 
+Training: From scratch.</p>
+<p>Results: High performance of PLM 97% accuracy over other models, though this accuracy is reduced when reducing train/test set homology.</p>
 <h3 id="candidate-identification">Candidate Identification<a class="headerlink" href="#candidate-identification" title="Permanent link">&para;</a></h3>
+</details>
 <p>Particularly for evolutionary methods, it is essential to know <em>where to start</em> optimizing from. GenAI can be used to identify candidates based on databases of prior candidates. </p>
 <p>Searching is essential to find similar sequences that may aid in the training or fine-tuning of models. This can be done with sequence-based alignment, as well as structure-based alignment. Here are a few references of highly-relevant tools for search/alignment. </p>
 <details class="tip">
@@ -6705,6 +6877,27 @@ Results: High performance of PLM 97% accuracy over other models, though this acc
 <h4 id="candidate-alignment">Candidate alignment<a class="headerlink" href="#candidate-alignment" title="Permanent link">&para;</a></h4>
 <p>It is not necessarily just enough to identify a potential candidate but to have a degree of <em>alignment</em> with of the candidate with starting or suggested candidates. This allows for a degree of interpretability to by people. </p>
 <h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<h3 id="evaluation-methods">Evaluation Methods<a class="headerlink" href="#evaluation-methods" title="Permanent link">&para;</a></h3>
+<details class="abstract">
+<summary><a href="https://github.com/salesforce/provis">BERTOLOGY MEETS BIOLOGY: INTERPRETING ATTENTION IN PROTEIN LANGUAGE MODELS</a></summary>
+<p><strong>Developments</strong> The authors show in their <a href="https://arxiv.org/pdf/2006.15222.pdf">paper</a> " that
+attention: (1) captures the folding structure of proteins, connecting amino acids that
+are far apart in the underlying sequence, but spatially close in the three-dimensional
+structure, (2) targets binding sites, a key functional component of proteins, and
+(3) focuses on progressively more complex biophysical properties with increasing layer depth. We find this behavior to be consistent across three Transformer
+architectures (BERT, ALBERT, XLNet) and two distinct protein datasets. We
+also present a three-dimensional visualization of the interaction between attention and protein structure"</p>
+<p>They see the following:</p>
+<ul>
+<li>Attention aligns strongly with contact maps in the deepest layers.</li>
+<li>Attention targets binding sites throughout most layers of the models.</li>
+<li>Attention targets Post-translational modifications in a small number of heads.</li>
+<li>Attention targets higher-level properties in deeper layers.</li>
+<li>Attention heads specialize in particular amino acids. </li>
+<li>Attention is consistent with substitution relationships</li>
+</ul>
+</details>
+<h3 id="colab-design">Colab Design<a class="headerlink" href="#colab-design" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/sokrypton/ColabDesign" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/sokrypton/ColabDesign" /></a> <a href="[ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign)">ColabDesign: Making Protein Design accessible to all via Google Colab!</a></p>
 </div>
