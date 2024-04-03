@@ -6,15 +6,22 @@ Generating or modifying protein sequences to improve behavior, or to create nove
 
 Protein language models, PLMs, are increasingly useful in predicting structure and function of proteins. 
 
+## Strategy
+
+Protein optimization will necessarily evolve the creation of those proteins and evaluations of target characteristics. There are large volumes of databases of various forms that may be useful in creating foundation models. It will still be essential to use continued observaiton to improve the optimization target based on predicted and iterated feedback.
+
+The volume of the observations will hepl to determine the architectures that one ould use. Base models tend to be PLMs because of the large set of available data. Unsupervised finetuning with those large models may be able to occur through homology or family sets to per. Final targets may be then optimized with simple networks, often involving regression to minimize overfitting, or methods that include Bayesian or evolutionary approaches. 
+
+To be able to successfully deliver on final target optimziation, the greater the quantity of direct or surrogate data that can be obtained, the greater the potential the resulting models will ˆs sufficiently predictive of fitness of future protein sequence candidates. That is why massive screening approaches, as described in by [Ginko's platform](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai) screening thousands of candidates. 
+
+??? note "[An example process by Ginko](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai)"
+    <img width="635" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d62000de-845d-4e91-9a7d-c87473752782">
+
 ## Architectures
-#### Traditional
-#### Deep / LLMS
-#### VAE
-#### MaxEnt Maximum Entropy Models
 
-##### Diffusion
-##### GANS
+Evolutionary scale models are trained using generally all known protein sequences, generally with PLMs. Optimization can occur heuristically focusing on active site mutagensis as most likely areas for improvement. Also, the use of computational models like Rosetta to make mutations to molecules and evaluate how they might impact the binding. It may be a fusion of all of these techniques in different manners. 
 
+The models that are used in the architectures may be large-language models, quite often transformer based. These models are used to generate embeddings and attention maps (when using transformers). These generated results are then fused, often with a representation (one hot) of the original sequence, resulting in an input to a downstream model. These models are trained based on the available data to project the representations into  
 
 ## Optimization Targets
 
