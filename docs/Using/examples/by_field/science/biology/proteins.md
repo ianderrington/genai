@@ -47,7 +47,7 @@ There are several optimization targets of direct interest
 
 ## Foundation models
 
-### ESM + variations
+### ESM based
 
 ??? abstract "[Genome-wide prediction of disease variant effects with a deep protein language model]((https://github.com/ntranoslab/esm-variants)"
     The authors show int heir [paper](https://www.nature.com/articles/s41588-023-01465-0) a workflow using ESM1b, a 650-million-parameter protein language model, to predict all ~450 million possible missense variant effects in the human genome, and made all predictions available on a web portal.
@@ -107,7 +107,7 @@ There are several optimization targets of direct interest
 
     
 
-??? abstract "[Biological structure and function emerge from scaling unsupervised learning to250 million protein sequences](https://www.biorxiv.org/content/10.1101/622803v4.full.pdf)"
+??? abstract "[Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences](https://www.biorxiv.org/content/10.1101/622803v4.full.pdf)"
     The authors used masked languaged prediction with transformer models to train a foundation model capable of multiple downstream tasks.
     
         "To this end we use unsupervised learning to train a deep contextual language model on
@@ -125,12 +125,20 @@ There are several optimization targets of direct interest
 ??? note "[TRANSFORMER PROTEIN LANGUAGE MODELS ARE UNSUPERVISED STRUCTURE LEARNERS](https://www.biorxiv.org/content/10.1101/2020.12.15.422761v1.full.pdf)"
     <img width="973" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b">
 
+??? note "[Single-sequence protein structure prediction using supervised transformer protein language models](https://yanglab.nankai.edu.cn/trRosetta/benchmark_single/)"
+    The authors show in their [paper[(https://nature.com/articles/s43588-022-00373-3) the ability to generate high quality predictions outperforming AlphaFold2, with a model called trRosettaX-Single using ESM to generate representations and attention maps  that can be trained for distance+energy maps, 
+    
+    ![image](https://github.com/ianderrington/genai/assets/76016868/c06d4a40-117f-4b86-9deb-ee9d29fc8f70)
+
+
+
 ### Tape
 ??? abstract "[Tasks Assessing Protein Embeddings (TAPE)](https://github.com/songlab-cal/tape)"
     
 
 
 ### Structure
+
 
 !!! tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end"
 
@@ -182,8 +190,7 @@ There are several optimization targets of direct interest
 
 #### Thermostability
 
-??? abstract "[ProLaTherm: Protein Language Model-based Thermophilicity Predictor
-](https://github.com/grimmlab/ProLaTherm)" prolatherm
+??? abstract "[ProLaTherm: Protein Language Model-based Thermophilicity Predictor](https://github.com/grimmlab/ProLaTherm)" prolatherm
     
     **Developments** The authors reveal in their [paper](https://academic.oup.com/nargab/article/5/4/lqad087/7306664) a model that is good at predicting thermal stability as well as an augmented dataset to enable their good predictive control 
     
