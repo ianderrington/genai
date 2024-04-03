@@ -6,9 +6,6 @@ Generating or modifying protein sequences to improve behavior, or to create nove
 
 Protein language models, PLMs, are increasingly useful in predicting structure and function of proteins. 
 
-
-
-
 ## Architectures
 #### Traditional
 #### Deep / LLMS
@@ -17,6 +14,7 @@ Protein language models, PLMs, are increasingly useful in predicting structure a
 
 ##### Diffusion
 ##### GANS
+
 
 ## Optimization Targets
 
@@ -38,21 +36,9 @@ There are several optimization targets of direct interest
 - ... and _hybrid_ versions to optimize the targets jointly
 
 
+## Foundation models
 
-### Structure
-
-!!! tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end"
-
-
-### Function
-
-#### Enzymatic Catalysis
-
-!!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
-
-??? tip "[De novo design of luciferases using deep learning](https://www.nature.com/articles/s41586-023-05696-3)"
-    ![image](https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278)
-
+### ESM
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [Language models enable zero-shot prediction of the effects of mutations on protein function]([Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm))"
     
@@ -77,8 +63,7 @@ There are several optimization targets of direct interest
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [MSA Transformer]([MSA Transformer](https://github.com/facebookresearch/esm))"
 
-    The author's demonstrate training an unsupervised PLM that operates on sets of aligned sequences. 
-    Self-supervision helps to reconstruct the corrupted MSA. 
+    The author's demonstrate in their [paper](https://www.biorxiv.org/content/10.1101/2021.02.12.430858v3.full.pdf) training an unsupervised PLM that operates on sets of aligned sequences. Self-supervision helps to reconstruct the corrupted MSA. 
 
     **Developments**
     
@@ -108,7 +93,42 @@ There are several optimization targets of direct interest
     They show a supervised contact prediction map can improve the contact-prediction maps. 
     They find the attention heads focus on highly variable colums, correlating with the per-column entropy of MSA.  
 
-    [Paper](https://www.biorxiv.org/content/10.1101/2021.02.12.430858v3.full.pdf)
+    
+
+??? abstract "[Biological structure and function emerge from scaling unsupervised learning to250 million protein sequences](https://www.biorxiv.org/content/10.1101/622803v4.full.pdf)"
+    The authors used masked languaged prediction with transformer models to train a foundation model capable of multiple downstream tasks.
+    
+        "To this end we use unsupervised learning to train a deep contextual language model on
+        86 billion amino acids across 250 million protein
+        sequences spanning evolutionary diversity. The
+        resulting model contains information about biological properties in its representations. The representations are learned from sequence data alone.
+        The learned representation space has a multi-scale
+        organization reflecting structure from the level
+        of biochemical properties of amino acids to remote homology of proteins. Information about
+        secondary and tertiary structure is encoded in the
+        representations and can be identified by linear projections. "
+
+        <img width="329" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/27df578a-50ab-42ac-b675-58f7d740be4a">
+
+??? note "[TRANSFORMER PROTEIN LANGUAGE MODELS ARE UNSUPERVISED STRUCTURE LEARNERS](https://www.biorxiv.org/content/10.1101/2020.12.15.422761v1.full.pdf)"
+    <img width="973" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b">
+
+
+### Structure
+
+!!! tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end"
+
+
+### Function
+
+#### Enzymatic Catalysis
+
+!!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
+
+??? tip "[De novo design of luciferases using deep learning](https://www.nature.com/articles/s41586-023-05696-3)"
+    ![image](https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278)
+
+
 
 
 ??? note "[ForceGen: End-to-end de novo protein generation based on nonlinear mechanical unfolding responses using a language diffusion model](https://www.science.org/doi/10.1126/sciadv.adl4000)" forcegen
@@ -181,6 +201,18 @@ It is not necessarily just enough to identify a potential candidate but to have 
 
 ## Tools
 
+### Evaluation Methods
+
+??? abstract "[BERTOLOGY MEETS BIOLOGY: INTERPRETING ATTENTION IN PROTEIN LANGUAGE MODELS](https://github.com/salesforce/provis)"
+    **Developments** The authors show in their [paper](https://arxiv.org/pdf/2006.15222.pdf) " that
+    attention: (1) captures the folding structure of proteins, connecting amino acids that
+    are far apart in the underlying sequence, but spatially close in the three-dimensional
+    structure, (2) targets binding sites, a key functional component of proteins, and
+    (3) focuses on progressively more complex biophysical properties with increasing layer depth. We find this behavior to be consistent across three Transformer
+    architectures (BERT, ALBERT, XLNet) and two distinct protein datasets. We
+    also present a three-dimensional visualization of the interaction between attention and protein structure"
+
+### Colab Design
 !!! tip "![GitHub Repo stars](https://badgen.net/github/stars/sokrypton/ColabDesign) [ColabDesign: Making Protein Design accessible to all via Google Colab!]([ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign))"
 
 
