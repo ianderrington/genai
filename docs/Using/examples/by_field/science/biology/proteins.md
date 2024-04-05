@@ -21,7 +21,19 @@ To be able to successfully deliver on final target optimziation, the greater the
 
 Evolutionary scale models are trained using generally all known protein sequences, generally with PLMs. Optimization can occur heuristically focusing on active site mutagensis as most likely areas for improvement. Also, the use of computational models like Rosetta to make mutations to molecules and evaluate how they might impact the binding. It may be a fusion of all of these techniques in different manners. 
 
-The models that are used in the architectures may be large-language models, quite often transformer based. These models are used to generate embeddings and attention maps (when using transformers). These generated results are then fused, often with a representation (one hot) of the original sequence, resulting in an input to a downstream model. These models are trained based on the available data to project the representations into  
+### Fitness Modeling 
+The models that are used in the architectures may be large-language models, quite often transformer based. These models are used to generate embeddings and attention maps (when using transformers). These generated results are then fused, often with a representation (one hot) of the original sequence, resulting in an input to a downstream model. These downstream models are then optimized for particular [targets](#optimization-targets). 
+
+### Sequence Generation
+Once 'oracle' models have bene found to yield  optimized, it is important to be able to generate sequences that may help to optimize the sequence. One way of doing this is to use _activation maximization_, a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction.)
+
+
+??? abstract "[SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. ](https://github.com/johli/seqprop/tree/master)" seqprop
+    The authors reveal in their [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04437-5) a method to optimize biological protein sequences based on an a predictor model. 
+    ![image](https://github.com/ianderrington/genai/assets/76016868/3c2fe20f-1257-4a76-a034-1b3cad242b8c)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/fed3de2c-6dcf-4f4b-8ad1-aa2ecadce5ad)
+
+
 
 ## Optimization Targets
 
@@ -268,6 +280,12 @@ It is not necessarily just enough to identify a potential candidate but to have 
 !!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/yangkky/Machine-learning-for-proteins?tab=readme-ov-file) [Papers on Machine learning for Proteins]([Papers on Machine learning for Proteins](https://github.com/yangkky/Machine-learning-for-proteins?tab=readme-ov-file))"
+
+??? tip "[Deep Learning in Protein Structural Modeling and Design](https://www.sciencedirect.com/science/article/pii/S2666389920301902) provides a thorough summary of DL manners of optimizing proteins."
+    They emphasize a Sequence --> Structure --> Function approach should be focused upon. 
+    ![image](https://github.com/ianderrington/genai/assets/76016868/cf1b22cc-73d7-4f91-888d-2ad6f75953a1)
+
+
 
 !!! note "[Nucleate AI in Biotech: AI for Protein Design](https://nucleate-hq.notion.site/AI-in-Protein-Design-Resource-Page-8c137f8ba2684402aef9e1e31b85776c)"
 
