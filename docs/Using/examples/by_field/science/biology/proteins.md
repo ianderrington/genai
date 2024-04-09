@@ -183,7 +183,7 @@ The general method of creating protein foundation models uses Masked Language Mo
 ??? note "[TRANSFORMER PROTEIN LANGUAGE MODELS ARE UNSUPERVISED STRUCTURE LEARNERS](https://www.biorxiv.org/content/10.1101/2020.12.15.422761v1.full.pdf)"
     <img width="973" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b">
 
-
+####Multimodal
 
 ??? abstract "🧬 ![GitHub Repo stars](https://badgen.net/github/stars/bio-ontology-research-group/deepgo2) [Protein function prediction as approximate semantic entailment]([Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2))" deepgo-se
 
@@ -200,6 +200,25 @@ The general method of creating protein foundation models uses Masked Language Mo
     ![DeepGO-SE Model Overview](https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa)
 
     The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.
+
+
+??? abstract "[ProtST: Multi-Modality Learning of Protein Sequences and Biomedical Texts](https://github.com/DeepGraphLearning/ProtST)" prost 
+    The authors show in their [paper](https://proceedings.mlr.press/v202/xu23t/xu23t.pdf) that the fusion of natural language model with a protein language model can reasonably improve protein location prediction, fitness landscape prediction, and protein function annotation. 
+    
+    ![image](https://github.com/ianderrington/genai/assets/76016868/c78e6baa-84a6-477f-b831-a69d338eb55c)
+
+    **Data** Their build a ProtDescribe to match protein sequences with text descriptions.
+    
+    **Models** Their models involve three losses. 1. InfooNCE loss to maximize similarity between sequence pairs, and minimize similarity between negative pairs. 2. A Masked protein modeling cross-entropy loss to maintain unimodal information to the sequences, and a fusion MultiMOdal Mask Prediction that uses self and cross-attention on masked input sequence and text pairs to mutually recover the predicted results in sequence and text results. They start with pre-traiend protein models (Bert, ESM-1b and ESM-2) and pretrained language model (PubMedBERT-abs and PubMedBERT-full)
+
+    <img width="336" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cd2617ba-87d0-456d-bb1d-ba11c903e2fc">
+
+    The text data set looks like this: 
+    <img width="673" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2e96eea2-aff6-4667-9101-96ae5dbb4dc0">
+
+
+
+
     
 #### Other models
 
