@@ -23,6 +23,7 @@ Optimization systems may involve merging and combining these components for full
 These components can be cleanly seen in the box below:
 
 ???+ tip "[Adaptive machine learning for protein engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
+
     An overview of ML for protein engineering:
     
     ![image](https://github.com/ianderrington/genai/assets/76016868/a8af9370-05e8-4e81-a223-b60cafbb9b00)
@@ -37,15 +38,15 @@ The volume of the observations will help to determine the architectures that one
 
 To be able to successfully deliver on final target optimziation, the greater the quantity of direct or surrogate data that can be obtained, the greater the potential the resulting models will ˆs sufficiently predictive of fitness of future protein sequence candidates. That is why massive screening approaches, as described in by [Ginko's platform](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai) screening thousands of candidates. 
 
-??? note "[An example process by Ginko](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai)"
-
+??? note "[An example process by Ginkgo](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai)"
+    Gingko reveals with foundry-scale protein estimates, that with thousands of samples they were able to create an enzyme with 10x improvement from where they started. In their design they use structure (differential) estimates via Rosetta, Evolutionary-scale modeling (PLMs), active site focus evolutionary models, as well as an in-house method called 'OWL. 
     <img width="635" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d62000de-845d-4e91-9a7d-c87473752782">
 
 
 When it is possibly to iteratively measure proposed sequences, new data can be used to improve subsequent sequence predictions. This can be done _greedily_, choosing the best solutions, or using probabilistic methods, such as [Bayesian Optimization]. Searching for a protein that optimizes a target by combining both estimated values, as well as their uncertainties. Selecting the sequences with highest-predicted target values  will _greedily_ inform what should be used, and may easily fail due to incorrect estimates due to the predictor model. In other manners, confidence bound (UCB) acquisition, that selects sequences based on an a sum of the predicted target value and the predicted target unertainty. 
 
 
-???+ tip "[Ways of prioritizing](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)
+???+ tip "[Ways of prioritizing](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/08ed6633-0439-44f5-a52d-e53afb4804f2)
 
