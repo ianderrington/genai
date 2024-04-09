@@ -3,13 +3,14 @@
 Generating or modifying protein sequences to improve behavior, or to create novel behavior, is is a powrful application for AI. Guided through evolutionary-techniques, Bayesian optimization, and/or with the use of protein language models (PLMS), they can vastly accelerate the development of biotechnological tools, as well as for identifying targets and avenues for therapeutics. Because of their ability to represent the 'language of proteins', PLMS are increasingly important in predicting structure and function of proteins. 
 
 ## Components
+
 Protein optimization can be broken down into several component [^n1]
 
 [^n1]: [adaptive machine learning for protein engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)
 
 - **[Target property](#optimization-targets)** is the intended goal(s) for protein development
-- **Predictor** that uses sequence information to estimate the value of the optimization target, as a surrogate for laboratory measurement
-- **[Optimized Sequence Proposer](#sequence-optimization)** that creates sequences to evaluate and explore
+- **[Fitness Predictor]** that uses sequence information to estimate the value of the optimization target, as a surrogate for laboratory measurement
+- **[Sequence Proposer](#sequence-optimization)** that creates sequences to evaluate and explore
 - **Prioritizer** that uses sequence and predictor information to estimate the top candidates. 
 - **Laboratory measurements** that reveal the quality of the generated proteins based on the targets
 
@@ -22,13 +23,13 @@ Optimization systems may involve merging and combining these components for full
 These components can be cleanly seen in the box below:
 
 ???+ tip "[Adaptive machine learning for protein engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
-    An overview of ML for protein engineering
+    An overview of ML for protein engineering:
     
     ![image](https://github.com/ianderrington/genai/assets/76016868/a8af9370-05e8-4e81-a223-b60cafbb9b00)
 
 
 
-## Strategy
+### Strategy
 
 Protein optimization will necessarily evolve the creation of those proteins and evaluations of target characteristics. There are large volumes of databases of various forms that may be useful in creating foundation models. It will still be essential to use continued observaiton to improve the optimization target based on predicted and iterated feedback.
 
@@ -49,7 +50,7 @@ When it is possibly to iteratively measure proposed sequences, new data can be u
     ![image](https://github.com/ianderrington/genai/assets/76016868/08ed6633-0439-44f5-a52d-e53afb4804f2)
 
 
-## Optimization Targets
+### Optimization Targets
 
 There are a number of [targets](#optimization-targets) that protein optimization can focus on. For examples, some targets enable primarily basic understanding, such as protein [structure](#structure), and other targets are related to [function](#function), though it is generally considered that structure enables the functions. 
 
@@ -78,14 +79,14 @@ There are several optimization targets of direct interest
 - **_Multimodal_ targets** versions to optimize multiple the targets.
 
 
+### Fitness prediction
+Training a fitness model may first involve training an unsupervised [foundation model](#foundation-models) on a high volume of data. These models can then be fine-tuned, or otherwise adapted, to incorporate protein-sequences or higher relevance to the protein targets of interest. 
 
-### Sequence Optimization
+### Sequence Proposer
 
-Once 'oracle' models have bene found to yield  optimized, it is important to be able to generate sequences that may help to optimize the sequence. 
-
+With a fitness predictor made available, the next step is to create proposal sequences that may be evaluated with the predictor model, or potentially with direct measurement. 
 
 One way of doing this is to use _activation maximization_, a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction.)
-
 
 ??? abstract "[SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. ](https://github.com/johli/seqprop/tree/master)" seqprop
     The authors reveal in their [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04437-5) a method to optimize biological protein sequences based on an a predictor model. They use something called _trainable logits_ that can be sampled from, but do so doing instance normalizaton 
@@ -93,20 +94,21 @@ One way of doing this is to use _activation maximization_, a method that will ge
     ![image](https://github.com/ianderrington/genai/assets/76016868/fed3de2c-6dcf-4f4b-8ad1-aa2ecadce5ad)
 
 
-
-## Optimization Metrics
-
-
-## Architectures
+## Example Architectures
 While there are many architecture and methods for creating and optimizing proteins, we focus here, primarily on ways that employ PLMs in some way. These create _foundation models_ that can be fine-tuned and readily adapted to specific domains of interest. 
 
 The general method of creating protein foundation models uses Masked Language Modeling (MLM) or 'Bert-based' predictions, though next-token predictions, as is done with GPT-architectures may also be used. We share a number of prominent models and uses or derivatives, 
 
+### Evaluation Metrics
+
+### Foundation models
 
 #### ESM models
 
+!!! tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model (esm)](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end"
+
 ??? abstract "[Genome-wide prediction of disease variant effects with a deep protein language model](https://github.com/ntranoslab/esm-variants)"
-    The authors show int heir [paper](https://www.nature.com/articles/s41588-023-01465-0) a workflow using ESM1b, a 650-million-parameter protein language model, to predict all ~450 million possible missense variant effects in the human genome, and made all predictions available on a web portal.
+    The authors show in their [paper](https://www.nature.com/articles/s41588-023-01465-0) a workflow using ESM1b, a 650-million-parameter protein language model, to predict all ~450 million possible missense variant effects in the human genome, and made all predictions available on a web portal.
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [Language models enable zero-shot prediction of the effects of mutations on protein function]([Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm))"
     
@@ -180,34 +182,41 @@ The general method of creating protein foundation models uses Masked Language Mo
 ??? note "[TRANSFORMER PROTEIN LANGUAGE MODELS ARE UNSUPERVISED STRUCTURE LEARNERS](https://www.biorxiv.org/content/10.1101/2020.12.15.422761v1.full.pdf)"
     <img width="973" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b">
 
+
+
+??? abstract "🧬 ![GitHub Repo stars](https://badgen.net/github/stars/bio-ontology-research-group/deepgo2) [Protein function prediction as approximate semantic entailment]([Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2))" deepgo-se
+
+    **Developments** 
+
+    Current LLM models excel at predicting the structure and other attributes of biological sequences like proteins. However, their [transferability is limited](https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf), capping their true potential. The [DeepGO-SE](https://www.nature.com/articles/s42256-024-00795-w) model innovates 🚀 by integrating protein language models with specific knowledge on protein function, bridging the gap between knowledge-graphs' explicit representations and next-token prediction's implicit representations, and thereby significantly improving model performance.
+
+    **How it works** 
+
+    * 🔄 First, DeepGO-SE reuses the ESM2 large language model to convert a protein sequence into a vector space embedding, prepping it for machine learning application.
+    * 🧠 Next, an ensemble of fitted prediction models is trained to align ESM2 embeddings with an embedding space (ELEmbeddings) derived from GO axioms, creating a world model filled with geometric shapes and relations akin to a Σ algebra, which can verify the truth of a statement.
+    * ✅ Finally, for statements such as "protein has function C", when the ensemble reaches a consensus on truth, the semantic truth estimation is then accepted as valid.
+
+    ![DeepGO-SE Model Overview](https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa)
+
+    The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.
+    
+#### Other models
+
 ??? note "[Single-sequence protein structure prediction using supervised transformer protein language models](https://yanglab.nankai.edu.cn/trRosetta/benchmark_single/)"
     The authors show in their [paper[(https://nature.com/articles/s43588-022-00373-3) the ability to generate high quality predictions outperforming AlphaFold2, with a model called trRosettaX-Single using ESM to generate representations and attention maps  that can be trained for distance+energy maps, 
     
     ![image](https://github.com/ianderrington/genai/assets/76016868/c06d4a40-117f-4b86-9deb-ee9d29fc8f70)
 
-
-
-### Tape
 ??? abstract "[Tasks Assessing Protein Embeddings (TAPE)](https://github.com/songlab-cal/tape)"
-    
 
+#### Architectures by Target
 
-### Structure
-
-
-!!! tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end"
-
-
-### Function
-
-#### Enzymatic Catalysis
+##### Enzymatic Catalysis
 
 !!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
 
 ??? tip "[De novo design of luciferases using deep learning](https://www.nature.com/articles/s41586-023-05696-3)"
     ![image](https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278)
-
-
 
 
 ??? note "[ForceGen: End-to-end de novo protein generation based on nonlinear mechanical unfolding responses using a language diffusion model](https://www.science.org/doi/10.1126/sciadv.adl4000)" forcegen
@@ -226,22 +235,6 @@ The general method of creating protein foundation models uses Masked Language Mo
       Via full-atom molecular simulations for direct validation from physical and chemical principles, we demonstrate that the designed proteins are de novo, and fulfill the targeted mechanical properties, including unfolding energy and mechanical strength, and a detailed unfolding force-separation curves. 
 
 
-
-??? abstract "🧬 ![GitHub Repo stars](https://badgen.net/github/stars/bio-ontology-research-group/deepgo2) [Protein function prediction as approximate semantic entailment]([Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2))" deepgo-se
-
-    **Developments** 
-
-    Current LLM models excel at predicting the structure and other attributes of biological sequences like proteins. However, their [transferability is limited](https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf), capping their true potential. The [DeepGO-SE](https://www.nature.com/articles/s42256-024-00795-w) model innovates 🚀 by integrating protein language models with specific knowledge on protein function, bridging the gap between knowledge-graphs' explicit representations and next-token prediction's implicit representations, and thereby significantly improving model performance.
-
-    **How it works** 
-
-    * 🔄 First, DeepGO-SE reuses the ESM2 large language model to convert a protein sequence into a vector space embedding, prepping it for machine learning application.
-    * 🧠 Next, an ensemble of fitted prediction models is trained to align ESM2 embeddings with an embedding space (ELEmbeddings) derived from GO axioms, creating a world model filled with geometric shapes and relations akin to a Σ algebra, which can verify the truth of a statement.
-    * ✅ Finally, for statements such as "protein has function C", when the ensemble reaches a consensus on truth, the semantic truth estimation is then accepted as valid.
-
-    ![DeepGO-SE Model Overview](https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa)
-
-    The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.
 
 #### Thermostability
 
@@ -305,12 +298,6 @@ It is not necessarily just enough to identify a potential candidate but to have 
 !!! tip "![GitHub Repo stars](https://badgen.net/github/stars/sokrypton/ColabDesign) [ColabDesign: Making Protein Design accessible to all via Google Colab!]([ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign))"
 
 
-    
-
-## Companies
-- [Deepchain.bio]
-- [https://310.ai/]
-
 ## Quality reviews and references
 
 !!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
@@ -321,8 +308,12 @@ It is not necessarily just enough to identify a potential candidate but to have 
     They emphasize a Sequence --> Structure --> Function approach should be focused upon. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/cf1b22cc-73d7-4f91-888d-2ad6f75953a1)
 
-
-
 !!! note "[Nucleate AI in Biotech: AI for Protein Design](https://nucleate-hq.notion.site/AI-in-Protein-Design-Resource-Page-8c137f8ba2684402aef9e1e31b85776c)"
+    
 
+## Companies
 
+Here are several companies that help to focus in protein design. If you have one you'd like to suggest, please file an [issue](https://github.com/ianderrington/genai/issues). 
+
+- [Deepchain.bio]
+- [https://310.ai/]
