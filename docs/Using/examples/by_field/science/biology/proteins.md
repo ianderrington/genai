@@ -2,11 +2,37 @@
 
 Generating or modifying protein sequences to improve behavior, or to create novel behavior, is is a powrful application for AI. Guided through evolutionary-techniques, Bayesian optimization, and/or with the use of protein language models (PLMS), they can vastly accelerate the development of biotechnological tools, as well as for identifying targets and avenues for therapeutics. Because of their ability to represent the 'language of proteins', PLMS are increasingly important in predicting structure and function of proteins. 
 
+## Components
+Protein optimization can be broken down into several component [^n1]
+
+[^n1]: [adaptive machine learning for protein engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)
+
+- **[Target property](#optimization-targets)** is the intended goal(s) for protein development
+- **Predictor** that uses sequence information to estimate the value of the optimization target, as a surrogate for laboratory measurement
+- **[Optimized Sequence Proposer](#sequence-optimization)** that creates sequences to evaluate and explore
+- **Prioritizer** that uses sequence and predictor information to estimate the top candidates. 
+- **Laboratory measurements** that reveal the quality of the generated proteins based on the targets
+
+
+Optimization systems may involve merging and combining these components for full solutions in two general manners.
+
+1. A model that separates generation and evaluation steps, where an the predictor model evaluates the quality of an input set of sequences (generated or otherwise defined)
+2. A model that model that directly predicts the best designs using adaptive sampling, proposing solutions, evaluating them with the predictor model, and then iterating. 
+
+These components can be cleanly seen in the box below:
+
+???+ tip "[Adaptive machine learning for protein engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
+    An overview of ML for protein engineering
+    
+    ![image](https://github.com/ianderrington/genai/assets/76016868/a8af9370-05e8-4e81-a223-b60cafbb9b00)
+
+
+
 ## Strategy
 
 Protein optimization will necessarily evolve the creation of those proteins and evaluations of target characteristics. There are large volumes of databases of various forms that may be useful in creating foundation models. It will still be essential to use continued observaiton to improve the optimization target based on predicted and iterated feedback.
 
-The volume of the observations will hepl to determine the architectures that one ould use. Base models tend to be PLMs because of the large set of available data. Unsupervised finetuning with those large models may be able to occur through homology or family sets to per. Final targets may be then optimized with simple networks, often involving regression to minimize overfitting, or methods that include Bayesian or evolutionary approaches. 
+The volume of the observations will help to determine the architectures that one could use. Base models tend to be PLMs because of the large set of available data. Unsupervised finetuning with those large models may be able to occur through homology or family sets to per. Final targets may be then optimized with simple networks, often involving regression to minimize overfitting, or methods that include Bayesian or evolutionary approaches. 
 
 To be able to successfully deliver on final target optimziation, the greater the quantity of direct or surrogate data that can be obtained, the greater the potential the resulting models will ˆs sufficiently predictive of fitness of future protein sequence candidates. That is why massive screening approaches, as described in by [Ginko's platform](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai) screening thousands of candidates. 
 
@@ -14,35 +40,20 @@ To be able to successfully deliver on final target optimziation, the greater the
 
     <img width="635" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d62000de-845d-4e91-9a7d-c87473752782">
 
-## Components
-Protein optimization can be broken down into several component [^n1]
 
-[^n1]: [adaptive machine learning for protein engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)
+When it is possibly to iteratively measure proposed sequences, new data can be used to improve subsequent sequence predictions. This can be done _greedily_, choosing the best solutions, or using probabilistic methods, such as [Bayesian Optimization]. Searching for a protein that optimizes a target by combining both estimated values, as well as their uncertainties. Selecting the sequences with highest-predicted target values  will _greedily_ inform what should be used, and may easily fail due to incorrect estimates due to the predictor model. In other manners, confidence bound (UCB) acquisition, that selects sequences based on an a sum of the predicted target value and the predicted target unertainty. 
 
-- **Target property** is the intended goal(s) for protein development
-- **Predictor** that uses sequence information to estimate the value of the optimization target
-- **Prioritizer** that uses sequence and predictor information to estimate the top candidates. 
-- **Proposer** That creates sequences to evaluate and explore
 
-Optimization systems may involve merging and combining these components for full solutions, it is important to understand the different components, and where they may be focused upon in independent manners. These components can be cleanly seen in the box below:
+???+ tip "[Ways of prioritizing](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)
 
-??? tip "[Adaptive machine learning for protein engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
-    An overview of ML for protein engineering
-    
-    ![image](https://github.com/ianderrington/genai/assets/76016868/a8af9370-05e8-4e81-a223-b60cafbb9b00)
-
-    Ways of prioritizing
     ![image](https://github.com/ianderrington/genai/assets/76016868/08ed6633-0439-44f5-a52d-e53afb4804f2)
 
 
-
-### Optimization Targets
-
+## Optimization Targets
 
 There are a number of [targets](#optimization-targets) that protein optimization can focus on. For examples, some targets enable primarily basic understanding, such as protein [structure](#structure), and other targets are related to [function](#function), though it is generally considered that structure enables the functions. 
 
 In the cannon causal influence _sequence_ creates --> _structure_ --> enables the _function_. 
-
 
 There are several optimization targets of direct interest 
 
@@ -68,17 +79,12 @@ There are several optimization targets of direct interest
 
 
 
+### Sequence Optimization
+
+Once 'oracle' models have bene found to yield  optimized, it is important to be able to generate sequences that may help to optimize the sequence. 
 
 
-## Architectures
-
-Evolutionary scale models are trained using generally all known protein sequences, generally with PLMs. Optimization can occur heuristically focusing on active site mutagensis as most likely areas for improvement. Also, the use of computational models like Rosetta to make mutations to molecules and evaluate how they might impact the binding. It may be a fusion of all of these techniques in different manners. 
-
-### Fitness Modeling 
-The models that are used in the architectures may be large-language models, quite often transformer based. These models are used to generate embeddings and attention maps (when using transformers). These generated results are then fused, often with a representation (one hot) of the original sequence, resulting in an input to a downstream model. These downstream models are then optimized for particular [targets](#optimization-targets). 
-
-### Sequence Generation
-Once 'oracle' models have bene found to yield  optimized, it is important to be able to generate sequences that may help to optimize the sequence. One way of doing this is to use _activation maximization_, a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction.)
+One way of doing this is to use _activation maximization_, a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction.)
 
 
 ??? abstract "[SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. ](https://github.com/johli/seqprop/tree/master)" seqprop
