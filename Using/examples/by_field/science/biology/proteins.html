@@ -3946,6 +3946,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#multimodal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimodal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#other-models" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6424,6 +6435,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#multimodal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimodal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#other-models" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6761,6 +6783,7 @@ representations and can be identified by linear projections. &quot;
 <summary><a href="https://www.biorxiv.org/content/10.1101/2020.12.15.422761v1.full.pdf">TRANSFORMER PROTEIN LANGUAGE MODELS ARE UNSUPERVISED STRUCTURE LEARNERS</a></summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="973" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b"></a></p>
 </details>
+<h4 id="multimodal">Multimodal<a class="headerlink" href="#multimodal" title="Permanent link">&para;</a></h4>
 <p><a href="/shared/deepgo-se.html" class="page-url" id="page-url-1"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
@@ -6782,8 +6805,27 @@ representations and can be identified by linear projections. &quot;
 </ul>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeepGO-SE Model Overview" src="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa" /></a></p>
 <p>The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.</p>
-<h4 id="other-models">Other models<a class="headerlink" href="#other-models" title="Permanent link">&para;</a></h4>
 </details>
+<p><a href="/shared/prost.html" class="page-url" id="page-url-2"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a href="https://github.com/DeepGraphLearning/ProtST">ProtST: Multi-Modality Learning of Protein Sequences and Biomedical Texts</a></summary>
+<p>The authors show in their <a href="https://proceedings.mlr.press/v202/xu23t/xu23t.pdf">paper</a> that the fusion of natural language model with a protein language model can reasonably improve protein location prediction, fitness landscape prediction, and protein function annotation. </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c78e6baa-84a6-477f-b831-a69d338eb55c" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c78e6baa-84a6-477f-b831-a69d338eb55c" /></a></p>
+<p><strong>Data</strong> Their build a ProtDescribe to match protein sequences with text descriptions.</p>
+<p><strong>Models</strong> Their models involve three losses. 1. InfooNCE loss to maximize similarity between sequence pairs, and minimize similarity between negative pairs. 2. A Masked protein modeling cross-entropy loss to maintain unimodal information to the sequences, and a fusion MultiMOdal Mask Prediction that uses self and cross-attention on masked input sequence and text pairs to mutually recover the predicted results in sequence and text results. They start with pre-traiend protein models (Bert, ESM-1b and ESM-2) and pretrained language model (PubMedBERT-abs and PubMedBERT-full)</p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/cd2617ba-87d0-456d-bb1d-ba11c903e2fc" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="336" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cd2617ba-87d0-456d-bb1d-ba11c903e2fc"></a></p>
+<p>The text data set looks like this: 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2e96eea2-aff6-4667-9101-96ae5dbb4dc0" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="673" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2e96eea2-aff6-4667-9101-96ae5dbb4dc0"></a></p>
+</details>
+<h4 id="other-models">Other models<a class="headerlink" href="#other-models" title="Permanent link">&para;</a></h4>
 <details class="note">
 <summary><a href="https://yanglab.nankai.edu.cn/trRosetta/benchmark_single/">Single-sequence protein structure prediction using supervised transformer protein language models</a></summary>
 <p>The authors show in their [paper[(<a href="https://nature.com/articles/s43588-022-00373-3">https://nature.com/articles/s43588-022-00373-3</a>) the ability to generate high quality predictions outperforming AlphaFold2, with a model called trRosettaX-Single using ESM to generate representations and attention maps  that can be trained for distance+energy maps, </p>
@@ -6801,13 +6843,13 @@ representations and can be identified by linear projections. &quot;
 <summary><a href="https://www.nature.com/articles/s41586-023-05696-3">De novo design of luciferases using deep learning</a></summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278" /></a></p>
 </details>
-<p><a href="/shared/forcegen.html" class="page-url" id="page-url-2"></a></p>
+<p><a href="/shared/forcegen.html" class="page-url" id="page-url-3"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
 </div>
 
 <details class="note">
@@ -6821,13 +6863,13 @@ representations and can be identified by linear projections. &quot;
 <p>Via full-atom molecular simulations for direct validation from physical and chemical principles, we demonstrate that the designed proteins are de novo, and fulfill the targeted mechanical properties, including unfolding energy and mechanical strength, and a detailed unfolding force-separation curves. </p>
 </details>
 <h4 id="thermostability">Thermostability<a class="headerlink" href="#thermostability" title="Permanent link">&para;</a></h4>
-<p><a href="/shared/prolatherm.html" class="page-url" id="page-url-3"></a></p>
+<p><a href="/shared/prolatherm.html" class="page-url" id="page-url-4"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-4')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-4">Link copied!</div>
 </div>
 
 <details class="abstract">
