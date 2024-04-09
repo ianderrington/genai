@@ -62,6 +62,7 @@ There are several optimization targets of direct interest
 
 ## Review literature
 
+??? tip "[Adaptive machine learning for protein engineering]
 
 ## Architectures and Models
 While there are many architecture and methods for creating and optimizing proteins, we focus here, primarily on ways that employ PLMs in some way. These create _foundation models_ that can be fine-tuned and readily adapted to specific domains of interest. 
