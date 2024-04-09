@@ -1,10 +1,6 @@
 🚧 Under construction 🦺
 
-**Please consider contributing modifications or suggestions to improve this [here](https://github.com/ianderrington/genai)**
-
-Generating or modifying protein sequences to improve behavior, or to create novel behavior, is is a powrful application for AI. Guided through evolutionary-techniques, Bayesian optimization, and/or with the use of language models, they can vasly accelerate the development of biotechnological tools, as well as for identifying targets and avenues for therapeutics. 
-
-Protein language models, PLMs, are increasingly useful in predicting structure and function of proteins. 
+Generating or modifying protein sequences to improve behavior, or to create novel behavior, is is a powrful application for AI. Guided through evolutionary-techniques, Bayesian optimization, and/or with the use of protein language models (PLMS), they can vastly accelerate the development of biotechnological tools, as well as for identifying targets and avenues for therapeutics. Because of their ability to represent the 'language of proteins', PLMS are increasingly important in predicting structure and function of proteins. 
 
 ## Strategy
 
@@ -34,39 +30,46 @@ Once 'oracle' models have bene found to yield  optimized, it is important to be 
     ![image](https://github.com/ianderrington/genai/assets/76016868/fed3de2c-6dcf-4f4b-8ad1-aa2ecadce5ad)
 
 
+There are a number of [targets](#optimization-targets) that protein optimization can focus on. For examples, some targets enable primarily basic understanding, such as protein [structure](#structure), and other targets are related to [function](#function), though it is generally considered that structure enables the functions. 
+
+In the cannon causal influence _sequence_ creates --> _structure_ --> enables the _function_. 
 
 ## Optimization Targets
 
 There are several optimization targets of direct interest 
 
-
 - [Structure](#structure)
-    - Contact prediction
-    - Secondary structure
-    - Remote cohomology
-    - (mis)Folding (missense)
+    - **Contact prediction**
+    - **Secondary and tertiary structure**
+    - **(mis)Folding (missense)**
     
 - [Function](#function)
-    - Enzymatic Catalysis
-    - Thermocompatibility
-    - Fluorescence
-    - Remote cohomology
-    
-- [Protein Binding](#binding)
-    - Proteins
-    - Nucleic Acids
-    - Drugs molecules
-    - Metals
- 
--
+    - **Enzymatic Catalysi:** The ability of an enzyme to accelerate chemical processes 
+    - **Thermocompatibility** or thermostability, how well a protein remains stable or functions at varying temperatures
+    - **Fluorescence** for visualization purposes
 
-- [Candidate Identification](#candidate-identification) and [alignment](#candidate-alignment)
-- ... and _hybrid_ versions to optimize the targets jointly
+- [Protein Binding](#binding) to...
+    - **Proteins**
+    - **Nucleic Acids**
+    - **Drugs molecules**
+    - **Metals**
+- [Candidate Identification](#candidate-identification)
+- [Alignment](#candidate-alignment)
+- **Remote cohomology:** Similar function, or structure, 
+- **_Multimodal_ targets** versions to optimize multiple the targets. 
+
+## Optimization Metrics
+
+## Review literature
 
 
-## Foundation models
+## Architectures and Models
+While there are many architecture and methods for creating and optimizing proteins, we focus here, primarily on ways that employ PLMs in some way. These create _foundation models_ that can be fine-tuned and readily adapted to specific domains of interest. 
 
-### ESM based
+The general method of creating protein foundation models uses Masked Language Modeling (MLM) or 'Bert-based' predictions, though next-token predictions, as is done with GPT-architectures may also be used. We share a number of prominent models and uses or derivatives, 
+
+
+#### ESM models
 
 ??? abstract "[Genome-wide prediction of disease variant effects with a deep protein language model](https://github.com/ntranoslab/esm-variants)"
     The authors show int heir [paper](https://www.nature.com/articles/s41588-023-01465-0) a workflow using ESM1b, a 650-million-parameter protein language model, to predict all ~450 million possible missense variant effects in the human genome, and made all predictions available on a web portal.
@@ -130,8 +133,7 @@ There are several optimization targets of direct interest
     The authors used masked languaged prediction with transformer models to train a foundation model capable of multiple downstream tasks.
     
         "To this end we use unsupervised learning to train a deep contextual language model on
-        86 billion amino acids across 250 million protein
-        sequences spanning evolutionary diversity. The
+        86 billion amino acids across 250 million protein sequences spanning evolutionary diversity. The
         resulting model contains information about biological properties in its representations. The representations are learned from sequence data alone.
         The learned representation space has a multi-scale
         organization reflecting structure from the level

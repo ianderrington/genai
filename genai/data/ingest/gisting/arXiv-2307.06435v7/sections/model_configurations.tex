@@ -1,0 +1,165 @@
+\section{Model Configurations}
+\label{Model_Configurations_}
+
+We provide different statistics of pre-trained and instruction-tuned models in this section. This includes information such as release time, base model, steps trained, parallelism, etc in Table~\ref{tab:statistics_pt} and Table~\ref{tab:statistics_it}. Architecture details of pre-train LLMs are available in Table~\ref{tab:arch_details}. Providing these details for instruction-tuned models is not necessary because it fine-tunes pre-trained models for instruction datasets. Hence, architectural details are the same as the baselines. Moreover, detailed optimization settings for various LLMs are available in Table~\ref{tab:opt_details}.   
+
+
+\begin{table*}[tbp]
+\rowcolors{2}{gray!25}{white}
+
+    \centering
+    \caption{Various architecture details of LLMs. Here, \enquote{PE} denotes position embedding, \enquote{\#L} denotes the number of layers, \enquote{\#H} denotes the number of attention heads, $d_{model}$ denotes the size of hidden states}
+    \label{tab:arch_details}
+\resizebox{\linewidth}{!}{
+    \begin{tabular}{lcrcccccrrrr}
+    \toprule
+ \rowcolor{gray!50}
+        \textbf{Models}&\textbf{Category}&\begin{tabular}[c]{@{}c@{}}\textbf{Training}\\ \textbf{Objective}\end{tabular}&\textbf{Vocab }&\textbf{Tokenizer}&\textbf{Norm}&\textbf{PE}&\textbf{Activation}&\textbf{Bias}& \textbf{\#L}& \textbf{\#H}&\textbf{$d_{model}$} \\
+\midrule
+
+T5~(11B)&Enc-Dec&Span Corruption&32k&SentencePiece&Pre-RMS &Relative&ReLU&$\times$&24&128&1024\\
+mT5~(13B)&Enc-Dec&Span Corruption&250k&SentencePiece&Pre-RMS &Relative&ReLU& - & - & - &-\\
+PanGu-$\alpha$~(200B)&Causal-Dec&Next Token&40k&BPE&Layer&-&-&-&64&128&16384\\
+CPM-2~(198B)&Enc-Dec&Span Corruption&250k&SentencePiece&Pre-RMS &Relative&ReLU& - & 24 & 64 &-\\
+
+CodeGen~(16B)&Causal-Dec&Next Token&-&BPE&Layer&RoPE&-&-&34&24&-\\
+
+GPT-NeoX-20B & Causal-Dec & Next Token & 50k & BPE & Layer & Rotary & GeLU & $\checkmark$ & 44 & 64 & - \\
+
+UL2~(20B) & Enc-Dec & MoD & 32k & SentencePiece & - & - & - & - & 64 & 16 & 4096\\
+
+OPT~(175B)&Causal-Dec&Next Token&-&BPE&-&-&ReLU&$\checkmark$&96&96&-\\
+
+GLM (130B) & Non-Causal-Dec & AR Blank Infilling & 130k & SentencePiece & Deep & RoPE & GeGLU & \checkmark & 70 & 96 & 12288\\
+
+BLOOM~(176B)&Causal-Dec&Next Token&250k&BPE&Layer&ALiBi&GeLU&$\checkmark$&70&112&14336\\
+
+Galactica~(120B)&Causal-Dec&Next Token&50k&BPE+custom&Layer&Learned&GeLU&$\times$&96&80&10240\\
+
+GPT3~(175B) & Causal-Dec & Next Token & - & - & Layer & Learned & GeLU & \checkmark & 96 & 96 & 12288\\
+
+Jurassic-1~(178B)&Causal-Dec&Next Token &256k &SentencePiece$^*$ &Pre-Layer&Learned&GeLU &$\checkmark$ &76 &96&13824 \\
+
+LLaMA~(65B)&Causal-Dec&Next Token& - &BPE &Pre-RMS&RoPE&SwiGLU&-&80&64&8192\\
+
+HyperCLOVA~(82B)&Causal-Dec&Next Token& - &BPE* &Pre-Layer&Learned&GeLU&-&64&80&10240\\
+
+Codex~(12B)&Causal-Dec&Next Token& - &BPE+ &Pre-Layer&Learned&GeLU&-&96&96&12288\\
+
+ERNIE 3.0~(10B)&Causal-Dec&Next Token& - &WordPiece &Post-Layer&Relative&GeLU&-&48&64&4096\\
+
+ERNIE 3.0 Titan~(260B)&Causal-Dec&Next Token& - &WordPiece &Post-Layer&Relative&GeLU&-&48&192&12288\\
+
+PaLM~(540B)&Causal-Dec&Next Token&256k&SentencePiece&Layer&RoPE&SwiGLU&$\times$&118&48&18432\\
+
+U-PaLM~(540B)&Non-Causal-Dec&MoD&256k&SentencePiece&Layer&RoPE&SwiGLU&$\times$&118&48&18432\\
+
+
+PanGu-$\Sigma$~(1085B) & Causal-Dec & Next Token & - & BPE & Fused Layer & - & FastGeLU & - & 40 & 40 & 5120 \\
+CPM-2~(198B)&Enc-Dec&Span Corruption&250k&SentencePiece&Pre-RMS &Relative&ReLU& - & 24 & 64 &-\\
+
+MT-NLG~(530B)&Causal-Dec&Next Token&50k&BPE&Pre-Layer&Learned&GeLU&$\checkmark$&105&128&20480\\
+Gopher~(280B)&Causal-Dec&Next Token&32k&SentencePiece&Pre-RMS&Relative&GeLU&$\checkmark$& 80&128&16384 \\
+Chinchilla~(70B)&Causal-Dec&Next Token&32k&SentencePiece-NFKC&Pre-RMS&Relative&GeLU&$\checkmark$& 80&64&8192\\
+LaMDA~(137B)&Causal-Dec&Next Token &32k &BPE &Layer &Relative &GeGLU&-&64&128&8192\\
+Yuan 1.0~(245B)&Causal-Dec&Next Token& - &- &-&-&-&-&76&-&16384\\
+WebGPT~(175B)&Causal-Dec&BC+RM &- &BPE &Pre-Layer & Learned & GeLU & \checkmark & 96 & 96 & 12288\\
+GLaM~(1.2T)&MoE-Dec&Next Token& 256k &SentencePiece &Layer&Relative&GeLU&$\checkmark$&64&128&32768\\
+InstructGPT~(6B)&Causal-Dec&RM+PPO& - &BPE &Pre-Layer&Learned&GeLU&-&32&32&4096\\
+AlphaCode~(41B)&Enc-Dec&Next Token%+ Masked language modeling loss
+& 8k &SentencePiece &-&-&-&-&64&128&6144\\
+AlexaTM~(20B)&Enc-Dec&Denoising& 150k &SentencePiece &Pre-Layer&Learned&GeLU&$\checkmark$&78&32&4096\\
+Sparrow~(70B)&Causal-Dec&Pref.\&Rule RM&32k&SentencePiece-NFKC&Pre-RMS&Relative&GeLU&$\checkmark$&16$^*$&64&8192\\
+\bottomrule
+\end{tabular}}
+\end{table*}
+
+\begin{table*}[tbp]
+\rowcolors{2}{gray!25}{white}
+\centering
+\caption{Detailed optimization settings of pre-trained LLMs}
+\label{tab:opt_details}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{lrrcccccccc}
+\toprule
+\rowcolor{gray!50}
+\textbf{Models}          & \textbf{Batch Size} & \begin{tabular}[r]{@{}r@{}}\textbf{Sequence}\\\textbf{Length}\end{tabular}& \begin{tabular}[r]{@{}r@{}}\textbf{Learning}\\ \textbf{Rate}\end{tabular}   & \textbf{Warmup} & \textbf{Decay Method}   & \textbf{Optimizer}                              & \begin{tabular}[l]{@{}l@{}}\textbf{Precision}\\ \textbf{Type}\end{tabular} & \begin{tabular}[l]{@{}l@{}}\textbf{Weight}\\ \textbf{Decay}\end{tabular}                & \begin{tabular}[l]{@{}l@{}}\textbf{Grad}\\ \textbf{Clip}\end{tabular} & \textbf{Dropout} \\ \midrule
+T5~(11B) & 2$^{11}$ & 512 & 0.01 & no  & inverse square root     & AdaFactor & - & - & - & 0.1              \\
+mT5~(13B) & 1024& 1024 & 0.01 & -  & inverse square root     & AdaFactor & - & - & - & 0.1              \\
+PanGu-$\alpha$~(200B)   & - & 1024 & 2e-5 & - & -  & - & 0.1  & - & -                \\
+CPM-2~(198B) & 1024& 1024 & 0.001 & -  & -    & AdaFactor & - & - & - & 0.1              \\
+CodeGen~(16B) & 2M& 2048 & 5e-5 & yes  & cosine    & Adam & - & 0.1 & 1.0 & -              \\
+GPT-NeoX-20B & 1538  & 2048 & 0.97e-5 & yes & cosine & AdamW & FP16  & 0.01 & 1.0 & 0.0              \\
+UL2~(20B) & 1024  & 1024 & - & - & inverse square root & - & -  & - & - & 0.0              \\
+OPT~(175B) & 2M  & 2048 & 1.2e-4 & - & linear & AdamW & FP16 & 0.1  & 1.0 & 0.1              \\
+
+GLM~(130B) & 4224  & 2048 & 8e-5  & yes & cosine    & AdamW & FP16 & 0.1 & 1.0 & 0.1              \\
+
+BLOOM~(176B) & 2048  & 2048 & 6e-5 & yes  & cosine    & Adam  & BF16 & 0.1 & 1.0 & 0.0              \\
+
+Galactica~(120B) & 2M & 2048 & 7e-6 & yes & linear decay to 10\%    & AdamW  & - & 0.1  & 1.0 & 0.1              \\
+
+GPT3~(175B) & 32K  & - & 6e-5 & yes & cosine    & Adam & FP16 & 0.1 & 1.0  & -                \\
+
+Codex~(12B) & -  & - & 6e-5 & yes & cosine    & Adam & FP16 & 0.1 & -  & -                \\
+
+ERNIE 3.0~(12B) & 6144  & 512 & 1e-4 & yes & linear    & Adam & - & 0.01 & -  & -                \\
+
+Jurassic-1~(178B) & 3.2M &2048 & 6e-5 & yes & cosine & Adam & FP16 & 0.1 & 1.0 & -                \\
+
+HyperCLOVA~(82B) & 1024  & - & 6e-5 & - & cosine    & AdamW & - & yes & -  & -                \\
+
+Yuan 1.0~(245B) & $<$10M &2048 & 1.6e-4 & yes & cosine decay to 10\%    & Adam & -  & 0.1 & - & -                \\
+
+Gopher~(280B) & 3M  & 2048 & 4e-5 & yes & cosine decay to 10\%    & Adam  & BF16  & -   & 0.25  & -                \\
+
+ERNIE 3.0 Titan~(260B)  & -  & 512 & 1e-4 & yes & linear    & Adam & FP16 & 0.1 & 1.0  & -      \\
+
+GLaM~(1.2T) & 1M &1024 & 0.01 & - & inverse square root   & Adafactor & FP32+BF16  & - & 1.0 & 0.0                \\
+
+LaMDA~(137B) & 256K  & - & - & - & -  & - & - & - & - &-               \\
+
+MT-NLG~(530B) & 1920  & 2048 & 5e-5 & yes & cosine decay to 10\%   & Adam & BF & 0.1 & 1.0  & - \\
+
+AlphaCode~(41B) & 2048 &1536+768 & 1e-4 &yes& cosine decay to 10\%   & AdamW & BF16  &0.1 & 1.0 &-               \\
+
+Chinchilla~(70B) & 1.5M & 2048 & 1e-4 & yes & cosine decay to 10\% & AdamW & BF16 & - & - & -                \\
+
+PaLM~(540B) & 2048 & 2048 & 0.01 & - & inverse square root & Adafactor  & -  & $lr^2$ & 1.0 & 0.0              \\
+
+AlexaTM~(20B) & 2M &1024 & 1e-4 &- & linear decay to 5\%   & Adam & BF16  &0.1 & - &0.15              \\
+
+Sparrow~(70B)& RM: 8+16, RL:16 &- & 2e-6 &yes & cosine decay to 10\%   & Adam+Adafactor & BF16  &- & 1.0 &0.0 \\
+
+U-PaLM~(540B) & 32 & 2048 & 1e-4 & - & cosine & Adafactor  & -  & - & - & -              \\
+
+LLaMA~(65B) & 4M &- & 1.5e-4 & yes & cosine decay to 10\%    & AdamW & -  & 0.1 & 1.0 & -                \\
+
+PanGu-$\Sigma$~(1.085T) & 512  & 1024 & 2e-5 & yes & - & Adam & mixed & - & - & -                \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+
+\begin{table*}[tbp]
+\rowcolors{2}{gray!25}{white}
+
+\centering
+\caption{We provide the detailed optimization settings of instruction-tuned LLMs}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{lrrcccccccc}
+\toprule
+\rowcolor{gray!50}\textbf{Models}          & \textbf{Batch Size} & \begin{tabular}[r]{@{}r@{}}\textbf{Sequence}\\\textbf{Length}\end{tabular}& \begin{tabular}[r]{@{}r@{}}\textbf{Learning}\\ \textbf{Rate}\end{tabular}   & \textbf{Warmup} & \textbf{Decay Method}   & \textbf{Optimizer}                              & \begin{tabular}[l]{@{}l@{}}\textbf{Precision}\\ \textbf{Type}\end{tabular} & \begin{tabular}[l]{@{}l@{}}\textbf{Weight}\\ \textbf{Decay}\end{tabular}                & \begin{tabular}[l]{@{}l@{}}\textbf{Grad}\\ \textbf{Clip}\end{tabular} & \textbf{Dropout} \\ \midrule
+T0~(11B) & 1024 & 1280 & 1e-3 & -  & -   & AdaFactor & - & - & - & 0.1             \\
+WebGPT~(175B) & BC:512, RM:32  & - & 6e-5 & - & -    & Adam & - & - & -  & -                \\
+Tk-Instruct~(11B) & 1024 & - & 1e-5  & -  & constant  & - & BF16 & - & - & -             \\
+mT0~(11B) & - & - & - & -  & - & - & - & - & - & -             \\
+OPT-IML~(175B) & 128 & 2048 & 5e-5 & yes  & linear   & Adam & - & - & 1.0 & 0.1             \\
+%InstructGPT~(6B) & SFT:32  & 2000 & 9.65e-6 & no & cosine decay to 10\%   & Adam & FP16 & - & -  & 0.2 \\
+Flan-U-PaLM~(540B) & 32 & - & 1e-3 & -  & constant   & AdaFactor & - & - & - & 0.1             \\
+
+\bottomrule
+\end{tabular}
+}
+\end{table*}

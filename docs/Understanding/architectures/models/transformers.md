@@ -34,7 +34,9 @@ In Decoder-only networks, like [GPT](gpt.md), because they are _next-token_predi
 
 Initially the word, or subword is broken anad represented as a lookup-key to find an 'embedding'. This can be trained alongside transformer models, or pre-trained from other models. It provides a vector representation of the input word.
 
-To allow the token+embedding to _attend_ or share information with the other inputs, calculate a 'self-attention matrix' with the following pieces. 
+To allow the token embedding to _attend_ or share information with the other inputs, calculate a self-attention matrix. 
+In a series of input token-embeddings, there is a attention query 
+
 1. A Query matrix $W^Q$
 2. A Key matrix $W^K$
 3. A Value matrix $W^V$
@@ -43,13 +45,13 @@ For each token/word $i$, the embedding is multiplied by this matrix to yield a q
 
 Each query-vector, is then multiplied by each key-vector, resulting in matrix computation $Q*V$. Because the key-query is suppoesed to describe how important an input combination is, it is then normalized by the dimension of the values to allow for similar behavior for different dimensions, and then  passed through a soft-max function 
 
-$softmax(\frac{(Q * K^T)}{\sqrt{d_k}})
+$$ softmax(\frac{(Q * K^T)}{\sqrt{d_k}}) $$
 
 This is then multiplied by the value matrix to provide the attention output. 
 
-$Z_(head i) = $softmax(\frac{(Q * K^T)}{\sqrt{d_k}}) V$
+$Z_{head i} = $softmax(\frac{(Q * K^T)}{\sqrt{d_k}}) V$
 
-Multiple attention heads can be combined by stacking them together and then multiplied by a final matrix that will produce a final
+Multiple attention heads can be combined by stacking, con_cat_enating, them together and then multiplied by a final matrix that will produce a final
 
 $Z = cat(Z_i) * W^O$
 
@@ -85,7 +87,7 @@ Layer normalization observably improves results [On Layer Normalization in the T
 - [Transformers by Lucas Beyer (presentation)](https://docs.google.com/presentation/d/1ZXFIhYczos679r70Yu8vV9uO6B1J0ztzeDxbnBxD1S0/mobilepresent?fbclid=IwAR18pR_Mf46mkZ1_E3NFOwYY2wVx0aATficgfh_GWZd29c_lWNRa4vK5zy8&slide=id.g31364026ad_3_2)
 
 
-### Seminal documents
+### Seminal research
 
 - [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473.pdf) First paper indicating the notion of 'attention' sort of mechanism.
 
@@ -95,15 +97,11 @@ Layer normalization observably improves results [On Layer Normalization in the T
 Important discussion revealing the components of Transformers.
 
 
-
 #### Modifications
 - [A Simple yet Effective Learnable Positional Encoding Method for Improving Document Transformer Model](https://aclanthology.org/2022.findings-aacl.42.pdf) They introduce a learnable sinusoidal positional encoding feed forward network. Demonstrates significant improvements over other datasets.
 
 
 ## Enhancements and variations
-
-
-
 ### Context length Improvements
 
 In its vanilla state, Transformers are $O(N^2)$ in their computation with self-complexity. This makes long context lengths increasingly costly to train and generate.
@@ -114,7 +112,7 @@ They improve computation complexity in one of several ways:
     - Banded or fixed
     - Hierarchical
     - Banded to reduce full computation
-    - $/Lambda$ shaped with a banded window that also takes into account observably important first tokens.
+    - Wedge shaped with a banded window that also takes into account observably important first tokens.
 
 - Inclusion of a recurrent RNN-style that permits memory to be retained.
 - Memory retrieval systems.
@@ -176,7 +174,6 @@ They improve computation complexity in one of several ways:
     <img width="664" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ce207f67-e4d9-4698-b5f2-47f5a6cb2e80">
 
   
-
 ### Computation Reduction
 
 ??? code "![GitHub Repo stars](https://badgen.net/github/stars/bobby-he/simplified_transformers) [Simplified Transformers]([Simplified Transformers](https://github.com/bobby-he/simplified_transformers)) that removes the 'value' parameter-set to increase speed by 14% with potentially minimal accuracy reduction"
@@ -186,16 +183,7 @@ They improve computation complexity in one of several ways:
     [Paper](https://arxiv.org/pdf/2311.01906.pdf)
 
 
-!!! [SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](https://arxiv.org/pdf/2306.03078v1.pdf)
-
-### Fine Tuning
-
-Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.
-
-
-??? tip "[Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)"
-    <img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5">
-
+!!! note "[SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](https://arxiv.org/pdf/2306.03078v1.pdf)"
 
 ## Other modalities
 
@@ -206,16 +194,6 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
 ??? tip "[Transformers Meet Directed Graphs](https://arxiv.org/pdf/2302.00049.pdf) introduces a variation of Transformer GNNs that uses 'direction-aware' positional encodings to help handle both undirected and directed graphs"
     <img width="516" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d7eea1fc-622f-43df-aff3-748fbcf462dc">
-
-
-## Training variations
-### Fairness Enablement
-
-- [Concept Erasure](https://arxiv.org/pdf/2306.03819.pdf)
-
-### Using Knowledge Links
-
-- [LinkBERT](https://github.com/michiyasunaga/LinkBERT) places in the context window hyperlinked references to achieve better performance and is a drop-in replacement for BERT models.
 
 ### Multimodal
 
@@ -237,20 +215,18 @@ Using examples to fine-tune a model can reduce the number of tokens needed to ac
 
     <img width="695" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/66251260-2113-47d1-a416-2d160d7a2bef">
 
-
-## Abstractions
-
-- [Looped Transformers and Programmable Computers](https://arxiv.org/pdf/2301.13196.pdf) Understanding that transformer networks can simulate complex algorithms when hardcoded with specific weights and made intoa  loop. 'Machine Learning' 'Machine code'. "We demonstrate that
-a constant number of encoder layers can emulate basic computing blocks, including embedding edit operations, non-linear functions, function calls, program counters, and conditional branches. Using these building blocks, we emulate a small instruction-set computer."
-
-
 ## Code
-- [Hugging Face Transformers](https://huggingface.co/docs/transformers/main/index) An API to access a large number of pre-trained transformers. Pytorch based.
-- [Fast Transformers](https://github.com/idiap/fast-transformers/tree/master) A quality collection of a number of transformer implementations written in Pytorch.
+
+??? abstract "[Hugging Face Transformers](https://huggingface.co/docs/transformers/main/index) An API to access a large number of pre-trained transformers. Pytorch based."
+
+??? abstract "[Fast Transformers](https://github.com/idiap/fast-transformers/tree/master) A quality collection of a number of transformer implementations written in Pytorch."
 
 ## Theory and Experiment
 
 ??? note "[A MATHEMATICAL PERSPECTIVE ON TRANSFORMERS](https://arxiv.org/pdf/2312.10794.pdf)"
-     We develop a mathematical framework for analyzing Transformers based on their interpretation as interacting particle systems, which
-reveals that clusters emerge in long time. 
+     We develop a mathematical framework for analyzing Transformers based on their interpretation as interacting particle systems, which reveals that clusters emerge in long time. 
 
+## Abstract Uses
+
+??? note "[Looped Transformers and Programmable Computers](https://arxiv.org/pdf/2301.13196.pdf) Understanding that transformer networks can simulate complex algorithms when hardcoded with specific weights and made intoa  loop."
+     'Machine Learning' 'Machine code'. "We demonstrate that a constant number of encoder layers can emulate basic computing blocks, including embedding edit operations, non-linear functions, function calls, program counters, and conditional branches. Using these building blocks, we emulate a small instruction-set computer."

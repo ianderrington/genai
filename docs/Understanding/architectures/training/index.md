@@ -1,7 +1,5 @@
 Training GenAI will generally be domain/modality specific.
 
-
-
 ## Important concepts
 ### Training Objectives
 
@@ -53,3 +51,25 @@ Foundationally, the use of [reinforcement learning with human feedback (RLHF)](.
 [Distributed Training](https://neptune.ai/blog/distributed-training)
 
 ### References
+
+
+## To filter
+
+## Training variations
+### Fairness Enablement
+
+- [Concept Erasure](https://arxiv.org/pdf/2306.03819.pdf)
+
+### Using Knowledge Links
+
+- [LinkBERT](https://github.com/michiyasunaga/LinkBERT) places in the context window hyperlinked references to achieve better performance and is a drop-in replacement for BERT models.
+
+### Fine Tuning
+
+Using examples to fine-tune a model can reduce the number of tokens needed to achieve a sufficiently reasonable response. Can be expensive to retrain though.
+
+
+??? tip "[Symbol Tuning Improves in-context learning in Language Models](https://arxiv.org/pdf/2305.08298.pdf)"
+    <img width="488" alt="image" src="https://github.com/ianderrington/general/assets/76016868/a75d4a36-0e20-4259-bd10-c7180b5468b5">
+
+

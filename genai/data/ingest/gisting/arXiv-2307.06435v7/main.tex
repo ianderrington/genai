@@ -1,0 +1,69 @@
+\documentclass[journal]{IEEEtran}
+%\usepackage[autostyle]{csquotes}
+\usepackage{graphicx}
+\usepackage{soul}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{subfig}
+\usepackage{multirow}
+\usepackage{csquotes}
+\usepackage[T1]{fontenc}
+\usepackage[table]{xcolor}
+\usepackage[pagebackref=true,breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\def\SA#1{{\color{red}{\bf [Saeed:} {\it{#1}}{\bf ]}}}
+\begin{document}
+\title{A Comprehensive Overview of Large Language Models}
+
+\author{\IEEEauthorblockN{Humza Naveed, Asad Ullah Khan*, Shi Qiu*, Muhammad Saqib*, \\Saeed Anwar, Muhammad Usman, Nick Barnes, Ajmal Mian}% <-this % stops a space
+\IEEEcompsocitemizethanks{
+\IEEEcompsocthanksitem Version: 01 (update on July 10, 2023).  
+\IEEEcompsocthanksitem GitHub link: \url{https://github.com/humza909/LLM_Survey.git} 
+\IEEEcompsocthanksitem * is for equal contribution. 
+\IEEEcompsocthanksitem 
+Contact e-mail: humza\_naveed@yahoo.com}}
+
+
+%\thanks{M. Shell was with the Department
+%of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
+%GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
+%\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+%\thanks{Manuscript received 19 April 2005; revised 26 August 2015.}}
+
+\markboth{Journal of \LaTeX\ }%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+
+\maketitle
+\begin{abstract}
+\input{sections/abs}
+\end{abstract}
+\begin{IEEEkeywords}
+\input{sections/keywords}
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+\input{sections/introduction}
+\input{sections/backgorund}
+\input{sections/review}
+\input{sections/findings}
+\input{sections/model_configurations}
+\input{sections/evaluation}
+\input{sections/discussion}
+\input{sections/conclusion}
+\input{sections/Versioning}
+\newpage
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+%\input{sections/biography.tex}
+
+\end{document}
+
+

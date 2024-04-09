@@ -1,0 +1,147 @@
+\section{Datasets and Evaluation}
+\label{Datasets_and_Evaluation_}
+The performance of LLMs is dependent on the training dataset. A model trained on a good-quality dataset will likely have better results on evaluation benchmarks. We show training and evaluation datasets used by LLMs in Table~\ref{tab:datasets} and~\ref{tab:datasets_inst_tuned}.
+
+\begin{table*}[!tbhp]
+\caption{Training and evaluation dataset for pre-trained LLMs. Here,\enquote{D} is for Dialogue, \enquote{QA} is for question answering, \enquote{CR} is for commonsense reasoning, \enquote{CoT} is for chain-of-thought, \enquote{RC} for reading comprehension, \enquote{LU} for language understanding, \enquote{IRC} for in-context reading comprehension, \enquote{NLI} for natural language inference, \enquote{WT} for winograd-style tasks, \enquote{SC} for sentence completion, \enquote{WSD} for word sense disambiguation, \enquote{CorefR} for coreference resolution.}
+\label{tab:datasets}
+\resizebox{\textwidth}{!}{% 
+\begin{tabular}{l|c|c}
+\hline \hline
+\rowcolor{gray!50}Models & \begin{tabular}[c]{@{}c@{}}Training Dataset \end{tabular} & \begin{tabular}[c]{@{}c@{}}Evaluation Dataset\end{tabular}  \\ \hline \hline
+T5 &  C4~\cite{T5} & \begin{tabular}[c]{@{}c@{}} GLUE~\cite{wang2018glue}, CNNDM, SQuAD~\cite{rajpurkar2016squad}, SuperGLUE~\cite{wang2019superglue}, EnDe, ENFr, EnRo, \\ QQP~\cite{QQP}, MNLI-m~\cite{williams2017broad}, MNLI-mm~\cite{williams2017broad}, QNLI~\cite{rajpurkar2016squad},\\  WNLI~\cite{levesque2012winograd},  CB~\cite{de2019commitmentbank}, \\ WiC~\cite{pilehvar2018wic}, WMT~\cite{bojar2016findings}, CNN/DM\end{tabular}  \\ \hline
+
+mT5 & mC4~\cite{mT5} & \begin{tabular}[c]{@{}c@{}}SP: XNLI~\cite{conneau2018xnli}, PAWS-X~\cite{yang2019paws} S: WikiAnn NER~\cite{pan2017cross} \\QA: MLQA~\cite{lewis2019mlqa},   TyDiQA-GoldP~\cite{clark2020tydi}\end{tabular}  \\ \hline
+
+PanGu-$\alpha$ & 1.1TB Chinese Text Corpus &  - \\ \hline
+
+CPM-2 & WuDaoCorpus~\cite{WuDaoCorpus} & \begin{tabular}[c]{@{}c@{}}CCPM~\cite{li2021ccpm}, C\textsuperscript{3}~\cite{sun2020investigating}, Sogou-Log,\\ WMT20~\cite{loic2020findings}, Math23k~\cite{wang2017deep}, LCSTS~\cite{hu2015lcsts}, \\LCQMC~\cite{liu2018lcqmc}, AdGen~\cite{shao2019long}, CUGE~\cite{yao2021cuge}\end{tabular}   \\ \hline
+CodeGen & Pile~\cite{gao2020pile}, BigQuery, BigPython~\cite{CodeGen} & Mostly Basic Python Problems   \\ \hline
+
+GPT-NeoX-20B & Pile~\cite{gao2020pile} & \begin{tabular}[c]{@{}c@{}}ANLI~\cite{nie2019adversarial}, ARC~\cite{clark2018think}, HeadQA~\cite{vilares2019head}, HellaSwag~\cite{zellers2019hellaswag},\\ LAMBADA~\cite{paperno2016lambada}, LogiQA~\cite{liu2020logiqa}, OpenBookQA~\cite{mihaylov2018can}, PIQA~\cite{bisk2020piqa},\\ PROST~\cite{aroca2021prost}, QA4MRE~\cite{penas2013qa4mre}, SciQ~\cite{welbl2017crowdsourcing}, TriviaQA~\cite{joshi2017triviaqa},\\ WinoGrande~\cite{sakaguchi2021winogrande}, SuperGLUE~\cite{wang2019superglue}, MATH~\cite{hendrycks2021measuring},\\ Advanced Knowledge-Based Tasks\end{tabular}  \\ \hline
+
+OPT & \begin{tabular}[c]{@{}c@{}}RoBERTa~\cite{liu2019roberta}, Pile~\cite{gao2020pile},\\ PushShift.io Reddit~\cite{baumgartner2020pushshift}\end{tabular}  & \begin{tabular}[c]{@{}c@{}} HellaSwag~\cite{zellers2019hellaswag}, StoryCloze~\cite{mostafazadeh2016corpus}, PIQA~\cite{bisk2020piqa}, \\ ARC-Easy~\cite{clark2018think}, ARC-Challenge~\cite{clark2018think}, OpenBookQA~\cite{mihaylov2018can},\\WinoGrad~\cite{levesque2012winograd}, WinoGrande~\cite{sakaguchi2021winogrande}, SuperGLUE~\cite{wang2019superglue},\\ Wizard of Wikipedia~\cite{dinan2018wizard}, Empathetic Dialogues~\cite{rashkin2018towards},\\ ConvAI2~\cite{dinan2020second}, Blended Skill Talk~\cite{smith2020can}, Wizard of Internet~\cite{komeili2021internet}\\
+ETHOS~\cite{mollas2020ethos}, CrowS-Pairs~\cite{nangia2020crows}, StereoSet~\cite{nadeem2020stereoset}, \\RealToxicPrompts~\cite{gehman2020realtoxicityprompts}, Dialogue Responsible AI evaluations\end{tabular} \\ \hline
+
+GLM-130B & - & \begin{tabular}[c]{@{}c@{}}LAMBADA~\cite{paperno2016lambada}, Pile~\cite{gao2020pile}, MMLU~\cite{hendrycks2020measuring},\\ CLUE~\cite{xu2020clue}, CrowS-Pairs~\cite{nangia2020crows}, StereoSet~\cite{nadeem2020stereoset},\\ ETHOS~\cite{mollas2020ethos}, RealToxicPrompts~\cite{gehman2020realtoxicityprompts}\end{tabular}\\ \hline
+
+
+BLOOM & ROOTS~\cite{laurenccon2022bigscience} & -  \\ \hline
+
+Galactica   & \begin{tabular}[c]{@{}c@{}}arXiv, PMC, Semantic Scholar\\Wikipedia, StackExchange, LibreText, Open Textbooks\\RefSeq Genome, OEIS, LIPID MAPS, NASAExoplanet\\Common Crawl, ScientificCC, AcademicCC\\GitHub repositories\\Khan Problems~\cite{hendrycks2021Math}, GSM8K~\cite{cobbe2021training}, OneSmallStep\end{tabular} & \begin{tabular}[c]{@{}c@{}}Knowledge probes, Latex equations,\\ AminoProbe~\cite{galactica}, BioLAMA~\cite{galactica}, Chemical Reactions~\cite{galactica},\\Galaxy Clusters~\cite{galactica}, Mineral Groups~\cite{galactica}\end{tabular}   \\ \hline
+
+GPT-3 & Common Crawl, WebText, Books Corpora, Wikipedia & \begin{tabular}[c]{@{}c@{}}QA: NaturalQS, WebQS, TriviaQA, ARC, CoQA, DROP \\SuperGLUE, WMT, LAMBADA, StoryCloze, HellaSwag  \end{tabular}  \\ \hline
+
+Codex       & \begin{tabular}[c]{@{}c@{}}54 million public software repositories hosted on GitHub\\containing python files under 1MB\end{tabular}  & \begin{tabular}[c]{@{}c@{}}HumanEval~\cite{chen2021evaluating}, \\64 original programming problems with unit test\end{tabular}  \\ \hline
+
+ERNIE3.0    & \begin{tabular}[c]{@{}c@{}}Chinese text corpora, Baidu Search, Web text, \\QA-long, QA-short, Poetry \& Couplet\\Domain-specific data from medical, law and financial area\\Baidu knowledge graph with more than 50 million facts\end{tabular}                                                   & \begin{tabular}[c]{@{}c@{}}NLU: NLPCC2014-SC, SE-ABSA16\_PHNS, SE-ABSA16\_CAME,\\ BDCI2019, COTE-BD~\cite{li2018character}, COTE-DP~\cite{li2018character}, COTE-MFW~\cite{li2018character}, \\XNLI~\cite{conneau2018xnli}, OCNLI~\cite{xu2020clue}, CMNLI~\cite{xu2020clue}, CLUEWSC2020~\cite{xu2020clue},\\ FinRE~\cite{li2019chinese}, SanWen~\cite{xu2017discourse}, CCKS2020, AFQMC~\cite{xu2020clue},\\ LCQMC~\cite{liu2018lcqmc}, CSL~\cite{xu2020clue}, PAWS-X~\cite{yang2019paws}, BQ Corpus~\cite{chen2018bq},\\ TNEWS, IFLYTEK~\cite{co2019iflytek}, THUCNEWS, CNSE~\cite{liu2018matching}, CNSS~\cite{liu2018matching}, \\NLPCC-DBQA, CHIP2019, cMedQA~\cite{zhang2017chinese},\\ cMedQA2~\cite{zhang2018multi}, CKBQA 13~\cite{li2016dataset}, WebQA~\cite{chang2022webqa},\\CLUENER~\cite{xu2020clue}, Weibo~\cite{peng2015named}, OntoNotes~\cite{weischedel2011ontonotes}, CCKS2019,\\CMRC 2018~\cite{cui2018span}, CMRC2019~\cite{cui2020sentence}, DRCD~\cite{shao2018drcd},\\ DuReader~\cite{he2017dureader},
+Dureader\textsubscript{robust}~\cite{tang2020dureaderrobust}, Dureader\textsubscript{checklist}, Dureader\textsubscript{yesno},\\ C\textsuperscript{3}~\cite{sun2020investigating}, CHID~\cite{zheng2019chid}, CAIL2018-Task1 \& Task2~\cite{xiao2018cail2018}, \\DogWhistle Insider \& Outsider~\cite{xu2021blow}, Sogou-log~\cite{xiong2017end};\\NLG: LCSTS~\cite{hu2015lcsts}, KBQG, DuReader-QG~\cite{he2017dureader},\\
+Dureader\textsubscript{robust}-QG~\cite{tang2020dureaderrobust}, MATINF-QA~\cite{xu2020matinf}, Math23KMath23k~\cite{wang2017deep},\\ AdGen~\cite{shao2019long}, WMT20-enzh~\cite{loic2020findings}, KdConv~\cite{zhou2020kdconv} \end{tabular}      \\ \hline
+
+Jurassic-1  & \begin{tabular}[c]{@{}c@{}}Wikipedia, OWT, Books, C4~\cite{T5}, \\PileCC~\cite{gao2020pile}, arXiv, GitHub\end{tabular}                                                           & \begin{tabular}[c]{@{}c@{}}ARC-Challenge~\cite{clark2018think}, ARC-Easy~\cite{clark2018think}, BoolQ~\cite{clark2019boolq}, \\HellaSwag~\cite{zellers2019hellaswag}, PIQA~\cite{bisk2020piqa}, \\RACE-high~\cite{lai2017race}, RACE-middle~\cite{lai2017race}, \\RTE~\cite{dagan2005pascal}, StoryCloze~\cite{mostafazadeh2016corpus}, WinoGrande~\cite{sakaguchi2021winogrande}\end{tabular} \\  \hline
+
+HyperCLOVA  & \begin{tabular}[c]{@{}c@{}}Korean blogs, Community sites, News, KiN\\Korean Wikipedia, Wikipedia (English and Japanese);\\Modu-Corpus: Messenger, News, \\Spoken and written language corpus, Web corpus\end{tabular}                                                        & \begin{tabular}[c]{@{}c@{}}NSMC: a movie review dataset from NAVER movies;\\KorQuAD 1.0~\cite{lim2019korquad1}, Korean ML dataset\\AI Hub Korean-English, YNAT~\cite{park2021klue},\\ KLUE-TC~\cite{park2021klue}, KLUE-STS~\cite{park2021klue}\end{tabular}   \\ 
+\hline
+
+Yuan 1.0    & \begin{tabular}[c]{@{}c@{}}Common Crawl, SogouT, Sogou News, \\Baidu Baike, Wikipedia, Books\end{tabular}   & \begin{tabular}[c]{@{}c@{}}FewCLUE~\cite{xu2021fewclue}, ZeroCLUE~\cite{xu2020clue}, \\CMRC2018~\cite{cui2018span}, WebQA~\cite{chang2022webqa}\end{tabular}  \\ 
+\hline
+
+
+\end{tabular}}%
+\vspace{2mm}
+\begin{flushright}
+Table Continued on Next Page 
+\end{flushright}
+\label{datasets}
+\end{table*}
+
+\begin{table*}[!tbhp]
+%\ContinuedFloat
+\centering
+%\caption{}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|c|c} 
+\hline\hline
+\rowcolor{gray!50} Models       & Training Dataset                                                                                                                                                                                                                                                          & Evaluation Dataset                                                                                                                                                                                                                                                                                                                                                    \\ 
+\hline\hline
+Gopher      & \begin{tabular}[c]{@{}c@{}}subsets of MassiveWeb~\cite{gopher}\\Books, C4~\cite{T5}, News, GitHub and \\Wikipedia samples from MassiveText~\cite{gopher}\end{tabular}  & \begin{tabular}[c]{@{}c@{}}LM: Pile~\cite{gao2020pile}, LAMBADA~\cite{paperno2016lambada},\\ Wikitext103~\cite{merity2016pointer}, PG-19~\cite{rae2019compressive}, C4~\cite{T5}; \\LU: MMLU~\cite{hendrycks2020measuring}, BIG-bench~\cite{srivastava2022beyond};\\RC: RACE-middle~\cite{lai2017race}, RACE-high~\cite{lai2017race}\\QA: TriviaQA~\cite{joshi2017triviaqa}, TruthfulQA~\cite{lin2021truthfulqa}, Natural Questions~\cite{kwiatkowski2019natural};\\Fact Checking on Fever~\cite{thorne2018fever}, MultiFC~\cite{augenstein2019multifc};\\HellaSwag~\cite{zellers2019hellaswag}, PIQA~\cite{bisk2020piqa}, WinoGrande~\cite{sakaguchi2021winogrande}, SIQA~\cite{sap2019socialiqa};\\RealToxicityPrompts~\cite{gehman2020realtoxicityprompts}, Twitter Dataset~\cite{blodgett2016demographic},\\ CivilComments toxicity classification~\cite{borkan2019nuanced} \end{tabular}   \\ 
+\hline
+
+GLaM        & \begin{tabular}[c]{@{}c@{}}Filtered Webpages, Social media conversations \\Wikipedia, Forums, Books, News\end{tabular}  & \begin{tabular}[c]{@{}c@{}}NLG: TriviaQA~\cite{joshi2017triviaqa}, NQS, WebQS, SQuADv2~\cite{rajpurkar2018know}, \\LAMBADA~\cite{paperno2016lambada}, DROP~\cite{dua2019drop}, QuAC~\cite{choi2018quac}, CoQA~\cite{reddy2019coqa}; \\NLU: HellaSwag~\cite{zellers2019hellaswag}, StoryCloze~\cite{mostafazadeh2016corpus}, WinoGrad~\cite{levesque2012winograd},\\ WinoGrande~\cite{sakaguchi2021winogrande}, RACE-middle~\cite{lai2017race}, RACE-high~\cite{lai2017race}, PIQA~\cite{bisk2020piqa},\\ ARC-Challenge~\cite{clark2018think}, ARC-Easy~\cite{clark2018think}, OpenbookQA~\cite{mihaylov2018can}, \\ BoolQ~\cite{clark2019boolq}, COPA~\cite{roemmele2011choice}, RTE~\cite{dagan2005pascal}, WiC~\cite{pilehvar2018wic}, \\MultiRC~\cite{khashabi2018looking}, WSC~\cite{levesque2012winograd}, ReCoRD~\cite{zhang2018record}, CB~\cite{de2019commitmentbank},\\ ANLI R1~\cite{nie2019adversarial}, ANLI R2~\cite{nie2019adversarial}, ANLI R3~\cite{nie2019adversarial}\end{tabular}  \\ 
+\hline
+
+WebGPT      & \begin{tabular}[c]{@{}c@{}}ELI5~\cite{fan2019eli5}, ELI5 fact-check~\cite{nakano2021webgpt}, TriviaQA~\cite{joshi2017triviaqa}, \\ARC-Challenge~\cite{clark2018think}, ARC-Easy~\cite{clark2018think},\\ Hand-written data, Demonstrations of humans, \\ Comparisons between model-generated answers\end{tabular}  & ELI5~\cite{fan2019eli5}, TruthfulQA~\cite{lin2021truthfulqa}, TriviaQA~\cite{joshi2017triviaqa} \\ \hline
+LaMDA      & Infiniset~\cite{thoppilan2022lamda}: Public documents, Dialogs, Utterances      & \begin{tabular}[c]{@{}c@{}}Mini-Turing Benchmark (MTB)~\cite{adiwardana2020towards};\\
+Self-collected dialogs with turns by asking \\crowdworkers to interact with LaMDA; \\Wizard of Wikipedia~\cite{dinan2018wizard}\end{tabular}   \\ 
+\hline
+
+MT-NLG      & \begin{tabular}[c]{@{}c@{}}Twosnapshots of Common Crawl and Books3,\\OpenWebText2, Stack Exchange, PubMed Abstracts,\\Wikipedia, PG-19~\cite{rae2019compressive}, BookCorpus2, NIH ExPorter,\\PileCC~\cite{gao2020pile}, CC-Stories~\cite{trinh2018simple}, RealNews~\cite{zellers2019defending}\end{tabular}                                         & \begin{tabular}[c]{@{}c@{}}Completionprediction: LAMBADA~\cite{paperno2016lambada}\\RC: RACE~\cite{lai2017race}, BoolQ~\cite{clark2019boolq}\\CR:PiQA~\cite{bisk2020piqa}\\NaturalLanguage Interface: ANLI~\cite{nie2019adversarial}, HANS~\cite{mccoy2019right}\end{tabular}  \\ 
+\hline
+
+AlphaCode   & \begin{tabular}[c]{@{}c@{}}Selected GitHub repositories \\CodeContests~\cite{li2022competition}: Codeforces~\cite{codeforce},\\ Description2Code~\cite{Caballero_Description2Code_Dataset_2016}, CodeNet~\cite{puri2021codenet}\end{tabular} & Codeforces competitions, CodeContests~\cite{li2022competition}, APPS~\cite{hendrycks2021measuring}\\ \hline
+Chinchilla  & \begin{tabular}[c]{@{}c@{}} MassiveWeb~\cite{gopher}, MassiveText~\cite{gopher}\\Books, C4~\cite{T5}, News, GitHub, Wikipedia\end{tabular}   & \begin{tabular}[c]{@{}c@{}} LM: Pile~\cite{gao2020pile}, LAMBADA~\cite{paperno2016lambada},\\ Wikitext103~\cite{merity2016pointer}, PG-19~\cite{rae2019compressive}, C4~\cite{T5}; \\LU: 57 MMLU~\cite{hendrycks2020measuring} tasks, 62 BIG-bench~\cite{srivastava2022beyond} tasks;\\QA: TriviaQA~\cite{joshi2017triviaqa}, Natural Questions~\cite{kwiatkowski2019natural};\\RC: RACE-middle~\cite{lai2017race}, RACE-high~\cite{lai2017race};\\HellaSwag~\cite{zellers2019hellaswag}, PIQA~\cite{bisk2020piqa}, WinoGrande~\cite{sakaguchi2021winogrande},\\ SIQA~\cite{sap2019socialiqa},
+BoolQ~\cite{clark2019boolq}, TruthfulQA~\cite{lin2021truthfulqa}\end{tabular}   \\ 
+\hline
+
+PaLM & \begin{tabular}[c]{@{}c@{}}webpages, books, wikipedia, news, articles, \\source code, social media conversations\end{tabular} & \begin{tabular}[c]{@{}c@{}}
+QA: TriviaQA~\cite{joshi2017triviaqa}, Natural Questions~\cite{kwiatkowski2019natural}, Web Questions~\cite{berant2013semantic},\\ TyDiQA-GoldP~\cite{clark2020tydi}; CR: PIQA~\cite{bisk2020piqa}, ARC~\cite{clark2018think}, OpenBookQA~\cite{mihaylov2018can};\\
+IRC: DROP~\cite{dua2019drop}, CoQA~\cite{reddy2019coqa}, QuAC~\cite{choi2018quac}, SQuADv2~\cite{rajpurkar2018know}, RACE~\cite{lai2017race};\\ 
+NLI: ANLI~\cite{nie2019adversarial}; WT: WinoGrad~\cite{levesque2012winograd}, WinoGrande~\cite{sakaguchi2021winogrande};\\
+CoT: GSM8K~\cite{cobbe2021training}, StrategyQA~\cite{geva2021did}, CSQA~\cite{talmor2018commonsenseqa},\\ SVAMP~\cite{patel2021nlp}, MAWPS~\cite{koncel2016mawps}, AQuA~\cite{ling2017program};\\ LU: MMLU~\cite{hendrycks2020measuring}
+SuperGLUE~\cite{wang2019superglue}, LAMBADA~\cite{paperno2016lambada},\\ HellaSwag~\cite{zellers2019hellaswag}, StoryCloze~\cite{mostafazadeh2016corpus}, BIG-bench~\cite{srivastava2022beyond}, WMT language pairs\end{tabular}  \\ \hline
+
+Tk-INSTRUCT & SUP-NATINST~\cite{Tk-INSTRUCT} & SUP-NATINST~\cite{Tk-INSTRUCT}   \\ \hline
+
+AlexaTM     & Wikipedia, mC4~\cite{mT5} & \begin{tabular}[c]{@{}c@{}}NLG: MLSum~\cite{scialom2020mlsum}, XSum~\cite{narayan1808don}, E2E~\cite{novikova2017e2e}, WebNLG~\cite{ferreira20202020}; \\Machine Translation: Flores-101~\cite{goyal2022flores}, English-German WMT'16,\\ English-French WMT'14, German-French WMT'19~\cite{xia2019microsoft};\\NLP: XNLI~\cite{conneau2018xnli}, XCOPA~\cite{ponti2020xcopa}, PAWS-X~\cite{yang2019paws}, XWinograd~\cite{tikhonov2021s},\\ SuperGLUE~\cite{wang2019superglue}, SQUADv2~\cite{rajpurkar2018know}, MultiArith~\cite{roy2016solving}\end{tabular}   \\ 
+\hline
+
+Sparrow     & \begin{tabular}[c]{@{}c@{}}Human data for rule violations\\ and per-turn response preferences,\\Self-play data accumulated through training,\\ GopherCite FilteredELI5~\cite{menick2022teaching}\end{tabular}                 & \begin{tabular}[c]{@{}c@{}}Per-turn response preference and adversarial probing, \\Multi-turn dialogues, Information-seeking dialogues, \\Chinchilla-generated~\cite{chinchilla} conversational questions, \\ GopherCite~\cite{menick2022teaching} human evaluation interface,\\ FilteredELI5~\cite{menick2022teaching} “Free” dialogues, DPC-generated~\cite{chinchilla} dialogues \\WinoGender~\cite{rudinger2018gender}, Winobias~\cite{zhao2018gender}, BBQ~\cite{parrish2021bbq},\\ Natural Questions~\cite{kwiatkowski2019natural}, Quiz Bowl~\cite{boyd2012besting}, TriviaQA~\cite{joshi2017triviaqa}\end{tabular}  \\
+\hline
+
+U-PaLM & Same as PaLM & \begin{tabular}[c]{@{}c@{}}MMLU~\cite{hendrycks2020measuring}, \\
+QA: TriviaQA~\cite{joshi2017triviaqa}, Natural Questions~\cite{kwiatkowski2019natural}, TydiQA~\cite{clark2020tydi};\\ RC: LAMBADA~\cite{paperno2016lambada};\\
+CR: BoolQ~\cite{clark2019boolq}, PIQA~\cite{bisk2020piqa}, HellaSwag~\cite{zellers2019hellaswag}, WinoGrande~\cite{sakaguchi2021winogrande};\\
+CoT: GSM8K~\cite{cobbe2021training}, BBH~\cite{srivastava2022beyond}, StrategyQA~\cite{geva2021did}, CSQA~\cite{talmor2018commonsenseqa};\\ LU: MMLU~\cite{hendrycks2020measuring}
+SuperGLUE~\cite{wang2019superglue}, MGSM~\cite{shi2022language}\end{tabular}\\ \hline
+
+LLaMA       & \begin{tabular}[c]{@{}c@{}}CommonCrawl, C4~\cite{T5}, Github, \\Wikipedia, Books, arXiv, StackExchange\end{tabular}  & \begin{tabular}[c]{@{}c@{}}CR: BoolQ~\cite{clark2019boolq}, PIQA~\cite{bisk2020piqa}, SIQA~\cite{sap2019socialiqa}, HellaSwag~\cite{zellers2019hellaswag},\\ WinoGrande~\cite{sakaguchi2021winogrande}, ARC-Challenge~\cite{clark2018think}, OpenBookQA~\cite{mihaylov2018can}; \\QA: TriviaQA~\cite{joshi2017triviaqa}, Natural Questions~\cite{kwiatkowski2019natural}; \\RC: RACE-middle~\cite{lai2017race}, RACE-high~\cite{lai2017race}; \\Mathematical Reasoning: MATH~\cite{hendrycks2021measuring}, GSM8K~\cite{cobbe2021training}; \\Code Generation: HumanEval~\cite{chen2021evaluating}, MBPP~\cite{austin2021program};\\MMLU~\cite{hendrycks2020measuring}, RealToxicityPrompts~\cite{gehman2020realtoxicityprompts},\\ CrowS-Pairs~\cite{nangia2020crows}, WinoGender~\cite{rudinger2018gender}, TruthfulQA~\cite{lin2021truthfulqa}\end{tabular}  \\ 
+\hline
+
+PanGU$\Sigma$ & WuDaoCorpora~\cite{WuDaoCorpus}, CLUE~\cite{xu2020clue}, Pile~\cite{gao2020pile}, C4~\cite{T5}, and Python code &  - \\ \hline
+
+\end{tabular}}
+\end{table*}
+
+
+
+
+\begin{table*}[!tbhp]
+\centering
+\caption{Training and evaluation datasets for instruction-tuned LLMs. All the abbreviations are the same as Table~\ref{tab:datasets}}
+\label{tab:datasets_inst_tuned}
+\begin{tabular}{l|c|c} 
+\hline\hline
+\rowcolor{gray!50}Models       & Training Datasets   & Evaluation Datasets   \\ 
+\hline\hline
+
+T0 & - &  \begin{tabular}[c]{@{}c@{}}NLI: ANLI~\cite{nie2019adversarial}, CB~\cite{de2019commitmentbank}, RTE~\cite{dagan2005pascal};\\ SC: COPA~\cite{roemmele2011choice}, HellaSwag~\cite{zellers2019hellaswag} StoryCloze~\cite{mostafazadeh2016corpus};\\ WSD: WiC~\cite{pilehvar2018wic}; CorefR: WSC~\cite{levesque2012winograd}, Wino (XL)~\cite{sakaguchi2021winogrande}\end{tabular} \\ \hline
+
+WebGPT      & \begin{tabular}[c]{@{}c@{}}ELI5~\cite{fan2019eli5}, ELI5 fact-check~\cite{nakano2021webgpt}, TriviaQA~\cite{joshi2017triviaqa}, \\ARC-Challenge~\cite{clark2018think}, ARC-Easy~\cite{clark2018think},\\ Hand-written data, Demonstrations of humans, \\ Comparisons between model-generated answers\end{tabular}  & ELI5~\cite{fan2019eli5}, TruthfulQA~\cite{lin2021truthfulqa}, TriviaQA~\cite{joshi2017triviaqa} \\ \hline
+
+Tk-INSTRUCT & SUP-NATINST~\cite{Tk-INSTRUCT} & SUP-NATINST~\cite{Tk-INSTRUCT}   \\ \hline
+
+mT0 & xP3~\cite{mT0} &  - \\ \hline
+
+
+OPT-IML & \begin{tabular}[c]{@{}c@{}}PromptSource~\cite{T0}, FLAN~\cite{Flan},\\ Super-NaturalInstructions~\cite{wang2022benchmarking}, \\UnifiedSKG~\cite{xie2022unifiedskg}, CrossFit~\cite{ye2021crossfit},\\ ExMix~\cite{aribandi2021ext5}, T5~\cite{T5}, Reasoning\end{tabular} & \begin{tabular}[c]{@{}c@{}}PromptSource~\cite{T0}, FLAN~\cite{Flan}, Super-NaturalInstructions~\cite{wang2022benchmarking}, \\UnifiedSKG~\cite{xie2022unifiedskg}, CrossFit~\cite{ye2021crossfit}, ExMix~\cite{aribandi2021ext5}, T5~\cite{T5},\\ Reasoning, MMLU~\cite{hendrycks2020measuring}, BBH~\cite{srivastava2022beyond}, RAFT~\cite{alex2021raft} \\\end{tabular}  \\ \hline
+
+Flan & Muffin, T0-SF, NIv2, CoT & MMLU~\cite{hendrycks2020measuring}, BBH~\cite{srivastava2022beyond}, TyDiQA~\cite{clark2020tydi}, MGSM~\cite{shi2022language}  \\ \hline
+
+%InstructGPT & Text prompts submitted to theOPENAI API & RealToxicityPrompts~\cite{gehman2020realtoxicityprompts}   \\ \hline
+
+
+
+\end{tabular}
+\end{table*}
+
+
