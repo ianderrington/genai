@@ -36,11 +36,14 @@ Protein optimization will necessarily evolve the creation of those proteins and 
 
 The volume of the observations will help to determine the architectures that one could use. Base models tend to be PLMs because of the large set of available data. Unsupervised finetuning with those large models may be able to occur through homology or family sets to per. Final targets may be then optimized with simple networks, often involving regression to minimize overfitting, or methods that include Bayesian or evolutionary approaches. 
 
-To be able to successfully deliver on final target optimziation, the greater the quantity of direct or surrogate data that can be obtained, the greater the potential the resulting models will ˆs sufficiently predictive of fitness of future protein sequence candidates. That is why massive screening approaches, as described in by [Ginko's platform](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai) screening thousands of candidates. 
+To be able to successfully deliver on final target optimziation, the greater the quantity of direct or surrogate data that can be obtained, the greater the potential the resulting models will sufficiently predictive of fitness of future protein sequence candidates. That is why massive screening approaches, as described in by [Ginko's platform](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai) screening thousands of candidates. 
 
 ??? note "[An example process by Ginkgo](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai)"
+    
     Gingko reveals with foundry-scale protein estimates, that with thousands of samples they were able to create an enzyme with 10x improvement from where they started. In their design they use structure (differential) estimates via Rosetta, Evolutionary-scale modeling (PLMs), active site focus evolutionary models, as well as an in-house method called 'OWL. 
-    <img width="635" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d62000de-845d-4e91-9a7d-c87473752782">
+
+    ![image](https://github.com/ianderrington/genai/assets/76016868/c3666ac2-8d7b-46f7-838b-cd2e6d3721c1)
+
 
 
 When it is possibly to iteratively measure proposed sequences, new data can be used to improve subsequent sequence predictions. This can be done _greedily_, choosing the best solutions, or using probabilistic methods, such as [Bayesian Optimization]. Searching for a protein that optimizes a target by combining both estimated values, as well as their uncertainties. Selecting the sequences with highest-predicted target values  will _greedily_ inform what should be used, and may easily fail due to incorrect estimates due to the predictor model. In other manners, confidence bound (UCB) acquisition, that selects sequences based on an a sum of the predicted target value and the predicted target unertainty. 
@@ -55,9 +58,9 @@ When it is possibly to iteratively measure proposed sequences, new data can be u
 
 There are a number of [targets](#optimization-targets) that protein optimization can focus on. For examples, some targets enable primarily basic understanding, such as protein [structure](#structure), and other targets are related to [function](#function), though it is generally considered that structure enables the functions. 
 
-In the cannon causal influence _sequence_ creates --> _structure_ --> enables the _function_. 
+In the cannon of causal influence,  _sequence_ creates --> _structure_ --> enables the _function_. 
 
-There are several optimization targets of direct interest 
+There are several optimization targets, of both structure and function, that are of direct interest. 
 
 - [Structure](#structure)
     - **Contact prediction**
