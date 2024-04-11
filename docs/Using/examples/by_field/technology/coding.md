@@ -2,19 +2,21 @@
 
 Very powerfully it can generate code to accomplish a task based on natural language input. 
 
-There are ways areas where AI can enable code-creation
+There are ways areas where AI can enable code-creation, arranged generally from 'easiest' to 'hardest'. 
 
 * Colaborative
+  - Code explaining and repository 
   - Chat interfaces with copy-paste
   - Copilots integrated into IDEs
+  
 * Autonomous
+  - Coding Challenges
   - PR revew
-  - Issue resolution
-  - Issue identification
+  - Issue and bug resolution
+  - Issue and bug identification
   - Code-only autonomous
-  -  autonomous
+  - Multi-modal autonomous
 
-This is very promising but still requires human oversight
 
 - [Wizard Coding](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder)
 - [AutoPR](https://github.com/irgolic/AutoPR)
@@ -28,10 +30,22 @@ This is very promising but still requires human oversight
 
 ## Coding
 
-??? abstract "[AutoCodeRover: Autonomous Program Improvement](https://github.com/nus-apr/auto-code-rover/) is a fully automated approach for resolving GitHub issues (bug fixing and feature addition) where LLMs are combined with analysis and debugging capabilities to prioritize patch locations ultimately leading to a patch." 
-    
 
 ??? abstract "[Open Devin](https://github.com/OpenDevin/OpenDevin) to provide a powerful GUI-enablement resembling the commercial devin code assistant" 
+
+??? abstract "[AutoCodeRover: Autonomous Program Improvement](https://github.com/nus-apr/auto-code-rover/) is a fully automated approach for resolving GitHub issues (bug fixing and feature addition) where LLMs are combined with analysis and debugging capabilities to prioritize patch locations ultimately leading to a patch." 
+  [Paper](https://arxiv.org/pdf/2404.05427.pdf)
+
+??? abstract "[Alpha Codium](https://github.com/Codium-ai/AlphaCodium)"
+
+   ...beats DeepMind's AlphaCode and their new AlphaCode2 without needing to fine-tune a model!"
+  
+  • [Paper](https://arxiv.org/abs/2401.08500)
+  • [Blog](https://codium.ai/blog/alphacodium-state-of-the-art-code-generation-for-code-contests/)
+
+??? abstract "[SWE-agent]( https://github.com/princeton-nlp/SWE-agent) turns LMs (e.g. GPT-4) into software engineering agents"
+
+    "...that can fix bugs and issues in real GitHub repositories: “SWE-agent is our new system for autonomously solving issues in GitHub repos. It gets similar accuracy to Devin on SWE-bench, takes 93 seconds on average, and is open source! We designed a new agent-computer interface to make it easy for GPT-4 to edit and run code. SWE-agent works by interacting with a specialized terminal, which allows it to: 🔍 Open, scroll, and search through files✍️ Edit specific lines with automatic syntax check 🧪 Write and execute tests. This custom-built interface is critical for good performance! Our key insight is that LMs require carefully designed agent-computer interfaces (similar to how humans like good UI design)."
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/peterw/Chat-with-Github-Repo)  [Chat with github repo](https://github.com/peterw/Chat-with-Github-Repo)"
 
