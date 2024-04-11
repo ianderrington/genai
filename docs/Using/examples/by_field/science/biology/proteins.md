@@ -11,9 +11,9 @@ Protein optimization can be broken down into several component [^n1]
 - **[Target property](#optimization-targets)** is the intended goal(s) for protein development
 - **[Fitness Predictor]** that uses sequence information to estimate the value of the optimization target, as a surrogate for laboratory measurement
 - **[Sequence Proposer](#sequence-optimization)** that creates sequences to evaluate and explore
-- **Prioritizer** that uses sequence and predictor information to estimate the top candidates. 
+- **Prioritizer** that uses sequence and predictor information to estimate the top candidates 
 - **Laboratory measurements** that reveal the quality of the generated proteins based on the targets
-
+- **Orchestrator** That puts the pieces together in a functional and validated manner
 
 Optimization systems may involve merging and combining these components for full solutions in two general manners.
 
@@ -58,30 +58,29 @@ When it is possibly to iteratively measure proposed sequences, new data can be u
 
 There are a number of [targets](#optimization-targets) that protein optimization can focus on. For examples, some targets enable primarily basic understanding, such as protein [structure](#structure), and other targets are related to [function](#function), though it is generally considered that structure enables the functions. 
 
-In the cannon of causal influence,  _sequence_ creates --> _structure_ --> enables the _function_. 
+In the cannon of causal influence,  _source_ has --> _sequence_ that creates --> _structure_ --> enables the _function_.  we can generally compartmentalize targets based on these, though there is certain crossover betwen them . 
 
-There are several optimization targets, of both structure and function, that are of direct interest. 
-
-- [Structure](#structure)
+- **Source**
+    - [Candidate Identification](#candidate-identification) 
+- **[Sequence](#sequence)**
+    - [Alignment](#candidate-alignment)
+    - [Remote cohomology] Similar function, or structure, 
+- **[Structure](#structure)**
     - **Contact prediction**
     - **Secondary and tertiary structure**
     - **(mis)Folding (missense)**
-    
-- [Function](#function)
-    - **Enzymatic Catalysi:** The ability of an enzyme to accelerate chemical processes 
+- **[Function](#function)**
+    - **Enzymatic Catalysis:** The ability of an enzyme to accelerate chemical processes 
     - **Thermocompatibility** or thermostability, how well a protein remains stable or functions at varying temperatures
     - **Fluorescence** for visualization purposes
 
-- [Protein Binding](#binding) to...
-    - **Proteins**
-    - **Nucleic Acids**
-    - **Drugs molecules**
-    - **Metals**
-- [Candidate Identification](#candidate-identification)
-- [Alignment](#candidate-alignment)
-- **Remote cohomology:** Similar function, or structure, 
-- **_Multimodal_ targets** versions to optimize multiple the targets.
+    - **[Protein Binding](#binding)** to...
+        - **Proteins**
+        - **Nucleic Acids**
+        - **Drugs molecules**
+        - **Metals**
 
+Though there are many examples where these classes cross-these potential 
 
 ### Fitness prediction
 Training a fitness model may first involve training an unsupervised [foundation model](#foundation-models) on a high volume of data. These models can then be fine-tuned, or otherwise adapted, to incorporate protein-sequences or higher relevance to the protein targets of interest. 
