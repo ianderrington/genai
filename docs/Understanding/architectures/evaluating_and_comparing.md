@@ -37,7 +37,7 @@ It may be important for your modal to have generalization beyond your training d
 
 Hallucinations remain a core problem with LLMs as they may generate linguistic and syntatically correct statements, that lack epistemic or factually grounded understanding. 
 
-??? important "Hugging faces [leaderboard](https://huggingface.co/blog/leaderboards-on-the-hub-hallucinations) on hallucinations provides a comparison of different models' hallucinations". 
+??? important "Hugging faces [leaderboard](https://huggingface.co/blog/leaderboards-on-the-hub-hallucinations) on hallucinations provides a comparison of different models' hallucinations"
     Much is based on [awesome-hallucination-detection](https://github.com/EdinburghNLP/awesome-hallucination-detection) 
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/sylinrl/TruthfulQA) [Truthful - QA]([Truthful - QA](https://github.com/sylinrl/TruthfulQA)) helpes to Measuring How Models Mimic Human Falsehoods" 
