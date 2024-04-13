@@ -99,19 +99,23 @@ class BashShell(AbstractPersistentShell):
             count += 1
             print(f"Count: {count}")
             # Use select to wait for output to be available
-            
             ready, _, _ = select.select([self.process.stdout], [], [], 0.1)
             if ready:
-                print('Ready')
+                print('Ready to read output...')
                 # this sometimes hangs here or produces None
                 output_line = self.process.stdout.readline()
+                if output_line is None:
+                    print("Readline returned None, which may indicate the process has closed the stream.")
+                    break
                 print(f"Output line: {output_line}")
                 if output_line:
                     output_lines.append(output_line)
                 else:  # No more output
+                    print("No more output from process.")
                     break
             else:
                 # No output ready, the command has likely finished executing
+                print("No output ready, command may have finished executing.")
                 break
         self.process.stdin.flush()
 
@@ -123,29 +127,37 @@ class BashShell(AbstractPersistentShell):
     
     def cleanup(self):
         if not self.cleaned_up:
+            print("Starting cleanup...")
             self.stop_signal.set()
 
             # Close stdin to signal the subprocess that no more input will be sent
             self.process.stdin.close()
+            print("stdin closed.")
 
             # Wait for the subprocess to terminate
             self.process.terminate()
+            print("Subprocess terminated.")
             self.process.wait()
+            print("Subprocess wait completed.")
 
             # Now that the subprocess is terminated, its streams are empty
             # It's safe to join the threads as they will exit their loops
             if self.stdout_thread.is_alive():
                 self.stdout_thread.join()
+                print("stdout_thread joined.")
             if self.stderr_thread.is_alive():
                 self.stderr_thread.join()
+                print("stderr_thread joined.")
 
             # Finally, close the remaining open streams
             self.process.stdout.close()
             self.process.stderr.close()
+            print("stdout and stderr closed.")
 
             self.cleaned_up = True
-            self.stop_signal.set()
-            self.stdout_thread.join(timeout=1)
+            print("Cleanup completed.")
+        else:
+            print("Cleanup already performed.")
             self.stderr_thread.join(timeout=1)
             
             if self.stdout_thread.is_alive() or self.stderr_thread.is_alive():
