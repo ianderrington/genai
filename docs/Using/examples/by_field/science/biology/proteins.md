@@ -96,13 +96,26 @@ One way of doing this is to use _activation maximization_, a method that will ge
     ![image](https://github.com/ianderrington/genai/assets/76016868/3c2fe20f-1257-4a76-a034-1b3cad242b8c)
     ![image](https://github.com/ianderrington/genai/assets/76016868/fed3de2c-6dcf-4f4b-8ad1-aa2ecadce5ad)
 
+## Datasets
 
+??? abstract "[ProteinGym: Large-Scale Benchmarks for Protein Fitness Prediction and Design](https://github.com/OATML-Markslab/ProteinGym) is an extensive set of Deep Mutational Scanning (DMS) assays and annotated human clinical variants"
+    The results are "curated to enable thorough comparisons of various mutation effect predictors in different regimes"
+    <img width="566" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/75911610-75f1-4cce-bccf-d7de1f3a168a">
+
+    [Website](https://proteingym.org/)
+    [Paper](https://papers.nips.cc/paper_files/paper/2023/file/cac723e5ff29f65e3fcbb0739ae91bee-Paper-Datasets_and_Benchmarks.pdf)
+    
 ## Example Architectures
 While there are many architecture and methods for creating and optimizing proteins, we focus here, primarily on ways that employ PLMs in some way. These create _foundation models_ that can be fine-tuned and readily adapted to specific domains of interest. 
 
 The general method of creating protein foundation models uses Masked Language Modeling (MLM) or 'Bert-based' predictions, though next-token predictions, as is done with GPT-architectures may also be used. We share a number of prominent models and uses or derivatives, 
 
 ### Evaluation Metrics
+
+* Spearman Correlation Coefficient
+* AUC
+* MCC
+
 
 ### Foundation models
 
