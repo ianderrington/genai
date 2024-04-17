@@ -44,8 +44,6 @@ To be able to successfully deliver on final target optimziation, the greater the
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/c3666ac2-8d7b-46f7-838b-cd2e6d3721c1)
 
-
-
 When it is possibly to iteratively measure proposed sequences, new data can be used to improve subsequent sequence predictions. This can be done _greedily_, choosing the best solutions, or using probabilistic methods, such as [Bayesian Optimization]. Searching for a protein that optimizes a target by combining both estimated values, as well as their uncertainties. Selecting the sequences with highest-predicted target values  will _greedily_ inform what should be used, and may easily fail due to incorrect estimates due to the predictor model. In other manners, confidence bound (UCB) acquisition, that selects sequences based on an a sum of the predicted target value and the predicted target unertainty. 
 
 
@@ -89,14 +87,42 @@ Training a fitness model may first involve training an unsupervised [foundation 
 
 With a fitness predictor made available, the next step is to create proposal sequences that may be evaluated with the predictor model, or potentially with direct measurement. 
 
-One way of doing this is to use _activation maximization_, a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction.)
 
-??? abstract "[SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. ](https://github.com/johli/seqprop/tree/master)" seqprop
-    The authors reveal in their [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04437-5) a method to optimize biological protein sequences based on an a predictor model. They use something called _trainable logits_ that can be sampled from, but do so doing instance normalizaton 
+One way of doing this is to use [_generative models_](#generative-models) directly in seeding the generated sequence with starting sequences of the target sequence, or even from an natural language prompt. Another mthod is to use [_activation maximization_](#activation-maximization), a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction.
+
+
+
+#### Generative Models
+
+??? abstract "[](git@github.com:evo-design/evo.git)"
+
+
+??? abstract "[]()"
+    Here, we describe ZymCTRL, a conditional language model trained on the BRENDA database of enzymes, which generates enzymes of a specific enzymatic class upon a user prompt. ZymCTRL generates artificial enzymes distant from natural ones while their intended functionality matches predictions from orthogonal methods.
+    [Model](https://huggingface.co/nferruz/ZymCTRL)
+
+
+    Site-directed mutagenics with the LLM: do random maskings on the sequences and predict distribution of mask fillers. 
+
+##### With English
+
+#### Activation Maximization
+
+??? abstract "[SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. ](https://github.com/johli/seqprop)" seqprop
+    The authors reveal in their [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04437-5) and [arxiv](https://arxiv.org/pdf/2005.11275.pdf) a method to optimize biological protein sequences based on an a predictor model. They use something called _trainable logits_ that can be sampled from, but do so doing instance normalizaton.
+        A Python API for constructing generative DNA/RNA/protein Sequence PWM models in Keras. Implements a PWM generator (with support for discrete sampling and ST gradient estimation), a predictor model wrapper and a loss model.
     ![image](https://github.com/ianderrington/genai/assets/76016868/3c2fe20f-1257-4a76-a034-1b3cad242b8c)
     ![image](https://github.com/ianderrington/genai/assets/76016868/fed3de2c-6dcf-4f4b-8ad1-aa2ecadce5ad)
 
-## Datasets
+
+??? abstract "[Protein sequence design by conformational landscape optimization](https://github.com/gjoni/trDesign)"
+    The authors propose a bayesian approach to optimizing the a protein structure to yield a residue sequence. They use a loss of the form $Loss = -/log P(contacts|sequence) + D_{KL}(f_{20}||f_{20}^{PDB}$ where $D_{KL}$ is the Kullback-Leibler divergence, $f_20$ is the average frequency of amino acids from the sequence, and $f_{20}^{PDB}$ is the average frequency of amino acids from proteins int he PDB. 
+    [Paper](https://www.pnas.org/doi/full/10.1073/pnas.2017228118)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/8936aae6-4e1c-41f4-bc03-38092e829585)
+
+## Data sources
+
+??? note "[Brenda](https://www.brenda-enzymes.org/)"
 
 ??? abstract "[ProteinGym: Large-Scale Benchmarks for Protein Fitness Prediction and Design](https://github.com/OATML-Markslab/ProteinGym) is an extensive set of Deep Mutational Scanning (DMS) assays and annotated human clinical variants"
     The results are "curated to enable thorough comparisons of various mutation effect predictors in different regimes"
@@ -198,7 +224,23 @@ The general method of creating protein foundation models uses Masked Language Mo
 ??? note "[TRANSFORMER PROTEIN LANGUAGE MODELS ARE UNSUPERVISED STRUCTURE LEARNERS](https://www.biorxiv.org/content/10.1101/2020.12.15.422761v1.full.pdf)"
     <img width="973" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b">
 
-####Multimodal
+
+??? note "[Reference Optimization of Protein Language Models as a Multi-objective Binder Design Paradigm](https://arxiv.org/pdf/2403.04187.pdf)" protgpt2
+    The authors create a design paradigm using instruction fine-tuning and direct preference optimization of PLMS. Creating ProtGPT2 allows binders to be designed based on receptor and drug develepoability criterion. To do this, they do two-step instruction tuning with receptor-bindign 'chat-templates', and then optimize fine-tuned models to promote preferred binders. 
+    Specifically they "propose an alignment method to transform pre-trained unconditional protein sequence models (p(s)), that autoregressively sample sequences (s) from underlying data distribution (D), to conditional probability models (p(s|r; c)) that given a target receptor (r) sample binders that satisfy constraints (c) encoded by preference datasets compiled from experiments and domain experts."
+    
+    <img width="726" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4a673b82-fa46-419b-b24e-d65436923438">
+    
+    Notably, they fuse protein sequences with English-language prompts and use BPE encoding with a large vocabulary size (50k) instead of the smaller pLM vocabulary sizes (33) that are standard.  
+    
+    <img width="708" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ff42d6df-a13e-418d-8385-264ecd2d0994">
+
+
+
+
+    
+
+#### Multimodal
 
 ??? abstract "🧬 ![GitHub Repo stars](https://badgen.net/github/stars/bio-ontology-research-group/deepgo2) [Protein function prediction as approximate semantic entailment]([Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2))" deepgo-se
 
@@ -305,6 +347,15 @@ Searching is essential to find similar sequences that may aid in the training or
 #### Candidate alignment
 It is not necessarily just enough to identify a potential candidate but to have a degree of _alignment_ with of the candidate with starting or suggested candidates. This allows for a degree of interpretability to by people. 
 
+#### Protein Binding
+
+??? abstract "[Contrastive learning in protein language space predicts interactions between drugs and protein targets](https://github.com/samsledje/ConPLex)" ConPLex
+    The authors show in their [paper](https://www.pnas.org/doi/full/10.1073/pnas.2220778120) the use of contrastive learning to help co-locate proteins and potential drug molecules in a 'shared feature space' and learns to map drue drugs against non-binding 'decoy' molecules. 
+    ![image](https://github.com/ianderrington/genai/assets/76016868/bb697ce1-6ad7-4a1c-9122-c19ea93ce9eb)
+
+??? abstract "[Robust deep learning based protein sequence design using ProteinMPNN](https://github.com/dauparas/ProteinMPNN?tab=readme-ov-file)" protein-mpnn
+    In their [paper][(https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1](https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1.full.pdf)) the authors reveal a novel method to predict sequences and sequence recovery. 
+    ![image](https://github.com/ianderrington/genai/assets/76016868/ee8d6025-d4a1-4ade-ac22-cfb26cabd41e)
 
 
 ## Tools
