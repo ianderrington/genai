@@ -94,13 +94,18 @@ One way of doing this is to use [_generative models_](#generative-models) direct
 
 #### Generative Models
 
-??? abstract "[](git@github.com:evo-design/evo.git)"
+??? abstract "[Sequence modeling and design from molecular to genome scale with Evo](https://github.com/evo-design/evo)"
+
+    The authors reveal in their [paper](https://www.biorxiv.org/content/10.1101/2024.02.27.582234v1.full.pdf) the use of long-context Genetics models can be powerful in their ability to yield state of of art predictions in protein-related tasks. These tasks include zero-shot function prediction, multi-element sequence generation. Their models use the 'Striped-Hyena' structured state space model. 
+    <img width="566" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d62b1d21-f323-4ad7-8a1f-28295e9dea2b">
 
 
 ??? abstract "[]()"
     Here, we describe ZymCTRL, a conditional language model trained on the BRENDA database of enzymes, which generates enzymes of a specific enzymatic class upon a user prompt. ZymCTRL generates artificial enzymes distant from natural ones while their intended functionality matches predictions from orthogonal methods.
     [Model](https://huggingface.co/nferruz/ZymCTRL)
 
+
+??? note "[Low-N protein engineering with data-efficient deep learning](https://www.nature.com/articles/s41592-021-01100-y)"
 
     Site-directed mutagenics with the LLM: do random maskings on the sequences and predict distribution of mask fillers. 
 
