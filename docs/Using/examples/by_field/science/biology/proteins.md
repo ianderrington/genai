@@ -94,9 +94,9 @@ One way of doing this is to use [_generative models_](#generative-models) direct
 
 #### Generative Models
 
-??? abstract "[Sequence modeling and design from molecular to genome scale with Evo](https://github.com/evo-design/evo)"
+??? abstract "[Sequence modeling and design from molecular to genome scale with Evo](https://github.com/evo-design/evo)" evo-dna
 
-    The authors reveal in their [paper](https://www.biorxiv.org/content/10.1101/2024.02.27.582234v1.full.pdf) the use of long-context Genetics models can be powerful in their ability to yield state of of art predictions in protein-related tasks. These tasks include zero-shot function prediction, multi-element sequence generation. Their models use the 'Striped-Hyena' structured state space model. 
+    The authors reveal in their [paper](https://www.biorxiv.org/content/10.1101/2024.02.27.582234v1.full.pdf) the use of long-context Genetics models can be powerful in their ability to yield state of of art predictions in protein-related tasks. These tasks include zero-shot function prediction, multi-element sequence generation. Their models use the 'Striped-Hyena' structured state space model. Their model is known as Evo. 
     <img width="566" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d62b1d21-f323-4ad7-8a1f-28295e9dea2b">
 
 
