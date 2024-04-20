@@ -3214,6 +3214,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -5610,6 +5612,33 @@ and
   
   
     <li class="md-nav__item">
+      <a href="../../../../open_source.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Open source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../rewrite.html" class="md-nav__link">
         
   
@@ -5654,10 +5683,10 @@ and
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
         
           
-          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5674,8 +5703,8 @@ and
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5796,10 +5825,10 @@ and
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
         
           
-          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5816,8 +5845,8 @@ and
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -6637,8 +6666,9 @@ and
 <li><strong><a href="#optimization-targets">Target property</a></strong> is the intended goal(s) for protein development</li>
 <li><strong>[Fitness Predictor]</strong> that uses sequence information to estimate the value of the optimization target, as a surrogate for laboratory measurement</li>
 <li><strong><a href="#sequence-optimization">Sequence Proposer</a></strong> that creates sequences to evaluate and explore</li>
-<li><strong>Prioritizer</strong> that uses sequence and predictor information to estimate the top candidates. </li>
+<li><strong>Prioritizer</strong> that uses sequence and predictor information to estimate the top candidates </li>
 <li><strong>Laboratory measurements</strong> that reveal the quality of the generated proteins based on the targets</li>
+<li><strong>Orchestrator</strong> That puts the pieces together in a functional and validated manner</li>
 </ul>
 <p>Optimization systems may involve merging and combining these components for full solutions in two general manners.</p>
 <ol>
@@ -6654,11 +6684,11 @@ and
 <h3 id="strategy">Strategy<a class="headerlink" href="#strategy" title="Permanent link">&para;</a></h3>
 <p>Protein optimization will necessarily evolve the creation of those proteins and evaluations of target characteristics. There are large volumes of databases of various forms that may be useful in creating foundation models. It will still be essential to use continued observaiton to improve the optimization target based on predicted and iterated feedback.</p>
 <p>The volume of the observations will help to determine the architectures that one could use. Base models tend to be PLMs because of the large set of available data. Unsupervised finetuning with those large models may be able to occur through homology or family sets to per. Final targets may be then optimized with simple networks, often involving regression to minimize overfitting, or methods that include Bayesian or evolutionary approaches. </p>
-<p>To be able to successfully deliver on final target optimziation, the greater the quantity of direct or surrogate data that can be obtained, the greater the potential the resulting models will ˆs sufficiently predictive of fitness of future protein sequence candidates. That is why massive screening approaches, as described in by <a href="https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai">Ginko's platform</a> screening thousands of candidates. </p>
+<p>To be able to successfully deliver on final target optimziation, the greater the quantity of direct or surrogate data that can be obtained, the greater the potential the resulting models will sufficiently predictive of fitness of future protein sequence candidates. That is why massive screening approaches, as described in by <a href="https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai">Ginko's platform</a> screening thousands of candidates. </p>
 <details class="note">
 <summary><a href="https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai">An example process by Ginkgo</a></summary>
-<p>Gingko reveals with foundry-scale protein estimates, that with thousands of samples they were able to create an enzyme with 10x improvement from where they started. In their design they use structure (differential) estimates via Rosetta, Evolutionary-scale modeling (PLMs), active site focus evolutionary models, as well as an in-house method called 'OWL. 
-<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d62000de-845d-4e91-9a7d-c87473752782" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="635" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d62000de-845d-4e91-9a7d-c87473752782"></a></p>
+<p>Gingko reveals with foundry-scale protein estimates, that with thousands of samples they were able to create an enzyme with 10x improvement from where they started. In their design they use structure (differential) estimates via Rosetta, Evolutionary-scale modeling (PLMs), active site focus evolutionary models, as well as an in-house method called 'OWL. </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/c3666ac2-8d7b-46f7-838b-cd2e6d3721c1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c3666ac2-8d7b-46f7-838b-cd2e6d3721c1" /></a></p>
 </details>
 <p>When it is possibly to iteratively measure proposed sequences, new data can be used to improve subsequent sequence predictions. This can be done <em>greedily</em>, choosing the best solutions, or using probabilistic methods, such as [Bayesian Optimization]. Searching for a protein that optimizes a target by combining both estimated values, as well as their uncertainties. Selecting the sequences with highest-predicted target values  will <em>greedily</em> inform what should be used, and may easily fail due to incorrect estimates due to the predictor model. In other manners, confidence bound (UCB) acquisition, that selects sequences based on an a sum of the predicted target value and the predicted target unertainty. </p>
 <details class="tip" open="open">
@@ -6667,27 +6697,33 @@ and
 </details>
 <h3 id="optimization-targets">Optimization Targets<a class="headerlink" href="#optimization-targets" title="Permanent link">&para;</a></h3>
 <p>There are a number of <a href="#optimization-targets">targets</a> that protein optimization can focus on. For examples, some targets enable primarily basic understanding, such as protein <a href="#structure">structure</a>, and other targets are related to <a href="#function">function</a>, though it is generally considered that structure enables the functions. </p>
-<p>In the cannon causal influence <em>sequence</em> creates &rarr; <em>structure</em> &rarr; enables the <em>function</em>. </p>
-<p>There are several optimization targets of direct interest </p>
+<p>In the cannon of causal influence,  <em>source</em> has &rarr; <em>sequence</em> that creates &rarr; <em>structure</em> &rarr; enables the <em>function</em>.  we can generally compartmentalize targets based on these, though there is certain crossover betwen them . </p>
 <ul>
-<li>
-<p><a href="#structure">Structure</a></p>
-<ul>
+<li><strong>Source</strong><ul>
+<li><a href="#candidate-identification">Candidate Identification</a> </li>
+</ul>
+</li>
+<li><strong><a href="#sequence">Sequence</a></strong><ul>
+<li><a href="#candidate-alignment">Alignment</a></li>
+<li>[Remote cohomology] Similar function, or structure, </li>
+</ul>
+</li>
+<li><strong><a href="#structure">Structure</a></strong><ul>
 <li><strong>Contact prediction</strong></li>
 <li><strong>Secondary and tertiary structure</strong></li>
 <li><strong>(mis)Folding (missense)</strong></li>
 </ul>
 </li>
 <li>
-<p><a href="#function">Function</a></p>
+<p><strong><a href="#function">Function</a></strong></p>
 <ul>
-<li><strong>Enzymatic Catalysi:</strong> The ability of an enzyme to accelerate chemical processes </li>
+<li><strong>Enzymatic Catalysis:</strong> The ability of an enzyme to accelerate chemical processes </li>
 <li><strong>Thermocompatibility</strong> or thermostability, how well a protein remains stable or functions at varying temperatures</li>
-<li><strong>Fluorescence</strong> for visualization purposes</li>
-</ul>
+<li>
+<p><strong>Fluorescence</strong> for visualization purposes</p>
 </li>
 <li>
-<p><a href="#binding">Protein Binding</a> to...</p>
+<p><strong><a href="#binding">Protein Binding</a></strong> to...</p>
 <ul>
 <li><strong>Proteins</strong></li>
 <li><strong>Nucleic Acids</strong></li>
@@ -6695,11 +6731,10 @@ and
 <li><strong>Metals</strong></li>
 </ul>
 </li>
-<li><a href="#candidate-identification">Candidate Identification</a></li>
-<li><a href="#candidate-alignment">Alignment</a></li>
-<li><strong>Remote cohomology:</strong> Similar function, or structure, </li>
-<li><strong><em>Multimodal</em> targets</strong> versions to optimize multiple the targets.</li>
 </ul>
+</li>
+</ul>
+<p>Though there are many examples where these classes cross-these potential </p>
 <h3 id="fitness-prediction">Fitness prediction<a class="headerlink" href="#fitness-prediction" title="Permanent link">&para;</a></h3>
 <p>Training a fitness model may first involve training an unsupervised <a href="#foundation-models">foundation model</a> on a high volume of data. These models can then be fine-tuned, or otherwise adapted, to incorporate protein-sequences or higher relevance to the protein targets of interest. </p>
 <h3 id="sequence-proposer">Sequence Proposer<a class="headerlink" href="#sequence-proposer" title="Permanent link">&para;</a></h3>
