@@ -21,6 +21,9 @@ Generative AI has one of the most powerful potentials for science by enabling ra
     classDef purple fill:#dda0dd,stroke:#333,stroke-width:2px,color:black;
 ```
 
+## Research
+
+??? note "[https://arxiv.org/pdf/2404.07738.pdf](https://arxiv.org/pdf/2404.07738.pdf)"
 
 ## Autonomous Science in the Loop
 

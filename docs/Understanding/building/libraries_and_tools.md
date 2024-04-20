@@ -6,7 +6,6 @@ This document provides an overview of various libraries and tools that can be us
 
 LLM Ops refers to operations related to Large Language Models. Here are a couple of tools that can assist in managing these operations:
 
-
 - [LLM Ops](https://github.com/microsoft/lmops): This is a Microsoft tool for managing large language models.
 - [Reliable GPT](https://github.com/BerriAI/reliableGPT): This is a wrapper that prevents failures due to rate limiting requests.
 
@@ -23,7 +22,16 @@ This section provides a selection of repositories that enable the creation of mo
 
     ![image](https://github.com/OpenBMB/ToolBench/blob/master/assets/overview.png)
 
+
+## Chat with Memory
+
+??? abstract "[Anything LLM](https://github.com/Mintplex-Labs/anything-llm?tab=readme-ov-fileI) is a full-stack application that enables you to turn any document, resource, or piece of content into context that any LLM can use as references during chatting."
+    This application allows you to pick and choose which LLM or Vector Database you want to use as well as supporting multi-user management and permissions.
+
+??? abstract "[MemGPT](https://github.com/cpacker/MemGPT)  allows you to build LLM agents with self-editing memory"
+
 ### Serving
+
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/bentoml/OpenLLM) [Open LLM]([Open LLM](https://github.com/bentoml/OpenLLM)) to run inference with any open-source large-language models, deploy to the cloud or on-premises, and build powerful AI apps."
 
 #### Distributed
@@ -80,5 +88,5 @@ This section provides a selection of repositories that enable the creation of mo
 
 
 
-## General
+
 

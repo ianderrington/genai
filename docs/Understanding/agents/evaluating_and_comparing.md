@@ -4,7 +4,8 @@ There is a lot of similarity of [what to evaluate](../architectures/evaluating_a
 
 ## **How to Evaluate**
 
-??? abstract "[Promptfoo: a tool for testing and evaluating LLM output quality]( https://github.com/promptfoo/promptfoo)"
+
+??? abstract "[Promptfoo: a tool for testing and evaluating LLM output quality](https://github.com/promptfoo/promptfoo)"
     ![image](https://github.com/ianderrington/genai/assets/76016868/c318311a-f65f-49a5-8636-e3f977d4a1f3)
 
     With promptfoo, you can:
@@ -60,3 +61,8 @@ There is a lot of similarity of [what to evaluate](../architectures/evaluating_a
     
     **Abstract:** Large Language Models (LLMs) have unlocked new capabilities and applications; however, evaluating the alignment with human preferences still poses significant challenges. To address this issue, we introduce Chatbot Arena, an open platform for evaluating LLMs based on human preferences. Our methodology employs a pairwise comparison approach and leverages input from a diverse user base through crowdsourcing. The platform has been operational for several months, amassing over 240K votes. This paper describes the platform, analyzes the data we have collected so far, and explains the tried-and-true statistical methods we are using for efficient and accurate evaluation and ranking of models. We confirm that the crowdsourced questions are sufficiently diverse and discriminating and that the crowdsourced human votes are in good agreement with those of expert raters. These analyses collectively establish a robust foundation for the credibility of Chatbot Arena. Because of its unique value and openness, Chatbot Arena has emerged as one of the most referenced LLM leaderboards, widely cited by leading LLM developers and companies.
     [Paper](https://arxiv.org/html/2403.04132v1)
+
+## Example evaluations
+
+??? abstract "[Agent Eval Refine](https://github.com/Berkeley-NLP/Agent-Eval-Refine) design and use evaluation models to both evaluate and autonomously refine the performance of digital agents that browse the web or control mobile devices."
+    - [Paper](https://arxiv.org/pdf/2404.06474.pdf)

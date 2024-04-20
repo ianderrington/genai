@@ -30,6 +30,8 @@ There are ways areas where AI can enable code-creation, arranged generally from 
 
 ## Coding
 
+??? abstract "[SWE-agent](https://github.com/princeton-nlp/SWE-agent) is not too shabby of a code-generating system that can read issues and make PRs" 
+    It didn't pass our general tests, but we will evaluate further. 
 
 ??? abstract "[Open Devin](https://github.com/OpenDevin/OpenDevin) to provide a powerful GUI-enablement resembling the commercial devin code assistant" 
 

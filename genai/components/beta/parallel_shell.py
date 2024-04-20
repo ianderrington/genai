@@ -9,6 +9,8 @@ import time
 
 import select
 
+## TODo: add a timeout to the select call to prevent hanging - May involve rewriting the execute method
+# https://stackoverflow.com/questions/1191374/using-module-subprocess-with-timeout
 
 class AbstractPersistentShell(ABC):
     def __init__(self, shell_name='default_shell', starting_dir=".", max_parents=1, history_limit=100):
@@ -67,7 +69,7 @@ class BashShell(AbstractPersistentShell):
         super().__init__(**kwargs)
         self.process = subprocess.Popen(["/bin/bash"], stdin=subprocess.PIPE, 
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, 
-            cwd=str(self.working_dir), bufsize=1, universal_newlines=True, shell=False)
+            cwd=str(self.working_dir), bufsize=1, universal_newlines=True, shell=False,)
         self.cleaned_up = False
         self.start_output_capture()  # Start capturing stdout and stderr
 

@@ -80,15 +80,14 @@ The allocated budget will affect your tool's monetization strategy.
 !!! important "[LLMs from scratch](https://github.com/rasbt/LLMs-from-scratch/tree/main) provides a quality series of Jupyter notebooks revealing how to build LLMs from scratch."
 
 
-??? tip "[Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/) A detailed discussion of the components and their interactions using orchestration systems."
+??? tip "[Emerging Architectures for LLM Applications](https://a16z.com/emerging-architectures-for-llm-applications/) A detailed discussion of the components and their interactions using orchestration systems."
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f287eaef-6b86-4846-8885-2b3ad3cd614b) 
 
 
 ???+ tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
-    Important patterns mentioned (references to discussions herein):
 
-    
+    Important patterns mentioned (references to discussions herein):    
     * [Evaluating and comparing](evaluating_and_comparing.md)
     * [Retreival Augmented Generation (RAG)](../agents/rag.md)
     * [Fine tuning](optimization/index.md#finetuning)
@@ -100,11 +99,8 @@ The allocated budget will affect your tool's monetization strategy.
     * Effective (defensive) UX to ensure the models can be used well.
     ![image](https://github.com/ianderrington/genai/assets/76016868/fd03db2c-c695-4f52-8306-062fad5c3779)
     
-
-
-
-
 Here are some other overviews to assist you in understanding the practical aspects of Generative AI, particularly with regards to GPT and large language models.
 
 - [Neptune-nlp-models-infrastructure](https://neptune.ai/blog/nlp-models-infrastructure-cost-optimization#:~:text=Use%20a%20lightweight%20deployment%20framework,serve%20predictions%20over%20a%20network.)
 - [How to Deploy Large Size Deep Learning Models Into Production](https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33)
+

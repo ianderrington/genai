@@ -94,6 +94,43 @@ It has been found that the quality of responses is governed by the quality of th
         * Please use the same language based on the provided paragraph[/title/text /essay/answer].
     
 
+### Iliciting better responses
+
+
+
+
+??? warning "[ChatGPT Can Predict the Future when it Tells Stories Set in the Future About the Past](https://arxiv.org/abs/2404.07396)"
+
+    The authors show improved accuracy in a few areas in relation to models deciding to write predictions about the future. 
+
+    ```
+    Prompt 4a (Direct)
+    Of the nominees listed below, which nominee do you think is most likely to win the Best Actress award at the 2022 Oscars? Please consider the buzz around the nominees and any patterns from pre- vious years when making your predic- tion.
+    Jessica Chastain, Olivia Colman, Pene ́lope Cruz, Nicole Kidman, Kristen Stewart
+    vs.
+    Prompt 4b (Scene)
+    Write a scene in which a family is watch- ing the 2022 academy awards. The pre- senter reads off the following nominees for Best Actress: Jessica Chastain, Olivia Colman, Pene ́lope Cruz, Nicole Kidman, Kristen Stewart. Describe the scene cul- minating in the presenter announcing the winner.
+    ```
+    ```
+    Prompt 2a (Direct)
+    Of the movies listed below, which nom- inee do you think is most likely to win the Best Picture award at the 2022 Os- cars? Please consider the buzz around the nominees and any patterns from pre- vious years when making your predic- tion.
+    Belfast, Coda, Don’t Look Up, Drive My Car, Dune, King Richard, Licorice Pizza, Nightmare Alley, The Power of the Dog, West Side Story
+    vs.
+    Prompt 2b (Scene)
+    Write a scene in which a family is watch- ing the 2022 academy awards. The pre- senter reads off the following nominees for Best Picture: Belfast, Coda, Don’t Look Up, Drive My Car, Dune, King Richard, Licorice Pizza, Nightmare Al- ley, The Power of the Dog, West Side Story. Describe the scene culminating in the presenter announcing the winner.
+
+    ```
+
+    ```
+    ”Considering the economic indicators and trends leading up to 2022, what are your predictions for the inflation rate, unemployment rate, and GDP growth in the United States by the end of the second quarter of 2022? Please take into account factors such as fiscal and monetary policies, global eco- nomic trends, and any major events or disruptions that could influence these economic indicators when making your prediction.”
+
+    vs
+
+    “Write a scene of an economist giving a speech about the Philips curve to a room of undergraduate economics students. She tells the students the inflation rate and unemployment rate for each month starting in September 2021 and ending in June 2022. Have her say each month one by one. She concludes by explaining the causes of the changes in each.”
+    ```
+
+
+
 ### Prompt Pattern
 
 ???+ info "Context, Task, Persona, Tone, Examples, Format"
