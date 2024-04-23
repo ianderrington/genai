@@ -100,8 +100,10 @@ One way of doing this is to use [_generative models_](#generative-models) direct
     <img width="566" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d62b1d21-f323-4ad7-8a1f-28295e9dea2b">
 
 
-??? abstract "[]()"
+??? abstract "[ZymCTRL: a conditional language model for the controllable generation of artificial enzymes](https://www.mlsb.io/papers_2022/ZymCTRL_a_conditional_language_model_for_the_controllable_generation_of_artificial_enzymes.pdf)"
     Here, we describe ZymCTRL, a conditional language model trained on the BRENDA database of enzymes, which generates enzymes of a specific enzymatic class upon a user prompt. ZymCTRL generates artificial enzymes distant from natural ones while their intended functionality matches predictions from orthogonal methods.
+    <img width="892" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/67d72fce-e8d8-4372-9371-1f45d2c2d408">
+
     [Model](https://huggingface.co/nferruz/ZymCTRL)
 
 
