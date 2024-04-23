@@ -82,6 +82,11 @@ Though there are many examples where these classes cross-these potential
 
 ### Fitness prediction
 Training a fitness model may first involve training an unsupervised [foundation model](#foundation-models) on a high volume of data. These models can then be fine-tuned, or otherwise adapted, to incorporate protein-sequences or higher relevance to the protein targets of interest. 
+??? note "[Learning protein fitness models from evolutionary and assay-labeled data](https://www.nature.com/articles/s41587-021-01146-5)"
+    The authors show in their paper that uses a manner to combine ridge regression wiømbined with large-languag emodels revealing the ability to effectively predict evolutionary and assay-labeled fitness
+    <img width="706" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/03ac33f5-b455-491e-b7e0-72c207216d48">
+
+    
 
 ### Sequence Proposer
 
@@ -137,11 +142,6 @@ One way of doing this is to use [_generative models_](#generative-models) direct
     
     <img width="440" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/911a6b86-0e44-45c2-8a47-9a301d187ce1">
 
-
-
-
-
-
 ## Data sources
 
 ??? note "[Brenda](https://www.brenda-enzymes.org/)"
@@ -169,13 +169,18 @@ The general method of creating protein foundation models uses Masked Language Mo
 
 #### ESM models
 
-!!! tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model (esm)](https://www.science.org/doi/10.1126/science.ade2574) End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [Language models enable zero-shot prediction of the effects of mutations on protein function]([Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm))"
+
+??? tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model (esm)](https://www.biorxiv.org/content/10.1101/2022.07.20.500902v3.full.pdf)"
+    End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end
+    <img width="474" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/aeac8588-89a6-42f0-afa2-24f2735b0c50">
+
+    [Science paper](https://www.science.org/doi/10.1126/science.ade2574)
 
 ??? abstract "[Genome-wide prediction of disease variant effects with a deep protein language model](https://github.com/ntranoslab/esm-variants)"
     The authors show in their [paper](https://www.nature.com/articles/s41588-023-01465-0) a workflow using ESM1b, a 650-million-parameter protein language model, to predict all ~450 million possible missense variant effects in the human genome, and made all predictions available on a web portal.
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [Language models enable zero-shot prediction of the effects of mutations on protein function]([Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm))"
-    
+
     **Developments**
 
     Using established and newly trained protein language models, the authors demonstrate the ability to provide zero-shot predictions of the effect of a protein mutation on a protein's fluorescence. 
