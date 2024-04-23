@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. </title>
+    <title>Reference Optimization of Protein Language Models as a Multi-objective Binder Design Paradigm</title>
     
     
 
-    <meta property="og:url" content="https://www.managen.ai//shared/seqprop.html">
+    <meta property="og:url" content="https://www.managen.ai//shared/protgpt2.html">
 
-    <meta property="og:title" content="SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. ">
-    <meta property="og:description" content="The authors reveal in their [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04437-5) and [arxiv](https://arxiv.org/pdf/2005.11275.pdf) a method to optimize biological protein sequences based on an a predictor model. They use something called _trainable logits_ that can be sampled from, but do so doing instance normalizaton."">
+    <meta property="og:title" content="Reference Optimization of Protein Language Models as a Multi-objective Binder Design Paradigm">
+    <meta property="og:description" content="The authors create a design paradigm using instruction fine-tuning and direct preference optimization of PLMS. Creating ProtGPT2 allows binders to be designed based on receptor and drug develepoability criterion. To do this, they do two-step instruction tuning with receptor-bindign 'chat-templates', and then optimize fine-tuned models to promote preferred binders. "">
 
     <meta property="og:type"  content="website" />
-    <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/3c2fe20f-1257-4a76-a034-1b3cad242b8c">
-    <meta property="og:url" content="https://www.managen.ai//shared/seqprop.html">
+    <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/4a673b82-fa46-419b-b24e-d65436923438">
+    <meta property="og:url" content="https://www.managen.ai//shared/protgpt2.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. ">
-    <meta name="twitter:description" content="SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. ">
-    <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/3c2fe20f-1257-4a76-a034-1b3cad242b8c">
+    <meta name="twitter:title" content="Reference Optimization of Protein Language Models as a Multi-objective Binder Design Paradigm">
+    <meta name="twitter:description" content="Reference Optimization of Protein Language Models as a Multi-objective Binder Design Paradigm">
+    <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/4a673b82-fa46-419b-b24e-d65436923438">
     <!--Import stylesheet  -->
     <link rel="stylesheet" href="../../stylesheets/share-card.css">
     <style>
@@ -61,13 +61,14 @@
 <body>
     
     <div class="blog-content">
-        <h1><p><a href="https://github.com/johli/seqprop">SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. </a></p></h1>
-        <p>The authors reveal in their <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04437-5">paper</a> and <a href="https://arxiv.org/pdf/2005.11275.pdf">arxiv</a> a method to optimize biological protein sequences based on an a predictor model. They use something called <em>trainable logits</em> that can be sampled from, but do so doing instance normalizaton.
-    A Python API for constructing generative DNA/RNA/protein Sequence PWM models in Keras. Implements a PWM generator (with support for discrete sampling and ST gradient estimation), a predictor model wrapper and a loss model.
-<img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3c2fe20f-1257-4a76-a034-1b3cad242b8c" />
-<img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/fed3de2c-6dcf-4f4b-8ad1-aa2ecadce5ad" /></p>
+        <h1><p><a href="https://arxiv.org/pdf/2403.04187.pdf">Reference Optimization of Protein Language Models as a Multi-objective Binder Design Paradigm</a></p></h1>
+        <p>The authors create a design paradigm using instruction fine-tuning and direct preference optimization of PLMS. Creating ProtGPT2 allows binders to be designed based on receptor and drug develepoability criterion. To do this, they do two-step instruction tuning with receptor-bindign 'chat-templates', and then optimize fine-tuned models to promote preferred binders. 
+Specifically they "propose an alignment method to transform pre-trained unconditional protein sequence models (p(s)), that autoregressively sample sequences (s) from underlying data distribution (D), to conditional probability models (p(s|r; c)) that given a target receptor &reg; sample binders that satisfy constraints &copy; encoded by preference datasets compiled from experiments and domain experts."</p>
+<p><img width="726" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4a673b82-fa46-419b-b24e-d65436923438"></p>
+<p>Notably, they fuse protein sequences with English-language prompts and use BPE encoding with a large vocabulary size (50k) instead of the smaller pLM vocabulary sizes (33) that are standard.  </p>
+<p><img width="708" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ff42d6df-a13e-418d-8385-264ecd2d0994"></p>
     </div>
-    <a href="https://www.managen.ai//shared/seqprop.html" class="page-url" id="page-url"></a>
+    <a href="https://www.managen.ai//shared/protgpt2.html" class="page-url" id="page-url"></a>
     <!-- Clipboard copy icon/button -->
     <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
     <!-- Copied popup -->

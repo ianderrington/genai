@@ -3930,10 +3930,66 @@ and
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Sequence Proposer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generative-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generative Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generative Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-natural-large-language-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Natural Large Language Models
+      
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activation-maximization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activation Maximization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data sources
+      
+    </span>
+  </a>
   
 </li>
       
@@ -4066,6 +4122,17 @@ and
     <span class="md-ellipsis">
       
         Candidate alignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protein-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protein Binding
       
     </span>
   </a>
@@ -6446,10 +6513,66 @@ and
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Sequence Proposer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generative-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generative Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generative Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-natural-large-language-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Natural Large Language Models
+      
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activation-maximization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activation Maximization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data sources
+      
+    </span>
+  </a>
   
 </li>
       
@@ -6582,6 +6705,17 @@ and
     <span class="md-ellipsis">
       
         Candidate alignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protein-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protein Binding
       
     </span>
   </a>
@@ -6775,8 +6909,9 @@ and
 <p>Training a fitness model may first involve training an unsupervised <a href="#foundation-models">foundation model</a> on a high volume of data. These models can then be fine-tuned, or otherwise adapted, to incorporate protein-sequences or higher relevance to the protein targets of interest. </p>
 <h3 id="sequence-proposer">Sequence Proposer<a class="headerlink" href="#sequence-proposer" title="Permanent link">&para;</a></h3>
 <p>With a fitness predictor made available, the next step is to create proposal sequences that may be evaluated with the predictor model, or potentially with direct measurement. </p>
-<p>One way of doing this is to use <em>activation maximization</em>, a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction.)</p>
-<p><a href="/shared/seqprop.html" class="page-url" id="page-url-0"></a></p>
+<p>One way of doing this is to use <a href="#generative-models"><em>generative models</em></a> directly in seeding the generated sequence with starting sequences of the target sequence, or even from an natural language prompt. Another mthod is to use <a href="#activation-maximization"><em>activation maximization</em></a>, a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction.</p>
+<h4 id="generative-models">Generative Models<a class="headerlink" href="#generative-models" title="Permanent link">&para;</a></h4>
+<p><a href="/shared/evo-dna.html" class="page-url" id="page-url-0"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
@@ -6786,15 +6921,81 @@ and
 </div>
 
 <details class="abstract">
-<summary><a href="https://github.com/johli/seqprop/tree/master">SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. </a></summary>
-<p>The authors reveal in their <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04437-5">paper</a> a method to optimize biological protein sequences based on an a predictor model. They use something called <em>trainable logits</em> that can be sampled from, but do so doing instance normalizaton 
+<summary><a href="https://github.com/evo-design/evo">Sequence modeling and design from molecular to genome scale with Evo</a></summary>
+<p>The authors reveal in their <a href="https://www.biorxiv.org/content/10.1101/2024.02.27.582234v1.full.pdf">paper</a> the use of long-context Genetics models can be powerful in their ability to yield state of of art predictions in protein-related tasks. These tasks include zero-shot function prediction, multi-element sequence generation. Their models use the 'Striped-Hyena' structured state space model. Their model is known as Evo. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d62b1d21-f323-4ad7-8a1f-28295e9dea2b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="566" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d62b1d21-f323-4ad7-8a1f-28295e9dea2b"></a></p>
+</details>
+<details class="abstract">
+<summary><a href=""></a></summary>
+<p>Here, we describe ZymCTRL, a conditional language model trained on the BRENDA database of enzymes, which generates enzymes of a specific enzymatic class upon a user prompt. ZymCTRL generates artificial enzymes distant from natural ones while their intended functionality matches predictions from orthogonal methods.
+<a href="https://huggingface.co/nferruz/ZymCTRL">Model</a></p>
+</details>
+<details class="note">
+<summary><a href="https://www.nature.com/articles/s41592-021-01100-y">Low-N protein engineering with data-efficient deep learning</a></summary>
+<p>Site-directed mutagenics with the LLM: do random maskings on the sequences and predict distribution of mask fillers. </p>
+</details>
+<h5 id="with-natural-large-language-models">With Natural Large Language Models<a class="headerlink" href="#with-natural-large-language-models" title="Permanent link">&para;</a></h5>
+<h4 id="activation-maximization">Activation Maximization<a class="headerlink" href="#activation-maximization" title="Permanent link">&para;</a></h4>
+<p><a href="/shared/seqprop.html" class="page-url" id="page-url-1"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a href="https://github.com/johli/seqprop">SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor. </a></summary>
+<p>The authors reveal in their <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04437-5">paper</a> and <a href="https://arxiv.org/pdf/2005.11275.pdf">arxiv</a> a method to optimize biological protein sequences based on an a predictor model. They use something called <em>trainable logits</em> that can be sampled from, but do so doing instance normalizaton.
+    A Python API for constructing generative DNA/RNA/protein Sequence PWM models in Keras. Implements a PWM generator (with support for discrete sampling and ST gradient estimation), a predictor model wrapper and a loss model.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/3c2fe20f-1257-4a76-a034-1b3cad242b8c" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3c2fe20f-1257-4a76-a034-1b3cad242b8c" /></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/fed3de2c-6dcf-4f4b-8ad1-aa2ecadce5ad" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/fed3de2c-6dcf-4f4b-8ad1-aa2ecadce5ad" /></a></p>
-<h2 id="example-architectures">Example Architectures<a class="headerlink" href="#example-architectures" title="Permanent link">&para;</a></h2>
 </details>
+<details class="abstract">
+<summary><a href="https://github.com/gjoni/trDesign">Protein sequence design by conformational landscape optimization</a></summary>
+<p>The authors propose a bayesian approach to optimizing the a protein structure to yield a residue sequence. They use a loss of the form <span class="arithmatex">\(Loss = -/log P(contacts|sequence) + D_{KL}(f_{20}||f_{20}^{PDB}\)</span> where <span class="arithmatex">\(D_{KL}\)</span> is the Kullback-Leibler divergence, <span class="arithmatex">\(f_20\)</span> is the average frequency of amino acids from the sequence, and <span class="arithmatex">\(f_{20}^{PDB}\)</span> is the average frequency of amino acids from proteins int he PDB. 
+<a href="https://www.pnas.org/doi/full/10.1073/pnas.2017228118">Paper</a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/8936aae6-4e1c-41f4-bc03-38092e829585" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/8936aae6-4e1c-41f4-bc03-38092e829585" /></a></p>
+</details>
+<p><a href="/shared/coves.html" class="page-url" id="page-url-2"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a href="https://github.com/ddingding/CoVES/tree/publish">Structure-based scoring and sampling of 'Combinatorial Variant Effects from Structure' (CoVES)</a></summary>
+<p>The authors show in their <a href="https://www.biorxiv.org/content/10.1101/2022.10.31.514613v2">paper</a> over 7 different combinatorial mutation studies, the ability to design proteins by exploring the design spacae without needs for combinatorial number of mutations. They build a model to estimate a residue preference effect for each amino acid variant at each position, and sums these effects to predict combinatorial variants.  Simple linear and logistic models using a 'mutation effect preference of size 20(Amino Acids)x residue size' were able to predict the effect of variance. They could then use this to design sequences using Boltsman sampling and generate variatns that were much better.  </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/753aaf78-06b7-4199-999d-f08e78d7addd" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/753aaf78-06b7-4199-999d-f08e78d7addd" /></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/5d933173-49e2-4f76-9a0a-d7834c00590a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5d933173-49e2-4f76-9a0a-d7834c00590a" /></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/4fba09dc-0ecf-4a9b-833c-9d607e545c34" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4fba09dc-0ecf-4a9b-833c-9d607e545c34" /></a>
+Particularly the following image provides credence that these simple models of important sites can be useful in predicting proteins. </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/911a6b86-0e44-45c2-8a47-9a301d187ce1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="440" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/911a6b86-0e44-45c2-8a47-9a301d187ce1"></a></p>
+</details>
+<h2 id="data-sources">Data sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary><a href="https://www.brenda-enzymes.org/">Brenda</a></summary>
+</details>
+<details class="abstract">
+<summary><a href="https://github.com/OATML-Markslab/ProteinGym">ProteinGym: Large-Scale Benchmarks for Protein Fitness Prediction and Design</a> is an extensive set of Deep Mutational Scanning (DMS) assays and annotated human clinical variants</summary>
+<p>The results are "curated to enable thorough comparisons of various mutation effect predictors in different regimes"
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/75911610-75f1-4cce-bccf-d7de1f3a168a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="566" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/75911610-75f1-4cce-bccf-d7de1f3a168a"></a></p>
+<p><a href="https://proteingym.org/">Website</a>
+<a href="https://papers.nips.cc/paper_files/paper/2023/file/cac723e5ff29f65e3fcbb0739ae91bee-Paper-Datasets_and_Benchmarks.pdf">Paper</a></p>
+</details>
+<h2 id="example-architectures">Example Architectures<a class="headerlink" href="#example-architectures" title="Permanent link">&para;</a></h2>
 <p>While there are many architecture and methods for creating and optimizing proteins, we focus here, primarily on ways that employ PLMs in some way. These create <em>foundation models</em> that can be fine-tuned and readily adapted to specific domains of interest. </p>
 <p>The general method of creating protein foundation models uses Masked Language Modeling (MLM) or 'Bert-based' predictions, though next-token predictions, as is done with GPT-architectures may also be used. We share a number of prominent models and uses or derivatives, </p>
 <h3 id="evaluation-metrics">Evaluation Metrics<a class="headerlink" href="#evaluation-metrics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Spearman Correlation Coefficient</li>
+<li>AUC</li>
+<li>MCC</li>
+</ul>
 <h3 id="foundation-models">Foundation models<a class="headerlink" href="#foundation-models" title="Permanent link">&para;</a></h3>
 <h4 id="esm-models">ESM models<a class="headerlink" href="#esm-models" title="Permanent link">&para;</a></h4>
 <div class="admonition tip">
@@ -6854,14 +7055,31 @@ representations and can be identified by linear projections. &quot;
 <summary><a href="https://www.biorxiv.org/content/10.1101/2020.12.15.422761v1.full.pdf">TRANSFORMER PROTEIN LANGUAGE MODELS ARE UNSUPERVISED STRUCTURE LEARNERS</a></summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="973" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e6ca2843-c5a1-444c-96f5-081a8aad6a5b"></a></p>
 </details>
-<h4 id="multimodal">Multimodal<a class="headerlink" href="#multimodal" title="Permanent link">&para;</a></h4>
-<p><a href="/shared/deepgo-se.html" class="page-url" id="page-url-1"></a></p>
+<p><a href="/shared/protgpt2.html" class="page-url" id="page-url-3"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
+</div>
+
+<details class="note">
+<summary><a href="https://arxiv.org/pdf/2403.04187.pdf">Reference Optimization of Protein Language Models as a Multi-objective Binder Design Paradigm</a></summary>
+<p>The authors create a design paradigm using instruction fine-tuning and direct preference optimization of PLMS. Creating ProtGPT2 allows binders to be designed based on receptor and drug develepoability criterion. To do this, they do two-step instruction tuning with receptor-bindign 'chat-templates', and then optimize fine-tuned models to promote preferred binders. 
+Specifically they "propose an alignment method to transform pre-trained unconditional protein sequence models (p(s)), that autoregressively sample sequences (s) from underlying data distribution (D), to conditional probability models (p(s|r; c)) that given a target receptor &reg; sample binders that satisfy constraints &copy; encoded by preference datasets compiled from experiments and domain experts."</p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/4a673b82-fa46-419b-b24e-d65436923438" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="726" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4a673b82-fa46-419b-b24e-d65436923438"></a></p>
+<p>Notably, they fuse protein sequences with English-language prompts and use BPE encoding with a large vocabulary size (50k) instead of the smaller pLM vocabulary sizes (33) that are standard.  </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/ff42d6df-a13e-418d-8385-264ecd2d0994" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="708" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ff42d6df-a13e-418d-8385-264ecd2d0994"></a></p>
+</details>
+<h4 id="multimodal">Multimodal<a class="headerlink" href="#multimodal" title="Permanent link">&para;</a></h4>
+<p><a href="/shared/deepgo-se.html" class="page-url" id="page-url-4"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-4')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-4">Link copied!</div>
 </div>
 
 <details class="abstract">
@@ -6877,13 +7095,13 @@ representations and can be identified by linear projections. &quot;
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="DeepGO-SE Model Overview" src="https://github.com/ianderrington/genai/assets/76016868/6136332a-66cd-4f1f-89d5-fe11690e42fa" /></a></p>
 <p>The authors demonstrate 📈 that this method improves molecular function prediction by a substantial margin. Moreover, they reveal that training with protein-protein interactions substantially benefits the understanding of complex biological processes. They suggest that predicting biological processes may only require knowledge of molecular functions, potentially paving the way for a more generalized approach that could be advantageous in other domains.</p>
 </details>
-<p><a href="/shared/prost.html" class="page-url" id="page-url-2"></a></p>
+<p><a href="/shared/prost.html" class="page-url" id="page-url-5"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-5')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-5">Link copied!</div>
 </div>
 
 <details class="abstract">
@@ -6914,13 +7132,13 @@ representations and can be identified by linear projections. &quot;
 <summary><a href="https://www.nature.com/articles/s41586-023-05696-3">De novo design of luciferases using deep learning</a></summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b4de3724-def9-43f6-a3b0-e55061c5b278" /></a></p>
 </details>
-<p><a href="/shared/forcegen.html" class="page-url" id="page-url-3"></a></p>
+<p><a href="/shared/forcegen.html" class="page-url" id="page-url-6"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-6')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-6">Link copied!</div>
 </div>
 
 <details class="note">
@@ -6934,13 +7152,13 @@ representations and can be identified by linear projections. &quot;
 <p>Via full-atom molecular simulations for direct validation from physical and chemical principles, we demonstrate that the designed proteins are de novo, and fulfill the targeted mechanical properties, including unfolding energy and mechanical strength, and a detailed unfolding force-separation curves. </p>
 </details>
 <h4 id="thermostability">Thermostability<a class="headerlink" href="#thermostability" title="Permanent link">&para;</a></h4>
-<p><a href="/shared/prolatherm.html" class="page-url" id="page-url-4"></a></p>
+<p><a href="/shared/prolatherm.html" class="page-url" id="page-url-7"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-4')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-7')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-4">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-7">Link copied!</div>
 </div>
 
 <details class="abstract">
@@ -6963,7 +7181,36 @@ They considered several first, we consider feature-based models that rely on man
 </details>
 <h4 id="candidate-alignment">Candidate alignment<a class="headerlink" href="#candidate-alignment" title="Permanent link">&para;</a></h4>
 <p>It is not necessarily just enough to identify a potential candidate but to have a degree of <em>alignment</em> with of the candidate with starting or suggested candidates. This allows for a degree of interpretability to by people. </p>
+<h4 id="protein-binding">Protein Binding<a class="headerlink" href="#protein-binding" title="Permanent link">&para;</a></h4>
+<p><a href="/shared/ConPLex.html" class="page-url" id="page-url-8"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-8')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-8">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a href="https://github.com/samsledje/ConPLex">Contrastive learning in protein language space predicts interactions between drugs and protein targets</a></summary>
+<p>The authors show in their <a href="https://www.pnas.org/doi/full/10.1073/pnas.2220778120">paper</a> the use of contrastive learning to help co-locate proteins and potential drug molecules in a 'shared feature space' and learns to map drue drugs against non-binding 'decoy' molecules. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/bb697ce1-6ad7-4a1c-9122-c19ea93ce9eb" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bb697ce1-6ad7-4a1c-9122-c19ea93ce9eb" /></a></p>
+</details>
+<p><a href="/shared/protein-mpnn.html" class="page-url" id="page-url-9"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-9')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-9">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a href="https://github.com/dauparas/ProteinMPNN?tab=readme-ov-file">Robust deep learning based protein sequence design using ProteinMPNN</a></summary>
+<p>In their [paper]<a href="https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1.full.pdf">(https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1</a>) the authors reveal a novel method to predict sequences and sequence recovery. 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/ee8d6025-d4a1-4ade-ac22-cfb26cabd41e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ee8d6025-d4a1-4ade-ac22-cfb26cabd41e" /></a></p>
 <h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+</details>
 <h3 id="evaluation-methods">Evaluation Methods<a class="headerlink" href="#evaluation-methods" title="Permanent link">&para;</a></h3>
 <details class="abstract">
 <summary><a href="https://github.com/salesforce/provis">BERTOLOGY MEETS BIOLOGY: INTERPRETING ATTENTION IN PROTEIN LANGUAGE MODELS</a></summary>
