@@ -109,7 +109,7 @@ One way of doing this is to use [_generative models_](#generative-models) direct
 
     Site-directed mutagenics with the LLM: do random maskings on the sequences and predict distribution of mask fillers. 
 
-##### With English
+##### With Natural Large Language Models
 
 #### Activation Maximization
 
@@ -124,6 +124,21 @@ One way of doing this is to use [_generative models_](#generative-models) direct
     The authors propose a bayesian approach to optimizing the a protein structure to yield a residue sequence. They use a loss of the form $Loss = -/log P(contacts|sequence) + D_{KL}(f_{20}||f_{20}^{PDB}$ where $D_{KL}$ is the Kullback-Leibler divergence, $f_20$ is the average frequency of amino acids from the sequence, and $f_{20}^{PDB}$ is the average frequency of amino acids from proteins int he PDB. 
     [Paper](https://www.pnas.org/doi/full/10.1073/pnas.2017228118)
     ![image](https://github.com/ianderrington/genai/assets/76016868/8936aae6-4e1c-41f4-bc03-38092e829585)
+
+??? abstract "[Structure-based scoring and sampling of 'Combinatorial Variant Effects from Structure' (CoVES)](https://github.com/ddingding/CoVES/tree/publish)" coves
+    The authors show in their [paper](https://www.biorxiv.org/content/10.1101/2022.10.31.514613v2) over 7 different combinatorial mutation studies, the ability to design proteins by exploring the design spacae without needs for combinatorial number of mutations. They build a model to estimate a residue preference effect for each amino acid variant at each position, and sums these effects to predict combinatorial variants.  Simple linear and logistic models using a 'mutation effect preference of size 20(Amino Acids)x residue size' were able to predict the effect of variance. They could then use this to design sequences using Boltsman sampling and generate variatns that were much better.  
+    
+    ![image](https://github.com/ianderrington/genai/assets/76016868/753aaf78-06b7-4199-999d-f08e78d7addd)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/5d933173-49e2-4f76-9a0a-d7834c00590a)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/4fba09dc-0ecf-4a9b-833c-9d607e545c34)
+    Particularly the following image provides credence that these simple models of important sites can be useful in predicting proteins. 
+    
+    <img width="440" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/911a6b86-0e44-45c2-8a47-9a301d187ce1">
+
+
+
+
+
 
 ## Data sources
 
