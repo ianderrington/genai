@@ -116,6 +116,17 @@ One way of doing this is to use [_generative models_](#generative-models) direct
 
     Site-directed mutagenics with the LLM: do random maskings on the sequences and predict distribution of mask fillers. 
 
+#### Markov Chain Monte Carlo 
+
+??? abstract "[Plug & play directed evolution of proteins with gradient-based discrete MCMC (EvoProtGrad for MCMC)](https://github.com/NREL/EvoProtGrad/tree/main)" evoprotgrad
+    A Python package for directed evolution on a protein sequence with gradient-based discrete Markov chain monte carlo (MCMC) based on the [paper](https://iopscience.iop.org/article/10.1088/2632-2153/accacd) [blog](https://huggingface.co/blog/AmelieSchreiber/directed-evolution-with-esm2) and [docs](https://nrel.github.io/EvoProtGrad/getting_started/MCMC/)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/4be735d6-bba2-4003-9bf0-36218e264c93)
+    
+
+    
+    
+
+
 ##### With Natural Large Language Models
 
 #### Activation Maximization
