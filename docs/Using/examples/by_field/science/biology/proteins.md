@@ -163,7 +163,9 @@ One way of doing this is to use [_generative models_](#generative-models) direct
 
     [Website](https://proteingym.org/)
     [Paper](https://papers.nips.cc/paper_files/paper/2023/file/cac723e5ff29f65e3fcbb0739ae91bee-Paper-Datasets_and_Benchmarks.pdf)
-    
+
+??? note "[Homologous Pairs of Low and High Temperature Originating Proteins Spanning the Known Prokaryotic Universe](https://www.nature.com/articles/s41597-023-02553-w)"
+
 ## Example Architectures
 While there are many architecture and methods for creating and optimizing proteins, we focus here, primarily on ways that employ PLMs in some way. These create _foundation models_ that can be fine-tuned and readily adapted to specific domains of interest. 
 
