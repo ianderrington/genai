@@ -8,7 +8,7 @@ Sandboxes appropriately limit the ability of an Agent to export (write or send) 
 
 #### Cloud Based Sandboxes
 
-???+ code "![GitHub Repo stars](https://badgen.net/github/stars/e2b-dev/e2b) [E2B.dev sandbox]([E2B.dev sandbox](https://github.com/e2b-dev/e2b))" e2b.dev-sandbox
+???+ code "![GitHub Repo stars](https://badgen.net/github/stars/e2b-dev/e2b) [E2B.dev sandbox](https://github.com/e2b-dev/e2b)" e2b-sandbox
 
     E2B.dev provides a cloud-based sandbox to enable AI-agents to within safe confines. 
     Their [Docs](https://e2b.dev/docs?ref=landing-page-get-started)
