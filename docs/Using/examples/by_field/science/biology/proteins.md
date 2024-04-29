@@ -113,8 +113,8 @@ One way of doing this is to use [_generative models_](#generative-models) direct
 
 
 ??? note "[Low-N protein engineering with data-efficient deep learning](https://www.nature.com/articles/s41592-021-01100-y)"
-
-    Site-directed mutagenics with the LLM: do random maskings on the sequences and predict distribution of mask fillers. 
+    The authors demonstrate a standard model where a pLM undergoes unsupervised pre-training and then refined on evolutionarily related sequences, and finally fine-tuned on assay-specific sequences. They use a Markov Chain Monte Carlo (MCMC) method to mutate and iteratively evaluate mutations to improve design approaches. 
+    
 
 #### Markov Chain Monte Carlo 
 
@@ -144,7 +144,7 @@ One way of doing this is to use [_generative models_](#generative-models) direct
     ![image](https://github.com/ianderrington/genai/assets/76016868/8936aae6-4e1c-41f4-bc03-38092e829585)
 
 ??? abstract "[Structure-based scoring and sampling of 'Combinatorial Variant Effects from Structure' (CoVES)](https://github.com/ddingding/CoVES/tree/publish)" coves
-    The authors show in their [paper](https://www.biorxiv.org/content/10.1101/2022.10.31.514613v2) over 7 different combinatorial mutation studies, the ability to design proteins by exploring the design spacae without needs for combinatorial number of mutations. They build a model to estimate a residue preference effect for each amino acid variant at each position, and sums these effects to predict combinatorial variants.  Simple linear and logistic models using a 'mutation effect preference of size 20(Amino Acids)x residue size' were able to predict the effect of variance. They could then use this to design sequences using Boltsman sampling and generate variatns that were much better.  
+    The authors show in their [paper](https://www.biorxiv.org/content/10.1101/2022.10.31.514613v2) and [Nature](https://www.nature.com/articles/s41467-024-45621-4#Sec1) over 7 different combinatorial mutation studies, the ability to design proteins by exploring the design spacae without needs for combinatorial number of mutations. They build a model to estimate a residue preference effect for each amino acid variant at each position, and sums these effects to predict combinatorial variants.  Simple linear and logistic models using a 'mutation effect preference of size 20(Amino Acids)x residue size' were able to predict the effect of variance. They could then use this to design sequences using Boltsman sampling and generate variatns that were much better.  
     
     ![image](https://github.com/ianderrington/genai/assets/76016868/753aaf78-06b7-4199-999d-f08e78d7addd)
     ![image](https://github.com/ianderrington/genai/assets/76016868/5d933173-49e2-4f76-9a0a-d7834c00590a)
@@ -386,6 +386,11 @@ Searching is essential to find similar sequences that may aid in the training or
 
 #### Candidate alignment
 It is not necessarily just enough to identify a potential candidate but to have a degree of _alignment_ with of the candidate with starting or suggested candidates. This allows for a degree of interpretability to by people. 
+
+??? abstract "[Contrastive learning on protein embeddings enlightens midnight zone](https://github.com/Rostlab/EAT)"
+    In their [paper](https://academic.oup.com/nargab/article/4/2/lqac043/6605840) the authors demonstrate the use of contrastive optimization (like CLIP) to create embeddings that "optimize constraints captured by heirarchichal classification of protein 3D structures" 
+    ![image](https://github.com/ianderrington/genai/assets/76016868/9bacb594-15e1-46aa-bb89-36c2bddfaefb)
+
 
 #### Protein Binding
 
