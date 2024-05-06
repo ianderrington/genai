@@ -15,16 +15,16 @@
         <link rel="canonical" href="https://www.managen.ai/Understanding/building/back_end.html">
       
       
-        <link rel="prev" href="front_end.html">
+        <link rel="prev" href="pre_trained_models.html">
       
       
-        <link rel="next" href="monitoring.html">
+        <link rel="next" href="front_end.html">
       
       
         
       
       
-      <link rel="icon" href="../../assets/genai_logo_edited.svg">
+      <link rel="icon" href="../../assets/managen_logo.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3+insiders-4.49.0">
     
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#libraries-for-backend-deployment" class="md-skip">
+        <a href="#computation-in-ai-deployment" class="md-skip">
           Skip to content
         </a>
       
@@ -152,7 +152,7 @@ and
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="ManaGen🔮AI" class="md-header__button md-logo" aria-label="ManaGen🔮AI" data-md-component="logo">
       
-  <img src="../../assets/genai_logo_v1.png" alt="logo">
+  <img src="../../assets/managen_logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -384,7 +384,7 @@ and
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="ManaGen🔮AI" class="md-nav__button md-logo" aria-label="ManaGen🔮AI" data-md-component="logo">
       
-  <img src="../../assets/genai_logo_v1.png" alt="logo">
+  <img src="../../assets/managen_logo.png" alt="logo">
 
     </a>
     ManaGen🔮AI
@@ -1263,8 +1263,6 @@ and
       
         
       
-        
-      
     
     
     
@@ -2064,33 +2062,6 @@ and
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../architectures/pre_trained_models.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Pre trained models
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2239,6 +2210,8 @@ and
       
         
           
+        
+      
         
       
         
@@ -2532,6 +2505,33 @@ and
   
   
     <li class="md-nav__item">
+      <a href="../agents/applications.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../agents/commercial.html" class="md-nav__link">
         
   
@@ -2716,12 +2716,6 @@ and
       
         
       
-        
-      
-        
-      
-        
-      
     
     
     
@@ -2779,13 +2773,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="examples_and_tutorials.html" class="md-nav__link">
+      <a href="training_and_finetuning.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Examples and tutorials
+    Training and finetuning
   
 
     
@@ -2806,13 +2800,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="front_end.html" class="md-nav__link">
+      <a href="pre_trained_models.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Front end
+    Pre trained models
   
 
     
@@ -2838,6 +2832,8 @@ and
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -2879,12 +2875,69 @@ and
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#latency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Requirements
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#libraries-for-backend-deployment" class="md-nav__link">
@@ -2894,6 +2947,23 @@ and
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Libraries for Backend Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-serving-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model serving locally
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2919,6 +2989,17 @@ and
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#useful-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful References
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2935,13 +3016,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="monitoring.html" class="md-nav__link">
+      <a href="front_end.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Monitoring
+    Front end
   
 
     
@@ -2962,40 +3043,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="frameworks.html" class="md-nav__link">
+      <a href="agents.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Frameworks
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="alignment.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Alignment
+    Agents
   
 
     
@@ -3070,13 +3124,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="computation.html" class="md-nav__link">
+      <a href="data.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Computation in AI Deployment
+    Data
   
 
     
@@ -3097,13 +3151,13 @@ and
   
   
     <li class="md-nav__item">
-      <a href="data.html" class="md-nav__link">
+      <a href="examples_and_tutorials.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Data
+    Examples and tutorials
   
 
     
@@ -3225,60 +3279,6 @@ and
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="training_and_finetuning.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Training and finetuning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="vector_databases.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Vector databases
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -3305,6 +3305,8 @@ and
       
         
           
+        
+      
         
       
         
@@ -4726,6 +4728,10 @@ and
       
         
       
+        
+      
+        
+      
     
     
     
@@ -4861,6 +4867,60 @@ and
     
   
     Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/examples/by_use_case/research.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/examples/by_use_case/web_crawling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Web crawling
   
 
     
@@ -5408,6 +5468,33 @@ and
   
   
     <li class="md-nav__item">
+      <a href="../../Using/governing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Governing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Using/open_source.html" class="md-nav__link">
         
   
@@ -5479,10 +5566,10 @@ and
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
         
           
-          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5499,8 +5586,8 @@ and
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5621,10 +5708,10 @@ and
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" >
         
           
-          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5641,8 +5728,8 @@ and
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_12">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -6145,12 +6232,69 @@ and
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#latency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Requirements
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#libraries-for-backend-deployment" class="md-nav__link">
@@ -6160,6 +6304,23 @@ and
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Libraries for Backend Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-serving-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model serving locally
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6179,6 +6340,17 @@ and
     <span class="md-ellipsis">
       
         Tutorials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful References
       
     </span>
   </a>
@@ -6218,8 +6390,6 @@ and
   
 
 
-  <h1>Back end</h1>
-
 <p>Deploying AI models involves a variety of considerations, especially when it comes to backend infrastructure. The backend is the engine that powers your AI application, handling the complex computations and data processing that your models require. When setting up your backend, you need to consider factors such as latency, model availability, and compute resources.</p>
 <ul>
 <li>
@@ -6232,7 +6402,19 @@ and
 <p><strong>Compute Resources</strong>: AI models, especially large ones, require significant computational resources. You need to ensure that your backend has enough processing power and memory to handle your model's requirements.</p>
 </li>
 </ul>
-<p>For more information on compute resources, refer to our <a href="computation.html">computation guide</a>.</p>
+<p>For more information on compute resources, refer to our <a href="computation.md">computation guide</a>.</p>
+<h1 id="computation-in-ai-deployment">Computation in AI Deployment<a class="headerlink" href="#computation-in-ai-deployment" title="Permanent link">&para;</a></h1>
+<p>Computation plays a crucial role in the deployment of AI models. It involves various aspects such as latency, load, batching, memory, and other requirements that are necessary to have an effective backend. Understanding these computational aspects can help in optimizing the performance of AI models during deployment.</p>
+<h2 id="latency">Latency<a class="headerlink" href="#latency" title="Permanent link">&para;</a></h2>
+<p>Latency refers to the delay before a transfer of data begins following an instruction for its transfer. In AI deployment, low latency is often desirable as it means faster response times.</p>
+<h2 id="load">Load<a class="headerlink" href="#load" title="Permanent link">&para;</a></h2>
+<p>Load refers to the amount of computational work that a computer system can perform. High loads can slow down the system and affect the performance of the AI model.</p>
+<h2 id="batching">Batching<a class="headerlink" href="#batching" title="Permanent link">&para;</a></h2>
+<p>Batching is a process of grouping a number of similar tasks together and executing them all at once. In the context of AI, batching can help in improving the efficiency of the model by processing multiple data points at once.</p>
+<h2 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h2>
+<p>Memory is a crucial aspect of computation. It is where the data is stored for processing. Adequate memory is necessary for the smooth functioning of AI models.</p>
+<h2 id="other-requirements">Other Requirements<a class="headerlink" href="#other-requirements" title="Permanent link">&para;</a></h2>
+<p>There are other requirements as well that are necessary for effective backend. These include a good network connection, sufficient storage space, and a powerful processing unit.</p>
 <h2 id="libraries-for-backend-deployment">Libraries for Backend Deployment<a class="headerlink" href="#libraries-for-backend-deployment" title="Permanent link">&para;</a></h2>
 <p>There are several libraries available that can help you deploy your AI models on the backend. These libraries provide tools and functionalities that simplify the process of setting up and managing your backend infrastructure.</p>
 <ul>
@@ -6264,6 +6446,15 @@ and
 <p><a href="https://openrouter.ai/">OpenRouter</a>: Provides a python and curl based calling of open and closed source models, tracking rates.</p>
 </li>
 </ul>
+<h3 id="model-serving-locally">Model serving locally<a class="headerlink" href="#model-serving-locally" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a href="https://olama.ai">Ollama.ai</a> Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.</p>
+</li>
+<li>
+<p><a href="https://github.com/ggerganov/llama.cpp">Llama.cpp</a> 4 bit llama on macbooks.</p>
+</li>
+</ul>
 <h2 id="platforms-for-backend-deployment">Platforms for Backend Deployment<a class="headerlink" href="#platforms-for-backend-deployment" title="Permanent link">&para;</a></h2>
 <p>Several platforms provide infrastructure and services that can help you deploy your AI models on the backend.</p>
 <ul>
@@ -6279,9 +6470,17 @@ and
 </ul>
 <h2 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link">&para;</a></h2>
 <p>For more hands-on guidance, you can refer to the following tutorials:</p>
-<ul>
-<li><a href="https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33">GCP Tutorial</a>: This tutorial provides a step-by-step guide on how to deploy large-size deep learning models into production using Google Cloud Platform.</li>
-</ul>
+<details>
+<summary><a href="https://towardsdatascience.com/how-to-deploy-large-size-deep-learning-models-into-production-66b851d17f33">GCP Tutorial</a></summary>
+<p>This tutorial provides a step-by-step guide on how to deploy large-size deep learning models into production using Google Cloud Platform.</p>
+</details>
+<div class="admonition abstract">
+<p class="admonition-title"><a href="https://ollama.ai/blog/building-llm-powered-web-apps">Deploying locally with Ollama</a></p>
+</div>
+<h2 id="useful-references">Useful References<a class="headerlink" href="#useful-references" title="Permanent link">&para;</a></h2>
+<p>Creating models in AI involves large volumes of matrix multiplication. Graphics Processing Units (GPUs) are designed for this purpose as they can process multiple computations simultaneously. For a deeper understanding of how GPUs aid in deep learning, refer to the following resource:</p>
+<p><a href="https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/">Tim Dettmers on GPUs</a></p>
+<p>Understanding these computational aspects can help in optimizing the performance of AI models during deployment. It can also aid in making informed decisions about the necessary resources and infrastructure needed for deploying AI models.</p>
 
 
 
@@ -6391,9 +6590,9 @@ and
         
           
           <a
-            href="front_end.html"
+            href="pre_trained_models.html"
             class="md-footer__link md-footer__link--prev"
-            aria-label="Previous: Front end"
+            aria-label="Previous: Pre trained models"
           >
             <div class="md-footer__button md-icon">
               
@@ -6404,7 +6603,7 @@ and
                 Previous
               </span>
               <div class="md-ellipsis">
-                Front end
+                Pre trained models
               </div>
             </div>
           </a>
@@ -6414,16 +6613,16 @@ and
         
           
           <a
-            href="monitoring.html"
+            href="front_end.html"
             class="md-footer__link md-footer__link--next"
-            aria-label="Next: Monitoring"
+            aria-label="Next: Front end"
           >
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Monitoring
+                Front end
               </div>
             </div>
             <div class="md-footer__button md-icon">
