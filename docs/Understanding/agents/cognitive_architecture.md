@@ -591,7 +591,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
 
     It " uses _constrained decoding_ to ensure the model will incrementally generate one of the valid outputs."
     <img width="956" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bf581eb0-96b1-4175-97d0-98f081a03438">
-    Possible open-source implementation [here](https://github.com/kyegomez/LOGICGUIDE/tree/main)
+    Possible open-source implementation [here](https://github.com/kyegomez/LOGICGUIDE)
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/normal-computing/outlines) [Outlines]([Outlines](https://github.com/normal-computing/outlines)) guides the model generation of next-token logits to guide the generation corresponding to regex / JSON and pydantic schema. compatible with all models."
 

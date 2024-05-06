@@ -12,11 +12,16 @@ Whatever pre-trained model that you use, to ensure they meet technical, customer
 
 Below we share important models. 
 
+### APIs based model usage
+- [OpenAI](https://github.com/openai/openai-python)
+
+
 ## Open Source
 
 ### Text-focused
 
-??? tip "[Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/pdf/2307.09288.pdf) A nearly open source set of 7B-70B models with quality performance"
+??? tip "[Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model."
+    [Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/pdf/2307.09288.pdf) A nearly open source set of 7B-70B models with quality performance"
     <img width="1393" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5f6a647d-c0dc-453c-9334-3632e86bc19e">
 
 ??? abstract "**Sept, 2023** ![GitHub Repo stars](https://badgen.net/github/stars/mistralai/mistral-src) [Mistral Transformer]([Mistral Transformer](https://github.com/mistralai/mistral-src))"

@@ -55,7 +55,7 @@ Translates them to html: https://github.com/arxiv-vanity/arxiv-vanity which uses
 
 In general, we will just not worry about this presently 
 <a id="MyHeading"></a>
-Found this one https://github.com/VikParuchuri/marker?tab=readme-ov-file
+Found this one https://github.com/VikParuchuri/marker
 Installed it and it worked well. It doesn't extract images though, and it requires poetry and tesseract, meaning that a docker image is the only way to run it effectively. 
 It is also non-commercial use, so all information from this needs to be used appropriately
 docker with tesseract: https://stackoverflow.com/questions/73318168/how-do-i-add-tesseract-to-my-docker-container-so-i-can-use-pytesseract
@@ -103,7 +103,7 @@ conda activate genai2
 python genai/kg/doc_graph_generation.py -s -v -g test_graph.gf -r 'docs'
 ```
 ### 2024-02-13
-Added friday and copilot OS: https://github.com/OS-Copilot/FRIDAY/tree/main?tab=readme-ov-file . NEED TO CHECK THIS OUT
+Added friday and copilot OS: https://github.com/OS-Copilot/FRIDAY . NEED TO CHECK THIS OUT
 
 ### 2024-01-31
 TODO: 
@@ -159,7 +159,7 @@ Translates them to html: https://github.com/arxiv-vanity/arxiv-vanity which uses
 
 In general, we will just not worry about this presently 
 <a id="MyHeading"></a>
-Found this one https://github.com/VikParuchuri/marker?tab=readme-ov-file
+Found this one https://github.com/VikParuchuri/marker
 Installed it and it worked well. It doesn't extract images though, and it requires poetry and tesseract, meaning that a docker image is the only way to run it effectively. 
 It is also non-commercial use, so all information from this needs to be used appropriately
 docker with tesseract: https://stackoverflow.com/questions/73318168/how-do-i-add-tesseract-to-my-docker-container-so-i-can-use-pytesseract

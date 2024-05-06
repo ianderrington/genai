@@ -1,8 +1,7 @@
 nav:
   - index.md
-  - examples_and_tutorials.md
-  - front_end.md
+  - training_and_finetuning.md
+  - pre_trained_models.md
   - back_end.md
-  - monitoring.md
-  - frameworks.md
+  - front_end.md
   - ...

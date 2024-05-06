@@ -4,11 +4,11 @@ import requests
 from datetime import datetime
 from urllib.parse import urlparse, unquote
 
-from database import DatabaseManager
+from genai.memory.database import DatabaseManager
 # url_cleaner.py
 import re
 from urllib.parse import urlparse, urlunparse
-from utils import clone_github
+from genai.memory.utils import clone_github
 
 # document.py
 import os
@@ -73,7 +73,9 @@ def is_url_html(url):
 class Document:
     def __init__(self, url, base_path, overwrite=False, dry_run=False, verbose=False):
         self.original_url = url
+        # import ipdb; ipdb.set_trace()
         self.cleaned_url = self.url_cleaner(url)
+        self.cleaned_url = self.variant_url_cleaner(self.cleaned_url)
         self.parsed_url = urlparse(self.cleaned_url)
         self.base_path = base_path
         self.overwrite = overwrite
@@ -157,15 +159,15 @@ class Document:
         print(f"local_path={self.local_path}"   )
         if os.path.exists(self.local_path) and not self.overwrite:
             print(f"Document {self.local_path} already exists")
-            return None
+            return self.local_path
         if not os.path.exists(os.path.dirname(self.local_path)):
             os.makedirs(os.path.dirname(self.local_path))
         if self.dry_run:
             print(f"Would download {self.original_url} to {self.local_path}")
-            return None
+            return self.local_path
         else:
             print(f"Downloading {self.original_url} to {self.local_path}")
-            self.write_to_disk(url=self.original_url, local_path=self.local_path)
+            self.write_to_disk(url=self.cleaned_url, local_path=self.local_path)
         self.download_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         return self.local_path
@@ -306,6 +308,14 @@ class GitHubDocument(Document):
 
     def variant_url_cleaner(self, url):
         # Special handling for specific domains (e.g., GitHub)
+        # Replace https://github.com/a16z-infra/llm-app-stack/<anythin after this>  with  https://github.com/a16z-infra/llm-app-stack/ 
+        # to get the entire repository
+        pattern = r"github\.com/([^/]+/[^/]+)"
+        match = re.search(pattern, url)
+        if match:
+            url = f"https://github.com/{match.group(1)}"
+        else:
+            raise ValueError(f"Could not parse repo name from URL {url}")
         return url
 
     def file_name(self):
@@ -347,7 +357,7 @@ class GitHubDocument(Document):
             print(f"repo {local_path} already exists")
             return
         
-        
+        # import ipdb; ipdb.set_trace(0) 
         clone_github(url, local_path, reclone=self.overwrite)
 
 
@@ -395,6 +405,7 @@ class DocumentDownloader:
             meta_data = document.get_metadata()
             if meta_data:
                 self.db_manager.insert_metadata(document.local_path, meta_data)
+        return local_path
             
     # def close(self):
     #    self.db_manager.close()
@@ -413,9 +424,10 @@ def arg_parser():
 def url_downloader(url, base_path, overwrite=False, dry_run=False, verbose=False):
     downloader = DocumentDownloader(base_path, overwrite, dry_run=dry_run, verbose=verbose)
     try: 
-        downloader.download(url)
+        local_path = downloader.download(url)
     except Exception as e:
         print(f"Error downloading {url} because of {e}")
+    return local_path
 
 def main(args):
     url = args.url

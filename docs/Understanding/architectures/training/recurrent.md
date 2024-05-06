@@ -44,7 +44,7 @@ Train on model trains a new model on the output of a new model.
     from among these candidates (self-curation). This data is then used to finetune
     a stronger model. F
 
-??? abstract "[WizardMath: Empowering Mathematical Reasoning for Large Language Models via _Reinforced Evol-Instruct_](https://github.com/nlpxucan/WizardLM/tree/main/WizardMath)"
+??? abstract "[WizardMath: Empowering Mathematical Reasoning for Large Language Models via _Reinforced Evol-Instruct_](https://github.com/nlpxucan/WizardLM/WizardMath)"
     Llama-2 based reinforcement enables substantial improvement over other models.
     <img width="670" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ea4313c0-9ba7-4000-b77b-a363bce049f8">
     [Paper](https://github.com/nlpxucan/WizardLM/blob/main/WizardMath/WizardMath_Paper.pdf)

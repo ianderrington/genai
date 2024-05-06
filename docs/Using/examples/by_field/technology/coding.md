@@ -18,7 +18,7 @@ There are ways areas where AI can enable code-creation, arranged generally from 
   - Multi-modal autonomous
 
 
-- [Wizard Coding](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder)
+- [Wizard Coding](https://github.com/nlpxucan/WizardLM/WizardCoder)
 - [AutoPR](https://github.com/irgolic/AutoPR)
 - [Codium pr-agent](https://github.com/Codium-ai/pr-agent)
 - [Code AI consulting](https://github.com/AI-Citizen/SolidGPT) Allows you to 'query your code' in a chatlike manner.
@@ -53,7 +53,7 @@ There are ways areas where AI can enable code-creation, arranged generally from 
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/bigcode-project/octopack) [Octopack]([Octopack](https://github.com/bigcode-project/octopack)) [Github](https://arxiv.org/pdf/2308.07124.pdf)"
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/semanser/codel?tab=readme-ov-file) [Codel]([Codel](https://github.com/semanser/codel?tab=readme-ov-file))"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/semanser/codel) [Codel]([Codel](https://github.com/semanser/codel))"
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/openchatai/opencopilot) [Open Copilot]([Open Copilot](https://github.com/openchatai/opencopilot))"
 
@@ -68,7 +68,7 @@ There are ways areas where AI can enable code-creation, arranged generally from 
 ## AI-Coding Products
 
 - [Copilot](https://copilot.github.com/) - AI pair programmer by GitHub
-- [RepoCoder](https://arxiv.org/pdf/2303.12570.pdf) [Github](https://github.com/microsoft/CodeT/tree/main/RepoCoder) Provides a tool to enable AI agents to generate code for existing GitHub repositories
+- [RepoCoder](https://arxiv.org/pdf/2303.12570.pdf) [Github](https://github.com/microsoft/CodeT/RepoCoder) Provides a tool to enable AI agents to generate code for existing GitHub repositories
 - [TabNine](https://www.tabnine.com/) - AI code completion tool
 - [DeepTabNine](https://github.com/github/DeepTabNine) - Open source version of TabNine
 code completion model

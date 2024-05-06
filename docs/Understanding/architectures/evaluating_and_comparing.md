@@ -39,7 +39,7 @@ Hallucinations remain a core problem with LLMs as they may generate linguistic a
 
 ??? important "Hugging faces [leaderboard](https://huggingface.co/blog/leaderboards-on-the-hub-hallucinations) on hallucinations provides a comparison of different models' hallucinations"
     Much is based on [awesome-hallucination-detection](https://github.com/EdinburghNLP/awesome-hallucination-detection) 
-
+https://github.com/princeton-nlp/SWE-agent
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/sylinrl/TruthfulQA) [Truthful - QA]([Truthful - QA](https://github.com/sylinrl/TruthfulQA)) helpes to Measuring How Models Mimic Human Falsehoods" 
 
 

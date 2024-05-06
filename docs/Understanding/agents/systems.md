@@ -235,7 +235,7 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
     ![image](https://github.com/chain-ml/council/raw/main/docs/source/introduction/engine_flow.png)
 
 
-??? abstract "[SocraticAI](https://github.com/RunzheYang/SocraticAI/tree/main) to use the power of conversation to solve problems. Very interesting"
+??? abstract "[SocraticAI](https://github.com/RunzheYang/SocraticAI) to use the power of conversation to solve problems. Very interesting"
     [Description](https://princeton-nlp.github.io/SocraticAI/)
     ![image](https://github.com/ianderrington/genai/assets/76016868/48bf16aa-efde-4e38-b7e1-30963f74aa66)
 

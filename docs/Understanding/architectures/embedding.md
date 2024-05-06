@@ -31,7 +31,7 @@ In order to separate the representation, allowing greater freedom in evaluating 
     <img width="336" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/58bea190-459b-409d-b1ca-5f495ed8b30a">
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/bio-ontology-research-group/el-embeddings?tab=readme-ov-file) [ELE Embeddings]([ELE Embeddings](https://github.com/bio-ontology-research-group/el-embeddings?tab=readme-ov-file))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/bio-ontology-research-group/el-embeddings) [ELE Embeddings]([ELE Embeddings](https://github.com/bio-ontology-research-group/el-embeddings))"
     ELE Provides spherical embeddings based on descriptional logic. This allows for representation which works nicely with knoelged-graphs and ontologies.  
     
     <img width="654" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/079f294f-72f3-4f89-a36f-e65f496d8e98">

@@ -12,9 +12,9 @@ from pyvis.network import Network
 from git.exc import GitCommandError
 import yaml
 
-from utils import KeyDict
+from genai.memory.utils import KeyDict
 
-from downloader import url_downloader
+from genai.memory.downloader import url_downloader
 
 def parse_markdown(file_path):
     """Parse markdown file and extract links"""

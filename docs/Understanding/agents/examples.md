@@ -13,7 +13,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 ??? code "[The Open Source AI Assistant Framework & API](https://github.com/superagent-ai/superagent)" superagent
     [Docs](https://docs.superagent.sh/overview/overview/introduction)
 
-??? code "[Agenta-AI](https://github.com/Agenta-AI/agenta?tab=readme-ov-file) provides end-to-end LLM developer platform. It provides the tools for prompt engineering and management, ⚖️ evaluation, human annotation, and 🚀 deployment. All without imposing any restrictions on your choice of framework, library, or model." 
+??? code "[Agenta-AI](https://github.com/Agenta-AI/agenta) provides end-to-end LLM developer platform. It provides the tools for prompt engineering and management, ⚖️ evaluation, human annotation, and 🚀 deployment. All without imposing any restrictions on your choice of framework, library, or model." 
 
 ??? code "[Jarvis](https://github.com/microsoft/JARVIS/) provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." jarvis
 
@@ -88,7 +88,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     
 
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/lupantech/chameleon-llm?tab=readme-ov-file) [🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4]([🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4](https://github.com/lupantech/chameleon-llm?tab=readme-ov-file))"
+??? code "![GitHub Repo stars](https://badgen.net/github/stars/lupantech/chameleon-llm) [🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4]([🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4](https://github.com/lupantech/chameleon-llm))"
    [Paper](https://arxiv.org/pdf/2304.09842.pdf)
    <img width="892" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0deb10a1-ca97-4bc3-925d-707585fbf297">
 
@@ -109,7 +109,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     
 
 
-??? important "[OS-Copilot: Towards Generalist Computer Agents with Self-Improvement](https://github.com/OS-Copilot/FRIDAY/tree/main)" os-copilot-friday
+??? important "[OS-Copilot: Towards Generalist Computer Agents with Self-Improvement](https://github.com/OS-Copilot/FRIDAY)" os-copilot-friday
    
    **Developments** 
 
@@ -152,7 +152,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 
 
-!!! abstract "[Sweep Dev (product)](https://github.com/sweepai/sweep/tree/main) provides a service for improving code-bases."
+!!! abstract "[Sweep Dev (product)](https://github.com/sweepai/sweep) provides a service for improving code-bases."
     [Example Agent](https://github.com/sweepai/sweep/blob/main/sdk/src/agent.py)
     [Website](https://sweep.dev)
     Cognitive Architecture:  [from their blog](https://docs.sweep.dev/blogs/sweeps-core-algo?ref=blog.langchain.dev).
@@ -286,7 +286,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/daveshap/ACE_Framework) [A]([A](https://github.com/daveshap/ACE_Framework))" ace-framework
    ![image](https://github.com/ianderrington/genai/assets/76016868/cd7a4ec3-146c-4129-bf14-7b60e1558f5b)
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/DataBassGit/AgentForge?tab=readme-ov-file) [Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. ]([Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. ](https://github.com/DataBassGit/AgentForge?tab=readme-ov-file))" agent-forge
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/DataBassGit/AgentForge) [Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. ]([Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. ](https://github.com/DataBassGit/AgentForge))" agent-forge
 
 ## Multi-Agent 
 

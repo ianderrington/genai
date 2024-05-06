@@ -1,5 +1,45 @@
 #### Orchestration
 
+
+### Interaction and Orchestration Frameworks and SDKs
+
+Handling the inputs/outputs to GenAI in a consistent and reliable manner has spurred the creation of software libraries that can work with GenAI that is called as a service, or hosted locally.
+
+#### LangChain
+Langchain is an open source SDK that allows for creation and management of chat and RAG based interactions. It has a Large user community emphasizing extensions to multiple types of models and documents. It has entrprise offerings with Langsmith for observability, Langserve for serving. It alos can enable multi-agent interactions with lang-graph. 
+
+!!! tip "[Langchain](https://python.langchain.com/en/latest/#) Is a thorough python and javascript orchestration language for adaptable, memory and tooling-equipped calls that can enable agentic AI."
+
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/langserve) [LangServe]([LangServe](https://github.com/langchain-ai/langserve)) will provide a hosted version of LangServe for one-click deployments of LangChain applications."
+
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/opengpts) [OpenGPTs]([OpenGPTs](https://github.com/langchain-ai/opengpts)) Provides an open-source effort to integrate multiple LLMs, and builds upon Langchain, LangServe, and LangSmith"
+
+**Their Stack**
+
+![image](https://github.com/ianderrington/genai/assets/76016868/c66bf027-8556-43e6-8e73-de59c5e58d95)
+
+They are building [Lang Smith](https://smith.langchain.com/) for more Low-code solutions for agentic needs.
+
+- [Langchain service deployment](https://github.com/ajndkr/lanarky)
+- [Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
+- [Langflow](https://github.com/logspace-ai/langflow)
+- [Toolkit](https://www.toolkit.club/) Generates LangChain plugins for javascript. May be deprecated.
+
+**Tutorials:**
+
+!!! tip "[GPT and PDFS](https://betterprogramming.pub/talking-to-pdfs-gpt-4-and-langchain-77f44f23505d)"
+
+
+!!! tip "[Langchain prompt tmeplates](https://www.pinecone.io/learn/langchain-prompt-templates/)"
+
+!!! tip "[Deep learn langchain](https://learn.deeplearning.ai/langchain/lesson/3/memory)"
+
+#### Other SDKs
+
+!!! abstract "[Semantic Kernel](https://github.com/microsoft/semantic-kernel)"
+    [Github](https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb)
+
+
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/embedchain/embedchain) [EmbedChain]([EmbedChain](https://github.com/embedchain/embedchain))  is a framework to easily create LLM powered bots over any dataset."
     Example:
     ```python
@@ -66,39 +106,41 @@
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) [RAGAS]([RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG)) pipelines"
 
 
-## Monitoring Gen()AI
-For reasons related to quality, ethics, and regulation, it is both useful, and at times required, to record both inputs, and outputs from an LLM. Particularly in systems that may be used in non low-risk settings, monitoring is an essential component of Gen()AI.  Also known as _LLM observability_, monitoring can people-in-the-loop, as well as automated systems to observe and adapt the system to both inputs and outputs that are undesired or dangerous.
-
-### Agents
-
-- [AgentOps](https://github.com/AgentOps-AI/agentops)
 
 
+#### Llama Index
 
-#### Llama ecosystem
+
+??? abstract "[Create Llama](https://github.com/run-llama/create-llama) The easiest way to get started with LlamaIndex is by using create-llama."
+    This CLI tool enables you to quickly start building a new LlamaIndex application, with everything set up for you.
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/run-llama/llama_index) [Llamaindex]([Llamaindex](https://github.com/run-llama/llama_index)) Provides an orchestration framework for with multiple connectors"
 
+
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/run-llama/llama-lab) [Llama Lab]([Llama Lab](https://github.com/run-llama/llama-lab)) enables flexible tools to use and indesx various tools"
 
-!!! tip "[Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model."
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/Alpha-VLLM/LLaMA2-Accessory) [LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀]([LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀](https://github.com/Alpha-VLLM/LLaMA2-Accessory))
     🚀LLaMA2-Accessory is an open-source toolkit for pretraining, finetuning and deployment of Large Language Models (LLMs) and multimodal LLMs. This repo is mainly inherited from LLaMA-Adapter with more advanced features.🧠
     ![image](https://github.com/ianderrington/genai/assets/76016868/d55e274a-13af-40bd-9586-3bf56557175b)
 
-??? abstract "Code and models surrounding Llama"
-    - [LlamaGPT](https://github.com/getumbrel/llama-gpt) A self-hosted, offline, ChatGPT-like chatbot, powered by Llama 2. 100% private, with no data leaving your device.
-    - [Lit-Llama](https://github.com/Lightning-AI/lit-llama)
-    - [MedAlpaca](https://github.com/kbressem/medAlpaca)
-    - [Llama-2 on a CPU](https://towardsdatascience.com/running-llama-2-on-cpu-inference-for-document-q-a-3d636037a3d8) and [Github](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
-    - [GPT LLM Training](https://github.com/mshumer/gpt-llm-trainer) Generates and trains fine-tuned LLAMA-2 LLMs for specific tasks.
-    - [llama index](https://www.llamaindex.ai/) and [Github](https://github.com/jerryjliu/llama_index) for integrating data ingestion and models.
-    - [LlamaHub (community library of data loaders)](https://llamahub.ai)
-    - [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
-    - [Ollama.ai](https://olama.ai) Provides on mac silicon Llama2 calling. Has a great idea that resembles docker files for agent creation and pulling.
-    - [Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
-    - [Llama.cpp](https://github.com/ggerganov/llama.cpp) 4 bit llama on macbooks.
+
+- [LlamaGPT](https://github.com/getumbrel/llama-gpt) A self-hosted, offline, ChatGPT-like chatbot, powered by Llama 2. 100% private, with no data leaving your device.
+
+
+- [Lit-Llama](https://github.com/Lightning-AI/lit-llama)
+- [MedAlpaca](https://github.com/kbressem/medAlpaca)
+
+
+- [Llama-2 on a CPU](https://towardsdatascience.com/running-llama-2-on-cpu-inference-for-document-q-a-3d636037a3d8) and [Github](https://github.com/kennethleungty/Llama-2-Open-Source-LLM-CPU-Inference)
+- [GPT LLM Training](https://github.com/mshumer/gpt-llm-trainer) Generates and trains fine-tuned LLAMA-2 LLMs for specific tasks.
+
+
+- [llama index](https://www.llamaindex.ai/) at [Github](https://github.com/jerryjliu/llama_index) for integrating data ingestion and models.
+- [LlamaHub (community library of data loaders)](https://llamahub.ai)
+- [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
+
+
 
 
 ### Haystack
@@ -117,3 +159,28 @@ For reasons related to quality, ethics, and regulation, it is both useful, and a
     Optimized for scalability and cloud
     Encryption, access control, security
     
+
+### Others
+
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/agent-smith-ai) [AGent Smith AI]([AGent Smith AI](https://github.com/monarch-initiative/agent-smith-ai)) makes it easy to instantiate AI agents that can safely and easily call APIs and locally defined functions to interact with the world."
+
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/monarch-assistant) [Monarch Assistant]([Monarch Assistant](https://github.com/monarch-initiative/monarch-assistant)) Uses AGent Smith for RAG purposes"
+
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/curate-gpt) [Curage GPT]([Curage GPT](https://github.com/monarch-initiative/curate-gpt))"
+
+
+
+
+
+??? code "[Langfuse](https://github.com/langfuse/langfuse) is an open Source LLM Engineering platform with Traces, Evals, Prompt management, metrics and a playground" 
+
+### Agents
+
+- [AgentOps](https://github.com/AgentOps-AI/agentops)
+
+
+[LangSmith](https://docs.smith.langchain.com/api-docs)
+
+[Helicone](https://www.helicone.ai)
+
+[AgentOps](https://www.agentops.ai)

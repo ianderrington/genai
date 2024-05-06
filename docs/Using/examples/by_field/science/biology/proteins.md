@@ -118,7 +118,7 @@ One way of doing this is to use [_generative models_](#generative-models) direct
 
 #### Markov Chain Monte Carlo 
 
-??? abstract "[Plug & play directed evolution of proteins with gradient-based discrete MCMC (EvoProtGrad for MCMC)](https://github.com/NREL/EvoProtGrad/tree/main)" evoprotgrad
+??? abstract "[Plug & play directed evolution of proteins with gradient-based discrete MCMC (EvoProtGrad for MCMC)](https://github.com/NREL/EvoProtGrad)" evoprotgrad
     A Python package for directed evolution on a protein sequence with gradient-based discrete Markov chain monte carlo (MCMC) based on the [paper](https://iopscience.iop.org/article/10.1088/2632-2153/accacd) [blog](https://huggingface.co/blog/AmelieSchreiber/directed-evolution-with-esm2) and [docs](https://nrel.github.io/EvoProtGrad/getting_started/MCMC/)
     ![image](https://github.com/ianderrington/genai/assets/76016868/4be735d6-bba2-4003-9bf0-36218e264c93)
     
@@ -398,7 +398,7 @@ It is not necessarily just enough to identify a potential candidate but to have 
     The authors show in their [paper](https://www.pnas.org/doi/full/10.1073/pnas.2220778120) the use of contrastive learning to help co-locate proteins and potential drug molecules in a 'shared feature space' and learns to map drue drugs against non-binding 'decoy' molecules. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/bb697ce1-6ad7-4a1c-9122-c19ea93ce9eb)
 
-??? abstract "[Robust deep learning based protein sequence design using ProteinMPNN](https://github.com/dauparas/ProteinMPNN?tab=readme-ov-file)" protein-mpnn
+??? abstract "[Robust deep learning based protein sequence design using ProteinMPNN](https://github.com/dauparas/ProteinMPNN)" protein-mpnn
     In their [paper][(https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1](https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1.full.pdf)) the authors reveal a novel method to predict sequences and sequence recovery. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/ee8d6025-d4a1-4ade-ac22-cfb26cabd41e)
 
@@ -433,7 +433,7 @@ It is not necessarily just enough to identify a potential candidate but to have 
 
 !!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/yangkky/Machine-learning-for-proteins?tab=readme-ov-file) [Papers on Machine learning for Proteins]([Papers on Machine learning for Proteins](https://github.com/yangkky/Machine-learning-for-proteins?tab=readme-ov-file))"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/yangkky/Machine-learning-for-proteins) [Papers on Machine learning for Proteins]([Papers on Machine learning for Proteins](https://github.com/yangkky/Machine-learning-for-proteins))"
 
 ??? tip "[Deep Learning in Protein Structural Modeling and Design](https://www.sciencedirect.com/science/article/pii/S2666389920301902) provides a thorough summary of DL manners of optimizing proteins."
     They emphasize a Sequence --> Structure --> Function approach should be focused upon. 

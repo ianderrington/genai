@@ -77,16 +77,3 @@ This section provides a selection of repositories that enable the creation of mo
 !!! tip "![GitHub Repo stars](https://badgen.net/github/stars/ruoccofabrizio/azure-open-ai-embeddings-qna) [Deploying on Azure for Embeddings]([Deploying on Azure for Embeddings](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna))"
 
 !!! tip "[Integrating with Azure Services](https://www.youtube.com/watch?v=tW2EA4aZ_YQ)"
-
-
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/agent-smith-ai) [AGent Smith AI]([AGent Smith AI](https://github.com/monarch-initiative/agent-smith-ai)) makes it easy to instantiate AI agents that can safely and easily call APIs and locally defined functions to interact with the world."
-
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/monarch-assistant) [Monarch Assistant]([Monarch Assistant](https://github.com/monarch-initiative/monarch-assistant)) Uses AGent Smith for RAG purposes"
-
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/curate-gpt) [Curage GPT]([Curage GPT](https://github.com/monarch-initiative/curate-gpt))"
-
-
-
-
-
-
