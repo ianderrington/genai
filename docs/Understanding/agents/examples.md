@@ -140,6 +140,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 
 
+
 !!! important "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/opengpts) [Open GPTs]([Open GPTs](https://github.com/langchain-ai/opengpts)) Provides a similar experience to OpenAI GPTs and assistants, using Langchain components"
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/MineDojo/Voyager) [Voyager from MineDojo]([Voyager from MineDojo](https://github.com/MineDojo/Voyager))"
