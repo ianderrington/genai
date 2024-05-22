@@ -235,7 +235,7 @@ Generative AI is a subset of machine learning that aim to creates new data sampl
 
 If you can't get enough here, check out the following resources
 
-!!! important "![GitHub Repo stars](https://badgen.net/github/stars/aishwaryanr/awesome-generative-ai-guide) [Awesome Generative AI Guide]([Awesome Generative AI Guide](https://github.com/aishwaryanr/awesome-generative-ai-guide))"
+!!! important "![GitHub Repo stars](https://badgen.net/github/stars/aishwaryanr/awesome-generative-ai-guide) [Awesome Generative AI Guide](https://github.com/aishwaryanr/awesome-generative-ai-guide)"
 
 !!! important "[Awesome AGI](https://github.com/EmbraceAGI/Awesome-AGI/blob/main/README.md)"
 

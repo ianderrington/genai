@@ -1,2 +1,2 @@
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/segment-anything) [Segment anything]([Segment anything](https://github.com/facebookresearch/segment-anything))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/segment-anything) [Segment anything](https://github.com/facebookresearch/segment-anything)"
     [Webpage](https://segment-anything.com/)

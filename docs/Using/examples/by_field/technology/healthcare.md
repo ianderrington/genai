@@ -13,10 +13,10 @@
 
 
 
-!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/kennethleungty/Generative-AI-Pharmacist) [Fully GenAI pharmacist from scripts, images and videos]([Fully GenAI pharmacist from scripts, images and videos](https://github.com/kennethleungty/Generative-AI-Pharmacist))"
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/kennethleungty/Generative-AI-Pharmacist) [Fully GenAI pharmacist from scripts, images and videos](https://github.com/kennethleungty/Generative-AI-Pharmacist)"
 
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/FeatureBaseDB/DoctorGPT) [Doctor GPT]([Doctor GPT](https://github.com/FeatureBaseDB/DoctorGPT)) implements advanced LLM prompting for organizing, indexing and discussing PDFs, and does so without using any type of opinionated prompt processing frameworks "“
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/FeatureBaseDB/DoctorGPT) [Doctor GPT](https://github.com/FeatureBaseDB/DoctorGPT) implements advanced LLM prompting for organizing, indexing and discussing PDFs, and does so without using any type of opinionated prompt processing frameworks "“
 
 
 !!! important "[Foundation models for Retinas](https://www.nature.com/articles/s41586-023-06555-x)"

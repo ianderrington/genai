@@ -182,7 +182,7 @@ The general method of creating protein foundation models uses Masked Language Mo
 
 #### ESM models
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [Language models enable zero-shot prediction of the effects of mutations on protein function]([Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm)"
 
 ??? tip "[Evolutionary-scale prediction of atomic-level protein structure with a language model (esm)](https://www.biorxiv.org/content/10.1101/2022.07.20.500902v3.full.pdf)"
     End to end Language model enabling structure sequence pairing, coupled with an equivariant transformer structure model at the end
@@ -213,7 +213,7 @@ The general method of creating protein foundation models uses Masked Language Mo
     [Paper](https://www.biorxiv.org/content/10.1101/2021.07.09.450648v2.full.pdf)
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [MSA Transformer]([MSA Transformer](https://github.com/facebookresearch/esm))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/facebookresearch/esm) [MSA Transformer](https://github.com/facebookresearch/esm)"
 
     The author's demonstrate in their [paper](https://www.biorxiv.org/content/10.1101/2021.02.12.430858v3.full.pdf) training an unsupervised PLM that operates on sets of aligned sequences. Self-supervision helps to reconstruct the corrupted MSA. 
 
@@ -282,7 +282,7 @@ The general method of creating protein foundation models uses Masked Language Mo
 
 #### Multimodal
 
-??? abstract "🧬 ![GitHub Repo stars](https://badgen.net/github/stars/bio-ontology-research-group/deepgo2) [Protein function prediction as approximate semantic entailment]([Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2))" deepgo-se
+??? abstract "🧬 ![GitHub Repo stars](https://badgen.net/github/stars/bio-ontology-research-group/deepgo2) [Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2)" deepgo-se
 
     **Developments** 
 
@@ -426,14 +426,14 @@ It is not necessarily just enough to identify a potential candidate but to have 
     * Attention is consistent with substitution relationships
 
 ### Colab Design
-!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/sokrypton/ColabDesign) [ColabDesign: Making Protein Design accessible to all via Google Colab!]([ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign))"
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/sokrypton/ColabDesign) [ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign)"
 
 
 ## Quality reviews and references
 
 !!! tip "[Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering](https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf)"
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/yangkky/Machine-learning-for-proteins) [Papers on Machine learning for Proteins]([Papers on Machine learning for Proteins](https://github.com/yangkky/Machine-learning-for-proteins))"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/yangkky/Machine-learning-for-proteins) [Papers on Machine learning for Proteins](https://github.com/yangkky/Machine-learning-for-proteins)"
 
 ??? tip "[Deep Learning in Protein Structural Modeling and Design](https://www.sciencedirect.com/science/article/pii/S2666389920301902) provides a thorough summary of DL manners of optimizing proteins."
     They emphasize a Sequence --> Structure --> Function approach should be focused upon. 

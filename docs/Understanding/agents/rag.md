@@ -98,7 +98,7 @@ The primary challenges regarding rag may be related to organizational or functio
 
 Because finetuning can enable intrisic knowledge to be ingrained in an LLM, it generally leads to improved performance. 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/informagi/RAGvsFT) [Rag vs Finetuning]([Rag vs Finetuning](https://github.com/informagi/RAGvsFT)) reveals Fine tuning boosts performance over RAG"  
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/informagi/RAGvsFT) [Rag vs Finetuning](https://github.com/informagi/RAGvsFT) reveals Fine tuning boosts performance over RAG"  
     [Paper](https://arxiv.org/abs/2403.01432)
 
 That said, it can be seen that using RAG to informe fine tuning, in Retrieval Augmented Fine Tuning (RAFT), as variations are done with [mixture of experts](../architectures/models/mixture_of_experts.md) can lead to even improved performance. 
@@ -311,7 +311,7 @@ Matching involves aligning the query with the appropriately stored information.
 
 In order to effectively answer some queries, retrieval of evidence from multiple documents may be needed. This is known as **multi-hop** rag. 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/yixuantt/MultiHop-RAG) [MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries]([MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries](https://github.com/yixuantt/MultiHop-RAG)) provides a dataset for evaluating multihop rag"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/yixuantt/MultiHop-RAG) [MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries](https://github.com/yixuantt/MultiHop-RAG) provides a dataset for evaluating multihop rag"
     "MultiHop-RAG: a QA dataset to evaluate retrieval and reasoning across documents with metadata in the RAG pipelines. It contains 2556 queries, with evidence for each query distributed across 2 to 4 documents. The queries also involve document metadata, reflecting complex scenarios commonly found in real-world RAG applications."
     
     <img width="331" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/80db5bd9-510b-4c23-bf46-4d4679e1929b">
@@ -365,7 +365,7 @@ Natural-language lookup with RAG can be improved by allowing other modalities, s
 
 Because of the large number of manners of performing RAG, it is important to evaluate the quality of the implemented solution. 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mendableai/rag-arena) [Rag Arena]([Rag Arena](https://github.com/mendableai/rag-arena)) Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses." 
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mendableai/rag-arena) [Rag Arena](https://github.com/mendableai/rag-arena) Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses." 
 
 
 ## Resources, Tutorials and Blogs

@@ -40,7 +40,7 @@ Hallucinations remain a core problem with LLMs as they may generate linguistic a
 ??? important "Hugging faces [leaderboard](https://huggingface.co/blog/leaderboards-on-the-hub-hallucinations) on hallucinations provides a comparison of different models' hallucinations"
     Much is based on [awesome-hallucination-detection](https://github.com/EdinburghNLP/awesome-hallucination-detection) 
 https://github.com/princeton-nlp/SWE-agent
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/sylinrl/TruthfulQA) [Truthful - QA]([Truthful - QA](https://github.com/sylinrl/TruthfulQA)) helpes to Measuring How Models Mimic Human Falsehoods" 
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/sylinrl/TruthfulQA) [Truthful - QA](https://github.com/sylinrl/TruthfulQA) helpes to Measuring How Models Mimic Human Falsehoods" 
 
 
 #### Information Retrieval
@@ -53,7 +53,7 @@ The ability for an LLM to 'recall' information within its context window is an i
 
 In ideal systems, context retrieval will be independent of the position within the context, and of the content itself. 
 
-??? important "![GitHub Repo stars](https://badgen.net/github/stars/gkamradt/LLMTest_NeedleInAHaystack) [Testing with LLMTest_NeedleInAHaystack repo]([Testing with LLMTest_NeedleInAHaystack repo](https://github.com/gkamradt/LLMTest_NeedleInAHaystack)) shows where in the context space that LLMs may fail at context retrieval." 
+??? important "![GitHub Repo stars](https://badgen.net/github/stars/gkamradt/LLMTest_NeedleInAHaystack) [Testing with LLMTest_NeedleInAHaystack repo](https://github.com/gkamradt/LLMTest_NeedleInAHaystack) shows where in the context space that LLMs may fail at context retrieval." 
     As demonstrated additionally in the authors' [youtube](https://www.youtube.com/watch?v=KwRRuiCCdmc)
 
 It was, however Anthropic found, that [LLMs can perform better](https://www.anthropic.com/news/claude-2-1-prompting) context retrieval when phrases are added: 
@@ -68,7 +68,7 @@ While information retrieval are important, they might also be good at following 
 ??? abstract "[FollowIR: Evaluating and Teaching Information Retrieval Models to Follow Instructions](https://arxiv.org/pdf/2403.15246.pdf) creates FOLLOWIR, which contains a benchmark that explicitly measures the instruction following ability of retrieval model"
    
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/huggingface/lighteval) [Lighteval by Hugging Face]([Lighteval by Hugging Face](https://github.com/huggingface/lighteval)) provides lightweight framework for LLM evaluation"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/huggingface/lighteval) [Lighteval by Hugging Face](https://github.com/huggingface/lighteval) provides lightweight framework for LLM evaluation"
 
 #### Question Answering
 
@@ -108,7 +108,7 @@ While it may be projective to consider AI as having 'psychology', it may be usef
 
 Sycophancy is the degree to which a model mirrors biases, large or small, that are put into input queries by the user. In ideal systems, sycophancy will be minimized to prevent _echo-chamber_ amplification of innaccuracies. 
 
-!!! abstract "The repo ![GitHub Repo stars](https://badgen.net/github/stars/meg-tong/sycophancy-eval) [Sycophancy-eval]([Sycophancy-eval](https://github.com/meg-tong/sycophancy-eval)) offers manners and methods of evaluating sycophancy. "
+!!! abstract "The repo ![GitHub Repo stars](https://badgen.net/github/stars/meg-tong/sycophancy-eval) [Sycophancy-eval](https://github.com/meg-tong/sycophancy-eval) offers manners and methods of evaluating sycophancy. "
 
 ### General Discussions
 
@@ -121,7 +121,7 @@ While it may seem reasonable to evaluate with a 'guess-and-check' approach, this
 
 ### Measurements Libraries
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/ianarawjo/ChainForge) [Chain Forge: An open-source visual programming environment for battle-testing prompts to LLMs.]([Chain Forge: An open-source visual programming environment for battle-testing prompts to LLMs.](https://github.com/ianarawjo/ChainForge))"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/ianarawjo/ChainForge) [Chain Forge: An open-source visual programming environment for battle-testing prompts to LLMs.](https://github.com/ianarawjo/ChainForge)"
 
 ??? abstract "[ROSCOE: A SUITE OF METRICS FOR SCORING STEP-BYSTEP REASONING](https://github.com/facebookresearch/ParlAI/tree/main/projects/roscoe) is ' a new suite of interpretable, unsupervised metrics that enables evaluation of step-by-step reasoning generations of LMs when no golden reference generation exists. ' "
     [Paper](https://arxiv.org/pdf/2212.07919.pdf)
@@ -150,5 +150,5 @@ The evaluation of models helps us to identify which, if any, model to use for a 
 
 ## Useful References
 
-??? important "![GitHub Repo stars](https://badgen.net/github/stars/MLGroupJLU/LLM-eval-survey) [LLM Eval survey, paper collection]([LLM Eval survey, paper collection](https://github.com/MLGroupJLU/LLM-eval-survey))"
+??? important "![GitHub Repo stars](https://badgen.net/github/stars/MLGroupJLU/LLM-eval-survey) [LLM Eval survey, paper collection](https://github.com/MLGroupJLU/LLM-eval-survey)"
     [Paper](https://arxiv.org/abs/2307.03109)

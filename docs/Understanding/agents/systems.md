@@ -22,7 +22,7 @@ Here are a few frameworks of importance.
 
     Some examples [gpt-newspaper](https://github.com/assafelovic/gpt-newspaper), [lang-graph-crewAI](https://github.com/joaomdmoura/crewAI-examples/tree/main/CrewAI-LangGraph)
 
-???+ important "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/autogen) [AutoGen]([AutoGen](https://github.com/microsoft/autogen)) enables LLM application development with communication between multiple agents."
+???+ important "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/autogen) [AutoGen](https://github.com/microsoft/autogen) enables LLM application development with communication between multiple agents."
     ![image](https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924)
     [Paper](https://arxiv.org/pdf/2308.08155.pdf)
     TRY THIS!
@@ -32,18 +32,18 @@ Here are a few frameworks of importance.
     ![image](https://github.com/ianderrington/genai/assets/76016868/d89bf7b1-99a0-429f-a6f5-50a8183a151f)
     <img width="581" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f9d7e423-b3d9-40ca-8be8-52461d53282a">
 
-???+ important "![GitHub Repo stars](https://badgen.net/github/stars/joaomdmoura/crewai) [Crew.ai]([Crew.ai](https://github.com/joaomdmoura/crewai)) is a framework for "
+???+ important "![GitHub Repo stars](https://badgen.net/github/stars/joaomdmoura/crewai) [Crew.ai](https://github.com/joaomdmoura/crewai) is a framework for "
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/OpenBMB/ChatDev) [ChatDev]([ChatDev](https://github.com/OpenBMB/ChatDev)) is a communicative agent approach allowing for development of solutions using ML models."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/OpenBMB/ChatDev) [ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach allowing for development of solutions using ML models."
     Works with Camel to create agentic systems and has some generally good results. It is certainly not full-fledged software but provides a solid framework for creating systems of agents to produce software-enabled products.
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/VRSEN/agency-swarm) [Agency Swarm]([Agency Swarm](https://github.com/VRSEN/agency-swarm)) provides a language creating interacting systems of agents."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/VRSEN/agency-swarm) [Agency Swarm](https://github.com/VRSEN/agency-swarm) provides a language creating interacting systems of agents."
     
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/geekan/MetaGPT) [MetaGPT]([MetaGPT](https://github.com/geekan/MetaGPT)) enables different agents to interact and generate meaningful outputs based on varying tasks and personas."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/geekan/MetaGPT) [MetaGPT](https://github.com/geekan/MetaGPT) enables different agents to interact and generate meaningful outputs based on varying tasks and personas."
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT) '🤖 Assemble, configure, and deploy autonomous AI Agent(s) [Reworkd/AgentGPT]([Reworkd/AgentGPT](https://github.com/reworkd/AgentGPT) '🤖 Assemble, configure, and deploy autonomous AI Agent(s)) in your browser. 🤖'"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT) '🤖 Assemble, configure, and deploy autonomous AI Agent(s) [Reworkd/AgentGPT](https://github.com/reworkd/AgentGPT) '🤖 Assemble, configure, and deploy autonomous AI Agent(s) in your browser. 🤖'"
 
 
 !!! tip "[Self-play GPT](https://arxiv.org/pdf/2305.10142.pdf)"
@@ -199,12 +199,12 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
 
 
 
-!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/TransformerOptimus/SuperAGI) [Super-AGI]([Super-AGI](https://github.com/TransformerOptimus/SuperAGI))"
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/TransformerOptimus/SuperAGI) [Super-AGI](https://github.com/TransformerOptimus/SuperAGI)"
     Super-AGI is a model that allows multiple agents to function. However, this system doesn't facilitate any communication between the agents.
 
 
 
-!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/FranxYao/GPT-Bargaining) [GPT-Bargaining]([GPT-Bargaining](https://github.com/FranxYao/GPT-Bargaining))"
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/FranxYao/GPT-Bargaining) [GPT-Bargaining](https://github.com/FranxYao/GPT-Bargaining)"
     This model applies several iterations to improve negotiation tactics based on external feedback.
 
 
@@ -231,7 +231,7 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
     [Github](https://github.com/composable-architectures/llm_multiagent_debate)
 
 
-??? tip "![GitHub Repo stars](https://badgen.net/github/stars/chain-ml/council) [Council ]([Council ](https://github.com/chain-ml/council)) Very promising initial creation of networks of agents to create full-fledged teams for output products."
+??? tip "![GitHub Repo stars](https://badgen.net/github/stars/chain-ml/council) [Council ](https://github.com/chain-ml/council) Very promising initial creation of networks of agents to create full-fledged teams for output products."
     ![image](https://github.com/chain-ml/council/raw/main/docs/source/introduction/engine_flow.png)
 
 
@@ -242,7 +242,7 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
 
 ## Swarms
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/daveshap/OpenAI_Agent_Swarm) [Heirarchichal Autonomous Agent Swarm: HAAS]([Heirarchichal Autonomous Agent Swarm: HAAS](https://github.com/daveshap/OpenAI_Agent_Swarm)) to create self-direct, self-correcting, and self-improving agent systems." HAAS
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/daveshap/OpenAI_Agent_Swarm) [Heirarchichal Autonomous Agent Swarm: HAAS](https://github.com/daveshap/OpenAI_Agent_Swarm) to create self-direct, self-correcting, and self-improving agent systems." HAAS
     
 
 !!! tip "[Swarms](https://medium.com/@kyeg/swarms-of-ai-agents-automating-everything-c554f5be421b )"
@@ -253,4 +253,4 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
 ## Potentially useful tools
 !!! tip "[Nomadproject.io](https://www.nomadproject.io/) A simple and flexible scheduler and orchestrator to deploy and manage containers and non-containerized applications across on-prem and clouds at scale."
 
-!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/firecracker-microvm/firecracker) [Firecracker]([Firecracker](https://github.com/firecracker-microvm/firecracker)) 'Our mission is to enable secure, multi-tenant, minimal-overhead execution of container and function workloads.'"
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/firecracker-microvm/firecracker) [Firecracker](https://github.com/firecracker-microvm/firecracker) 'Our mission is to enable secure, multi-tenant, minimal-overhead execution of container and function workloads.'"

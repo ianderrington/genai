@@ -10,9 +10,9 @@ Langchain is an open source SDK that allows for creation and management of chat 
 
 !!! tip "[Langchain](https://python.langchain.com/en/latest/#) Is a thorough python and javascript orchestration language for adaptable, memory and tooling-equipped calls that can enable agentic AI."
 
-!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/langserve) [LangServe]([LangServe](https://github.com/langchain-ai/langserve)) will provide a hosted version of LangServe for one-click deployments of LangChain applications."
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/langserve) [LangServe](https://github.com/langchain-ai/langserve) will provide a hosted version of LangServe for one-click deployments of LangChain applications."
 
-!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/opengpts) [OpenGPTs]([OpenGPTs](https://github.com/langchain-ai/opengpts)) Provides an open-source effort to integrate multiple LLMs, and builds upon Langchain, LangServe, and LangSmith"
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/opengpts) [OpenGPTs](https://github.com/langchain-ai/opengpts) Provides an open-source effort to integrate multiple LLMs, and builds upon Langchain, LangServe, and LangSmith"
 
 **Their Stack**
 
@@ -40,7 +40,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
     [Github](https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb)
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/embedchain/embedchain) [EmbedChain]([EmbedChain](https://github.com/embedchain/embedchain))  is a framework to easily create LLM powered bots over any dataset."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/embedchain/embedchain) [EmbedChain](https://github.com/embedchain/embedchain)  is a framework to easily create LLM powered bots over any dataset."
     Example:
     ```python
         import os
@@ -60,7 +60,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
         # Answer: Mark Zuckerberg is an American internet entrepreneur and business magnate. He is the co-founder and CEO of Facebook.
     ```
 
-??? tip "![GitHub Repo stars](https://badgen.net/github/stars/neuml/txtai) [txtai]([txtai](https://github.com/neuml/txtai)) 'is an all-in-one embeddings database for semantic search, LLM orchestration and language model workflows."
+??? tip "![GitHub Repo stars](https://badgen.net/github/stars/neuml/txtai) [txtai](https://github.com/neuml/txtai) 'is an all-in-one embeddings database for semantic search, LLM orchestration and language model workflows."
 
     ![image](https://raw.githubusercontent.com/neuml/txtai/master/docs/images/architecture.png#gh-light-mode-only)
 
@@ -72,14 +72,14 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 - [Chatall](https://github.com/sunner/ChatALL) To interact with multiple chatbots at the same time.
 - [LocalAI](https://github.com/go-skynet/LocalAI) drop-in replacement REST API that’s compatible with OpenAI API specifications for local inferencing.
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/dot-agent/openagent) [Open Agent]([Open Agent](https://github.com/dot-agent/openagent)) IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/dot-agent/openagent) [Open Agent](https://github.com/dot-agent/openagent) IN DEVELOPMENT Microservices approach to AGI. Modular components for AI apps or AGI agents"
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/stanfordnlp/dspy) [DSPY]([DSPY](https://github.com/stanfordnlp/dspy)) is a framework for solving advanced tasks with language models and retrieval models"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/stanfordnlp/dspy) [DSPY](https://github.com/stanfordnlp/dspy) is a framework for solving advanced tasks with language models and retrieval models"
     Useful for exploring automatic prompt opteimization.
 
 
 ### Language-like interfaces
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/eth-sri/lmql) [LMQL]([LMQL](https://github.com/eth-sri/lmql)) is a query language that enables simplified representations of chats and agents with minimal code. "
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/eth-sri/lmql) [LMQL](https://github.com/eth-sri/lmql) is a query language that enables simplified representations of chats and agents with minimal code. "
     ```
     "Greet LMQL:[GREETINGS]\n" where stops_at(GREETINGS, ".") and not "\n" in GREETINGS
 
@@ -103,7 +103,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 ### Retrieval Augmentation focus
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) [RAGAS]([RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG)) pipelines"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) [RAGAS](https://github.com/explodinggradients/ragas) is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines"
 
 
 
@@ -114,13 +114,13 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 ??? abstract "[Create Llama](https://github.com/run-llama/create-llama) The easiest way to get started with LlamaIndex is by using create-llama."
     This CLI tool enables you to quickly start building a new LlamaIndex application, with everything set up for you.
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/run-llama/llama_index) [Llamaindex]([Llamaindex](https://github.com/run-llama/llama_index)) Provides an orchestration framework for with multiple connectors"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/run-llama/llama_index) [Llamaindex](https://github.com/run-llama/llama_index) Provides an orchestration framework for with multiple connectors"
 
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/run-llama/llama-lab) [Llama Lab]([Llama Lab](https://github.com/run-llama/llama-lab)) enables flexible tools to use and indesx various tools"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/run-llama/llama-lab) [Llama Lab](https://github.com/run-llama/llama-lab) enables flexible tools to use and indesx various tools"
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/Alpha-VLLM/LLaMA2-Accessory) [LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀]([LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀](https://github.com/Alpha-VLLM/LLaMA2-Accessory))
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/Alpha-VLLM/LLaMA2-Accessory) [LLaMA2-Accessory: An Open-source Toolkit for LLM Development 🚀](https://github.com/Alpha-VLLM/LLaMA2-Accessory)
     🚀LLaMA2-Accessory is an open-source toolkit for pretraining, finetuning and deployment of Large Language Models (LLMs) and multimodal LLMs. This repo is mainly inherited from LLaMA-Adapter with more advanced features.🧠
     ![image](https://github.com/ianderrington/genai/assets/76016868/d55e274a-13af-40bd-9586-3bf56557175b)
 
@@ -143,7 +143,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 ### Haystack
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/deepset-ai/haystack) [Haystack]([Haystack](https://github.com/deepset-ai/haystack)) is an e2e llm orchestration framework that allows a number of versatile interactions."
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/deepset-ai/haystack) [Haystack](https://github.com/deepset-ai/haystack) is an e2e llm orchestration framework that allows a number of versatile interactions."
     Open source by DeepSet
     Designed for scaleable search and retrieval
     Evaluation pipelines for system eval
@@ -151,7 +151,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 ### Griptape
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/griptape-ai/griptape) [Griptape]([Griptape](https://github.com/griptape-ai/griptape)) an enterprise alternative to Langchain"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/griptape-ai/griptape) [Griptape](https://github.com/griptape-ai/griptape) an enterprise alternative to Langchain"
     Open source / managemed
     Commercial Support
     Optimized for scalability and cloud
@@ -160,11 +160,11 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 ### Others
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/agent-smith-ai) [AGent Smith AI]([AGent Smith AI](https://github.com/monarch-initiative/agent-smith-ai)) makes it easy to instantiate AI agents that can safely and easily call APIs and locally defined functions to interact with the world."
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/agent-smith-ai) [AGent Smith AI](https://github.com/monarch-initiative/agent-smith-ai) makes it easy to instantiate AI agents that can safely and easily call APIs and locally defined functions to interact with the world."
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/monarch-assistant) [Monarch Assistant]([Monarch Assistant](https://github.com/monarch-initiative/monarch-assistant)) Uses AGent Smith for RAG purposes"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/monarch-assistant) [Monarch Assistant](https://github.com/monarch-initiative/monarch-assistant) Uses AGent Smith for RAG purposes"
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/curate-gpt) [Curage GPT]([Curage GPT](https://github.com/monarch-initiative/curate-gpt))"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/monarch-initiative/curate-gpt) [Curage GPT](https://github.com/monarch-initiative/curate-gpt)"
 
 
 

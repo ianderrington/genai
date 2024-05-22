@@ -125,14 +125,14 @@ Train a new smaller model using the output of bigger models.
 
 
 ### Fusion approaches 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/yuhuixu1993/qa-lora) [QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models]([QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models](https://github.com/yuhuixu1993/qa-lora))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/yuhuixu1993/qa-lora) [QA-LoRA: Quantization Ware Low-Rank Adaptation of Large Language Models](https://github.com/yuhuixu1993/qa-lora)"
     ![image](https://github.com/ianderrington/genai/assets/76016868/87219990-b7e8-4895-a274-a55584f2cb9e)
 
 [Knowledge Distillation and Compression Demo.ipynb](https://colab.research.google.com/drive/1A0SWlfcd6ISzsc0gLBIr4N_vECHhUAst#scrollTo=6v59Uu9pb_wM)
 
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SqueezeAILab/SqueezeLLM) [SqueezeLLM]([SqueezeLLM](https://github.com/SqueezeAILab/SqueezeLLM))  They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' 
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SqueezeAILab/SqueezeLLM) [SqueezeLLM](https://github.com/SqueezeAILab/SqueezeLLM)  They are able to have 2x fold in model size for equivalent performance in perplexity. They use 'Dense and SParce Quantization' 
     [SqueezeLLM](https://arxiv.org/pdf/2306.07629.pdf)
 
 ### Low rank and sparsity approximations
@@ -156,7 +156,7 @@ TODO
 
 #### Model Merging
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SakanaAI/evolutionary-model-merge) [🐟 Evolutionary Optimization of Model Merging Recipes]([🐟 Evolutionary Optimization of Model Merging Recipes](https://github.com/SakanaAI/evolutionary-model-merge))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SakanaAI/evolutionary-model-merge) [🐟 Evolutionary Optimization of Model Merging Recipes](https://github.com/SakanaAI/evolutionary-model-merge)"
     **Developments:** The authors demosntrate a "a new paradigm for automated model composition, paving the way for exploring alternative, efficient approaches to foundation model development" by merging models. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/be153c45-2d6d-4fdc-8d0d-5ff721b83d64)
 
@@ -165,7 +165,7 @@ TODO
 ### Combination Approaches
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/artidoro/qlora) [QLoRA: Efficient Finetuning of Quantized LLms]([QLoRA: Efficient Finetuning of Quantized LLms](https://github.com/artidoro/qlora)) uses Quantization and Low-Rank Adapters to enable SoTA models with even smaller models"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/artidoro/qlora) [QLoRA: Efficient Finetuning of Quantized LLms](https://github.com/artidoro/qlora) uses Quantization and Low-Rank Adapters to enable SoTA models with even smaller models"
     [Paper](https://arxiv.org/pdf/2305.14314.pdf)
     [Example HF 4bit transformers](https://huggingface.co/blog/4bit-transformers-bitsandbytes)
 
@@ -191,7 +191,7 @@ KV-Cache Optimization
 
 ## Tooling
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/TimDettmers/bitsandbytes) by provides a lightweight wrapper around CUDA custom functions, in particular 8-bit optimizers, matrix multiplication (LLM.int8()) [Bitsandbytes]([Bitsandbytes](https://github.com/TimDettmers/bitsandbytes) by provides a lightweight wrapper around CUDA custom functions, in particular 8-bit optimizers, matrix multiplication (LLM.int8())), and quantization functions."
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/TimDettmers/bitsandbytes) by provides a lightweight wrapper around CUDA custom functions, in particular 8-bit optimizers, matrix multiplication (LLM.int8()) [Bitsandbytes](https://github.com/TimDettmers/bitsandbytes) by provides a lightweight wrapper around CUDA custom functions, in particular 8-bit optimizers, matrix multiplication (LLM.int8()), and quantization functions."
 
 
 
