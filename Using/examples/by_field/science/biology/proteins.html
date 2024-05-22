@@ -6960,7 +6960,7 @@ and
 </details>
 <details class="note">
 <summary><a href="https://www.nature.com/articles/s41592-021-01100-y">Low-N protein engineering with data-efficient deep learning</a></summary>
-<p>Site-directed mutagenics with the LLM: do random maskings on the sequences and predict distribution of mask fillers. </p>
+<p>The authors demonstrate a standard model where a pLM undergoes unsupervised pre-training and then refined on evolutionarily related sequences, and finally fine-tuned on assay-specific sequences. They use a Markov Chain Monte Carlo (MCMC) method to mutate and iteratively evaluate mutations to improve design approaches. </p>
 </details>
 <h4 id="markov-chain-monte-carlo">Markov Chain Monte Carlo<a class="headerlink" href="#markov-chain-monte-carlo" title="Permanent link">&para;</a></h4>
 <p><a href="/shared/evoprotgrad.html" class="page-url" id="page-url-1"></a></p>
@@ -7012,7 +7012,7 @@ and
 
 <details class="abstract">
 <summary><a href="https://github.com/ddingding/CoVES/tree/publish">Structure-based scoring and sampling of 'Combinatorial Variant Effects from Structure' (CoVES)</a></summary>
-<p>The authors show in their <a href="https://www.biorxiv.org/content/10.1101/2022.10.31.514613v2">paper</a> over 7 different combinatorial mutation studies, the ability to design proteins by exploring the design spacae without needs for combinatorial number of mutations. They build a model to estimate a residue preference effect for each amino acid variant at each position, and sums these effects to predict combinatorial variants.  Simple linear and logistic models using a 'mutation effect preference of size 20(Amino Acids)x residue size' were able to predict the effect of variance. They could then use this to design sequences using Boltsman sampling and generate variatns that were much better.  </p>
+<p>The authors show in their <a href="https://www.biorxiv.org/content/10.1101/2022.10.31.514613v2">paper</a> and <a href="https://www.nature.com/articles/s41467-024-45621-4#Sec1">Nature</a> over 7 different combinatorial mutation studies, the ability to design proteins by exploring the design spacae without needs for combinatorial number of mutations. They build a model to estimate a residue preference effect for each amino acid variant at each position, and sums these effects to predict combinatorial variants.  Simple linear and logistic models using a 'mutation effect preference of size 20(Amino Acids)x residue size' were able to predict the effect of variance. They could then use this to design sequences using Boltsman sampling and generate variatns that were much better.  </p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/753aaf78-06b7-4199-999d-f08e78d7addd" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/753aaf78-06b7-4199-999d-f08e78d7addd" /></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/5d933173-49e2-4f76-9a0a-d7834c00590a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5d933173-49e2-4f76-9a0a-d7834c00590a" /></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/4fba09dc-0ecf-4a9b-833c-9d607e545c34" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4fba09dc-0ecf-4a9b-833c-9d607e545c34" /></a>
@@ -7045,7 +7045,7 @@ Particularly the following image provides credence that these simple models of i
 <h3 id="foundation-models">Foundation models<a class="headerlink" href="#foundation-models" title="Permanent link">&para;</a></h3>
 <h4 id="esm-models">ESM models<a class="headerlink" href="#esm-models" title="Permanent link">&para;</a></h4>
 <details class="abstract">
-<summary><a class="glightbox" href="https://badgen.net/github/stars/facebookresearch/esm" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/facebookresearch/esm" /></a> <a href="[Language models enable zero-shot prediction of the effects of mutations on protein function](https://github.com/facebookresearch/esm)">Language models enable zero-shot prediction of the effects of mutations on protein function</a></summary>
+<summary><a class="glightbox" href="https://badgen.net/github/stars/facebookresearch/esm" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/facebookresearch/esm" /></a> <a href="https://github.com/facebookresearch/esm">Language models enable zero-shot prediction of the effects of mutations on protein function</a></summary>
 </details>
 <details class="tip">
 <summary><a href="https://www.biorxiv.org/content/10.1101/2022.07.20.500902v3.full.pdf">Evolutionary-scale prediction of atomic-level protein structure with a language model (esm)</a></summary>
@@ -7067,7 +7067,7 @@ Particularly the following image provides credence that these simple models of i
 <p><a href="https://www.biorxiv.org/content/10.1101/2021.07.09.450648v2.full.pdf">Paper</a></p>
 </details>
 <details class="abstract">
-<summary><a class="glightbox" href="https://badgen.net/github/stars/facebookresearch/esm" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/facebookresearch/esm" /></a> <a href="[MSA Transformer](https://github.com/facebookresearch/esm)">MSA Transformer</a></summary>
+<summary><a class="glightbox" href="https://badgen.net/github/stars/facebookresearch/esm" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/facebookresearch/esm" /></a> <a href="https://github.com/facebookresearch/esm">MSA Transformer</a></summary>
 <p>The author's demonstrate in their <a href="https://www.biorxiv.org/content/10.1101/2021.02.12.430858v3.full.pdf">paper</a> training an unsupervised PLM that operates on sets of aligned sequences. Self-supervision helps to reconstruct the corrupted MSA. </p>
 <p><strong>Developments</strong></p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/e87edf1e-49eb-4a19-bf08-093060e87220" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="334" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e87edf1e-49eb-4a19-bf08-093060e87220"></a></p>
@@ -7132,7 +7132,7 @@ Specifically they "propose an alignment method to transform pre-trained uncondit
 </div>
 
 <details class="abstract">
-<summary>🧬 <a class="glightbox" href="https://badgen.net/github/stars/bio-ontology-research-group/deepgo2" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/bio-ontology-research-group/deepgo2" /></a> <a href="[Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2)">Protein function prediction as approximate semantic entailment</a></summary>
+<summary>🧬 <a class="glightbox" href="https://badgen.net/github/stars/bio-ontology-research-group/deepgo2" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/bio-ontology-research-group/deepgo2" /></a> <a href="https://github.com/bio-ontology-research-group/deepgo2">Protein function prediction as approximate semantic entailment</a></summary>
 <p><strong>Developments</strong> </p>
 <p>Current LLM models excel at predicting the structure and other attributes of biological sequences like proteins. However, their <a href="https://www.biorxiv.org/content/10.1101/2024.02.05.578959v2.full.pdf">transferability is limited</a>, capping their true potential. The <a href="https://www.nature.com/articles/s42256-024-00795-w">DeepGO-SE</a> model innovates 🚀 by integrating protein language models with specific knowledge on protein function, bridging the gap between knowledge-graphs' explicit representations and next-token prediction's implicit representations, and thereby significantly improving model performance.</p>
 <p><strong>How it works</strong> </p>
@@ -7230,6 +7230,11 @@ They considered several first, we consider feature-based models that rely on man
 </details>
 <h4 id="candidate-alignment">Candidate alignment<a class="headerlink" href="#candidate-alignment" title="Permanent link">&para;</a></h4>
 <p>It is not necessarily just enough to identify a potential candidate but to have a degree of <em>alignment</em> with of the candidate with starting or suggested candidates. This allows for a degree of interpretability to by people. </p>
+<details class="abstract">
+<summary><a href="https://github.com/Rostlab/EAT">Contrastive learning on protein embeddings enlightens midnight zone</a></summary>
+<p>In their <a href="https://academic.oup.com/nargab/article/4/2/lqac043/6605840">paper</a> the authors demonstrate the use of contrastive optimization (like CLIP) to create embeddings that "optimize constraints captured by heirarchichal classification of protein 3D structures" 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/9bacb594-15e1-46aa-bb89-36c2bddfaefb" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9bacb594-15e1-46aa-bb89-36c2bddfaefb" /></a></p>
+</details>
 <h4 id="protein-binding">Protein Binding<a class="headerlink" href="#protein-binding" title="Permanent link">&para;</a></h4>
 <p><a href="/shared/ConPLex.html" class="page-url" id="page-url-9"></a></p>
 <!-- Clipboard copy icon/button -->
@@ -7282,14 +7287,14 @@ also present a three-dimensional visualization of the interaction between attent
 </details>
 <h3 id="colab-design">Colab Design<a class="headerlink" href="#colab-design" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
-<p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/sokrypton/ColabDesign" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/sokrypton/ColabDesign" /></a> <a href="[ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign)">ColabDesign: Making Protein Design accessible to all via Google Colab!</a></p>
+<p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/sokrypton/ColabDesign" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/sokrypton/ColabDesign" /></a> <a href="https://github.com/sokrypton/ColabDesign">ColabDesign: Making Protein Design accessible to all via Google Colab!</a></p>
 </div>
 <h2 id="quality-reviews-and-references">Quality reviews and references<a class="headerlink" href="#quality-reviews-and-references" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title"><a href="https://www.biorxiv.org/content/10.1101/2023.10.10.561808v1.full.pdf">Harnessing Generative AI to Decode Enzyme Catalysis and Evolution for Enhanced Engineering</a></p>
 </div>
 <div class="admonition abstract">
-<p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/yangkky/Machine-learning-for-proteins" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/yangkky/Machine-learning-for-proteins" /></a> <a href="[Papers on Machine learning for Proteins](https://github.com/yangkky/Machine-learning-for-proteins)">Papers on Machine learning for Proteins</a></p>
+<p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/yangkky/Machine-learning-for-proteins" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/yangkky/Machine-learning-for-proteins" /></a> <a href="https://github.com/yangkky/Machine-learning-for-proteins">Papers on Machine learning for Proteins</a></p>
 </div>
 <details class="tip">
 <summary><a href="https://www.sciencedirect.com/science/article/pii/S2666389920301902">Deep Learning in Protein Structural Modeling and Design</a> provides a thorough summary of DL manners of optimizing proteins.</summary>
