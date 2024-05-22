@@ -49,12 +49,12 @@ Pruning is a technique that eliminates weights that do not consistently produce 
 
 Related to pruning is the use of smaller models that are initialized based on larger ones
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/OscarXZQ/weight-selection) [Weight Selection]([Weight Selection](https://github.com/OscarXZQ/weight-selection))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/OscarXZQ/weight-selection) [Weight Selection](https://github.com/OscarXZQ/weight-selection)"
     A nice way to initialize smaller models from bigger ones
     [Paper](https://arxiv.org/pdf/2311.18823.pdf)
     <img width="270" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2c14986f-8edc-430e-bb59-3d3bae4f30d3">
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/TransformerCompression) [Transformer Compression with SliceGPT]([Transformer Compression with SliceGPT](https://github.com/microsoft/TransformerCompression))" slice-gpt
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/TransformerCompression) [Transformer Compression with SliceGPT](https://github.com/microsoft/TransformerCompression)" slice-gpt
 
     **Developments** In their [paper](https://arxiv.org/pdf/2401.15024.pdf) the authors reveal that a manner of replacing matrices with dense smaller dense matrices reducing the embedding dimensions. This can eliminate up to 25% of parameters (and embeddings) for LLama-2, and maintain 99% zero shot task performance across multiple models. 
     <img width="547" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7f01e175-f18b-4f69-b39a-d876375061b9">
@@ -94,7 +94,7 @@ MANAGEN: (Table with this the characteristic chart of the different methods to h
 
 #### Examples
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mit-han-lab/smoothquant) [SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs]([SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs](https://github.com/mit-han-lab/smoothquant))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mit-han-lab/smoothquant) [SmoothQuant: Accurate and Efficient Post-trainign Quantizationf or LLMs](https://github.com/mit-han-lab/smoothquant)"
     Using some post-training smoothing, they shift the weights in such a way that they are easier to quantize.
     [Paper](https://arxiv.org/pdf/2211.10438.pdf.pdf)
     <img width="337" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ed34f663-5792-471f-9927-f3622f3243a3">
@@ -103,7 +103,7 @@ MANAGEN: (Table with this the characteristic chart of the different methods to h
     [Paper](https://arxiv.org/pdf/2309.14717.pdf)
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/hahnyuan/PB-LLM) [PB-LLM: Partially Binarized Large Language Models]([PB-LLM: Partially Binarized Large Language Models](https://github.com/hahnyuan/PB-LLM)) to compress identified model weights into a single bit, while allowing others to only be partially compressed."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/hahnyuan/PB-LLM) [PB-LLM: Partially Binarized Large Language Models](https://github.com/hahnyuan/PB-LLM) to compress identified model weights into a single bit, while allowing others to only be partially compressed."
 
     [Paper](https://github.com/hahnyuan/PB-LLM)
 

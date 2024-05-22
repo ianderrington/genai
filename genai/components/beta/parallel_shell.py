@@ -66,7 +66,7 @@ class AbstractPersistentShell(ABC):
     
 # cmd = 'source activate my_virtualenv; python my_script.py'
 # subprocess.call(cmd, shell=True, executable='/bin/bash')
-
+# Another solution
 # import subprocess
 
 # subprocess.Popen(["virtualenv1/bin/python", "my_script.py"])

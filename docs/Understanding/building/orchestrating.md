@@ -141,8 +141,6 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 - [LlamaLab (cutting-edge AGI projects using LlamaIndex)](https://github.com/run-llama/llama-lab)
 
 
-
-
 ### Haystack
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/deepset-ai/haystack) [Haystack]([Haystack](https://github.com/deepset-ai/haystack)) is an e2e llm orchestration framework that allows a number of versatile interactions."
