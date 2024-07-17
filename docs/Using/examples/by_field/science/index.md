@@ -36,7 +36,7 @@ There are components of include
 - [Measurement optimization](#measurement-optimization)
 
 
-!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/gomesgroup/coscientist) [Autonomous chemical research with large language models]([Autonomous chemical research with large language models](https://github.com/gomesgroup/coscientist))" coscientist
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/gomesgroup/coscientist) [Autonomous chemical research with large language models](https://github.com/gomesgroup/coscientist)" coscientist
     
     **Developments** The authors reveal how a 'Coscientist' architecture can assist in the development of more effective research results.
     <img width="741" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5baa36c3-a3b0-4021-82da-c1f1aa6ea2a7">

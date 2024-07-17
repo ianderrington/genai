@@ -1,14 +1,23 @@
 Prompts detail the manner in which a Generative AI model should be producing output. Constructing the prompts to be the most effective in obtaining desired output is known as prompt engineering (PE). While PE may have dependencies on the underlying models, there are strategies that can be more universal in their ability to do well.
 
-Because often an individual query or generation may be insufficient to produce the desired outputs, it may be necessary to use [cognitive architectures](../agents/cognitive_architecture.md) as part of [chains](../agents/cognitive_architecture.md). Here, we describe one-shot prompting methods, may function without multiple LLM-calls.
+Because often an individual query or generation may be insufficient to produce the desired outputs, it may be necessary to use [cognitive architectures](../agents/cognitive_architecture.md) including _chains_ and _graphs_  that consist of multiple, and often different individual prompts and calls to LLM models.
 
-It is also important to note, that while [manual methods](#manual-methods) are essential and will continue. [Automatic methods](#automatic-methods) have become common and may help to reduce burdens of identifying sufficiently optimal prompts for certain models and situations. Because providing additional context through few-shot examples can improve results, [retrieval augmented prompting](#retrieval-augmented-prompting) can be successfully used to extract more effective solutions. 
+This page, we describe one-shot prompting methods, may function with a single call to an LLM. Note that much of what is applicable in single-prompts may transfer to the [cognitive architectures](../agents/cognitive_architecture.md). 
+
+It is important to note, that while [manual methods](#manual-methods) are helpful, if not essential, [automatic methods](#automatic-prompting-methods) have become common and may help to reduce burdens of identifying sufficiently optimal prompts for certain models and situations. Because providing additional context through few-shot examples can improve results, [retrieval augmented prompting](#retrieval-augmented-prompting) can be successfully used to extract more effective solutions. 
 
 ## Key concepts
 
-It has been found that the quality of responses is governed by the quality of the prompts. The structure of the prompts, as well as application-specific examples can improve the quality. The use of examples is called _few-shot_ or _multi-shot_ conditioning, and is distinct from _zero-shot_ prompts that do not give examples. Generally, examples can better-enable quality results, even with large LLMs. Consequently [retrieval augmented prompting](#retrieval-augmented-prompting), is used to find examples to improve results. 
+It has been found that the quality of responses is governed by the quality of the prompts. The structure of the prompts, as well as application-specific examples, also called _exemplars_, can improve the quality. The use of examples is called _few-shot_ or _multi-shot_ conditioning, and is distinct from _zero-shot_ prompts that do not give examples. Generally, examples can better-enable quality results, even with large LLMs. Consequently [retrieval augmented prompting](#retrieval-augmented-prompting), is used to find examples to improve results. 
 
-## Manual Methods
+!!! tip "Using examples: give both good and bad."
+    It can be good to give both good and bad examples. Optionally: _Explain why bad examples are bad_.
+
+
+
+
+ 
+## Manual Prompting Methods
 
 ### General Advice
 
@@ -24,9 +33,12 @@ It has been found that the quality of responses is governed by the quality of th
   -  Good to evaluate this and see if input examples give expected scores. Modify the prompt if it isn't.
 - Consider prompt versioning to keep track of outputs more easily.
 - Break prompts into smaller prompts
-- Use [cognitive topologies](../agents/cognitive_architecture.md#cognitive-topologies)
- like Chain of Thought Prompting
+- More advanced? try [cognitive topologies](../agents/cognitive_architecture.md#cognitive-topologies) like Chain of Thought Prompting
 
+
+## Reasoning strategies
+
+!!! tip "Add this to the end of tricky questions 'Before you answer, make a list of wrong assumptions people sometimes make about the concepts included in the question.'"
 
 ???+ important "[Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4](https://arxiv.org/pdf/2312.16171.pdf)"
 
@@ -92,12 +104,19 @@ It has been found that the quality of responses is governed by the quality of th
     
     26.  To write any text, such as an essay or paragraph, that is intended to be similar to a provided sample, include the following instructions: 
         * Please use the same language based on the provided paragraph[/title/text /essay/answer].
-    
+
+## Humanization
+
+It can be quite helpful to create prompts that are more human-in nature. There are many variants of this, but many of the results stem from the use of words that baroque or otherwise excessive in nature. Here is an example of humanization prompts. 
+
+??? tip "Humanization prompt"
+    ``` markdown
+    Below words/word sequences are banned. If you find them in the provided text, remove and replace them with simpler words that are less cringe/complex. Make sure you replace them with a maximum of 2nd grade writing level words. Don't use technical jargon, so anyone can understand this post."
+
+    Unveil, Leverage, Constantly, Testament, Tapestry, Beacon, Labyrinth, In Conclusion, Resonates with, Resonate, Captivate, Symphony, Unleash, Explore, Delve, harnessing, revolutionize, juncture, cusp, Hurdles, Bustling, Harnessing, Unveiling the power, Realm, Depicted, Demystify, Insurmountable, New Era, Poised, Unravel, Entanglement, Unprecedented, Eerie connection, unliving, Beacon, Unleash, Delve, Enrich, Multifaceted, Elevate, Discover, Supercharge, Unlock, Tailored, Elegant, Delve, Dive, Ever-evolving, pride, Realm, Meticulously, Grappling, Weighing, Picture, Architect, Adventure, Journey, Embark, Navigate, Navigation, dazzle, Tapestry, Enlighten, Esteemed, Shed light, Firstly, Moreover, Crucial, To consider, It is important to consider, There are a few considerations, Ensure, Furthermore, Vital, It’s essential to, Game changer, However, It’s important to note that, It’s worth mentioning that, Let’s uncover, Due to the fact that, It’s important to bear in mind, Just, That, Very, Really, Literally, Actually, Certainly, Probably, Basically, Treasure trove, Treasure, Secret weapon, Tailor
+    ```
 
 ### Iliciting better responses
-
-
-
 
 ??? warning "[ChatGPT Can Predict the Future when it Tells Stories Set in the Future About the Past](https://arxiv.org/abs/2404.07396)"
 
@@ -131,7 +150,7 @@ It has been found that the quality of responses is governed by the quality of th
 
 
 
-### Prompt Pattern
+### Prompt Patterns
 
 ???+ info "Context, Task, Persona, Tone, Examples, Format"
     | **Category** | **Description**                                                                                         |
@@ -146,7 +165,7 @@ It has been found that the quality of responses is governed by the quality of th
 
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/suzgunmirac/meta-prompting) [Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding]([Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding](https://github.com/suzgunmirac/meta-prompting))" meta-prompting
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/suzgunmirac/meta-prompting) [Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding](https://github.com/suzgunmirac/meta-prompting)" meta-prompting
     
     The method uses an LLM to generate a prompt that allows for specific task refinement yielding improved zero-shot and zero-shot-chain-of-thought improvements.
     <img width="650" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ba009c4b-7d68-404f-ac4c-3414f834c301">
@@ -215,7 +234,7 @@ It has been found that the quality of responses is governed by the quality of th
 
 
 
-### Automatic
+### Automatic Prompting Methods
 
 ??? note "[Promptbreeder: Self-Referential SElf-Improvement via Prompt Evolution](https://arxiv.org/pdf/2309.16797.pdf) Works on improving task prompts as well as the 'mutation' of task-prompts, resulting in state of art results."
     <img width="922" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cc0baed2-8331-4a17-8087-99b675261d5a">
@@ -237,7 +256,7 @@ It has been found that the quality of responses is governed by the quality of th
     <img width="713" alt="image" src="https://github.com/ianderrington/general/assets/76016868/3ac44e13-2444-4f1e-ae3b-800c9d32ce59">
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mshumer/gpt-prompt-engineer) [GPT Prompt Engineer]([GPT Prompt Engineer](https://github.com/mshumer/gpt-prompt-engineer))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mshumer/gpt-prompt-engineer) [GPT Prompt Engineer](https://github.com/mshumer/gpt-prompt-engineer)"
     A fairly simple automation tool to create the best prompts
 
     ```python
@@ -256,7 +275,7 @@ It has been found that the quality of responses is governed by the quality of th
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f02a9f3e-4f4c-49de-9b35-1702df65d618)
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/rutgerswiselab/PAP-REC) [PAP-REC: Personalized Automatic Prompt for Recommendation Language Model]([PAP-REC: Personalized Automatic Prompt for Recommendation Language Model](https://github.com/rutgerswiselab/PAP-REC))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/rutgerswiselab/PAP-REC) [PAP-REC: Personalized Automatic Prompt for Recommendation Language Model](https://github.com/rutgerswiselab/PAP-REC)"
     The authors in their [paper](https://arxiv.org/pdf/2402.00284v1.pdf) reveal a method of automatically generating prompts for recommender language models with better performance results than manually constructed prompts and results baseline recommendation models.
 
 ### Retrieval Augmented  Prompting 
@@ -267,7 +286,7 @@ Retrieval based prompting use [RAG](../agents/rag.md) lookup to identify appropr
 
 Prompt compression provides methods of compressing prompt inputs in such a way that it will yield equivalent results for downstream result generation. 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/LLMLingua?) [(Long)LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models]([(Long)LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://github.com/microsoft/LLMLingua?))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/LLMLingua?) [(Long)LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://github.com/microsoft/LLMLingua?)"
 
     [Paper: LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression](https://arxiv.org/pdf/2310.06839.pdf)
     [Paper: LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://arxiv.org/pdf/2310.05736.pdf)
@@ -287,47 +306,31 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 - [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/pdf/2104.08691.pdf)
 
 
-## Libraries and collections
-
-!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/meistrari/prompts-royale) [Prompt Royale]([Prompt Royale](https://github.com/meistrari/prompts-royale)) Provides the ability to automatically generate prompts to test around the same general theme."
-
-- [Llangchain prompthub](https://smith.langchain.com/hub)
-- [Awesome Prompts](https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md)
-- [Prompt Hub](https://app.prompthub.studio/) For Generating image prompts
-- [Wolfram Prompt Repo](https://writings.stephenwolfram.com/2023/06/prompts-for-work-play-launching-the-wolfram-prompt-repository/?mibextid=Zxz2cZ)
-- [Notion.io plugin](https://haonmade.gumroad.com/l/ozuvb)
-- [PROMPT generator](https://huggingface.co/spaces/merve/ChatGPT-prompt-generator) To save a few words by just entering a persona and gives prompt output.
-- [Prompt Engine (MSFT) database tool](https://github.com/microsoft/prompt-engine) MIT license
-- [Scale spellbook](https://www.scale.com/spellbook)
 
 
-## Best practices and guides
+## Best practices, guides and surveys
 
-!!! tip "[Prompting is Programming: A Query Language for Large Language Models](https://arxiv.org/pdf/2212.06094.pdf)"
 !!! tip "[Techniques to improve reliability](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md#how-to-improve-reliability-on-complex-tasks) By OpenAI"
+??? abstract "[A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/pdf/2302.11382.pdf)"
+??? abstract "[LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide)"
+    Based on [paper](https://arxiv.org/pdf/2304.13712.pdf).
+??? abstract "[Prompt Engineering by Lillian Wang](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)"
+??? abstract "[OPEN AI best practices](https://platform.openai.com/docs/guides/gpt-best-practices/)"
+??? abstract "[Prompting Guide](https://www.promptingguide.ai/techniques)"
+??? abstract "[Prompt Engineering Guide](https://www.promptingguide.ai/)"
+??? abstract "[Best practices for prompt engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)"
 
-MANAGEN Make the below into Admonitions
-
-
-- [A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/pdf/2302.11382.pdf)
-- [LLM Practical Guide](https://github.com/Mooler0410/LLMsPracticalGuide) based on [paper](https://arxiv.org/pdf/2304.13712.pdf).
-
-
-- [Prompt Engineering by Lillian Wang](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)
-- [OPEN AI best practices](https://platform.openai.com/docs/guides/gpt-best-practices/)
-- [Prompting Guide](https://www.promptingguide.ai/techniques)
-
-- [Prompt Engineering Guide](https://www.promptingguide.ai/)
-- [Best practices for prompt engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)
-
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/dair-ai/Prompt-Engineering-Guide) [Prompting Guide]([Prompting Guide](https://github.com/dair-ai/Prompt-Engineering-Guide))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/dair-ai/Prompt-Engineering-Guide) [Prompting Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)"
     [Website](https://www.promptingguide.ai/)
 
 !!! tip "[Prompt Engineering for Healthcare: Methodologies and Applications](https://arxiv.org/pdf/2304.14670.pdf)"
 
 [A good description of advanced prompt tuning](https://cameronrwolfe.substack.com/p/advanced-prompt-engineering)
 
-## To Sort
+## Interesting Research 
+
+
+## Information to Sort into this document. 
 AutoPrompt [5] combines the original prompt input with a set of shared (across all input data) “trigger tokens” that are selected via a gradient-based search to improve performance.
 
 Prefix Tuning [6] adds several “prefix” tokens to the prompt embedding in both input and hidden layers, then trains the parameters of this prefix (leaving model parameters fixed) with gradient descent as a parameter-efficient fine-tuning strategy.

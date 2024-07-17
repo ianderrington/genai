@@ -16,12 +16,12 @@ graph LR
 
 Train on model trains a new model on the output of a new model.
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SqueezeAILab/LLM2LLM) [LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement]([LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement](https://github.com/SqueezeAILab/LLM2LLM))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SqueezeAILab/LLM2LLM) [LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement](https://github.com/SqueezeAILab/LLM2LLM)"
     **Developments** The authors reveal in their [paper](https://arxiv.org/pdf/2403.15042.pdf) a solution an iterative training and generation approach that enable effective fine tuning on low-data regimes. 
     <img width="1033" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c8d8e420-69e3-435a-a854-7f1f43bff09b">
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/tatsu-lab/stanford_alpaca) [Alpaca ]([Alpaca ](https://github.com/tatsu-lab/stanford_alpaca))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/tatsu-lab/stanford_alpaca) [Alpaca ](https://github.com/tatsu-lab/stanford_alpaca)"
 
 
 
@@ -50,7 +50,7 @@ Train on model trains a new model on the output of a new model.
     [Paper](https://github.com/nlpxucan/WizardLM/blob/main/WizardMath/WizardMath_Paper.pdf)
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/sd-fabric/fabric) [Fabic]([Fabic](https://github.com/sd-fabric/fabric)) is a technique to incorporate iterative feedback into the generative process of diffusion models based on StableDiffusion."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/sd-fabric/fabric) [Fabic](https://github.com/sd-fabric/fabric) is a technique to incorporate iterative feedback into the generative process of diffusion models based on StableDiffusion."
     [Paper](https://arxiv.org/pdf/2307.10159.pdf)
 
 

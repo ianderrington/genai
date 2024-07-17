@@ -1,4 +1,4 @@
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/Alpha-VLLM/LLaMA2-Accessory) [SPHINX: THE JOINT MIXING OF WEIGHTS, TASKS, AND VISUAL EMBEDDINGS FOR MULTI-MODAL LARGE LANGUAGE MODELS]([SPHINX: THE JOINT MIXING OF WEIGHTS, TASKS, AND VISUAL EMBEDDINGS FOR MULTI-MODAL LARGE LANGUAGE MODELS](https://github.com/Alpha-VLLM/LLaMA2-Accessory))"
+??? code "![GitHub Repo stars](https://badgen.net/github/stars/Alpha-VLLM/LLaMA2-Accessory) [SPHINX: THE JOINT MIXING OF WEIGHTS, TASKS, AND VISUAL EMBEDDINGS FOR MULTI-MODAL LARGE LANGUAGE MODELS](https://github.com/Alpha-VLLM/LLaMA2-Accessory)"
   ABSTRACT
     We present SPHINX, a versatile multi-modal large language model (MLLM)
     with a joint mixing of model weights, tuning tasks, and visual embeddings. First,

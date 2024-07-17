@@ -1,0 +1,1 @@
+https://github.com/mshumer/ai-journalist/blob/main/Claude_Journalist.ipynb

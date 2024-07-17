@@ -61,13 +61,22 @@ class AbstractPersistentShell(ABC):
     def __del__(self):
         self.cleanup()
        
+# https://stackoverflow.com/questions/8052926/running-subprocess-within-different-virtualenv-with-python
+# import subprocess
+    
+# cmd = 'source activate my_virtualenv; python my_script.py'
+# subprocess.call(cmd, shell=True, executable='/bin/bash')
+# Another solution
+# import subprocess
 
-
+# subprocess.Popen(["virtualenv1/bin/python", "my_script.py"])
+# subprocess.Popen(["virtualenv2/bin/python", "my_other_script.py"])
 
 class BashShell(AbstractPersistentShell):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.process = subprocess.Popen(["/bin/bash"], stdin=subprocess.PIPE, 
+            
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, 
             cwd=str(self.working_dir), bufsize=1, universal_newlines=True, shell=False,)
         self.cleaned_up = False

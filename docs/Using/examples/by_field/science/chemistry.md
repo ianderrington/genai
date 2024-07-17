@@ -15,7 +15,7 @@ It is important to first consider dual-use and potential intentional or accident
 
 ### Protocol Optimization 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/ur-whitelab/BO-LIFT) [BAYESIAN OPTIMIZATION OF CATALYSTS WITH IN-CONTEXT LEARNING]([BAYESIAN OPTIMIZATION OF CATALYSTS WITH IN-CONTEXT LEARNING](https://github.com/ur-whitelab/BO-LIFT)) Uses LLMs to optimize synthesis procedures and prediction of properties. They allow for in-context learning."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/ur-whitelab/BO-LIFT) [BAYESIAN OPTIMIZATION OF CATALYSTS WITH IN-CONTEXT LEARNING](https://github.com/ur-whitelab/BO-LIFT) Uses LLMs to optimize synthesis procedures and prediction of properties. They allow for in-context learning."
     <img width="653" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/522cffed-3016-41f1-b073-f2d1e77cbdb6">
 
     [Paper](https://arxiv.org/pdf/2304.05341.pdf)
@@ -42,7 +42,7 @@ It is important to first consider dual-use and potential intentional or accident
 
 ### Confirmation prediciton
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/AspirinCode/papers-for-molecular-design-using-DL) [Papers for Molecular Design using DL]([Papers for Molecular Design using DL](https://github.com/AspirinCode/papers-for-molecular-design-using-DL)) Provides a large set of papers"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/AspirinCode/papers-for-molecular-design-using-DL) [Papers for Molecular Design using DL](https://github.com/AspirinCode/papers-for-molecular-design-using-DL) Provides a large set of papers"
  
 ## Models
 
@@ -53,7 +53,7 @@ It is important to first consider dual-use and potential intentional or accident
 
 ## Frameworks
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/datamol-io/datamol) [Datamol is a python lybrary to work with molecules on top of RDKit]([Datamol is a python lybrary to work with molecules on top of RDKit](https://github.com/datamol-io/datamol))"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/datamol-io/datamol) [Datamol is a python lybrary to work with molecules on top of RDKit](https://github.com/datamol-io/datamol)"
 
 !!! abstract "[RDKit is a collection of cheminformatics and machine-learning software written in C++ and Python.](https://www.rdkit.org/)"
 

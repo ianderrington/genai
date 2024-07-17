@@ -116,7 +116,7 @@ Here are some known thought structures that are improving agentic output.
     <img width="531" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/baf1ac6e-0a37-4b1d-83a5-925d12f91d66">
 
 
-???+ code "![GitHub Repo stars](https://badgen.net/github/stars/ysymyth/ReAct) [ReAct]([ReAct](https://github.com/ysymyth/ReAct))"
+???+ code "![GitHub Repo stars](https://badgen.net/github/stars/ysymyth/ReAct) [ReAct](https://github.com/ysymyth/ReAct)"
 
     Effectively Observe, Think, Act, Repeat.
     [Paper](https://arxiv.org/pdf/2210.03629.pdf)
@@ -127,7 +127,7 @@ Here are some known thought structures that are improving agentic output.
 
 
 
-???+ code "![GitHub Repo stars](https://badgen.net/github/stars/noahshinn024/reflexion) [Reflexion: an autonomous agent with dynamic memory and self-reflection]([Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion)) an agent with dynamic memory and self-reflection capabilities"
+???+ code "![GitHub Repo stars](https://badgen.net/github/stars/noahshinn024/reflexion) [Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
     - [Paper](https://arxiv.org/pdf/2303.11366.pdf)
@@ -362,7 +362,7 @@ There are other [memory based solutions](memory.md) including [RAG](rag.md) that
 ??? tip "[Learning to Reason and Memorize with Self-Notes](https://adapterhub.ml/) Allows model to deviate from input context at any time to reason and take notes"
     <img width="685" alt="image" src="https://github.com/ianderrington/general/assets/76016868/e3b9ed66-18a8-451b-b29a-09815d7791d1">
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/bioplanner/bioplanner) [BioPlanner: Automatic Evaluation of LLMs on Protocol Planning in Biology]([BioPlanner: Automatic Evaluation of LLMs on Protocol Planning in Biology](https://github.com/bioplanner/bioplanner))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/bioplanner/bioplanner) [BioPlanner: Automatic Evaluation of LLMs on Protocol Planning in Biology](https://github.com/bioplanner/bioplanner)"
 
     [Paper](https://arxiv.org/pdf/2310.10632.pdf)
     Abstract: The ability to automatically generate accurate protocols for scientific experiments would represent a major step towards the automation of science. Large Language Models (LLMs) have impressive capabilities on a wide range of tasks, such as question answering and the generation of coherent text and code. However, LLMs can struggle with multi-step problems and long-term planning, which are crucial for designing scientific experiments. Moreover, evaluation of the accuracy of scientific protocols is challenging, because experiments can be described correctly in many different ways, require expert knowledge to evaluate, and cannot usually be executed automatically. Here we present an automatic evaluation framework for the task of planning experimental protocols, and we introduce BioProt: a dataset of biology protocols with corresponding pseudocode representations. To measure performance on generating scientific protocols, we use an LLM to convert a natural language protocol into pseudocode, and then evaluate an LLM's ability to reconstruct the pseudocode from a high-level description and a list of admissible pseudocode functions. We evaluate GPT-3 and GPT-4 on this task and explore their robustness. We externally validate the utility of pseudocode representations of text by generating accurate novel protocols using retrieved pseudocode, and we run a generated protocol successfully in our biological laboratory. Our framework is extensible to the evaluation and improvement of language model planning abilities in other areas of science or other areas that lack automatic evaluation.
@@ -373,7 +373,7 @@ There are other [memory based solutions](memory.md) including [RAG](rag.md) that
 General manners of search.
 <img width="565" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/3025c425-4f12-4b50-8d23-33a6002fa2aa">
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SqueezeAILab/LLMCompiler) [LLMCompiler: An LLM Compiler for Parallel Function Calling]([LLMCompiler: An LLM Compiler for Parallel Function Calling](https://github.com/SqueezeAILab/LLMCompiler)) provides an useful framework that improves latency, accuracy, and costs by orchestrating parallel calls."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SqueezeAILab/LLMCompiler) [LLMCompiler: An LLM Compiler for Parallel Function Calling](https://github.com/SqueezeAILab/LLMCompiler) provides an useful framework that improves latency, accuracy, and costs by orchestrating parallel calls."
     [Paper](https://arxiv.org/pdf/2312.04511.pdf)
     This breaks components down into a task-fetching unit and an executor to dynamically identify the tasks that could be executed, performs argument replacements on intermediate results, and an executor that performs function calls provided by the Task-fetching unit. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/e461a9b8-042e-4687-a2ce-73b8ea412318)
@@ -423,7 +423,7 @@ General manners of search.
     An excellent thought on what to consider next when dealing with knowledge (or other output like information) generation chains.
     ![image](https://github.com/ianderrington/genai/assets/76016868/9f195465-2b6b-47b7-9041-369ad0597649)
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/kyegomez/Meta-Tree-Of-Thoughts) [Meta Tree of thought]([Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/kyegomez/Meta-Tree-Of-Thoughts) [Meta Tree of thought](https://github.com/kyegomez/Meta-Tree-Of-Thoughts)"
 
     <img width="1663" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e516604b-57b2-4d82-b9a9-0168c8eb9f15">
 
@@ -593,13 +593,13 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
     <img width="956" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bf581eb0-96b1-4175-97d0-98f081a03438">
     Possible open-source implementation [here](https://github.com/kyegomez/LOGICGUIDE)
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/normal-computing/outlines) [Outlines]([Outlines](https://github.com/normal-computing/outlines)) guides the model generation of next-token logits to guide the generation corresponding to regex / JSON and pydantic schema. compatible with all models."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/normal-computing/outlines) [Outlines](https://github.com/normal-computing/outlines) guides the model generation of next-token logits to guide the generation corresponding to regex / JSON and pydantic schema. compatible with all models."
 
     Also provides a way to functionalize templates to separate prompt logic.
 
 ### Automated chain discovery, selection, and creation.
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/amazon-science/auto-cot) [Auto-CoT: Automatic Chain of Thought Prompting in Large Language Models]([Auto-CoT: Automatic Chain of Thought Prompting in Large Language Models](https://github.com/amazon-science/auto-cot))"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/amazon-science/auto-cot) [Auto-CoT: Automatic Chain of Thought Prompting in Large Language Models](https://github.com/amazon-science/auto-cot)"
 
     [Paper](https://arxiv.org/pdf/2210.03493.pdf)
     This algorithm samples exemplars to construct demonstrations that enable improved accuracy of multi-shotted outcomes using the Chain-of-Thought prompting method. 

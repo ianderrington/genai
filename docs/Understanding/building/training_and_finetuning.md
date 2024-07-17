@@ -39,7 +39,7 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 
 ??? abstract "[Pytorch Lightning Thunder](https://github.com/Lightning-AI/lightning-thunder)
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/DeepSpeed) [Deep Speed (by MSFT)]([Deep Speed (by MSFT)](https://github.com/microsoft/DeepSpeed)) empowers ChatGPT-like model training with a single click, offering 15x speedup over SOTA RLHF systems with unprecedented cost reduction at all scales"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/DeepSpeed) [Deep Speed (by MSFT)](https://github.com/microsoft/DeepSpeed) empowers ChatGPT-like model training with a single click, offering 15x speedup over SOTA RLHF systems with unprecedented cost reduction at all scales"
     [Blog on Deepspeed Ulysses](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-ulysses)
     ![image](https://github.com/microsoft/DeepSpeed/raw/master/blogs/assets/images/ds-chat-overview.png)
 
@@ -50,7 +50,7 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/stanford-crfm/levanter) [Levanter (not just LLMS) ]([Levanter (not just LLMS) ](https://github.com/stanford-crfm/levanter)) Codebase for training FMs with JAX."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/stanford-crfm/levanter) [Levanter (not just LLMS) ](https://github.com/stanford-crfm/levanter) Codebase for training FMs with JAX."
     [Release](https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html) 
     Using Haliax for naming tensors field names instead of indexes. (for example Batch, Feature....). Full sharding and distributable/parallelizable.
 
@@ -59,7 +59,7 @@ Prominent languages include [python](https://www.python.org), [C++/CUDA](https:/
 
 #### Fine Tuning
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/georgian-io/LLM-Finetuning-Hub) [LLM Finetuning Hub]([LLM Finetuning Hub](https://github.com/georgian-io/LLM-Finetuning-Hub)) is an evolving model finetuning codebase. "
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/georgian-io/LLM-Finetuning-Hub) [LLM Finetuning Hub](https://github.com/georgian-io/LLM-Finetuning-Hub) is an evolving model finetuning codebase. "
 
 
 

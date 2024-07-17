@@ -23,6 +23,7 @@ There are several popular repositories that can serve as a starting point for yo
 [Streamlit agent](https://github.com/langchain-ai/streamlit-agent)
 
 #### Others
+Vercel https://sdk.vercel.ai/docs/introduction
 - [Fly.io](https://www.fly.io)
 - [Modal.com](https://www.modal.com)
 - [Render.com](https://www.render.com)

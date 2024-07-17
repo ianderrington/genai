@@ -37,16 +37,13 @@ def get_structure(directory, open_markdown=False, exclude_dirs=[]):
         # Print markdown files in the directory
         markdown_files = [f for f in files if f.endswith(".md")]
         if markdown_files:
-            # print("\nMarkdown files:")
             structure.append("\nMarkdown files:")
             for md_file in markdown_files:
-                # print(f" - {md_file}")
                 structure.append(f" - {md_file}")
                 if open_markdown:
                     with open(os.path.join(root, md_file), "r") as md:
                         for line in md:
                             if line.startswith("#"):
-                                # print("    " * (line.count("#") - 1) + line.strip())
                                 structure.append(
                                     "    " * (line.count("#") - 1) + line.strip()
                                 )

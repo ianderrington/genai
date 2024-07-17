@@ -24,3 +24,5 @@ lib/
 *.egg-info
 
 models/*
+
+node_modules/

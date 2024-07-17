@@ -19,7 +19,7 @@ Actions can be thought of interacting in an environment, this environment can ha
 
 
 
-??? abstract "[On the Tool Manipulation Capability of Open-source Large Language Models](https://github.com/sambanova/toolbench)"
+??? abstract "[On the Tool Manipulation Capability of Open-source Large Language Models](https://github.com/sambanova/toolbench/tree/main)"
     [Paper](https://arxiv.org/pdf/2305.16504.pdf)
     Provides a method to allow open-source LLMs to work with tools for real-world tasks.
 
@@ -31,12 +31,11 @@ Actions can be thought of interacting in an environment, this environment can ha
 
 !!! tip "[Tool Documentation Enables Zero-Shot Tool-Usage with Large Language Models](https://arxiv.org/pdf/2308.00675.pdf) Demonstrates that presenting documentation of tool usage is likely more valuable than providing examples."
 
-!!! abstract "[GitHub Repo stars](https://badgen.net/github/stars/rizerphe/local-llm-function-calling) [Local LLM Function Calling]([Local LLM Function Calling](https://github.com/rizerphe/local-llm-function-calling)) enforces json semantics for calls to functions"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/rizerphe/local-llm-function-calling) [Local LLM Function Calling](https://github.com/rizerphe/local-llm-function-calling) enforces json semantics for calls to functions"
 
-!!! abstract "[GitHub Repo stars](https://badgen.net/github/stars/OpenBMB/ToolBench) [Tool LLM]([Github](https://github.com/OpenBMB/ToolBench))" 
-    "[Paper](https://huggingface.co/papers/2307.16789) This describes a novel approach enabling over 16000 API's to be called through an intelligent routing mechanism."  Uses RapidAPI connector to do so. "
+!!! abstract "[Tool LLM](https://huggingface.co/papers/2307.16789) This describes a novel approach enabling over 16000 API's to be called through an intelligent routing mechanism. ![GitHub Repo stars](https://badgen.net/github/stars/OpenBMB/ToolBench) [Github](https://github.com/OpenBMB/ToolBench) Uses RapidAPI connector to do so. "
 
-!!! abstract "[GitHub Repo stars](https://badgen.net/github/stars/ZubinGou/llm-agent-web-tools) [Web search tools that allow a number of search engines to be used]([Web search tools that allow a number of search engines to be used](https://github.com/ZubinGou/llm-agent-web-tools))"
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/ZubinGou/llm-agent-web-tools) [Web search tools that allow a number of search engines to be used](https://github.com/ZubinGou/llm-agent-web-tools)"
 
 
 ### Executors
@@ -58,8 +57,6 @@ Interpreting Such efforts can be used to reduce input complexity, token-count, t
 
 !!! abstract "[Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts."
 
-!!! abstract "[Semantic Kernel](https://github.com/microsoft/semantic-kernel)"
-    [Github](https://github.com/microsoft/semantic-kernel/blob/main/samples/notebooks/python/00-getting-started.ipynb),
 
 !!! abstract "️[Guidance](https://github.com/microsoft/guidance/) Interleaving generation, prompting and logical control to single  continuous flow."
 

@@ -5,6 +5,14 @@ import re
 import re
 
 def replace_github_links_in_file(file_path):
+    # github_link_pattern = r'\[([^\]]+)\]\(\[([^\]]+)\]\((https://github\.com/[^/]+/[^/]+)\)\)'
+    # do_not_match = '![GitHub Repo stars]'
+    # # Replacement function that checks if do_not_match is in the matched string
+    # def replacement(match):
+    #     if do_not_match in match.group(0):
+    #         return match.group(0)
+    #     return f'[{match.group(1)}]({match.group(3)})'
+        
     github_link_pattern = r'\[([^\]]+)\]\(https://github\.com/([^/]+/[^/]+)\)'
     do_not_match = '![GitHub Repo stars]'
 
@@ -36,15 +44,6 @@ def replace_github_links_in_file(file_path):
         file.writelines(new_lines)  # Use writelines to maintain original line endings
         file.truncate()
 
-# This script assumes the presence of the `re` module for regex operations and modifies the file in-place.
-
-
-
-
-     # updated_content = re.sub(github_link_pattern, replacement, content)
-        # file.seek(0)
-        # file.write(updated_content)
-        # file.truncate()
 
 def crawl_directory_and_replace_links(directory):
     for root, dirs, files in os.walk(directory):
