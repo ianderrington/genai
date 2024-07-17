@@ -1,4 +1,4 @@
-MANAGEN Reword this( Dataset distillation reduces the storage and computational consumption of training a network by generating a small surrogate dataset that encapsulates rich information
+Dataset distillation reduces the storage and computational consumption of training a network by generating a small surrogate dataset that encapsulates rich information
 of the original large-scale one)
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/vimar-gu/MinimaxDiffusion) [Efficient Dataset Distillation via Minimax Diffusion](https://github.com/vimar-gu/MinimaxDiffusion)"

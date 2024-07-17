@@ -5,18 +5,31 @@ import re
 import re
 
 def replace_github_links_in_file(file_path):
-
-    # Here is an example... 
-    #[Enhancing LLMs with Semantic-layers]([Enhancing LLMs with Semantic-layers](https://github.com/tomasonjo/llm-movieagent))
-    # This  should be just [Enhancing LLMs with Semantic-layers](https://github.com/tomasonjo/llm-movieagent)
-    github_link_pattern = r'\[([^\]]+)\]\(\[([^\]]+)\]\((https://github\.com/[^/]+/[^/]+)\)\)'
+    # github_link_pattern = r'\[([^\]]+)\]\(\[([^\]]+)\]\((https://github\.com/[^/]+/[^/]+)\)\)'
+    # do_not_match = '![GitHub Repo stars]'
+    # # Replacement function that checks if do_not_match is in the matched string
+    # def replacement(match):
+    #     if do_not_match in match.group(0):
+    #         return match.group(0)
+    #     return f'[{match.group(1)}]({match.group(3)})'
+        
+    github_link_pattern = r'\[([^\]]+)\]\(https://github\.com/([^/]+/[^/]+)\)'
     do_not_match = '![GitHub Repo stars]'
+
     # Replacement function that checks if do_not_match is in the matched string
     def replacement(match):
-        if do_not_match in match.group(0):
+        # Check if the line starts with ??? or !!!
+        if match.string.strip().startswith(('???', '!!!')):
+            # If do_not_match is found in the line, return the original match
+            if '![GitHub Repo stars]' in match.string:
+                return match.group(0)  # Returns the entire match if do_not_match is present
+            else:
+                # Otherwise, proceed with creating a replacement string
+                repo_name = match.group(2)
+                return f'![GitHub Repo stars](https://badgen.net/github/stars/{repo_name}) [{match.group(1)}]({match.group(0)})'
+        else:
+            # If the line does not start with ??? or !!!, return the original match
             return match.group(0)
-        return f'[{match.group(1)}]({match.group(3)})'
-        
 
     with open(file_path, 'r+', encoding='utf-8') as file:
         lines = file.readlines()
