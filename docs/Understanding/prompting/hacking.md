@@ -12,6 +12,8 @@ Prompt hacking involves the manner of getting interfaces to do a. Do something t
 
 ??? tip "[CodeAttack: Revealing Safety Generalization Challenges of Large Language Models via Code Completion](https://arxiv.org/pdf/2403.07865)"
     Uses code snippets to trick LLM to completing it. 
+    <img width="631" alt="image" src="https://github.com/user-attachments/assets/2d225075-7724-4690-bc72-7fb06844cc68">
+
 
 Note, these prompts are shared to help enable robust systems. Free 'red teaming', these prompts will help you to test your prompt security
 
