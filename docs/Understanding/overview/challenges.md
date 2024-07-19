@@ -17,7 +17,7 @@ The challenges associated with GenAI can be broadly categorized into [technical 
     * Improve learning from human preferences
     * Improving [UI/UX experience](../building/front_end.md) with GenAI
     
-### Hallucinations
+### Hallucinations and Confabulations
 
 There are a number of issues related to modle accuracy that pose challenges for GenAI models. Most prominant among them are the effect of _Hallucinations_. Models hallucinate, by making up facts or sentences that have no reasoanble bearing to reality.
 

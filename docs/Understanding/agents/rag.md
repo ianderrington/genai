@@ -6,7 +6,7 @@ Trained and fine-tuned LLMs can generate high quality results, though their gene
 * Lack of **attributon** making it difficult to ascertain validity
 * **Staleness** due to new or updated information 
 
-**Retrieval-Augmented Generation (RAG) helps to solve these** by coupling the information to external memory.  
+**Retrieval-Augmented Generation (RAG) helps to solve these** is a context-augmentation method by coupling the information to external memory.  
 
 Here is a basic comparison of the two: 
 

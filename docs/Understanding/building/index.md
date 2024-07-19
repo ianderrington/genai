@@ -57,7 +57,7 @@ Costs
 
 The models must be capable of delivering the required content with an acceptable latency to meet the requirements. 
 
-You might decide to rely on an API to handle model responses. Alternatively you may use an [pre-trained model](pre_trained_model.md), 
+You might decide to rely on an API to handle model responses. Alternatively you may use an [pre-trained model](pre_trained_models.md), 
 To reduce development costs using smaller/cheaper models may be preferred to get a working solution. 
 
 However, for wider scale deployment it will be crucial to [optimize](../../Understanding/architectures/optimization/index.md) your models' serving. Using services that try to optimize this for you, like [OpenRouter](https://openrouter.ai/) may be helpful.
@@ -101,7 +101,7 @@ The allocated budget will affect your tool's monetization strategy.
     Important patterns mentioned (references to discussions herein):    
     * [Evaluating and comparing](evaluating_and_comparing.md)
     * [Retreival Augmented Generation (RAG)](../agents/rag.md)
-    * [Fine tuning](optimization/index.md#finetuning)
+    * [Fine tuning](../architectures/optimization/index.md#finetuning)
     * [Caching](../agents/memory.md#caching) to reduce latency.
     * [Guardrails](../agents/cognitive_architecture.md#guardrails) to ensure output (and input) quality.
     * Data Flywheel to use data collection and feedback to improve model and experience
