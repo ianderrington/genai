@@ -24,10 +24,12 @@ def crawl_directory(directory, file_types, ignores=None):
         indent = '#' * depth + '#'
         relative_path = os.path.relpath(root, directory)
         markdown_content += f"{indent} {relative_path}\n"
-        
+
+        files = [f for f in files if f not in ignores] 
+    
         for file in files:
-            if file in ignores:
-                continue
+            # if file in ignores:
+            #     continue
             if any(file.endswith(ft) for ft in file_types):
                 filepath = os.path.join(root, file)
                 content = get_file_content(filepath)
@@ -48,8 +50,9 @@ def main():
 
     args = parser.parse_args()
     # Prevent recursive generation by adding this ignore, just in case 'md' is in the types
-    ignore = args.ignore + [args.output]
-    markdown_content = crawl_directory(args.directory, args.types, args.ignore)
+    BASE_IGNORES = ["__pycache__", ".git", ".vscode", ".idea", ".ipynb_checkpoints", "venv", ".pytest_cache", ".mypy_cache", ".DS_Store"]
+    ignores = BASE_IGNORES + args.ignore + [args.output]
+    markdown_content = crawl_directory(args.directory, args.types, ignores=ignores)
     if args.tree:
         # run a bash tree command and capture the output
         from genai.tools.dir_utils import get_tree_structure
