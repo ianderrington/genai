@@ -1,0 +1,11 @@
+bs4
+weaviate-client
+langchain==0.1.6
+qdrant-client
+openai
+python-dotenv
+unstructured[md]
+tiktoken
+ipdb
+streamlit
+duckduckgo-search

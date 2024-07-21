@@ -21,14 +21,11 @@ class Y2MDEntry:
         self.template_dir = v.get('template_dir', None)
         if self.template_dir is None:
             raise ValidationError('template_dir not found in entry {}'.format(v))
-        # self.recursive = v.get('recursive', True)
-        # self.output_dir = v.get('output_dir', self.input_dir)
-        # self.toc_path = v.get('toc_path', None)
+
 
     def __str__(self):
         return f"template_dir: {self.template_dir}"
-        # return "input_dir: {}; output_dir: {}: recursive: {}".format(
-        #     self.input_dir, self.output_dir, self.recursive)
+
 
 
 class Y2MDList(OptionallyRequired):

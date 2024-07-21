@@ -16,7 +16,7 @@ from genai.memory.utils import KeyDict
 
 from genai.memory.downloader import url_downloader
 
-def parse_markdown(file_path):
+def extract_hrefs(file_path):
     """Parse markdown file and extract links"""
     with open(file_path, "r") as f:
         md = markdown.markdown(f.read())
@@ -61,7 +61,7 @@ def create_documention_graph(root_path, output_path, download_content=False, ove
             if file.endswith('.md') :
                 G.add_node(file_path, type='local')
                 G.add_edge(root, file_path)
-                for link in parse_markdown(file_path):
+                for link in extract_hrefs(file_path):
                     if not link:
                         continue
                     if '#' in link:

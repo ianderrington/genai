@@ -1,0 +1,1 @@
+DOCS_INDEX_NAME="Article"

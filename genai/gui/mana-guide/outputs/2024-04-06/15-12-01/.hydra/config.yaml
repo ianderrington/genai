@@ -1,0 +1,17 @@
+embedding_model: azure
+record_manager:
+  _target_: components.ingest.RecordManagerSQL
+  database_index_name: Article
+  database_name: qdrant
+vector_manager:
+  _target_: components.ingest.VectorManagerQdrant
+  vector_database_path: http://localhost:6333
+  vector_collection_name: Article
+ingestor:
+  _target_: components.ingest.Ingestor
+get_docs:
+  _target_: components.ingest.GetDocs
+  chunk_size: 1000
+  chunk_overlap: 100
+target_docs: null
+use_multithreading: true

@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mana_guide"
+version = "2024.3.27"
+dependencies = [
+   "bs4",
+    "weaviate-client",
+    "langchainhub",
+    "langchain==0.1.6",
+    "langchain_experimental",
+    "qdrant-client",
+    "openai",
+    "python-dotenv",
+    "unstructured[md]",
+    "tiktoken",
+    "ipdb",
+    "streamlit",
+    "duckduckgo-search",
+    "langchain_openai",
+    "numexpr",
+    "datasets",
+    "ragas",
+    "hydra-core",
+]
+requires-python = ">=3.10"
+authors = [
+  {name = "Ian Derrington", email = "ian.derrington@gmail.com"},
+]
+maintainers = [
+  {name = "Ian Derrington", email = "ian.derrington@roache.com"},
+]
+description = "A collection of core components needed to run LLM applications"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = ["llm"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+
+[project.scripts]
+core-rag-compare = "mana_guide.components.evaluation.rag_retrieval_ragas:main"
+
+[project.gui-scripts]
+core-gui = "mana_guide.gui.entry_point:main"
