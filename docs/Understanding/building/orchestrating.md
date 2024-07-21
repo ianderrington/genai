@@ -174,11 +174,12 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 ### Agents
 
-- [AgentOps](https://github.com/AgentOps-AI/agentops)
+!!! abstract "[AgentOps](https://github.com/AgentOps-AI/agentops)"
 
 
-[LangSmith](https://docs.smith.langchain.com/api-docs)
 
-[Helicone](https://www.helicone.ai)
+!!! abstract "[LangSmith](https://docs.smith.langchain.com/api-docs)"
 
-[AgentOps](https://www.agentops.ai)
+!!! note "[Helicone](https://www.helicone.ai)"
+
+!!! note "[AgentOps](https://www.agentops.ai)"

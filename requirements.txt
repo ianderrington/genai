@@ -1,4 +1,3 @@
-aiohttp
 aiosignal
 annotated-types
 anyio
