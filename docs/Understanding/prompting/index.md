@@ -2,7 +2,7 @@ Prompts detail the manner in which a Generative AI model should be producing out
 
 Because often an individual query or generation may be insufficient to produce the desired outputs, it may be necessary to use [cognitive architectures](../agents/cognitive_architecture.md) including _chains_ and _graphs_  that consist of multiple, and often different individual prompts and calls to LLM models.
 
-This page, we describe one-shot prompting methods, may function with a single call to an LLM. Note that much of what is applicable in single-prompts may transfer to the [cognitive architectures](../agents/cognitive_architecture.md). 
+This page, we describe prompting methods, may function with a single call to an LLM. Note that much of what is applicable in single-prompts may transfer to the [cognitive architectures](../agents/cognitive_architecture.md). 
 
 It is important to note, that while [manual methods](#manual-methods) are helpful, if not essential, [automatic methods](#automatic-prompting-methods) have become common and may help to reduce burdens of identifying sufficiently optimal prompts for certain models and situations. Because providing additional context through few-shot examples can improve results, [retrieval augmented prompting](#retrieval-augmented-prompting) can be successfully used to extract more effective solutions. 
 
@@ -13,26 +13,49 @@ It has been found that the quality of responses is governed by the quality of th
 !!! tip "Using examples: give both good and bad."
     It can be good to give both good and bad examples. Optionally: _Explain why bad examples are bad_.
 
+### General Terms
+
+MANAGEN: Provide reasonable definitions of all of the empty below. Use markdown boldface: 
+
+Prompt
+Prompt Template
+Prompt Chain
+Prompting, Prompting Frameworks, Prompting Techniques
+Prompt Engineering and Prompt Engineering Techniques
 
 
+### Components
 
+### Content
+Directive (purpose)
+Formating
+Style
+Role
+Augmentations: Emotion Prompting, `System 2 prompting`
+
+#### In Context Learning
+One-shot and Multishot
+Exemplars
+Exemplar Quanity
+Exemplar Quality
+Exemplar Selection
  
 ## Manual Prompting Methods
 
+
 ### General Advice
 
-- Give clearer instructions
-- Use a [prompt pattern](#prompt-pattern) to provide useful or necessary information  
-- Split complex tasks into simpler subtasks
+- Give clear instructions, minimizing grammar and language errors
+- Use a [prompt pattern](#prompt-pattern) to provide useful and necessary information  
+- Split complex tasks into simpler subtasks, break prompts into smaller prompts that can be later assembled.
 - Structure the instruction to keep the model on task
 - Prompt the model to explain before answering
 - Ask for justifications of many possible answers, and then synthesize
 - Generate many outputs, (and then use the model to pick the best one)
-- Fine-tune custom models to maximize performance
-- Provide several examples to ground it
+- Provide  examples to ground it
   -  Good to evaluate this and see if input examples give expected scores. Modify the prompt if it isn't.
-- Consider prompt versioning to keep track of outputs more easily.
-- Break prompts into smaller prompts
+- Use prompt versioning to keep track of outputs more easily.
+
 - More advanced? try [cognitive topologies](../agents/cognitive_architecture.md#cognitive-topologies) like Chain of Thought Prompting
 
 
@@ -150,7 +173,7 @@ It can be quite helpful to create prompts that are more human-in nature. There a
 
 
 
-### Prompt Patterns
+### Prompt Frameworks and Techniques
 
 ???+ info "Context, Task, Persona, Tone, Examples, Format"
     | **Category** | **Description**                                                                                         |
@@ -175,7 +198,7 @@ It can be quite helpful to create prompts that are more human-in nature. There a
     [Paper](https://arxiv.org/pdf/2401.12954.pdf)
 
     
-### Observed Frameworks:
+### Prompting Frameworks
 
 
 ???+ info "Who How What How?"
@@ -308,7 +331,13 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 
 
 
-## Best practices, guides and surveys
+## Guides and surveys of best practices
+
+??? abstract "[The Prompt Report: A Systematic Survey of Prompting Techniques](https://arxiv.org/pdf/2406.06608)"
+
+
+??? abstract "[A Survey of Prompt Engineering Methods in Large Language Models for Different NLP Tasks](https://arxiv.org/abs/2407.12994)"
+
 
 !!! tip "[Techniques to improve reliability](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md#how-to-improve-reliability-on-complex-tasks) By OpenAI"
 ??? abstract "[A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/pdf/2302.11382.pdf)"

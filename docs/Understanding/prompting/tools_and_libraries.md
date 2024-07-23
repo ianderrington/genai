@@ -2,7 +2,8 @@
 
 ## Open source libraries and collections
 
-!!! abstract "[Quality Prompts](https://github.com/sarthakrastogi/quality-prompts) provides an interface to 
+!!! abstract "[Quality Prompts](https://github.com/sarthakrastogi/quality-prompts) provides an interface to access prompts identified in [this](https://arxiv.org/pdf/2406.06608) paper"
+
 !!! [tip](https://learnprompting.org/) "![GitHub Repo stars](https://badgen.net/github/stars/meistrari/prompts-royale) [Prompt Royale](https://github.com/meistrari/prompts-royale) Provides the ability to automatically generate prompts to test around the same general theme."
 
 !!! [tip](https://learnprompting.org/) "[Llangchain prompthub](https://smith.langchain.com/hub)

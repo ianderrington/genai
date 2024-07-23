@@ -1,4 +1,4 @@
-# %%
+# Description: This script is used to scrape data from a website using the SmartScraperGraph class.
 from scrapegraphai.graphs import SmartScraperGraph
 
 graph_config = {
