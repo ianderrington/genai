@@ -130,7 +130,7 @@ plugins:
   # - pheasant
   - include-markdown
   ## Categories are better than tags but they don't link to the right place
-  # - tags
+  - tags
       # tags_file: tags.md
   # - section-index # DOES NOT WORK WITH BLOG
   - table-reader:
