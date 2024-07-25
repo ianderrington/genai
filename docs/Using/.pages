@@ -1,8 +1,7 @@
 nav:
     - index.md
-    - examples
+    - strategically
     - ethically
-    - building_or_buying.md
     - managing
-    - marking_and_detecting.md
     - ...
+    - examples

@@ -1,3 +1,5 @@
+
+
 Transformers are a powerful type of architecture that allows input sequences to be considered with the whole input context. They are built on the [self-attention](https://arxiv.org/pdf/1706.03762.pdf) mechanism, which performs an $O(N^2)$ computation on the input sequence. In continued stacks, this provides the ability to represent relations between inputs at different levels of abstraction.
 
 Transformers can be used in three general ways: encoder-only, decoder-only, and encoder-decoder.
@@ -14,7 +16,7 @@ As described in the original [Transformer attention paper](https://arxiv.org/pdf
 
 ### Decoder-Only Networks
 
-In decoder-only networks, like [GPT](gpt.md), the model performs next-token predictions, requiring information only from previously seen words/tokens. The outputs are estimates of the probability of the next word/token. While next-token prediction is singular, this can happen iteratively, and with the proper prompting, the generation of output sequences can perform a variety of sequence-to-sequence tasks, such as language translation.
+In decoder-only networks, like [GPT](../gpt.md), the model performs next-token predictions, requiring information only from previously seen words/tokens. The outputs are estimates of the probability of the next word/token. While next-token prediction is singular, this can happen iteratively, and with the proper prompting, the generation of output sequences can perform a variety of sequence-to-sequence tasks, such as language translation.
 
 ## Key Components of Transformers
 

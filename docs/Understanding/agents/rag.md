@@ -9,7 +9,7 @@ Trained and fine-tuned LLMs can generate high quality results, though their gene
 **Retrieval-Augmented Generation (RAG) helps to solve these** is a context-augmentation method by coupling the information to external memory.  
 
 Here is a basic comparison of the two: 
-
+in
 !!! example "Comparison with/without RAG"
 
     === "With"

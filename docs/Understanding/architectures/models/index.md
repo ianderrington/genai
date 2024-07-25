@@ -15,7 +15,7 @@ Different model classes of models can often be used with multiple types of model
 
 - [Transformers](./transformers.md)
 - [Reinforcement Learning](./reinforcement_learning.md)
-- [Diffusers](./diffusers.md)
+- [Diffusion models](./diffusion_models.md)
 - [Generative Adversarial Networks](./gans.md)
 - [Developing Architectures](./developing_architectures.md)
 

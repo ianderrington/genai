@@ -67,7 +67,7 @@ We are committed to building a welcoming, inclusive, and respectful community. H
 - Give and gracefully accept constructive feedback. 🌟
 - Focus on what is best for the community. 🌈
 
-For a more detailed set of guidelines, please refer to our [Code of Conduct](CODE_OF_CONDUCT.md), which outlines our expectations for participants, as well as the consequences for unacceptable behavior.
+For a more detailed set of guidelines, please refer to our [Code of Conduct](code_of_conduct.md), which outlines our expectations for participants, as well as the consequences for unacceptable behavior.
 
 We hope these guidelines help make your experience a fruitful and enjoyable one.
 

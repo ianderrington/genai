@@ -202,7 +202,7 @@ What do you need to know?
 ???+ important "See these first" 
     - 🤔 Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it. 
     - 📊 Understand the [**data**](./data/index.md) and collect data that you need. 
-    - 🚢 Consider [**Model Architectures**](./architectures/index.md) use [**pre-trained**](./architectures/pre_trained_models.md) models if possible. 
+    - 🚢 Consider [**Model Architectures**](./architectures/index.md) use [**pre-trained**](./building/pre_trained_models.md) models if possible. 
     - [💬 Prompts](prompting/index.md) govern how we interact with the models. 
     - [🔧 Optimize](./architectures/optimization/index.md) your model for better performance and efficiency. 
     
@@ -219,7 +219,7 @@ In the documents you read here, you will be able to see an increasingly consiste
 
 ⾾ Competition is fierce to create the 'best' (based on certain metrics) Gen()AI, so much knowledge may not be known to protect IP and other secrets.
 
-Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](architectures/pre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made.
+Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](./building/pre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made.
 
 If you are working on commercial projects, be sure to look at the Licenses to ensure you are legally compliant.
 
@@ -228,7 +228,7 @@ If you are working on commercial projects, be sure to look at the Licenses to en
 Generative AI is a subset of machine learning that aim to creates new data samples or information based on an input. This technology has gained significant attention recently because they have been able to produce high-quality, realistic data across various domains, from images and videos to text and audio. 🌈
 
 !!! warning "Presentation bias"
-    This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../contributing.md)
+    This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managenai/contributing.md)
 
 
 ## Useful Resources

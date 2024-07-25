@@ -1,4 +1,4 @@
-Generative AI (GenAI) is revolutionizing the education sector in numerous ways. It is important to note that GenAI has the potential to replace traditional learning methods such as essay-writing, research, and critical thinking, much like how calculators replaced the need for learning basic arithmetic. While this [challenge](../../../ethically/alignment_and_exestential_concerns.md) warrants thoughtful discussion, our focus here is on the positive ways in which GenAI can enhance learning solutions.
+Generative AI (GenAI) is revolutionizing the education sector in numerous ways. It is important to note that GenAI has the potential to replace traditional learning methods such as essay-writing, research, and critical thinking, much like how calculators replaced the need for learning basic arithmetic. While this [challenge](../../../ethically/alignment_and_existential_concerns.md) warrants thoughtful discussion, our focus here is on the positive ways in which GenAI can enhance learning solutions.
 
 ## The Significance of GenAI in Education
 

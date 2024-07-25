@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-Building a GenAI application 'from scratch' can be a very daunting process considering the [the stack](#the-stack) that is involved. Quite fortunately, many tools, services, and libraries exist to accelerate a full-stack GenAI solution. It would also be worthwhile to consider [building or buying](../../Using/building_or_buying.md). 
+Building a GenAI application 'from scratch' can be a very daunting process considering the [the stack](#the-stack) that is involved. Quite fortunately, many tools, services, and libraries exist to accelerate a full-stack GenAI solution. It would also be worthwhile to consider [building or buying](../../Using/strategically/building_or_buying.md). 
 
 Lets first look at the components that need to be put together. 
 
@@ -16,15 +16,15 @@ Lets first look at the components that need to be put together.
 | Layer 3: Application | [**🖥 UI/UX Front ends**](./front_end.md)       |  GUIs and interfaces are specifically designed for **streamlined connection** with GenAI models.         |
 |                   | [**📝 System evaluators**](../agents/evaluating_and_comparing.md)            |Systems for assessing the **performance** and **effectiveness** of AI systems.      |   
 |                   |  [**🧩 Orchestration Tools**](./orchestrating.md)          |  Languages and services to create and coordinate **LLM-chains**, agents workflows involving **memory**.          |
-|                   | [**🗄  Vector Database**](./vector_databases.md)              | Methods of **storing/indexing** and **retrieving documents**.         |
+|                   | [**🗄  Memory **](./memory.md)              | Methods of **storing/indexing** and **retrieving documents**.         |
 |                   | [**📊  Prompt Management**](../prompting/index.md#libraries-and-collections)  |Systems to manage and refine the **prompts** used in conversational AI.          |   
 |                   | [**🔧  Model Optimization**](../architectures/optimization/index.md) | Methods of enabling models to fulfill **customer requirements**. |              
 | Layer 2: Models   | [**🚀  Model Serving**](./model_serving.md) | Services to deploy and coordinate model inference **at scale**.   | 
 |                   | [**💻 Computation**](./computation.md)          | Providers of computational resources, specifically **GPUs**, for AI processing.  |              
 |                   |[**🔄 ML Ops**](#ml-ops)    | ML operations enable efficient coordination around **Model training** and **tracking**. | 
-|                   | [**🏋️ Model Training**](./training.md)          | Tools **safety** of AI systems.            |
+|                   | [**🏋️ Model Training**](../architectures/training/index.md)          | Tools **safety** of AI systems.            |
 |                   | [**📊 Model comparisons**](../architectures/evaluating_and_comparing.md)|  Methods of **evaluating** and **comparing models** across baselines and benchmarks.| 
-|                   | [**🧠 Pretrained Models**](../architectures/pre_trained_models.md)   | Pre-built models offering a range of **capabilities** and **uses**.                  |        
+|                   | [**🧠 Pretrained Models**](./pre_trained_models.md)   | Pre-built models offering a range of **capabilities** and **uses**.                  |        
 |                   | [**📚 AI software libraries**](#ai-software-libraries)   | Higher level languages that enable **AI/ML training**.                 | 
 | Layer 1: Data     | [**🧼 Data Processing**](./data.md)  | Tools for **cleaning**, **normalizing**, and preparing data for analysis.            |   |
 |                   | [**🔄 ETL + Data Pipelines**](./data.md#etl-pipelines) | Tools to **find**, **extract**, **transform**, and **load** data, and to manage **data flow**.    |
@@ -99,7 +99,7 @@ The allocated budget will affect your tool's monetization strategy.
 ???+ tip "[LLM Patterns](https://eugeneyan.com/writing/llm-patterns/) An impressively thorough and well-written discussion on LLMs and patterns within them"
 
     Important patterns mentioned (references to discussions herein):    
-    * [Evaluating and comparing](evaluating_and_comparing.md)
+    * [Evaluating and comparing](../architectures/evaluating_and_comparing.md)
     * [Retreival Augmented Generation (RAG)](../agents/rag.md)
     * [Fine tuning](../architectures/optimization/index.md#finetuning)
     * [Caching](../agents/memory.md#caching) to reduce latency.

@@ -3,16 +3,14 @@ Gen()AI has increasing value when it can be integrated with software UI that peo
 ## Closed Source
 The integrations with closed source systems are myriad. Because interfacing is key, those interfaces that already exist can be augmented with AI to improve the manner tha people work with them. 
 
-!!! note "[Google Suite](https://www.google.com) provides connectio to `Gemini` and similar models across a great variety of apps."
+!!! note "[Google Suite](https://www.google.com) provides connection to `Gemini` and similar models across a great variety of apps."
 
-!!! note "[MS office](https://www.microsoft.com/en-us/microsoft-365/products-apps-services) provides connection to Chat-GPT models. "
+!!! note "[MS office](https://www.microsoft.com/en-us/microsoft-365/products-apps-services) provides connection to Chat-GPT models."
 !!! note "[Notion](https://www.notion.so)"
 
 !!! note "[Mem](https://www.mem.ai)"
 
-
 !!! important "If you have one, please ask to add it in an [issue](https://github.com/ianderrington/genai/issues) or [contribute](../../Managenai/contributing.md) to the change!"
-
 
 ## Open Source
 

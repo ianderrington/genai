@@ -1,8 +1,6 @@
 Security of LLM's is multi fold. For security of the data, security of the models, and security of prompts. One is that the improper use of the models while under the control of the models, the other is for the theft of model information to the model itself. 
 
-Security for LLMs involves the protection of propriatary information, or personal identifiable information (PII) that is used in creation or deployment of a model.
-
-
+Security for LLMs involves the protection of proprietary information, or personal identifiable information (PII) that is used in creation or deployment of a model.
 
 ### Demonstrations
 
@@ -11,7 +9,6 @@ Security for LLMs involves the protection of propriatary information, or persona
     Wherein the authors introduce Vec2text, a method that can accurately recover (short) texts, given access to an embedding model.
     This means that while those high-dimensional embedding vectors can be used to reconstructed the text that led to them.
     This includes important personal information (as in from a dataset of clinical notes).
-
 
 ## To Integrate
 

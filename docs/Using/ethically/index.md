@@ -1,11 +1,7 @@
-
 !!! quote "Be sure to consider the unintended consequences."
     - Sundar Pichai, Google's CEO
 
-
-
-
-Core elements in AI governance require ethics to guide AI governance. While there are many variations surrounding thes, from sources such as [this one](https://www.pdpc.gov.sg/-/media/files/pdpc/pdf-files/resource-for-organisation/ai/sgmodelaigovframework2.pdf), they can include considerations such as the following:
+Core elements in AI governance require ethics to guide AI governance. While there are many variations surrounding these, from sources such as [this one](https://www.pdpc.gov.sg/-/media/files/pdpc/pdf-files/resource-for-organisation/ai/sgmodelaigovframework2.pdf), they can include considerations such as the following:
 
 1. Human-centric: Amplifies the capabilities and protects the interests of people. 
 2. Transparency: All aspects of the AI system and its development are thoughtfully described and documented.
@@ -16,9 +12,7 @@ Core elements in AI governance require ethics to guide AI governance. While ther
 7. Observability: Allows one to observe the AI to be evaluated
 8. Positive Impact: Creates positive value for all parties
 9. Private: Appropriately protects the privacy rights of people
-10. Secure: Cannot be mis-used intentionally or unintentionally
-
-
+10. Secure: Cannot be misused intentionally or unintentionally
 
 ## Bias and Fairness
 
@@ -59,7 +53,9 @@ Ensure that AI systems respect user privacy by incorporating privacy-preserving 
 ## Data Privacy
 
 ### Anonymization and De-identification
-Use anonymization and de-identification techniques to protect user data while still allowing for meaningful analysis.
+Use anonymization and de-identification techniques
+
+ to protect user data while still allowing for meaningful analysis.
 
 ### Encryption and Secure Computing
 Implement encryption and secure computing practices to protect data at rest and in transit.

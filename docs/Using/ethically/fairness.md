@@ -36,5 +36,4 @@ Diversity in Design: This involves ensuring that the teams creating AI systems a
 
 Accessibility: AI systems should be designed in ways that they can be used and understood by people with varying abilities, languages, and cultural contexts.
 
-
 NOTE: Generated with GPT-4
