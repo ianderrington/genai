@@ -23,7 +23,22 @@ Generative AI has one of the most powerful potentials for science by enabling ra
 
 ## Research
 
-??? note "[https://arxiv.org/pdf/2404.07738.pdf](https://arxiv.org/pdf/2404.07738.pdf)"
+??? note "[ResearchAgent: Iterative Research Idea Generation over Scientific Literature with Large Language Models](https://arxiv.org/pdf/2404.07738.pdf)" research-agent
+    **Developments** The authors demonstrate a LLM-enabled research agent to do several things: 
+    
+        | "Research Idea Generation The goal of the research idea generation task is to formulate new
+        and valid research ideas, to enhance the overall efficiency of the first phase of scientific discovery,
+        which consists of three systematic steps: identifying problems, developing methods, and designing
+        experiments
+    
+    <img width="581" alt="image" src="https://github.com/user-attachments/assets/6c5d014a-548f-4e93-b79a-3b2a207beacf">
+
+    They provide the following prompt to make this very useful. They can be seen in the site ./prompts/. We will make these viewable later.
+
+    
+
+    
+
 
 ## Autonomous Science in the Loop
 
@@ -42,6 +57,7 @@ There are components of include
     <img width="741" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5baa36c3-a3b0-4021-82da-c1f1aa6ea2a7">
     [Paper](https://www.nature.com/articles/s41586-023-06792-0)
     [Arxiv](https://arxiv.org/pdf/2304.05332.pdf)
+    
     
 ### Protocol Optimization
 
@@ -66,6 +82,21 @@ Measurement optimization involves improving the ability to measure something. Th
 ### Robotic automation
 
 Autonomous laboratories are controlled by different robotics setups and automation languages including specific ones Lua or more general in-house control systems. 
+
+## Risks to Consider
+
+Like the use of GenAI in other domains, it is essential to consider the [risks](../../de-risking/index.md) associated with its application, in this case to Science. 
+
+These risks can be considered quite generally, in the following categories
+1. Incorrect output
+2. Potentially, or likely, harmful output
+
+We share information below related to understanding and safeguarding the application of LLMs and agents when applied in the scientific domain. 
+
+??? important "[Prioritizing Safeguarding Over Autonomy: Risks of LLM Agents for Science](https://arxiv.org/pdf/2402.04247)"
+    **Developments:** The authors present Vulnerabilities and solutions to the use of LLM Agents describing a triadic interaction between people, LLM agents, and environments.
+    <img width="330" alt="image" src="https://github.com/user-attachments/assets/889f4ad6-4aa9-43c7-83ef-40407136b687">
+
 
 
 
