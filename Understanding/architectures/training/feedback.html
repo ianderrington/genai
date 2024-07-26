@@ -6740,7 +6740,7 @@ and
 <p>The process of generating responses can be likened to navigating through a maze of tokens. The final generation token, 'EOF', signifies the end of the output and the completion of a path through the maze, which is the 'destination'. The quality of this path depends on the individual steps taken while navigating the maze. It is possible to take wrong 'turns' in the maze, resulting in a 'wrong' or suboptimal path when the generation arrives at the final destination. This is where <a href="#feedback">feedback</a> comes into play, guiding the path through the maze towards a more correct destination. </p>
 </div>
 <p>Feedback can be provided by humans, referred to as <a href="#feedback">human-feedback (HF)</a>, or by AI, known as <a href="#ai-feedback">AI-feedback (AIF)</a>, or a combination of both. </p>
-<p>[^n1]Note: This is different from <a href="recursive.html">recurrent_training</a> where a model is used to generate training examples to improve the training of a subsequent model. </p>
+<p>[^n1]Note: This is different from <a href="recursive.html">recursive_training</a> where a model is used to generate training examples to improve the training of a subsequent model. </p>
 <p>Feedback-based model updates can be categorized into two types: those that use <a href="#reinforcement-learning-based-feedback">reinforcement learning</a> (RL) and those that use <a href="#rl-free-feedback">RL-free feedback</a>. </p>
 <p>Prominent models, like GPT-4, <a href="#RLHF">Reinforcement Learning with Human Feedback, RLHF</a>, has enabled some of the most powerful models. </p>
 <div class="admonition note">
