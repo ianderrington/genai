@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://www.managen.ai/Understanding/architectures/training/feedback.html">
       
       
-        <link rel="prev" href="distributed.html">
+        <link rel="prev" href="finetuning.html">
       
       
-        <link rel="next" href="../gpt.html">
+        <link rel="next" href="recursive.html">
       
       
         
@@ -1780,60 +1780,6 @@ and
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="recurrent.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Recurrent
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="distributed.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Distributed
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2022,6 +1968,60 @@ and
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="recursive.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="distributed.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -6740,7 +6740,7 @@ and
 <p>The process of generating responses can be likened to navigating through a maze of tokens. The final generation token, 'EOF', signifies the end of the output and the completion of a path through the maze, which is the 'destination'. The quality of this path depends on the individual steps taken while navigating the maze. It is possible to take wrong 'turns' in the maze, resulting in a 'wrong' or suboptimal path when the generation arrives at the final destination. This is where <a href="#feedback">feedback</a> comes into play, guiding the path through the maze towards a more correct destination. </p>
 </div>
 <p>Feedback can be provided by humans, referred to as <a href="#feedback">human-feedback (HF)</a>, or by AI, known as <a href="#ai-feedback">AI-feedback (AIF)</a>, or a combination of both. </p>
-<p>[^n1]Note: This is different from <a href="recurrent.html">recurrent_training</a> where a model is used to generate training examples to improve the training of a subsequent model. </p>
+<p>[^n1]Note: This is different from <a href="recursive.html">recurrent_training</a> where a model is used to generate training examples to improve the training of a subsequent model. </p>
 <p>Feedback-based model updates can be categorized into two types: those that use <a href="#reinforcement-learning-based-feedback">reinforcement learning</a> (RL) and those that use <a href="#rl-free-feedback">RL-free feedback</a>. </p>
 <p>Prominent models, like GPT-4, <a href="#RLHF">Reinforcement Learning with Human Feedback, RLHF</a>, has enabled some of the most powerful models. </p>
 <div class="admonition note">
@@ -6935,9 +6935,9 @@ and
         
           
           <a
-            href="distributed.html"
+            href="finetuning.html"
             class="md-footer__link md-footer__link--prev"
-            aria-label="Previous: Distributed"
+            aria-label="Previous: Finetuning"
           >
             <div class="md-footer__button md-icon">
               
@@ -6948,7 +6948,7 @@ and
                 Previous
               </span>
               <div class="md-ellipsis">
-                Distributed
+                Finetuning
               </div>
             </div>
           </a>
@@ -6958,16 +6958,16 @@ and
         
           
           <a
-            href="../gpt.html"
+            href="recursive.html"
             class="md-footer__link md-footer__link--next"
-            aria-label="Next: Gpt"
+            aria-label="Next: Recursive"
           >
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Gpt
+                Recursive
               </div>
             </div>
             <div class="md-footer__button md-icon">
