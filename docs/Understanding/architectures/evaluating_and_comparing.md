@@ -53,7 +53,11 @@ The ability for an LLM to 'recall' information within its context window is an i
 
 In ideal systems, context retrieval will be independent of the position within the context, and of the content itself. 
 
-??? important "![GitHub Repo stars](https://badgen.net/github/stars/gkamradt/LLMTest_NeedleInAHaystack) [Testing with LLMTest_NeedleInAHaystack repo](https://github.com/gkamradt/LLMTest_NeedleInAHaystack) shows where in the context space that LLMs may fail at context retrieval." 
+??? abstract "![NeedleBench: Can LLMs Do Retrieval and Reasoning in 1 Million Context Window?](https://github.com/open-compass/opencompass)" needlebench
+    [paper](https://arxiv.org/pdf/2407.11963)
+
+
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/gkamradt/LLMTest_NeedleInAHaystack) [Testing with LLMTest_NeedleInAHaystack repo](https://github.com/gkamradt/LLMTest_NeedleInAHaystack) shows where in the context space that LLMs may fail at context retrieval." 
     As demonstrated additionally in the authors' [youtube](https://www.youtube.com/watch?v=KwRRuiCCdmc)
 
 It was, however Anthropic found, that [LLMs can perform better](https://www.anthropic.com/news/claude-2-1-prompting) context retrieval when phrases are added: 
