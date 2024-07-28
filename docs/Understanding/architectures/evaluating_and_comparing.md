@@ -55,6 +55,7 @@ In ideal systems, context retrieval will be independent of the position within t
 
 ??? abstract "![NeedleBench: Can LLMs Do Retrieval and Reasoning in 1 Million Context Window?](https://github.com/open-compass/opencompass)" needlebench
     [paper](https://arxiv.org/pdf/2407.11963)
+    <img width="1163" alt="image" src="https://github.com/user-attachments/assets/f72b72f0-dc21-47c8-8436-a033721b74a1">
 
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/gkamradt/LLMTest_NeedleInAHaystack) [Testing with LLMTest_NeedleInAHaystack repo](https://github.com/gkamradt/LLMTest_NeedleInAHaystack) shows where in the context space that LLMs may fail at context retrieval." 
