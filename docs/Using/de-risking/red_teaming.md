@@ -35,6 +35,10 @@ ed a new divergence attack that causes the model to diverge from its chatbot-sty
 
 ## Further Reading
 
+!!! note "[AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases](https://arxiv.org/abs/2407.12784)"
+   <img width="544" alt="image" src="https://github.com/user-attachments/assets/e44d59fe-2eeb-4120-8047-e320f2476caf">
+
+
 For more information on red teaming in AI, consider the following resources:
 
 ^N1: [Hugging Face](https://huggingface.co/blog/red-teaming)
