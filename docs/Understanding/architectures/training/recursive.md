@@ -12,7 +12,10 @@ graph LR
   B --> C[Train Narrow and Task-Specific Model on Specific Data]
 ```
 
-## Example 
+## Research and Understanding
+
+?? note "[Beyond Model Collapse: Scaling Up with Synthesized Data Requires Reinforcement](https://arxiv.org/abs/2406.07515)"
+    
 
 Train on model trains a new model on the output of a new model.
 

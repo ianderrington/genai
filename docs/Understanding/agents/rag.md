@@ -2,7 +2,7 @@
 
 Trained and fine-tuned LLMs can generate high quality results, though their generated results will be generally confined to the information they have been trained on. Additionally, their responses can suffer from:
 
-* **Hallucinations** that create false or inaccurate information 
+* **[Confabulations and Hallucinations](../overview/challenges.md#hallucinations-and-confabulations)** that create false or inaccurate information 
 * Lack of **attributon** making it difficult to ascertain validity
 * **Staleness** due to new or updated information 
 
