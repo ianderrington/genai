@@ -5,7 +5,7 @@ The challenges associated with GenAI can be broadly categorized into [technical 
 ## Technical Challenges
 
 ???+ important "Technical challenges with GenAI" technical-challenges-with-genai
-    * Reducing [hallucinations](#hallucinations) and improving accuracy
+    * Reducing [hallucinations](#hallucinations-and-confabulations) and improving accuracy
     * Make LLMs generate results more [quickly and cheaply](../architectures/generation.md)
     * Optimize context length and context construction
     * [Training](../architectures/training/index.md) LLMs more efficiently 
@@ -19,9 +19,8 @@ The challenges associated with GenAI can be broadly categorized into [technical 
     
 ### Hallucinations and Confabulations
 
-There are a number of issues related to modle accuracy that pose challenges for GenAI models. Most prominant among them are the effect of _Hallucinations_. Models hallucinate, by making up facts or sentences that have no reasoanble bearing to reality.
+There are a number of issues related to modle accuracy that pose challenges for GenAI models. Most prominant among them are the effect of _Hallucinations_, or more linguistically, _confabulations_, though the former term is now firmly understood and established. Models confabulate, hallucinate, by making up facts or sentences that have no reasoanble bearing to reality.
 
-[Some studies](https://arxiv.org/pdf/2311.14648.pdf) indicate that the halluciantion-rate is related to the frequency that a fact appears only once in a data set, and that calibrated models, like those that are pre-trained, are more likely to hallucinate than those that do not have calibrated next-token predictions.
 
 ## Ethical Challenges
 

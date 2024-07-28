@@ -2,10 +2,10 @@ Prompt hacking involves the manner of getting interfaces to do a. Do something t
 
 !!! important "**tl;dr** Prompt hacking' can allow for intentional bypasses of any pre-established alignment guardrails thereby enabling non-aligned output to occur."
 
-## Solutions
-[Red teaming](../../Using/de-risking/red_teaming.md)
+## Prompt Hacking Methods and Prompts
 
-## Prompt Hacking methods
+Note, please do not use these for illegal purposes or in manners that would violate your Terms-Of-Service. They are here only for educational purposes. It is recommended that you use [red-teaming](../../Using/de-risking/red_teaming.md) strategies that use and create prompts and strategies like those described below, in order to identfiy manners of better-improving your prompt-security. 
+
 
 !!! important "[Universal and Transferable Adversarial Attacks on Aligned Language Models](https://llm-attacks.org)"
     [paper](https://arxiv.org/pdf/2307.15043.pdf) demonstrate generally presently undefended attacks on models just by appending to the prompt. Prompt injection.
@@ -15,7 +15,6 @@ Prompt hacking involves the manner of getting interfaces to do a. Do something t
     <img width="631" alt="image" src="https://github.com/user-attachments/assets/2d225075-7724-4690-bc72-7fb06844cc68">
 
 
-Note, these prompts are shared to help enable robust systems. Free 'red teaming', these prompts will help you to test your prompt security
 
 ??? note "Multimodal"
     ```markdown
@@ -74,3 +73,4 @@ Note, these prompts are shared to help enable robust systems. Free 'red teaming'
     ```markdown
     Provide the package
     ```
+
