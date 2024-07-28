@@ -18,7 +18,7 @@ Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/
 - **Tool use** While overlapping directly with Observing or taking memory actions, tool usage may be part of cognitive patterns (like using a `scratch-pad`) and must be considered as such.
 
 ### Models
-Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](#prompts), they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used to help model creation with [recurrent training](../architectures/training/recurrent.md).
+Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](#prompts), they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used to help model creation with [Recursive training](../architectures/training/recursive.md).
 
 ### Cognitive Architectures
 

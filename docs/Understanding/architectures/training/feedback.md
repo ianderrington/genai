@@ -7,7 +7,7 @@ In generation models, higher quality is generally found through feedback methods
 Feedback can be provided by humans, referred to as [human-feedback (HF)](#feedback), or by AI, known as [AI-feedback (AIF)](#ai-feedback), or a combination of both. 
 
 
-[^n1]Note: This is different from [recurrent_training](./recurrent.md) where a model is used to generate training examples to improve the training of a subsequent model. 
+[^n1]Note: This is different from [recursive_training](./recursive.md) where a model is used to generate training examples to improve the training of a subsequent model. 
 
 Feedback-based model updates can be categorized into two types: those that use [reinforcement learning](#reinforcement-learning-based-feedback) (RL) and those that use [RL-free feedback](#rl-free-feedback). 
 

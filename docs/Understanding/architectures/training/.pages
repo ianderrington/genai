@@ -2,5 +2,6 @@ nav:
   - index.md
   - pre-training.md
   - finetuning.md
-  - recurrent.md
+  - feedback.md
+  - recursive.md
   - ...

@@ -3,16 +3,16 @@
 
 Core elements in AI governance require ethics to guide AI governance. While there are many variations surrounding these, from sources such as [this one](https://www.pdpc.gov.sg/-/media/files/pdpc/pdf-files/resource-for-organisation/ai/sgmodelaigovframework2.pdf), they can include considerations such as the following:
 
-1. Human-centric: Amplifies the capabilities and protects the interests of people. 
-2. Transparency: All aspects of the AI system and its development are thoughtfully described and documented.
-3. Fairness: Equitable and beneficial for all
-4. Explainability: The AI's results can be understood and reproduced
-5. Sustainability: Minimizes environmental impact
-6. Accountability: Enabling actions to be taken to prevent future failures
-7. Observability: Allows one to observe the AI to be evaluated
-8. Positive Impact: Creates positive value for all parties
-9. Private: Appropriately protects the privacy rights of people
-10. Secure: Cannot be misused intentionally or unintentionally
+1. **Human-centric**: Amplifies the capabilities and protects the interests of people.
+2. **Transparency**: All aspects of the AI system and its development are thoughtfully described and documented.
+3. **Fairness**: Equitable and beneficial for all.
+4. **Explainability**: The AI's results can be understood and reproduced.
+5. **Sustainability**: Minimizes environmental impact.
+6. **Accountability**: Enabling actions to be taken to prevent future failures.
+7. **Observability**: Allows one to observe the AI to be evaluated.
+8. **Positive Impact**: Creates positive value for all parties.
+9. **Privacy**: Appropriately protects the privacy rights of people.
+10. **Security**: Cannot be misused intentionally or unintentionally.
 
 ## Bias and Fairness
 
@@ -28,7 +28,7 @@ Involve diverse teams in the model development process to ensure a variety of pe
 ### Transparency and Explainability
 Make models transparent and explainable to build trust and allow users to understand how decisions are made. Techniques like LIME and SHAP can help in explaining model predictions.
 
-## Interpretability
+## Interpretability 
 
 ### Techniques for Explainability
 Use methods such as feature importance, partial dependence plots, and surrogate models to make AI systems more interpretable.
@@ -53,9 +53,7 @@ Ensure that AI systems respect user privacy by incorporating privacy-preserving 
 ## Data Privacy
 
 ### Anonymization and De-identification
-Use anonymization and de-identification techniques
-
- to protect user data while still allowing for meaningful analysis.
+Use anonymization and de-identification techniques to protect user data while still allowing for meaningful analysis.
 
 ### Encryption and Secure Computing
 Implement encryption and secure computing practices to protect data at rest and in transit.
@@ -93,26 +91,30 @@ Follow responsible development guidelines to ensure ethical AI practices.
 ### Ethics Review Processes
 Implement ethics review processes to evaluate the potential impact of AI systems before deployment.
 
-!!! abstract "[Some questionable or fraudulent practices in ML](https://arxiv.org/pdf/2407.12220)"
-
-## To Sort
+## Emerging Ethical Considerations in AI
 
 ### Unlearning
-Explore techniques for unlearning in AI systems to remove biases or incorrect information. [Unlearning Saliency](https://github.com/optml-group/unlearn-saliency)
+Explore techniques for unlearning in AI systems to remove biases or incorrect information. [Unlearning Saliency](https://github.com/optml-group/unlearn-saliency) This area is particularly important as AI systems are increasingly learning from dynamic data, and the ability to correct or remove outdated information becomes crucial.
 
-### Principles and Guidelines
-Key principles of the living guidelines:
+### Generative AI and Research Integrity
+The rise of generative AI, such as large language models, presents unique ethical challenges, especially in research. 
 
-First, the summit participants agreed on three key principles for the use of generative AI in research — accountability, transparency, and independent oversight.
+#### Key Principles for Generative AI in Research:
+1. **Accountability**: Humans must remain responsible for evaluating the quality and originality of AI-generated content. While AI can assist in tasks like summarization or grammar checks, critical aspects like writing manuscripts or peer reviews should not be solely reliant on AI.
+2. **Transparency**: Researchers should disclose the use of generative AI in their work to maintain transparency and allow for scrutiny of its impact on research quality. Developers of these tools should also be transparent about their functionalities to enable thorough evaluation.
+3. **Independent Oversight**:  Given the significant influence of AI, independent bodies should audit generative AI tools to ensure their quality, ethical use, and adherence to research integrity standards.
 
-#### Accountability
-Humans must remain in the loop to evaluate the quality of generated content; for example, to replicate results and identify bias. Although low-risk use of generative AI — such as summarization or checking grammar and spelling — can be helpful in scientific research, we advocate that crucial tasks, such as writing manuscripts or peer reviews, should not be fully outsourced to generative AI.
+### Security Vulnerabilities in Large Language Model Applications
+The OWASP Top 10 for Large Language Model Applications project ([OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/)) highlights the unique security risks associated with LLMs. These include:
+* **Prompt Injections**: Malicious inputs that manipulate the LLM's behavior.
+* **Data Leakage**: Unintentional exposure of sensitive information through the LLM's output.
+* **Inadequate Sandboxing**: Insufficient isolation of the LLM from critical systems, potentially leading to broader security breaches.
+* **Unauthorized Code Execution**: Exploiting vulnerabilities to execute arbitrary code within the LLM environment.
 
-#### Transparency
-Researchers and other stakeholders should always disclose their use of generative AI. This increases awareness and allows researchers to study how generative AI might affect research quality or decision-making. In our view, developers of generative AI tools should also be transparent about their inner workings, to allow robust and critical evaluation of these technologies.
+Addressing these vulnerabilities requires robust security measures, including input validation, output sanitization, secure deployment practices, and continuous monitoring.
 
-#### Independent Oversight
-External, objective auditing of generative AI tools is needed to ensure that they are of high quality and used ethically. AI is a multibillion-dollar industry; the stakes are too high to rely on self-regulation.
+!!! abstract "[Some questionable or fraudulent practices in ML](https://arxiv.org/pdf/2407.12220)"
 
-??? abstract "[OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/)"
-    The OWASP Top 10 for Large Language Model Applications project aims to educate developers, designers, architects, managers, and organizations about the potential security risks when deploying and managing Large Language Models (LLMs). The project provides a list of the top 10 most critical vulnerabilities often seen in LLM applications, highlighting their potential impact, ease of exploitation, and prevalence in real-world applications. Examples of vulnerabilities include prompt injections, data leakage, inadequate sandboxing, and unauthorized code execution, among others. The goal is to raise awareness of these vulnerabilities, suggest remediation strategies, and ultimately improve the security posture of LLM applications. You can read our group charter for more information
+
+
+```

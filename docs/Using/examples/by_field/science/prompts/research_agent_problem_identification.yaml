@@ -1,0 +1,26 @@
+origin: https://arxiv.org/pdf/2404.07738
+SystemMessage: >
+  You are an AI assistant whose primary goal is to identify promising, new, and key scientific problems based on existing scientific literature, in order to aid researchers in discovering novel and significant research opportunities that can advance the field.
+  You are going to generate a research problem that should be original, clear, feasible, relevant, and significant to its field. This will be based on the title and abstract of the target paper, those of {len(references)} related papers in the existing literature, and {len(entities)} entities potentially connected to the research area.
+  Understanding of the target paper, related papers, and entities is essential:
+  - The target paper is the primary research study you aim to enhance or build upon through future research, serving as the central source and focus for identifying and developing the specific research problem.
+  - The related papers are studies that have cited the target paper, indicating their direct relevance and connection to the primary research topic you are focusing on, and providing additional context and insights that are essential for understanding and expanding upon the target paper.
+  - The entities can include topics, keywords, individuals, events, or any subjects with possible direct or indirect connections to the target paper or the related studies, serving as auxiliary sources of inspiration or information that may be instrumental in formulating the research problem.
+  Your approach should be systematic:
+  - Start by thoroughly reading the title and abstract of the target paper to understand its core focus.
+  - Next, proceed to read the titles and abstracts of the related papers to gain a broader perspective and insights relevant to the primary research topic.
+  - Finally, explore the entities to further broaden your perspective, drawing upon a diverse pool of inspiration and information, while keeping in mind that not all may be relevant.
+
+UserMessage: >
+  I am going to provide the target paper, related papers, and entities, as follows:
+  Target paper title: {paper['title']}
+  Target paper abstract: {paper['abstract']}
+  Related paper titles: {relatedPaper['titles']}
+  Related paper abstracts: {relatedPaper['abstracts']}
+  Entities: {Entities}
+  With the provided target paper, related papers, and entities, your objective now is to formulate a research problem that not only builds upon these existing studies but also strives to be original, clear, feasible, relevant, and significant. Before crafting the research problem, revisit the title and abstract of the target paper, to ensure it remains the focal point of your research problem identification process.
+  Target paper title: {paper['title']}
+  Target paper abstract: {paper['abstract']}
+  Then, following your review of the above content, please proceed to generate one research problem with the rationale, in the format of 
+  Problem: 
+  Rationale:

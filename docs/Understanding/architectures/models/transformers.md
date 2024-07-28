@@ -111,7 +111,7 @@ In its vanilla state, Transformers are $O(N^2)$ in their computation with self-c
   - Hierarchical
   - Banded to reduce full computation
   - Wedge-shaped with a banded window that also takes into account observably important first tokens.
-- Inclusion of a recurrent RNN-style that permits memory to be retained.
+- Inclusion of a recursive RNN-style that permits memory to be retained.
 - Memory retrieval systems.
 
 ??? code "![GitHub Repo stars](https://badgen.net/github/stars/insuhan/hyper-attn) [HyperAttention: Long-context Attention in Near-Linear Time](https://github.com/insuhan/hyper-attn)"
