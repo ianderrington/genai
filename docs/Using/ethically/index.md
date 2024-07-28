@@ -113,7 +113,9 @@ The OWASP Top 10 for Large Language Model Applications project ([OWASP](https://
 
 Addressing these vulnerabilities requires robust security measures, including input validation, output sanitization, secure deployment practices, and continuous monitoring.
 
-!!! abstract "[Some questionable or fraudulent practices in ML](https://arxiv.org/pdf/2407.12220)"
+??? abstract "[Some questionable or fraudulent practices in ML](https://arxiv.org/pdf/2407.12220)"
+    <img width="650" alt="image" src="https://github.com/user-attachments/assets/f16a7a25-271e-43f3-b5bc-15ecccc57e9e">
+
 
 
 
