@@ -56,6 +56,16 @@ pnpm install
 pnpm dev
 ```
 
+### Running Tests
+
+To run the unit tests, use the following command:
+
+```bash
+pnpm test
+```
+
+This will execute all test cases in the `tests` directory.
+
 ### 🐳 Docker
 
 You can use Docker for development and deployment of LlamaIndex Chat.
