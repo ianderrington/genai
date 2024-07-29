@@ -12,6 +12,15 @@ class TestPersistentShell(unittest.TestCase):
             output = shell.execute('echo Hiya')
             self.assertEqual(output, 'Hiya\n')
 
+    def test_command_timeout(self):
+        """Test that a command times out if it takes too long."""
+        with BashShell() as bash_shell:
+            start_time = time.time()
+            output = bash_shell.execute('sleep 5', timeout=2)
+            end_time = time.time()
+            self.assertTrue(end_time - start_time < 5, "The command did not timeout as expected.")
+            self.assertIn("Command timed out.", output)
+
     def test_temporary_directory_operations(self):
         """Test operations within a temporary working directory."""
         with TemporaryDirectory() as temp_dir:
@@ -61,7 +70,14 @@ class TestPersistentShell(unittest.TestCase):
             self.assertEqual(len(bash_shell.command_history), number_of_commands)  # Assuming the default limit is 100
             # self.assertEqual(len(bash_shell.output_history), 100)
 
-
+    def test_command_timeout(self):
+        """Test that a command times out if it takes too long."""
+        with BashShell() as bash_shell:
+            start_time = time.time()
+            output = bash_shell.execute('sleep 5', timeout=2)
+            end_time = time.time()
+            self.assertTrue(end_time - start_time < 5, "The command did not timeout as expected.")
+            self.assertIn("Command timed out.", output)
 
 class TestCondaShell(unittest.TestCase):
     test_env_name = "test_condashell_env"

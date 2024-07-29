@@ -91,7 +91,7 @@ class BashShell(AbstractPersistentShell):
         flush_command ='; sys.stdout.flush()\n'
         return command
 
-    def execute(self, command):
+    def execute(self, command, timeout=10):
         # Ensure command ends with a newline
         command = self.parse_command(command)
 
@@ -106,6 +106,7 @@ class BashShell(AbstractPersistentShell):
         # Capture the command's output
         output_lines = []
         count = 0
+        start_time = time.time()
         while True:
             count += 1
             print(f"Count: {count}")
@@ -125,12 +126,16 @@ class BashShell(AbstractPersistentShell):
                     print("No more output from process.")
                     break
             else:
+                # Check if the timeout has been reached
+                if time.time() - start_time > timeout:
+                    print("Command timed out.")
+                    self.process.terminate()
+                    break
                 # No output ready, the command has likely finished executing
                 print("No output ready, command may have finished executing.")
                 break
         self.process.stdin.flush()
 
-        
         # Return the captured output as a single string
         time.sleep(0.1)  
 
