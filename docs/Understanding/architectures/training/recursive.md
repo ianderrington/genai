@@ -14,8 +14,9 @@ graph LR
 
 ## Research and Understanding
 
-?? note "[Beyond Model Collapse: Scaling Up with Synthesized Data Requires Reinforcement](https://arxiv.org/abs/2406.07515)"
-    
+??? note "[Beyond Model Collapse: Scaling Up with Synthesized Data Requires Reinforcement](https://arxiv.org/pdf/2406.07515)"
+    **Results**: The authors show that training from feedback-augmented synthesized data, either
+    by pruning incorrect predictions or by selecting the best of several guesses, can prevent model collapse
 
 Train on model trains a new model on the output of a new model.
 

@@ -170,7 +170,7 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 
 
 
-??? code "[Langfuse](https://github.com/langfuse/langfuse) is an open Source LLM Engineering platform with Traces, Evals, Prompt management, metrics and a playground" 
+??? abstract "[Langfuse](https://github.com/langfuse/langfuse) is an open Source LLM Engineering platform with Traces, Evals, Prompt management, metrics and a playground" 
 
 ### Agents
 

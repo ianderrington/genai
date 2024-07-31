@@ -340,6 +340,8 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 
 ## Guides and Surveys of Best Practices
 
+??? abstract "[https://arxiv.org/pdf/2407.12994]"
+
 ??? abstract "[The Prompt Report: A Systematic Survey of Prompting Techniques](https://arxiv.org/pdf/2406.06608)"
 
 ??? abstract "[A Survey of Prompt Engineering Methods in Large Language Models for Different NLP Tasks](https://arxiv.org/abs/2407.12994)"

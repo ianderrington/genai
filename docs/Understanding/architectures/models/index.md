@@ -64,7 +64,7 @@ Vision Language models are among the most prominent of models beyond language mo
 
 ## Model Fusion
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/fanqiwan/fusellm) [KNOWLEDGE FUSION OF LARGE LANGUAGE MODELS](https://github.com/fanqiwan/fusellm)" fuse-llm
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/fanqiwan/fusellm) [KNOWLEDGE FUSION OF LARGE LANGUAGE MODELS](https://github.com/fanqiwan/fusellm)" fuse-llm
     **Developments** FuseLM provides a manner and method of combining different LLMs to train a new `fused` model based on the probabilistic output of each of the different LLMs. 
     <img width="1269" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/30e0e6ab-1976-4a26-af60-17df09fe2b05">
     <img width="972" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/edc7593e-2eab-4916-ac27-291f28eba122">
@@ -105,14 +105,14 @@ Position embedding is an essential aspect of transformer-based attention models 
 
 A common manner of including positional embeddings is to _add_ them to the text embeddings. There are other manners of including embeddings. 
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/DeBERTa) [Deberta: Decoding-Enhanced Bert with Disentangled Attention](https://github.com/microsoft/DeBERTa)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/DeBERTa) [Deberta: Decoding-Enhanced Bert with Disentangled Attention](https://github.com/microsoft/DeBERTa)"
     [Paper](https://arxiv.org/pdf/2006.03654.pdf)
     The authors herein describe a manner of including embeddings in a manner that enables position-dependence but does not require addition of the embeddings. 
     
 
 ## General Literature
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/RUCAIBox/LLMSurvey) [A Survey of Large Language Models](https://github.com/RUCAIBox/LLMSurvey)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/RUCAIBox/LLMSurvey) [A Survey of Large Language Models](https://github.com/RUCAIBox/LLMSurvey)"
     [Paper](https://arxiv.org/pdf/2303.18223.pdf)
 
 

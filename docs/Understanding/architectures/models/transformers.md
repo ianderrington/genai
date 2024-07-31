@@ -114,7 +114,7 @@ In its vanilla state, Transformers are $O(N^2)$ in their computation with self-c
 - Inclusion of a recursive RNN-style that permits memory to be retained.
 - Memory retrieval systems.
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/insuhan/hyper-attn) [HyperAttention: Long-context Attention in Near-Linear Time](https://github.com/insuhan/hyper-attn)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/insuhan/hyper-attn) [HyperAttention: Long-context Attention in Near-Linear Time](https://github.com/insuhan/hyper-attn)"
 
     **Developments**: The authors reveal a new method of attention that allows for very-long context lengths, which they call 'hyperattention'. This algorithm finds (1) larger entries in the attention matrix using `sorted locality sensitive hashing`, and then performs column subsampling to rearrange the matrices to provide block-diagonal approximation.
     
@@ -127,10 +127,10 @@ In its vanilla state, Transformers are $O(N^2)$ in their computation with self-c
     
     [Paper](https://arxiv.org/pdf/2310.05869.pdf)
 
-??? code "[Generating Long Sequences with Sparse Transformers](https://arxiv.org/pdf/1904.10509.pdf) provides simple solutions to generate longer sequences."
+??? abstract "[Generating Long Sequences with Sparse Transformers](https://arxiv.org/pdf/1904.10509.pdf) provides simple solutions to generate longer sequences."
     <img width="662" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/86d4dc29-7711-490d-a2a8-99c4a4d34027">
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/neuro-inc/ml-recipe-hier-attention) [Hierarchical Attention](https://github.com/neuro-inc/ml-recipe-hier-attention)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/neuro-inc/ml-recipe-hier-attention) [Hierarchical Attention](https://github.com/neuro-inc/ml-recipe-hier-attention)"
     [Paper](https://arxiv.org/pdf/2304.11062.pdf)
 
 !!! code "[Scaling Transformer to 1M tokens and beyond with RMT](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer (RMT) architecture to extend understanding to large lengths."
@@ -143,7 +143,7 @@ In its vanilla state, Transformers are $O(N^2)$ in their computation with self-c
 
     An open-source version made by `lucidrains`: [Megabyte Github implementation for PyTorch](https://github.com/lucidrains/MEGABYTE-pytorch)
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/deep-spin/infinite-former) [Infinite Former](https://github.com/deep-spin/infinite-former) Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions."
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/deep-spin/infinite-former) [Infinite Former](https://github.com/deep-spin/infinite-former) Uses a representation of the input sequence as a continuous signal expressed in a combination of N radial basis functions."
     [Paper](https://arxiv.org/pdf/2109.00301.pdf)
     ![Infinity Former](https://github.com/ianderrington/general/assets/76016868/96d8efb8-46ab-4662-b62b-4763ad454a80){ align=left width="300"  loading=lazy }
 
@@ -152,13 +152,13 @@ In its vanilla state, Transformers are $O(N^2)$ in their computation with self-c
     <img width="850" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0eb9dc5a-b409-4b98-95c0-e712fd186dc1">
     <img width="863" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c2bdf11c-dec1-4575-99ef-e931ae306d61">
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/mit-han-lab/streaming-llm) [Efficient Streaming Language Models with Attention Sinks](https://github.com/mit-han-lab/streaming-llm)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mit-han-lab/streaming-llm) [Efficient Streaming Language Models with Attention Sinks](https://github.com/mit-han-lab/streaming-llm)"
     [Paper](https://arxiv.org/pdf/2309.17453.pdf)
     ![image](https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a)
 
 ### Advanced Transformer Blocks
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/epfml/DenseFormer) [DenseFormer: Enhancing Information Flow in Transformers via Depth Weighted Averaging](https://github.com/epfml/DenseFormer)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/epfml/DenseFormer) [DenseFormer: Enhancing Information Flow in Transformers via Depth Weighted Averaging](https://github.com/epfml/DenseFormer)"
 
     **Developments**: The authors reveal in their [paper](https://arxiv.org/pdf/2402.02622.pdf) a variation of the transformer that yields improved results by introducing 'Depth Weighted Averaging' that averages weights at layer (i) with the output from the current block $B_i$ (ii) the output of all previous blocks $B_{j<i}$, and (iii) the embedded input $X_0$.
     <img width="1289" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e386d9ab-f337-4df9-b2d2-2f4168eb8945">
@@ -166,7 +166,7 @@ In its vanilla state, Transformers are $O(N^2)$ in their computation with self-c
 
 ### Computation Reduction
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/bobby-he/simplified_transformers) [Simplified Transformers](https://github.com/bobby-he/simplified_transformers) that removes the 'value' parameter-set to increase speed by 14% with potentially minimal accuracy reduction"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/bobby-he/simplified_transformers) [Simplified Transformers](https://github.com/bobby-he/simplified_transformers) that removes the 'value' parameter-set to increase speed by 14% with potentially minimal accuracy reduction"
 
     Herein the authors reveal a variation of transformers that removes the 'value' parameter to yield notable speed gains at the same performance level.
     <img width="632" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/16a8b01d-10df-4188-addd-345128ba4156">

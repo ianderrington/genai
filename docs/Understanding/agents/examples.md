@@ -10,12 +10,12 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 !!! abstract "[Open GPTs](https://github.com/langchain-ai/opengpts) Enables the creation of agents and assistants, using Langchain components"
 
-??? code "[The Open Source AI Assistant Framework & API](https://github.com/superagent-ai/superagent)" superagent
+??? abstract "[The Open Source AI Assistant Framework & API](https://github.com/superagent-ai/superagent)" superagent
     [Docs](https://docs.superagent.sh/overview/overview/introduction)
 
-??? code "[Agenta-AI](https://github.com/Agenta-AI/agenta) provides end-to-end LLM developer platform. It provides the tools for prompt engineering and management, ⚖️ evaluation, human annotation, and 🚀 deployment. All without imposing any restrictions on your choice of framework, library, or model." 
+??? abstract "[Agenta-AI](https://github.com/Agenta-AI/agenta) provides end-to-end LLM developer platform. It provides the tools for prompt engineering and management, ⚖️ evaluation, human annotation, and 🚀 deployment. All without imposing any restrictions on your choice of framework, library, or model." 
 
-??? code "[Jarvis](https://github.com/microsoft/JARVIS/) provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." jarvis
+??? abstract "[Jarvis](https://github.com/microsoft/JARVIS/) provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." jarvis
 
 ??? important "[Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction](https://arxiv.org/pdf/2401.06201.pdf) provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage" easy-tool
 
@@ -88,13 +88,13 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     
 
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/lupantech/chameleon-llm) [🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4](https://github.com/lupantech/chameleon-llm)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/lupantech/chameleon-llm) [🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4](https://github.com/lupantech/chameleon-llm)"
    [Paper](https://arxiv.org/pdf/2304.09842.pdf)
    <img width="892" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0deb10a1-ca97-4bc3-925d-707585fbf297">
 
 ### Examples
 
-??? code "[Critic: Large Language Models can Self-correct with TOol-INteractive Critiquing](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)"
+??? abstract "[Critic: Large Language Models can Self-correct with TOol-INteractive Critiquing](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)"
     [Paper](https://arxiv.org/pdf/2305.11738.pdf)
     Predominantly uses multi-shot approaches and tool use to critique answers. Uses context additions such as
     ```markdown
@@ -105,7 +105,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
     
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/l3vels/ L3AGI) [L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.](https://github.com/l3vels/ L3AGI) l3agi
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/l3vels/ L3AGI) [L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.](https://github.com/l3vels/ L3AGI) l3agi
     
 
 
@@ -161,7 +161,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/ProfSynapse/Synapse_CoR?) [Professor Synapse (ProfSynapse)](https://github.com/ProfSynapse/Synapse_CoR?) is an agent embodying the instructive channel for teaching people about Agents, and LLMs and how to work with new technology"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/ProfSynapse/Synapse_CoR?) [Professor Synapse (ProfSynapse)](https://github.com/ProfSynapse/Synapse_CoR?) is an agent embodying the instructive channel for teaching people about Agents, and LLMs and how to work with new technology"
     Apart from the Github above, Here are several relevant and imporant links related to synth minds. 
     - https://www.synthminds.ai/
     - https://www.youtube.com/watch?v=pFPZFmOTgtA&t=232s
@@ -210,7 +210,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
         
     ```
 
-??? code "[Fresh LLMs](https://github.com/freshllms/freshqa that propose FreshQA, a dynamic QA benchmark, and FreshPrompt that allows LLMs to stay up to date"
+??? abstract "[Fresh LLMs](https://github.com/freshllms/freshqa that propose FreshQA, a dynamic QA benchmark, and FreshPrompt that allows LLMs to stay up to date"
     - [Paper](https://arxiv.org/pdf/2310.03214.pdf)
 
     <img width="558" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b9cc4b22-3f98-40db-adfe-728a434abb72">
@@ -236,7 +236,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
 
 ??? tip "![GitHub Repo stars](https://badgen.net/github/stars/ThomasEwing04/SMOL_AI) [smolai](https://github.com/ThomasEwing04/SMOL_AI) https://www.youtube.com/watch?v=zsxyqz6SYp8&t=1s An interesting example"
 
-??? code "![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT) [Agent-GPT](https://github.com/reworkd/AgentGPT)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT) [Agent-GPT](https://github.com/reworkd/AgentGPT)"
     [Website](https://agentgpt.reworkd.ai/)
 
 !!! tip "![GitHub Repo stars](https://badgen.net/github/stars/AntonOsika/gpt-engineer) [GPT Engineer (AntonOsika)](https://github.com/AntonOsika/gpt-engineer)"
@@ -273,7 +273,7 @@ cognitive_architecture.md). We discuss [single agents](#single-agents) here, tho
     <img width="648" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7d3d171c-5bae-4942-9469-ace20c4ef62b">
     <img width="678" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c1a762f6-5729-4d4f-8bb8-c288d7d639a0">
 
-??? code "[CLIN: A Continually Learning Language Agent for Rapid Task Adaptation and Generalization](https://allenai.github.io/clin/)"
+??? abstract "[CLIN: A Continually Learning Language Agent for Rapid Task Adaptation and Generalization](https://allenai.github.io/clin/)"
     An agent that stores a memory involving action, rationale, and result so that it can improve doing certain tasks. It uses a lookup to identify things that it needs to do and likely causal relations to decide to work on it.
     The code is a little Academic, but generally readable here [Github](https://github.com/allenai/clin/blob/main/scienceworld/clin_agent.py#L10).
 

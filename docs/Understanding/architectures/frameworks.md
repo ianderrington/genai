@@ -1,7 +1,7 @@
-??? code "[Langfuse](https://github.com/langfuse/langfuse?tab=readme-ov-file)"
+??? abstract "[Langfuse](https://github.com/langfuse/langfuse?tab=readme-ov-file)"
 
 
-??? code "[DeepSpeed ZeRO++](https://www.microsoft.com/en-us/research/blog/deepspeed-zero-a-leap-in-speed-for-llm-and-chat-model-training-with-4x-less-communication/) A framework for accelerating model pre-training, finetuning, RLHF updating." deepspeed
+??? abstract "[DeepSpeed ZeRO++](https://www.microsoft.com/en-us/research/blog/deepspeed-zero-a-leap-in-speed-for-llm-and-chat-model-training-with-4x-less-communication/) A framework for accelerating model pre-training, finetuning, RLHF updating." deepspeed
      By minimizing communication overhead. A likely essential concept to be very familiar with.
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/stanford-crfm/levanter) [Levanter (not just LLMS) ](https://github.com/stanford-crfm/levanter) Codebase for training FMs with JAX."
