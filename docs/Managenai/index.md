@@ -18,7 +18,7 @@ Right now, you can learn from [the present understandings](../Understanding/inde
 ## How will it improve?
 [Contribute](./contributing.md) to this project.
 
-!!! important "We need your help."
+!!! important "We need your help." help
     It presently requires many brilliant scientists and engineers to understand the way Gen()AI works and how to use. We want to make it so MORE can do this.
 
 Ideally, this will provide the core kernel of insight, a 'GenAI Oracle' if you will, that will both explain and enable the safe, ethical,  and effective use of Gen()AI.

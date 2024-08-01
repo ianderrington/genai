@@ -3,7 +3,9 @@ Here we share novel and promising architectures that may supplement or supplant 
 
 ## Models
 
+
 ??? abstract "[REPRESENTATION ENGINEERING: A TOP-DOWN APPROACH TO AI TRANSPARENCY](github.com/andyzoujm/representation-engineering)" repe
+
     **Developments** The authors create a manner of extracting conceptual relations within models by prompting them, and examining the layer-wise activations associated with that word, and a linear model is trained to identify the direction principal to activating that concept. The _reading vector_ forms the the principal componentassociated with that concept can be most liketly added to the output to enhance that quality. This leads to the potential to directly create alignments, hallucination control, and other targeted revisions of output. 
     ```
     Consider the amount of <concept> in the following:
@@ -54,7 +56,7 @@ Operating on bytes directly instead of relying on encoding representation and su
 
 #### Others
 
-!!! code "![GitHub Repo stars](https://badgen.net/github/stars/HazyResearch/hyena-dna) [HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution](https://github.com/HazyResearch/hyena-dna) Uses inspiration from FFT to create a drop-in replacement for Transformer models."
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/HazyResearch/hyena-dna) [HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution](https://github.com/HazyResearch/hyena-dna) Uses inspiration from FFT to create a drop-in replacement for Transformer models."
     [Paper for Hyena Architecture](https://arxiv.org/pdf/2302.10866.pdf)
 
 

@@ -133,7 +133,7 @@ In its vanilla state, Transformers are $O(N^2)$ in their computation with self-c
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/neuro-inc/ml-recipe-hier-attention) [Hierarchical Attention](https://github.com/neuro-inc/ml-recipe-hier-attention)"
     [Paper](https://arxiv.org/pdf/2304.11062.pdf)
 
-!!! code "[Scaling Transformer to 1M tokens and beyond with RMT](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer (RMT) architecture to extend understanding to large lengths."
+!!! abstract "[Scaling Transformer to 1M tokens and beyond with RMT](https://github.com/booydar/t5-experiments/tree/scaling-report) Uses a Recurrent Memory Transformer (RMT) architecture to extend understanding to large lengths."
 
 ??? tip "[MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers](https://arxiv.org/pdf/2305.07185.pdf)"
 

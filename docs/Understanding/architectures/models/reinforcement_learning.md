@@ -12,4 +12,6 @@ In the context of Generative AI, it may be considered that each token that is ge
     <img width="1012" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7ac4076b-e577-47be-b6af-a2429a8a62fa">
 
 
-??? abstract "[Pearl by facebook](https://github.com/facebookresearch/Pearl)
+
+??? abstract "[Pearl by facebook](https://github.com/facebookresearch/Pearl)" pearl
+
