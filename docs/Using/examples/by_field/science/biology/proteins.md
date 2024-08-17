@@ -1,6 +1,6 @@
 # Protein Optimization Using AI
 
-Generating or modifying protein sequences to improve behavior or create novel behavior is a powerful application for AI. Guided through evolutionary techniques, Bayesian optimization, and/or with the use of protein language models (PLMs), AI can vastly accelerate the development of biotechnological tools and identify targets and avenues for therapeutics. Because of their ability to represent the 'language of proteins,' PLMs are increasingly important in predicting the structure and function of proteins.
+Generating or modifying protein sequences to improve or create novel behavior is a powerful application for AI. Guided through evolutionary techniques, Bayesian optimization, and/or using protein language models (PLMs), AI can vastly accelerate the development of biotechnological tools and identify targets and avenues for therapeutics. Because of their ability to represent the 'language of proteins,' PLMs are increasingly important in predicting the structure and function of proteins.
 
 ## Components
 
@@ -20,7 +20,7 @@ Optimization systems may involve merging and combining these components for full
 1. A model that separates generation and evaluation steps, where the predictor model evaluates the quality of an input set of sequences (generated or otherwise defined).
 2. A model that directly predicts the best designs using adaptive sampling, proposing solutions, evaluating them with the predictor model, and then iterating.
 
-These components can be cleanly seen in the box below:
+These components can be seen in the box below:
 
 ???+ tip "[Adaptive Machine Learning for Protein Engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
     An overview of ML for protein engineering:
@@ -30,7 +30,7 @@ These components can be cleanly seen in the box below:
 
 Protein optimization will necessarily evolve the creation of those proteins and evaluations of target characteristics. There are large volumes of databases of various forms that may be useful in creating foundation models. It will still be essential to use continued observation to improve the optimization target based on predicted and iterated feedback.
 
-The volume of the observations will help to determine the architectures that one could use. Base models tend to be PLMs because of the large set of available data. Unsupervised fine-tuning with those large models may be able to occur through homology or family sets. Final targets may then be optimized with simple networks, often involving regression to minimize overfitting, or methods that include Bayesian or evolutionary approaches.
+The volume of the observations will help to determine the architectures that one could use. Base models tend to be PLMs because of the large set of available data. Unsupervised fine-tuning with those large models may be able to occur through homology or family sets. Final targets may then be optimized with simple networks, often involving regression to minimize overfitting or methods that include Bayesian or evolutionary approaches.
 
 To be able to successfully deliver on final target optimization, the greater the quantity of direct or surrogate data that can be obtained, the greater the potential the resulting models will sufficiently predict the fitness of future protein sequence candidates. That is why massive screening approaches, as described by [Ginkgo's platform](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai), screen thousands of candidates.
 
@@ -207,17 +207,33 @@ The general method of creating protein foundation models uses Masked Language Mo
     <img width="708" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ff42d6df-a13e-418d-8385-264ecd2d0994">
 
 
-#### Notable Models
-
-??? note "[xTrimoPGLM: Unified 100B-Scale Pre-trained Transformer for Deciphering the Language of Protein](https://arxiv.org/pdf/2401.06199)" xtrimopglm
-    **Developments** The authors reveal an innovative manner of training protein language models using 
-
 ??? note "[Single-sequence protein structure prediction using supervised transformer protein language models](https://yanglab.nankai.edu.cn/trRosetta/benchmark_single/)"
     The authors show in their [paper](https://nature.com/articles/s43588-022-00373-3) the ability to generate high-quality predictions outperforming AlphaFold2, with a model called trRosettaX-Single using ESM to generate representations and attention maps that can be trained for distance+energy maps.
     ![image](https://github.com/ianderrington/genai/assets/76016868/c06d4a40-117f-4b86-9deb-ee9d29fc8f70)
 
-??? abstract "[Tasks Assessing Protein Embeddings (TAPE)](https://github.com/songlab-cal/tape)"
 
+
+#### Notable Models
+
+##### xTrimo
+??? note "[xTrimoPGLM: Unified 100B-Scale Pre-trained Transformer for Deciphering the Language of Protein](https://arxiv.org/pdf/2401.06199)" xtrimopglm
+    **Developments** The authors reveal an innovative manner of training protein language models using novel Maske Language Model training.  They also investigate LORA and MLP adapter layers at the end for finetuning methods and show a significant gain when using LORA. 
+
+    <img width="658" alt="image" src="https://github.com/user-attachments/assets/c05363ce-2389-4191-8b03-4a44029ec9cd"> 
+    
+    **Results** The resulting models are made with both standard `[MASK]` tokens masking tokens that indicate short-spans that are masked `[sMASK]` and spans marked at the end with `[gMASK]`. Training with both standard and block masking, at a ratio of 20% to 80%, respectively, they train models with notable improvement over models.  
+
+??? note "[xTrimoGene: An Efficient and Scalable Representation Learner for Single-Cell RNA-Seq Data](https://proceedings.neurips.cc/paper_files/paper/2023/file/db68f1c25678f72561ab7c97ce15d912-Paper-Conference.pdf)"
+    **Developments** The authors create a scaleable asymmetrical encoder-decoder network that uses scRNA-seq with sparse labeling. 
+    
+    <img width="561" alt="image" src="https://github.com/user-attachments/assets/e2b9b91b-2a72-44a4-acd8-bb987a45d8e6">
+
+    **Methods:** From an expression matrix, the model masks and filters expression sequences to try to reconstruct the full-length embedding and expression matrix. They also introduce _auto-discretization_ to help alleviate category assignment errors to different genes... because genes are not necessarily fully categorical.  The Auto-discritization strategy has a lookup table that leaves a weighted combination of individual embeddings from the lookup-table. 
+
+
+#### Other models
+
+??? abstract "[Tasks Assessing Protein Embeddings (TAPE)](https://github.com/songlab-cal/tape)"
 
 
 #### Multimodal
