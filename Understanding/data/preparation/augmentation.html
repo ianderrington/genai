@@ -6581,14 +6581,65 @@ and
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Posts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Posts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../blog/posts/Launch.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Archive
+    Hello world!
   
 
     
@@ -6597,6 +6648,14 @@ and
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -6801,68 +6860,77 @@ and
 <summary><a href="https://arxiv.org/pdf/2306.11644.pdf">Textbooks are all you need</a></summary>
 <p>This study utilized a large volume of generated data and transformer-classifiers to filter the data and create a high-quality model. The model was trained over four days on eight A-100s and achieved outperforming results. </p>
 </details>
-<p>??? note "<a href="https://arxiv.org/pdf/2401.16380.pdf">Rephrasing the Web: A Recipe for Compute &amp; Data-Efficient Language Modeling</a>" web-rephrase-augmented-pre-training</p>
-<div class="language-text highlight"><pre><span></span><code>The authors reveal that creating new training-examples from input data using an off-the-shelf model (Mistral-7B) can yield convergence speeds that are 3x without doing so. The  rephrasing is done in a manner that is &#39;like wikipedia&#39; or in a &#39;question-answer format&#39;. They are also done at different levels of style diversity, such as a child or a a scholar. In detailed analysis they found that:
+<p><a href="/shared/web-rephrase-augmented-pre-training.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-* Style diversity improves the value
-* Reasonable paraphraser models are needed
-* It is better than standard augmentation that does random deletions or synonym replacements.
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
 
-Here is one of a few example rephrasing prompts: 
-```markdown
-“For the following paragraph give me a paraphrase of the same in high-quality English language as in sentences on Wikipedia”
-```
-&lt;img width=&quot;556&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4&quot;&gt;
-</code></pre></div>
-<p>??? abstract "<a class="glightbox" href="https://badgen.net/github/stars/GAIR-NLP/ReAlign" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/GAIR-NLP/ReAlign" /></a> <a href="https://github.com/GAIR-NLP/ReAlign">Reformatted Alignment</a> demonstrates that reformatting responses of instruction data with to pre-established criteria and collated evidence improves alignment, factuality, and readability." realign-reformatted-alignment</p>
-<div class="language-text highlight"><pre><span></span><code>**Develpoments** By reformatting instruction data in a consistent manner, and connecting it with a Google Search API, the results are able to generate higher quality data that is ReAligned&#39; resulting in improvements over several models, judged both by GPT-4 and people.
+<details class="note">
+<summary><a href="https://arxiv.org/pdf/2401.16380.pdf">Rephrasing the Web: A Recipe for Compute &amp; Data-Efficient Language Modeling</a></summary>
+<p>The authors reveal that creating new training-examples from input data using an off-the-shelf model (Mistral-7B) can yield convergence speeds that are 3x without doing so. The  rephrasing is done in a manner that is 'like wikipedia' or in a 'question-answer format'. They are also done at different levels of style diversity, such as a child or a a scholar. In detailed analysis they found that:</p>
+<ul>
+<li>Style diversity improves the value</li>
+<li>Reasonable paraphraser models are needed</li>
+<li>It is better than standard augmentation that does random deletions or synonym replacements.</li>
+</ul>
+<p>Here is one of a few example rephrasing prompts: 
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>“For the following paragraph give me a paraphrase of the same in high-quality English language as in sentences on Wikipedia”
+</span></code></pre></div>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="556" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4"></a></p>
+</details>
+<p><a href="/shared/realign-reformatted-alignment.html" class="page-url" id="page-url-1"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-&lt;img width=&quot;619&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/0e024b17-a3bf-440f-9605-54636db1d81b&quot;&gt;
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+</div>
 
-&lt;img width=&quot;656&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/1953f494-583e-47bd-8dca-8958cc9020ce&quot;&gt;
-&lt;img width=&quot;588&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/226afec2-8d79-4af4-834d-f67af0006348&quot;&gt;
+<details class="abstract">
+<summary><a class="glightbox" href="https://badgen.net/github/stars/GAIR-NLP/ReAlign" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/GAIR-NLP/ReAlign" /></a> <a href="https://github.com/GAIR-NLP/ReAlign">Reformatted Alignment</a> demonstrates that reformatting responses of instruction data with to pre-established criteria and collated evidence improves alignment, factuality, and readability.</summary>
+<p><strong>Develpoments</strong> By reformatting instruction data in a consistent manner, and connecting it with a Google Search API, the results are able to generate higher quality data that is ReAligned' resulting in improvements over several models, judged both by GPT-4 and people. </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/0e024b17-a3bf-440f-9605-54636db1d81b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="619" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/0e024b17-a3bf-440f-9605-54636db1d81b"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/1953f494-583e-47bd-8dca-8958cc9020ce" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="656" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/1953f494-583e-47bd-8dca-8958cc9020ce"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/226afec2-8d79-4af4-834d-f67af0006348" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="588" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/226afec2-8d79-4af4-834d-f67af0006348"></a></p>
+<p><a href="https://arxiv.org/pdf/2402.12219.pdf">Paper</a></p>
+</details>
+<p><a href="/shared/rephrasing-the-web.html" class="page-url" id="page-url-2"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-[Paper](https://arxiv.org/pdf/2402.12219.pdf)
-</code></pre></div>
-<p>??? tip "<a href="https://arxiv.org/html/2401.16380v1">Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling</a>" rephrasing-the-web</p>
-<div class="language-text highlight"><pre><span></span><code>**Developments** The authors demonstrate Web Rephrase Augmented Pre-training (WRAP) an instruction-tuned model prompted to paraphrase documents for pre-training LLMs on real and synthetic rephrases. They demonstrate speed up of pretraining by about 3-fold, while demonstrating model performance gains of more than 2%, due to incorporating style diversity reflective of downstream evaluation style, and because it is higher quality than web-scraped data.
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+</div>
 
-&lt;img width=&quot;888&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/970ced84-ad1d-464b-8fbf-cc92ddc26406&quot;&gt;
-
-**Method** They repharse documents on the web in four different styles: &quot;(i) Easy (text that even a toddler will understand); (ii) Medium (in high quality English such as that found on Wikipedia); (iii) Hard (in terse and abstruse language); (iv) Q/A (in conversation question-answering format).&quot; Here are the prompts:
-
-**Easy Style**
-
-A style designed to generate content understandable by toddlers.
-
-```bash
-A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the questions. USER: For the following paragraph give me a paraphrase of the same using a very small vocabulary and extremely simple sentences that a toddler will understand:
-```
-
-**Hard Style**
-
-A style designed to generate content comprehensible primarily to scholars using arcane language.
-```bash
-A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the questions. USER: For the following paragraph give me a paraphrase of the same using very terse and abstruse language that only an erudite scholar will understand. Replace simple words and phrases with rare and complex ones:
-```
-
-**Medium Style**
-
-A style designed to generate content comparable to standard encyclopedic entries.
-
-```bash 
-A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the questions. USER: For the following paragraph give me a diverse paraphrase of the same in high quality English language as in sentences on Wikipedia:
-```
-
-**Q/A Style**
-
-A style intended to convert narratives into a conversational format.
-
-```bash
-A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the questions. USER: Convert the following paragraph into a conversational format with multiple tags of &quot;Question:&quot; followed by &quot;Answer:&quot;:
-```
-</code></pre></div>
+<details class="tip">
+<summary><a href="https://arxiv.org/html/2401.16380v1">Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling</a></summary>
+<p><strong>Developments</strong> The authors demonstrate Web Rephrase Augmented Pre-training (WRAP) an instruction-tuned model prompted to paraphrase documents for pre-training LLMs on real and synthetic rephrases. They demonstrate speed up of pretraining by about 3-fold, while demonstrating model performance gains of more than 2%, due to incorporating style diversity reflective of downstream evaluation style, and because it is higher quality than web-scraped data. </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/970ced84-ad1d-464b-8fbf-cc92ddc26406" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="888" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/970ced84-ad1d-464b-8fbf-cc92ddc26406"></a></p>
+<p><strong>Method</strong> They repharse documents on the web in four different styles: "(i) Easy (text that even a toddler will understand); (ii) Medium (in high quality English such as that found on Wikipedia); (iii) Hard (in terse and abstruse language); (iv) Q/A (in conversation question-answering format)." Here are the prompts:</p>
+<p><strong>Easy Style</strong></p>
+<p>A style designed to generate content understandable by toddlers.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>A<span class="w"> </span>chat<span class="w"> </span>between<span class="w"> </span>a<span class="w"> </span>curious<span class="w"> </span>user<span class="w"> </span>and<span class="w"> </span>an<span class="w"> </span>artificial<span class="w"> </span>intelligence<span class="w"> </span>assistant.<span class="w"> </span>The<span class="w"> </span>assistant<span class="w"> </span>gives<span class="w"> </span>helpful,<span class="w"> </span>detailed,<span class="w"> </span>and<span class="w"> </span>polite<span class="w"> </span>answers<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>questions.<span class="w"> </span>USER:<span class="w"> </span>For<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>paragraph<span class="w"> </span>give<span class="w"> </span>me<span class="w"> </span>a<span class="w"> </span>paraphrase<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>using<span class="w"> </span>a<span class="w"> </span>very<span class="w"> </span>small<span class="w"> </span>vocabulary<span class="w"> </span>and<span class="w"> </span>extremely<span class="w"> </span>simple<span class="w"> </span>sentences<span class="w"> </span>that<span class="w"> </span>a<span class="w"> </span>toddler<span class="w"> </span>will<span class="w"> </span>understand:
+</span></code></pre></div>
+<p><strong>Hard Style</strong></p>
+<p>A style designed to generate content comprehensible primarily to scholars using arcane language.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>A<span class="w"> </span>chat<span class="w"> </span>between<span class="w"> </span>a<span class="w"> </span>curious<span class="w"> </span>user<span class="w"> </span>and<span class="w"> </span>an<span class="w"> </span>artificial<span class="w"> </span>intelligence<span class="w"> </span>assistant.<span class="w"> </span>The<span class="w"> </span>assistant<span class="w"> </span>gives<span class="w"> </span>helpful,<span class="w"> </span>detailed,<span class="w"> </span>and<span class="w"> </span>polite<span class="w"> </span>answers<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>questions.<span class="w"> </span>USER:<span class="w"> </span>For<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>paragraph<span class="w"> </span>give<span class="w"> </span>me<span class="w"> </span>a<span class="w"> </span>paraphrase<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>using<span class="w"> </span>very<span class="w"> </span>terse<span class="w"> </span>and<span class="w"> </span>abstruse<span class="w"> </span>language<span class="w"> </span>that<span class="w"> </span>only<span class="w"> </span>an<span class="w"> </span>erudite<span class="w"> </span>scholar<span class="w"> </span>will<span class="w"> </span>understand.<span class="w"> </span>Replace<span class="w"> </span>simple<span class="w"> </span>words<span class="w"> </span>and<span class="w"> </span>phrases<span class="w"> </span>with<span class="w"> </span>rare<span class="w"> </span>and<span class="w"> </span>complex<span class="w"> </span>ones:
+</span></code></pre></div></p>
+<p><strong>Medium Style</strong></p>
+<p>A style designed to generate content comparable to standard encyclopedic entries.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>A<span class="w"> </span>chat<span class="w"> </span>between<span class="w"> </span>a<span class="w"> </span>curious<span class="w"> </span>user<span class="w"> </span>and<span class="w"> </span>an<span class="w"> </span>artificial<span class="w"> </span>intelligence<span class="w"> </span>assistant.<span class="w"> </span>The<span class="w"> </span>assistant<span class="w"> </span>gives<span class="w"> </span>helpful,<span class="w"> </span>detailed,<span class="w"> </span>and<span class="w"> </span>polite<span class="w"> </span>answers<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>questions.<span class="w"> </span>USER:<span class="w"> </span>For<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>paragraph<span class="w"> </span>give<span class="w"> </span>me<span class="w"> </span>a<span class="w"> </span>diverse<span class="w"> </span>paraphrase<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span><span class="k">in</span><span class="w"> </span>high<span class="w"> </span>quality<span class="w"> </span>English<span class="w"> </span>language<span class="w"> </span>as<span class="w"> </span><span class="k">in</span><span class="w"> </span>sentences<span class="w"> </span>on<span class="w"> </span>Wikipedia:
+</span></code></pre></div>
+<p><strong>Q/A Style</strong></p>
+<p>A style intended to convert narratives into a conversational format.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>A<span class="w"> </span>chat<span class="w"> </span>between<span class="w"> </span>a<span class="w"> </span>curious<span class="w"> </span>user<span class="w"> </span>and<span class="w"> </span>an<span class="w"> </span>artificial<span class="w"> </span>intelligence<span class="w"> </span>assistant.<span class="w"> </span>The<span class="w"> </span>assistant<span class="w"> </span>gives<span class="w"> </span>helpful,<span class="w"> </span>detailed,<span class="w"> </span>and<span class="w"> </span>polite<span class="w"> </span>answers<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>questions.<span class="w"> </span>USER:<span class="w"> </span>Convert<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>paragraph<span class="w"> </span>into<span class="w"> </span>a<span class="w"> </span>conversational<span class="w"> </span>format<span class="w"> </span>with<span class="w"> </span>multiple<span class="w"> </span>tags<span class="w"> </span>of<span class="w"> </span><span class="s2">&quot;Question:&quot;</span><span class="w"> </span>followed<span class="w"> </span>by<span class="w"> </span><span class="s2">&quot;Answer:&quot;</span>:
+</span></code></pre></div>
 <h2 id="useful-resources">Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">&para;</a></h2>
+</details>
 <div class="admonition abstract">
 <p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/google-research/syn-rep-learn" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/google-research/syn-rep-learn" /></a> <a href="https://github.com/google-research/syn-rep-learn">StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners</a></p>
 <p>This research paper by Google Research delves into the use of synthetic images generated from text-to-image models for training visual representation learners.</p>

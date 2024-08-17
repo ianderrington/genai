@@ -6551,14 +6551,65 @@ and
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Posts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Posts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../blog/posts/Launch.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Archive
+    Hello world!
   
 
     
@@ -6567,6 +6618,14 @@ and
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -6706,78 +6765,108 @@ and
 <div class="admonition abstract">
 <p class="admonition-title"><a href="https://github.com/langchain-ai/opengpts">Open GPTs</a> Enables the creation of agents and assistants, using Langchain components</p>
 </div>
-<p>??? abstract "<a href="https://github.com/superagent-ai/superagent">The Open Source AI Assistant Framework &amp; API</a>" superagent
-    <a href="https://docs.superagent.sh/overview/overview/introduction">Docs</a></p>
+<p><a href="/shared/superagent.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a href="https://github.com/superagent-ai/superagent">The Open Source AI Assistant Framework &amp; API</a></summary>
+<p><a href="https://docs.superagent.sh/overview/overview/introduction">Docs</a></p>
+</details>
 <details class="abstract">
 <summary><a href="https://github.com/Agenta-AI/agenta">Agenta-AI</a> provides end-to-end LLM developer platform. It provides the tools for prompt engineering and management, ⚖️ evaluation, human annotation, and 🚀 deployment. All without imposing any restrictions on your choice of framework, library, or model.</summary>
 </details>
-<p>??? abstract "<a href="https://github.com/microsoft/JARVIS/">Jarvis</a> provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." jarvis</p>
-<p>??? important "<a href="https://arxiv.org/pdf/2401.06201.pdf">Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction</a> provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage" easy-tool</p>
-<div class="language-text highlight"><pre><span></span><code>**Development**
-Easy Tool follows a simple pattern of: 1. Task Planning, 2. Tool Retrieval, 3. Tool Selection and 4. Tool Execution, coupled with thoughtful prompting to enable SOT tool usage over multiple models.
+<p><a href="/shared/jarvis.html" class="page-url" id="page-url-1"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-**Problem**
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a href="https://github.com/microsoft/JARVIS/">Jarvis</a> provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present.</summary>
+</details>
+<p><a href="/shared/easy-tool.html" class="page-url" id="page-url-2"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+</div>
+
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2401.06201.pdf">Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction</a> provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage</summary>
+<p><strong>Development</strong>
+Easy Tool follows a simple pattern of: 1. Task Planning, 2. Tool Retrieval, 3. Tool Selection and 4. Tool Execution, coupled with thoughtful prompting to enable SOT tool usage over multiple models. </p>
+<p><strong>Problem</strong>
 Using new tools, software,  especially can be challenging for LLMs (and people too!), especially with a poor or redundant documentation and a variety of usage manners. 
-&lt;img width=&quot;733&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/4b17492e-c227-4633-9620-437fb08ab8c9&quot;&gt;
-
-**Solution**
-Easy tool provides &quot;a simple method to condense tool documentation into more concise and effective tool instructions.&quot;
-
-```markdown
-     I: Tool Description Generation
-     /* I: Task prompt */
-     Your task is to create a concise and effective tool usage description based on the tool documentation. You should ensure the description only contains the purposes of the
-     tool without irrelevant information. Here is an example:
-     /* Examples */
-     {Tool Documentation}
-     Tool usage description:
-     {Tool_name} is a tool that can {General_Purposes}.
-     This tool has {Number} multiple built-in functions:
-     1. {Function_1} is to {Functionality_of_Function_1} 2. {Function_2} is to ...
-     /* Auto generation of tool description */ {ToolDocumentationof‘AviationWeatherCenter’} Tool usage description:
-     ‘Aviation Weather Center’ is a tool which can provide official aviation weather data...
-     II: Tool Function Guidelines Construction
-     /* Task prompt */
-     Your task is to create the scenario that will use the tool.
-     1. You are given a tool with its purpose and its parameters list. The scenario should adopt the parameters in the list.
-     2. If the parameters and parameters are both null, you
-     should set: {&quot;Scenario&quot;: XX, &quot;Parameters&quot;:{}}.
-     Here is an example:
-     /* Examples */
-     {Tool_name} is a tool that can {General_Purposes}. {Function_i} is to {Functionality_of_Function_i} {Parameter List of Function_i}
-     One scenario for {Function_i} of {Tool_name} is: {&quot;Scenario&quot;: XX, &quot;Parameters&quot;:{XX:XX}}
-     /* Auto-construction for Tool Function Guidelines */
-     ‘Ebay’ can get products from Ebay in a specific country. ‘Product Details’ in ‘Ebay’ can get the product details for a given product id and a specific country.
-     {Parameter List of ‘Product Details’}
-     One scenario for ‘Product Details’ of ‘Ebay’ is:
-     {&quot;Scenario&quot;: &quot;if you want to know the details of the product with product ID 1954 in Germany from Ebay&quot;, &quot;Parameters&quot;:{&quot;product_id&quot;: 1954, &quot;country&quot;: &quot;Germany&quot;}}.
-```
-&lt;img width=&quot;418&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/caed1a08-4761-4809-8a05-c2d026e26281&quot;&gt;
-
-**Results** 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/4b17492e-c227-4633-9620-437fb08ab8c9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="733" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/4b17492e-c227-4633-9620-437fb08ab8c9"></a></p>
+<p><strong>Solution</strong>
+Easy tool provides "a simple method to condense tool documentation into more concise and effective tool instructions."</p>
+<p><div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>     I: Tool Description Generation
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>     /* I: Task prompt */
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>     Your task is to create a concise and effective tool usage description based on the tool documentation. You should ensure the description only contains the purposes of the
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>     tool without irrelevant information. Here is an example:
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>     /* Examples */
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>     {Tool Documentation}
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>     Tool usage description:
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>     {Tool_name} is a tool that can {General_Purposes}.
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>     This tool has {Number} multiple built-in functions:
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">     </span><span class="k">1.</span> {Function_1} is to {Functionality_of_Function_1} 2. {Function_2} is to ...
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>     /* Auto generation of tool description */ {ToolDocumentationof‘AviationWeatherCenter’} Tool usage description:
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>     ‘Aviation Weather Center’ is a tool which can provide official aviation weather data...
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>     II: Tool Function Guidelines Construction
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>     /* Task prompt */
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>     Your task is to create the scenario that will use the tool.
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">     </span><span class="k">1.</span> You are given a tool with its purpose and its parameters list. The scenario should adopt the parameters in the list.
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">     </span><span class="k">2.</span> If the parameters and parameters are both null, you
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>     should set: {&quot;Scenario&quot;: XX, &quot;Parameters&quot;:{}}.
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>     Here is an example:
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>     /* Examples */
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>     {Tool_name} is a tool that can {General_Purposes}. {Function_i} is to {Functionality_of_Function_i} {Parameter List of Function_i}
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>     One scenario for {Function_i} of {Tool_name} is: {&quot;Scenario&quot;: XX, &quot;Parameters&quot;:{XX:XX}}
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>     /* Auto-construction for Tool Function Guidelines */
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>     ‘Ebay’ can get products from Ebay in a specific country. ‘Product Details’ in ‘Ebay’ can get the product details for a given product id and a specific country.
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>     {Parameter List of ‘Product Details’}
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>     One scenario for ‘Product Details’ of ‘Ebay’ is:
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>     {&quot;Scenario&quot;: &quot;if you want to know the details of the product with product ID 1954 in Germany from Ebay&quot;, &quot;Parameters&quot;:{&quot;product_id&quot;: 1954, &quot;country&quot;: &quot;Germany&quot;}}.
+</span></code></pre></div>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/caed1a08-4761-4809-8a05-c2d026e26281" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="418" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/caed1a08-4761-4809-8a05-c2d026e26281"></a></p>
+<p><strong>Results</strong> 
 The performance is SOT over multiple models. ChatGPT, ToolLLaMA-7B, Vicuna-7B, Mistral-Instruct-&amp;B and GPT-4
-&lt;img width=&quot;820&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/5a4a1b6d-986c-491e-9642-c28f6d56f771&quot;&gt;
-</code></pre></div>
-<p>??? important "<a href="https://arxiv.org/abs/2303.17580">Hugging GPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face</a>" hugging-gpt</p>
-<div class="language-text highlight"><pre><span></span><code>**Development**
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/5a4a1b6d-986c-491e-9642-c28f6d56f771" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="820" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5a4a1b6d-986c-491e-9642-c28f6d56f771"></a></p>
+</details>
+<p><a href="/shared/hugging-gpt.html" class="page-url" id="page-url-3"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-Hugging GPT enables LLM models to call other models via the Hugging Face Repo
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
+</div>
 
-**Problem**
-
-LLMs are not the best task for all tasks. Enabling LLMS to use task-specific models can improve the quality of the results.
-
-**Solution**
-Hugging GPT provides an intervace for LLMs by breaking it down into 1. Task Planning, 2. Model Selection, 3. Task Execution, and 4. Response Generation
-
-&lt;img width=&quot;724&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/293351bf-63c8-40d3-a972-90207a5e409a&quot;&gt;
-
-&lt;img width=&quot;740&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/a5aa16d3-4468-4413-b537-fb63298b285b&quot;&gt;
-&lt;img width=&quot;696&quot; alt=&quot;image&quot; src=&quot;https://github.com/ianderrington/genai/assets/76016868/9cd2a6f8-5d6c-47a0-81f2-74258136880a&quot;&gt;
-
-**Results**
-The results provide substiantial evidence that HuggingGPT can enable successful single, sequential, and graph-based tasks.
-</code></pre></div>
+<details class="important">
+<summary><a href="https://arxiv.org/abs/2303.17580">Hugging GPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face</a></summary>
+<p><strong>Development</strong> </p>
+<p>Hugging GPT enables LLM models to call other models via the Hugging Face Repo</p>
+<p><strong>Problem</strong></p>
+<p>LLMs are not the best task for all tasks. Enabling LLMS to use task-specific models can improve the quality of the results.</p>
+<p><strong>Solution</strong>
+Hugging GPT provides an intervace for LLMs by breaking it down into 1. Task Planning, 2. Model Selection, 3. Task Execution, and 4. Response Generation </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/293351bf-63c8-40d3-a972-90207a5e409a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="724" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/293351bf-63c8-40d3-a972-90207a5e409a"></a></p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/a5aa16d3-4468-4413-b537-fb63298b285b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="740" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a5aa16d3-4468-4413-b537-fb63298b285b"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/9cd2a6f8-5d6c-47a0-81f2-74258136880a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="696" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/9cd2a6f8-5d6c-47a0-81f2-74258136880a"></a></p>
+<p><strong>Results</strong>
+The results provide substiantial evidence that HuggingGPT can enable successful single, sequential, and graph-based tasks.</p>
+</details>
 <details class="abstract">
 <summary><a class="glightbox" href="https://badgen.net/github/stars/lupantech/chameleon-llm" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/lupantech/chameleon-llm" /></a> <a href="https://github.com/lupantech/chameleon-llm">🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4</a></summary>
 </details>
@@ -6794,8 +6883,19 @@ Predominantly uses multi-shot approaches and tool use to critique answers. Uses 
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2f72e4ad-3a49-4bd2-aa1a-e63a57c42343" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="568" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2f72e4ad-3a49-4bd2-aa1a-e63a57c42343"></a></p>
 </details>
 <p>??? abstract "<a class="glightbox" href="https://badgen.net/github/stars/l3vels/ L3AGI" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/l3vels/ L3AGI" /></a> <a href="https://github.com/l3vels/ L3AGI">L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.</a> l3agi</p>
-<p>??? important "<a href="https://github.com/OS-Copilot/FRIDAY">OS-Copilot: Towards Generalist Computer Agents with Self-Improvement</a>" os-copilot-friday</p>
+<p><a href="/shared/os-copilot-friday.html" class="page-url" id="page-url-4"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-4')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-4">Link copied!</div>
+</div>
+
+<details class="important">
+<summary><a href="https://github.com/OS-Copilot/FRIDAY">OS-Copilot: Towards Generalist Computer Agents with Self-Improvement</a></summary>
 <p><strong>Developments</strong> </p>
+</details>
 <p><a href="https://arxiv.org/abs/2402.07456">OS-copilot</a> enables a conceptual framework for generalist computer agents working on Linux and MacOS, with the design of providing a self-improving AI assistent capable of solving general computer tasks. Upon the framework, they built Fully Responsive Intelligence Devoted to Assisting You, FRIDAY, to enable OS-integration.</p>
 <p><strong>Solution</strong></p>
 <p>The OS-copilot framwork uses the following components:</p>
@@ -6948,10 +7048,32 @@ The code is a little Academic, but generally readable here <a href="https://gith
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/7a9cffc3-1f67-4ea2-8368-8380f323f16a" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7a9cffc3-1f67-4ea2-8368-8380f323f16a" /></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/af71d9db-a542-4289-a833-d16ca5e9b574" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="814" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/af71d9db-a542-4289-a833-d16ca5e9b574"></a></p>
 </details>
-<p>??? abstract "<a class="glightbox" href="https://badgen.net/github/stars/daveshap/ACE_Framework" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/daveshap/ACE_Framework" /></a> <a href="https://github.com/daveshap/ACE_Framework">A</a>" ace-framework
-   <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/cd7a4ec3-146c-4129-bf14-7b60e1558f5b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cd7a4ec3-146c-4129-bf14-7b60e1558f5b" /></a></p>
-<p>??? abstract "<a class="glightbox" href="https://badgen.net/github/stars/DataBassGit/AgentForge" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/DataBassGit/AgentForge" /></a> <a href="https://github.com/DataBassGit/AgentForge">Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. </a>" agent-forge</p>
+<p><a href="/shared/ace-framework.html" class="page-url" id="page-url-5"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-5')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-5">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a class="glightbox" href="https://badgen.net/github/stars/daveshap/ACE_Framework" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/daveshap/ACE_Framework" /></a> <a href="https://github.com/daveshap/ACE_Framework">A</a></summary>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/cd7a4ec3-146c-4129-bf14-7b60e1558f5b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cd7a4ec3-146c-4129-bf14-7b60e1558f5b" /></a></p>
+</details>
+<p><a href="/shared/agent-forge.html" class="page-url" id="page-url-6"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-6')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-6">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a class="glightbox" href="https://badgen.net/github/stars/DataBassGit/AgentForge" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/DataBassGit/AgentForge" /></a> <a href="https://github.com/DataBassGit/AgentForge">Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. </a></summary>
 <h2 id="multi-agent">Multi-Agent<a class="headerlink" href="#multi-agent" title="Permanent link">&para;</a></h2>
+</details>
 <div class="admonition abstract">
 <p class="admonition-title"><a class="glightbox" href="https://badgen.net/github/stars/camel-ai/camel" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/camel-ai/camel" /></a> <a href="https://github.com/camel-ai/camel">CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)</a></p>
 <p>Paper: <a href="https://arxiv.org/abs/2303.17760">https://arxiv.org/abs/2303.17760</a></p>

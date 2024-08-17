@@ -6450,14 +6450,65 @@ and
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Posts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Posts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../blog/posts/Launch.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Archive
+    Hello world!
   
 
     
@@ -6466,6 +6517,14 @@ and
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -6549,7 +6608,7 @@ and
   <h1>Index</h1>
 
 <p>Data preparation is essential for all aspects of GenAI. It spans from <a href="../../architectures/training/pre-training.html">pre-training</a> to <a href="../../architectures/training/finetuning.html">fine-tuning</a> to <a href="../../agents/rag.html">retrieval-augmented generation</a>, embodying a multifaceted process that ensures the data is optimized for AI training and application. The journey of data preparation involves several critical steps, each tailored to enhance the quality and effectiveness of the data used.</p>
-<p>Below is a clickable overview of the data preparation process, </p>
+<p>Below is a clickable overview of the data preparation process: </p>
 <pre class="mermaid"><code>graph LR
     style A fill:#b8e2f2,stroke:#1e81b0,stroke-width:2px
     style B fill:#f9edbe,stroke:#f0b429,stroke-width:2px
@@ -6563,14 +6622,15 @@ and
     A --&gt; E(Simulation)
     B --&gt; C(Data Selection and Filtering)
     C --&gt; D(Data Augmentation)
-    C --&gt; F{Use}
-    D --&gt; F
+    D --&gt; DD(Formatting)
+    DD --&gt; F{Use}
     E --&gt; F
 
     click A href "../sources.html" "Data Identification"
     click B href "data_collection.html" "Data Collection"
     click C href "selection.html" "Data Selection and Filtering"
     click D href "augmentation.html" "Data Augmentation"
+    click DD href "formatting.html" "Formatting"
     click E href "simulation.html" "Data Simulation"
 </code></pre>
 <h3 id="data-preparation-steps">Data Preparation Steps:<a class="headerlink" href="#data-preparation-steps" title="Permanent link">&para;</a></h3>
@@ -6587,8 +6647,11 @@ and
 <li>
 <p><strong>Data Augmentation</strong>: To further enhance the dataset, data augmentation techniques are applied. This involves generating new data points from existing ones through various transformations, thereby increasing the quality, diversity and volume of the training data. <a href="augmentation.html">Learn more</a>.</p>
 </li>
+<li>
+<p><strong>Formatting</strong>: Rewrites the data in a manner that is reduces token-usage or enables better results. <a href="formatting.html">Learn more</a></p>
+</li>
 </ol>
-<p>Each of these steps plays a crucial role in preparing data that is not only comprehensive and relevant but also optimized for training AI models efficiently and effectively. By following the links provided in the Mermaid diagram, you can explore each component of the data preparation process in greater detail.</p>
+<p>Following the links provided in the diagram, you can explore each component of the data preparation process in greater detail.</p>
 
 
 

@@ -6807,14 +6807,65 @@ and
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Posts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Posts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../blog/posts/Launch.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Archive
+    Hello world!
   
 
     
@@ -6823,6 +6874,14 @@ and
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -7222,16 +7281,25 @@ and
 <h2 id="what-to-evaluate"><strong>What</strong> to evaluate?<a class="headerlink" href="#what-to-evaluate" title="Permanent link">&para;</a></h2>
 <p>There are several domains of expertise where it may be essential to measure Model's performance. For general-performance models, even if not <a href="models/multimodal.html">multi-model</a>, it is useful to consider <a href="#multi-criteria-evaluation">multiple-criteria</a> simultaneously, which may include <a href="#specific-evaluation">specific criteria</a> to evaluate</p>
 <h3 id="multi-criteria-evaluation">Multi-criteria evaluation<a class="headerlink" href="#multi-criteria-evaluation" title="Permanent link">&para;</a></h3>
-<p>??? important "<a href="https://crfm.stanford.edu/2024/02/18/helm-instruct.html">HELM Instruct: A Multidimensional Instruction Following Evaluation Framework with Absolute Ratings</a>" helm-instruct
-    <strong>Developments</strong> The authors create HELM instruct to use multiple LLMs to evaluate multiple model for given input instructions. They evaluate around the following criteria: <em>Helpfulness, Understandability, Completeness, COnciseness, and Harmlessness</em>. </p>
-<div class="language-text highlight"><pre><span></span><code>![image](https://github.com/ianderrington/genai/assets/76016868/2217abd4-bf6a-4513-86c9-a229f40c3f62)
-The evaluation rubric is as follows
-![image](https://github.com/ianderrington/genai/assets/76016868/6b7fd52e-9c93-46a8-9d3e-b321e430b698)
+<p><a href="/shared/helm-instruct.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-**Results** They find that GPT-4 generally performs the best in all metrics. Interestingly, however, they do not find high consistency amongst evaluators.
-![image](https://github.com/ianderrington/genai/assets/76016868/cc53d97d-86f3-43a6-9899-d06dcb33feff)
-</code></pre></div>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
+
+<details class="important">
+<summary><a href="https://crfm.stanford.edu/2024/02/18/helm-instruct.html">HELM Instruct: A Multidimensional Instruction Following Evaluation Framework with Absolute Ratings</a></summary>
+<p><strong>Developments</strong> The authors create HELM instruct to use multiple LLMs to evaluate multiple model for given input instructions. They evaluate around the following criteria: <em>Helpfulness, Understandability, Completeness, COnciseness, and Harmlessness</em>. </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2217abd4-bf6a-4513-86c9-a229f40c3f62" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2217abd4-bf6a-4513-86c9-a229f40c3f62" /></a>
+The evaluation rubric is as follows
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6b7fd52e-9c93-46a8-9d3e-b321e430b698" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6b7fd52e-9c93-46a8-9d3e-b321e430b698" /></a></p>
+<p><strong>Results</strong> They find that GPT-4 generally performs the best in all metrics. Interestingly, however, they do not find high consistency amongst evaluators.
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/cc53d97d-86f3-43a6-9899-d06dcb33feff" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cc53d97d-86f3-43a6-9899-d06dcb33feff" /></a></p>
 <h4 id="generalization-ability">Generalization ability<a class="headerlink" href="#generalization-ability" title="Permanent link">&para;</a></h4>
+</details>
 <p>It may be important for your modal to have generalization beyond your training data. If so, it is important to thoroughly separate any testing data from the training data. To remove this, you will want to work on your <a href="../data/index.html">data</a> preparation. If needed, the 'contamination' of data may be removed with <a href="https://lmsys.org/blog/2023-11-14-llm-decontaminator/">automated methods</a>.</p>
 <h3 id="specific-criteria">Specific Criteria<a class="headerlink" href="#specific-criteria" title="Permanent link">&para;</a></h3>
 <h4 id="accuracy-vs-hallucination">Accuracy vs Hallucination<a class="headerlink" href="#accuracy-vs-hallucination" title="Permanent link">&para;</a></h4>
@@ -7252,9 +7320,20 @@ The evaluation rubric is as follows
 <li>Iterate over various document depths (where the needle is placed) and context lengths to measure performance</li>
 </ol>
 <p>In ideal systems, context retrieval will be independent of the position within the context, and of the content itself. </p>
-<p>??? abstract "<a class="glightbox" href="https://github.com/open-compass/opencompass" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="NeedleBench: Can LLMs Do Retrieval and Reasoning in 1 Million Context Window?" src="https://github.com/open-compass/opencompass" /></a>" needlebench
-    <a href="https://arxiv.org/pdf/2407.11963">paper</a>
-    <a class="glightbox" href="https://github.com/user-attachments/assets/f72b72f0-dc21-47c8-8436-a033721b74a1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1163" alt="image" src="https://github.com/user-attachments/assets/f72b72f0-dc21-47c8-8436-a033721b74a1"></a></p>
+<p><a href="/shared/needlebench.html" class="page-url" id="page-url-1"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a class="glightbox" href="https://github.com/open-compass/opencompass" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="NeedleBench: Can LLMs Do Retrieval and Reasoning in 1 Million Context Window?" src="https://github.com/open-compass/opencompass" /></a></summary>
+<p><a href="https://arxiv.org/pdf/2407.11963">paper</a>
+<a class="glightbox" href="https://github.com/user-attachments/assets/f72b72f0-dc21-47c8-8436-a033721b74a1" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1163" alt="image" src="https://github.com/user-attachments/assets/f72b72f0-dc21-47c8-8436-a033721b74a1"></a></p>
+</details>
 <details class="abstract">
 <summary><a class="glightbox" href="https://badgen.net/github/stars/gkamradt/LLMTest_NeedleInAHaystack" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/gkamradt/LLMTest_NeedleInAHaystack" /></a> <a href="https://github.com/gkamradt/LLMTest_NeedleInAHaystack">Testing with LLMTest_NeedleInAHaystack repo</a> shows where in the context space that LLMs may fail at context retrieval.</summary>
 <p>As demonstrated additionally in the authors' <a href="https://www.youtube.com/watch?v=KwRRuiCCdmc">youtube</a></p>

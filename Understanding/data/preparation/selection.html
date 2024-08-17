@@ -6620,14 +6620,65 @@ and
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Posts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Posts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../blog/posts/Launch.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Archive
+    Hello world!
   
 
     
@@ -6636,6 +6687,14 @@ and
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -6863,29 +6922,36 @@ and
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/bffff5f8-0c69-401f-bb63-887c08fb9d39" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="856" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bffff5f8-0c69-401f-bb63-887c08fb9d39"></a>
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/6f14e6e5-26b7-45b4-b4f4-d2259c83b6ac" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="861" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6f14e6e5-26b7-45b4-b4f4-d2259c83b6ac"></a></p>
 </details>
-<p>??? important "<a href="https://arxiv.org/html/2402.09668v1">How to Train Data-Efficient LLMs</a>" how-to-train-data-efficient-llms</p>
-<div class="language-text highlight"><pre><span></span><code>**Developments** The authors compare a number of sampling methods and demonstrate that an LLM that choosing high quality pre-training data with a simple prompt can result in outperforming models that converge 70% faster while rejecting 90% of data. The resulting model they call `Ask-LLM`.
+<p><a href="/shared/how-to-train-data-efficient-llms.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-![image](https://github.com/ianderrington/genai/assets/76016868/a84a0d30-6b6e-410a-bff1-05eddea5205c)
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
 
-**Method**
+<details class="important">
+<summary><a href="https://arxiv.org/html/2402.09668v1">How to Train Data-Efficient LLMs</a></summary>
+<p><strong>Developments</strong> The authors compare a number of sampling methods and demonstrate that an LLM that choosing high quality pre-training data with a simple prompt can result in outperforming models that converge 70% faster while rejecting 90% of data. The resulting model they call <code>Ask-LLM</code>. </p>
+<p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/a84a0d30-6b6e-410a-bff1-05eddea5205c" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a84a0d30-6b6e-410a-bff1-05eddea5205c" /></a></p>
+<p><strong>Method</strong>
 The authors a number of  sampling methods including those that were heuristic-based including compute-efficient density/perplexity estimation. The models that were most  , gains were primarily found when using a 
-```markdown
-###
-This is a pretraining .... datapoint.
-###
-
-Does the previous paragraph demarcated within ### and ### contain info
-rmative signal for pre-raining a large-language model?
-An informaive datapoint should be well-formatted, contain some usable knowledge of the world, and strictly NOT have any harmful, racist, sexist, etc. content. 
-
-OPTIONS: 
-- yes
-- no
-```
-**Results**
-The LLM-based quality filtering yields a &quot;Pareto optimal efficiency between data quanity and model quality&quot;, helping to reduce environment and thereby becoming a net social-good.
-</code></pre></div>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gu">###</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gu">This is a pretraining .... datapoint.</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>###
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Does the previous paragraph demarcated within ### and ### contain info
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>rmative signal for pre-raining a large-language model?
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>An informaive datapoint should be well-formatted, contain some usable knowledge of the world, and strictly NOT have any harmful, racist, sexist, etc. content. 
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>OPTIONS: 
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">-</span><span class="w"> </span>yes
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">-</span><span class="w"> </span>no
+</span></code></pre></div>
+<strong>Results</strong>
+The LLM-based quality filtering yields a "Pareto optimal efficiency between data quanity and model quality", helping to reduce environment and thereby becoming a net social-good. </p>
+</details>
 
 
 

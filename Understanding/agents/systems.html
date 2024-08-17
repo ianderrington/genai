@@ -6590,14 +6590,65 @@ and
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Posts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Posts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../blog/posts/Launch.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Archive
+    Hello world!
   
 
     
@@ -6606,6 +6657,14 @@ and
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -6788,13 +6847,22 @@ and
 <p>Agentic Systems require that there is communication with and between AI-agents. To produce complexity management and success-potential, they are enabled through frameworks that permit certain forms of interactions. A <em>higher level</em> <a href="cognitive_architecture.html">cognitive architecture</a> that can be built up in various manners to achieve end-goals effectively. </p>
 <p>Here are a few frameworks of importance. </p>
 <h3 id="langgraph">LangGraph<a class="headerlink" href="#langgraph" title="Permanent link">&para;</a></h3>
-<p>???+ code "<a href="https://python.langchain.com/docs/langgraph">LangGraph</a> provides a simple interaction diagram to allow custom-built systems of interaction" langgraph
-    It is important to consider <a href="https://blog.langchain.dev/langgraph-multi-agent-workflows/">LangGraph</a> </p>
-<div class="language-text highlight"><pre><span></span><code>![langgrah](https://blog.langchain.dev/content/images/size/w1600/2024/01/simple_multi_agent_diagram--1-.png)
-![langgraph](https://blog.langchain.dev/content/images/2024/01/hierarchical-diagram.png)
+<p><a href="/shared/langgraph.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-Some examples [gpt-newspaper](https://github.com/assafelovic/gpt-newspaper), [lang-graph-crewAI](https://github.com/joaomdmoura/crewAI-examples/tree/main/CrewAI-LangGraph)
-</code></pre></div>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
+
+<details class="code" open="open">
+<summary><a href="https://python.langchain.com/docs/langgraph">LangGraph</a> provides a simple interaction diagram to allow custom-built systems of interaction</summary>
+<p>It is important to consider <a href="https://blog.langchain.dev/langgraph-multi-agent-workflows/">LangGraph</a> </p>
+<p><a class="glightbox" href="https://blog.langchain.dev/content/images/size/w1600/2024/01/simple_multi_agent_diagram--1-.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="langgrah" src="https://blog.langchain.dev/content/images/size/w1600/2024/01/simple_multi_agent_diagram--1-.png" /></a>
+<a class="glightbox" href="https://blog.langchain.dev/content/images/2024/01/hierarchical-diagram.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="langgraph" src="https://blog.langchain.dev/content/images/2024/01/hierarchical-diagram.png" /></a></p>
+<p>Some examples <a href="https://github.com/assafelovic/gpt-newspaper">gpt-newspaper</a>, <a href="https://github.com/joaomdmoura/crewAI-examples/tree/main/CrewAI-LangGraph">lang-graph-crewAI</a></p>
+</details>
 <details class="important" open="open">
 <summary><a class="glightbox" href="https://badgen.net/github/stars/microsoft/autogen" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/microsoft/autogen" /></a> <a href="https://github.com/microsoft/autogen">AutoGen</a> enables LLM application development with communication between multiple agents.</summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d24ece14-d24a-4144-9b7d-0c896bf10924" /></a>
@@ -6840,39 +6908,51 @@ TRY THIS!</p>
 <p>This system consists of multiple agents, and they engage in ongoing discussions about their daily activities. They also receive regular updates about their environment. An example of this type of system can be viewed in <a href="https://arxiv.org/pdf/2304.03442.pdf">this paper</a>.</p>
 </div>
 <h2 id="papers">Papers<a class="headerlink" href="#papers" title="Permanent link">&para;</a></h2>
-<p>??? important "<a href="https://arxiv.org/html/2403.13313v1">Polaris: A Safety-focused LLM Constellation Architecture for Healthcare</a>" polaris
-    <strong>Description</strong> The authors reval a LLM agent system to ensure safe and compliant AI chatbots for healthcare 
-    <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2fada51f-d5e0-4288-bf6d-940fd5ab1fd8" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="870" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2fada51f-d5e0-4288-bf6d-940fd5ab1fd8"></a>
-    <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b8234adb-d86e-4118-aee3-3f72fa461bc7" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="891" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b8234adb-d86e-4118-aee3-3f72fa461bc7"></a></p>
-<p>??? important "<a href="https://arxiv.org/pdf/2305.17066.pdf">Society of Minds: To Enable Societal Interactions to Improve Output</a>" ai-society-of-minds</p>
-<div class="language-text highlight"><pre><span></span><code>The foundation of the multi-agent debate approach involves pitting multiple LLM instances against each other, where each proposes and argues a response to a given prompt. Through rounds of exchange, the objective is to collectively review and refine answers, ultimately reaching a well-reviewed, accurate final response.
+<p><a href="/shared/polaris.html" class="page-url" id="page-url-1"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+</div>
 
-[Hallucination reduction](https://medium.com/@ignacio.de.gregorio.noblejas/hallucination-312f79f4c888)
+<details class="important">
+<summary><a href="https://arxiv.org/html/2403.13313v1">Polaris: A Safety-focused LLM Constellation Architecture for Healthcare</a></summary>
+<p><strong>Description</strong> The authors reval a LLM agent system to ensure safe and compliant AI chatbots for healthcare 
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/2fada51f-d5e0-4288-bf6d-940fd5ab1fd8" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="870" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2fada51f-d5e0-4288-bf6d-940fd5ab1fd8"></a>
+<a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/b8234adb-d86e-4118-aee3-3f72fa461bc7" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="891" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b8234adb-d86e-4118-aee3-3f72fa461bc7"></a></p>
+</details>
+<p><a href="/shared/ai-society-of-minds.html" class="page-url" id="page-url-2"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
 
-Also [this] (https://www.cjco.com.au/article/news/multi-agent-debates-elevate-language-models-mit-and-google-brain-unlock-llm-potential-and-accuracy/)
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+</div>
 
-Also [Marvin Minsky YouTube &quot;Society of Mind&quot;](https://www.youtube.com/watch?v=-pb3z2w9gDg)
-
-From Medium article…
-
-In his 1986 book The Society of Mind, Minksy, the founder of MIT’s AI laboratory, presented his theory of how the mind works.
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2305.17066.pdf">Society of Minds: To Enable Societal Interactions to Improve Output</a></summary>
+<p>The foundation of the multi-agent debate approach involves pitting multiple LLM instances against each other, where each proposes and argues a response to a given prompt. Through rounds of exchange, the objective is to collectively review and refine answers, ultimately reaching a well-reviewed, accurate final response. </p>
+<p><a href="https://medium.com/@ignacio.de.gregorio.noblejas/hallucination-312f79f4c888">Hallucination reduction</a> </p>
+<p>Also [this] (<a href="https://www.cjco.com.au/article/news/multi-agent-debates-elevate-language-models-mit-and-google-brain-unlock-llm-potential-and-accuracy/">https://www.cjco.com.au/article/news/multi-agent-debates-elevate-language-models-mit-and-google-brain-unlock-llm-potential-and-accuracy/</a>)</p>
+<p>Also <a href="https://www.youtube.com/watch?v=-pb3z2w9gDg">Marvin Minsky YouTube "Society of Mind"</a></p>
+<p>From Medium article… </p>
+<p>In his 1986 book The Society of Mind, Minksy, the founder of MIT’s AI laboratory, presented his theory of how the mind works.
 He proposed that it is not a single entity but rather a complex system composed of many smaller, simpler processes that Minsky called “agents”. 
 These agents, each simple in itself, work together to create intelligent behavior, the behavior that AI is every day trying to imitate from us humans.
-Now, this fascinating theory has inspired a select group of MIT and Google Brain researchers to present the next breakthrough in Generative AI, a new way to fight the largest enemy of Large Language Models (LLMs) like ChatGPT.
-
-The proposed method works by creating a “society of minds” where multiple instances of a language model propose and debate their individual responses and reasoning processes over multiple rounds to arrive at a single common answer.
-
-Here’s a more detailed breakdown:
-
-1. Given a query, multiple instances of a language model (or several ones) first generate individual candidate answers.
-2. Each individual model instance reads and critiques the responses of all other models and uses this content to update its own answer.
-3. This step is then repeated over several rounds until we reach a final answer.
-
-This process induces models to construct answers that are consistent with both their internal critic as well as sensible in light of the responses of other agents.
-
-The resulting quorum of models can hold and maintain multiple chains of reasoning and possible answers simultaneously before proposing the final answer.
-</code></pre></div>
+Now, this fascinating theory has inspired a select group of MIT and Google Brain researchers to present the next breakthrough in Generative AI, a new way to fight the largest enemy of Large Language Models (LLMs) like ChatGPT.</p>
+<p>The proposed method works by creating a “society of minds” where multiple instances of a language model propose and debate their individual responses and reasoning processes over multiple rounds to arrive at a single common answer.</p>
+<p>Here’s a more detailed breakdown:</p>
+<ol>
+<li>Given a query, multiple instances of a language model (or several ones) first generate individual candidate answers.</li>
+<li>Each individual model instance reads and critiques the responses of all other models and uses this content to update its own answer.</li>
+<li>This step is then repeated over several rounds until we reach a final answer.</li>
+</ol>
+<p>This process induces models to construct answers that are consistent with both their internal critic as well as sensible in light of the responses of other agents.</p>
+<p>The resulting quorum of models can hold and maintain multiple chains of reasoning and possible answers simultaneously before proposing the final answer.</p>
+</details>
 <details class="important">
 <summary><a href="https://arxiv.org/pdf/2312.17025.pdf">Experiential Co-Learning of Software-Developing Agents</a> </summary>
 <p>Introduces a multi-agent paradigm that enables two types of language-agent using three modules of integration: </p>
@@ -6993,7 +7073,18 @@ r1 --&gt;|transition-record| r2
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/48bf16aa-efde-4e38-b7e1-30963f74aa66" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/48bf16aa-efde-4e38-b7e1-30963f74aa66" /></a></p>
 </details>
 <h2 id="swarms">Swarms<a class="headerlink" href="#swarms" title="Permanent link">&para;</a></h2>
-<p>??? abstract "<a class="glightbox" href="https://badgen.net/github/stars/daveshap/OpenAI_Agent_Swarm" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/daveshap/OpenAI_Agent_Swarm" /></a> <a href="https://github.com/daveshap/OpenAI_Agent_Swarm">Heirarchichal Autonomous Agent Swarm: HAAS</a> to create self-direct, self-correcting, and self-improving agent systems." HAAS</p>
+<p><a href="/shared/HAAS.html" class="page-url" id="page-url-3"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a class="glightbox" href="https://badgen.net/github/stars/daveshap/OpenAI_Agent_Swarm" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/daveshap/OpenAI_Agent_Swarm" /></a> <a href="https://github.com/daveshap/OpenAI_Agent_Swarm">Heirarchichal Autonomous Agent Swarm: HAAS</a> to create self-direct, self-correcting, and self-improving agent systems.</summary>
+</details>
 <div class="admonition tip">
 <p class="admonition-title"><a href="https://medium.com/@kyeg/swarms-of-ai-agents-automating-everything-c554f5be421b">Swarms</a></p>
 <p>Very thoughtful next-level systems focusing on large-dimensions of swarms. Very initial stages but has a lot of promise.
