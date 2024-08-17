@@ -207,6 +207,17 @@ The general method of creating protein foundation models uses Masked Language Mo
     <img width="708" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ff42d6df-a13e-418d-8385-264ecd2d0994">
 
 
+#### Notable Models
+
+??? note "[xTrimoPGLM: Unified 100B-Scale Pre-trained Transformer for Deciphering the Language of Protein](https://arxiv.org/pdf/2401.06199)" xtrimopglm
+    **Developments** The authors reveal an innovative manner of training protein language models using 
+
+??? note "[Single-sequence protein structure prediction using supervised transformer protein language models](https://yanglab.nankai.edu.cn/trRosetta/benchmark_single/)"
+    The authors show in their [paper](https://nature.com/articles/s43588-022-00373-3) the ability to generate high-quality predictions outperforming AlphaFold2, with a model called trRosettaX-Single using ESM to generate representations and attention maps that can be trained for distance+energy maps.
+    ![image](https://github.com/ianderrington/genai/assets/76016868/c06d4a40-117f-4b86-9deb-ee9d29fc8f70)
+
+??? abstract "[Tasks Assessing Protein Embeddings (TAPE)](https://github.com/songlab-cal/tape)"
+
 
 
 #### Multimodal
@@ -230,13 +241,6 @@ The general method of creating protein foundation models uses Masked Language Mo
     The text data set looks like this:
     <img width="673" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2e96eea2-aff6-4667-9101-96ae5dbb4dc0">
 
-#### Other Models
-
-??? note "[Single-sequence protein structure prediction using supervised transformer protein language models](https://yanglab.nankai.edu.cn/trRosetta/benchmark_single/)"
-    The authors show in their [paper](https://nature.com/articles/s43588-022-00373-3) the ability to generate high-quality predictions outperforming AlphaFold2, with a model called trRosettaX-Single using ESM to generate representations and attention maps that can be trained for distance+energy maps.
-    ![image](https://github.com/ianderrington/genai/assets/76016868/c06d4a40-117f-4b86-9deb-ee9d29fc8f70)
-
-??? abstract "[Tasks Assessing Protein Embeddings (TAPE)](https://github.com/songlab-cal/tape)"
 
 #### Architectures by Target
 
