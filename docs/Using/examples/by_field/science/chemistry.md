@@ -11,6 +11,10 @@ It is important to first consider dual-use and potential intentional or accident
 ### Drugs
 !!! "[Deep learning-guided discovery of an antibiotic targeting Acinetobacter baumannii](https://www.nature.com/articles/s41589-023-01349-8)"
 
+
+DRUGASSIST: A LARGE LANGUAGE MODEL FOR
+MOLECULE OPTIMIZATION https://arxiv.org/pdf/2401.10334.pdf  
+
 ## Components
 
 ### Protocol Optimization 

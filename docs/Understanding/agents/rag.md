@@ -176,6 +176,8 @@ Once data has been loaded in a way that a model can process it, it must be split
 2. By some heuristic break, such as `.` sentences, `\n` return characters or `\p` paragraphs or newlines.
 3. In a manner that maximizes the topic coherence. In this case, splitting and embedding may happen simultaneously.
 
+!!! note "[AST-T5: Structure-Aware Pretraining for Code Generation and Understanding](https://arxiv.org/pdf/2401.03003)"
+
 #### Embedding Data
 
 Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). [Read more](https://blog.langchain.dev/semi-structured-multi-modal-rag/.)

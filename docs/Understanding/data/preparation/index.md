@@ -1,6 +1,6 @@
 Data preparation is essential for all aspects of GenAI. It spans from [pre-training](../../architectures/training/pre-training.md) to [fine-tuning](../../architectures/training/finetuning.md) to [retrieval-augmented generation](../../agents/rag.md), embodying a multifaceted process that ensures the data is optimized for AI training and application. The journey of data preparation involves several critical steps, each tailored to enhance the quality and effectiveness of the data used.
 
-Below is a clickable overview of the data preparation process, 
+Below is a clickable overview of the data preparation process: 
 
 ```mermaid
 graph LR
@@ -16,14 +16,15 @@ graph LR
     A --> E(Simulation)
     B --> C(Data Selection and Filtering)
     C --> D(Data Augmentation)
-    C --> F{Use}
-    D --> F
+    D --> DD(Formatting)
+    DD --> F{Use}
     E --> F
 
     click A href "../sources.html" "Data Identification"
     click B href "data_collection.html" "Data Collection"
     click C href "selection.html" "Data Selection and Filtering"
     click D href "augmentation.html" "Data Augmentation"
+    click DD href "formatting.html" "Formatting"
     click E href "simulation.html" "Data Simulation"
 
 ```
@@ -38,7 +39,6 @@ graph LR
 
 4. **Data Augmentation**: To further enhance the dataset, data augmentation techniques are applied. This involves generating new data points from existing ones through various transformations, thereby increasing the quality, diversity and volume of the training data. [Learn more](augmentation.md).
 
+5. **Formatting**: Rewrites the data in a manner that is reduces token-usage or enables better results. [Learn more](formatting.md)
 
-
-
-Each of these steps plays a crucial role in preparing data that is not only comprehensive and relevant but also optimized for training AI models efficiently and effectively. By following the links provided in the Mermaid diagram, you can explore each component of the data preparation process in greater detail.
+Following the links provided in the diagram, you can explore each component of the data preparation process in greater detail.

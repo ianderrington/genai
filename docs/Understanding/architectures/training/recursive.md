@@ -16,9 +16,8 @@ graph LR
 
 ??? note "[Beyond Model Collapse: Scaling Up with Synthesized Data Requires Reinforcement](https://arxiv.org/pdf/2406.07515)"
     **Results**: The authors show that training from feedback-augmented synthesized data, either
-    by pruning incorrect predictions or by selecting the best of several guesses, can prevent model collapse
+    by pruning incorrect predictions or by selecting the best of several guesses, can prevent model collapse. 
 
-Train on model trains a new model on the output of a new model.
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/SqueezeAILab/LLM2LLM) [LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement](https://github.com/SqueezeAILab/LLM2LLM)"
     **Developments** The authors reveal in their [paper](https://arxiv.org/pdf/2403.15042.pdf) a solution an iterative training and generation approach that enable effective fine tuning on low-data regimes. 

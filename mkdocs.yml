@@ -106,7 +106,7 @@ plugins:
   - shareable_admonition
       
   - awesome-pages
-  - blog
+    #- blog
   - meta
   # Doesn't build 
   # - rss:
