@@ -146,7 +146,7 @@ Agents can exist in different 'domains' all
 
 
 
-## General oncepts
+## General Concepts
 
 
 ### Task Planning & Management
