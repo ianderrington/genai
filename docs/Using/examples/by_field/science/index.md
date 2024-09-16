@@ -38,6 +38,20 @@ Generative AI has one of the most powerful potentials for science by enabling ra
     a multi-step agent task18 instead of a direct procedure. PaperQA2 decomposes RAG into tools, allowing it to revise
     its search parameters and to generate and examine candidate answers before producing a final answer"
 
+??? abstract "[The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery](https://github.com/SakanaAI/AI-Scientist)"
+    ![image](https://github.com/user-attachments/assets/f74561b1-5e32-48f0-b29c-6ec388219c05)
+
+    [Paper](https://arxiv.org/pdf/2408.06292)
+
+    They Generate the AI SCientist which: 
+    | " generates novel research ideas, writes code, executes experiments, visualizes results, describes its findings by writing a full scientific paper, and then runs a simulated review process for evaluation
+    
+    Their Agent  system is capable of executing the entire ML research lifecycle: from inventing research ideas and experiments, writing code, to executing experiments on GPUs and gathering results.
+    
+    The AI Scientist can produce entire scientific papers that exceed the acceptance threshold at a top machine learning conference as judged by our automated reviewer.
+    
+    In one run the agent tried to change its own code by removing some obstacles, to better achieve its (completely unrelated) goal.
+
     
 ### Evaluations
 
