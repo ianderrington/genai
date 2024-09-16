@@ -53,10 +53,17 @@ Generative AI has one of the most powerful potentials for science by enabling ra
     In one run the agent tried to change its own code by removing some obstacles, to better achieve its (completely unrelated) goal.
 
     
-### Evaluations
+### Informatics
 
-??? abstract "[DSBench: how Far Are Data Science Agents To Becoming Data Science Experts?](https://github.com/LiqiangJing/DSBench)"
+Science without the ability to process the data is, well, just doing random things. Here are some examples of informatics solutions that help with automated analysis. 
+
+??? abstract "[DSBench: how Far Are Data Science Agents To Becoming Data Science Experts?](https://github.com/LiqiangJing/DSBench)" 
     In their [paper](https://arxiv.org/pdf/2409.07703) the authors create a system benchmarks for evaluating data science agents for data analysis and modeling tasks. 
+    
+??? "[BioInformatics Agent (BIA): Unleashing the Power of Large Language Models to Reshape Bioinformatics Workflow](https://github.com/biagent-dev/bia)" bioinformatics-agent
+    [Their paper](https://www.biorxiv.org/content/10.1101/2024.05.22.595240v1.full.pdf)
+    ![image](https://github.com/user-attachments/assets/e427dcb3-e6a3-47e9-a215-afca95e8ce3a)
+    
 
 ## Research
 
