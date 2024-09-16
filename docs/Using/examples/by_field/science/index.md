@@ -58,7 +58,12 @@ Generative AI has one of the most powerful potentials for science by enabling ra
 
     They provide the following prompt to make this very useful. They can be seen in the site ./prompts/. We will make these viewable later.
 
+## Idea Generation 
 
+??? note "[Can LLMs Generate Novel Research Ideas?](https://www.arxiv.org/pdf/2409.04109) (yes)"
+    ![image](https://github.com/user-attachments/assets/7ce86b9c-08b9-4dac-a295-d29faa270343)
+
+    
 
 
 ## Autonomous Science in the Loop
