@@ -21,6 +21,29 @@ Generative AI has one of the most powerful potentials for science by enabling ra
     classDef purple fill:#dda0dd,stroke:#333,stroke-width:2px,color:black;
 ```
 
+## Agents with multiple abilities
+
+??? abstract "[Language Agents Achieve SUperhuman Synthesis of Scientific Knowledge (and Paper2QA)](https://github.com/Future-House/paper-qa)"
+    
+    The authors show in their [paper](https://storage.googleapis.com/fh-public/paperqa/Language_Agents_Science.pdf) primarily building PaperQA2, that they can create science agents that are able exceed human performance in several areas: 
+
+    * Answer scientific Questions
+    * Summarize data
+    * Detect contradictions and data
+    * Write cited Wikipedia-style summaries 
+
+    ![image](https://github.com/user-attachments/assets/7f098c5c-d389-4795-81a2-678dd7b5c401)
+
+    "PaperQA2 is a RAG agent that treats retrieval and response generation as
+    a multi-step agent task18 instead of a direct procedure. PaperQA2 decomposes RAG into tools, allowing it to revise
+    its search parameters and to generate and examine candidate answers before producing a final answer"
+
+    
+### Evaluations
+
+??? abstract "[DSBench: how Far Are Data Science Agents To Becoming Data Science Experts?](https://github.com/LiqiangJing/DSBench)"
+    In their [paper](https://arxiv.org/pdf/2409.07703) the authors create a system benchmarks for evaluating data science agents for data analysis and modeling tasks. 
+
 ## Research
 
 ??? note "[ResearchAgent: Iterative Research Idea Generation over Scientific Literature with Large Language Models](https://arxiv.org/pdf/2404.07738.pdf)" research-agent
@@ -35,9 +58,7 @@ Generative AI has one of the most powerful potentials for science by enabling ra
 
     They provide the following prompt to make this very useful. They can be seen in the site ./prompts/. We will make these viewable later.
 
-    
 
-    
 
 
 ## Autonomous Science in the Loop
