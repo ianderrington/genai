@@ -199,6 +199,27 @@ Agents can exist in different 'domains' all
     If an agent requests something, then it is able to act based on a 'pull' action. If it is given everything to begin with, it has a 'push' action. From this Langchain [blog](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)
 
 ## The Future 
+### Automated agents and systems
+
+??? abstract "[Automated Design of Agentic Systems](https://github.com/ShengranHu/ADAS)"
+    The author's show in their [paper](https://arxiv.org/pdf/2408.08435)  Automated Design of Agentic Systems (ADAS), "which aims to automatically create powerful agentic system designs, including inventing novel building blocks and/or combining them in new ways."
+    
+    <img width="663" alt="image" src="https://github.com/user-attachments/assets/34c669a4-df02-4fee-9200-6cd1a570c0fb">
+    
+    The core of their solution involves the following prompt which helps to improve the agent systems.
+    
+    ```markdown
+    You are an expert machine learning researcher testing different agentic systems.
+    [Brief Description of the Domain]
+    [Framework Code]
+    [Output Instructions and Examples]
+    [Discovered Agent Archive] (initialized with baselines, updated at every iteration)
+    # Your task
+    You are deeply familiar with prompting techniques and the agent works from the literature. Your goal is
+    to maximize the performance by proposing interestingly new agents ......
+    Use the knowledge from the archive and inspiration from academic literature to propose the next
+    interesting agentic system design.
+    ```
 
 It is possible that limitations fundamental to static agents are not goin to be universally optimal. Different cognitive architecutres and enabling tools will provide different degrees of success. That is where cognitive agents that are able to able to 'pull' new skills, and ways of working, into their realm of agency, will be able to bypass limitations inherent in in their original configurations.
 
