@@ -62,7 +62,11 @@ Science without the ability to process the data is, well, just doing random thin
     
 ??? "[BioInformatics Agent (BIA): Unleashing the Power of Large Language Models to Reshape Bioinformatics Workflow](https://github.com/biagent-dev/bia)" bioinformatics-agent
     [Their paper](https://www.biorxiv.org/content/10.1101/2024.05.22.595240v1.full.pdf)
+    
     ![image](https://github.com/user-attachments/assets/e427dcb3-e6a3-47e9-a215-afca95e8ce3a)
+
+    ![image](https://github.com/user-attachments/assets/8fe5917a-0304-41ef-88b5-2511029dccb2)
+
     
 
 ## Research
