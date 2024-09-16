@@ -19,6 +19,22 @@ Knowledge graphs can be created with the help of Generative AI. Understanding re
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/m-elbably/gpt-graph) [GPT for knowledge graphs](https://github.com/m-elbably/gpt-graph)"
     [Medium](https://medium.com/@m-elbably/gpt-graph-a-simple-tool-for-knowledge-graph-exploration-70e0e3861716)
 
+    Title: GPT Graph: A Simple Tool for Knowledge Graph Exploration
+
+    [medium ARticles](https://medium.com/@m-elbably/gpt-graph-a-simple-tool-for-knowledge-graph-exploration-70e0e3861716)
+    
+    [Github](https://github.com/m-elbably/gpt-graph)
+    
+    
+    A knowledge graph is a type of database that is used to store and represent knowledge in a machine-readable format. It uses a graph-based model, consisting of nodes (entities) and edges (relationships), to represent information and the connections between them. Knowledge graphs are often used to represent complex information in a structured and intuitive way, making it easier for machines to understand and analyze. They can be used in various domains, such as natural language processing, search engines, recommendation systems, and data analytics.
+    
+    It’s a unique way to explore information in an organized and intuitive manner. With GPT Graph, you can easily navigate through different topics, discover new relationships between them, and generate creative ideas.
+    
+    It leverages the power of GPT-3 to generate relevant and high-quality content. Unlike traditional keyword-based searches, GPT Graph takes a more semantic approach to explore the topics and generate the graph. It helps to uncover hidden relationships between different topics and provides a comprehensive view of the entire knowledge domain.
+    
+    Moreover, GPT Graph provides a user-friendly interface that allows users to interact with the graph easily. Users can ask questions, generate prompts, and add their own ideas to the graph. It’s a powerful tool that enables users to collaborate, brainstorm, and generate new insights in a very efficient way.
+    .
+
 
 
 
