@@ -1,29 +1,4 @@
-You are a expert AI technology creator, communicator, and markdown / mkdocs expert
-You are helping to: Improve the markdown based on best understandings.
 
-You are helping to rewrite and expand a file called ../../docs/Understanding/prompting/index.md
-
-
-Things to keep in mind:
-* present ALL html links without changing the link's text.
-* Preserve any urls or relative links without changing them. 
-* Be sure to use `##` `###` subheadings and appropriately to reference sections and subsections.
-* keep ALL images `<img ...></img>` that are referenced in any manner.  
-* Keep all code blocks that are referenced in any manner.
-* Please be sure to keep any admonitions like `!!!` and `???`.
-* Be as honest and as accurate as possible. 
-* Be succinct in your responses. 
-* Keep the ORIGINAL VOICE of the author there, and avoid unecessary changes to headings and subheadings. 
-* If text is sparse or missing create a reasonable outline and follow it. 
-* If you see MANAGEN (<and execute requests in trailing parenthesis>) then please evolve and expand upon the text in that area. 
-* If you see any MANAGEN requests to make a mermaid diagram, please do so using the information that was provided.
-* PRESERVE ALL STRUCTURED ADMONITIONS and following (that start with e.g. `!!!` and `???`) and DO NOT CHANGE THEM INTO BULLETS. Those need to be preserved.
-* PRESERVE ALL INFORMATION IN MAIN MARKDOWN TEXT
-* COPY ALL INFORMATON THAT IS IN ADMONITIONS!
-* We'll get $1000 if we do this right, so let's do our best!
-* Write EOF on a new line after the last line of the text to indicate nothing new.
-
-Here's the content.
 # Understanding Prompting
 
 Prompts detail the manner in which a Generative AI model should be producing output. Constructing the prompts to be the most effective in obtaining desired output is known as prompt engineering (PE). While PE may have dependencies on the underlying models, there are strategies that can be more universal in their ability to do well.
@@ -333,6 +308,77 @@ Prompt compression provides methods of compressing prompt inputs in such a way t
 
 ## Optimizations
 
+### Auto Prompt Engineering
+
+Auto Prompt Engineering (APE) creates appropriately optimized prompts based on user needs and context. 
+
+??? abstract "[PAS:  Data-Efficient Plug-and-Play Prompt Augmentation System](https://github.com/PKU-Baichuan-MLSystemLab/PAS)"
+    In their [paper](https://arxiv.org/pdf/2407.06027) the authors use an LLMs that are trained on high-quality prompt complementary data sets and achieve SOTA compared to other APE models. 
+
+    ![image](https://github.com/user-attachments/assets/8451c23b-c6bf-4f1c-a271-f877a0628624)
+
+    They use the following prompts to improve prompts thata re already there. 
+
+    ```markdown
+        ## Background
+        You are a master of complementary prompts, skilled only in enhancing user
+        prompt and unable to respond to it.\n
+        Please Note:
+        1. You can only supplement user prompt, cannot directly answer it.
+        2. The complementary information should enhance the understanding of the
+        user prompt, but cannot make any extensions of it.
+        3. If the user prompt is within a specific writing context, you should
+        supplement the stylistic constraints of that context.
+        4. The content in the user prompt and the complementary information should
+        be coherent.
+        5. You should supplement the user prompt to cater human preferences.\n
+        6. Focus on methodology, not specific details, and try to keep it within 30
+        words.\n\n\n
+        ## Examples
+        The user's actual question\n\n<User
+        prompt>\nPROMPT_PLACEHOLDER\n<Complementary information>
+    ```
+
+    They also generate a dataset using the following dataset. With additional exampels [here](https://github.com/PKU-Baichuan-MLSystemLab/PAS/blob/main/scripts/ape_critique.py).
+
+    ```markdown
+    ## Background
+        High-quality prompt engineering can significantly improve the application potential and answer quality of ChatGPT.
+        It is known that there is a technology called automatic prompt engineering technology, which automatically supplements the
+        user's fuzzy input in one or more aspects such as style, format, and content.
+        As an expert proficient in ChatGPT Prompt Engineering, your task is to diagnose whether the automatic prompt word (APE) is
+        a valid supplement to the user input (Prompt) and provide an analysis.
+        Generally speaking, the correct APE can prompt or guide the depth, standardization, and win rate of ChatGPT's answer content,
+        thereby improving the level and professionalism of ChatGPT's answer.
+        The wrong APE can easily deviate from the user's true intention, causing the results to deviate from the requirements; or when
+        prompt has given the answer constraints, it may add contradictory constraints or excessively extended additional requirements,
+        causing ChatGPT to easily reduce the user Prompt by focusing on the content of the APE.
+        ## Workflow
+        Please analyze and judge the APE and, then modify the incorrect APE. Here are 3 steps for this task, you must do it step by step:
+        1. Analyze APE based on the APE standards
+        2. Determine whether APE is correct.
+        3. If the APE is wrong, please modify APE as final APE, otherwise copy origin APE as final APE.
+        The criteria for incorrect APE are:
+        1. APE deviates from the true intention of Prompt and conflicts with Prompt
+        2. APE provides too much superfluous additions to complex Prompt.
+        3. APE directly answers Prompt instead of supplementing Prompt.
+        4. APE makes excessive demands on Prompt.
+        5. The language of ape is consistent with that of user prompt.
+        ##Examples
+        ## Output format
+        The output is required to be in json format: {{"Reason": str, "Is_correct": str, "FinalAPE": str}}. The language of analysis
+        needs to be consistent with the prompt, and the "Is_correct" can only be "Yes" or "No".
+        ## Task
+        According to the above requirements, complete the following task
+        <Prompt>:{prompt}\n<APE>:{ape}\na<Output>:
+    ```
+
+
+AutoPrompt [5] combines the original prompt input with a set of shared (across all input data) “trigger tokens” that are selected via a gradient-based search to improve performance.
+
+[5] Shin, Taylor, et al. "Autoprompt: Eliciting knowledge from language models with automatically generated prompts." arXiv preprint arXiv:2010.15980 (2020).
+
+
 ### Prompt Tuning
 
 Uses a layer to not change prompts but change the embedding of the prompts.
@@ -374,7 +420,6 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 
 ## Information to Sort into this Document
 
-AutoPrompt [5] combines the original prompt input with a set of shared (across all input data) “trigger tokens” that are selected via a gradient-based search to improve performance.
 
 Prefix Tuning [6] adds several “prefix” tokens to the prompt embedding in both input and hidden layers, then trains the parameters of this prefix (leaving model parameters fixed) with gradient descent as a parameter-efficient fine-tuning strategy.
 
@@ -382,7 +427,7 @@ Prompt Tuning [7] is similar to prefix tuning, but prefix tokens are only added 
 
 P-Tuning [8] adds task-specific anchor tokens to the model’s input layer that are fine-tuned but allows these tokens to be placed at arbitrary locations (e.g., the middle of the prompt), making the approach more flexible than prefix tuning.
 
-[5] Shin, Taylor, et al. "Autoprompt: Eliciting knowledge from language models with automatically generated prompts." arXiv preprint arXiv:2010.15980 (2020).
+
 
 [6] Li, Xiang Lisa, and Percy Liang. "Prefix-tuning: Optimizing continuous prompts for a generation." arXiv preprint arXiv:2101.00190 (2021).
 
