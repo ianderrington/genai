@@ -214,10 +214,21 @@ The general method of creating protein foundation models uses Masked Language Mo
 
 
 #### Notable Models
+##### Alpha- models
+
+
+??? note "[(closed source) De novo design of high-affinity protein binders with AlphaProteo](https://arxiv.org/pdf/2409.08022)"
+    The authors reveal in their paper and [blog](https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health-research/), a very performant solution that designs proteins to bind to protein targets. 
+    
+??? note "[(semi-open) Accurate structure prediction of biomolecular interactions with AlphaFold 3](https://www.nature.com/articles/s41586-024-07487-w)"
+    The authors reveal a highly powerful solution that allows higha ccuracy binding, and uses tokenization beyond single protein letters. 
+
+??? abstract "[Open source implementation of AlphaFold3](https://github.com/Ligo-Biosciences/AlphaFold3)"
+
 
 ##### xTrimo
 ??? note "[xTrimoPGLM: Unified 100B-Scale Pre-trained Transformer for Deciphering the Language of Protein](https://arxiv.org/pdf/2401.06199)" xtrimopglm
-    **Developments** The authors reveal an innovative manner of training protein language models using novel Maske Language Model training.  They also investigate LORA and MLP adapter layers at the end for finetuning methods and show a significant gain when using LORA. 
+    **Developments** The authors reveal an innovative manner of training protein language models using novel Masked Language Model training.  They also investigate LORA and MLP adapter layers at the end for finetuning methods and show a significant gain when using LORA. 
 
     <img width="658" alt="image" src="https://github.com/user-attachments/assets/c05363ce-2389-4191-8b03-4a44029ec9cd"> 
     
