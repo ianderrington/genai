@@ -37,6 +37,7 @@ It is possible, if not likely, that more powerful Generative and General AI will
 ### Categories and classes of risks
 
 The classes of risk are mentioned as the following. 
+
 1. Low
 2. Medium
 3. High
@@ -45,6 +46,7 @@ The classes of risk are mentioned as the following.
 The meaning of these classes depend on the categories and are thoroughly described in the [framework](https://cdn.openai.com/openai-preparedness-framework-beta.pdf)
 
 The categories are partioned into the following:
+
 1. Cybersecurity
 2. Chemical, biological, radiological and nuclear (CBRN)
 3. Persuasion
@@ -58,6 +60,7 @@ These Describe the risks + categories before and after risk mitigation
 ### Governance 
 
 Governance consists of 
+
 ** Safety baselines**: 
 
 - Asset Protection
@@ -65,6 +68,7 @@ Governance consists of
 - Development restrictions
 
 **Operations:**
+
 An operational structure that coordinates actions and activities of a _Preparedness team_ , a Safety Advisory Group (SAG), The OpenAI leadership, and the OpenAI Board of Directors. 
 
 
@@ -181,6 +185,7 @@ These actions are described here
 
 
 ## AI Governance Stakeholders
+
 There are numerous and varied stakeholders that may be a part of any governance solution. Here is a general list that will necessarily vary depending on business structure:
 
 1. C-Suite level:
