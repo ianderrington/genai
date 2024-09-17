@@ -212,8 +212,6 @@ The general method of creating protein foundation models uses Masked Language Mo
     ![image](https://github.com/ianderrington/genai/assets/76016868/c06d4a40-117f-4b86-9deb-ee9d29fc8f70)
 
 
-
-#### Notable Models
 ##### Alpha- models
 
 
@@ -227,6 +225,7 @@ The general method of creating protein foundation models uses Masked Language Mo
 
 
 ##### xTrimo
+
 ??? note "[xTrimoPGLM: Unified 100B-Scale Pre-trained Transformer for Deciphering the Language of Protein](https://arxiv.org/pdf/2401.06199)" xtrimopglm
     **Developments** The authors reveal an innovative manner of training protein language models using novel Masked Language Model training.  They also investigate LORA and MLP adapter layers at the end for finetuning methods and show a significant gain when using LORA. 
 
@@ -241,13 +240,17 @@ The general method of creating protein foundation models uses Masked Language Mo
 
     **Methods:** From an expression matrix, the model masks and filters expression sequences to try to reconstruct the full-length embedding and expression matrix. They also introduce _auto-discretization_ to help alleviate category assignment errors to different genes... because genes are not necessarily fully categorical.  The Auto-discritization strategy has a lookup table that leaves a weighted combination of individual embeddings from the lookup-table. 
 
+##### Others
 
-#### Other models
+??? abstract "[Chai labs protein model](https://github.com/chaidiscovery/chai-lab?tab=readme-ov-file)" chai1
+    An apparent competitor to AF-3 in the making
 
 ??? abstract "[Tasks Assessing Protein Embeddings (TAPE)](https://github.com/songlab-cal/tape)"
 
 
-#### Multimodal
+#### Natural Language + Protein Language model integrations
+
+It is possible to combine LLMs for natural language and PLMs to produce poweful suggestions just based on NL queries. Here are some examples. 
 
 ??? abstract "🧬 ![GitHub Repo stars](https://badgen.net/github/stars/bio-ontology-research-group/deepgo2) [Protein function prediction as approximate semantic entailment](https://github.com/bio-ontology-research-group/deepgo2)"
     **Developments**
