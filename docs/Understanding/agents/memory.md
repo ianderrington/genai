@@ -59,8 +59,13 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/superlinked/VectorHub) [VectorHub: Evaluation of multiple Vector databases](https://github.com/superlinked/VectorHub)" 
     "Vector Hub is a free and open-sourced learning hub for people interested in adding vector retrieval to their ML stack. On VectorHub you will find practical resources to help you"
     [VDB comparisons](https://superlinked.com/vector-db-comparison/)
-    
 
+
+##  Tech stack solutions
+
+??? abstract "[Mem0: provides memory for agents in an ice an easy manner](https://docs.mem0.ai/overview)"
+
+??? abstract "[GetZep: self-improving memory users, sessions and more](https://help.getzep.com/concepts)"
 
 ## Text
 
