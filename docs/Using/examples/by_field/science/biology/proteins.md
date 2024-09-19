@@ -151,6 +151,13 @@ The general method of creating protein foundation models uses Masked Language Mo
 - AUC
 - MCC
 
+### Strategies
+
+??? abstract "[Pro-FSFP: Few-Shot Protein Fitness Prediction](https://github.com/ai4protein/Pro-FSFP)" pro-fsfp
+    In their [paper](https://www.nature.com/articles/s41467-024-49798-6) The wuthors show tthe ability to use a meta-model that is able to train models using a 'meta learning model that works with multiepl tasks to create a meta-learned model (PLMS with LORA adapters) to create better results using a ranking loss. Comparing in this manner allows for multiple results in different experiments to be used simultaneously without impacting the quality of results. 
+    ![image](https://github.com/user-attachments/assets/83a6fd9c-8f92-4ffe-b826-3a9723ef87e5)
+
+    
 ### Foundation Models
 
 #### ESM Models
