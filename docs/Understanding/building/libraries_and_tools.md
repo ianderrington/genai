@@ -22,6 +22,12 @@ This section provides a selection of repositories that enable the creation of mo
 
     ![image](https://github.com/OpenBMB/ToolBench/blob/master/assets/overview.png)
 
+## Prompting
+
+!!! abstract "[Prompt Design](https://research.character.ai/prompt-design-at-character-ai/)"
+    A powerful way of using jinja templating to create prompts.
+
+!!! abstract "[Prompt Engineering Guide](https://www.promptingguide.ai/introduction) "
 
 ## Chat with Memory
 

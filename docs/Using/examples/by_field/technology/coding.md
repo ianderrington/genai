@@ -33,7 +33,7 @@ There are ways areas where AI can enable code-creation, arranged generally from 
 ??? abstract "[SWE-agent](https://github.com/princeton-nlp/SWE-agent) is not too shabby of a code-generating system that can read issues and make PRs" 
     It didn't pass our general tests, but we will evaluate further. 
 
-??? abstract "[Open Devin](https://github.com/OpenDevin/OpenDevin) to provide a powerful GUI-enablement resembling the commercial devin code assistant" 
+??? abstract "[Open Hands](https://github.com/All-Hands-AI/OpenHands) to provide a powerful GUI-enablement resembling the commercial coding assistants" 
 
 ??? abstract "[AutoCodeRover: Autonomous Program Improvement](https://github.com/nus-apr/auto-code-rover/) is a fully automated approach for resolving GitHub issues (bug fixing and feature addition) where LLMs are combined with analysis and debugging capabilities to prioritize patch locations ultimately leading to a patch." 
   [Paper](https://arxiv.org/pdf/2404.05427.pdf)

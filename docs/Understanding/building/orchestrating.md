@@ -18,12 +18,17 @@ Langchain is an open source SDK that allows for creation and management of chat 
 
 ![image](https://github.com/ianderrington/genai/assets/76016868/c66bf027-8556-43e6-8e73-de59c5e58d95)
 
-They are building [Lang Smith](https://smith.langchain.com/) for more Low-code solutions for agentic needs.
+!!! tip  "[Lang Smith](https://smith.langchain.com/) for more Low-code solutions for agentic needs."
 
-- [Langchain service deployment](https://github.com/ajndkr/lanarky)
-- [Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)
-- [Langflow](https://github.com/logspace-ai/langflow)
-- [Toolkit](https://www.toolkit.club/) Generates LangChain plugins for javascript. May be deprecated.
+!!! tip "[Langgraph](https://blog.langchain.dev/langgraph-studio-the-first-agent-ide/)"
+
+!!! tip "[Langchain service deployment](https://github.com/ajndkr/lanarky)"
+
+!!! tip "[Awesome Langchain](https://github.com/kyrolabs/awesome-langchain)"
+
+!!! tip "[Langflow](https://github.com/logspace-ai/langflow)"
+
+!!! tip "[Toolkit](https://www.toolkit.club/) Generates LangChain plugins for javascript. May be deprecated."
 
 **Tutorials:**
 
@@ -33,6 +38,11 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 !!! tip "[Langchain prompt tmeplates](https://www.pinecone.io/learn/langchain-prompt-templates/)"
 
 !!! tip "[Deep learn langchain](https://learn.deeplearning.ai/langchain/lesson/3/memory)"
+
+
+
+
+#####
 
 #### Other SDKs
 
@@ -175,8 +185,6 @@ They are building [Lang Smith](https://smith.langchain.com/) for more Low-code s
 ### Agents
 
 !!! abstract "[AgentOps](https://github.com/AgentOps-AI/agentops)"
-
-
 
 !!! abstract "[LangSmith](https://docs.smith.langchain.com/api-docs)"
 
