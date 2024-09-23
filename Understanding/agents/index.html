@@ -6621,15 +6621,15 @@ and
 </li>
       
         <li class="md-nav__item">
-  <a href="#general-oncepts" class="md-nav__link">
+  <a href="#general-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        General oncepts
+        General Concepts
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="General oncepts">
+    <nav class="md-nav" aria-label="General Concepts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -6711,6 +6711,23 @@ and
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="The Future">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automated-agents-and-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated agents and systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6952,7 +6969,7 @@ Though, more generally it includes these components: </p>
 <li>Do a complex task that may require simple things. Very likely enduring, especially if they are expert systems..</li>
 <li>Doing a list set of complex tasks, perhaps more continuously enduring.</li>
 </ul>
-<h2 id="general-oncepts">General oncepts<a class="headerlink" href="#general-oncepts" title="Permanent link">&para;</a></h2>
+<h2 id="general-concepts">General Concepts<a class="headerlink" href="#general-concepts" title="Permanent link">&para;</a></h2>
 <h3 id="task-planning-management">Task Planning &amp; Management<a class="headerlink" href="#task-planning-management" title="Permanent link">&para;</a></h3>
 <p><strong>Methods for generating and tracking tasks:</strong> Autonomous agents can create tasks using handcrafted sequences where the designer explicitly chains them, or through emergent methods like Chains of Thought (CoT), where tasks are generated one at a time in response to evolving circumstances. For example, a navigation agent might have a handcrafted sequence to reach a destination, while an AI in a dynamic environment might use CoT to adapt to new obstacles.</p>
 <p><strong>Knowledge graph utilization:</strong> A knowledge graph serves as a structural memory that can greatly enhance an agent's ability to plan and execute tasks by understanding the relationships between different entities and concepts. An AI agent using a knowledge graph might navigate a user query more efficiently by understanding related topics or concepts.</p>
@@ -6982,6 +6999,24 @@ Though, more generally it includes these components: </p>
 <p>If an agent requests something, then it is able to act based on a 'pull' action. If it is given everything to begin with, it has a 'push' action. From this Langchain <a href="https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/">blog</a></p>
 </div>
 <h2 id="the-future">The Future<a class="headerlink" href="#the-future" title="Permanent link">&para;</a></h2>
+<h3 id="automated-agents-and-systems">Automated agents and systems<a class="headerlink" href="#automated-agents-and-systems" title="Permanent link">&para;</a></h3>
+<details class="abstract">
+<summary><a href="https://github.com/ShengranHu/ADAS">Automated Design of Agentic Systems</a></summary>
+<p>The author's show in their <a href="https://arxiv.org/pdf/2408.08435">paper</a>  Automated Design of Agentic Systems (ADAS), "which aims to automatically create powerful agentic system designs, including inventing novel building blocks and/or combining them in new ways."</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/34c669a4-df02-4fee-9200-6cd1a570c0fb" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="663" alt="image" src="https://github.com/user-attachments/assets/34c669a4-df02-4fee-9200-6cd1a570c0fb"></a></p>
+<p>The core of their solution involves the following prompt which helps to improve the agent systems.</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are an expert machine learning researcher testing different agentic systems.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[Brief Description of the Domain]
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[Framework Code]
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[Output Instructions and Examples]
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>[Discovered Agent Archive] (initialized with baselines, updated at every iteration)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gh"># Your task</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>You are deeply familiar with prompting techniques and the agent works from the literature. Your goal is
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>to maximize the performance by proposing interestingly new agents ......
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Use the knowledge from the archive and inspiration from academic literature to propose the next
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>interesting agentic system design.
+</span></code></pre></div>
+</details>
 <p>It is possible that limitations fundamental to static agents are not goin to be universally optimal. Different cognitive architecutres and enabling tools will provide different degrees of success. That is where cognitive agents that are able to able to 'pull' new skills, and ways of working, into their realm of agency, will be able to bypass limitations inherent in in their original configurations.</p>
 <h2 id="useful-resources">Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">&para;</a></h2>
 <details class="important">
@@ -6990,7 +7025,7 @@ Though, more generally it includes these components: </p>
 <details class="important">
 <summary><a href="https://arxiv.org/abs/2205.00445">MRKL agents</a></summary>
 <p>MRKL
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;Huge language models (LMs) have ushered in a new era for AI, serving as a gateway to natural-language-based knowledge tasks. Although an essential element of modern AI, LMs are also inherently limited in a number of ways. We discuss these limitations and how they can be avoided by adopting a systems approach. Conceptualizing the challenge as one that involves knowledge and reasoning in addition to linguistic processing, we define a flexible architecture with multiple neural models, complemented by discrete knowledge and reasoning modules. We describe this neuro-symbolic architecture, dubbed the Modular Reasoning, Knowledge and Language (MRKL, pronounced &quot;miracle&quot;) system, some of the technical challenges in implementing it, and Jurassic-X, AI21 Labs&#39; MRKL system implementation.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&quot;Huge language models (LMs) have ushered in a new era for AI, serving as a gateway to natural-language-based knowledge tasks. Although an essential element of modern AI, LMs are also inherently limited in a number of ways. We discuss these limitations and how they can be avoided by adopting a systems approach. Conceptualizing the challenge as one that involves knowledge and reasoning in addition to linguistic processing, we define a flexible architecture with multiple neural models, complemented by discrete knowledge and reasoning modules. We describe this neuro-symbolic architecture, dubbed the Modular Reasoning, Knowledge and Language (MRKL, pronounced &quot;miracle&quot;) system, some of the technical challenges in implementing it, and Jurassic-X, AI21 Labs&#39; MRKL system implementation.
 </span></code></pre></div></p>
 </details>
 <div class="admonition important">
