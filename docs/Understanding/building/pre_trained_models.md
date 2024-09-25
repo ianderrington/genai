@@ -17,7 +17,13 @@ Below we share important models.
 
 
 ## Open Source
+### MultiModal
 
+??? abstract "[MOLMO](https://molmo.allenai.org/paper.pdf)" Molmo
+    **Developments** A very high quality set of source set of models. They succeed with very high quality image captioning using the voice recordings to ensure annotations of images are done well and with high quality.
+    [Blog](https://molmo.allenai.org/blog)
+    [Paper](https://molmo.allenai.org/paper.pdf)
+    
 ### Text-focused
 
 ??? tip "[Llama](https://ai.meta.com/llama/) is a library and set of models that has an expanding community due to the generally open-source nature of high-quality Llama 2 model."
