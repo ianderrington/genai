@@ -65,7 +65,9 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
 
 ??? abstract "[Mem0: provides memory for agents in an ice an easy manner](https://docs.mem0.ai/overview)"
 
-??? abstract "[GetZep: self-improving memory users, sessions and more](https://help.getzep.com/concepts)"
+??? abstract "[Graphiti](https://github.com/getzep/graphiti?tab=readme-ov-file)  builds dynamic, temporally aware Knowledge Graphs that represent complex, evolving relationships between entities over time."
+    Graphiti ingests both unstructured and structured data, and the resulting graph may be queried using a fusion of time, full-text, semantic, and graph algorithm approaches.
+    [GetZep: self-improving memory users, sessions and more](https://help.getzep.com/concepts)"
 
 ## Text
 
