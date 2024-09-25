@@ -63,8 +63,6 @@ Auto Prompt Engineering (APE) creates appropriately optimized prompts based on u
         <Prompt>:{prompt}\n<APE>:{ape}\na<Output>:
     ````
 
-### Automatic Prompting Methods
-
 ??? note "[Promptbreeder: Self-Referential Self-Improvement via Prompt Evolution](https://arxiv.org/pdf/2309.16797.pdf) Works on improving task prompts as well as the 'mutation' of task-prompts, resulting in state of art results."
     <img width="922" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cc0baed2-8331-4a17-8087-99b675261d5a"></img>
     <img width="807" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e1e83d4b-09d3-4131-9f7a-0d6c71211ef9"></img>
