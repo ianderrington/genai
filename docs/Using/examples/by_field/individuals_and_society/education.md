@@ -14,3 +14,9 @@ While GenAI offers numerous benefits, it's important to consider some potential 
 
 !!! warning "Due to potential hallucination and accuracy issues, educators and students should avoid relying solely on Generative AI for education. It's crucial to cross-verify the information and use it as a supplementary tool rather than a primary source."
 
+
+## Tools
+
+??? abstract "[LermoAI](https://github.com/LERM0/LermoAI)  is an open-source project that aims to revolutionize the way you learn"
+    LermoAI is an open-source project that aims to revolutionize the way you learn. By generating personalized content tailored to your preferences, LermoAI ensures that your learning experience is both efficient and enjoyable. Whether you prefer reading articles, listening to podcasts, or watching videos, LermoAI creates custom learning materials just for you. Choose your AI agent and embark on a learning journey that's perfectly suited to your needs.
+
