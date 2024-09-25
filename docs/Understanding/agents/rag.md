@@ -337,6 +337,21 @@ Challenges in generating responses can involve
 * Conflicting information: When retrieved results contain different responses to the same question, a difinitive response may not be possible
 * Stale information: When information is no longer relevant.
 
+## Advanced methods
+??? note [Contextual retrieval](https://www.anthropic.com/news/contextual-retrieval)"
+    Anthropic reveals contextual-retrieval where entire documents are cached (for efficiency) and RAG-retrieval is significantly improved. They use the following to generate contextual chunks that are paired with the item when performing embedding. 
+    ```markdown
+    <document> 
+    {{WHOLE_DOCUMENT}} 
+    </document> 
+    Here is the chunk we want to situate within the whole document 
+    <chunk> 
+    {{CHUNK_CONTENT}} 
+    </chunk> 
+    Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
+    ```
+
+
 
 ## Multimodal Rag
 Natural-language lookup with RAG can be improved by allowing other modalities, such as tables and images, at the same time. There are several ways that this may be accomplished as described in [Langchain's multi modal rag](https://blog.langchain.dev/semi-structured-multi-modal-rag/): 
