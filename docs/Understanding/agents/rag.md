@@ -178,6 +178,23 @@ Once data has been loaded in a way that a model can process it, it must be split
 
 !!! note "[AST-T5: Structure-Aware Pretraining for Code Generation and Understanding](https://arxiv.org/pdf/2401.03003)"
 
+??? abstract "[Late Chunking of Short Chunks in Long-Context Embedding Models](https://github.com/jina-ai/late-chunking?tab=readme-ov-file)"
+    The authors show in their [Blog](https://jina.ai/news/late-chunking-in-long-context-embedding-models/)_and [Paper](https://arxiv.org/abs/2409.04701)
+    <img width="685" alt="image" src="https://github.com/user-attachments/assets/8baff616-0eb8-4f86-9e51-3c48e8851546"> The use of tokenization initially and then pooling those intelligently for having better embeddings for lookup. 
+
+??? note [Contextual retrieval](https://www.anthropic.com/news/contextual-retrieval)"
+    Anthropic reveals contextual-retrieval where entire documents are cached (for efficiency) and RAG-retrieval is significantly improved. They use the following to generate contextual chunks that are paired with the item when performing embedding. 
+    ```markdown
+    <document> 
+    {{WHOLE_DOCUMENT}} 
+    </document> 
+    Here is the chunk we want to situate within the whole document 
+    <chunk> 
+    {{CHUNK_CONTENT}} 
+    </chunk> 
+    Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
+    ```
+    
 #### Embedding Data
 
 Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). [Read more](https://blog.langchain.dev/semi-structured-multi-modal-rag/.)
@@ -338,18 +355,7 @@ Challenges in generating responses can involve
 * Stale information: When information is no longer relevant.
 
 ## Advanced methods
-??? note [Contextual retrieval](https://www.anthropic.com/news/contextual-retrieval)"
-    Anthropic reveals contextual-retrieval where entire documents are cached (for efficiency) and RAG-retrieval is significantly improved. They use the following to generate contextual chunks that are paired with the item when performing embedding. 
-    ```markdown
-    <document> 
-    {{WHOLE_DOCUMENT}} 
-    </document> 
-    Here is the chunk we want to situate within the whole document 
-    <chunk> 
-    {{CHUNK_CONTENT}} 
-    </chunk> 
-    Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
-    ```
+
 
 
 
