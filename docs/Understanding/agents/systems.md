@@ -239,6 +239,11 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
     [Description](https://princeton-nlp.github.io/SocraticAI/)
     ![image](https://github.com/ianderrington/genai/assets/76016868/48bf16aa-efde-4e38-b7e1-30963f74aa66)
 
+??? abstract "[MAgICoRe: A Multi-Agent Coarse-to-Fine Refinement Framework for Reasoning](https://github.com/dinobby/MAgICoRe)" magicore
+    The authors show int heir [paper](https://arxiv.org/pdf/2409.12147v1) a quality multi-agent system enabling a 'solver, reviewer and 'refiner to enable improved solutions, improving performanceabove other methods.
+    <img width="564" alt="image" src="https://github.com/user-attachments/assets/fd881d77-5e7a-4ca8-9157-077e3d6a3eb1">
+    
+    <img width="567" alt="image" src="https://github.com/user-attachments/assets/846db805-b645-4b8a-bfc3-7334ac16bb16">
 
 ## Swarms
 
