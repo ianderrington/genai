@@ -218,7 +218,10 @@ The general method of creating protein foundation models uses Masked Language Mo
     The authors show in their [paper](https://nature.com/articles/s43588-022-00373-3) the ability to generate high-quality predictions outperforming AlphaFold2, with a model called trRosettaX-Single using ESM to generate representations and attention maps that can be trained for distance+energy maps.
     ![image](https://github.com/ianderrington/genai/assets/76016868/c06d4a40-117f-4b86-9deb-ee9d29fc8f70)
 
-
+??? abstract "[AMPLIFY Protein Language Model](https://github.com/chandar-lab/AMPLIFY?tab=readme-ov-file)" amplify-plm
+    The author's show in their [Paper](https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf) that they can train highly performant ESM models (and modifications) with better performance. They use different dat asets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. 
+    They also use something called _pseudo-perplexity- which measures the replacement of non-random masking (one of each sequence). 
+    
 ##### Alpha- models
 
 
