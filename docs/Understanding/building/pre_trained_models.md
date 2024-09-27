@@ -17,6 +17,23 @@ Below we share important models.
 
 
 ## Open Source
+### [Llama Herds](https://llama.meta.com/)
+
+??? abstract "[Llama 3](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.2365-6/453304228_1160109801904614_7143520450792086005_n.pdf?_nc_cat=108&ccb=1-7&_nc_sid=3c67a6&_nc_ohc=XgSnguNUd6sQ7kNvgGtsxm7&_nc_ht=scontent-sjc3-1.xx&oh=00_AYCKlqn26hRGQkCUODmVGuRJLCkOQ5PgDcnb-2vX3VUj-A&oe=66FB5247)" 
+   Trained on 15T Multilingual tokens, with a max of 405B trainable parameters, the Meta team introduces a powerful bevy of new models with generally SOTA performance, especially for opensource models. They employed a more powerful data selection and synthesis strategy, with a generally simple post-training procedure using SFT, reejction sampling and DPO optimization. 
+   <img width="1115" alt="image" src="https://github.com/user-attachments/assets/2da877df-c4ba-43d3-a80c-55264b041956">
+   
+   They also use '4D Parallelism to combine tensor parallelism (TP) pipeline parallelism (PP) Context parallelism (CP) and data parallelism (DP) 
+
+   ![image](https://github.com/user-attachments/assets/3230f1a4-532d-45d5-81fa-029a025eabf8)
+
+   Finally, it is also multimodel. Here is their training approach:
+
+   ![image](https://github.com/user-attachments/assets/2cc41289-4619-45a7-8d45-02fcba41ebff)
+
+
+
+
 ### MultiModal
 
 ??? abstract "[MOLMO](https://molmo.allenai.org/paper.pdf)" Molmo
