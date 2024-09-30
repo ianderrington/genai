@@ -390,6 +390,16 @@ Because of the large number of manners of performing RAG, it is important to eva
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mendableai/rag-arena) [Rag Arena](https://github.com/mendableai/rag-arena) Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses." 
 
+??? note "[Retrieval Augmented Generation (RAG) and Beyond: A Comprehensive Survey on How to Make your LLMs use External Data More Wisely](https://arxiv.org/pdf/2409.14924)"
+    **Development:** The authors present a survey that introduces a RAG task categorization method that helps to classify user queries into four levels according to the type of external data required and the focus of the task. It summarizes key challenges in building robust data-augmented LLM applications and the most effective techniques for addressing them. https://arxiv.org/abs/2409.14924
+
+    <img width="1023" alt="image" src="https://github.com/user-attachments/assets/330f93fa-2e4d-4862-a4ce-d98b039df186">
+
+    <img width="1073" alt="image" src="https://github.com/user-attachments/assets/4afba3a0-34a9-411a-b92b-a403be847f80">
+
+    <img width="1038" alt="image" src="https://github.com/user-attachments/assets/c3d35e52-b894-4805-bc44-e40dbaf241ad">
+
+
 
 ## Resources, Tutorials and Blogs
 ??? important "[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduces a complete solution for enabling improved response generation with LLMs."
