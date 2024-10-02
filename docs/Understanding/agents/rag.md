@@ -390,11 +390,17 @@ Because of the large number of manners of performing RAG, it is important to eva
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/mendableai/rag-arena) [Rag Arena](https://github.com/mendableai/rag-arena) Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses." 
 
-??? note "[Retrieval Augmented Generation (RAG) and Beyond: A Comprehensive Survey on How to Make your LLMs use External Data More Wisely](https://arxiv.org/pdf/2409.14924)"
-    **Development:** The authors present a survey that introduces a RAG task categorization method that helps to classify user queries into four levels according to the type of external data required and the focus of the task. It summarizes key challenges in building robust data-augmented LLM applications and the most effective techniques for addressing them. https://arxiv.org/abs/2409.14924
+??? note "[Retrieval Augmented Generation (RAG) and Beyond: A Comprehensive Survey on How to Make your LLMs use External Data More Wisely](https://arxiv.org/pdf/2409.14924)" rag-and-beyond
+    **Development:** The authors present a survey that introduces a RAG task categorization method that helps to classify user queries into four levels according to the type of external data required and the focus of the task. It summarizes key challenges in building robust data-augmented LLM applications and the most effective techniques for addressing them. 
 
     <img width="1023" alt="image" src="https://github.com/user-attachments/assets/330f93fa-2e4d-4862-a4ce-d98b039df186">
 
+    In general, it breaks down the complexity of queries into several levels: 
+    **L1: Explicit Fact Queries: ** To just answer specific questions based on document or snippets within the collection.
+    **L2: Implicit Fact Queries: ** To answer questions involving data dependencies or some level of logical or common sense reasoning. 
+    **L3: Interpretable Rational Queries: ** Queries that require external data to create rational for comparison. 
+    **L4: Hidden Rational Queri8es**: They have domain specific reasoning that may not be explicitly described and difficult to enumerate.  
+    
     <img width="1073" alt="image" src="https://github.com/user-attachments/assets/4afba3a0-34a9-411a-b92b-a403be847f80">
 
     <img width="1038" alt="image" src="https://github.com/user-attachments/assets/c3d35e52-b894-4805-bc44-e40dbaf241ad">
