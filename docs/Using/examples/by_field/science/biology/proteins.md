@@ -2,48 +2,11 @@
 
 Generating or modifying protein sequences to improve or create novel behavior is a powerful application for AI. Guided through evolutionary techniques, Bayesian optimization, and/or using protein language models (PLMs), AI can vastly accelerate the development of biotechnological tools and identify targets and avenues for therapeutics. Because of their ability to represent the 'language of proteins,' PLMs are increasingly important in predicting the structure and function of proteins.
 
-## Components
+## Where to start?
 
-Protein optimization can be broken down into several components[^n1]:
+There are two general manners of optimizing proteins: _mutagenic_ and _de-novo_. In mutagenic protein optimization, a target protein is found and altered in a manner to fulfill target requirement. In _de novo_ protein generation, protein sequences are created without direct seeding by initial target proteins. It is important to note that _de novo_ generation is generally more difficult because generated protein sequences may not have originated from evolutionary pressures, so may be existentially dispreferred, but de novo designs can offer a degree of freedom and flexibility beyond directly evolutionarily derived protein sequences. 
 
-[^n1]: [Adaptive Machine Learning for Protein Engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)
-
-- **[Target Property](#optimization-targets)**: The intended goal(s) for protein development.
-- **Fitness Predictor**: Uses sequence information to estimate the value of the optimization target, as a surrogate for laboratory measurement.
-- **[Sequence Proposer](#sequence-optimization)**: Creates sequences to evaluate and explore.
-- **Prioritizer**: Uses sequence and predictor information to estimate the top candidates.
-- **Laboratory Measurements**: Reveal the quality of the generated proteins based on the targets.
-- **Orchestrator**: Puts the pieces together in a functional and validated manner.
-
-Optimization systems may involve merging and combining these components for full solutions in two general manners:
-
-1. A model that separates generation and evaluation steps, where the predictor model evaluates the quality of an input set of sequences (generated or otherwise defined).
-2. A model that directly predicts the best designs using adaptive sampling, proposing solutions, evaluating them with the predictor model, and then iterating.
-
-These components can be seen in the box below:
-
-???+ tip "[Adaptive Machine Learning for Protein Engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
-    An overview of ML for protein engineering:
-    ![image](https://github.com/ianderrington/genai/assets/76016868/a8af9370-05e8-4e81-a223-b60cafbb9b00)
-
-### Strategy
-
-Protein optimization will necessarily evolve the creation of those proteins and evaluations of target characteristics. There are large volumes of databases of various forms that may be useful in creating foundation models. It will still be essential to use continued observation to improve the optimization target based on predicted and iterated feedback.
-
-The volume of the observations will help to determine the architectures that one could use. Base models tend to be PLMs because of the large set of available data. Unsupervised fine-tuning with those large models may be able to occur through homology or family sets. Final targets may then be optimized with simple networks, often involving regression to minimize overfitting or methods that include Bayesian or evolutionary approaches.
-
-To be able to successfully deliver on final target optimization, the greater the quantity of direct or surrogate data that can be obtained, the greater the potential the resulting models will sufficiently predict the fitness of future protein sequence candidates. That is why massive screening approaches, as described by [Ginkgo's platform](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai), screen thousands of candidates.
-
-??? note "[An example process by Ginkgo](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai)"
-    Ginkgo reveals with foundry-scale protein estimates, that with thousands of samples they were able to create an enzyme with 10x improvement from where they started. In their design, they use structure (differential) estimates via Rosetta, Evolutionary-scale modeling (PLMs), active site focus evolutionary models, as well as an in-house method called 'OWL.'
-    ![image](https://github.com/ianderrington/genai/assets/76016868/c3666ac2-8d7b-46f7-838b-cd2e6d3721c1)
-
-When it is possible to iteratively measure proposed sequences, new data can be used to improve subsequent sequence predictions. This can be done _greedily_, choosing the best solutions, or using probabilistic methods, such as [Bayesian Optimization]. Searching for a protein that optimizes a target by combining both estimated values, as well as their uncertainties. Selecting the sequences with the highest-predicted target values will _greedily_ inform what should be used and may easily fail due to incorrect estimates from the predictor model. In other manners, confidence bound (UCB) acquisition selects sequences based on a sum of the predicted target value and the predicted target uncertainty.
-
-???+ tip "[Ways of prioritizing](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
-    ![image](https://github.com/ianderrington/genai/assets/76016868/08ed6633-0439-44f5-a52d-e53afb4804f2)
-
-### Optimization Targets
+## Targets
 
 There are a number of [targets](#optimization-targets) that protein optimization can focus on. For example, some targets enable primarily basic understanding, such as protein [structure](#structure), and other targets are related to [function](#function), though it is generally considered that structure enables the functions.
 
@@ -70,6 +33,32 @@ In the canon of causal influence, _source_ has --> _sequence_ that creates --> _
 
 Though there are many examples where these classes cross, these potential targets are essential for protein optimization.
 
+
+
+## Components
+
+Protein optimization can be broken down into several components[^n1]:
+
+[^n1]: [Adaptive Machine Learning for Protein Engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)
+
+- **[Target Property](#optimization-targets)**: The intended goal(s) for protein development.
+- **[Fitness Predictor](#fitness-prediction)**: Uses sequence information to estimate the value of the optimization target, as a surrogate for laboratory measurement.
+- **[Sequence Proposer](#sequence-optimization)**: Creates sequences to evaluate and explore.
+- **Prioritizer**: Uses sequence and predictor information to estimate the top candidates.
+- **Laboratory Measurements**: Reveal the quality of the generated proteins based on the targets.
+- **Orchestrator**: Puts the pieces together in a functional and validated manner.
+
+Optimization systems may involve merging and combining these components for full solutions in two general manners:
+
+1. A model that separates generation and evaluation steps, where the predictor model evaluates the quality of an input set of sequences (generated or otherwise defined).
+2. A model that directly predicts the best designs using adaptive sampling, proposing solutions, evaluating them with the predictor model, and then iterating.
+
+These components can be seen in the box below:
+
+???+ tip "[Adaptive Machine Learning for Protein Engineering](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
+    An overview of ML for protein engineering:
+    ![image](https://github.com/ianderrington/genai/assets/76016868/a8af9370-05e8-4e81-a223-b60cafbb9b00)
+
 ### Fitness Prediction
 
 Training a fitness model may first involve training an unsupervised [foundation model](#foundation-models) on a high volume of data. These models can then be fine-tuned, or otherwise adapted, to incorporate protein sequences or higher relevance to the protein targets of interest.
@@ -78,6 +67,25 @@ Training a fitness model may first involve training an unsupervised [foundation 
     The authors show in their paper that uses a manner to combine ridge regression with large-language models revealing the ability to effectively predict evolutionary and assay-labeled fitness.
     <img width="706" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/03ac33f5-b455-491e-b7e0-72c207216d48">
 
+
+### Strategy
+
+Protein optimization will necessarily evolve the creation of those proteins and evaluations of target characteristics. There are large volumes of databases of various forms that may be useful in creating foundation models. It will still be essential to use continued observation to improve the optimization target based on predicted and iterated feedback.
+
+The volume of the observations will help to determine the architectures that one could use. Base models tend to be PLMs because of the large set of available data. Unsupervised fine-tuning with those large models may be able to occur through homology or family sets. Final targets may then be optimized with simple networks, often involving regression to minimize overfitting or methods that include Bayesian or evolutionary approaches.
+
+To be able to successfully deliver on final target optimization, the greater the quantity of direct or surrogate data that can be obtained, the greater the potential the resulting models will sufficiently predict the fitness of future protein sequence candidates. That is why massive screening approaches, as described by [Ginkgo's platform](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai), screen thousands of candidates.
+
+??? note "[An example process by Ginkgo](https://foundrytheory.substack.com/p/improving-a-stubborn-enzyme-with-ai)"
+    Ginkgo reveals with foundry-scale protein estimates, that with thousands of samples they were able to create an enzyme with 10x improvement from where they started. In their design, they use structure (differential) estimates via Rosetta, Evolutionary-scale modeling (PLMs), active site focus evolutionary models, as well as an in-house method called 'OWL.'
+    ![image](https://github.com/ianderrington/genai/assets/76016868/c3666ac2-8d7b-46f7-838b-cd2e6d3721c1)
+
+When it is possible to iteratively measure proposed sequences, new data can be used to improve subsequent sequence predictions. This can be done _greedily_, choosing the best solutions, or using probabilistic methods, such as [Bayesian Optimization]. Searching for a protein that optimizes a target by combining both estimated values, as well as their uncertainties. Selecting the sequences with the highest-predicted target values will _greedily_ inform what should be used and may easily fail due to incorrect estimates from the predictor model. In other manners, confidence bound (UCB) acquisition selects sequences based on a sum of the predicted target value and the predicted target uncertainty.
+
+???+ tip "[Ways of prioritizing](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
+    ![image](https://github.com/ianderrington/genai/assets/76016868/08ed6633-0439-44f5-a52d-e53afb4804f2)
+    
+
 ### Sequence Proposer
 
 With a fitness predictor made available, the next step is to create proposal sequences that may be evaluated with the predictor model, or potentially with direct measurement.
@@ -85,6 +93,11 @@ With a fitness predictor made available, the next step is to create proposal seq
 One way of doing this is to use [_generative models_](#generative-models) directly in seeding the generated sequence with starting sequences of the target sequence, or even from a natural language prompt. Another method is to use [_activation maximization_](#activation-maximization), a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction).
 
 #### Generative Models
+
+??? abstract "[Large language models generate functional protein sequences across diverse families](https://github.com/salesforce/progen)" progen
+    In their [paper](https://www.nature.com/articles/s41587-022-01618-2) the authors reveal the ability to generate proteins with functionality across a wide variety of families. Functionally, it uses property-conditional generation so that the sequences that are generated will be conditions upon protein family, biological process, molecular function. They train models to predict next-amino acid prediction. With models finetuned to different lysozyme families, they showed similar catalytic efficiencies as natural versions demonstrate high expression (40-50%) activity with sometimes much lower sequence identity. 
+    **Conditional Language Modeling** They are able to do so by creating a concatenated sequence of the control tag and the protein sequence $x=[c;a]$ and doing next token 
+
 
 ??? abstract "[Sequence modeling and design from molecular to genome scale with Evo](https://github.com/evo-design/evo)"
     The authors reveal in their [paper](https://www.biorxiv.org/content/10.1101/2024.02.27.582234v1.full.pdf) the use of long-context Genetics models can be powerful in their ability to yield state-of-the-art predictions in protein-related tasks. These tasks include zero-shot function prediction, multi-element sequence generation. Their models use the 'Striped-Hyena' structured state space model. Their model is known as Evo.
