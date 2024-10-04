@@ -196,7 +196,8 @@ Once data has been loaded in a way that a model can process it, it must be split
     ```
     ![image](https://github.com/user-attachments/assets/f7817126-2e24-418a-9809-8acc8ecbcf52)
 
-    
+
+
 #### Embedding Data
 
 Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). [Read more](https://blog.langchain.dev/semi-structured-multi-modal-rag/.)
