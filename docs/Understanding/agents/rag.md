@@ -194,6 +194,8 @@ Once data has been loaded in a way that a model can process it, it must be split
     </chunk> 
     Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
     ```
+    ![image](https://github.com/user-attachments/assets/f7817126-2e24-418a-9809-8acc8ecbcf52)
+
     
 #### Embedding Data
 
