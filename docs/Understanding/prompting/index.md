@@ -261,7 +261,7 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 
 ## Guides and Surveys of Best Practices
 
-??? abstract "[https://arxiv.org/pdf/2407.12994]"
+??? abstract "[A Survey of Prompt Engineering Methods in Large Language Models for Different NLP Tasks](https://arxiv.org/pdf/2407.12994)"
 
 ??? abstract "[The Prompt Report: A Systematic Survey of Prompting Techniques](https://arxiv.org/pdf/2406.06608)"
 
@@ -289,7 +289,7 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 
 !!! tip "[Prompt Engineering for Healthcare: Methodologies and Applications](https://arxiv.org/pdf/2304.14670.pdf)"
 
-[A good description of advanced prompt tuning](https://cameronrwolfe.substack.com/p/advanced-prompt-engineering)
+!!! tip "[A good description of advanced prompt tuning](https://cameronrwolfe.substack.com/p/advanced-prompt-engineering)"
 
 ## Interesting Research
 
