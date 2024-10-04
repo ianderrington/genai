@@ -125,6 +125,17 @@ Because of the ability to minimize costs associated with feedback, reinforcement
     
     <img width="1214" alt="image" src="https://github.com/user-attachments/assets/0b19c6f1-1a0d-41fd-aebf-e59fd598b965">
 
+## CGPO - Constrained Generative Policy optimization 
+
+??? note "[The Perfect Blend: Redefining RLHF with Mixture of Judges](https://arxiv.org/pdf/2409.20370)" cgpo
+    **Developments** The authors show a novel method of post-tuning feedback training using three new scalable RLHF optimizers to deal with reward hacking in multi-task LLMs. Using two types of judges, rule-based and LLM-based, the sysem is able to evaluate LLM generation and any violation of NLP tasks. For multi task optimization, each task is managed individually with diffeerent optimization settings and reward models, judge mixes, and optimizer hyper paremeters. Thee resulting systme is able to reach SOTA in math, coding, engagemnt and safety. 
+
+    <img width="1230" alt="image" src="https://github.com/user-attachments/assets/f3f3c712-668a-4634-bb65-aa8b372ccf44">
+
+    <img width="1129" alt="image" src="https://github.com/user-attachments/assets/101fdcb5-d2cd-469d-8eaa-6d77fed036ea">
+
+
+    
 
 
 ## RL-free feedback
