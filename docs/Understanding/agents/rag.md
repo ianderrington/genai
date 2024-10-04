@@ -1,15 +1,15 @@
 # Retrieval-Augmented Generation (RAG)
 
-Trained and fine-tuned LLMs can generate high quality results, though their generated results will be generally confined to the information they have been trained on. Additionally, their responses can suffer from:
+Trained and fine-tuned LLMs can generate high quality results, though their generated results will be generally confined to the information they have been trained on. Additionally, responses can suffer from:
 
 * **[Confabulations and Hallucinations](../overview/challenges.md#hallucinations-and-confabulations)** that create false or inaccurate information 
 * Lack of **attributon** making it difficult to ascertain validity
 * **Staleness** due to new or updated information 
 
-**Retrieval-Augmented Generation (RAG) helps to solve these** is a context-augmentation method by coupling the information to external memory.  
+**Retrieval-Augmented Generation (RAG) helps to solve these!!** is a context-augmentation method by coupling the information to external memory.  
 
 Here is a basic comparison of the two: 
-in
+
 !!! example "Comparison with/without RAG"
 
     === "With"
@@ -182,8 +182,8 @@ Once data has been loaded in a way that a model can process it, it must be split
     The authors show in their [Blog](https://jina.ai/news/late-chunking-in-long-context-embedding-models/)_and [Paper](https://arxiv.org/abs/2409.04701)
     <img width="685" alt="image" src="https://github.com/user-attachments/assets/8baff616-0eb8-4f86-9e51-3c48e8851546"> The use of tokenization initially and then pooling those intelligently for having better embeddings for lookup. 
 
-??? note [Contextual retrieval](https://www.anthropic.com/news/contextual-retrieval)"
-    Anthropic reveals contextual-retrieval where entire documents are cached (for efficiency) and RAG-retrieval is significantly improved. They use the following to generate contextual chunks that are paired with the item when performing embedding. 
+??? note "[Contextual retrieval](https://www.anthropic.com/news/contextual-retrieval)" contextual-retrieval
+    Anthropic reveals contextual-retrieval where entire documents are cached (for efficiency) and RAG-retrieval is significantly improved. They use the following to generate contextual chunks that are paired with the item when performing embedding. The results leads to significant (67% !!!) performance improvements. 
     ```markdown
     <document> 
     {{WHOLE_DOCUMENT}} 
