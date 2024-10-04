@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contextual retrieval</title>
+    <title>Large language models generate functional protein sequences across diverse families</title>
     
     
 
-    <meta property="og:url" content="https://www.managen.ai//shared/contextual-retrieval.html">
+    <meta property="og:url" content="https://www.managen.ai//shared/progen.html">
 
-    <meta property="og:title" content="Contextual retrieval">
-    <meta property="og:description" content="Anthropic reveals contextual-retrieval where entire documents are cached (for efficiency) and RAG-retrieval is significantly improved. They use the following to generate contextual chunks that are paired with the item when performing embedding. The results leads to significant (67% !!!) performance improvements. "">
+    <meta property="og:title" content="Large language models generate functional protein sequences across diverse families">
+    <meta property="og:description" content="In their [paper](https://www.nature.com/articles/s41587-022-01618-2) the authors reveal the ability to generate proteins with functionality across a wide variety of families. Functionally, it uses property-conditional generation so that the sequences that are generated will be conditions upon protein family, biological process, molecular function. They train models to predict next-amino acid prediction. With models finetuned to different lysozyme families, they showed similar catalytic efficiencies as natural versions demonstrate high expression (40-50%) activity with sometimes much lower sequence identity. "">
 
     <meta property="og:type"  content="website" />
-    <meta property="og:image" content="https://github.com/user-attachments/assets/f7817126-2e24-418a-9809-8acc8ecbcf52">
-    <meta property="og:url" content="https://www.managen.ai//shared/contextual-retrieval.html">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://www.managen.ai//shared/progen.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contextual retrieval">
-    <meta name="twitter:description" content="Contextual retrieval">
-    <meta name="twitter:image" content="https://github.com/user-attachments/assets/f7817126-2e24-418a-9809-8acc8ecbcf52">
+    <meta name="twitter:title" content="Large language models generate functional protein sequences across diverse families">
+    <meta name="twitter:description" content="Large language models generate functional protein sequences across diverse families">
+    <meta name="twitter:image" content="">
     <!--Import stylesheet  -->
     <link rel="stylesheet" href="../../stylesheets/share-card.css">
     <style>
@@ -61,26 +61,15 @@
 <body>
     
     <div class="blog-content">
-        <h1><p><a href="https://www.anthropic.com/news/contextual-retrieval">Contextual retrieval</a></p></h1>
-        <p>Anthropic reveals contextual-retrieval where entire documents are cached (for efficiency) and RAG-retrieval is significantly improved. They use the following to generate contextual chunks that are paired with the item when performing embedding. The results leads to significant (67% !!!) performance improvements. 
-<div class="highlight"><pre><span></span><code>&lt;document&gt; 
-{{WHOLE_DOCUMENT}} 
-&lt;/document&gt; 
-Here is the chunk we want to situate within the whole document 
-&lt;chunk&gt; 
-{{CHUNK_CONTENT}} 
-&lt;/chunk&gt; 
-Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
-</code></pre></div>
-<img alt="image" src="https://github.com/user-attachments/assets/f7817126-2e24-418a-9809-8acc8ecbcf52" /></p>
-<h4 id="embedding-data">Embedding Data</h4>
-<p>Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). <a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/.">Read more</a></p>
+        <h1><p><a href="https://github.com/salesforce/progen">Large language models generate functional protein sequences across diverse families</a></p></h1>
+        <p>In their <a href="https://www.nature.com/articles/s41587-022-01618-2">paper</a> the authors reveal the ability to generate proteins with functionality across a wide variety of families. Functionally, it uses property-conditional generation so that the sequences that are generated will be conditions upon protein family, biological process, molecular function. They train models to predict next-amino acid prediction. With models finetuned to different lysozyme families, they showed similar catalytic efficiencies as natural versions demonstrate high expression (40-50%) activity with sometimes much lower sequence identity. 
+<strong>Conditional Language Modeling</strong> They are able to do so by creating a concatenated sequence of the control tag and the protein sequence <span class="arithmatex"><span class="MathJax_Preview">x=[c;a]</span><script type="math/tex">x=[c;a]</script></span> and doing next token </p>
     </div>
-    <a href="https://www.managen.ai//shared/contextual-retrieval.html" class="page-url" id="page-url"></a>
+    <a href="https://www.managen.ai//shared/progen.html" class="page-url" id="page-url"></a>
     <!-- Clipboard copy icon/button -->
     <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
     <!-- Copied popup -->
     <div class="copied-popup" id="copied-popup">Link copied!</div>
-    <a href="https://www.managen.ai//Understanding/agents/rag.html" class="backlink-url" id="backlink-url">See the main site!</a>
+    <a href="https://www.managen.ai//Using/examples/by_field/science/biology/proteins.html" class="backlink-url" id="backlink-url">See the main site!</a>
 </body>
 </html>

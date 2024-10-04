@@ -7648,7 +7648,8 @@ and
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>{{ CHUNK_CONTENT }} 
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&lt;/chunk&gt; 
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
-</span></code></pre></div></p>
+</span></code></pre></div>
+<a class="glightbox" href="https://github.com/user-attachments/assets/f7817126-2e24-418a-9809-8acc8ecbcf52" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f7817126-2e24-418a-9809-8acc8ecbcf52" /></a></p>
 <h4 id="embedding-data">Embedding Data<a class="headerlink" href="#embedding-data" title="Permanent link">&para;</a></h4>
 <p>Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). <a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/.">Read more</a></p>
 </details>
@@ -7799,10 +7800,24 @@ Pass raw images and text chunks to a multimodal LLM for answer synthesis
 <details class="abstract">
 <summary><a class="glightbox" href="https://badgen.net/github/stars/mendableai/rag-arena" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/mendableai/rag-arena" /></a> <a href="https://github.com/mendableai/rag-arena">Rag Arena</a> Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses.</summary>
 </details>
+<p><a href="/shared/rag-and-beyond.html" class="page-url" id="page-url-3"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
+</div>
+
 <details class="note">
 <summary><a href="https://arxiv.org/pdf/2409.14924">Retrieval Augmented Generation (RAG) and Beyond: A Comprehensive Survey on How to Make your LLMs use External Data More Wisely</a></summary>
-<p><strong>Development:</strong> The authors present a survey that introduces a RAG task categorization method that helps to classify user queries into four levels according to the type of external data required and the focus of the task. It summarizes key challenges in building robust data-augmented LLM applications and the most effective techniques for addressing them. <a href="https://arxiv.org/abs/2409.14924">https://arxiv.org/abs/2409.14924</a></p>
+<p><strong>Development:</strong> The authors present a survey that introduces a RAG task categorization method that helps to classify user queries into four levels according to the type of external data required and the focus of the task. It summarizes key challenges in building robust data-augmented LLM applications and the most effective techniques for addressing them. </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/330f93fa-2e4d-4862-a4ce-d98b039df186" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1023" alt="image" src="https://github.com/user-attachments/assets/330f93fa-2e4d-4862-a4ce-d98b039df186"></a></p>
+<p>In general, it breaks down the complexity of queries into several levels: 
+<strong>L1: Explicit Fact Queries: ** To just answer specific questions based on document or snippets within the collection.
+**L2: Implicit Fact Queries: ** To answer questions involving data dependencies or some level of logical or common sense reasoning. 
+**L3: Interpretable Rational Queries: ** Queries that require external data to create rational for comparison. 
+**L4: Hidden Rational Queri8es</strong>: They have domain specific reasoning that may not be explicitly described and difficult to enumerate.  </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/4afba3a0-34a9-411a-b92b-a403be847f80" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1073" alt="image" src="https://github.com/user-attachments/assets/4afba3a0-34a9-411a-b92b-a403be847f80"></a></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/c3d35e52-b894-4805-bc44-e40dbaf241ad" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1038" alt="image" src="https://github.com/user-attachments/assets/c3d35e52-b894-4805-bc44-e40dbaf241ad"></a></p>
 </details>
@@ -7813,13 +7828,13 @@ Pass raw images and text chunks to a multimodal LLM for answer synthesis
 The authors reveal that allowing for fine tuning of the models when equipped with RAG improved the results. 
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/05ffefbd-4fd7-4d4e-9ec4-0719e66e1791" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="598" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/05ffefbd-4fd7-4d4e-9ec4-0719e66e1791"></a></p>
 </details>
-<p><a href="/shared/12-rag-pain-points-and-solutions.html" class="page-url" id="page-url-3"></a></p>
+<p><a href="/shared/12-rag-pain-points-and-solutions.html" class="page-url" id="page-url-4"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-4')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-4">Link copied!</div>
 </div>
 
 <details class="important">
