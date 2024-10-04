@@ -352,6 +352,13 @@ It is not necessarily just enough to identify a potential candidate but to have 
     In their [paper](https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1) the authors reveal a novel method to predict sequences and sequence recovery.
     ![image](https://github.com/ianderrington/genai/assets/76016868/ee8d6025-d4a1-4ade-ac22-cfb26cabd41e)
 
+## Performance optimizations
+
+??? tip "[Tokenized and Continuous Embedding Compressions of Protein Sequence and Structure](https://www.biorxiv.org/content/10.1101/2024.08.06.606920v1.full.pdf)" cheap
+    **Developments** The authors show they "can construct a tokenized all-atom structure vocabulary that retains high reconstruction accuracy, thus introducing a tokenized representation of all-atom structure that can be obtained from sequence alone". They use a Compressed Hourglass Embedding Adaptations of Proteins (CHEAP) toe represent protein structure of sequence and structure with significant embedding compression. 
+    <img width="657" alt="image" src="https://github.com/user-attachments/assets/0c48e102-f9ff-4b32-910c-5b3b7a8fa061">
+    <img width="645" alt="image" src="https://github.com/user-attachments/assets/e1094347-bf07-4a00-8f3b-5c57631ba1e3">
+
 
 
 ## Tools
@@ -371,6 +378,8 @@ It is not necessarily just enough to identify a potential candidate but to have 
 ### Colab Design
 
 !!! tip "![GitHub Repo stars](https://badgen.net/github/stars/sokrypton/ColabDesign) [ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign)"
+
+
 
 ## Quality Reviews and References
 
