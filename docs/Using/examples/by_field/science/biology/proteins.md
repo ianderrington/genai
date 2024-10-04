@@ -234,7 +234,12 @@ The general method of creating protein foundation models uses Masked Language Mo
 ??? abstract "[AMPLIFY Protein Language Model](https://github.com/chandar-lab/AMPLIFY?tab=readme-ov-file)" amplify-plm
     The author's show in their [Paper](https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf) that they can train highly performant ESM models (and modifications) with better performance. They use different dat asets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. 
     They also use something called _pseudo-perplexity- which measures the replacement of non-random masking (one of each sequence). 
-    
+
+??? abstract "[Design of highly functional genome editors by modeling the universe of CRISPR-Cas sequences](https://www.biorxiv.org/content/10.1101/2024.04.22.590591v1.full.pdf)" 
+    Using Esm2, they generate a model to successfully generate generate crisper-like proteins. 
+    <img width="805" alt="image" src="https://github.com/user-attachments/assets/824adef6-58d3-46e8-848c-04e1fec1f205">
+
+
 ##### Alpha- models
 
 
