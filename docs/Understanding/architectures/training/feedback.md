@@ -110,6 +110,22 @@ Because of the ability to minimize costs associated with feedback, reinforcement
 
 - [Aligning Large Language Models Through Synthetic Feedback](https://arxiv.org/pdf/2305.13735.pdf) Using a hierarchy of systems to improve model alignment.
 
+## RLEF
+
+!!! note "[RLEF: Grounding Code LLMs in Execution Feedback with Reinforcement Learning](https://arxiv.org/pdf/2410.02089)" rlef
+    **Developments**
+    
+    Training LLMs to use inference-time feedback using large scale RL. Makes even the 8B Llama3.1 beat GPT-4 on CodeContests, and SOTA with the 70B.
+
+    **Author summary:**
+
+    LLMs for code should do much better if they can iterate on tests -- but they don't. Our new work (RLEF) addresses this with execution feedback at RL *training time* to use execution feedback at *inference time*.
+    
+    Notably, RLEF models are very sample efficient for inference. Competitive programming questions are often approached by sampling a large number of candidate programs; we can reach SOTA with just up to 3 samples.
+    
+    <img width="1214" alt="image" src="https://github.com/user-attachments/assets/0b19c6f1-1a0d-41fd-aebf-e59fd598b965">
+
+
 ## RL-free feedback
 
 It is possible to provide feedback without using Reinforcement learning. Using a technique called 'Direct Policy Optimization', DPO, models can be optimize without explicitly generating a reward model for different output prompts. Using this method helps to reduce several challenges associated with RL, including the need to iteratively train reward models, and any stability challenges that are offen associated with reinforcement learning. 
