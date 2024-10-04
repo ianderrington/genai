@@ -92,13 +92,19 @@ With a fitness predictor made available, the next step is to create proposal seq
 
 One way of doing this is to use [_generative models_](#generative-models) directly in seeding the generated sequence with starting sequences of the target sequence, or even from a natural language prompt. Another method is to use [_activation maximization_](#activation-maximization), a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction).
 
-#### Generative Models
+### Generative Models
 
+#### Progen2
 ??? abstract "[Large language models generate functional protein sequences across diverse families](https://github.com/salesforce/progen)" progen
     In their [paper](https://www.nature.com/articles/s41587-022-01618-2) the authors reveal the ability to generate proteins with functionality across a wide variety of families. Functionally, it uses property-conditional generation so that the sequences that are generated will be conditions upon protein family, biological process, molecular function. They train models to predict next-amino acid prediction. With models finetuned to different lysozyme families, they showed similar catalytic efficiencies as natural versions demonstrate high expression (40-50%) activity with sometimes much lower sequence identity. 
     **Conditional Language Modeling** They are able to do so by creating a concatenated sequence of the control tag and the protein sequence $x=[c;a]$ and doing next token 
 
+??? abstract "[Design of highly functional genome editors by modeling the universe of CRISPR-Cas sequences](https://www.biorxiv.org/content/10.1101/2024.04.22.590591v1.full.pdf)" 
+    To generate novel CRISPR-Cas proteins, they fine-tuned the ProGen2-base language model. 
+    <img width="805" alt="image" src="https://github.com/user-attachments/assets/824adef6-58d3-46e8-848c-04e1fec1f205">
+    
 
+#### Evo
 ??? abstract "[Sequence modeling and design from molecular to genome scale with Evo](https://github.com/evo-design/evo)"
     The authors reveal in their [paper](https://www.biorxiv.org/content/10.1101/2024.02.27.582234v1.full.pdf) the use of long-context Genetics models can be powerful in their ability to yield state-of-the-art predictions in protein-related tasks. These tasks include zero-shot function prediction, multi-element sequence generation. Their models use the 'Striped-Hyena' structured state space model. Their model is known as Evo.
     <img width="566" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d62b1d21-f323-4ad7-8a1f-28295e9dea2b">
@@ -235,9 +241,7 @@ The general method of creating protein foundation models uses Masked Language Mo
     The author's show in their [Paper](https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf) that they can train highly performant ESM models (and modifications) with better performance. They use different dat asets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. 
     They also use something called _pseudo-perplexity- which measures the replacement of non-random masking (one of each sequence). 
 
-??? abstract "[Design of highly functional genome editors by modeling the universe of CRISPR-Cas sequences](https://www.biorxiv.org/content/10.1101/2024.04.22.590591v1.full.pdf)" 
-    Using Esm2, they generate a model to successfully generate generate crisper-like proteins. 
-    <img width="805" alt="image" src="https://github.com/user-attachments/assets/824adef6-58d3-46e8-848c-04e1fec1f205">
+
 
 
 ##### Alpha- models
@@ -267,6 +271,7 @@ The general method of creating protein foundation models uses Masked Language Mo
     <img width="561" alt="image" src="https://github.com/user-attachments/assets/e2b9b91b-2a72-44a4-acd8-bb987a45d8e6">
 
     **Methods:** From an expression matrix, the model masks and filters expression sequences to try to reconstruct the full-length embedding and expression matrix. They also introduce _auto-discretization_ to help alleviate category assignment errors to different genes... because genes are not necessarily fully categorical.  The Auto-discritization strategy has a lookup table that leaves a weighted combination of individual embeddings from the lookup-table. 
+
 
 ##### Others
 
