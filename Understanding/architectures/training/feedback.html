@@ -1956,6 +1956,17 @@ and
 </li>
       
         <li class="md-nav__item">
+  <a href="#cgpo-constrained-generative-policy-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CGPO - Constrained Generative Policy optimization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rl-free-feedback" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6947,6 +6958,17 @@ and
 </li>
       
         <li class="md-nav__item">
+  <a href="#cgpo-constrained-generative-policy-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CGPO - Constrained Generative Policy optimization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rl-free-feedback" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7105,8 +7127,24 @@ and
 <p>LLMs for code should do much better if they can iterate on tests -- but they don't. Our new work (RLEF) addresses this with execution feedback at RL <em>training time</em> to use execution feedback at <em>inference time</em>.</p>
 <p>Notably, RLEF models are very sample efficient for inference. Competitive programming questions are often approached by sampling a large number of candidate programs; we can reach SOTA with just up to 3 samples.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/0b19c6f1-1a0d-41fd-aebf-e59fd598b965" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1214" alt="image" src="https://github.com/user-attachments/assets/0b19c6f1-1a0d-41fd-aebf-e59fd598b965"></a></p>
+<h2 id="cgpo-constrained-generative-policy-optimization">CGPO - Constrained Generative Policy optimization<a class="headerlink" href="#cgpo-constrained-generative-policy-optimization" title="Permanent link">&para;</a></h2>
 </details>
+<p><a href="/shared/cgpo.html" class="page-url" id="page-url-1"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+</div>
+
+<details class="note">
+<summary><a href="https://arxiv.org/pdf/2409.20370">The Perfect Blend: Redefining RLHF with Mixture of Judges</a></summary>
+<p><strong>Developments</strong> The authors show a novel method of post-tuning feedback training using three new scalable RLHF optimizers to deal with reward hacking in multi-task LLMs. Using two types of judges, rule-based and LLM-based, the sysem is able to evaluate LLM generation and any violation of NLP tasks. For multi task optimization, each task is managed individually with diffeerent optimization settings and reward models, judge mixes, and optimizer hyper paremeters. Thee resulting systme is able to reach SOTA in math, coding, engagemnt and safety. </p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/f3f3c712-668a-4634-bb65-aa8b372ccf44" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1230" alt="image" src="https://github.com/user-attachments/assets/f3f3c712-668a-4634-bb65-aa8b372ccf44"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/101fdcb5-d2cd-469d-8eaa-6d77fed036ea" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1129" alt="image" src="https://github.com/user-attachments/assets/101fdcb5-d2cd-469d-8eaa-6d77fed036ea"></a></p>
 <h2 id="rl-free-feedback">RL-free feedback<a class="headerlink" href="#rl-free-feedback" title="Permanent link">&para;</a></h2>
+</details>
 <p>It is possible to provide feedback without using Reinforcement learning. Using a technique called 'Direct Policy Optimization', DPO, models can be optimize without explicitly generating a reward model for different output prompts. Using this method helps to reduce several challenges associated with RL, including the need to iteratively train reward models, and any stability challenges that are offen associated with reinforcement learning. </p>
 <p>TODO: INtegrate this: 
 <a href="https://arxiv.org/pdf/2305.18290.pdf">https://arxiv.org/pdf/2305.18290.pdf</a></p>
