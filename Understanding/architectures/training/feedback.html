@@ -7076,8 +7076,8 @@ and
 <p>LLMs for code should do much better if they can iterate on tests -- but they don't. Our new work (RLEF) addresses this with execution feedback at RL <em>training time</em> to use execution feedback at <em>inference time</em>.</p>
 <p>Notably, RLEF models are very sample efficient for inference. Competitive programming questions are often approached by sampling a large number of candidate programs; we can reach SOTA with just up to 3 samples.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/0b19c6f1-1a0d-41fd-aebf-e59fd598b965" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1214" alt="image" src="https://github.com/user-attachments/assets/0b19c6f1-1a0d-41fd-aebf-e59fd598b965"></a></p>
-<h2 id="rl-free-feedback">RL-free feedback<a class="headerlink" href="#rl-free-feedback" title="Permanent link">&para;</a></h2>
 </div>
+<h2 id="rl-free-feedback">RL-free feedback<a class="headerlink" href="#rl-free-feedback" title="Permanent link">&para;</a></h2>
 <p>It is possible to provide feedback without using Reinforcement learning. Using a technique called 'Direct Policy Optimization', DPO, models can be optimize without explicitly generating a reward model for different output prompts. Using this method helps to reduce several challenges associated with RL, including the need to iteratively train reward models, and any stability challenges that are offen associated with reinforcement learning. </p>
 <p>TODO: INtegrate this: 
 <a href="https://arxiv.org/pdf/2305.18290.pdf">https://arxiv.org/pdf/2305.18290.pdf</a></p>
