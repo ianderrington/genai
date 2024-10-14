@@ -43,7 +43,7 @@ Protein optimization can be broken down into several components[^n1]:
 
 - **[Target Property](#optimization-targets)**: The intended goal(s) for protein development.
 - **[Fitness Predictor](#fitness-prediction)**: Uses sequence information to estimate the value of the optimization target, as a surrogate for laboratory measurement.
-- **[Sequence Proposer](#sequence-optimization)**: Creates sequences to evaluate and explore.
+- **[Sequence Proposer](#sequence-proposer)**: Creates sequences to evaluate and explore.
 - **Prioritizer**: Uses sequence and predictor information to estimate the top candidates.
 - **Laboratory Measurements**: Reveal the quality of the generated proteins based on the targets.
 - **Orchestrator**: Puts the pieces together in a functional and validated manner.
@@ -90,7 +90,51 @@ When it is possible to iteratively measure proposed sequences, new data can be u
 
 With a fitness predictor made available, the next step is to create proposal sequences that may be evaluated with the predictor model, or potentially with direct measurement.
 
-One way of doing this is to use [_generative models_](#generative-models) directly in seeding the generated sequence with starting sequences of the target sequence, or even from a natural language prompt. Another method is to use [_activation maximization_](#activation-maximization), a method that will generate input to a model that will ideally maximize the output for a given model (assuming maximization is the desired target direction).
+One way of doing this is to use [_generative models_](#generative-models). Generative modeles can be made by using logistic/probabilistic outputs from models and random sampling to determine amino acids in a sequence. It can be done so using _causal language_ (CLM) models, like GPT, where the tokens only attend to prior tokens, or with _masked language_ models (CLM), that can attend to the entire sequences. With CLM, directly in seeding the generated sequence with starting sequences of the target sequence, or even from a natural language prompt, as in models like [ProGen](#progen2), sequences are generated sequentially. In other models, sequences can be generated using MLM using several techniques. 
+
+These methods include:
+
+* **[activation maximization_](#activation-maximization)**, a method that will generate input sequences to a model that will optimize given model.
+* **[Iterative Masking](#iterative-masking)**, where masks are randomly removed until generated remain stationary.
+* **[Markov Chain Monte Carlo](#markov-chain-monte-carlo)** to iteratively mutate evaluate mutations to improve design approaches.
+
+#### Iterative Masking
+
+??? abstract "[Generative power of a protein language model trained on multiple sequence alignments](https://elifesciences.org/articles/79854)"
+
+    <img width="593" alt="image" src="https://github.com/user-attachments/assets/f6253a6e-ddf4-4fec-a625-22de1a268842">
+
+#### Activation Maximization
+
+??? abstract "[SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor.](https://github.com/johli/seqprop)"
+    The authors reveal in their [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04437-5) and [arxiv](https://arxiv.org/pdf/2005.11275.pdf) a method to optimize biological protein sequences based on a predictor model. They use something called _trainable logits_ that can be sampled from, but do so using instance normalization.
+    A Python API for constructing generative DNA/RNA/protein Sequence PWM models in Keras. Implements a PWM generator (with support for discrete sampling and ST gradient estimation), a predictor model wrapper, and a loss model.
+    ![image](https://github.com/ianderrington/genai/assets/76016868/3c2fe20f-1257-4a76-a034-1b3cad242b8c)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/fed3de2c-6dcf-4f4b-8ad1-aa2ecadce5ad)
+
+??? abstract "[Protein sequence design by conformational landscape optimization](https://github.com/gjoni/trDesign)"
+    The authors propose a Bayesian approach to optimizing a protein structure to yield a residue sequence. They use a loss of the form $Loss = -/log P(contacts|sequence) + D_{KL}(f_{20}||f_{20}^{PDB}$ where $D_{KL}$ is the Kullback-Leibler divergence, $f_{20}$ is the average frequency of amino acids from the sequence, and $f_{20}^{PDB}$ is the average frequency of amino acids from proteins in the PDB.
+    [Paper](https://www.pnas.org/doi/full/10.1073/pnas.2017228118)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/8936aae6-4e1c-41f4-bc03-38092e829585)
+
+??? abstract "[Structure-based scoring and sampling of 'Combinatorial Variant Effects from Structure' (CoVES)](https://github.com/ddingding/CoVES/tree/publish)"
+    The authors show in their [paper](https://www.biorxiv.org/content/10.1101/2022.10.31.514613v2) and [Nature](https://www.nature.com/articles/s41467-024-45621-4#Sec1) over 7 different combinatorial mutation studies, the ability to design proteins by exploring the design space without the need for a combinatorial number of mutations. They build a model to estimate a residue preference effect for each amino acid variant at each position and sum these effects to predict combinatorial variants. Simple linear and logistic models using a 'mutation effect preference of size 20(Amino Acids)x residue size' were able to predict the effect of variance. They could then use this to design sequences using Boltzmann sampling and generate variants that were much better.
+    ![image](https://github.com/ianderrington/genai/assets/76016868/753aaf78-06b7-4199-999d-f08e78d7addd)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/5d933173-49e2-4f76-9a0a-d7834c00590a)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/4fba09dc-0ecf-4a9b-833c-9d607e545c34)
+    Particularly the following image provides credence that these simple models of important sites can be useful in predicting proteins.
+    <img width="440" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/911a6b86-0e44-45c2-8a47-9a301d187ce1">
+
+#### Markov Chain Monte Carlo
+
+??? abstract "[Plug & play directed evolution of proteins with gradient-based discrete MCMC (EvoProtGrad for MCMC)](https://github.com/NREL/EvoProtGrad)"
+    A Python package for directed evolution on a protein sequence with gradient-based discrete Markov chain Monte Carlo (MCMC) based on the [paper](https://iopscience.iop.org/article/10.1088/2632-2153/accacd), [blog](https://huggingface.co/blog/AmelieSchreiber/directed-evolution-with-esm2), and [docs](https://nrel.github.io/EvoProtGrad/getting_started/MCMC/)
+    ![image](https://github.com/ianderrington/genai/assets/76016868/4be735d6-bba2-4003-9bf0-36218e264c93)
+
+
+??? note "[Low-N protein engineering with data-efficient deep learning](https://www.nature.com/articles/s41592-021-01100-y)"
+    The authors demonstrate a standard model where a PLM undergoes unsupervised pre-training and then refined on evolutionarily related sequences, and finally fine-tuned on assay-specific sequences. They use a Markov Chain Monte Carlo (MCMC) method to mutate and iteratively evaluate mutations to improve design approaches.
+
 
 ### Generative Models
 
@@ -114,37 +158,22 @@ One way of doing this is to use [_generative models_](#generative-models) direct
     <img width="892" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/67d72fce-e8d8-4372-9371-1f45d2c2d408">
     [Model](https://huggingface.co/nferruz/ZymCTRL)
 
-??? note "[Low-N protein engineering with data-efficient deep learning](https://www.nature.com/articles/s41592-021-01100-y)"
-    The authors demonstrate a standard model where a PLM undergoes unsupervised pre-training and then refined on evolutionarily related sequences, and finally fine-tuned on assay-specific sequences. They use a Markov Chain Monte Carlo (MCMC) method to mutate and iteratively evaluate mutations to improve design approaches.
 
-#### Markov Chain Monte Carlo
-
-??? abstract "[Plug & play directed evolution of proteins with gradient-based discrete MCMC (EvoProtGrad for MCMC)](https://github.com/NREL/EvoProtGrad)"
-    A Python package for directed evolution on a protein sequence with gradient-based discrete Markov chain Monte Carlo (MCMC) based on the [paper](https://iopscience.iop.org/article/10.1088/2632-2153/accacd), [blog](https://huggingface.co/blog/AmelieSchreiber/directed-evolution-with-esm2), and [docs](https://nrel.github.io/EvoProtGrad/getting_started/MCMC/)
-    ![image](https://github.com/ianderrington/genai/assets/76016868/4be735d6-bba2-4003-9bf0-36218e264c93)
 
 ##### With Natural Large Language Models
 
-#### Activation Maximization
 
-??? abstract "[SeqProp: Stochastic Sequence Propagation - A Keras Model for optimizing DNA, RNA and protein sequences based on a predictor.](https://github.com/johli/seqprop)"
-    The authors reveal in their [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04437-5) and [arxiv](https://arxiv.org/pdf/2005.11275.pdf) a method to optimize biological protein sequences based on a predictor model. They use something called _trainable logits_ that can be sampled from, but do so using instance normalization.
-    A Python API for constructing generative DNA/RNA/protein Sequence PWM models in Keras. Implements a PWM generator (with support for discrete sampling and ST gradient estimation), a predictor model wrapper, and a loss model.
-    ![image](https://github.com/ianderrington/genai/assets/76016868/3c2fe20f-1257-4a76-a034-1b3cad242b8c)
-    ![image](https://github.com/ianderrington/genai/assets/76016868/fed3de2c-6dcf-4f4b-8ad1-aa2ecadce5ad)
 
-??? abstract "[Protein sequence design by conformational landscape optimization](https://github.com/gjoni/trDesign)"
-    The authors propose a Bayesian approach to optimizing a protein structure to yield a residue sequence. They use a loss of the form $Loss = -/log P(contacts|sequence) + D_{KL}(f_{20}||f_{20}^{PDB}$ where $D_{KL}$ is the Kullback-Leibler divergence, $f_{20}$ is the average frequency of amino acids from the sequence, and $f_{20}^{PDB}$ is the average frequency of amino acids from proteins in the PDB.
-    [Paper](https://www.pnas.org/doi/full/10.1073/pnas.2017228118)
-    ![image](https://github.com/ianderrington/genai/assets/76016868/8936aae6-4e1c-41f4-bc03-38092e829585)
+## Data 
 
-??? abstract "[Structure-based scoring and sampling of 'Combinatorial Variant Effects from Structure' (CoVES)](https://github.com/ddingding/CoVES/tree/publish)"
-    The authors show in their [paper](https://www.biorxiv.org/content/10.1101/2022.10.31.514613v2) and [Nature](https://www.nature.com/articles/s41467-024-45621-4#Sec1) over 7 different combinatorial mutation studies, the ability to design proteins by exploring the design space without the need for a combinatorial number of mutations. They build a model to estimate a residue preference effect for each amino acid variant at each position and sum these effects to predict combinatorial variants. Simple linear and logistic models using a 'mutation effect preference of size 20(Amino Acids)x residue size' were able to predict the effect of variance. They could then use this to design sequences using Boltzmann sampling and generate variants that were much better.
-    ![image](https://github.com/ianderrington/genai/assets/76016868/753aaf78-06b7-4199-999d-f08e78d7addd)
-    ![image](https://github.com/ianderrington/genai/assets/76016868/5d933173-49e2-4f76-9a0a-d7834c00590a)
-    ![image](https://github.com/ianderrington/genai/assets/76016868/4fba09dc-0ecf-4a9b-833c-9d607e545c34)
-    Particularly the following image provides credence that these simple models of important sites can be useful in predicting proteins.
-    <img width="440" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/911a6b86-0e44-45c2-8a47-9a301d187ce1">
+## Data Selection
+
+??? abstract "[Protein Language Model Fitness Is a Matter of Preference](https://www.biorxiv.org/content/10.1101/2024.10.03.616542v1.full.pdf)"
+    The authors show that models preferences are biased by human preference during the data curation. Quite cleanly, they state "Algorithmic differences might be overshadowed by human
+preferences at the data level confounding whether a model better captures the biology of proteome"
+    
+    <img width="651" alt="image" src="https://github.com/user-attachments/assets/74a52ec5-500a-4c48-bb79-d91cd81be5ed">
+
 
 ## Data Sources
 
@@ -166,9 +195,34 @@ The general method of creating protein foundation models uses Masked Language Mo
 
 ### Evaluation Metrics
 
+### To do
 - Spearman Correlation Coefficient
 - AUC
 - MCC
+
+
+### Pseudo Likelihood
+
+The Pseudo log likelihood (PLL) is often used to evaluate the fintess of a given sequence conditioned upon the parameters of the model. It found by evaluating the following: <img width="211" alt="image" src="https://github.com/user-attachments/assets/c42b5596-8ec2-43af-a800-727d9b7883b4">
+
+It requires $O(L)$ passes through the data. 
+
+There is a way to go faster, as in [Protein Language Model Fitness Is a Matter of Preference](https://www.biorxiv.org/content/10.1101/2024.10.03.616542v1.full.pdf). The authors show that the pseudo log likelihood can be calculated in a single pass as such:
+
+    <img width="366" alt="image" src="https://github.com/user-attachments/assets/56807d57-1f12-402c-98da-17107d965063">
+
+
+
+??? abstract "[BERTOLOGY MEETS BIOLOGY: INTERPRETING ATTENTION IN PROTEIN LANGUAGE MODELS](https://github.com/salesforce/provis)"
+    **Developments** The authors show in their [paper](https://arxiv.org/pdf/2006.15222.pdf) "that attention: (1) captures the folding structure of proteins, connecting amino acids that are far apart in the underlying sequence, but spatially close in the three-dimensional structure, (2) targets binding sites, a key functional component of proteins, and (3) focuses on progressively more complex biophysical properties with increasing layer depth. We find this behavior to be consistent across three Transformer architectures (BERT, ALBERT, XLNet) and two distinct protein datasets. We also present a three-dimensional visualization of the interaction between attention and protein structure."
+    They see the following:
+    * Attention aligns strongly with contact maps in the deepest layers.
+    * Attention targets binding sites throughout most layers of the models.
+    * Attention targets Post-translational modifications in a small number of heads.
+    * Attention targets higher-level properties in deeper layers.
+    * Attention heads specialize in particular amino acids.
+    * Attention is consistent with substitution relationships.
+
 
 ### Strategies
 
@@ -244,7 +298,7 @@ The general method of creating protein foundation models uses Masked Language Mo
 
 
 
-##### Alpha- models
+##### Alpha-models
 
 
 ??? note "[(closed source) De novo design of high-affinity protein binders with AlphaProteo](https://arxiv.org/pdf/2409.08022)"
@@ -371,20 +425,12 @@ It is not necessarily just enough to identify a potential candidate but to have 
 
 
 
+## Common Methods
+
+
+
+
 ## Tools
-
-### Evaluation Methods
-
-??? abstract "[BERTOLOGY MEETS BIOLOGY: INTERPRETING ATTENTION IN PROTEIN LANGUAGE MODELS](https://github.com/salesforce/provis)"
-    **Developments** The authors show in their [paper](https://arxiv.org/pdf/2006.15222.pdf) "that attention: (1) captures the folding structure of proteins, connecting amino acids that are far apart in the underlying sequence, but spatially close in the three-dimensional structure, (2) targets binding sites, a key functional component of proteins, and (3) focuses on progressively more complex biophysical properties with increasing layer depth. We find this behavior to be consistent across three Transformer architectures (BERT, ALBERT, XLNet) and two distinct protein datasets. We also present a three-dimensional visualization of the interaction between attention and protein structure."
-    They see the following:
-    * Attention aligns strongly with contact maps in the deepest layers.
-    * Attention targets binding sites throughout most layers of the models.
-    * Attention targets Post-translational modifications in a small number of heads.
-    * Attention targets higher-level properties in deeper layers.
-    * Attention heads specialize in particular amino acids.
-    * Attention is consistent with substitution relationships.
-
 ### Colab Design
 
 !!! tip "![GitHub Repo stars](https://badgen.net/github/stars/sokrypton/ColabDesign) [ColabDesign: Making Protein Design accessible to all via Google Colab!](https://github.com/sokrypton/ColabDesign)"
