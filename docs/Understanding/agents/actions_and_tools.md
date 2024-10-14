@@ -13,6 +13,15 @@ Actions can be thought of interacting in an environment, this environment can ha
 
 ### Libraries
 
+??? tip "[ToolGen: Unified Tool Retrieval and Calling via Generation](https://github.com/Reason-Wang/ToolGen?tab=readme-ov-file)" toolgen
+    The authors show in their [paper](https://arxiv.org/pdf/2410.03439) a solution that uses individual tokens to indicate tool calls, an allows them to control over 48k tools. 
+    
+    <img width="562" alt="image" src="https://github.com/user-attachments/assets/a3806299-15d4-413a-96ee-3d571addd9f4">
+
+    <img width="523" alt="image" src="https://github.com/user-attachments/assets/eef1f410-370b-456e-90b3-394028ffe9dc">
+
+
+
 ??? tip "![GitHub Repo stars](https://badgen.net/github/stars/ShishirPatil/gorilla) [Gorilla](https://github.com/ShishirPatil/gorilla) A Llama-focused high-quality API calling methods."
     <img width="801" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/631a7023-0b14-4a55-9993-2d49bb3b81d2">
     [Paper](https://arxiv.org/abs/2305.15334)
