@@ -146,7 +146,13 @@ These methods include:
 ??? abstract "[Design of highly functional genome editors by modeling the universe of CRISPR-Cas sequences](https://www.biorxiv.org/content/10.1101/2024.04.22.590591v1.full.pdf)" 
     To generate novel CRISPR-Cas proteins, they fine-tuned the ProGen2-base language model. 
     <img width="805" alt="image" src="https://github.com/user-attachments/assets/824adef6-58d3-46e8-848c-04e1fec1f205">
+
+
+??? abstract [CONDITIONAL ENZYME GENERATION USING PROTEIN LANGUAGE MODELS WITH ADAPTERS](https://github.com/Profluent-Internships/ProCALM)" procalm
+    The author [show](https://arxiv.org/pdf/2410.03634) the ability to generate proteins in families by using conditional encoding to project the conditions into a embedding state that is used to generate proteins in a manner that can satisfy certain conditions, like family type'. 
+    <img width="548" alt="image" src="https://github.com/user-attachments/assets/c6ad57fc-e489-4952-8dfc-2858fcf75813">
     
+
 
 #### Evo
 ??? abstract "[Sequence modeling and design from molecular to genome scale with Evo](https://github.com/evo-design/evo)"
