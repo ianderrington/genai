@@ -156,6 +156,15 @@ In its vanilla state, Transformers are $O(N^2)$ in their computation with self-c
     [Paper](https://arxiv.org/pdf/2309.17453.pdf)
     ![image](https://github.com/ianderrington/genai/assets/76016868/fb9cbf5a-ee6b-4558-8283-87aeaedf280a)
 
+
+??? note "[Selective Atteion Improves Transformer](https://arxiv.org/pdf/2410.02703)" selective-attention
+    The authors present a solution to minimize unecessary attention given to information based on updated understanding of its value. They create 'selective attention' that helps to ensure information is may not need to attend to other areas. 
+    
+    <img width="565" alt="image" src="https://github.com/user-attachments/assets/03f5b811-67a2-452b-a74f-d02aa97cbe37">
+
+    <img width="447" alt="image" src="https://github.com/user-attachments/assets/7e01cd55-7bec-4901-9c24-221767a60196">
+
+
 ### Advanced Transformer Blocks
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/epfml/DenseFormer) [DenseFormer: Enhancing Information Flow in Transformers via Depth Weighted Averaging](https://github.com/epfml/DenseFormer)"
