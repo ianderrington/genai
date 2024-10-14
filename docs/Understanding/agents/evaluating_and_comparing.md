@@ -4,6 +4,15 @@ There is a lot of similarity of [what to evaluate](../architectures/evaluating_a
 
 ## **How to Evaluate**
 
+??? abstract "[MLE-BENCH: EVALUATING MACHINE LEARNING AGENTS ON MACHINE LEARNING ENGINEERING](github.com/openai/mle-bench/)
+    
+    The authors share in their [paper](https://arxiv.org/pdf/2410.07095) at kaggle-competition environmet for agents surrounding ML challenges. 
+    
+    <img width="550" alt="image" src="https://github.com/user-attachments/assets/10909e0f-6787-4f6c-a95b-6b1d7210d02a">
+
+    <img width="592" alt="image" src="https://github.com/user-attachments/assets/ab8789d4-f9d3-4875-a777-1bc381e785cc">
+
+    
 
 ??? abstract "[Promptfoo: a tool for testing and evaluating LLM output quality](https://github.com/promptfoo/promptfoo)"
     ![image](https://github.com/ianderrington/genai/assets/76016868/c318311a-f65f-49a5-8636-e3f977d4a1f3)
