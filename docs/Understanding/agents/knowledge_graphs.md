@@ -1,7 +1,8 @@
 # Knowledge Graphs: Empowering Large Language Models with Structured Knowledge
 
 * [Tools and Resources](#tools)
-CURSOR: Make this into a mermaid markdown for the different sections. you can use " click UC "./Understanding/agents/knowledge_graphs#<the-url>" to po
+
+TODO: Make this into a mermaid markdown for the different sections. you can use " click UC "./Understanding/agents/knowledge_graphs#<the-url>" point the piece in the file. 
 
 ## TLDR abstract
 
@@ -69,32 +70,26 @@ Humans demonstrate meta-cognition around our own reasoning gaps, directing atten
     “When prompted with a few examples and intermediate steps, large language models (LLMs) have demonstrated impressive performance in various reasoning tasks. However, prompting methods that rely on implicit knowledge in an LLM often hallucinate incorrect answers when the implicit knowledge is wrong or inconsistent with the task. To tackle this problem, we present Hypotheses-to-Theories (HtT), a framework that learns a rule library for reasoning with LLMs. HtT contains two stages, an induction stage and a deduction stage. In the induction stage, an LLM is first asked to generate and verify rules over a set of training examples. Rules that appear and lead to correct answers sufficiently often are collected to form a rule library. In the deduction stage, the LLM is then prompted to employ the learned rule library to perform reasoning to answer test questions. Experiments on both numerical reasoning and relational reasoning problems show that HtT improves existing prompting methods, with an absolute gain of 11-27% in accuracy. The learned rules are also transferable to different models and to different forms of the same problem.”
 
 
+## Using Knowledge Graphs wih LLMs
 
-## How to use Knowledge Graphs wih LLMs
+### When to use KGs with LLMs and when not to
+Some things may be better adressed with graph-specific models (prediction of node/link, classification, other things to predict). The LLM can help to generate the graph, though!
 
-### When to use KGs with LLMs and when not
-- Some things may be better adressed with graph-specific models (prediction of node/link, classification, other things to predict). The LLM can help to generate the graph, though!
-#### Compositional Reasoning
-LLMs still struggle with systematic combinatorial generalization — flexibly assembling novel solutions by recombining known skills. For example, separately learning to make coffee and toast does not directly enable orchestrating the joint routine. Humans intrinsically develop far richer modular, hierarchical representations.
+While LLMs afford a great deal of potential, they may not be optimal tools for specific jobs. For complex KGs that involve nodes and edges with highly specific meanings and definitions that may not related to natural language, or for very large graphs, LLMs will not be able to accurately embody holistic understanding that whole graph solutions may enable. Graph Neural Network methods, can effectivly do _prediction_ of nodes and edges, _classification_ of nodes and groups, and traditional algorithms can be used. Here are some common traditional algorithms that may be preferred over using LLMs to understand KGs. 
 
-#### Causal Reasoning
-While correlation comes naturally to statistics-driven models, unraveling causal mechanisms involving experiments, interventions and counterfactuals remains elusive without explicit conceptual frameworks. We possess innate construals of objects, agents and dynamics.
+**Search** Algorithms like breadth-first search, depth-first search, and Dijkstra's algorithm are fundamental for navigating knowledge graphs. These methods efficiently explore graph structures to find paths, detect cycles, or identify connected components, forming the basis for more complex graph operations.
+**Pathfinding Algorithms (e.g., Dijkstra’s, A*):** Find the shortest path between two nodes, useful in route planning and network analysis.
+**Community Detection Algorithms (e.g., Louvain Method)** Identify clusters or communities within graphs, helping in social network analysis and market segmentation.
+**Centrality Measures (e.g., PageRank, Betweenness Centrality):** Determine the importance of different nodes in a network, applicable in analyzing influence in social networks or key infrastructure in transportation networks.
 
-#### Temporal Reasoning
-The sequential, transient nature of events, plans and narratives requires maintaining internal timelines, projecting into horizons. Yet LLMs display limited episodic memory to sustain coherence, lacking mental situational modeling.
-
-#### Common Sense
-Our expansive everyday frameworks encompassing objects, spaces and intuitive psychology provide testimony on plausibility when navigating the world. Failing to emulate this understanding of naive physics, pragmatics and social dynamics restricts exposed statistical knowledge.
-
-#### Meta-learning
-Humans demonstrate meta-cognition around our own reasoning gaps, directing attention and deliberately seeking information to strengthen models. The opacity and lack of higher-order uncertainty or self-reflection limits controlled, strategic model improvement in neural networks.
+Be sure to understand your use case and if traditional, or GNN approaches may be valuable for your specific needs as well. 
 
 ### Indexing and Generation
-#### Creating and populating knowledge graphs
-#### Ontology design and best practices
+
+LLMs are of keen interest in creating and populating knowledge graphs. They have the ability to generate accurate and entities and relationships from injested data. They can be used to approximately verify as they are generating, helping to ensure KG consistency. Finally, because they can be used to generated [structured output](../architectures/generation.md) LLM output can  be incorporated directly into KGs. 
+
 #### Automated KG construction from unstructured data
 
-    ===================
 ??? abstract " [Title: Prompting an LLM with an ontology to drive Knowledge Graph extraction from unstructured documents](https://www.linkedin.com/pulse/llm-ontology-prompting-knowledge-graph-extraction-peter-lawrence)"
 
     “I make no apology for saying that a graph is the best organization of structured data. However, the vast majority of data is unstructured text. Therefore, data needs to be transformed from its original format using an Extract-Transform-Load (ETL) or Extract-Load-Transform (ELT) into a Knowledge Graph format. There is no problem when the original format is structured, such as SQL tables, spreadsheets, etc, or at least semi-structured, such as tweets. However, when the source data is unstructured text the task of ETL/ELT to a graph is far more challenging.
@@ -102,24 +97,19 @@ Humans demonstrate meta-cognition around our own reasoning gaps, directing atten
     This article shows how an LLM can be prompted with an unstructured document and asked to extract a graph corresponding to a specific ontology/schema. This is demonstrated with a Kennedy ontology in conjunction with a publicly available description of the Kennedy family tree.”
 
 
+#### Ontology design and best practices
 
 ### Lookup and Querying
-#### Query languages (e.g., SPARQL, Cypher)
+#### Query languages 
 Query languages like SPARQL and Cypher allow precise retrieval of information from knowledge graphs. SPARQL is the standard for RDF graphs, while Cypher is commonly used for property graphs like those in Neo4j. These languages enable complex queries that can traverse relationships, filter results, and aggregate data.
 
 #### LLMs for Querying
 Large Language Models can be used to generate graph queries from natural language, making knowledge graphs more accessible to non-technical users. This approach combines the flexibility of natural language with the precision of structured queries, enabling more intuitive interaction with knowledge graphs.
 
-#### Traditional graph traversal algorithms
-Algorithms like breadth-first search, depth-first search, and Dijkstra's algorithm are fundamental for navigating knowledge graphs. These methods efficiently explore graph structures to find paths, detect cycles, or identify connected components, forming the basis for more complex graph operations.
-
-Pathfinding Algorithms (e.g., Dijkstra’s, A*): Find the shortest path between two nodes, useful in route planning and network analysis.
-Community Detection Algorithms (e.g., Louvain Method): Identify clusters or communities within graphs, helping in social network analysis and market segmentation.
-Centrality Measures (e.g., PageRank, Betweenness Centrality): Determine the importance of different nodes in a network, applicable in analyzing influence in social networks or key infrastructure in transportation networks.
-Recommendation Systems: By analyzing user-item graphs, these systems can make personalized recommendations based on past interactions.
 
 
-#### Efficient indexing and retrieval techniques
+
+### Efficient indexing and retrieval techniques
 Techniques such as inverted indexing, graph partitioning, and caching strategies optimize query performance on large-scale knowledge graphs. These methods reduce search space and access times, enabling rapid retrieval of relevant information even from massive graph structures.
 
 ### Integration with LLMs
