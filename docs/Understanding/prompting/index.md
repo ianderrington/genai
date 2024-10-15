@@ -289,7 +289,7 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 
 !!! tip "[Prompt Engineering for Healthcare: Methodologies and Applications](https://arxiv.org/pdf/2304.14670.pdf)"
 
-!!! tip "[A good description of advanced prompt tuning](https://cameronrwolfe.substack.com/p/advanced-prompt-engineering)"
+!!! tip "[A good description of advanced prompt tuning](https://cameronrwolfe.substack.com/p/advanced-prompt-engineering)"gp
 
 ## Interesting Research
 
