@@ -28,24 +28,78 @@ Ways of using
 
 ### Complementarity to LLMs
 #### How KGs address LLM shortcomings in reasoning and factual consistency
-#### The potential for hybrid systems leveraging both approaches
+#### Reasoning
+
+**Compositional Reasoning**
+LLMs still struggle with systematic combinatorial generalization — flexibly assembling novel solutions by recombining known skills. For example, separately learning to make coffee and toast does not directly enable orchestrating the joint routine. Humans intrinsically develop far richer modular, hierarchical representations.
+
+**Causal Reasoning**
+While correlation comes naturally to statistics-driven models, unraveling causal mechanisms involving experiments, interventions and counterfactuals remains elusive without explicit conceptual frameworks. We possess innate construals of objects, agents and dynamics.
+
+**Temporal Reasoning**
+The sequential, transient nature of events, plans and narratives requires maintaining internal timelines, projecting into horizons. Yet LLMs display limited episodic memory to sustain coherence, lacking mental situational modeling.
+
+**Common Sense**
+Our expansive everyday frameworks encompassing objects, spaces and intuitive psychology provide testimony on plausibility when navigating the world. Failing to emulate this understanding of naive physics, pragmatics and social dynamics restricts exposed statistical knowledge.
+
+**Meta-learning**
+Humans demonstrate meta-cognition around our own reasoning gaps, directing attention and deliberately seeking information to strengthen models. The opacity and lack of higher-order uncertainty or self-reflection limits controlled, strategic model improvement in neural networks.
+
+
+??? note "[Grounding Language Models in Facts and Logic](https://arxiv.org/abs/2310.07064)"
+
+    Article… https://medium.com/@alcarazanthony1/grounding-language-models-in-facts-and-logic-66a55a4fe116
+
+    ArXiv… https://arxiv.org/abs/2310.07064  (image source)
+
+
+    From article …
+    Comment: Despite their verbal prowess, most large language models today have little actual understanding of the world. Their knowledge comes solely from recognizing statistical patterns in the massive text data they are trained on. Without grounding in factual knowledge, they have no mechanisms for distinguishing truth from fiction.
+
+    “The recent advances in large language models like GPT-3 and ChatGPT have been astonishing. These models can generate remarkably fluent and coherent text across many topics. However major limitations remain when it comes to logical reasoning and making accurate inferences about facts.
+
+    These models still rely on pattern recognition in massive text data, without any true understanding of the world. As a result, they can easily be misled and hallucinate convincing but illogical or false statements.
+
+    To address this limitation, augmenting large language models with structured knowledge graphs is a solution. Knowledge graphs like Wikidata encode factual information about the world in a networked format.
+
+    By training language models to reason over knowledge graphs, performing tasks like link prediction, triple classification, and collective reasoning, we can ground their knowledge in factual information. Mastering these types of logical reasoning over interconnected factual knowledge can enhance their reasoning capabilities.”
+
+    Abstract from arXiv paper…
+
+    “When prompted with a few examples and intermediate steps, large language models (LLMs) have demonstrated impressive performance in various reasoning tasks. However, prompting methods that rely on implicit knowledge in an LLM often hallucinate incorrect answers when the implicit knowledge is wrong or inconsistent with the task. To tackle this problem, we present Hypotheses-to-Theories (HtT), a framework that learns a rule library for reasoning with LLMs. HtT contains two stages, an induction stage and a deduction stage. In the induction stage, an LLM is first asked to generate and verify rules over a set of training examples. Rules that appear and lead to correct answers sufficiently often are collected to form a rule library. In the deduction stage, the LLM is then prompted to employ the learned rule library to perform reasoning to answer test questions. Experiments on both numerical reasoning and relational reasoning problems show that HtT improves existing prompting methods, with an absolute gain of 11-27% in accuracy. The learned rules are also transferable to different models and to different forms of the same problem.”
+
+
 
 ## How to use Knowledge Graphs wih LLMs
+
 ### When to use KGs with LLMs and when not
 - Some things may be better adressed with graph-specific models (prediction of node/link, classification, other things to predict). The LLM can help to generate the graph, though!
+#### Compositional Reasoning
+LLMs still struggle with systematic combinatorial generalization — flexibly assembling novel solutions by recombining known skills. For example, separately learning to make coffee and toast does not directly enable orchestrating the joint routine. Humans intrinsically develop far richer modular, hierarchical representations.
+
+#### Causal Reasoning
+While correlation comes naturally to statistics-driven models, unraveling causal mechanisms involving experiments, interventions and counterfactuals remains elusive without explicit conceptual frameworks. We possess innate construals of objects, agents and dynamics.
+
+#### Temporal Reasoning
+The sequential, transient nature of events, plans and narratives requires maintaining internal timelines, projecting into horizons. Yet LLMs display limited episodic memory to sustain coherence, lacking mental situational modeling.
+
+#### Common Sense
+Our expansive everyday frameworks encompassing objects, spaces and intuitive psychology provide testimony on plausibility when navigating the world. Failing to emulate this understanding of naive physics, pragmatics and social dynamics restricts exposed statistical knowledge.
+
+#### Meta-learning
+Humans demonstrate meta-cognition around our own reasoning gaps, directing attention and deliberately seeking information to strengthen models. The opacity and lack of higher-order uncertainty or self-reflection limits controlled, strategic model improvement in neural networks.
 
 ### Indexing and Generation
 #### Creating and populating knowledge graphs
 #### Ontology design and best practices
 #### Automated KG construction from unstructured data
 
-===================Title: Prompting an LLM with an ontology to drive Knowledge Graph extraction from unstructured documents
+    ===================
+??? abstract " [Title: Prompting an LLM with an ontology to drive Knowledge Graph extraction from unstructured documents](https://www.linkedin.com/pulse/llm-ontology-prompting-knowledge-graph-extraction-peter-lawrence)"
 
-See… https://www.linkedin.com/pulse/llm-ontology-prompting-knowledge-graph-extraction-peter-lawrence
+    “I make no apology for saying that a graph is the best organization of structured data. However, the vast majority of data is unstructured text. Therefore, data needs to be transformed from its original format using an Extract-Transform-Load (ETL) or Extract-Load-Transform (ELT) into a Knowledge Graph format. There is no problem when the original format is structured, such as SQL tables, spreadsheets, etc, or at least semi-structured, such as tweets. However, when the source data is unstructured text the task of ETL/ELT to a graph is far more challenging.
 
-“I make no apology for saying that a graph is the best organization of structured data. However, the vast majority of data is unstructured text. Therefore, data needs to be transformed from its original format using an Extract-Transform-Load (ETL) or Extract-Load-Transform (ELT) into a Knowledge Graph format. There is no problem when the original format is structured, such as SQL tables, spreadsheets, etc, or at least semi-structured, such as tweets. However, when the source data is unstructured text the task of ETL/ELT to a graph is far more challenging.
-
-This article shows how an LLM can be prompted with an unstructured document and asked to extract a graph corresponding to a specific ontology/schema. This is demonstrated with a Kennedy ontology in conjunction with a publicly available description of the Kennedy family tree.”
+    This article shows how an LLM can be prompted with an unstructured document and asked to extract a graph corresponding to a specific ontology/schema. This is demonstrated with a Kennedy ontology in conjunction with a publicly available description of the Kennedy family tree.”
 
 
 
@@ -359,6 +413,20 @@ Abstract:
     Abstract:
     "Reinforcement learning (RL) is an effective method of finding reasoning pathways in incomplete knowledge graphs (KGs). To overcome the challenges of a large action space, a self-supervised pre-training method is proposed to warm up the policy network before the RL training stage. To alleviate the distributional mismatch issue in general self-supervised RL (SSRL), in our supervised learning (SL) stage, the agent selects actions based on the policy network and learns from generated labels; this self-generation of labels is the intuition behind the name self-supervised. With this training framework, the information density of our SL objective is increased and the agent is prevented from getting stuck with the early rewarded paths. Our self-supervised RL (SSRL) model improves the performance of RL by pairing it with the wide coverage achieved by SL during pretraining, since the breadth of the SL objective makes it infeasible to train an agent with that alone. We show that our SSRL model meets or exceeds current state-of-the-art results on all Hits@k and mean reciprocal rank (MRR) metrics on four large benchmark KG datasets. This SSRL method can be used as a plug-in for any RL architecture for a KGR task. We adopt two RL architectures, i.e., MINERVA and MultiHopKG as our baseline RL models and experimentally show that our SSRL model consistently outperforms both baselines on all of these four KG reasoning tasks. "
 
+#### Data generation
+
+??? abstract "[Pygraft](https://github.com/nicolas-hbt/pygraft)"
+    For those of you interested in open-source Python tools, I am happy to share with you our new work: PyGraft, a configurable Python tool to generate synthetic knowledge graphs easily! We expect PyGraft to help you generate new and tailored benchmark datasets useful for any kind of Machine Learning related tasks.
+
+    We plan on submitting the presentation of PyGraft (paper provided below) to an international conference, so we welcome any help: please share and star our Github repository if you like the project, this is very important for increasing PyGraft's visibility and proposing additional features in the near future!
+
+    We also welcome any ideas on how to improve PyGraft. So, if you want to contribute, let us get in touch! We mainly seek contributions from top Master's students with some exposure to research, as well as researchers (PhDs, PostDocs, etc) with good programming skills.
+
+    Documentation: https://pygraft.readthedocs.io/en/latest/
+
+    Paper: https://arxiv.org/pdf/2309.03685.pdf
+
+
 ### Retrieval on other Databases
 
 ??? abstract [An interesting study that shows the impact of KGs for question answering on SQL databases.](https://github.com/datadotworld/cwd-benchmark-data)
@@ -379,13 +447,9 @@ Abstract:
     This project is designed to implement an agent capable of interacting with a graph database like Neo4j through a semantic layer using OpenAI function calling. The semantic layer equips the agent with a suite of robust tools, allowing it to interact with the graph database based on the user's intent. 
 
 
-#### Addressing cold-start problems with KG####based features
+#### Addressing cold-start problems with KG-based features
 
 ### Research
-
-
-
-
 
 ??? note "[Introducing MechGPT 🦾🤖]()"
 
@@ -406,10 +470,6 @@ Abstract:
     AMR: https://lnkd.in/g6gn-XaK
 
     ArXiv: https://lnkd.in/gx7N43Jz
-
-
-
-=====================
 
 
 ??? abstract "[Knowledge Graph Prompting for Multi-Document Question Answering (Adobe Research, August 2023)](https://github.com/YuWVandy/KG-LLM-MDQA)"
@@ -471,3 +531,12 @@ https://graphacademy.neo4j.com/courses/llm-knowledge-graph-construction/
 
     Abstract—Large language models (LLMs), such as ChatGPT and GPT4, are making new waves in the field of natural language processing and artificial intelligence, due to their emergent ability and generalizability. However, LLMs are black-box models, which often fall short of capturing and accessing factual knowledge. In contrast, Knowledge Graphs (KGs), Wikipedia and Huapu for example, are structured knowledge models that explicitly store rich factual knowledge. KGs can enhance LLMs by providing external knowledge for inference and interpretability. Meanwhile, KGs are difficult to construct and evolving by nature, which challenges the existing methods in KGs to generate new facts and represent unseen knowledge. Therefore, it is complementary to unify LLMs and KGs together and simultaneously leverage their advantages. In this article, we present a forward-looking roadmap for the unification of LLMs and KGs. Our roadmap consists of three general frameworks, namely, 1) KG-enhanced LLMs, which incorporate KGs during the pre-training and inference phases of LLMs, or for the purpose of enhancing understanding of the knowledge learned by LLMs; 2) LLM-augmented KGs, that leverage LLMs for different KG tasks such as embedding, completion, construction, graph-to-text generation, and question answering; and 3) Synergized LLMs + KGs, in which LLMs and KGs play equal roles and work in a mutually beneficial way to enhance both LLMs and KGs for bidirectional reasoning driven by both data and knowledge. We review and summarize existing efforts within these three frameworks in our roadmap and pinpoint their future research directions.
     
+??? note tosort
+    Towards Foundation Models for Knowledge Graph Reasoning (Intel AI Lab, October 2023)
+
+    Paper: https://arxiv.org/abs/2310.04562
+
+    Abstract:
+    "Foundation models in language and vision have the ability to run inference on any textual and visual inputs thanks to the transferable representations such as a vocabulary of tokens in language. Knowledge graphs (KGs) have different entity and relation vocabularies that generally do not overlap. The key challenge of designing foundation models on KGs is to learn such transferable representations that enable inference on any graph with arbitrary entity and relation vocabularies. In this work, we make a step towards such foundation models and present ULTRA, an approach for learning universal and transferable graph representations. ULTRA builds relational representations as a function conditioned on their interactions. Such a conditioning strategy allows a pre-trained ULTRA model to inductively generalize to any unseen KG with any relation vocabulary and to be fine-tuned on any graph. Conducting link prediction experiments on 57 different KGs, we find that the zero-shot inductive inference performance of a single pre-trained ULTRA model on unseen graphs of various sizes is often on par or better than strong baselines trained on specific graphs. Fine-tuning further boosts the performance."
+
+    Article: https://towardsdatascience.com/ultra-foundation-models-for-knowledge-graph-reasoning-9f8f4a0d7f09
