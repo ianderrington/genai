@@ -1,17 +1,32 @@
 Training GenAI will generally be domain/modality specific.
 
-## Important concepts
+## Training Generative Language models
+
+Models are generally trained with the following manner: 
+
+- Self-supervised [**pre-training**](pre-training.md) to predict the next token with reasonable likelihoods.
+- Supervised or self-supervised [Finetuning](./finetuning.md) on higher quality data sets, including instruction finetuning to create responses in expected manners. 
+
+The manner that these languag emodels can be done [recursively](./recursive.md) using [simulated data](../../data/preparation/augmentation.md) and in such a way that they can be  [Automatically correcting](#automatic-correction) models to enable models that may be more globally accurate. 
+
 ### Training Objectives
 
-- Next token
-- Masked token
-- Embedding similarity
+There are several methods of training methods, that use samples thata re altered or hidden to and models to predict the original, unaltered/noised models
 
-### What is done 
-- Self-supervised [**pre-training**](pre-training.md) to predict the next token with reasonable likelihoods.
-- Supervised or self-supervised [Finetuning](./finetuning.md) on higher quality data sets.
-    - These datasets may be done so [recursively](./recursive.md) using [simulated data](../../data/preparation/augmentation.md).
-- [**Automatically correcting**](#automatic-correction) models to more accurately train a model to produce output that is is more globally accurate to the input prompts.
+### Masked Language Models
+Mask elements of 
+### Causal Language Models
+
+### Combination models
+
+??? note "[Exploration of Masked and Causal Language Modelling for Text Generation](https://arxiv.org/pdf/2405.12630v2)"
+    The authors demonstrate a manner of training data that combines both CLM and MLM methods. 
+    <img width="408" alt="image" src="https://github.com/user-attachments/assets/eb6b3100-ba33-4704-a4c9-dfd73042136b">
+
+
+### Diffusion models 
+
+
 
 #### Retrieval Aware Training
 
