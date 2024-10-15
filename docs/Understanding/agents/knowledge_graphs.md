@@ -2,73 +2,54 @@
 
 * [Tools and Resources](#tools)
 
-TODO: Make this into a mermaid markdown for the different sections. you can use " click UC "./Understanding/agents/knowledge_graphs#<the-url>" point the piece in the file. 
-
-## TLDR abstract
-
-Knowledge graphs provide structured representations of information that can enhance the reasoning capabilities of large language models. By explicitly modeling concepts and relationships, KGs offer a complementary approach to the statistical knowledge learned by LLMs, enabling more systematic and interpretable AI systems.
-
-Ways of using
-
-**Pushing to graph** 
-**Getting from Graph**
-**Predicting missing things about graph**
-**Classifying things within a graph**
-**Navigating graphs**
+!!! important "TL;DR: Knowledge Graphs and LLMs" tldr-graphs-and-llms
+    Knowledge graphs provide structured representations of information that can enhance the reasoning capabilities of large language models. By explicitly modeling concepts and relationships, KGs offer a complementary approach to the statistical knowledge learned by LLMs, enabling more systematic and interpretable AI systems.
+    
+    There are several key manners of having LLMs work with Knowledge Graphs
+    
+    * **Pushing to graph** 
+    * **Getting information from graphs**
+    * **Predicting and classifying things about graph**
+    * **Navigating graphs and multi-hop reasoning**
 
 ## Background
 
 ### What are Knowledge Graphs?
 #### Definition and core concepts
-#### Historical context and evolution
 #### Key components: entities, relationships, attributes
 
 ### Implicit vs. Explicit Knowledge
+LLMs learn probabilistic representation of linear knowledge representations, not necessarily higher order concepts and considerations. While relationships between text may be inferred, it may not be explicitly encoded, which can be of considerable value, in some instances, for instance when talking about 'Apple falling', LLM may be able to infer the possibliity of talking about the company and it's stocks, but could also allow for an apple falling down to the ground. It allows an 'implicit' understanding. Once trained, these understandings can be modified by prompting changes, making there application non-universal, and not necessarily modifiable. 
+
+Knowledge graphs, however, offer explicit representations of relations between items, by providing concrete associations, numerical or textual. They can be formally verified and easily modified. 
+
+
 #### Comparison between statistical (LLM) and symbolic (KG) knowledge representation
-#### Strengths and limitations of each approach
 
-### Complementarity to LLMs
-#### How KGs address LLM shortcomings in reasoning and factual consistency
-#### Reasoning
+KGs can help to address some shortcomings of LLMs. Below are a few areas where KGs can be and are helpful. 
 
-**Compositional Reasoning**
-LLMs still struggle with systematic combinatorial generalization — flexibly assembling novel solutions by recombining known skills. For example, separately learning to make coffee and toast does not directly enable orchestrating the joint routine. Humans intrinsically develop far richer modular, hierarchical representations.
+**Logical, and Compositional Reasoning**
+LLMs probabilistically map information, and while they look like they may reason, some studies say they only  [replicate reasoning](https://arxiv.org/pdf/2410.05229) KGs can help to ensure causality, and chained in multistep resolutions that require more complex rational. 
 
-**Causal Reasoning**
-While correlation comes naturally to statistics-driven models, unraveling causal mechanisms involving experiments, interventions and counterfactuals remains elusive without explicit conceptual frameworks. We possess innate construals of objects, agents and dynamics.
+**Causal, Temporal and Relevant Reasoning**
 
-**Temporal Reasoning**
-The sequential, transient nature of events, plans and narratives requires maintaining internal timelines, projecting into horizons. Yet LLMs display limited episodic memory to sustain coherence, lacking mental situational modeling.
+The world is sequential and changing in nature.  Events, plans and narratives change and adapt quickly, making it difficult to train LLMs to be accurate. Coupling with KG's can help to maintain temporal relevance, as well as ensuring, or at least helping, causality in how LLMs perform. 
 
-**Common Sense**
-Our expansive everyday frameworks encompassing objects, spaces and intuitive psychology provide testimony on plausibility when navigating the world. Failing to emulate this understanding of naive physics, pragmatics and social dynamics restricts exposed statistical knowledge.
+**Grounding Language Models in Facts and Logic**
+
+Some exmaples sho
+
+??? note "[Large Language Models can Learn Rules](https://arxiv.org/abs/2310.07064)"
+    Augmenting large language models with structured knowledge graphs is a solution.   By training language models to reason over knowledge graphs, performing tasks like link prediction, triple classification, and collective reasoning, we can ground their knowledge in factual information. Mastering these types of logical reasoning over interconnected factual knowledge can enhance their reasoning capabilities.”
+    **Abstract**
+    
+    “When prompted with a few examples and intermediate steps, large language models (LLMs) have demonstrated impressive performance in various reasoning tasks. However, prompting methods that rely on implicit knowledge in an LLM often hallucinate incorrect answers when the implicit knowledge is wrong or inconsistent with the task. To tackle this problem, we present Hypotheses-to-Theories (HtT), a framework that learns a rule library for reasoning with LLMs. HtT contains two stages, an induction stage and a deduction stage. In the induction stage, an LLM is first asked to generate and verify rules over a set of training examples. Rules that appear and lead to correct answers sufficiently often are collected to form a rule library. In the deduction stage, the LLM is then prompted to employ the learned rule library to perform reasoning to answer test questions. Experiments on both numerical reasoning and relational reasoning problems show that HtT improves existing prompting methods, with an absolute gain of 11-27% in accuracy. The learned rules are also transferable to different models and to different forms of the same problem.”
+    
+    <img width="561" alt="image" src="https://github.com/user-attachments/assets/3bc8e16b-cbc2-4de5-a2a2-df5930402299">
 
 **Meta-learning**
-Humans demonstrate meta-cognition around our own reasoning gaps, directing attention and deliberately seeking information to strengthen models. The opacity and lack of higher-order uncertainty or self-reflection limits controlled, strategic model improvement in neural networks.
 
-
-??? note "[Grounding Language Models in Facts and Logic](https://arxiv.org/abs/2310.07064)"
-
-    Article… https://medium.com/@alcarazanthony1/grounding-language-models-in-facts-and-logic-66a55a4fe116
-
-    ArXiv… https://arxiv.org/abs/2310.07064  (image source)
-
-
-    From article …
-    Comment: Despite their verbal prowess, most large language models today have little actual understanding of the world. Their knowledge comes solely from recognizing statistical patterns in the massive text data they are trained on. Without grounding in factual knowledge, they have no mechanisms for distinguishing truth from fiction.
-
-    “The recent advances in large language models like GPT-3 and ChatGPT have been astonishing. These models can generate remarkably fluent and coherent text across many topics. However major limitations remain when it comes to logical reasoning and making accurate inferences about facts.
-
-    These models still rely on pattern recognition in massive text data, without any true understanding of the world. As a result, they can easily be misled and hallucinate convincing but illogical or false statements.
-
-    To address this limitation, augmenting large language models with structured knowledge graphs is a solution. Knowledge graphs like Wikidata encode factual information about the world in a networked format.
-
-    By training language models to reason over knowledge graphs, performing tasks like link prediction, triple classification, and collective reasoning, we can ground their knowledge in factual information. Mastering these types of logical reasoning over interconnected factual knowledge can enhance their reasoning capabilities.”
-
-    Abstract from arXiv paper…
-
-    “When prompted with a few examples and intermediate steps, large language models (LLMs) have demonstrated impressive performance in various reasoning tasks. However, prompting methods that rely on implicit knowledge in an LLM often hallucinate incorrect answers when the implicit knowledge is wrong or inconsistent with the task. To tackle this problem, we present Hypotheses-to-Theories (HtT), a framework that learns a rule library for reasoning with LLMs. HtT contains two stages, an induction stage and a deduction stage. In the induction stage, an LLM is first asked to generate and verify rules over a set of training examples. Rules that appear and lead to correct answers sufficiently often are collected to form a rule library. In the deduction stage, the LLM is then prompted to employ the learned rule library to perform reasoning to answer test questions. Experiments on both numerical reasoning and relational reasoning problems show that HtT improves existing prompting methods, with an absolute gain of 11-27% in accuracy. The learned rules are also transferable to different models and to different forms of the same problem.”
-
+KGs cna improve model meta-cognition by enabling the evaluation and generation of data during both training and generation. 
 
 ## Using Knowledge Graphs wih LLMs
 
@@ -78,23 +59,34 @@ Some things may be better adressed with graph-specific models (prediction of nod
 While LLMs afford a great deal of potential, they may not be optimal tools for specific jobs. For complex KGs that involve nodes and edges with highly specific meanings and definitions that may not related to natural language, or for very large graphs, LLMs will not be able to accurately embody holistic understanding that whole graph solutions may enable. Graph Neural Network methods, can effectivly do _prediction_ of nodes and edges, _classification_ of nodes and groups, and traditional algorithms can be used. Here are some common traditional algorithms that may be preferred over using LLMs to understand KGs. 
 
 **Search** Algorithms like breadth-first search, depth-first search, and Dijkstra's algorithm are fundamental for navigating knowledge graphs. These methods efficiently explore graph structures to find paths, detect cycles, or identify connected components, forming the basis for more complex graph operations.
-**Pathfinding Algorithms (e.g., Dijkstra’s, A*):** Find the shortest path between two nodes, useful in route planning and network analysis.
+
+**Pathfinding Algorithms (e.g., Dijkstra’s, A\*):** Find the shortest path between two nodes, useful in route planning and network analysis.
 **Community Detection Algorithms (e.g., Louvain Method)** Identify clusters or communities within graphs, helping in social network analysis and market segmentation.
 **Centrality Measures (e.g., PageRank, Betweenness Centrality):** Determine the importance of different nodes in a network, applicable in analyzing influence in social networks or key infrastructure in transportation networks.
 
-Be sure to understand your use case and if traditional, or GNN approaches may be valuable for your specific needs as well. 
+Be sure to understand your use case and how traditional, or GNN approaches may be valuable for your specific needs. 
 
 ### Indexing and Generation
 
 LLMs are of keen interest in creating and populating knowledge graphs. They have the ability to generate accurate and entities and relationships from injested data. They can be used to approximately verify as they are generating, helping to ensure KG consistency. Finally, because they can be used to generated [structured output](../architectures/generation.md) LLM output can  be incorporated directly into KGs. 
 
-#### Automated KG construction from unstructured data
+#### KG construction from unstructured data
 
 ??? abstract " [Title: Prompting an LLM with an ontology to drive Knowledge Graph extraction from unstructured documents](https://www.linkedin.com/pulse/llm-ontology-prompting-knowledge-graph-extraction-peter-lawrence)"
+    
+    This article shows how an ChatAgent can be eventually prompted with an unstructured document and asked to extract a graph corresponding to a specific ontology/schema.
 
-    “I make no apology for saying that a graph is the best organization of structured data. However, the vast majority of data is unstructured text. Therefore, data needs to be transformed from its original format using an Extract-Transform-Load (ETL) or Extract-Load-Transform (ELT) into a Knowledge Graph format. There is no problem when the original format is structured, such as SQL tables, spreadsheets, etc, or at least semi-structured, such as tweets. However, when the source data is unstructured text the task of ETL/ELT to a graph is far more challenging.
+    ![image](https://github.com/user-attachments/assets/0c8706be-0eee-4b6c-a0c0-70ba10984e79)
 
-    This article shows how an LLM can be prompted with an unstructured document and asked to extract a graph corresponding to a specific ontology/schema. This is demonstrated with a Kennedy ontology in conjunction with a publicly available description of the Kennedy family tree.”
+    The author used a GPT conversation  to improve graph extraction, given a pre-defined and preferred ontological structure. 
+    ```markdown
+    Using this provided ontology exclusively, please create specific instances 
+    and data about individuals within the family from the following text. 
+    Also, create the RDF graph.
+    
+    … <document text>…
+    ```
+
 
 
 #### Ontology design and best practices
@@ -252,14 +244,11 @@ CURSOR AI: Please summarize this
 
 ### Multimodal Knowledge Graphs
 
-
+??? note "[Title: Universal Preprocessing Operators for Embedding Knowledge Graphs with Literals](https://arxiv.org/abs/2309.03023)"
     Comment: Multimodal knowledge graphs (MKGs) are a major interest area in AI.  MKGs can improve accuracy and robustness compared to unimodal AI.  They can enhance decision-making by providing a more comprehensive view of data. (See… https://www.nature.com/articles/s42256-023-00624-6. And https://ieeexplore.ieee.org/document/9778820).  Given the variety of MKGs possible data embedding providing a universal/common embedding has value.  The attached paper is a recent contribution in this respect.
 
-    Title: Universal Preprocessing Operators for Embedding Knowledge Graphs with Literals
-
-    See… https://arxiv.org/abs/2309.03023
-
-    Abstract: Knowledge graph embeddings are dense numerical representations of entities in a knowledge graph (KG). While the majority of approaches concentrate only on relational information, i.e., relations between entities, fewer approaches exist which also take information about literal values (e.g., textual descriptions or numerical information) into account. Those which exist are typically tailored towards a particular modality of literal and a particular embedding method. In this paper, we propose a set of universal preprocessing operators which can be used to transform KGs with literals for numerical, temporal, textual, and image information, so that the transformed KGs can be embedded with any method. The results on the kgbench dataset with three different embedding methods show promising resultsh..
+    Abstract: Knowledge graph embeddings are dense numerical representations of entities in a knowledge graph (KG). While the majority of approaches concentrate only on relational information, i.e., relations between entities, fewer approaches exist which also take information about literal values (e.g., textual descriptions or numerical information) into account. Those which exist are typically tailored towards a particular modality of literal and a particular embedding method. In this paper, we propose a set of universal preprocessing operators which can be used to transform KGs with literals for numerical, temporal, textual, and image information, so that the transformed KGs can be embedded with any method. The results on the kgbench dataset with three different embedding methods show promising results.
+    
 #### Integrating textual, visual, and numerical data
 #### Cross-modal reasoning and inference
 
@@ -331,6 +320,7 @@ CURSOR AI: Please summarize this
 
 
 ### Other Notable
+
 ??? abstract "[iText2KG](https://github.com/AuvaLab/itext2kg)"
     🔥 We are excited to share the release of our algorithm, iText2KG, a zero-shot method for incremental knowledge graph (KG) construction with resolved entities and relations.  Our method demonstrates superior performance compared to baseline methods across three scenarios: converting scientific papers to graphs, websites to graphs, and CVs to graphs. Now available as a Python package, iText2KG has been accepted at WISE 2024.
 
@@ -364,11 +354,6 @@ CURSOR AI: Please summarize this
 
     Demo: https://docs2kg.ai4wa.com/Video
 
-
-
-
-1. Introducing Self-RAG, a new easy-to-train, customizable, and powerful framework for making an LM learn to retrieve, generate, and critique its own outputs and retrieved passages, by using model-predicted reflection tokens. https://selfrag.github.io/
-
 ## Applications
 
 ### NER extraction 
@@ -377,17 +362,16 @@ CURSOR AI: Please summarize this
     [Paper](https://arxiv.org/abs/2311.08526): Named Entity Recognition (NER) is essential in various Natural Language Processing (NLP) applications. Traditional NER models are effective but limited to a set of predefined entity types. In contrast, Large Language Models (LLMs) can extract arbitrary entities through natural language instructions, offering greater flexibility. However, their size and cost, particularly for those accessed via APIs like ChatGPT, make them impractical in resource-limited scenarios. In this paper, we introduce a compact NER model trained to identify any type of entity. Leveraging a bidirectional transformer encoder, our model, GLiNER, facilitates parallel entity extraction, an advantage over the slow sequential token generation of LLMs. Through comprehensive testing, GLiNER demonstrates strong performance, outperforming both ChatGPT and fine-tuned LLMs in zero-shot evaluations on various NER benchmarks.
 
 
-
-
 ### Knowledge consistent Chat Generation
 
-Knowledge-Consistent Dialogue Generation with Language Models and Knowledge Graphs
 
-Paper: https://openreview.net/forum?id=WhWlYzUTJfP   
-https://openreview.net/pdf?id=WhWlYzUTJfP
 
-Abstract: 
-"Pre-trained language models have achieved impressive performances on dialogue generation tasks. However, when generating responses for a conversation that requires factual knowledge, they are far from perfect, due to the absence of mechanisms to retrieve, encode, and reflect the knowledge in the generated responses. Some knowledge-grounded dialogue generation methods tackle this problem by leveraging the structured knowledge from Knowledge Graphs (KGs). However, existing methods do not guarantee that the model utilizes a relevant piece of knowledge from the KG before generating knowledge-consistent dialogues. To overcome this limitation, we propose SUbgraph Retrieval-augmented GEneration (SURGE), a framework for generating context-relevant and knowledge-consistent dialogues with a KG. Specifically, our method first retrieves the relevant subgraph from the KG, and then enforces consistency across facts by perturbing their word embeddings conditioned on the retrieved subgraph. Then, it learns a latent representation space using contrastive learning which ensures that the generated texts have high similarity to the retrieved subgraphs. We validate the performance of our SURGE framework on the OpendialKG and KOMODIS datasets and show that our method generates high-quality dialogues that faithfully reflect the knowledge from the KG."
+??? note "[Knowledge-Consistent Dialogue Generation with Language Models and Knowledge Graphs](https://openreview.net/forum?id=WhWlYzUTJfP)
+
+    Abstract: 
+    "Pre-trained language models have achieved impressive performances on dialogue generation tasks. However, when generating responses for a conversation that requires factual knowledge, they are far from perfect, due to the absence of mechanisms to retrieve, encode, and reflect the knowledge in the generated responses. Some knowledge-grounded dialogue generation methods tackle this problem by leveraging the structured knowledge from Knowledge Graphs (KGs). However, existing methods do not guarantee that the model utilizes a relevant piece of knowledge from the KG before generating knowledge-consistent dialogues. To overcome this limitation, we propose SUbgraph Retrieval-augmented GEneration (SURGE), a framework for generating context-relevant and knowledge-consistent dialogues with a KG. Specifically, our method first retrieves the relevant subgraph from the KG, and then enforces consistency across facts by perturbing their word embeddings conditioned on the retrieved subgraph. Then, it learns a latent representation space using contrastive learning which ensures that the generated texts have high similarity to the retrieved subgraphs. We validate the performance of our SURGE framework on the OpendialKG and KOMODIS datasets and show that our method generates high-quality dialogues that faithfully reflect the knowledge from the KG."
+
+    <img width="543" alt="image" src="https://github.com/user-attachments/assets/56a9213e-6b0b-41fe-88bb-38a3a35364c9">
 
 
 
