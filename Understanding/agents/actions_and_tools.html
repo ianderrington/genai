@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://www.managen.ai/Understanding/agents/actions_and_tools.html">
       
       
-        <link rel="prev" href="memory.html">
+        <link rel="prev" href="knowledge_graphs.html">
       
       
         <link rel="next" href="evaluating_and_comparing.html">
@@ -776,6 +776,10 @@ and
     
       
         
+          
+        
+      
+        
       
     
     
@@ -789,8 +793,10 @@ and
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_2_8" id="__nav_1_2_8_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../overview/background/index.html" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     
@@ -803,8 +809,14 @@ and
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1_2_8" id="__nav_1_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2_8">
@@ -816,6 +828,8 @@ and
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -2585,6 +2599,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -2669,33 +2685,6 @@ and
   
   
     <li class="md-nav__item">
-      <a href="rag.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Retrieval-Augmented Generation (RAG)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="cognitive_architecture.html" class="md-nav__link">
         
   
@@ -2723,6 +2712,33 @@ and
   
   
     <li class="md-nav__item">
+      <a href="rag.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Retrieval-Augmented Generation (RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="memory.html" class="md-nav__link">
         
   
@@ -2730,6 +2746,33 @@ and
     
   
     Memory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="knowledge_graphs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Graphs: Empowering Large Language Models with Structured Knowledge
   
 
     
@@ -5409,6 +5452,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -5490,6 +5535,33 @@ and
     
   
     Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using/examples/by_field/technology/drug_design.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Drug design
   
 
     
@@ -6864,6 +6936,21 @@ Actions can be thought of interacting in an environment, this environment can ha
 <p><strong>Internal actions</strong> generally relate reading, writing or updating, an agents memory, <a href="memory.html">memory</a> state, such as free-text <code>scratech-pad</code>, an ordered <code>memory-log</code> or a vector database.</p>
 <p><strong>External actions</strong> may be to act on simulated or real environments, or otherwise tracked <code>state</code>, or to use a toolthat an agent may be 'equipped with' to run. These can be API calls or local function calls.</p>
 <h3 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h3>
+<p><a href="/shared/toolgen.html" class="page-url" id="page-url-0"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-0')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-0">Link copied!</div>
+</div>
+
+<details class="tip">
+<summary><a href="https://github.com/Reason-Wang/ToolGen?tab=readme-ov-file">ToolGen: Unified Tool Retrieval and Calling via Generation</a></summary>
+<p>The authors show in their <a href="https://arxiv.org/pdf/2410.03439">paper</a> a solution that uses individual tokens to indicate tool calls, an allows them to control over 48k tools. </p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/a3806299-15d4-413a-96ee-3d571addd9f4" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="562" alt="image" src="https://github.com/user-attachments/assets/a3806299-15d4-413a-96ee-3d571addd9f4"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/eef1f410-370b-456e-90b3-394028ffe9dc" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="523" alt="image" src="https://github.com/user-attachments/assets/eef1f410-370b-456e-90b3-394028ffe9dc"></a></p>
+</details>
 <details class="tip">
 <summary><a class="glightbox" href="https://badgen.net/github/stars/ShishirPatil/gorilla" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/ShishirPatil/gorilla" /></a> <a href="https://github.com/ShishirPatil/gorilla">Gorilla</a> A Llama-focused high-quality API calling methods.</summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/631a7023-0b14-4a55-9993-2d49bb3b81d2" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="801" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/631a7023-0b14-4a55-9993-2d49bb3b81d2"></a>
@@ -7018,9 +7105,9 @@ Provides a method to allow open-source LLMs to work with tools for real-world ta
         
           
           <a
-            href="memory.html"
+            href="knowledge_graphs.html"
             class="md-footer__link md-footer__link--prev"
-            aria-label="Previous: Memory"
+            aria-label="Previous: Knowledge Graphs: Empowering Large Language Models with Structured Knowledge"
           >
             <div class="md-footer__button md-icon">
               
@@ -7031,7 +7118,7 @@ Provides a method to allow open-source LLMs to work with tools for real-world ta
                 Previous
               </span>
               <div class="md-ellipsis">
-                Memory
+                Knowledge Graphs: Empowering Large Language Models with Structured Knowledge
               </div>
             </div>
           </a>
