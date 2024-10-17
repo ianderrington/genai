@@ -1,7 +1,5 @@
 # Knowledge Graphs: Empowering Large Language Models with Structured Knowledge
 
-* [Tools and Resources](#tools)
-
 !!! important "TL;DR: Knowledge Graphs and LLMs" tldr-graphs-and-llms
     Knowledge graphs provide structured representations of information that can enhance the reasoning capabilities of large language models. By explicitly modeling concepts and relationships, KGs offer a complementary approach to the statistical knowledge learned by LLMs, enabling more systematic and interpretable AI systems.
     
@@ -12,11 +10,24 @@
     * **Predicting and classifying things about graph**
     * **Navigating graphs and multi-hop reasoning**
 
+
+```mermaid
+graph TD
+    A[Node] -->|Relationship| B[Node]
+```
+
 ## Background
 
 ### What are Knowledge Graphs?
 #### Definition and core concepts
 #### Key components: entities, relationships, attributes
+// make a mermaid ED diagram of entities, relationships, and attributes
+
+```mermaid
+graph TD
+    A[Entity] -->|Relationship| B[Entity]
+    A[Entity] -->|Attribute| C[Attribute]
+```
 
 ### Implicit vs. Explicit Knowledge
 LLMs learn probabilistic representation of linear knowledge representations, not necessarily higher order concepts and considerations. While relationships between text may be inferred, it may not be explicitly encoded, which can be of considerable value, in some instances, for instance when talking about 'Apple falling', LLM may be able to infer the possibliity of talking about the company and it's stocks, but could also allow for an apple falling down to the ground. It allows an 'implicit' understanding. Once trained, these understandings can be modified by prompting changes, making there application non-universal, and not necessarily modifiable. 
