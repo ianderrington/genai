@@ -125,6 +125,14 @@ Because of the ability to minimize costs associated with feedback, reinforcement
     
     <img width="1214" alt="image" src="https://github.com/user-attachments/assets/0b19c6f1-1a0d-41fd-aebf-e59fd598b965">
 
+
+??? note "[V-STaR: Training Verifiers for Self-Taught Reasoners](https://arxiv.org/pdf/2402.06457)" v-star
+    **Development** The authors show that thea bility to use both correct and incorrect solutionsduring training improves training a verifier with DPO to judge correctness of model-generated solutions. This can result in improvement of 4-17% improvement in test accuracy. 
+    <img width="575" alt="image" src="https://github.com/user-attachments/assets/410b5c79-68ad-41d2-ada9-feec502b68a1">
+    <img width="609" alt="image" src="https://github.com/user-attachments/assets/5c2dcd84-57e5-4fec-a8d9-768a6c546053">
+
+
+
 ## CGPO - Constrained Generative Policy optimization 
 
 ??? note "[The Perfect Blend: Redefining RLHF with Mixture of Judges](https://arxiv.org/pdf/2409.20370)" cgpo
