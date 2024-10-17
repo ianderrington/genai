@@ -110,6 +110,13 @@ Because of the ability to minimize costs associated with feedback, reinforcement
 
 - [Aligning Large Language Models Through Synthetic Feedback](https://arxiv.org/pdf/2305.13735.pdf) Using a hierarchy of systems to improve model alignment.
 
+
+??? note "[Anchored Preference Optimization and Contrastive Revisions: Addressing Underspecification in Alignment](https://arxiv.org/pdf/2408.06266)" 
+    **Developments** The authors develop both Contrastive Learning from AI Revisions (CLAIR) a data creation method with contrastive preference pairs, and Anchored Preference Optimization (APO) a stable alignment objective. 
+    <img width="327" alt="image" src="https://github.com/user-attachments/assets/21947237-713d-4d7b-a479-89bc9e69f2de">
+    <img width="642" alt="image" src="https://github.com/user-attachments/assets/deeaa9cf-8c47-4648-adb3-4dfd61532799">
+
+
 ## RLEF
 
 ??? note "[RLEF: Grounding Code LLMs in Execution Feedback with Reinforcement Learning](https://arxiv.org/pdf/2410.02089)" rlef
