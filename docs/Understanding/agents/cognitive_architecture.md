@@ -650,6 +650,20 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
     <img width="713" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/6e1451fd-3ac9-4e6a-b440-123ed58dcc80">
 
 
+### Multi-level agents
+
+While [systems](./systems.md) of agents is a powerful approach at enabling specific and focused tasks, their behavior may remain constrained by their individual cognitive architectures. Multi-level agents can examine input from different perspectives that are able to respond accordingly. 
+
+??? important "[Agents Thinking Fast and Slow: A Talker-Reasoner Architecture](https://arxiv.org/pdf/2410.08328v1)" talker-reasoner
+    **Developments** INspired by Kahneman's two-system thinking with System 1 fast/intuitive thinking and System 2 slow/rational thinking, the authors propose a new system for enabling  
+    <img width="568" alt="image" src="https://github.com/user-attachments/assets/73ea3f6d-5e57-4a12-ba3d-4f3e21589432">
+    
+    <img width="483" alt="image" src="https://github.com/user-attachments/assets/21062c3d-635e-4ab6-acf0-6b82e8e08cb7">
+
+    <img width="481" alt="image" src="https://github.com/user-attachments/assets/54d1e081-1212-4e42-b6cf-9f3ee1e37528">
+
+    
+
 
 
 
