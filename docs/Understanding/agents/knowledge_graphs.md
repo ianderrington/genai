@@ -11,25 +11,39 @@
     * **Navigating graphs and multi-hop reasoning**
 
 
-```mermaid
-graph TD
-    A[Node] -->|Relationship| B[Node]
-```
+
+
+    ```mermaid
+    erDiagram
+        ENTITY_A {
+            string attributes
+        }
+        ENTITY_B {
+            string attributes
+        }
+        ENTITY_C {
+            string attributes
+        }
+        ENTITY_A ||--o{ ENTITY_B : "Relationship"
+        ENTITY_B ||--o{ ENTITY_C : "Relationship"
+        ENTITY_C ||--o{ ENTITY_A : "Relationship"
+    ```
 
 ## Background
 
 ### What are Knowledge Graphs?
-#### Definition and core concepts
-#### Key components: entities, relationships, attributes
-// make a mermaid ED diagram of entities, relationships, and attributes
+Knowledge graphs are a type of graph database that store data in a structured format. They are used to store and query data in a way that allows for data and their relationships between to be defined, stored, and queried. 
 
-```mermaid
-graph TD
-    A[Entity] -->|Relationship| B[Entity]
-    A[Entity] -->|Attribute| C[Attribute]
-```
+#### Definition and core concepts
+
+#### Key components: entities, relationships, attributes
+**Entities** are nodes in the graph, and are the main data points in the graph. They can be anything from a person, to a place, to an object, to an event, etc. 
+**Relationships** are edges in the graph, and are the connections between entities. They can be anything from a "is a" relationship, to a "part of" relationship, to a "related to" relationship, etc. 
+**Attributes** are properties of the entities and relationships. They can be anything from a "name", to a "description", to a "type", etc. 
+
 
 ### Implicit vs. Explicit Knowledge
+
 LLMs learn probabilistic representation of linear knowledge representations, not necessarily higher order concepts and considerations. While relationships between text may be inferred, it may not be explicitly encoded, which can be of considerable value, in some instances, for instance when talking about 'Apple falling', LLM may be able to infer the possibliity of talking about the company and it's stocks, but could also allow for an apple falling down to the ground. It allows an 'implicit' understanding. Once trained, these understandings can be modified by prompting changes, making there application non-universal, and not necessarily modifiable. 
 
 Knowledge graphs, however, offer explicit representations of relations between items, by providing concrete associations, numerical or textual. They can be formally verified and easily modified. 
@@ -40,6 +54,7 @@ Knowledge graphs, however, offer explicit representations of relations between i
 KGs can help to address some shortcomings of LLMs. Below are a few areas where KGs can be and are helpful. 
 
 **Logical, and Compositional Reasoning**
+
 LLMs probabilistically map information, and while they look like they may reason, some studies say they only  [replicate reasoning](https://arxiv.org/pdf/2410.05229) KGs can help to ensure causality, and chained in multistep resolutions that require more complex rational. 
 
 **Causal, Temporal and Relevant Reasoning**
@@ -48,7 +63,7 @@ The world is sequential and changing in nature.  Events, plans and narratives ch
 
 **Grounding Language Models in Facts and Logic**
 
-Some exmaples sho
+Some exmaples show that LLMs can learn rules, and use them to reason. 
 
 ??? note "[Large Language Models can Learn Rules](https://arxiv.org/abs/2310.07064)"
     Augmenting large language models with structured knowledge graphs is a solution.   By training language models to reason over knowledge graphs, performing tasks like link prediction, triple classification, and collective reasoning, we can ground their knowledge in factual information. Mastering these types of logical reasoning over interconnected factual knowledge can enhance their reasoning capabilities.”
@@ -69,13 +84,23 @@ Some things may be better adressed with graph-specific models (prediction of nod
 
 While LLMs afford a great deal of potential, they may not be optimal tools for specific jobs. For complex KGs that involve nodes and edges with highly specific meanings and definitions that may not related to natural language, or for very large graphs, LLMs will not be able to accurately embody holistic understanding that whole graph solutions may enable. Graph Neural Network methods, can effectivly do _prediction_ of nodes and edges, _classification_ of nodes and groups, and traditional algorithms can be used. Here are some common traditional algorithms that may be preferred over using LLMs to understand KGs. 
 
-**Search** Algorithms like breadth-first search, depth-first search, and Dijkstra's algorithm are fundamental for navigating knowledge graphs. These methods efficiently explore graph structures to find paths, detect cycles, or identify connected components, forming the basis for more complex graph operations.
+**Search** 
 
-**Pathfinding Algorithms (e.g., Dijkstra’s, A\*):** Find the shortest path between two nodes, useful in route planning and network analysis.
-**Community Detection Algorithms (e.g., Louvain Method)** Identify clusters or communities within graphs, helping in social network analysis and market segmentation.
-**Centrality Measures (e.g., PageRank, Betweenness Centrality):** Determine the importance of different nodes in a network, applicable in analyzing influence in social networks or key infrastructure in transportation networks.
+Algorithms like breadth-first search, depth-first search, and Dijkstra's algorithm are fundamental for navigating knowledge graphs. These methods efficiently explore graph structures to find paths, detect cycles, or identify connected components, forming the basis for more complex graph operations.
 
-Be sure to understand your use case and how traditional, or GNN approaches may be valuable for your specific needs. 
+**Pathfinding Algorithms (e.g., Dijkstra’s, A\*):** 
+
+Find the shortest path between two nodes, useful in route planning and network analysis.
+
+**Community Detection Algorithms (e.g., Louvain Method)** 
+
+Identify clusters or communities within graphs, helping in social network analysis and market segmentation.
+
+**Centrality Measures (e.g., PageRank, Betweenness Centrality):** 
+
+Determine the importance of different nodes in a network, applicable in analyzing influence in social networks or key infrastructure in transportation networks.
+
+!!! important "Understand your use case and how traditional, or GNN approaches may be valuable for your specific needs. "
 
 ### Indexing and Generation
 
@@ -98,11 +123,26 @@ LLMs are of keen interest in creating and populating knowledge graphs. They have
     … <document text>…
     ```
 
+#### KG Representation
+
+There are several ways to represent knowledge graphs, including:
+
+* **Graph Databases**: These are optimized for storing and querying graph data. Examples include Neo4j, Amazon Neptune, and JanusGraph.
+* **RDF (Resource Description Framework)**: This is a standard for representing knowledge graphs. It uses a triple (subject, predicate, object) format. RDF is used in systems like DBpedia, Wikidata, and schema.org.
+* **Property Graphs**: These are a type of graph database that store data in a graph structure. They are used in systems like Neo4j and JanusGraph.
+* **Triple Stores**: These are databases that store knowledge graphs in a triple (subject, predicate, object) format. They are used in systems like DBpedia and Wikidata.
+
+For machine learning appliaticons, represention of graphs can be accomplished in the following manner: 
 
 
 #### Ontology design and best practices
 
+It is important to note that ontologies are not always necessary for knowledge graphs. They can be used to provide a common understanding of the data in the graph, but they can also be used to provide a common language for the data in the graph. [Schema.org](https://schema.org/) and [DBpedia](https://www.dbpedia.org/) are examples of ontologies that can be used to provide a common language for the data in the graph. 
+
+While it isn't always possible to pre-define all ontologies, it is important to consider the ontological structure of the data in the graph, and to use a common language for the data in the graph. 
+
 ### Lookup and Querying
+
 #### Query languages 
 Query languages like SPARQL and Cypher allow precise retrieval of information from knowledge graphs. SPARQL is the standard for RDF graphs, while Cypher is commonly used for property graphs like those in Neo4j. These languages enable complex queries that can traverse relationships, filter results, and aggregate data.
 
@@ -211,23 +251,35 @@ Techniques for efficient graph updates, versioning, and streaming ingestion allo
 
 LLMs can be used to read graph eamples and generate cypher statements to retrieve information from a knowledge graph. More powerfully 
 
-Semantic layers provide an ability to look up connections between objects, and how to use them. Functions and data, and not just data. This semantic layer allowers 
+Semantic layers provide an ability to look up connections between objects, and how to use them. Functions and data, and not just data. 
 
-CURSOR AI: Generate a Mermaid diagram that has these two options
-LLM <--> Knowledge Graph 
-vs
-LLM <--> Semantic Layer <--> Knowledge Graph
+<div class="grid" markdown>
 
-CURSOR AI: Please summarize this 
+=== " With a Semantic Layer"
 
-??? abstract "[Intelligent Graph = Knowledge Graph + Intelligent Agents](https://github.com/peterjohnlawrence/IntelligentGraph)"
+    ```mermaid
+    graph TD
+        A[LLM] -->|"Knowledge Graph"| B[Knowledge Graph]
+        A[LLM] -->|"Semantic Layer"| C[Semantic Layer]
+        C -->|"Knowledge Graph"| B
+    ```
 
+=== "Without a Semantic Layer"
 
+    ```mermaid
+    graph TD
+        A[LLM] -->|"Knowledge Graph"| B[Knowledge Graph]
+    ```
+
+</div>
+
+??? abstract "[Intelligent Graph = Knowledge Graph + Intelligent Agents](https://github.com/peterjohnlawrence/IntelligentGraph)" intelligent-graph
     Recently there has been much excitement related to Artificial Intelligence and Knowledge Graphs, especially regarding the emerging symbiotic relationship between them: LLMs provide unstructured reasoning, whilst the knowledge graph provides complementary structured reasoning. But how do we bridge the unstructured and structured worlds? Does the LLM push or does the KG pull?
     With LLM-Push we can set up agents which can push information from the LLM into a Knowledge Graph. What data? How often? When do we stop pushing? And so on.
     With KG-Pull we can add Intelligent agents to a Knowledge Graph, which pulls information from outside, including LLMs. This avoids unnecessarily pushing any data just-in-case into the graph store, instead pulling the data just-in-time when a user questions the graph.
 
     [Blog](https://medium.com/@peter.lawrence_47665/intelligent-graph-knowledge-graph-intelligent-agents-b3952399bf8a)
+
 
 ## Evaluating
 
@@ -236,7 +288,7 @@ CURSOR AI: Please summarize this
     Retrieval-Augmented Generation (RAG) has recently emerged as a promising solution to alleviate Large Language Model (LLM)'s deficiency in lack of knowledge. Existing RAG datasets, however, do not adequately represent the diverse and dynamic nature of real-world Question Answering (QA) tasks. To bridge this gap, we introduce the Comprehensive RAG Benchmark (CRAG), a factual question answering benchmark of 4,409 question-answer pairs and mock APIs to simulate web and Knowledge Graph (KG) search. CRAG is designed to encapsulate a diverse array of questions across five domains and eight question categories, reflecting varied entity popularity from popular to long-tail, and temporal dynamisms ranging from years to seconds. Our evaluation on this benchmark highlights the gap to fully trustworthy QA. Whereas most advanced LLMs achieve <=34% accuracy on CRAG, adding RAG in a straightforward manner improves the accuracy only to 44%. State-of-the-art industry RAG solutions only answer 63% questions without any hallucination. CRAG also reveals much lower accuracy in answering questions regarding facts with higher dynamism, lower popularity, or higher complexity, suggesting future research directions. The CRAG benchmark laid the groundwork for a KDD Cup 2024 challenge, attracting thousands of participants and submissions within the first 50 days of the competition. We commit to maintaining CRAG to serve research communities in advancing RAG solutions and general QA solutions. 
 
 
-??? note [A Benchmark to Understand the Role of Knowledge Graphs on Large Language Model's Accuracy for Question Answering on Enterprise SQL Databases (November 2023)](https://arxiv.org/abs/2311.07509)
+??? note "[A Benchmark to Understand the Role of Knowledge Graphs on Large Language Model's Accuracy for Question Answering on Enterprise SQL Databases (November 2023)](https://arxiv.org/abs/2311.07509)"
     Abstract:
     "Enterprise applications of Large Language Models (LLMs) hold promise for question answering on enterprise SQL databases. However, the extent to which LLMs can accurately respond to enterprise questions in such databases remains unclear, given the absence of suitable Text-to-SQL benchmarks tailored to enterprise settings. Additionally, the potential of Knowledge Graphs (KGs) to enhance LLM-based question answering by providing business context is not well understood. This study aims to evaluate the accuracy of LLM-powered question answering systems in the context of enterprise questions and SQL databases, while also exploring the role of knowledge graphs in improving accuracy. To achieve this, we introduce a benchmark comprising an enterprise SQL schema in the insurance domain, a range of enterprise queries encompassing reporting to metrics, and a contextual layer incorporating an ontology and mappings that define a knowledge graph. Our primary finding reveals that question answering using GPT-4, with zero-shot prompts directly on SQL databases, achieves an accuracy of 16%. Notably, this accuracy increases to 54% when questions are posed over a Knowledge Graph representation of the enterprise SQL database. Therefore, investing in Knowledge Graph provides higher accuracy for LLM powered question answering systems."
     Article: https://ai.plainenglish.io/new-research-proves-knowledge...
@@ -261,18 +313,8 @@ CURSOR AI: Please summarize this
     Abstract: Knowledge graph embeddings are dense numerical representations of entities in a knowledge graph (KG). While the majority of approaches concentrate only on relational information, i.e., relations between entities, fewer approaches exist which also take information about literal values (e.g., textual descriptions or numerical information) into account. Those which exist are typically tailored towards a particular modality of literal and a particular embedding method. In this paper, we propose a set of universal preprocessing operators which can be used to transform KGs with literals for numerical, temporal, textual, and image information, so that the transformed KGs can be embedded with any method. The results on the kgbench dataset with three different embedding methods show promising results.
     
 #### Integrating textual, visual, and numerical data
+
 #### Cross-modal reasoning and inference
-
-### Ethical Considerations
-#### Bias and fairness in knowledge representation
-#### Privacy concerns in KG construction and usage
-
-## Conclusion
-
-#### Recap of the importance of KGs in enhancing LLM capabilities
-#### The future of hybrid AI systems leveraging structured and unstructured knowledge
-#### Call to action for further research and development in this field
-
 
 ## Open Source Tools
 
@@ -300,7 +342,7 @@ CURSOR AI: Please summarize this
 
 ### LLamaindex
 
-??? abstract "[LlamaIndex:  The Property Graph Index](https://github.com/run-llama/llama_index)
+??? abstract "[LlamaIndex:  The Property Graph Index](https://github.com/run-llama/llama_index)"
     We’re excited to launch a huge feature making LlamaIndex the framework for building knowledge graphs with LLMs: 💫
     You now have a sophisticated set of tools to construct and query a knowledge graph with LLMs:
 
@@ -377,7 +419,7 @@ CURSOR AI: Please summarize this
 
 
 
-??? note "[Knowledge-Consistent Dialogue Generation with Language Models and Knowledge Graphs](https://openreview.net/forum?id=WhWlYzUTJfP)
+??? note "[Knowledge-Consistent Dialogue Generation with Language Models and Knowledge Graphs](https://openreview.net/forum?id=WhWlYzUTJfP)"
 
     Abstract: 
     "Pre-trained language models have achieved impressive performances on dialogue generation tasks. However, when generating responses for a conversation that requires factual knowledge, they are far from perfect, due to the absence of mechanisms to retrieve, encode, and reflect the knowledge in the generated responses. Some knowledge-grounded dialogue generation methods tackle this problem by leveraging the structured knowledge from Knowledge Graphs (KGs). However, existing methods do not guarantee that the model utilizes a relevant piece of knowledge from the KG before generating knowledge-consistent dialogues. To overcome this limitation, we propose SUbgraph Retrieval-augmented GEneration (SURGE), a framework for generating context-relevant and knowledge-consistent dialogues with a KG. Specifically, our method first retrieves the relevant subgraph from the KG, and then enforces consistency across facts by perturbing their word embeddings conditioned on the retrieved subgraph. Then, it learns a latent representation space using contrastive learning which ensures that the generated texts have high similarity to the retrieved subgraphs. We validate the performance of our SURGE framework on the OpendialKG and KOMODIS datasets and show that our method generates high-quality dialogues that faithfully reflect the knowledge from the KG."
@@ -414,7 +456,7 @@ CURSOR AI: Please summarize this
 
 ### Retrieval on other Databases
 
-??? abstract [An interesting study that shows the impact of KGs for question answering on SQL databases.](https://github.com/datadotworld/cwd-benchmark-data)
+??? abstract "[An interesting study that shows the impact of KGs for question answering on SQL databases.](https://github.com/datadotworld/cwd-benchmark-data)"
 
     The authors show that the KG representation of the enterprise SQL database improves the performance of GPT-4 for QA: 54% accuracy vs. 16% with instructions directly on SQL databases.
 
@@ -423,7 +465,7 @@ CURSOR AI: Please summarize this
 
 ### Question Answering Systems
 #### Factoid QA using KG lookups
-#### Complex question decomposition and multi####hop reasoning
+#### Complex question decomposition and multi-hop reasoning
 
 ### Recommender Systems
 #### Leveraging KGs for explainable recommendations
@@ -436,7 +478,7 @@ CURSOR AI: Please summarize this
 
 ### Research
 
-??? note "[Introducing MechGPT 🦾🤖]()"
+??? note "[Introducing MechGPT 🦾🤖](https://arxiv.org/pdf/2310.10445)"
 
     This project by Markus J. Buehler is one of the coolest use cases of 1) fine-tuning an LLM, and 2) generating a knowledge graph that we’ve seen (powered by LlamaIndex 🦙).
 
@@ -452,9 +494,9 @@ CURSOR AI: Please summarize this
 
     Check out the full paper below - there’s a lot of details that we didn’t cover:
 
-    AMR: https://lnkd.in/g6gn-XaK
+    [AMR: paper](https://asmedigitalcollection.asme.org/appliedmechanicsreviews/article-abstract/76/2/021001/1169582/MechGPT-a-Language-Based-Strategy-for-Mechanics)
 
-    ArXiv: https://lnkd.in/gx7N43Jz
+    [ArXiv: paper](https://arxiv.org/pdf/2310.10445)
 
 
 ??? abstract "[Knowledge Graph Prompting for Multi-Document Question Answering (Adobe Research, August 2023)](https://github.com/YuWVandy/KG-LLM-MDQA)"
@@ -495,7 +537,6 @@ https://graphacademy.neo4j.com/courses/llm-knowledge-graph-construction/
 
 ## Research
 
-==========================
 ??? note "[Neurosymbolic AI for Reasoning over Knowledge Graphs: A Survey (University of Edinburgh., February 20243](https://arxiv.org/abs/2302.07200)"
     Abstract:
     "Neurosymbolic AI is an increasingly active area of research that combines symbolic reasoning methods with deep learning to leverage their complementary benefits. As knowledge graphs are becoming a popular way to represent heterogeneous and multi-relational data, methods for reasoning on graph structures have attempted to follow this neurosymbolic paradigm. Traditionally, such approaches have utilized either rule-based inference or generated representative numerical embeddings from which patterns could be extracted. However, several recent studies have attempted to bridge this dichotomy to generate models that facilitate interpretability, maintain competitive performance, and integrate expert knowledge. Therefore, we survey methods that perform neurosymbolic reasoning tasks on knowledge graphs and propose a novel taxonomy by which we can classify them. Specifically, we propose three major categories: (1) logically-informed embedding approaches, (2) embedding approaches with logical constraints, and (3) rule learning approaches. Alongside the taxonomy, we provide a tabular overview of the approaches and links to their source code, if available, for more direct comparison. Finally, we discuss the unique characteristics and limitations of these methods, then propose several prospective directions tow
@@ -516,10 +557,9 @@ https://graphacademy.neo4j.com/courses/llm-knowledge-graph-construction/
 
     Abstract—Large language models (LLMs), such as ChatGPT and GPT4, are making new waves in the field of natural language processing and artificial intelligence, due to their emergent ability and generalizability. However, LLMs are black-box models, which often fall short of capturing and accessing factual knowledge. In contrast, Knowledge Graphs (KGs), Wikipedia and Huapu for example, are structured knowledge models that explicitly store rich factual knowledge. KGs can enhance LLMs by providing external knowledge for inference and interpretability. Meanwhile, KGs are difficult to construct and evolving by nature, which challenges the existing methods in KGs to generate new facts and represent unseen knowledge. Therefore, it is complementary to unify LLMs and KGs together and simultaneously leverage their advantages. In this article, we present a forward-looking roadmap for the unification of LLMs and KGs. Our roadmap consists of three general frameworks, namely, 1) KG-enhanced LLMs, which incorporate KGs during the pre-training and inference phases of LLMs, or for the purpose of enhancing understanding of the knowledge learned by LLMs; 2) LLM-augmented KGs, that leverage LLMs for different KG tasks such as embedding, completion, construction, graph-to-text generation, and question answering; and 3) Synergized LLMs + KGs, in which LLMs and KGs play equal roles and work in a mutually beneficial way to enhance both LLMs and KGs for bidirectional reasoning driven by both data and knowledge. We review and summarize existing efforts within these three frameworks in our roadmap and pinpoint their future research directions.
     
-??? note tosort
-    Towards Foundation Models for Knowledge Graph Reasoning (Intel AI Lab, October 2023)
+??? note "Research to sort"
+    [Towards Foundation Models for Knowledge Graph Reasoning (Intel AI Lab, October 2023)](https://arxiv.org/abs/2310.04562 )
 
-    Paper: https://arxiv.org/abs/2310.04562
 
     Abstract:
     "Foundation models in language and vision have the ability to run inference on any textual and visual inputs thanks to the transferable representations such as a vocabulary of tokens in language. Knowledge graphs (KGs) have different entity and relation vocabularies that generally do not overlap. The key challenge of designing foundation models on KGs is to learn such transferable representations that enable inference on any graph with arbitrary entity and relation vocabularies. In this work, we make a step towards such foundation models and present ULTRA, an approach for learning universal and transferable graph representations. ULTRA builds relational representations as a function conditioned on their interactions. Such a conditioning strategy allows a pre-trained ULTRA model to inductively generalize to any unseen KG with any relation vocabulary and to be fine-tuned on any graph. Conducting link prediction experiments on 57 different KGs, we find that the zero-shot inductive inference performance of a single pre-trained ULTRA model on unseen graphs of various sizes is often on par or better than strong baselines trained on specific graphs. Fine-tuning further boosts the performance."
