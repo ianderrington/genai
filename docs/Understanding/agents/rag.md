@@ -360,7 +360,34 @@ Challenges in generating responses can involve
 ## Advanced methods
 
 ??? important "[STRUCTRAG: BOOSTING KNOWLEDGE INTENSIVE REASONING OF LLMS VIA INFERENCE-TIME HYBRID INFORMATION STRUCTURIZATION](https://arxiv.org/pdf/2410.08815)" structrag
-    **Developments** The authors create a new framework called StructRAG that identifies the optimal structures documents to be fed into the prompts. They show that they are very good at improving the result. 
+
+    **Developments** The authors create a new framework called StructRAG that identifies the optimal structures documents to be fed into the prompts. They show that they are very good at improving the result, here are core components
+    
+    As seen on the internet: 
+    🛣️ Hybrid Structure Router 
+    Analyzes the input question and determines the best format to structure the data before processing it. It can choose from:
+    - Tables for tasks with a lot of statistical data
+    - Graphs for tasks requiring long-chain reasoning like tracing cause-effect relationships
+    - Catalogues for summarizing or organizing hierarchical information
+    - Chunks for simpler, one-off tasks.
+    - Algorithms for more procedural tasks 
+    Each type benefits from a specific structure. For example, using a table for a statistical comparison task is much more efficient than just presenting the raw text.
+    
+    🧱 Scattered Knowledge Structurizer
+    Once the Hybrid Structure Router has selected the best knowledge format, StructRAG takes all the relevant information and organizes it into the appropriate structure:
+    - For tables, it arranges data into rows and columns (e.g., comparing company financials across years).
+    - For graphs, it forms entity-relationship triples like “Company A → revenue growth → 10%.”
+    - For chunks, it keeps the text but filters out the noise, giving the model only what’s relevant.
+    
+    🛠️ Structured Knowledge Utilizer
+    This component decomposes complex questions into sub-questions and extracts relevant information from the structured knowledge to answer each one. Then, it integrates those sub-answers into a final inference.
+    For example, if you ask the model, “Which company has shown the best growth over the last 5 years?” the Utilizer breaks this down into sub-questions like:
+    - What was each company's growth percentage?
+    - How did their revenue change year-on-year?
+    - How do those numbers compare?
+    It retrieves precise data from the structured knowledge (e.g., the table) and uses it to construct an answer that’s more accurate and contextually aware. 
+    
+    
     In their own words:
     >   StructRAG framework consists of three modules designed to
         sequentially identify the most suitable structure type, construct structured knowledge in that format,
@@ -422,7 +449,9 @@ Because of the large number of manners of performing RAG, it is important to eva
 
     <img width="1038" alt="image" src="https://github.com/user-attachments/assets/c3d35e52-b894-4805-bc44-e40dbaf241ad">
 
+## Open source tools and applications
 
+!!! abstract "[An open-source clean & customizable RAG UI for chatting with your documents. Built with both end users and developers in mind.](https://github.com/Cinnamon/kotaemon )"
 
 ## Resources, Tutorials and Blogs
 ??? important "[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduces a complete solution for enabling improved response generation with LLMs."
@@ -557,5 +586,4 @@ Because of the large number of manners of performing RAG, it is important to eva
 - [RAG demystified](https://github.com/pchunduri6/rag-demystified/blob/main/complex_qa.py)
 - [Mastering RAG: How To Architect An Enterprise RAG System](https://www.rungalileo.io/blog/mastering-rag-how-to-architect-an-enterprise-rag-system)
 - [RAG chatbot with Chat Embedding and Reranking (cohere)](https://txt.cohere.com/rag-chatbot/) and [Notebook](https://colab.research.google.com/github/cohere-ai/notebooks/blob/main/notebooks/RAG_Chatbot_with_Chat_Embed_Rerank.ipynb)
-
 - [https://github.com/the-full-stack/ask-fsdl] 
