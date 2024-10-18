@@ -338,6 +338,22 @@ In order to effectively answer some queries, retrieval of evidence from multiple
     
     <img width="331" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/80db5bd9-510b-4c23-bf46-4d4679e1929b">
 
+??? note '[](https://github.com/AkariAsai/self-rag)" selfrag
+    The author's show in their [blog](https://selfrag.github.io/) and [paper](https://arxiv.org/abs/2310.11511) an iterative reflecting RAG generation to yield SOTA retrieval on QA and fact verification. 
+    IN their own words 
+    > The issue: Factual inaccuracies of versatile LLMs
+    Despite their remarkable capabilities, large language models (LLMs) often produce responses containing factual inaccuracies due to their sole reliance on the parametric knowledge they encapsulate. They often generate hallucinations, especially in long-tail, their knowledge gets obsolete, and lacks attribution.
+    
+    Is Retrieval-Augmented Generation a silver bullet?
+    Retrieval-Augmented Generation (RAG), an ad hoc approach that augments LMs with retrieval of relevant knowledge, decreases such issues and shows effectiveness in knowledge-intensive tasks such as QA. However, indiscriminately retrieving and incorporating a fixed number of retrieved passages, regardless of whether retrieval is necessary, or passages are relevant, diminishes LM versatility or can lead to unhelpful response generation. Moreover, there's no guarantee that generations are entailed by cited evidence.
+    
+    What is Self-RAG?
+    Self-Reflective Retrieval-Augmented Generation (Self-RAG) is a new framework to enhances an LM's quality and factuality through retrieval and self-reflection. Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand (e.g., can retrieve multiple times during generation, or completely skip retrieval), and generates and reflects on retrieved passages and its own generations using special tokens, called reflection tokens. Generating reflection tokens makes the LM controllable during the inference phase, enabling it to tailor its behavior to diverse task requirements.
+    
+    How good is Self-RAG?
+    Experiments show that Self-RAG (7B and 13B parameters) significantly outperforms state-of-the-art LLMs and retrieval-augmented models on a diverse set of tasks. Specifically, Self-RAG outperforms ChatGPT and retrieval-augmented Llama2-chat on Open-domain QA, reasoning and fact verification tasks, and it shows significant gains in improving factuality and citation accuracy for long-form generations relative to these models.
+    ![image](https://github.com/user-attachments/assets/7166c3e0-6145-4fe4-9e02-f5cbe0c70b52)
+
 
 ##### Small to big lookup
 TODO xxx
