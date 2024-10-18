@@ -656,6 +656,18 @@ While [systems](./systems.md) of agents is a powerful approach at enabling speci
 
 ??? important "[Agents Thinking Fast and Slow: A Talker-Reasoner Architecture](https://arxiv.org/pdf/2410.08328v1)" talker-reasoner
     **Developments** INspired by Kahneman's two-system thinking with System 1 fast/intuitive thinking and System 2 slow/rational thinking, the authors propose a new system for enabling  
+
+    1. The Talker (System 1) is fast, intuitive, and focused on natural conversation. It synthesizes responses based on all available information.
+
+    2. The Reasoner (System 2) is slower, more deliberative, and logical. It handles multi-step reasoning, planning, and executing actions to achieve goals.
+    
+    Why does this matter? By separating conversation from reasoning, the Talker-Reasoner architecture offers several advantages:
+    
+    1. Modularity: Each component can be optimized independently, making the system more flexible and adaptable.
+    
+    2. Lower latency: The Talker can respond quickly while the Reasoner works in the background, improving user experience.
+    
+    3. Improved reasoning: The Reasoner can focus on complex planning without getting bogged down in conversation.
     <img width="568" alt="image" src="https://github.com/user-attachments/assets/73ea3f6d-5e57-4a12-ba3d-4f3e21589432">
     
     <img width="483" alt="image" src="https://github.com/user-attachments/assets/21062c3d-635e-4ab6-acf0-6b82e8e08cb7">
