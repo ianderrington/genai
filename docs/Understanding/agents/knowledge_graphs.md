@@ -5,13 +5,11 @@
     
     There are several key manners of having LLMs work with Knowledge Graphs
     
-    * **Pushing to graph** 
-    * **Getting information from graphs**
+    * **Constructing graphs** 
+    * **Querying graphs**
     * **Predicting and classifying things about graph**
-    * **Navigating graphs and multi-hop reasoning**
-
-
-
+    * **Navigating graphs **
+    * ** Multi-hop reasoning and Retrieval Augmented Generation**
 
     ```mermaid
     erDiagram
@@ -77,51 +75,7 @@ Some exmaples show that LLMs can learn rules, and use them to reason.
 
 KGs cna improve model meta-cognition by enabling the evaluation and generation of data during both training and generation. 
 
-## Using Knowledge Graphs wih LLMs
 
-### When to use KGs with LLMs and when not to
-Some things may be better adressed with graph-specific models (prediction of node/link, classification, other things to predict). The LLM can help to generate the graph, though!
-
-While LLMs afford a great deal of potential, they may not be optimal tools for specific jobs. For complex KGs that involve nodes and edges with highly specific meanings and definitions that may not related to natural language, or for very large graphs, LLMs will not be able to accurately embody holistic understanding that whole graph solutions may enable. Graph Neural Network methods, can effectivly do _prediction_ of nodes and edges, _classification_ of nodes and groups, and traditional algorithms can be used. Here are some common traditional algorithms that may be preferred over using LLMs to understand KGs. 
-
-**Search** 
-
-Algorithms like breadth-first search, depth-first search, and Dijkstra's algorithm are fundamental for navigating knowledge graphs. These methods efficiently explore graph structures to find paths, detect cycles, or identify connected components, forming the basis for more complex graph operations.
-
-**Pathfinding Algorithms (e.g., Dijkstra’s, A\*):** 
-
-Find the shortest path between two nodes, useful in route planning and network analysis.
-
-**Community Detection Algorithms (e.g., Louvain Method)** 
-
-Identify clusters or communities within graphs, helping in social network analysis and market segmentation.
-
-**Centrality Measures (e.g., PageRank, Betweenness Centrality):** 
-
-Determine the importance of different nodes in a network, applicable in analyzing influence in social networks or key infrastructure in transportation networks.
-
-!!! important "Understand your use case and how traditional, or GNN approaches may be valuable for your specific needs. "
-
-### Indexing and Generation
-
-LLMs are of keen interest in creating and populating knowledge graphs. They have the ability to generate accurate and entities and relationships from injested data. They can be used to approximately verify as they are generating, helping to ensure KG consistency. Finally, because they can be used to generated [structured output](../architectures/generation.md) LLM output can  be incorporated directly into KGs. 
-
-#### KG construction from unstructured data
-
-??? abstract " [Title: Prompting an LLM with an ontology to drive Knowledge Graph extraction from unstructured documents](https://www.linkedin.com/pulse/llm-ontology-prompting-knowledge-graph-extraction-peter-lawrence)"
-    
-    This article shows how an ChatAgent can be eventually prompted with an unstructured document and asked to extract a graph corresponding to a specific ontology/schema.
-
-    ![image](https://github.com/user-attachments/assets/0c8706be-0eee-4b6c-a0c0-70ba10984e79)
-
-    The author used a GPT conversation  to improve graph extraction, given a pre-defined and preferred ontological structure. 
-    ```markdown
-    Using this provided ontology exclusively, please create specific instances 
-    and data about individuals within the family from the following text. 
-    Also, create the RDF graph.
-    
-    … <document text>…
-    ```
 
 #### KG Representation
 
@@ -149,21 +103,89 @@ Query languages like SPARQL and Cypher allow precise retrieval of information fr
 #### LLMs for Querying
 Large Language Models can be used to generate graph queries from natural language, making knowledge graphs more accessible to non-technical users. This approach combines the flexibility of natural language with the precision of structured queries, enabling more intuitive interaction with knowledge graphs.
 
-
-
-
 ### Efficient indexing and retrieval techniques
 Techniques such as inverted indexing, graph partitioning, and caching strategies optimize query performance on large-scale knowledge graphs. These methods reduce search space and access times, enabling rapid retrieval of relevant information even from massive graph structures.
 
-### Integration with LLMs
-#### Vector embeddings of KG entities and relationships
+## Combining Knowledge Graphs and LLMs
+
+There are several manners of using graphs, 
+
+* [Constructing Graphs](#constructing-graphs-with-llms)
+* [Querying graphs](#querying-graphs-with-llms)
+* [Predicting Graph Attributes](#predicting-graph-attributes)
+* [Navigating Graphs](#navigating-graphs)
+* [Multi-hop reasoning and RAG](#multi-hop-reasoning-and-rag)
+    
+
+#### When to use KGs with LLMs and when not to
+Some things may be better adressed with graph-specific models (prediction of node/link, classification, other things to predict).
+
+While LLMs afford a great deal of potential, they may not be optimal tools for specific jobs. For complex KGs that involve nodes and edges with highly specific meanings and definitions that may not related to natural language, or for very large graphs, LLMs will not be able to accurately embody holistic understanding that whole graph solutions may enable. Graph Neural Network methods, can effectivly do _prediction_ of nodes and edges, _classification_ of nodes and groups, and traditional algorithms can be used. Here are some common traditional algorithms that may be preferred over using LLMs to understand KGs. 
+
+**Search** 
+
+Algorithms like breadth-first search, depth-first search, and Dijkstra's algorithm are fundamental for navigating knowledge graphs. These methods efficiently explore graph structures to find paths, detect cycles, or identify connected components, forming the basis for more complex graph operations.
+
+**Pathfinding Algorithms (e.g., Dijkstra’s, A\*):** 
+
+Find the shortest path between two nodes, useful in route planning and network analysis.
+
+**Community Detection Algorithms (e.g., Louvain Method)** 
+
+Identify clusters or communities within graphs, helping in social network analysis and market segmentation.
+
+**Centrality Measures (e.g., PageRank, Betweenness Centrality):** 
+
+Determine the importance of different nodes in a network, applicable in analyzing influence in social networks or key infrastructure in transportation networks.
+
+!!! important "Understand your use case and how traditional, or GNN approaches may be valuable for your specific needs. "
+
+### Constructing Graphs with LLMs
+
+LLMs are of keen interest in creating and populating knowledge graphs. They have the ability to generate accurate and entities and relationships from injested data. They can be used to approximately verify as they are generating, helping to ensure KG consistency. Finally, because they can be used to generated [structured output](../architectures/generation.md) LLM output can  be incorporated directly into KGs. 
+
+
+
+??? abstract " [Title: Prompting an LLM with an ontology to drive Knowledge Graph extraction from unstructured documents](https://www.linkedin.com/pulse/llm-ontology-prompting-knowledge-graph-extraction-peter-lawrence)"
+    
+    This article shows how an ChatAgent can be eventually prompted with an unstructured document and asked to extract a graph corresponding to a specific ontology/schema.
+
+    ![image](https://github.com/user-attachments/assets/0c8706be-0eee-4b6c-a0c0-70ba10984e79)
+
+    The author used a GPT conversation  to improve graph extraction, given a pre-defined and preferred ontological structure. 
+    ```markdown
+    Using this provided ontology exclusively, please create specific instances 
+    and data about individuals within the family from the following text. 
+    Also, create the RDF graph.
+    
+    … <document text>…
+    ```
+
+
+##### Vector embeddings of KG entities and relationships
 By representing graph elements as dense vectors, we can bridge the gap between symbolic knowledge graphs and neural language models. These embeddings capture semantic relationships in a format compatible with LLM architectures, enabling joint reasoning over structured and unstructured data.
 
-#### Retrieval-augmented generation: RAG
+### Querying Graphs With LLMs
+
+
+### Predicting Graph Atributes
+
+### Navigating Graphs
+
+### Multi-hop reasoning  and RAG
 
 This technique enhances LLM outputs by first retrieving relevant information from a knowledge graph. The retrieved context guides the generation process, improving factual accuracy and coherence of LLM responses, especially for knowledge-intensive tasks.
 
-??? "[GNN-RAG: Graph Neural Retrieval for Large Language Model Reasoning (May 2024)](https://arxiv.org/abs/2405.20139)"
+
+??? abstract "[A Prompt-Based Knowledge Graph Foundation Model for Universal In-Context Reasoning](https://github.com/nju-websoft/KG-ICL.)" kg-icl
+    **Developments** The author spropose prompt base KG foundation model using ind-context learning, called KG_ICL. The result yield suniversal reasoning with query-related examples and facts. They use a tokenizer to map entities and relations in prompt graphs to predefined tokens. They show that the method outperforms baselines and it enables generalization and knowledge transfer across diverse KGs. 
+
+    <img width="567" alt="image" src="https://github.com/user-attachments/assets/a84b553c-a631-4a69-9250-7852fb882b12">
+
+
+
+
+??? note "[GNN-RAG: Graph Neural Retrieval for Large Language Model Reasoning (May 2024)](https://arxiv.org/abs/2405.20139)"
 
     Abstract:
     "Knowledge Graphs (KGs) represent human-crafted factual knowledge in the form of triplets (head, relation, tail), which collectively form a graph. Question Answering over KGs (KGQA) is the task of answering natural questions grounding the reasoning to the information provided by the KG. Large Language Models (LLMs) are the state-of-the-art models for QA tasks due to their remarkable ability to understand natural language. On the other hand, Graph Neural Networks (GNNs) have been widely used for KGQA as they can handle the complex graph information stored in the KG. In this work, we introduce GNN-RAG, a novel method for combining language understanding abilities of LLMs with the reasoning abilities of GNNs in a retrieval-augmented generation (RAG) style. First, a GNN reasons over a dense KG subgraph to retrieve answer candidates for a given question. Second, the shortest paths in the KG that connect question entities and answer candidates are extracted to represent KG reasoning paths. The extracted paths are verbalized and given as input for LLM reasoning with RAG. In our GNN-RAG framework, the GNN acts as a dense subgraph reasoner to extract useful graph information, while the LLM leverages its natural language processing ability for ultimate KGQA. Furthermore, we develop a retrieval augmentation (RA) technique to further boost KGQA performance with GNN-RAG. Experimental results show that GNN-RAG achieves state-of-the-art performance in two widely used KGQA benchmarks (WebQSP and CWQ), outperforming or matching GPT-4 performance with a 7B tuned LLM. In addition, GNN-RAG excels on multi-hop and multi-entity questions outperforming competing approaches by 8.9--15.5% points at answer F1."
@@ -184,21 +206,6 @@ This technique enhances LLM outputs by first retrieving relevant information fro
     KGs and GNNs are underrated but they are quite effective for problems where you are dealing with factual knowledge and complex structural information. 
 
     The innovative plug-and-play method significantly enriches LLMs with Knowledge Graphs. It adeptly integrates varied modules, showing marked improvements in nuanced tasks and addressing challenges with factual and structural info, making this paper key for those seeking advancements in sophisticated #AI understanding. 
-
-??? note "[To process]"
-
-    RAG on FHIR with Knowledge Graph Part 1 talks about the high-level ideas, like what is a Knowledge Graph, and show a demo using an LLM to answer a question that requires linking more than one resource together:
-    https://www.youtube.com/watch?v=QgQ2zlW9Khs
-
-    RAG on FHIR with Knowledge Graph Part 2 takes a deep dive into the code behind the demo:
-    https://www.youtube.com/watch?v=5H6Pk6pSIDU
-
-    RAG on FHIR with Knowledge Graph is an article on Medium discussing this topic:
-    https://medium.com/@samschifman/rag-on-fhir-with-knowledge-graphs-04d8e13ee96e
-
-    The code is all available on GitHub:
-    https://github.com/samschifman/RAG_on_FHIR/tree/main/RAG_on_FHIR_with_KG 
-
 
 
 
@@ -295,15 +302,6 @@ Semantic layers provide an ability to look up connections between objects, and h
 
 
 
-## Challenges and Future Directions
-
-### Scalability and Efficiency
-#### Handling large-scale, web-scale knowledge graphs
-#### Distributed and parallel processing techniques
-
-### Knowledge Graph Quality
-#### Addressing incompleteness and inconsistency
-#### Fact verification and trust in KG sources
 
 ### Multimodal Knowledge Graphs
 
@@ -312,9 +310,7 @@ Semantic layers provide an ability to look up connections between objects, and h
 
     Abstract: Knowledge graph embeddings are dense numerical representations of entities in a knowledge graph (KG). While the majority of approaches concentrate only on relational information, i.e., relations between entities, fewer approaches exist which also take information about literal values (e.g., textual descriptions or numerical information) into account. Those which exist are typically tailored towards a particular modality of literal and a particular embedding method. In this paper, we propose a set of universal preprocessing operators which can be used to transform KGs with literals for numerical, temporal, textual, and image information, so that the transformed KGs can be embedded with any method. The results on the kgbench dataset with three different embedding methods show promising results.
     
-#### Integrating textual, visual, and numerical data
 
-#### Cross-modal reasoning and inference
 
 ## Open Source Tools
 
@@ -529,13 +525,10 @@ Knowledge Graph RAG (KG-RAG) consistently enhanced the performance of LLMs acros
 #### Risk assessment using company and market KGs
 #### Fraud detection through relationship analysis
 
-## Training and Courses
-In this hands-on course, you will learn how to create and query knowledge graphs using Large Language Models (LLMs).
-
-https://graphacademy.neo4j.com/courses/llm-knowledge-graph-construction/
 
 
-## Research
+
+## Research and References
 
 ??? note "[Neurosymbolic AI for Reasoning over Knowledge Graphs: A Survey (University of Edinburgh., February 20243](https://arxiv.org/abs/2302.07200)"
     Abstract:
@@ -565,3 +558,23 @@ https://graphacademy.neo4j.com/courses/llm-knowledge-graph-construction/
     "Foundation models in language and vision have the ability to run inference on any textual and visual inputs thanks to the transferable representations such as a vocabulary of tokens in language. Knowledge graphs (KGs) have different entity and relation vocabularies that generally do not overlap. The key challenge of designing foundation models on KGs is to learn such transferable representations that enable inference on any graph with arbitrary entity and relation vocabularies. In this work, we make a step towards such foundation models and present ULTRA, an approach for learning universal and transferable graph representations. ULTRA builds relational representations as a function conditioned on their interactions. Such a conditioning strategy allows a pre-trained ULTRA model to inductively generalize to any unseen KG with any relation vocabulary and to be fine-tuned on any graph. Conducting link prediction experiments on 57 different KGs, we find that the zero-shot inductive inference performance of a single pre-trained ULTRA model on unseen graphs of various sizes is often on par or better than strong baselines trained on specific graphs. Fine-tuning further boosts the performance."
 
     Article: https://towardsdatascience.com/ultra-foundation-models-for-knowledge-graph-reasoning-9f8f4a0d7f09
+
+## Training and Courses
+In this hands-on course, you will learn how to create and query knowledge graphs using Large Language Models (LLMs).
+
+https://graphacademy.neo4j.com/courses/llm-knowledge-graph-construction/
+
+??? note "[To process]"
+
+    RAG on FHIR with Knowledge Graph Part 1 talks about the high-level ideas, like what is a Knowledge Graph, and show a demo using an LLM to answer a question that requires linking more than one resource together:
+    https://www.youtube.com/watch?v=QgQ2zlW9Khs
+
+    RAG on FHIR with Knowledge Graph Part 2 takes a deep dive into the code behind the demo:
+    https://www.youtube.com/watch?v=5H6Pk6pSIDU
+
+    RAG on FHIR with Knowledge Graph is an article on Medium discussing this topic:
+    https://medium.com/@samschifman/rag-on-fhir-with-knowledge-graphs-04d8e13ee96e
+
+    The code is all available on GitHub:
+    https://github.com/samschifman/RAG_on_FHIR/tree/main/RAG_on_FHIR_with_KG 
+
