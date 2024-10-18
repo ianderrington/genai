@@ -359,6 +359,20 @@ Challenges in generating responses can involve
 
 ## Advanced methods
 
+??? important "[STRUCTRAG: BOOSTING KNOWLEDGE INTENSIVE REASONING OF LLMS VIA INFERENCE-TIME HYBRID INFORMATION STRUCTURIZATION](https://arxiv.org/pdf/2410.08815)" structrag
+    **Developments** The authors create a new framework called StructRAG that identifies the optimal structures documents to be fed into the prompts. They show that they are very good at improving the result. 
+    In their own words:
+    >   StructRAG framework consists of three modules designed to
+        sequentially identify the most suitable structure type, construct structured knowledge in that format,
+        and utilize that structured knowledge to infer the final answer. First, recognizing that different structure types are suited for different tasks, a hybrid structure router is proposed to determine the most
+        appropriate structure type based on the question and document information of the current task. Second, given that constructing structured knowledge is complex and requires strong comprehension
+        and generation abilities, an LLM-based scattered knowledge structurizer is employed to convert raw
+        documents into structured knowledge in the optimal type. Finally, since questions in knowledgeintensive reasoning tasks can often be a complex composite problems that are challenging to solve
+        directly, a structured knowledge utilizer is used to perform question decomposition and precise
+        knowledge extraction for more accurate answer inference
+    <img width="591" alt="image" src="https://github.com/user-attachments/assets/4eef93d1-7dd7-4d6c-b93f-764759488b2d">
+    <img width="604" alt="image" src="https://github.com/user-attachments/assets/8953813e-4e15-43a5-a7e5-54fd5a436112">
+
 
 
 
