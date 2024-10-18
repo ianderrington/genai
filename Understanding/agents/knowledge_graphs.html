@@ -2954,6 +2954,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#kg-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KG Representation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ontology-design-and-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7833,6 +7844,17 @@ and
 </li>
         
           <li class="md-nav__item">
+  <a href="#kg-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KG Representation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ontology-design-and-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8737,7 +8759,8 @@ and
 <h3 id="when-to-use-kgs-with-llms-and-when-not-to">When to use KGs with LLMs and when not to<a class="headerlink" href="#when-to-use-kgs-with-llms-and-when-not-to" title="Permanent link">&para;</a></h3>
 <p>Some things may be better adressed with graph-specific models (prediction of node/link, classification, other things to predict). The LLM can help to generate the graph, though!</p>
 <p>While LLMs afford a great deal of potential, they may not be optimal tools for specific jobs. For complex KGs that involve nodes and edges with highly specific meanings and definitions that may not related to natural language, or for very large graphs, LLMs will not be able to accurately embody holistic understanding that whole graph solutions may enable. Graph Neural Network methods, can effectivly do <em>prediction</em> of nodes and edges, <em>classification</em> of nodes and groups, and traditional algorithms can be used. Here are some common traditional algorithms that may be preferred over using LLMs to understand KGs. </p>
-<p><strong>Search</strong> Algorithms like breadth-first search, depth-first search, and Dijkstra's algorithm are fundamental for navigating knowledge graphs. These methods efficiently explore graph structures to find paths, detect cycles, or identify connected components, forming the basis for more complex graph operations.</p>
+<p><strong>Search</strong> </p>
+<p>Algorithms like breadth-first search, depth-first search, and Dijkstra's algorithm are fundamental for navigating knowledge graphs. These methods efficiently explore graph structures to find paths, detect cycles, or identify connected components, forming the basis for more complex graph operations.</p>
 <p><strong>Pathfinding Algorithms (e.g., Dijkstra’s, A*):</strong> </p>
 <p>Find the shortest path between two nodes, useful in route planning and network analysis.</p>
 <p><strong>Community Detection Algorithms (e.g., Louvain Method)</strong> </p>
@@ -8762,8 +8785,18 @@ and
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>… &lt;document text&gt;…
 </span></code></pre></div></p>
 </details>
+<h4 id="kg-representation">KG Representation<a class="headerlink" href="#kg-representation" title="Permanent link">&para;</a></h4>
+<p>There are several ways to represent knowledge graphs, including:</p>
+<ul>
+<li><strong>Graph Databases</strong>: These are optimized for storing and querying graph data. Examples include Neo4j, Amazon Neptune, and JanusGraph.</li>
+<li><strong>RDF (Resource Description Framework)</strong>: This is a standard for representing knowledge graphs. It uses a triple (subject, predicate, object) format. RDF is used in systems like DBpedia, Wikidata, and schema.org.</li>
+<li><strong>Property Graphs</strong>: These are a type of graph database that store data in a graph structure. They are used in systems like Neo4j and JanusGraph.</li>
+<li><strong>Triple Stores</strong>: These are databases that store knowledge graphs in a triple (subject, predicate, object) format. They are used in systems like DBpedia and Wikidata.</li>
+</ul>
+<p>For machine learning appliaticons, represention of graphs can be accomplished in the following manner: </p>
 <h4 id="ontology-design-and-best-practices">Ontology design and best practices<a class="headerlink" href="#ontology-design-and-best-practices" title="Permanent link">&para;</a></h4>
 <p>It is important to note that ontologies are not always necessary for knowledge graphs. They can be used to provide a common understanding of the data in the graph, but they can also be used to provide a common language for the data in the graph. <a href="https://schema.org/">Schema.org</a> and <a href="https://www.dbpedia.org/">DBpedia</a> are examples of ontologies that can be used to provide a common language for the data in the graph. </p>
+<p>While it isn't always possible to pre-define all ontologies, it is important to consider the ontological structure of the data in the graph, and to use a common language for the data in the graph. </p>
 <h3 id="lookup-and-querying">Lookup and Querying<a class="headerlink" href="#lookup-and-querying" title="Permanent link">&para;</a></h3>
 <h4 id="query-languages">Query languages<a class="headerlink" href="#query-languages" title="Permanent link">&para;</a></h4>
 <p>Query languages like SPARQL and Cypher allow precise retrieval of information from knowledge graphs. SPARQL is the standard for RDF graphs, while Cypher is commonly used for property graphs like those in Neo4j. These languages enable complex queries that can traverse relationships, filter results, and aggregate data.</p>
