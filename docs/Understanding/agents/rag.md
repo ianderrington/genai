@@ -338,8 +338,13 @@ In order to effectively answer some queries, retrieval of evidence from multiple
     
     <img width="331" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/80db5bd9-510b-4c23-bf46-4d4679e1929b">
 
-??? note '[](https://github.com/AkariAsai/self-rag)" selfrag
+#### Iterating and Corrective RAG
+
+??? note '[SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION](https://github.com/AkariAsai/self-rag)" selfrag
     The author's show in their [blog](https://selfrag.github.io/) and [paper](https://arxiv.org/abs/2310.11511) an iterative reflecting RAG generation to yield SOTA retrieval on QA and fact verification. 
+    ![image](https://github.com/user-attachments/assets/f111aabb-c706-4159-a614-c032fd0f9834)
+    
+
     IN their own words 
     > The issue: Factual inaccuracies of versatile LLMs
     Despite their remarkable capabilities, large language models (LLMs) often produce responses containing factual inaccuracies due to their sole reliance on the parametric knowledge they encapsulate. They often generate hallucinations, especially in long-tail, their knowledge gets obsolete, and lacks attribution.
@@ -348,12 +353,50 @@ In order to effectively answer some queries, retrieval of evidence from multiple
     Retrieval-Augmented Generation (RAG), an ad hoc approach that augments LMs with retrieval of relevant knowledge, decreases such issues and shows effectiveness in knowledge-intensive tasks such as QA. However, indiscriminately retrieving and incorporating a fixed number of retrieved passages, regardless of whether retrieval is necessary, or passages are relevant, diminishes LM versatility or can lead to unhelpful response generation. Moreover, there's no guarantee that generations are entailed by cited evidence.
     
     What is Self-RAG?
-    Self-Reflective Retrieval-Augmented Generation (Self-RAG) is a new framework to enhances an LM's quality and factuality through retrieval and self-reflection. Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand (e.g., can retrieve multiple times during generation, or completely skip retrieval), and generates and reflects on retrieved passages and its own generations using special tokens, called reflection tokens. Generating reflection tokens makes the LM controllable during the inference phase, enabling it to tailor its behavior to diverse task requirements.
+    Self-Reflective Retrieval-Augmented Generation (Self-RAG) is a new framework to enhances an LM's quality and factuality through retrieval and self-reflection. Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand (e.g., can retrieve multiple times during generation, or completely skip retrieval), and generates and reflects on retrieved passages and its own generations using special tokens, called _reflection tokens_. Generating reflection tokens makes the LM controllable during the inference phase, enabling it to tailor its behavior to diverse task requirements.
     
     How good is Self-RAG?
     Experiments show that Self-RAG (7B and 13B parameters) significantly outperforms state-of-the-art LLMs and retrieval-augmented models on a diverse set of tasks. Specifically, Self-RAG outperforms ChatGPT and retrieval-augmented Llama2-chat on Open-domain QA, reasoning and fact verification tasks, and it shows significant gains in improving factuality and citation accuracy for long-form generations relative to these models.
+    
     ![image](https://github.com/user-attachments/assets/7166c3e0-6145-4fe4-9e02-f5cbe0c70b52)
+    
+    ![image](https://github.com/user-attachments/assets/0f045d00-5cfc-4b60-9ae9-df4deb319409)
 
+    ![image](https://github.com/user-attachments/assets/0713e3ac-a55d-4f42-a939-7cdc66e0d4ec)
+
+
+
+??? abstract "BEST RESULTS  SO FAR [Corrective Retrieval Augmented Generation](https://github.com/HuskyInSalt/CRAG)" corrective-retrieval-augmented-generatio
+    **Developments** The authors hsow in their [paper](https://arxiv.org/pdf/2401.15884) an iterative RAG generation that evaluates document reletance and confidence of the different actions can be considered. Called Corrective retrieval augmented generation CRAG, the results allow significant improvement over other solutions, including self-RAG. 
+
+    ![image](https://github.com/user-attachments/assets/7747e4f9-27f3-4883-9eb9-eb97d11e90dc)
+
+    ![image](https://github.com/user-attachments/assets/52655a90-5add-48db-81a3-8e3a9f919cf6)
+
+    The prompts: 
+    
+    ![image](https://github.com/user-attachments/assets/cd61c9b1-893c-4fad-a17b-b5a0caaaba1b)
+
+    
+
+    ![image](https://github.com/user-attachments/assets/7a2d59b3-8ce9-4b32-8ae4-7942257addeb)
+
+    ![image](https://github.com/user-attachments/assets/649e6b9c-c2c9-4a88-943a-ba3e5f3b127c)
+
+
+
+
+    
+
+??? example "A tutorial coombining Self-Corrective RAG application for answering questions about Pandas documentation using LangGraph Cloud."
+    
+    We implement ideas from both self-RAG and corrective RAG to flexibly handle model hallucinations. You'll see how to check for hallucinations after an answer is generated, and check for answer relevancy before returning the user quest check for answer relevancy before returning the user question.
+    
+    [Video:](https://www.youtube.com/watch?v=hpIOx2eGQS4 )
+    
+    [GitHub repo:](https://github.com/vbarda/pandas-rag-langgraph)
+    
+    [Notebook:](https://github.com/vbarda/pandas-rag-langgraph/blob/main/demo.ipynb)
 
 ##### Small to big lookup
 TODO xxx
