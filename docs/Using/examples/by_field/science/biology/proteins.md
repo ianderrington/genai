@@ -84,7 +84,9 @@ When it is possible to iteratively measure proposed sequences, new data can be u
 
 ???+ tip "[Ways of prioritizing](https://www.sciencedirect.com/science/article/pii/S0959440X21001457)"
     ![image](https://github.com/ianderrington/genai/assets/76016868/08ed6633-0439-44f5-a52d-e53afb4804f2)
-    
+
+??? tip "[Fine-tuning protein language models boosts predictions across diverse tasks](https://www.nature.com/articles/s41467-024-51844-2#Sec2)"
+    The authors compared finetuning on ESM2, ProtT5 adn Ankh on different tasks. They found that supervised finetuning improves doenstream predictions, PEFT has similar improvement with great acceleration. They also suggest that final-layer tuning is not ideal. 
 
 ### Sequence Proposer
 
