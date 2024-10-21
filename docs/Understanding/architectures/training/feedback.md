@@ -102,6 +102,33 @@ Having intermediate rewards provides better guidance on how the token generation
 ### RLAIF
 Because of the ability to minimize costs associated with feedback, reinforcement Learning from AI Feedback (RLAIF) has proved additionally valuable. 
 
+??? note "[Self-Taught Evaluators](https://arxiv.org/pdf/2408.02666)" self-taught-evaluators
+    The authors show a method of using 
+    > Abstract
+      Model-based evaluation is at the heart of successful model development – as a reward
+      model for training, and as a replacement for
+      human evaluation. To train such evaluators,
+      the standard approach is to collect a large
+      amount of human preference judgments over
+      model responses, which is costly and the data
+      becomes stale as models improve. In this
+      work, we present an approach that aims to improve evaluators without human annotations,
+      using synthetic training data only. Starting
+      from unlabeled instructions, our iterative selfimprovement scheme generates contrasting
+      model outputs and trains an LLM-as-a-Judge to
+      produce reasoning traces and final judgments,
+      repeating this training at each new iteration
+      using the improved predictions. Without any
+      labeled preference data, our Self-Taught Evaluator can improve a strong LLM (Llama3-70BInstruct) from 75.4 to 88.3 (88.7 with majority
+      vote) on RewardBench. This outperforms commonly used LLM judges such as GPT-4 and
+      matches the performance of the top-performing
+      reward models trained with labeled examples.
+    ![image](https://github.com/user-attachments/assets/89276c81-65fb-4250-9765-e8cc3abe3b9f)
+
+    ![image](https://github.com/user-attachments/assets/7516ba4c-1496-4e48-a5b3-cf7adfc02c25)
+
+
+
 ??? important "[Starling-7B: Increasing LLM Helpfulness & Harmlessness with RLAIF](https://starling.cs.berkeley.edu/) provides a solid example using RLAIF generated with GPT-4 to create a 7B model that is almost as good as GPT-4"
     They also released a [data set called Nectar](https://huggingface.co/datasets/berkeley-nest/Nectar) that with over 180k GPT-4 ranked outputs.
 
