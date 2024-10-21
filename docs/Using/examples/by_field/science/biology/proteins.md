@@ -175,8 +175,7 @@ These methods include:
 ## Data Selection
 
 ??? abstract "[Protein Language Model Fitness Is a Matter of Preference](https://www.biorxiv.org/content/10.1101/2024.10.03.616542v1.full.pdf)"
-    The authors show that models preferences are biased by human preference during the data curation. Quite cleanly, they state "Algorithmic differences might be overshadowed by human
-preferences at the data level confounding whether a model better captures the biology of proteome"
+    The authors show that models preferences are biased by human preference during the data curation. Quite cleanly, they state "Algorithmic differences might be overshadowed by human preferences at the data level confounding whether a model better captures the biology of proteome"
     
     <img width="651" alt="image" src="https://github.com/user-attachments/assets/74a52ec5-500a-4c48-bb79-d91cd81be5ed">
 
