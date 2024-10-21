@@ -298,8 +298,18 @@ There is a way to go faster, as in [Protein Language Model Fitness Is a Matter o
     ![image](https://github.com/ianderrington/genai/assets/76016868/c06d4a40-117f-4b86-9deb-ee9d29fc8f70)
 
 ??? abstract "[AMPLIFY Protein Language Model](https://github.com/chandar-lab/AMPLIFY?tab=readme-ov-file)" amplify-plm
-    The author's show in their [Paper](https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf) that they can train highly performant ESM models (and modifications) with better performance. They use different dat asets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. 
-    They also use something called _pseudo-perplexity- which measures the replacement of non-random masking (one of each sequence). 
+    The author's show in their [Paper](https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf) that they can train highly performant ESM models (and modifications) with better performance. They use different data sets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. 
+    They also use something called _pseudo-perplexity_ which measures the replacement of non-random masking (one of each sequence). 
+    They show that retraining the same models (ESM and Amplify) on uniref data 
+    **Differences with ESM** *
+    * They used SwiGLU and RMS norm instead of Gelu Activation. 
+    * They used reduced number of attention heads.
+    * They used AdamW optimization (not Adam). 
+    * They trained with bf16 using DeepSpeed, an dmodel sharding. 
+    * They streamlined the vocabulary removing unused tokens.
+
+
+
 
 
 
