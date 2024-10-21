@@ -214,7 +214,7 @@ It requires $O(L)$ passes through the data.
 
 There is a way to go faster, as in [Protein Language Model Fitness Is a Matter of Preference](https://www.biorxiv.org/content/10.1101/2024.10.03.616542v1.full.pdf). The authors show that the pseudo log likelihood can be calculated in a single pass as such:
 
-    <img width="366" alt="image" src="https://github.com/user-attachments/assets/56807d57-1f12-402c-98da-17107d965063">
+<img width="366" alt="image" src="https://github.com/user-attachments/assets/56807d57-1f12-402c-98da-17107d965063">
 
 
 
