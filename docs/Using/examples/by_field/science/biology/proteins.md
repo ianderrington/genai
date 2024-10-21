@@ -402,6 +402,12 @@ It is possible to combine LLMs for natural language and PLMs to produce poweful 
     **Training**: From scratch.
     **Results**: High performance of PLM 97% accuracy over other models, though this accuracy is reduced when reducing train/test set homology.
 
+??? abstract "[Transfer learning to leverage larger datasets for improved prediction of protein stability changes](https://github.com/Kuhlman-Lab/ThermoMPNN)" thermompnn
+    The authors show in their [paper](https://www.biorxiv.org/content/10.1101/2023.07.27.550881v1.full.pdf) a graph neural network (GNN) trained using transfer learning to predict changes in stability for protein point mutants.
+
+    ![image](https://github.com/user-attachments/assets/4dcab37e-b57a-4635-86dc-93c46a5c34c7)
+
+
 ### Candidate Identification
 
 Particularly for evolutionary methods, it is essential to know _where to start_ optimizing from. GenAI can be used to identify candidates based on databases of prior candidates.
@@ -427,9 +433,13 @@ It is not necessarily just enough to identify a potential candidate but to have 
     The authors show in their [paper](https://www.pnas.org/doi/full/10.1073/pnas.2220778120) the use of contrastive learning to help co-locate proteins and potential drug molecules in a 'shared feature space' and learns to map drugs against non-binding 'decoy' molecules.
     ![image](https://github.com/ianderrington/genai/assets/76016868/bb697ce1-6ad7-4a1c-9122-c19ea93ce9eb)
 
+##### ProteinMPNN
 ??? abstract "[Robust deep learning based protein sequence design using ProteinMPNN](https://github.com/dauparas/ProteinMPNN)"
     In their [paper](https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1) the authors reveal a novel method to predict sequences and sequence recovery.
     ![image](https://github.com/ianderrington/genai/assets/76016868/ee8d6025-d4a1-4ade-ac22-cfb26cabd41e)
+
+
+
 
 ## Performance optimizations
 
