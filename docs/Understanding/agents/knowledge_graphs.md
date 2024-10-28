@@ -182,6 +182,14 @@ This technique enhances LLM outputs by first retrieving relevant information fro
 
     <img width="567" alt="image" src="https://github.com/user-attachments/assets/a84b553c-a631-4a69-9250-7852fb882b12">
 
+??? note "[GRAG: Graph Retrieval-Augmented Generation](https://arxiv.org/pdf/2405.16506)" grag
+    The authors tackle two issues in generation using RAGS: 
+    > 1. For Retrieval: How to efficiently retrieve relevant textual subgraph
+      2. For Generation: How to deliver textual subgraph joint textual and topological information into LLMS. 
+    <img width="696" alt="image" src="https://github.com/user-attachments/assets/df5a9a00-088d-4cc1-bacb-afacd225f6b3">
+    To do generate the information they use subgraph retrieval, as a heirarchichal description that goes into an embedder that fuses graph tokens and text tokens. 
+    <img width="330" alt="image" src="https://github.com/user-attachments/assets/d0ede9ef-7bd3-452e-b2ec-fff73800a6c3">
+
 
 
 
