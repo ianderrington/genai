@@ -1,8 +1,45 @@
 ## Healthcare
 
 
+### Medical Knowledge
 
+??? abstract "[Medical Graph RAG: Towards Safe Medical Large Language Model via Graph Retrieval-Augmented Generation](https://github.com/MedicineToken/Medical-Graph-RAG" MediGraphRag
+    <img width="879" alt="image" src="https://github.com/user-attachments/assets/c335f350-0bc4-44cb-9d76-58aad39ced44">
+    **Developments:** The authors [devlop](https://arxiv.org/pdf/2408.04187) a powerful graph-rag based system called MediGraphRag for medical discustions reaching SOTA results. They do so, they most notably introduce 'Triple Graph Construction'. 
+
+    1. Dynamically selected chunk partitioning. 
+    2. Entity extraction using structured output of _name_, _type_, and a _context_ in how it mattered. 
+    3. Triple link
+
+    **Graph Construction: 'Triple Link'** 
+    They create a Triple link Repository Graph (RepoGraph). They create three graphs:
+    
+    Involving the creation of several graph layers.  
+
+    1. **Medical papers/books**
+    2. **Medical Dictionaries**
+    3. **UMLS) made of well-defined medical vocabularies and their relationships. 
+
+    They link the entities that are extracted from medical books/papers as E2, based on their relevance, then they use to compute cosine similarity. They then create a relation as a consise phrase based on on the entity, and associated references. 
+    Next, they tag the graphs strting with some pre-defined tags, and iteratively generate more tag summaries, for closely-related graphs. These tags have multiple categories. Language models then tag the system using a prompts akin to the following
+
+    ```markdown
+    Generate a structured summary from the provided medical content,
+    strictly adhering to the following categories... {Tag
+    Name: Description of the tag}... .
+    ```
+    (Their other well constructed prompts can be found [here](https://github.com/MedicineToken/Medical-Graph-RAG/blob/main/nano_graphrag/prompt.py)
+
+    They then iterate using heirarchichal clustering based on tag similarity to group the graphs and generate synthesized tag summaries, with each graph having it's own groups. They try to merge the top 20% of most similar pairs, and merge pairs  if the pairwise similarities cross a specified threshold. They 
+    
+    
+    **Retrieval**
+    To do retrieval, they 
+
+    
 ### Patient Care
+
+
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/FeatureBaseDB/DoctorGPT) [Doctor GPT](https://github.com/FeatureBaseDB/DoctorGPT) implements advanced LLM prompting for organizing, indexing and discussing PDFs, and does so without using any type of opinionated prompt processing frameworks "“
 
 
