@@ -352,6 +352,20 @@ There is a way to go faster, as in [Protein Language Model Fitness Is a Matter o
 ??? abstract "[Tasks Assessing Protein Embeddings (TAPE)](https://github.com/songlab-cal/tape)"
 
 
+??? "[Miniaturizing, Modifying, and Augmenting Nature’s Proteins with](https://github.com/rohitsinghlab/raygun)" raygun
+    **Developments;** The author show in their [publication](https://www.biorxiv.org/content/10.1101/2024.08.13.607858v1.full.pdf) raygun a novel method that is able to generate solutions that are able to create sequneces that are able to design proteins with structural similarity but verying lengths. 
+    
+    They do so by creating use models to create an intermediate multivariate normal distribution to embody varyiable length sequences into a same-lengh metric. 
+
+    <img width="689" alt="image" src="https://github.com/user-attachments/assets/81fd94f5-a904-47de-8da8-574677f80535">
+    
+    Their process of collapsing data to a smaller fixt-length embedding is a parameter free method that performs blocked chunking and averaging of components.
+    
+    <img width="689" alt="image" src="https://github.com/user-attachments/assets/1c1cf62e-5c91-4e7a-90d1-4ee849dffdbf">
+
+
+
+
 #### Natural Language + Protein Language model integrations
 
 It is possible to combine LLMs for natural language and PLMs to produce poweful suggestions just based on NL queries. Here are some examples. 
