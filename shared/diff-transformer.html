@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMPLIFY Protein Language Model</title>
+    <title> Diff-Transformer</title>
     
     
 
-    <meta property="og:url" content="https://www.managen.ai//shared/amplify-plm.html">
+    <meta property="og:url" content="https://www.managen.ai//shared/diff-transformer.html">
 
-    <meta property="og:title" content="AMPLIFY Protein Language Model">
-    <meta property="og:description" content="The author's show in their [Paper](https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf) that they can train highly performant ESM models (and modifications) with better performance. They use different data sets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. "">
+    <meta property="og:title" content=" Diff-Transformer">
+    <meta property="og:description" content="**Developments**: The authors [introduce](https://arxiv.org/pdf/2410.05258) a new attention mechanism, called 'Diff-Transformer', that amplifies attention to the relevant context while canceling noise. It does so by calculating attention scores as the difference between two separate softmax attention maps. The subtraction cancels noise, promoting the emergence of sparse attention patterns. Experimental results on language modeling show that DIFF Transformer outperforms Transformer in various settings of scaling up model size and training tokens."">
 
     <meta property="og:type"  content="website" />
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://www.managen.ai//shared/amplify-plm.html">
+    <meta property="og:image" content="https://github.com/ianderrington/genai/assets/76016868/e386d9ab-f337-4df9-b2d2-2f4168eb8945">
+    <meta property="og:url" content="https://www.managen.ai//shared/diff-transformer.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AMPLIFY Protein Language Model">
-    <meta name="twitter:description" content="AMPLIFY Protein Language Model">
-    <meta name="twitter:image" content="">
+    <meta name="twitter:title" content=" Diff-Transformer">
+    <meta name="twitter:description" content=" Diff-Transformer">
+    <meta name="twitter:image" content="https://github.com/ianderrington/genai/assets/76016868/e386d9ab-f337-4df9-b2d2-2f4168eb8945">
     <!--Import stylesheet  -->
     <link rel="stylesheet" href="../../stylesheets/share-card.css">
     <style>
@@ -61,22 +61,15 @@
 <body>
     
     <div class="blog-content">
-        <h1><p><a href="https://github.com/chandar-lab/AMPLIFY?tab=readme-ov-file">AMPLIFY Protein Language Model</a></p></h1>
-        <p>The author's show in their <a href="https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf">Paper</a> that they can train highly performant ESM models (and modifications) with better performance. They use different data sets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. 
-They also use something called <em>pseudo-perplexity</em> which measures the replacement of non-random masking (one of each sequence). 
-They show that retraining the same models (ESM and Amplify) on uniref data 
-<strong>Differences with ESM</strong> *
-* They used SwiGLU and RMS norm instead of Gelu Activation. 
-* They used reduced number of attention heads.
-* They used AdamW optimization (not Adam). 
-* They trained with bf16 using DeepSpeed, an dmodel sharding. 
-* They streamlined the vocabulary removing unused tokens.</p>
+        <h1><p><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/microsoft/unilm" /> <a href="https://github.com/microsoft/unilm/tree/master/Diff-Transformer">Diff-Transformer</a></p></h1>
+        <p><strong>Developments</strong>: The authors <a href="https://arxiv.org/pdf/2410.05258">introduce</a> a new attention mechanism, called 'Diff-Transformer', that amplifies attention to the relevant context while canceling noise. It does so by calculating attention scores as the difference between two separate softmax attention maps. The subtraction cancels noise, promoting the emergence of sparse attention patterns. Experimental results on language modeling show that DIFF Transformer outperforms Transformer in various settings of scaling up model size and training tokens.
+<img width="1289" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e386d9ab-f337-4df9-b2d2-2f4168eb8945"></p>
     </div>
-    <a href="https://www.managen.ai//shared/amplify-plm.html" class="page-url" id="page-url"></a>
+    <a href="https://www.managen.ai//shared/diff-transformer.html" class="page-url" id="page-url"></a>
     <!-- Clipboard copy icon/button -->
     <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
     <!-- Copied popup -->
     <div class="copied-popup" id="copied-popup">Link copied!</div>
-    <a href="https://www.managen.ai//Using/examples/by_field/science/biology/proteins.html" class="backlink-url" id="backlink-url">See the main site!</a>
+    <a href="https://www.managen.ai//Understanding/architectures/models/transformers.html" class="backlink-url" id="backlink-url">See the main site!</a>
 </body>
 </html>

@@ -3046,7 +3046,18 @@ and
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Multi-Hop RAG">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterating-and-corrective-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterating and Corrective RAG
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iterating and Corrective RAG">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3124,6 +3135,17 @@ and
     <span class="md-ellipsis">
       
         Evaluating and Comparing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-source-tools-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open source tools and applications
       
     </span>
   </a>
@@ -7415,7 +7437,18 @@ and
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Multi-Hop RAG">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterating-and-corrective-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterating and Corrective RAG
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iterating and Corrective RAG">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7493,6 +7526,17 @@ and
     <span class="md-ellipsis">
       
         Evaluating and Comparing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-source-tools-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open source tools and applications
       
     </span>
   </a>
@@ -7854,6 +7898,55 @@ and
 <p>"MultiHop-RAG: a QA dataset to evaluate retrieval and reasoning across documents with metadata in the RAG pipelines. It contains 2556 queries, with evidence for each query distributed across 2 to 4 documents. The queries also involve document metadata, reflecting complex scenarios commonly found in real-world RAG applications."</p>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/80db5bd9-510b-4c23-bf46-4d4679e1929b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="331" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/80db5bd9-510b-4c23-bf46-4d4679e1929b"></a></p>
 </details>
+<h4 id="iterating-and-corrective-rag">Iterating and Corrective RAG<a class="headerlink" href="#iterating-and-corrective-rag" title="Permanent link">&para;</a></h4>
+<p>??? note '<a href="https://github.com/AkariAsai/self-rag">SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION</a>" selfrag
+    The author's show in their <a href="https://selfrag.github.io/">blog</a> and <a href="https://arxiv.org/abs/2310.11511">paper</a> an iterative reflecting RAG generation to yield SOTA retrieval on QA and fact verification. 
+    <a class="glightbox" href="https://github.com/user-attachments/assets/f111aabb-c706-4159-a614-c032fd0f9834" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f111aabb-c706-4159-a614-c032fd0f9834" /></a></p>
+<div class="language-text highlight"><pre><span></span><code>IN their own words 
+&gt; The issue: Factual inaccuracies of versatile LLMs
+Despite their remarkable capabilities, large language models (LLMs) often produce responses containing factual inaccuracies due to their sole reliance on the parametric knowledge they encapsulate. They often generate hallucinations, especially in long-tail, their knowledge gets obsolete, and lacks attribution.
+
+Is Retrieval-Augmented Generation a silver bullet?
+Retrieval-Augmented Generation (RAG), an ad hoc approach that augments LMs with retrieval of relevant knowledge, decreases such issues and shows effectiveness in knowledge-intensive tasks such as QA. However, indiscriminately retrieving and incorporating a fixed number of retrieved passages, regardless of whether retrieval is necessary, or passages are relevant, diminishes LM versatility or can lead to unhelpful response generation. Moreover, there&#39;s no guarantee that generations are entailed by cited evidence.
+
+What is Self-RAG?
+Self-Reflective Retrieval-Augmented Generation (Self-RAG) is a new framework to enhances an LM&#39;s quality and factuality through retrieval and self-reflection. Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand (e.g., can retrieve multiple times during generation, or completely skip retrieval), and generates and reflects on retrieved passages and its own generations using special tokens, called _reflection tokens_. Generating reflection tokens makes the LM controllable during the inference phase, enabling it to tailor its behavior to diverse task requirements.
+
+How good is Self-RAG?
+Experiments show that Self-RAG (7B and 13B parameters) significantly outperforms state-of-the-art LLMs and retrieval-augmented models on a diverse set of tasks. Specifically, Self-RAG outperforms ChatGPT and retrieval-augmented Llama2-chat on Open-domain QA, reasoning and fact verification tasks, and it shows significant gains in improving factuality and citation accuracy for long-form generations relative to these models.
+
+![image](https://github.com/user-attachments/assets/7166c3e0-6145-4fe4-9e02-f5cbe0c70b52)
+
+![image](https://github.com/user-attachments/assets/0f045d00-5cfc-4b60-9ae9-df4deb319409)
+
+![image](https://github.com/user-attachments/assets/0713e3ac-a55d-4f42-a939-7cdc66e0d4ec)
+</code></pre></div>
+<p><a href="/shared/corrective-retrieval-augmented-generatio.html" class="page-url" id="page-url-3"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary>BEST RESULTS  SO FAR <a href="https://github.com/HuskyInSalt/CRAG">Corrective Retrieval Augmented Generation</a></summary>
+<p><strong>Developments</strong> The authors hsow in their <a href="https://arxiv.org/pdf/2401.15884">paper</a> an iterative RAG generation that evaluates document reletance and confidence of the different actions can be considered. Called Corrective retrieval augmented generation CRAG, the results allow significant improvement over other solutions, including self-RAG. </p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/7747e4f9-27f3-4883-9eb9-eb97d11e90dc" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/7747e4f9-27f3-4883-9eb9-eb97d11e90dc" /></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/52655a90-5add-48db-81a3-8e3a9f919cf6" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/52655a90-5add-48db-81a3-8e3a9f919cf6" /></a></p>
+<p>The prompts: </p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/cd61c9b1-893c-4fad-a17b-b5a0caaaba1b" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/cd61c9b1-893c-4fad-a17b-b5a0caaaba1b" /></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/7a2d59b3-8ce9-4b32-8ae4-7942257addeb" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/7a2d59b3-8ce9-4b32-8ae4-7942257addeb" /></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/649e6b9c-c2c9-4a88-943a-ba3e5f3b127c" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/649e6b9c-c2c9-4a88-943a-ba3e5f3b127c" /></a></p>
+</details>
+<details class="example">
+<summary>A tutorial coombining Self-Corrective RAG application for answering questions about Pandas documentation using LangGraph Cloud.</summary>
+<p>We implement ideas from both self-RAG and corrective RAG to flexibly handle model hallucinations. You'll see how to check for hallucinations after an answer is generated, and check for answer relevancy before returning the user quest check for answer relevancy before returning the user question.</p>
+<p><a href="https://www.youtube.com/watch?v=hpIOx2eGQS4">Video:</a></p>
+<p><a href="https://github.com/vbarda/pandas-rag-langgraph">GitHub repo:</a></p>
+<p><a href="https://github.com/vbarda/pandas-rag-langgraph/blob/main/demo.ipynb">Notebook:</a></p>
+</details>
 <h5 id="small-to-big-lookup">Small to big lookup<a class="headerlink" href="#small-to-big-lookup" title="Permanent link">&para;</a></h5>
 <p>TODO xxx</p>
 <h4 id="reranking">Reranking<a class="headerlink" href="#reranking" title="Permanent link">&para;</a></h4>
@@ -7868,6 +7961,53 @@ Reranking </p>
 <li>Stale information: When information is no longer relevant.</li>
 </ul>
 <h2 id="advanced-methods">Advanced methods<a class="headerlink" href="#advanced-methods" title="Permanent link">&para;</a></h2>
+<p><a href="/shared/structrag.html" class="page-url" id="page-url-4"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-4')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-4">Link copied!</div>
+</div>
+
+<details class="important">
+<summary><a href="https://arxiv.org/pdf/2410.08815">STRUCTRAG: BOOSTING KNOWLEDGE INTENSIVE REASONING OF LLMS VIA INFERENCE-TIME HYBRID INFORMATION STRUCTURIZATION</a></summary>
+<p><strong>Developments</strong> The authors create a new framework called StructRAG that identifies the optimal structures documents to be fed into the prompts. They show that they are very good at improving the result, here are core components</p>
+<p>As seen on the internet: 
+🛣️ Hybrid Structure Router 
+Analyzes the input question and determines the best format to structure the data before processing it. It can choose from:
+- Tables for tasks with a lot of statistical data
+- Graphs for tasks requiring long-chain reasoning like tracing cause-effect relationships
+- Catalogues for summarizing or organizing hierarchical information
+- Chunks for simpler, one-off tasks.
+- Algorithms for more procedural tasks 
+Each type benefits from a specific structure. For example, using a table for a statistical comparison task is much more efficient than just presenting the raw text.</p>
+<p>🧱 Scattered Knowledge Structurizer
+Once the Hybrid Structure Router has selected the best knowledge format, StructRAG takes all the relevant information and organizes it into the appropriate structure:
+- For tables, it arranges data into rows and columns (e.g., comparing company financials across years).
+- For graphs, it forms entity-relationship triples like “Company A → revenue growth → 10%.”
+- For chunks, it keeps the text but filters out the noise, giving the model only what’s relevant.</p>
+<p>🛠️ Structured Knowledge Utilizer
+This component decomposes complex questions into sub-questions and extracts relevant information from the structured knowledge to answer each one. Then, it integrates those sub-answers into a final inference.
+For example, if you ask the model, “Which company has shown the best growth over the last 5 years?” the Utilizer breaks this down into sub-questions like:
+- What was each company's growth percentage?
+- How did their revenue change year-on-year?
+- How do those numbers compare?
+It retrieves precise data from the structured knowledge (e.g., the table) and uses it to construct an answer that’s more accurate and contextually aware. </p>
+<p>In their own words:</p>
+<blockquote>
+<p>StructRAG framework consists of three modules designed to
+    sequentially identify the most suitable structure type, construct structured knowledge in that format,
+    and utilize that structured knowledge to infer the final answer. First, recognizing that different structure types are suited for different tasks, a hybrid structure router is proposed to determine the most
+    appropriate structure type based on the question and document information of the current task. Second, given that constructing structured knowledge is complex and requires strong comprehension
+    and generation abilities, an LLM-based scattered knowledge structurizer is employed to convert raw
+    documents into structured knowledge in the optimal type. Finally, since questions in knowledgeintensive reasoning tasks can often be a complex composite problems that are challenging to solve
+    directly, a structured knowledge utilizer is used to perform question decomposition and precise
+    knowledge extraction for more accurate answer inference
+<a class="glightbox" href="https://github.com/user-attachments/assets/4eef93d1-7dd7-4d6c-b93f-764759488b2d" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="591" alt="image" src="https://github.com/user-attachments/assets/4eef93d1-7dd7-4d6c-b93f-764759488b2d"></a>
+<a class="glightbox" href="https://github.com/user-attachments/assets/8953813e-4e15-43a5-a7e5-54fd5a436112" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="604" alt="image" src="https://github.com/user-attachments/assets/8953813e-4e15-43a5-a7e5-54fd5a436112"></a></p>
+</blockquote>
+</details>
 <h2 id="multimodal-rag">Multimodal Rag<a class="headerlink" href="#multimodal-rag" title="Permanent link">&para;</a></h2>
 <p>Natural-language lookup with RAG can be improved by allowing other modalities, such as tables and images, at the same time. There are several ways that this may be accomplished as described in <a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/">Langchain's multi modal rag</a>: </p>
 <div class="language-text highlight"><pre><span></span><code>Option 1:
@@ -7901,13 +8041,13 @@ Pass raw images and text chunks to a multimodal LLM for answer synthesis
 <details class="abstract">
 <summary><a class="glightbox" href="https://badgen.net/github/stars/mendableai/rag-arena" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/mendableai/rag-arena" /></a> <a href="https://github.com/mendableai/rag-arena">Rag Arena</a> Provides interfaces with LangChain to provide a RAG chatbot experience where queries receive multiple responses.</summary>
 </details>
-<p><a href="/shared/rag-and-beyond.html" class="page-url" id="page-url-3"></a></p>
+<p><a href="/shared/rag-and-beyond.html" class="page-url" id="page-url-5"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-5')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-5">Link copied!</div>
 </div>
 
 <details class="note">
@@ -7921,7 +8061,11 @@ Pass raw images and text chunks to a multimodal LLM for answer synthesis
 **L4: Hidden Rational Queri8es</strong>: They have domain specific reasoning that may not be explicitly described and difficult to enumerate.  </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/4afba3a0-34a9-411a-b92b-a403be847f80" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1073" alt="image" src="https://github.com/user-attachments/assets/4afba3a0-34a9-411a-b92b-a403be847f80"></a></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/c3d35e52-b894-4805-bc44-e40dbaf241ad" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="1038" alt="image" src="https://github.com/user-attachments/assets/c3d35e52-b894-4805-bc44-e40dbaf241ad"></a></p>
+<h2 id="open-source-tools-and-applications">Open source tools and applications<a class="headerlink" href="#open-source-tools-and-applications" title="Permanent link">&para;</a></h2>
 </details>
+<div class="admonition abstract">
+<p class="admonition-title"><a href="https://github.com/Cinnamon/kotaemon">An open-source clean &amp; customizable RAG UI for chatting with your documents. Built with both end users and developers in mind.</a></p>
+</div>
 <h2 id="resources-tutorials-and-blogs">Resources, Tutorials and Blogs<a class="headerlink" href="#resources-tutorials-and-blogs" title="Permanent link">&para;</a></h2>
 <details class="important">
 <summary><a href="https://arxiv.org/pdf/2005.11401.pdf">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a> introduces a complete solution for enabling improved response generation with LLMs.</summary>
@@ -7929,13 +8073,13 @@ Pass raw images and text chunks to a multimodal LLM for answer synthesis
 The authors reveal that allowing for fine tuning of the models when equipped with RAG improved the results. 
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/05ffefbd-4fd7-4d4e-9ec4-0719e66e1791" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="598" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/05ffefbd-4fd7-4d4e-9ec4-0719e66e1791"></a></p>
 </details>
-<p><a href="/shared/12-rag-pain-points-and-solutions.html" class="page-url" id="page-url-4"></a></p>
+<p><a href="/shared/12-rag-pain-points-and-solutions.html" class="page-url" id="page-url-6"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-4')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-6')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-4">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-6">Link copied!</div>
 </div>
 
 <details class="important">
@@ -8061,12 +8205,8 @@ The authors reveal that allowing for fine tuning of the models when equipped wit
 <li><a href="https://python.langchain.com/docs/use_cases/question_answering/">Langchain Question Answering</a></li>
 <li><a href="https://github.com/pchunduri6/rag-demystified/blob/main/complex_qa.py">RAG demystified</a></li>
 <li><a href="https://www.rungalileo.io/blog/mastering-rag-how-to-architect-an-enterprise-rag-system">Mastering RAG: How To Architect An Enterprise RAG System</a></li>
-<li>
-<p><a href="https://txt.cohere.com/rag-chatbot/">RAG chatbot with Chat Embedding and Reranking (cohere)</a> and <a href="https://colab.research.google.com/github/cohere-ai/notebooks/blob/main/notebooks/RAG_Chatbot_with_Chat_Embed_Rerank.ipynb">Notebook</a></p>
-</li>
-<li>
-<p>[<a href="https://github.com/the-full-stack/ask-fsdl">https://github.com/the-full-stack/ask-fsdl</a>] </p>
-</li>
+<li><a href="https://txt.cohere.com/rag-chatbot/">RAG chatbot with Chat Embedding and Reranking (cohere)</a> and <a href="https://colab.research.google.com/github/cohere-ai/notebooks/blob/main/notebooks/RAG_Chatbot_with_Chat_Embed_Rerank.ipynb">Notebook</a></li>
+<li>[<a href="https://github.com/the-full-stack/ask-fsdl">https://github.com/the-full-stack/ask-fsdl</a>] </li>
 </ul>
 
 

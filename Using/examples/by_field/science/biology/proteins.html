@@ -5546,6 +5546,23 @@ and
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Protein Binding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteinmpnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ProteinMPNN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -7666,6 +7683,23 @@ and
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Protein Binding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteinmpnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ProteinMPNN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -7863,6 +7897,10 @@ and
 <summary><a href="https://www.sciencedirect.com/science/article/pii/S0959440X21001457">Ways of prioritizing</a></summary>
 <p><a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/08ed6633-0439-44f5-a52d-e53afb4804f2" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/08ed6633-0439-44f5-a52d-e53afb4804f2" /></a></p>
 </details>
+<details class="tip">
+<summary><a href="https://www.nature.com/articles/s41467-024-51844-2#Sec2">Fine-tuning protein language models boosts predictions across diverse tasks</a></summary>
+<p>The authors compared finetuning on ESM2, ProtT5 adn Ankh on different tasks. They found that supervised finetuning improves doenstream predictions, PEFT has similar improvement with great acceleration. They also suggest that final-layer tuning is not ideal. </p>
+</details>
 <h3 id="sequence-proposer">Sequence Proposer<a class="headerlink" href="#sequence-proposer" title="Permanent link">&para;</a></h3>
 <p>With a fitness predictor made available, the next step is to create proposal sequences that may be evaluated with the predictor model, or potentially with direct measurement.</p>
 <p>One way of doing this is to use <a href="#generative-models"><em>generative models</em></a>. Generative modeles can be made by using logistic/probabilistic outputs from models and random sampling to determine amino acids in a sequence. It can be done so using <em>causal language</em> (CLM) models, like GPT, where the tokens only attend to prior tokens, or with <em>masked language</em> models (CLM), that can attend to the entire sequences. With CLM, directly in seeding the generated sequence with starting sequences of the target sequence, or even from a natural language prompt, as in models like <a href="#progen2">ProGen</a>, sequences are generated sequentially. In other models, sequences can be generated using MLM using several techniques. </p>
@@ -7951,11 +7989,9 @@ Particularly the following image provides credence that these simple models of i
 <h2 id="data-selection">Data Selection<a class="headerlink" href="#data-selection" title="Permanent link">&para;</a></h2>
 <details class="abstract">
 <summary><a href="https://www.biorxiv.org/content/10.1101/2024.10.03.616542v1.full.pdf">Protein Language Model Fitness Is a Matter of Preference</a></summary>
-<p>The authors show that models preferences are biased by human preference during the data curation. Quite cleanly, they state "Algorithmic differences might be overshadowed by human</p>
+<p>The authors show that models preferences are biased by human preference during the data curation. Quite cleanly, they state "Algorithmic differences might be overshadowed by human preferences at the data level confounding whether a model better captures the biology of proteome"</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/74a52ec5-500a-4c48-bb79-d91cd81be5ed" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="651" alt="image" src="https://github.com/user-attachments/assets/74a52ec5-500a-4c48-bb79-d91cd81be5ed"></a></p>
 </details>
-<p>preferences at the data level confounding whether a model better captures the biology of proteome"</p>
-<div class="language-text highlight"><pre><span></span><code>&lt;img width=&quot;651&quot; alt=&quot;image&quot; src=&quot;https://github.com/user-attachments/assets/74a52ec5-500a-4c48-bb79-d91cd81be5ed&quot;&gt;
-</code></pre></div>
 <h2 id="data-sources">Data Sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
 <details class="note">
 <summary><a href="https://www.brenda-enzymes.org/">Brenda</a></summary>
@@ -7984,8 +8020,7 @@ Particularly the following image provides credence that these simple models of i
 <p>The Pseudo log likelihood (PLL) is often used to evaluate the fintess of a given sequence conditioned upon the parameters of the model. It found by evaluating the following: <a class="glightbox" href="https://github.com/user-attachments/assets/c42b5596-8ec2-43af-a800-727d9b7883b4" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="211" alt="image" src="https://github.com/user-attachments/assets/c42b5596-8ec2-43af-a800-727d9b7883b4"></a></p>
 <p>It requires <span class="arithmatex">\(O(L)\)</span> passes through the data. </p>
 <p>There is a way to go faster, as in <a href="https://www.biorxiv.org/content/10.1101/2024.10.03.616542v1.full.pdf">Protein Language Model Fitness Is a Matter of Preference</a>. The authors show that the pseudo log likelihood can be calculated in a single pass as such:</p>
-<div class="language-text highlight"><pre><span></span><code>&lt;img width=&quot;366&quot; alt=&quot;image&quot; src=&quot;https://github.com/user-attachments/assets/56807d57-1f12-402c-98da-17107d965063&quot;&gt;
-</code></pre></div>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/56807d57-1f12-402c-98da-17107d965063" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="366" alt="image" src="https://github.com/user-attachments/assets/56807d57-1f12-402c-98da-17107d965063"></a></p>
 <details class="abstract">
 <summary><a href="https://github.com/salesforce/provis">BERTOLOGY MEETS BIOLOGY: INTERPRETING ATTENTION IN PROTEIN LANGUAGE MODELS</a></summary>
 <p><strong>Developments</strong> The authors show in their <a href="https://arxiv.org/pdf/2006.15222.pdf">paper</a> "that attention: (1) captures the folding structure of proteins, connecting amino acids that are far apart in the underlying sequence, but spatially close in the three-dimensional structure, (2) targets binding sites, a key functional component of proteins, and (3) focuses on progressively more complex biophysical properties with increasing layer depth. We find this behavior to be consistent across three Transformer architectures (BERT, ALBERT, XLNet) and two distinct protein datasets. We also present a three-dimensional visualization of the interaction between attention and protein structure."
@@ -8087,8 +8122,15 @@ Notably, they fuse protein sequences with English-language prompts and use BPE e
 
 <details class="abstract">
 <summary><a href="https://github.com/chandar-lab/AMPLIFY?tab=readme-ov-file">AMPLIFY Protein Language Model</a></summary>
-<p>The author's show in their <a href="https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf">Paper</a> that they can train highly performant ESM models (and modifications) with better performance. They use different dat asets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. 
-They also use something called _pseudo-perplexity- which measures the replacement of non-random masking (one of each sequence). </p>
+<p>The author's show in their <a href="https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf">Paper</a> that they can train highly performant ESM models (and modifications) with better performance. They use different data sets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. 
+They also use something called <em>pseudo-perplexity</em> which measures the replacement of non-random masking (one of each sequence). 
+They show that retraining the same models (ESM and Amplify) on uniref data 
+<strong>Differences with ESM</strong> *
+* They used SwiGLU and RMS norm instead of Gelu Activation. 
+* They used reduced number of attention heads.
+* They used AdamW optimization (not Adam). 
+* They trained with bf16 using DeepSpeed, an dmodel sharding. 
+* They streamlined the vocabulary removing unused tokens.</p>
 </details>
 <h5 id="alpha-models">Alpha-models<a class="headerlink" href="#alpha-models" title="Permanent link">&para;</a></h5>
 <details class="note">
@@ -8193,7 +8235,21 @@ Via full-atom molecular simulations for direct validation from physical and chem
 <strong>Training</strong>: From scratch.
 <strong>Results</strong>: High performance of PLM 97% accuracy over other models, though this accuracy is reduced when reducing train/test set homology.</p>
 </details>
+<p><a href="/shared/thermompnn.html" class="page-url" id="page-url-5"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-5')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-5">Link copied!</div>
+</div>
+
+<details class="abstract">
+<summary><a href="https://github.com/Kuhlman-Lab/ThermoMPNN">Transfer learning to leverage larger datasets for improved prediction of protein stability changes</a></summary>
+<p>The authors show in their <a href="https://www.biorxiv.org/content/10.1101/2023.07.27.550881v1.full.pdf">paper</a> a graph neural network (GNN) trained using transfer learning to predict changes in stability for protein point mutants.</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/4dcab37e-b57a-4635-86dc-93c46a5c34c7" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4dcab37e-b57a-4635-86dc-93c46a5c34c7" /></a></p>
 <h3 id="candidate-identification">Candidate Identification<a class="headerlink" href="#candidate-identification" title="Permanent link">&para;</a></h3>
+</details>
 <p>Particularly for evolutionary methods, it is essential to know <em>where to start</em> optimizing from. GenAI can be used to identify candidates based on databases of prior candidates.</p>
 <p>Searching is essential to find similar sequences that may aid in the training or fine-tuning of models. This can be done with sequence-based alignment, as well as structure-based alignment. Here are a few references of highly-relevant tools for search/alignment.</p>
 <details class="tip">
@@ -8214,19 +8270,20 @@ Via full-atom molecular simulations for direct validation from physical and chem
 <p>The authors show in their <a href="https://www.pnas.org/doi/full/10.1073/pnas.2220778120">paper</a> the use of contrastive learning to help co-locate proteins and potential drug molecules in a 'shared feature space' and learns to map drugs against non-binding 'decoy' molecules.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/bb697ce1-6ad7-4a1c-9122-c19ea93ce9eb" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/bb697ce1-6ad7-4a1c-9122-c19ea93ce9eb" /></a></p>
 </details>
+<h5 id="proteinmpnn">ProteinMPNN<a class="headerlink" href="#proteinmpnn" title="Permanent link">&para;</a></h5>
 <details class="abstract">
 <summary><a href="https://github.com/dauparas/ProteinMPNN">Robust deep learning based protein sequence design using ProteinMPNN</a></summary>
 <p>In their <a href="https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1">paper</a> the authors reveal a novel method to predict sequences and sequence recovery.
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/ee8d6025-d4a1-4ade-ac22-cfb26cabd41e" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ee8d6025-d4a1-4ade-ac22-cfb26cabd41e" /></a></p>
 </details>
 <h2 id="performance-optimizations">Performance optimizations<a class="headerlink" href="#performance-optimizations" title="Permanent link">&para;</a></h2>
-<p><a href="/shared/cheap.html" class="page-url" id="page-url-5"></a></p>
+<p><a href="/shared/cheap.html" class="page-url" id="page-url-6"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-5')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-6')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-5">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-6">Link copied!</div>
 </div>
 
 <details class="tip">

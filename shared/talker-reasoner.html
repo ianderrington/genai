@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMPLIFY Protein Language Model</title>
+    <title>Agents Thinking Fast and Slow: A Talker-Reasoner Architecture</title>
     
     
 
-    <meta property="og:url" content="https://www.managen.ai//shared/amplify-plm.html">
+    <meta property="og:url" content="https://www.managen.ai//shared/talker-reasoner.html">
 
-    <meta property="og:title" content="AMPLIFY Protein Language Model">
-    <meta property="og:description" content="The author's show in their [Paper](https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf) that they can train highly performant ESM models (and modifications) with better performance. They use different data sets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. "">
+    <meta property="og:title" content="Agents Thinking Fast and Slow: A Talker-Reasoner Architecture">
+    <meta property="og:description" content="**Developments** INspired by Kahneman's two-system thinking with System 1 fast/intuitive thinking and System 2 slow/rational thinking, the authors propose a new system for enabling  "">
 
     <meta property="og:type"  content="website" />
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://www.managen.ai//shared/amplify-plm.html">
+    <meta property="og:image" content="https://github.com/user-attachments/assets/73ea3f6d-5e57-4a12-ba3d-4f3e21589432">
+    <meta property="og:url" content="https://www.managen.ai//shared/talker-reasoner.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AMPLIFY Protein Language Model">
-    <meta name="twitter:description" content="AMPLIFY Protein Language Model">
-    <meta name="twitter:image" content="">
+    <meta name="twitter:title" content="Agents Thinking Fast and Slow: A Talker-Reasoner Architecture">
+    <meta name="twitter:description" content="Agents Thinking Fast and Slow: A Talker-Reasoner Architecture">
+    <meta name="twitter:image" content="https://github.com/user-attachments/assets/73ea3f6d-5e57-4a12-ba3d-4f3e21589432">
     <!--Import stylesheet  -->
     <link rel="stylesheet" href="../../stylesheets/share-card.css">
     <style>
@@ -61,22 +61,37 @@
 <body>
     
     <div class="blog-content">
-        <h1><p><a href="https://github.com/chandar-lab/AMPLIFY?tab=readme-ov-file">AMPLIFY Protein Language Model</a></p></h1>
-        <p>The author's show in their <a href="https://www.biorxiv.org/content/10.1101/2024.09.23.614603v1.full.pdf">Paper</a> that they can train highly performant ESM models (and modifications) with better performance. They use different data sets with better filtering and validation selection. They use flash attention. Together they see their 350M model is as performant of 15B ESM model. 
-They also use something called <em>pseudo-perplexity</em> which measures the replacement of non-random masking (one of each sequence). 
-They show that retraining the same models (ESM and Amplify) on uniref data 
-<strong>Differences with ESM</strong> *
-* They used SwiGLU and RMS norm instead of Gelu Activation. 
-* They used reduced number of attention heads.
-* They used AdamW optimization (not Adam). 
-* They trained with bf16 using DeepSpeed, an dmodel sharding. 
-* They streamlined the vocabulary removing unused tokens.</p>
+        <h1><p><a href="https://arxiv.org/pdf/2410.08328v1">Agents Thinking Fast and Slow: A Talker-Reasoner Architecture</a></p></h1>
+        <p><strong>Developments</strong> INspired by Kahneman's two-system thinking with System 1 fast/intuitive thinking and System 2 slow/rational thinking, the authors propose a new system for enabling  </p>
+<ol>
+<li>
+<p>The Talker (System 1) is fast, intuitive, and focused on natural conversation. It synthesizes responses based on all available information.</p>
+</li>
+<li>
+<p>The Reasoner (System 2) is slower, more deliberative, and logical. It handles multi-step reasoning, planning, and executing actions to achieve goals.</p>
+</li>
+</ol>
+<p>Why does this matter? By separating conversation from reasoning, the Talker-Reasoner architecture offers several advantages:</p>
+<ol>
+<li>
+<p>Modularity: Each component can be optimized independently, making the system more flexible and adaptable.</p>
+</li>
+<li>
+<p>Lower latency: The Talker can respond quickly while the Reasoner works in the background, improving user experience.</p>
+</li>
+<li>
+<p>Improved reasoning: The Reasoner can focus on complex planning without getting bogged down in conversation.
+<img width="568" alt="image" src="https://github.com/user-attachments/assets/73ea3f6d-5e57-4a12-ba3d-4f3e21589432"></p>
+</li>
+</ol>
+<p><img width="483" alt="image" src="https://github.com/user-attachments/assets/21062c3d-635e-4ab6-acf0-6b82e8e08cb7"></p>
+<p><img width="481" alt="image" src="https://github.com/user-attachments/assets/54d1e081-1212-4e42-b6cf-9f3ee1e37528"></p>
     </div>
-    <a href="https://www.managen.ai//shared/amplify-plm.html" class="page-url" id="page-url"></a>
+    <a href="https://www.managen.ai//shared/talker-reasoner.html" class="page-url" id="page-url"></a>
     <!-- Clipboard copy icon/button -->
     <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
     <!-- Copied popup -->
     <div class="copied-popup" id="copied-popup">Link copied!</div>
-    <a href="https://www.managen.ai//Using/examples/by_field/science/biology/proteins.html" class="backlink-url" id="backlink-url">See the main site!</a>
+    <a href="https://www.managen.ai//Understanding/agents/cognitive_architecture.html" class="backlink-url" id="backlink-url">See the main site!</a>
 </body>
 </html>
