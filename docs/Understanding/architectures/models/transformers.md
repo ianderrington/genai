@@ -173,6 +173,13 @@ In its vanilla state, Transformers are $O(N^2)$ in their computation with self-c
     <img width="1289" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e386d9ab-f337-4df9-b2d2-2f4168eb8945">
     <img width="664" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ce207f67-e4d9-4698-b5f2-47f5a6cb2e80">
 
+
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/microsoft/unilm) [Diff-Transformer](https://github.com/microsoft/unilm/tree/master/Diff-Transformer)" diff-transformer
+    **Developments**: The authors [introduce](https://arxiv.org/pdf/2410.05258) a new attention mechanism, called 'Diff-Transformer', that amplifies attention to the relevant context while canceling noise. It does so by calculating attention scores as the difference between two separate softmax attention maps. The subtraction cancels noise, promoting the emergence of sparse attention patterns. Experimental results on language modeling show that DIFF Transformer outperforms Transformer in various settings of scaling up model size and training tokens.
+    <img width="1289" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/e386d9ab-f337-4df9-b2d2-2f4168eb8945">
+
+
+
 ### Computation Reduction
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/bobby-he/simplified_transformers) [Simplified Transformers](https://github.com/bobby-he/simplified_transformers) that removes the 'value' parameter-set to increase speed by 14% with potentially minimal accuracy reduction"
