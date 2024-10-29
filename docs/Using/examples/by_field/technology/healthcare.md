@@ -46,7 +46,9 @@
         +ej [na], ...}. Answer
         the user question: QUESTION using the graph:
         GRAPH... 
-    ````
+    ```
+    <img width="914" alt="image" src="https://github.com/user-attachments/assets/18e7f6e6-47c3-4c0c-9b4b-992564d3165b">
+
 
     
 ### Patient Care
