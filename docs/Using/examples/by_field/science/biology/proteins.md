@@ -88,6 +88,21 @@ When it is possible to iteratively measure proposed sequences, new data can be u
 ??? tip "[Fine-tuning protein language models boosts predictions across diverse tasks](https://www.nature.com/articles/s41467-024-51844-2#Sec2)"
     The authors compared finetuning on ESM2, ProtT5 adn Ankh on different tasks. They found that supervised finetuning improves doenstream predictions, PEFT has similar improvement with great acceleration. They also suggest that final-layer tuning is not ideal. 
 
+
+??? tip "[Evaluation of Machine Learning-Assisted Directed Evolution Across Diverse Combinatorial Landscapes](https://www.biorxiv.org/content/10.1101/2024.10.24.619774v1.full.pdf)"
+    **Abstract**
+    
+    > Various machine learning-assisted directed evolution (MLDE) strategies have been shown to identify highfitness protein variants more efficiently than typical wet-lab directed evolution approaches. However,
+    limited understanding of the factors influencing MLDE performance across diverse proteins has hindered
+    optimal strategy selection for wet-lab campaigns. To address this, we systematically analyzed multiple
+    MLDE strategies, including active learning and focused training using six distinct zero-shot predictors,
+    across 16 diverse protein fitness landscapes. By quantifying landscape navigability with six attributes, we
+    found that MLDE offers a greater advantage on landscapes which are more challenging for directed
+    evolution, especially when focused training is combined with active learning. Despite varying levels of
+    advantage across landscapes, focused training with zero-shot predictors leveraging distinct evolutionary,
+    structural, and stability knowledge sources consistently outperforms random sampling for both binding
+    interactions and enzyme activities. Our findings provide practical guidelines for selecting MLDE strategies
+    for protein engineering
 ### Sequence Proposer
 
 With a fitness predictor made available, the next step is to create proposal sequences that may be evaluated with the predictor model, or potentially with direct measurement.
