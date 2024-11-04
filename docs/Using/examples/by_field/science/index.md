@@ -21,7 +21,30 @@ Generative AI has one of the most powerful potentials for science by enabling ra
     classDef purple fill:#dda0dd,stroke:#333,stroke-width:2px,color:black;
 ```
 
-## Agents with multiple abilities
+??? note "[Empowering biomedical discovery with AI agents](https://www.cell.com/cell/fulltext/S0092-8674%2824%2901070-5)"
+    The authors perceive a system that is enabling AI and Scientists to collaborate for proficient biomedical discovery. 
+    ![image](https://github.com/user-attachments/assets/acccf7b1-b12c-4029-ae6c-466c43b87cc7)
+    They describe the components that neeed to be in play for it to work. 
+    <img width="740" alt="image" src="https://github.com/user-attachments/assets/5fb9fbc1-8dd8-4cbd-868b-6af9e75375aa">
+
+
+
+??? abstract "[DISCOVERYWORLD: A Virtual Environment for Developing and Evaluating Automated Scientific Discovery Agents](https://github.com/allenai/discoveryworld)"
+    The authors describe in their [paper](https://arxiv.org/pdf/2406.06769) and code a world-based scientific discovery evaluation and agentsacross a wide set of themes and descriptions. 
+    <img width="599" alt="image" src="https://github.com/user-attachments/assets/785bf887-f4cb-4952-a68d-08302829d3df">
+
+    <img width="577" alt="image" src="https://github.com/user-attachments/assets/b6b271a1-436a-4126-9c27-0acf9863a526">
+
+    The authors evaluate several different methods described in their own words, showing a ReAct agent was the best. 
+    > ReAct: This agent uses the ReAct [35] approach of generating a thought and action at each step
+        given the recent trajectory of thoughts, actions and observations. Each action is executed in the
+        environment and the observation is added to the trajectory. In addition to this trajectory, we also
+        provide the current game state information as text, e.g., nearby objects, teleportable locations, etc. If
+        needed, we trim the trajectory (remove oldest steps first) to fit the prompt within the maximum token
+        limit, which (in practice) included up to the last 40 steps of the trajectory. To evaluate this agent’s
+        discovered knowledge, we evaluate the concatenation of the agent’s “thoughts” across all time steps.
+        
+ 
 
 ??? abstract "[Language Agents Achieve SUperhuman Synthesis of Scientific Knowledge (and Paper2QA)](https://github.com/Future-House/paper-qa)"
     
