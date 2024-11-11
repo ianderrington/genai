@@ -482,6 +482,53 @@ Semantic layers provide an ability to look up connections between objects, and h
 
 ### Research
 
+??? abstract "[A Prompt-Based Knowledge Graph Foundation Model for Universal In-Context Reasoning](https://github.com/nju-websoft/KG-ICL)"
+    The aouthors show in their [paper](https://arxiv.org/pdf/2410.12288) the authors propose Knogledge Graph In-Context-Learning to achieve more unversal reasoning ability. They show quality results over multiple datasets. They construct a prompt graph starting with a fact about a wqyer relation (subject, query relation, object). The consider entity context and relation which is the example subject and object. The other consdiers relation context which considers relation paths between.
+
+    **Prompt Graph Generation:**
+
+    1. Example sampling. 
+        - Samples example facts for the query relation
+    2. Prompt graph extraction
+        - Extracts a subgraph including neighboring entities and k-hop paths
+        - Prompt graph includes: 
+            a) An example fact about the query relation (subject, query relation, object)
+            b) Entity context: neighboring entities of the example subject and object
+            c) Relation context: relational paths between the subject and object entities
+    
+    **Prompt Encoding:**
+    
+    The prompt encoding process involves several key components:
+    
+    1. Unified Tokenizer:
+    
+    - Addresses the challenge of varying entities and relations across different KGs
+    - Extends the entity labeling method to relations
+    - Groups entities based on their shortest path lengths to the example subject and object entities
+    - Categorizes relations into two classes: query relations and others
+    - **Maps entities or relations in the same group to the same token**
+    
+    2. Token Initialization:
+    
+    - Initializes token representations for entities and relations in the prompt graph1
+    
+    3. Message Passing Neural Network:
+    
+    - Uses a multi-layer message passing neural network to encode the prompt graph
+    - Processes the initialized token representations
+    
+    4. Readout Module:
+    - Obtains the final prompt representation from the encoded prompt graph
+    
+    **Knowledge Graph Reasoning:**
+    
+    - Initializes entity and relation representations using the encoded prompts
+    - Performs message passing over the KG
+    - Scores candidate entities based on the final entity representations
+
+    ![image](https://github.com/user-attachments/assets/c8c43ee0-970c-4135-bd5f-abdb0db36108)
+
+
 ??? note "[Introducing MechGPT 🦾🤖](https://arxiv.org/pdf/2310.10445)"
 
     This project by Markus J. Buehler is one of the coolest use cases of 1) fine-tuning an LLM, and 2) generating a knowledge graph that we’ve seen (powered by LlamaIndex 🦙).
