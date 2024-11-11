@@ -293,6 +293,14 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 
 ## Interesting Research
 
+
+??? note "[ProSA: Assessing and Understanding the Prompt Sensitivity of LLMs (Prompt variations matter less for batter models) ](https://arxiv.org/abs/2410.12405)"
+    A reason why prompt engineering is becoming less important for most people: larger models are less sensitive to prompt variations, including roles & goals, then smaller models.
+    ![image](https://github.com/user-attachments/assets/b435048b-4125-4b67-82ea-b45999c326d9)
+
+    
+
+
 ## Information to Sort into this Document
 
 
