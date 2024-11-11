@@ -333,13 +333,19 @@ There is a way to go faster, as in [Protein Language Model Fitness Is a Matter o
 ##### Alpha-models
 
 
+??? abstract "[(Research-only) open source Alphafold3](https://github.com/google-deepmind/alphafold3)"
+
 ??? note "[(closed source) De novo design of high-affinity protein binders with AlphaProteo](https://arxiv.org/pdf/2409.08022)"
     The authors reveal in their paper and [blog](https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health-research/), a very performant solution that designs proteins to bind to protein targets. 
     
 ??? note "[(semi-open) Accurate structure prediction of biomolecular interactions with AlphaFold 3](https://www.nature.com/articles/s41586-024-07487-w)"
     The authors reveal a highly powerful solution that allows higha ccuracy binding, and uses tokenization beyond single protein letters. 
 
+??? abstract "[Protenix: Protein + X](https://github.com/bytedance/Protenix?tab=readme-ov-file)"
+    The authors share in their [technichal report](https://github.com/bytedance/Protenix/blob/main/Protenix_Technical_Report.pdf) and code a trainable PyTorch reproduction of AlphaFold 3.
+
 ??? abstract "[Open source implementation of AlphaFold3](https://github.com/Ligo-Biosciences/AlphaFold3)"
+
 
 
 ##### xTrimo
