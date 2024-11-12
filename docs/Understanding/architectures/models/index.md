@@ -131,6 +131,8 @@ But is softmax int he present form completely apparent. Here is some research in
             return jax.nn.softmax(logits * beta)
     ```
 
+    An example collab note book is [here](https://colab.research.google.com/drive/18-2Z4TMua-nwgCpIZo0lsKL6RDxH5Bvo?usp=sharing)
+
 
 
 !!! note "Is softmax Off by 1?"
