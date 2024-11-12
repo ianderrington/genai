@@ -18,7 +18,7 @@
 
     1. **Medical papers/books**
     2. **Medical Dictionaries**
-    3. **UMLS) made of well-defined medical vocabularies and their relationships. 
+    3. **UMLS** made of well-defined medical vocabularies and their relationships. 
 
     They link the entities that are extracted from medical books/papers as E2, based on their relevance, then they use to compute cosine similarity. They then create a relation as a consise phrase based on on the entity, and associated references. 
     
@@ -29,7 +29,7 @@
     strictly adhering to the following categories... {Tag
     Name: Description of the tag}... .
     ```
-    (Their other well constructed prompts can be found [here](https://github.com/MedicineToken/Medical-Graph-RAG/blob/main/nano_graphrag/prompt.py)
+    Their other well constructed prompts can be found [here](https://github.com/MedicineToken/Medical-Graph-RAG/blob/main/nano_graphrag/prompt.py)
 
     They then iterate using heirarchichal clustering based on tag similarity to group the graphs and generate synthesized tag summaries, with each graph having it's own groups. They try to merge the top 20% of most similar pairs, and merge them if the pairwise similarities cross a specified threshold. 
     
@@ -50,11 +50,11 @@
     <img width="914" alt="image" src="https://github.com/user-attachments/assets/18e7f6e6-47c3-4c0c-9b4b-992564d3165b">
 
 
-    
+
 ### Patient Care
 
 
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/FeatureBaseDB/DoctorGPT) [Doctor GPT](https://github.com/FeatureBaseDB/DoctorGPT) implements advanced LLM prompting for organizing, indexing and discussing PDFs, and does so without using any type of opinionated prompt processing frameworks "“
+!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/FeatureBaseDB/DoctorGPT) [Doctor GPT](https://github.com/FeatureBaseDB/DoctorGPT) implements advanced LLM prompting for organizing, indexing and discussing PDFs, and does so without using any type of opinionated prompt processing frameworks "
 
 
 ### Disease prediction
