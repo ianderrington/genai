@@ -30,21 +30,22 @@
 ## Background
 
 ### What are Knowledge Graphs?
+
 Knowledge graphs are a type of graph database that store data in a structured format. They are used to store and query data in a way that allows for data and their relationships between to be defined, stored, and queried. 
 
 #### Definition and core concepts
 
 #### Key components: entities, relationships, attributes
+
 **Entities** are nodes in the graph, and are the main data points in the graph. They can be anything from a person, to a place, to an object, to an event, etc. 
 **Relationships** are edges in the graph, and are the connections between entities. They can be anything from a "is a" relationship, to a "part of" relationship, to a "related to" relationship, etc. 
 **Attributes** are properties of the entities and relationships. They can be anything from a "name", to a "description", to a "type", etc. 
 
 
-### Implicit vs. Explicit Knowledge
-
-LLMs learn probabilistic representation of linear knowledge representations, not necessarily higher order concepts and considerations. While relationships between text may be inferred, it may not be explicitly encoded, which can be of considerable value, in some instances, for instance when talking about 'Apple falling', LLM may be able to infer the possibliity of talking about the company and it's stocks, but could also allow for an apple falling down to the ground. It allows an 'implicit' understanding. Once trained, these understandings can be modified by prompting changes, making there application non-universal, and not necessarily modifiable. 
-
-Knowledge graphs, however, offer explicit representations of relations between items, by providing concrete associations, numerical or textual. They can be formally verified and easily modified. 
+!!! important "Implicit vs. Explicit Knowledge" implicit-vs-explicit-knowledges
+    LLMs learn probabilistic representation of linear knowledge representations, not necessarily higher order concepts and considerations. While relationships between text may be inferred, it may not be explicitly encoded, which can be of considerable value, in some instances, for instance when talking about 'Apple falling', LLM may be able to infer the possibliity of talking about the company and it's stocks, but could also allow for an apple falling down to the ground. It allows an 'implicit' understanding. Once trained, these understandings can be modified by prompting changes, making there application non-universal, and not necessarily modifiable. 
+    
+    Knowledge graphs, however, offer explicit representations of relations between items, by providing concrete associations, numerical or textual. They can be formally verified and easily modified. 
 
 
 #### Comparison between statistical (LLM) and symbolic (KG) knowledge representation
@@ -74,8 +75,6 @@ Some exmaples show that LLMs can learn rules, and use them to reason.
 **Meta-learning**
 
 KGs cna improve model meta-cognition by enabling the evaluation and generation of data during both training and generation. 
-
-
 
 #### KG Representation
 
@@ -168,11 +167,7 @@ By representing graph elements as dense vectors, we can bridge the gap between s
 ### Querying Graphs With LLMs
 
 
-### Predicting Graph Atributes
-
-### Navigating Graphs
-
-### Multi-hop reasoning  and RAG
+### Retrieval Augmented Generation
 
 This technique enhances LLM outputs by first retrieving relevant information from a knowledge graph. The retrieved context guides the generation process, improving factual accuracy and coherence of LLM responses, especially for knowledge-intensive tasks.
 
@@ -219,6 +214,11 @@ This technique enhances LLM outputs by first retrieving relevant information fro
 
 #### Fused models and attention mechanisms
 Integrating knowledge graph structures directly into LLM architectures allows for more sophisticated reasoning. Techniques like graph attention networks or knowledge-aware transformers can learn to attend to relevant graph elements during text generation or understanding tasks.
+
+### Predicting Graph Atributes
+
+### Navigating Graphs
+
 
 ## Advanced Techniques
 
@@ -268,9 +268,11 @@ LLMs can be used to read graph eamples and generate cypher statements to retriev
 
 Semantic layers provide an ability to look up connections between objects, and how to use them. Functions and data, and not just data. 
 
-<div class="grid" markdown>
+<div class="grid cards" markdown>
 
-=== " With a Semantic Layer"
+-   :material-graph:{ .lg .middle } __With a Semantic Layer__
+
+    ---
 
     ```mermaid
     graph TD
@@ -279,7 +281,9 @@ Semantic layers provide an ability to look up connections between objects, and h
         C -->|"Knowledge Graph"| B
     ```
 
-=== "Without a Semantic Layer"
+-   :material-graph-outline:{ .lg .middle } __Without a Semantic Layer__
+
+    ---
 
     ```mermaid
     graph TD
