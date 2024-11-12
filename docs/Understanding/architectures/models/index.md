@@ -72,17 +72,66 @@ Vision Language models are among the most prominent of models beyond language mo
 
 
 ## Common Components
+The components of model classes include a number of functional operations. 
 
 ### Activations
-The components of model classes include a number of operations.
 
-### Softmax
-Softmax is an activation function that computes a probability-like output for logistic outputs. Generally given in the form
+!!! important "Softmax" softmax
+    Softmax is an activation function that computes a probability-like output for logistic outputs. Generally given in the form
+    
+    The softmax function with temperature that you're asking about can be expressed in the following form:
+    
+    $$ p_i = \frac{e^{z_i/\theta}}{\sum_{j=1}^K e^{z_j/\theta}} $$
+    
+    Where:
+    - $$p_i$$ is the probability for the i-th class
+    - $$z_i$$ is the i-th logit (input to softmax)
+    - \theta is the temperature parameter
+    - K is the number of classes
+    
+    Key points about this equation:
+    
+    1. The temperature parameter $\theta$ appears in both the numerator and denominator, dividing each logit $$z_i$$.
+    
+    2. As $\theta$ approaches 0, the distribution becomes more peaked (harder), concentrating most of the probability mass on the largest logit.
+    3. As T increases, the distribution becomes more uniform (softer), spreading probability mass more evenly across all classes.
+    4. When T = 1, this reduces to the standard softmax function.
+    5. The term $$e^{z_i/T}$$ is equivalent to $$(e^{z_i})^{1/T}$$, which shows how the temperature acts as an exponent to the exponential term.
+    
+    By tuning the temperature parameter, you can effectively control the "peakiness" or "softness" of the output probability distribution, which can be crucial for various machine learning applications.
+    
+    Key properties of the softmax function include:
+    
+    1. **Normalization**: The output values sum to 1, making them interpretable as probabilities.
+    
+    2. **Exponentiation**: The use of $$e^{z_i}$$ ensures all outputs are positive.
+    
+    3. **Relative scale**: Larger input values result in larger probabilities, while preserving the relative ordering of the inputs.
+    
+    4. **Non-linear transformation**: The softmax function introduces non-linearity, which is crucial for modeling complex relationships in neural networks.
 
-$$
-(softmax(x))𝑖=exp(𝑥𝑖)∑𝑗exp(𝑥𝑗) \\
-softmax(x_i) = \exp(x_i)/\sum_j\exp(x_j)
-$$
+But is softmax int he present form completely apparent. Here is some research indiating that some modifications may be preferred. 
+
+!!! important "[softmax is not enough (for sharp out-of-distribution)](https://arxiv.org/pdf/2410.01104)" adaptive-temperature
+    **Developments** The authors show that for robust circuits to exist, they must generalize well to arbitrary and valid inputs. They show that as the the number of out-of-distribution tokens increase, the sharpness  decresses and the attention coefficients decrease even if they were appropriately sharp for in-distribution examples. To solve this they propose and adaptive temperature that modifies $\theta$ based on the entropy of the input coefficient, motivated by the fact that decreaseing the temperature must decrease the entropy. 
+    
+    <img width="542" alt="image" src="https://github.com/user-attachments/assets/39b3d084-f644-4d1b-b1ce-a4a5ef8068d8">
+
+    Their _ad-hoc_ algorithm is presented as an exxample below, using [JAX]. 
+    ```python
+        def adaptive_temperature_softmax(logits):
+            original_probs = jax.nn.softmax(logits)
+            poly_fit = jnp.array([-0.037, 0.481, -2.3, 4.917, -1.791]) # see Figure 5
+            entropy = jnp.sum(-original_probs * jnp.log(original_probs + 1e-9),
+            axis=-1, keepdims=True) # compute the Shannon entropy
+            beta = jnp.where( # beta = 1 / theta
+            entropy > 0.5, # don’t overcorrect low-entropy heads
+            jnp.maximum(jnp.polyval(poly_fit, entropy), 1.0), # never increase entropy
+            1.0)
+            return jax.nn.softmax(logits * beta)
+    ```
+
+
 
 !!! note "Is softmax Off by 1?"
 
