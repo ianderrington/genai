@@ -378,7 +378,7 @@ Semantic layers provide an ability to look up connections between objects, and h
 
 ### Other Notable
 
-??? abstract "[iText2KG](https://github.com/AuvaLab/itext2kg)"
+??? abstract "‼️ [iText2KG](https://github.com/AuvaLab/itext2kg)"
     🔥 We are excited to share the release of our algorithm, iText2KG, a zero-shot method for incremental knowledge graph (KG) construction with resolved entities and relations.  Our method demonstrates superior performance compared to baseline methods across three scenarios: converting scientific papers to graphs, websites to graphs, and CVs to graphs. Now available as a Python package, iText2KG has been accepted at WISE 2024.
 
     ✅ iText2KG addresses key limitations in current KG construction methods, such as reliance on predefined ontologies, topic dependency, and the need for extensive supervised training. It also tackles a major limitation of current LLM-based methods for KG construction: Entity and Relation Resolution. These LLM-based methods often produce graphs with unresolved and semantically duplicated entities and relations, leading to inconsistencies and extensive post-processing.
@@ -413,6 +413,15 @@ Semantic layers provide an ability to look up connections between objects, and h
 
 ## Applications
 
+### Recommendation
+
+??? note "[Knowledge Graph Enhanced Language Agents for Recommendation](https://arxiv.org/pdf/2410.19627)"
+    The authors show value in using KG to enable improved recommendations with LLMs. 
+    
+    <img width="708" alt="image" src="https://github.com/user-attachments/assets/fc828003-d050-40af-a2b5-e7f2973c41cd">
+
+    <img width="582" alt="image" src="https://github.com/user-attachments/assets/654b4b76-809a-4e87-9af9-e210d91a36ec">
+
 ### NER extraction 
 
 ??? abstract "[GLiner](https://github.com/urchade/GLiNER)"
@@ -423,8 +432,7 @@ Semantic layers provide an ability to look up connections between objects, and h
 
 
 
-??? note "[Knowledge-Consistent Dialogue Generation with Language Models and Knowledge Graphs](https://openreview.net/forum?id=WhWlYzUTJfP)"
-
+??? note "[Knowledge-Consistent Dialogue Generation with Language Models and Knowledge Graphs](https://openreview.net/forum?id=WhWlYzUTJfP)"\
     Abstract: 
     "Pre-trained language models have achieved impressive performances on dialogue generation tasks. However, when generating responses for a conversation that requires factual knowledge, they are far from perfect, due to the absence of mechanisms to retrieve, encode, and reflect the knowledge in the generated responses. Some knowledge-grounded dialogue generation methods tackle this problem by leveraging the structured knowledge from Knowledge Graphs (KGs). However, existing methods do not guarantee that the model utilizes a relevant piece of knowledge from the KG before generating knowledge-consistent dialogues. To overcome this limitation, we propose SUbgraph Retrieval-augmented GEneration (SURGE), a framework for generating context-relevant and knowledge-consistent dialogues with a KG. Specifically, our method first retrieves the relevant subgraph from the KG, and then enforces consistency across facts by perturbing their word embeddings conditioned on the retrieved subgraph. Then, it learns a latent representation space using contrastive learning which ensures that the generated texts have high similarity to the retrieved subgraphs. We validate the performance of our SURGE framework on the OpendialKG and KOMODIS datasets and show that our method generates high-quality dialogues that faithfully reflect the knowledge from the KG."
 
