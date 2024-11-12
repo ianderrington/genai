@@ -1682,6 +1682,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1881,6 +1883,33 @@ and
     
   
     Grounding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Understanding/architectures/training/online.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Online
   
 
     
@@ -7901,6 +7930,23 @@ and
 <summary><a href="https://www.nature.com/articles/s41467-024-51844-2#Sec2">Fine-tuning protein language models boosts predictions across diverse tasks</a></summary>
 <p>The authors compared finetuning on ESM2, ProtT5 adn Ankh on different tasks. They found that supervised finetuning improves doenstream predictions, PEFT has similar improvement with great acceleration. They also suggest that final-layer tuning is not ideal. </p>
 </details>
+<details class="tip">
+<summary><a href="https://www.biorxiv.org/content/10.1101/2024.10.24.619774v1.full.pdf">Evaluation of Machine Learning-Assisted Directed Evolution Across Diverse Combinatorial Landscapes</a></summary>
+<p><strong>Abstract</strong></p>
+<blockquote>
+<p>Various machine learning-assisted directed evolution (MLDE) strategies have been shown to identify highfitness protein variants more efficiently than typical wet-lab directed evolution approaches. However,
+limited understanding of the factors influencing MLDE performance across diverse proteins has hindered
+optimal strategy selection for wet-lab campaigns. To address this, we systematically analyzed multiple
+MLDE strategies, including active learning and focused training using six distinct zero-shot predictors,
+across 16 diverse protein fitness landscapes. By quantifying landscape navigability with six attributes, we
+found that MLDE offers a greater advantage on landscapes which are more challenging for directed
+evolution, especially when focused training is combined with active learning. Despite varying levels of
+advantage across landscapes, focused training with zero-shot predictors leveraging distinct evolutionary,
+structural, and stability knowledge sources consistently outperforms random sampling for both binding
+interactions and enzyme activities. Our findings provide practical guidelines for selecting MLDE strategies
+for protein engineering</p>
+</blockquote>
+</details>
 <h3 id="sequence-proposer">Sequence Proposer<a class="headerlink" href="#sequence-proposer" title="Permanent link">&para;</a></h3>
 <p>With a fitness predictor made available, the next step is to create proposal sequences that may be evaluated with the predictor model, or potentially with direct measurement.</p>
 <p>One way of doing this is to use <a href="#generative-models"><em>generative models</em></a>. Generative modeles can be made by using logistic/probabilistic outputs from models and random sampling to determine amino acids in a sequence. It can be done so using <em>causal language</em> (CLM) models, like GPT, where the tokens only attend to prior tokens, or with <em>masked language</em> models (CLM), that can attend to the entire sequences. With CLM, directly in seeding the generated sequence with starting sequences of the target sequence, or even from a natural language prompt, as in models like <a href="#progen2">ProGen</a>, sequences are generated sequentially. In other models, sequences can be generated using MLM using several techniques. </p>
@@ -8133,6 +8179,9 @@ They show that retraining the same models (ESM and Amplify) on uniref data
 * They streamlined the vocabulary removing unused tokens.</p>
 </details>
 <h5 id="alpha-models">Alpha-models<a class="headerlink" href="#alpha-models" title="Permanent link">&para;</a></h5>
+<details class="abstract">
+<summary><a href="https://github.com/google-deepmind/alphafold3">(Research-only) open source Alphafold3</a></summary>
+</details>
 <details class="note">
 <summary><a href="https://arxiv.org/pdf/2409.08022">(closed source) De novo design of high-affinity protein binders with AlphaProteo</a></summary>
 <p>The authors reveal in their paper and <a href="https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health-research/">blog</a>, a very performant solution that designs proteins to bind to protein targets. </p>
@@ -8140,6 +8189,10 @@ They show that retraining the same models (ESM and Amplify) on uniref data
 <details class="note">
 <summary><a href="https://www.nature.com/articles/s41586-024-07487-w">(semi-open) Accurate structure prediction of biomolecular interactions with AlphaFold 3</a></summary>
 <p>The authors reveal a highly powerful solution that allows higha ccuracy binding, and uses tokenization beyond single protein letters. </p>
+</details>
+<details class="abstract">
+<summary><a href="https://github.com/bytedance/Protenix?tab=readme-ov-file">Protenix: Protein + X</a></summary>
+<p>The authors share in their <a href="https://github.com/bytedance/Protenix/blob/main/Protenix_Technical_Report.pdf">technichal report</a> and code a trainable PyTorch reproduction of AlphaFold 3.</p>
 </details>
 <details class="abstract">
 <summary><a href="https://github.com/Ligo-Biosciences/AlphaFold3">Open source implementation of AlphaFold3</a></summary>
@@ -8183,6 +8236,16 @@ They show that retraining the same models (ESM and Amplify) on uniref data
 <details class="abstract">
 <summary><a href="https://github.com/songlab-cal/tape">Tasks Assessing Protein Embeddings (TAPE)</a></summary>
 </details>
+<p>??? "<a href="https://github.com/rohitsinghlab/raygun">Miniaturizing, Modifying, and Augmenting Nature’s Proteins with</a>" raygun
+    <strong>Developments;</strong> The author show in their <a href="https://www.biorxiv.org/content/10.1101/2024.08.13.607858v1.full.pdf">publication</a> raygun a novel method that is able to generate solutions that are able to create sequneces that are able to design proteins with structural similarity but verying lengths. </p>
+<div class="language-text highlight"><pre><span></span><code>They do so by creating use models to create an intermediate multivariate normal distribution to embody varyiable length sequences into a same-lengh metric.
+
+&lt;img width=&quot;689&quot; alt=&quot;image&quot; src=&quot;https://github.com/user-attachments/assets/81fd94f5-a904-47de-8da8-574677f80535&quot;&gt;
+
+Their process of collapsing data to a smaller fixt-length embedding is a parameter free method that performs blocked chunking and averaging of components.
+
+&lt;img width=&quot;689&quot; alt=&quot;image&quot; src=&quot;https://github.com/user-attachments/assets/1c1cf62e-5c91-4e7a-90d1-4ee849dffdbf&quot;&gt;
+</code></pre></div>
 <h4 id="natural-language-protein-language-model-integrations">Natural Language + Protein Language model integrations<a class="headerlink" href="#natural-language-protein-language-model-integrations" title="Permanent link">&para;</a></h4>
 <p>It is possible to combine LLMs for natural language and PLMs to produce poweful suggestions just based on NL queries. Here are some examples. </p>
 <details class="abstract">

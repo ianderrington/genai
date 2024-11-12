@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TL;DR: Knowledge Graphs and LLMs</title>
+    <title>GRAG: Graph Retrieval-Augmented Generation</title>
     
     
 
-    <meta property="og:url" content="https://www.managen.ai//shared/tldr-graphs-and-llms.html">
+    <meta property="og:url" content="https://www.managen.ai//shared/grag.html">
 
-    <meta property="og:title" content="TL;DR: Knowledge Graphs and LLMs">
-    <meta property="og:description" content="Knowledge graphs provide structured representations of information that can enhance the reasoning capabilities of large language models. By explicitly modeling concepts and relationships, KGs offer a complementary approach to the statistical knowledge learned by LLMs, enabling more systematic and interpretable AI systems."">
+    <meta property="og:title" content="GRAG: Graph Retrieval-Augmented Generation">
+    <meta property="og:description" content="The authors tackle two issues in generation using RAGS: "">
 
     <meta property="og:type"  content="website" />
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://www.managen.ai//shared/tldr-graphs-and-llms.html">
+    <meta property="og:image" content="https://github.com/user-attachments/assets/df5a9a00-088d-4cc1-bacb-afacd225f6b3">
+    <meta property="og:url" content="https://www.managen.ai//shared/grag.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TL;DR: Knowledge Graphs and LLMs">
-    <meta name="twitter:description" content="TL;DR: Knowledge Graphs and LLMs">
-    <meta name="twitter:image" content="">
+    <meta name="twitter:title" content="GRAG: Graph Retrieval-Augmented Generation">
+    <meta name="twitter:description" content="GRAG: Graph Retrieval-Augmented Generation">
+    <meta name="twitter:image" content="https://github.com/user-attachments/assets/df5a9a00-088d-4cc1-bacb-afacd225f6b3">
     <!--Import stylesheet  -->
     <link rel="stylesheet" href="../../stylesheets/share-card.css">
     <style>
@@ -61,33 +61,19 @@
 <body>
     
     <div class="blog-content">
-        <h1><p>TL;DR: Knowledge Graphs and LLMs</p></h1>
-        <p>Knowledge graphs provide structured representations of information that can enhance the reasoning capabilities of large language models. By explicitly modeling concepts and relationships, KGs offer a complementary approach to the statistical knowledge learned by LLMs, enabling more systematic and interpretable AI systems.</p>
-<p>There are several key manners of having LLMs work with Knowledge Graphs</p>
-<ul>
-<li><strong>Constructing graphs</strong> </li>
-<li><strong>Querying graphs</strong></li>
-<li><strong>Predicting and classifying things about graph</strong></li>
-<li><strong>Navigating graphs</strong></li>
-<li><strong>Multi-hop reasoning and Retrieval Augmented Generation</strong></li>
-</ul>
-<div class="highlight"><pre><span></span><code>erDiagram
-    ENTITY_A {
-        string attributes
-    }
-    ENTITY_B {
-        string attributes
-    }
-    ENTITY_C {
-        string attributes
-    }
-    ENTITY_A ||--o{ ENTITY_B : &quot;Relationship&quot;
-    ENTITY_B ||--o{ ENTITY_C : &quot;Relationship&quot;
-    ENTITY_C ||--o{ ENTITY_A : &quot;Relationship&quot;
-</code></pre></div>
-<h2 id="background">Background</h2>
+        <h1><p><a href="https://arxiv.org/pdf/2405.16506">GRAG: Graph Retrieval-Augmented Generation</a></p></h1>
+        <p>The authors tackle two issues in generation using RAGS: </p>
+<blockquote>
+<ol>
+<li>For Retrieval: How to efficiently retrieve relevant textual subgraph</li>
+<li>For Generation: How to deliver textual subgraph joint textual and topological information into LLMS. 
+<img width="696" alt="image" src="https://github.com/user-attachments/assets/df5a9a00-088d-4cc1-bacb-afacd225f6b3">
+To do generate the information they use subgraph retrieval, as a heirarchichal description that goes into an embedder that fuses graph tokens and text tokens. 
+<img width="330" alt="image" src="https://github.com/user-attachments/assets/d0ede9ef-7bd3-452e-b2ec-fff73800a6c3"></li>
+</ol>
+</blockquote>
     </div>
-    <a href="https://www.managen.ai//shared/tldr-graphs-and-llms.html" class="page-url" id="page-url"></a>
+    <a href="https://www.managen.ai//shared/grag.html" class="page-url" id="page-url"></a>
     <!-- Clipboard copy icon/button -->
     <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
     <!-- Copied popup -->

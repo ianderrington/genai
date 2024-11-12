@@ -1684,6 +1684,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1883,6 +1885,33 @@ and
     
   
     Grounding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/training/online.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Online
   
 
     
@@ -7360,6 +7389,11 @@ and
 </div>
 <p>!!! tip "<a href="https://cameronrwolfe.substack.com/p/advanced-prompt-engineering">A good description of advanced prompt tuning</a>"gp</p>
 <h2 id="interesting-research">Interesting Research<a class="headerlink" href="#interesting-research" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary><a href="https://arxiv.org/abs/2410.12405">ProSA: Assessing and Understanding the Prompt Sensitivity of LLMs (Prompt variations matter less for batter models) </a></summary>
+<p>A reason why prompt engineering is becoming less important for most people: larger models are less sensitive to prompt variations, including roles &amp; goals, then smaller models.
+<a class="glightbox" href="https://github.com/user-attachments/assets/b435048b-4125-4b67-82ea-b45999c326d9" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b435048b-4125-4b67-82ea-b45999c326d9" /></a></p>
+</details>
 <h2 id="information-to-sort-into-this-document">Information to Sort into this Document<a class="headerlink" href="#information-to-sort-into-this-document" title="Permanent link">&para;</a></h2>
 <p>Prefix Tuning [6] adds several “prefix” tokens to the prompt embedding in both input and hidden layers, then trains the parameters of this prefix (leaving model parameters fixed) with gradient descent as a parameter-efficient fine-tuning strategy.</p>
 <p>Prompt Tuning [7] is similar to prefix tuning, but prefix tokens are only added to the input layer. These tokens are fine-tuned on each task that the language model solves, allowing prefix tokens to condition the model for a given task.</p>

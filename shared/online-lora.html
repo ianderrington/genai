@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TL;DR: Knowledge Graphs and LLMs</title>
+    <title>Online-LoRA</title>
     
     
 
-    <meta property="og:url" content="https://www.managen.ai//shared/tldr-graphs-and-llms.html">
+    <meta property="og:url" content="https://www.managen.ai//shared/online-lora.html">
 
-    <meta property="og:title" content="TL;DR: Knowledge Graphs and LLMs">
-    <meta property="og:description" content="Knowledge graphs provide structured representations of information that can enhance the reasoning capabilities of large language models. By explicitly modeling concepts and relationships, KGs offer a complementary approach to the statistical knowledge learned by LLMs, enabling more systematic and interpretable AI systems."">
+    <meta property="og:title" content="Online-LoRA">
+    <meta property="og:description" content="The authors provide code and show in [their paper](https://arxiv.org/abs/2411.05663) a manner of enabling online-lora to finetune pre-trained Vision Transformers (ViT)s in real time, thereby addressing the issues with reherasl buffers. They use dynamic loss values to ensure automatic recognition of data distribution shipfts and a novel online weight regularization strategy for combining different model parameters."">
 
     <meta property="og:type"  content="website" />
     <meta property="og:image" content="">
-    <meta property="og:url" content="https://www.managen.ai//shared/tldr-graphs-and-llms.html">
+    <meta property="og:url" content="https://www.managen.ai//shared/online-lora.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TL;DR: Knowledge Graphs and LLMs">
-    <meta name="twitter:description" content="TL;DR: Knowledge Graphs and LLMs">
+    <meta name="twitter:title" content="Online-LoRA">
+    <meta name="twitter:description" content="Online-LoRA">
     <meta name="twitter:image" content="">
     <!--Import stylesheet  -->
     <link rel="stylesheet" href="../../stylesheets/share-card.css">
@@ -61,37 +61,16 @@
 <body>
     
     <div class="blog-content">
-        <h1><p>TL;DR: Knowledge Graphs and LLMs</p></h1>
-        <p>Knowledge graphs provide structured representations of information that can enhance the reasoning capabilities of large language models. By explicitly modeling concepts and relationships, KGs offer a complementary approach to the statistical knowledge learned by LLMs, enabling more systematic and interpretable AI systems.</p>
-<p>There are several key manners of having LLMs work with Knowledge Graphs</p>
-<ul>
-<li><strong>Constructing graphs</strong> </li>
-<li><strong>Querying graphs</strong></li>
-<li><strong>Predicting and classifying things about graph</strong></li>
-<li><strong>Navigating graphs</strong></li>
-<li><strong>Multi-hop reasoning and Retrieval Augmented Generation</strong></li>
-</ul>
-<div class="highlight"><pre><span></span><code>erDiagram
-    ENTITY_A {
-        string attributes
-    }
-    ENTITY_B {
-        string attributes
-    }
-    ENTITY_C {
-        string attributes
-    }
-    ENTITY_A ||--o{ ENTITY_B : &quot;Relationship&quot;
-    ENTITY_B ||--o{ ENTITY_C : &quot;Relationship&quot;
-    ENTITY_C ||--o{ ENTITY_A : &quot;Relationship&quot;
+        <h1><p><a href="ttps://github.com/christina200/online-lora-official">Online-LoRA</a></p></h1>
+        <p>The authors provide code and show in <a href="https://arxiv.org/abs/2411.05663">their paper</a> a manner of enabling online-lora to finetune pre-trained Vision Transformers (ViT)s in real time, thereby addressing the issues with reherasl buffers. They use dynamic loss values to ensure automatic recognition of data distribution shipfts and a novel online weight regularization strategy for combining different model parameters.</p>
+<div class="highlight"><pre><span></span><code>![image](https://github.com/user-attachments/assets/b2800849-e6b4-43a2-822a-5686f4e4f400)
 </code></pre></div>
-<h2 id="background">Background</h2>
     </div>
-    <a href="https://www.managen.ai//shared/tldr-graphs-and-llms.html" class="page-url" id="page-url"></a>
+    <a href="https://www.managen.ai//shared/online-lora.html" class="page-url" id="page-url"></a>
     <!-- Clipboard copy icon/button -->
     <span class="copy-icon" id="copy-icon" class="h3" onclick="copyToClipboard('page-url' )">Share link! &#128203; </span>
     <!-- Copied popup -->
     <div class="copied-popup" id="copied-popup">Link copied!</div>
-    <a href="https://www.managen.ai//Understanding/agents/knowledge_graphs.html" class="backlink-url" id="backlink-url">See the main site!</a>
+    <a href="https://www.managen.ai//Understanding/architectures/training/online.html" class="backlink-url" id="backlink-url">See the main site!</a>
 </body>
 </html>

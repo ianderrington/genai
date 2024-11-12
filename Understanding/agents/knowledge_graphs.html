@@ -1684,6 +1684,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1883,6 +1885,33 @@ and
     
   
     Grounding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architectures/training/online.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Online
   
 
     
@@ -8499,8 +8528,8 @@ and
 <li><strong>Constructing graphs</strong> </li>
 <li><strong>Querying graphs</strong></li>
 <li><strong>Predicting and classifying things about graph</strong></li>
-<li>**Navigating graphs **</li>
-<li>** Multi-hop reasoning and Retrieval Augmented Generation**</li>
+<li><strong>Navigating graphs</strong></li>
+<li><strong>Multi-hop reasoning and Retrieval Augmented Generation</strong></li>
 </ul>
 <pre class="mermaid"><code>erDiagram
     ENTITY_A {
@@ -8621,6 +8650,28 @@ and
 <p><strong>Developments</strong> The author spropose prompt base KG foundation model using ind-context learning, called KG_ICL. The result yield suniversal reasoning with query-related examples and facts. They use a tokenizer to map entities and relations in prompt graphs to predefined tokens. They show that the method outperforms baselines and it enables generalization and knowledge transfer across diverse KGs. </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/a84b553c-a631-4a69-9250-7852fb882b12" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="567" alt="image" src="https://github.com/user-attachments/assets/a84b553c-a631-4a69-9250-7852fb882b12"></a></p>
 </details>
+<p><a href="/shared/grag.html" class="page-url" id="page-url-2"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+</div>
+
+<details class="note">
+<summary><a href="https://arxiv.org/pdf/2405.16506">GRAG: Graph Retrieval-Augmented Generation</a></summary>
+<p>The authors tackle two issues in generation using RAGS: </p>
+<blockquote>
+<ol>
+<li>For Retrieval: How to efficiently retrieve relevant textual subgraph</li>
+<li>For Generation: How to deliver textual subgraph joint textual and topological information into LLMS. 
+<a class="glightbox" href="https://github.com/user-attachments/assets/df5a9a00-088d-4cc1-bacb-afacd225f6b3" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="696" alt="image" src="https://github.com/user-attachments/assets/df5a9a00-088d-4cc1-bacb-afacd225f6b3"></a>
+To do generate the information they use subgraph retrieval, as a heirarchichal description that goes into an embedder that fuses graph tokens and text tokens. 
+<a class="glightbox" href="https://github.com/user-attachments/assets/d0ede9ef-7bd3-452e-b2ec-fff73800a6c3" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="330" alt="image" src="https://github.com/user-attachments/assets/d0ede9ef-7bd3-452e-b2ec-fff73800a6c3"></a></li>
+</ol>
+</blockquote>
+</details>
 <details class="note">
 <summary><a href="https://arxiv.org/abs/2405.20139">GNN-RAG: Graph Neural Retrieval for Large Language Model Reasoning (May 2024)</a></summary>
 <p>Abstract:
@@ -8683,13 +8734,13 @@ and
 </div>
 </div>
 </div>
-<p><a href="/shared/intelligent-graph.html" class="page-url" id="page-url-2"></a></p>
+<p><a href="/shared/intelligent-graph.html" class="page-url" id="page-url-3"></a></p>
 <!-- Clipboard copy icon/button -->
 <div class="copy-wrapper">
 
-<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-3')">  &#128203;</span>
 <!-- Copied popup -->
-<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+<div class="copied-popup" id="popup-page-url-3">Link copied!</div>
 </div>
 
 <details class="abstract">
@@ -8708,7 +8759,7 @@ With KG-Pull we can add Intelligent agents to a Knowledge Graph, which pulls inf
 <summary><a href="https://arxiv.org/abs/2311.07509">A Benchmark to Understand the Role of Knowledge Graphs on Large Language Model's Accuracy for Question Answering on Enterprise SQL Databases (November 2023)</a></summary>
 <p>Abstract:
 "Enterprise applications of Large Language Models (LLMs) hold promise for question answering on enterprise SQL databases. However, the extent to which LLMs can accurately respond to enterprise questions in such databases remains unclear, given the absence of suitable Text-to-SQL benchmarks tailored to enterprise settings. Additionally, the potential of Knowledge Graphs (KGs) to enhance LLM-based question answering by providing business context is not well understood. This study aims to evaluate the accuracy of LLM-powered question answering systems in the context of enterprise questions and SQL databases, while also exploring the role of knowledge graphs in improving accuracy. To achieve this, we introduce a benchmark comprising an enterprise SQL schema in the insurance domain, a range of enterprise queries encompassing reporting to metrics, and a contextual layer incorporating an ontology and mappings that define a knowledge graph. Our primary finding reveals that question answering using GPT-4, with zero-shot prompts directly on SQL databases, achieves an accuracy of 16%. Notably, this accuracy increases to 54% when questions are posed over a Knowledge Graph representation of the enterprise SQL database. Therefore, investing in Knowledge Graph provides higher accuracy for LLM powered question answering systems."
-Article: <a href="https://ai.plainenglish.io/new-research-proves-knowledge">https://ai.plainenglish.io/new-research-proves-knowledge</a>...</p>
+<a href="https://ai.plainenglish.io/new-research-proves-knowledge">Article</a></p>
 </details>
 <h3 id="multimodal-knowledge-graphs">Multimodal Knowledge Graphs<a class="headerlink" href="#multimodal-knowledge-graphs" title="Permanent link">&para;</a></h3>
 <details class="note">
@@ -8827,6 +8878,67 @@ You now have a sophisticated set of tools to construct and query a knowledge gra
 </details>
 <h4 id="addressing-cold-start-problems-with-kg-based-features">Addressing cold-start problems with KG-based features<a class="headerlink" href="#addressing-cold-start-problems-with-kg-based-features" title="Permanent link">&para;</a></h4>
 <h3 id="research">Research<a class="headerlink" href="#research" title="Permanent link">&para;</a></h3>
+<details class="abstract">
+<summary><a href="https://github.com/nju-websoft/KG-ICL">A Prompt-Based Knowledge Graph Foundation Model for Universal In-Context Reasoning</a></summary>
+<p>The aouthors show in their <a href="https://arxiv.org/pdf/2410.12288">paper</a> the authors propose Knogledge Graph In-Context-Learning to achieve more unversal reasoning ability. They show quality results over multiple datasets. They construct a prompt graph starting with a fact about a wqyer relation (subject, query relation, object). The consider entity context and relation which is the example subject and object. The other consdiers relation context which considers relation paths between.</p>
+<p><strong>Prompt Graph Generation:</strong></p>
+<ol>
+<li>Example sampling. <ul>
+<li>Samples example facts for the query relation</li>
+</ul>
+</li>
+<li>Prompt graph extraction<ul>
+<li>Extracts a subgraph including neighboring entities and k-hop paths</li>
+<li>Prompt graph includes: 
+    a) An example fact about the query relation (subject, query relation, object)
+    b) Entity context: neighboring entities of the example subject and object
+    c) Relation context: relational paths between the subject and object entities</li>
+</ul>
+</li>
+</ol>
+<p><strong>Prompt Encoding:</strong></p>
+<p>The prompt encoding process involves several key components:</p>
+<ol>
+<li>
+<p>Unified Tokenizer:</p>
+</li>
+<li>
+<p>Addresses the challenge of varying entities and relations across different KGs</p>
+</li>
+<li>Extends the entity labeling method to relations</li>
+<li>Groups entities based on their shortest path lengths to the example subject and object entities</li>
+<li>Categorizes relations into two classes: query relations and others</li>
+<li>
+<p><strong>Maps entities or relations in the same group to the same token</strong></p>
+</li>
+<li>
+<p>Token Initialization:</p>
+</li>
+<li>
+<p>Initializes token representations for entities and relations in the prompt graph1</p>
+</li>
+<li>
+<p>Message Passing Neural Network:</p>
+</li>
+<li>
+<p>Uses a multi-layer message passing neural network to encode the prompt graph</p>
+</li>
+<li>
+<p>Processes the initialized token representations</p>
+</li>
+<li>
+<p>Readout Module:</p>
+</li>
+<li>Obtains the final prompt representation from the encoded prompt graph</li>
+</ol>
+<p><strong>Knowledge Graph Reasoning:</strong></p>
+<ul>
+<li>Initializes entity and relation representations using the encoded prompts</li>
+<li>Performs message passing over the KG</li>
+<li>Scores candidate entities based on the final entity representations</li>
+</ul>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/c8c43ee0-970c-4135-bd5f-abdb0db36108" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c8c43ee0-970c-4135-bd5f-abdb0db36108" /></a></p>
+</details>
 <details class="note">
 <summary><a href="https://arxiv.org/pdf/2310.10445">Introducing MechGPT 🦾🤖</a></summary>
 <p>This project by Markus J. Buehler is one of the coolest use cases of 1) fine-tuning an LLM, and 2) generating a knowledge graph that we’ve seen (powered by LlamaIndex 🦙).</p>

@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agents-with-multiple-abilities" class="md-skip">
+        <a href="#informatics" class="md-skip">
           Skip to content
         </a>
       
@@ -1682,6 +1682,8 @@ and
       
         
       
+        
+      
     
     
     
@@ -1881,6 +1883,33 @@ and
     
   
     Grounding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Understanding/architectures/training/online.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Online
   
 
     
@@ -6723,18 +6752,6 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#agents-with-multiple-abilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Agents with multiple abilities
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Agents with multiple abilities">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#informatics" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6742,11 +6759,6 @@ and
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -6897,7 +6909,29 @@ and
     classDef red fill:#ffcccb,stroke:#333,stroke-width:2px,color:black;
     classDef yellow fill:#ffebcd,stroke:#333,stroke-width:2px,color:black;
     classDef purple fill:#dda0dd,stroke:#333,stroke-width:2px,color:black;</code></pre>
-<h2 id="agents-with-multiple-abilities">Agents with multiple abilities<a class="headerlink" href="#agents-with-multiple-abilities" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary><a href="https://www.cell.com/cell/fulltext/S0092-8674%2824%2901070-5">Empowering biomedical discovery with AI agents</a></summary>
+<p>The authors perceive a system that is enabling AI and Scientists to collaborate for proficient biomedical discovery. 
+<a class="glightbox" href="https://github.com/user-attachments/assets/acccf7b1-b12c-4029-ae6c-466c43b87cc7" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/acccf7b1-b12c-4029-ae6c-466c43b87cc7" /></a>
+They describe the components that neeed to be in play for it to work. 
+<a class="glightbox" href="https://github.com/user-attachments/assets/5fb9fbc1-8dd8-4cbd-868b-6af9e75375aa" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="740" alt="image" src="https://github.com/user-attachments/assets/5fb9fbc1-8dd8-4cbd-868b-6af9e75375aa"></a></p>
+</details>
+<details class="abstract">
+<summary><a href="https://github.com/allenai/discoveryworld">DISCOVERYWORLD: A Virtual Environment for Developing and Evaluating Automated Scientific Discovery Agents</a></summary>
+<p>The authors describe in their <a href="https://arxiv.org/pdf/2406.06769">paper</a> and code a world-based scientific discovery evaluation and agentsacross a wide set of themes and descriptions. 
+<a class="glightbox" href="https://github.com/user-attachments/assets/785bf887-f4cb-4952-a68d-08302829d3df" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="599" alt="image" src="https://github.com/user-attachments/assets/785bf887-f4cb-4952-a68d-08302829d3df"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/b6b271a1-436a-4126-9c27-0acf9863a526" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="577" alt="image" src="https://github.com/user-attachments/assets/b6b271a1-436a-4126-9c27-0acf9863a526"></a></p>
+<p>The authors evaluate several different methods described in their own words, showing a ReAct agent was the best. </p>
+<blockquote>
+<p>ReAct: This agent uses the ReAct [35] approach of generating a thought and action at each step
+    given the recent trajectory of thoughts, actions and observations. Each action is executed in the
+    environment and the observation is added to the trajectory. In addition to this trajectory, we also
+    provide the current game state information as text, e.g., nearby objects, teleportable locations, etc. If
+    needed, we trim the trajectory (remove oldest steps first) to fit the prompt within the maximum token
+    limit, which (in practice) included up to the last 40 steps of the trajectory. To evaluate this agent’s
+    discovered knowledge, we evaluate the concatenation of the agent’s “thoughts” across all time steps.</p>
+</blockquote>
+</details>
 <details class="abstract">
 <summary><a href="https://github.com/Future-House/paper-qa">Language Agents Achieve SUperhuman Synthesis of Scientific Knowledge (and Paper2QA)</a></summary>
 <p>The authors show in their <a href="https://storage.googleapis.com/fh-public/paperqa/Language_Agents_Science.pdf">paper</a> primarily building PaperQA2, that they can create science agents that are able exceed human performance in several areas: </p>
