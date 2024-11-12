@@ -15,8 +15,6 @@ Once you have a clear understanding of your visualization needs, the next step i
 There are several popular repositories that can serve as a starting point for your product. These include:
 
 ### Prominant and supported 
-
-
 #### Streamlit
 [Streamlit](https://blog.streamlit.io/langchain-streamlit/): This platform allows you to build machine learning and data science apps.
 
@@ -33,6 +31,9 @@ Vercel https://sdk.vercel.ai/docs/introduction
 - [EmbedChain.ai](https://www.embedchain.ai)
 
 ### Demo Examples
+
+??? abstract "[‼️ Kotaemon (very good)](https://github.com/Cinnamon/kotaemon)" kotaemon
+    Provides an open-source clean & customizable RAG UI for chatting with your documents. Built with both end users and developers in mind.
 
 - [OobaBooga Text generation WebUI](https://github.com/oobabooga/text-generation-webui): This is a user-friendly interface for text generation.
 - [DemoGPT](https://github.com/melih-unsal/DemoGPT): This tool connects Langchain and Streamlit to create dynamic apps that can be used repeatedly for interacting with Chat-GPTs.
