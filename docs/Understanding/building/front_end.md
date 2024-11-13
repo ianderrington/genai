@@ -30,10 +30,20 @@ Vercel https://sdk.vercel.ai/docs/introduction
 - [Hugging Face](https://www.huggingface.co)
 - [EmbedChain.ai](https://www.embedchain.ai)
 
-### Demo Examples
+### Open Source Examples
 
 ??? abstract "[‼️ Kotaemon (very good)](https://github.com/Cinnamon/kotaemon)" kotaemon
     Provides an open-source clean & customizable RAG UI for chatting with your documents. Built with both end users and developers in mind.
+
+??? abstract "[Lobe Chat](https://github.com/lobehub/lobe-chat)" lobe-chat
+    🎊  Lobe Chat is an open-source, modern-design AI chat framework that supports multiple AI providers. You can literally deploy your own ChatGPT/Claude-like interface with any LLM.
+
+    💫 Features:
+    ⛳ Lobe Chat enables the integration of any LLM of your choice, including both open-source and proprietary models.
+    ⛳ The chatbot can be set up to generate natural, human-like speech responses based on text inputs.
+    ⛳ It supports multimodal models, allowing it to process and respond to various input types such as images, text, and potentially other media like audio or video. Additionally, you can build knowledge bases from sources like PDFs, images, and CSVs.
+    ⛳ A plugin system allows for creating custom functions that the chatbot can trigger. Eg: querying databases, integrating third-party APIs, or executing actions within external systems.
+    ⛳ You can also design a customized interfaces and it also supports multiple users.
 
 - [OobaBooga Text generation WebUI](https://github.com/oobabooga/text-generation-webui): This is a user-friendly interface for text generation.
 - [DemoGPT](https://github.com/melih-unsal/DemoGPT): This tool connects Langchain and Streamlit to create dynamic apps that can be used repeatedly for interacting with Chat-GPTs.
