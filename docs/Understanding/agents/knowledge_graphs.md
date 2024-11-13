@@ -172,7 +172,7 @@ By representing graph elements as dense vectors, we can bridge the gap between s
 This technique enhances LLM outputs by first retrieving relevant information from a knowledge graph. The retrieved context guides the generation process, improving factual accuracy and coherence of LLM responses, especially for knowledge-intensive tasks.
 
 
-??? abstract "[A Prompt-Based Knowledge Graph Foundation Model for Universal In-Context Reasoning](https://github.com/nju-websoft/KG-ICL.)" kg-icl
+??? abstract "[A Prompt-Based Knowledge Graph Foundation Model for Universal In-Context Reasoning](https://github.com/nju-websoft/KG-ICL)" kg-icl
     **Developments** The author spropose prompt base KG foundation model using ind-context learning, called KG_ICL. The result yield suniversal reasoning with query-related examples and facts. They use a tokenizer to map entities and relations in prompt graphs to predefined tokens. They show that the method outperforms baselines and it enables generalization and knowledge transfer across diverse KGs. 
 
     <img width="567" alt="image" src="https://github.com/user-attachments/assets/a84b553c-a631-4a69-9250-7852fb882b12">
