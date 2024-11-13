@@ -6855,17 +6855,6 @@ and
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#softmax" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Softmax
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -7028,14 +7017,84 @@ and
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/edc7593e-2eab-4916-ac27-291f28eba122" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="972" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/edc7593e-2eab-4916-ac27-291f28eba122"></a></p>
 </details>
 <h2 id="common-components">Common Components<a class="headerlink" href="#common-components" title="Permanent link">&para;</a></h2>
+<p>The components of model classes include a number of functional operations. </p>
 <h3 id="activations">Activations<a class="headerlink" href="#activations" title="Permanent link">&para;</a></h3>
-<p>The components of model classes include a number of operations.</p>
-<h3 id="softmax">Softmax<a class="headerlink" href="#softmax" title="Permanent link">&para;</a></h3>
+<p><a href="/shared/softmax.html" class="page-url" id="page-url-1"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-1')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-1">Link copied!</div>
+</div>
+
+<div class="admonition important">
+<p class="admonition-title">Softmax</p>
 <p>Softmax is an activation function that computes a probability-like output for logistic outputs. Generally given in the form</p>
-<div class="arithmatex">\[
-(softmax(x))𝑖=exp(𝑥𝑖)∑𝑗exp(𝑥𝑗) \\
-softmax(x_i) = \exp(x_i)/\sum_j\exp(x_j)
-\]</div>
+<p>The softmax function with temperature that you're asking about can be expressed in the following form:</p>
+<div class="arithmatex">\[ p_i = \frac{e^{z_i/\theta}}{\sum_{j=1}^K e^{z_j/\theta}} \]</div>
+<p>Where:
+- <span class="arithmatex">\(<span class="arithmatex">\(p_i\)</span>\)</span> is the probability for the i-th class
+- <span class="arithmatex">\(<span class="arithmatex">\(z_i\)</span>\)</span> is the i-th logit (input to softmax)
+- \theta is the temperature parameter
+- K is the number of classes</p>
+<p>Key points about this equation:</p>
+<ol>
+<li>
+<p>The temperature parameter <span class="arithmatex">\(\theta\)</span> appears in both the numerator and denominator, dividing each logit <span class="arithmatex">\(<span class="arithmatex">\(z_i\)</span>\)</span>.</p>
+</li>
+<li>
+<p>As <span class="arithmatex">\(\theta\)</span> approaches 0, the distribution becomes more peaked (harder), concentrating most of the probability mass on the largest logit.</p>
+</li>
+<li>As T increases, the distribution becomes more uniform (softer), spreading probability mass more evenly across all classes.</li>
+<li>When T = 1, this reduces to the standard softmax function.</li>
+<li>The term <span class="arithmatex">\(<span class="arithmatex">\(e^{z_i/T}\)</span>\)</span> is equivalent to <span class="arithmatex">\(<span class="arithmatex">\((e^{z_i})^{1/T}\)</span>\)</span>, which shows how the temperature acts as an exponent to the exponential term.</li>
+</ol>
+<p>By tuning the temperature parameter, you can effectively control the "peakiness" or "softness" of the output probability distribution, which can be crucial for various machine learning applications.</p>
+<p>Key properties of the softmax function include:</p>
+<ol>
+<li>
+<p><strong>Normalization</strong>: The output values sum to 1, making them interpretable as probabilities.</p>
+</li>
+<li>
+<p><strong>Exponentiation</strong>: The use of <span class="arithmatex">\(<span class="arithmatex">\(e^{z_i}\)</span>\)</span> ensures all outputs are positive.</p>
+</li>
+<li>
+<p><strong>Relative scale</strong>: Larger input values result in larger probabilities, while preserving the relative ordering of the inputs.</p>
+</li>
+<li>
+<p><strong>Non-linear transformation</strong>: The softmax function introduces non-linearity, which is crucial for modeling complex relationships in neural networks.</p>
+</li>
+</ol>
+<p>But is softmax int he present form completely apparent. Here is some research indiating that some modifications may be preferred. </p>
+</div>
+<p><a href="/shared/adaptive-temperature.html" class="page-url" id="page-url-2"></a></p>
+<!-- Clipboard copy icon/button -->
+<div class="copy-wrapper">
+
+<span class="copy-icon" id="copy-icon" onclick="copyToClipboard('page-url-2')">  &#128203;</span>
+<!-- Copied popup -->
+<div class="copied-popup" id="popup-page-url-2">Link copied!</div>
+</div>
+
+<div class="admonition important">
+<p class="admonition-title"><a href="https://arxiv.org/pdf/2410.01104">softmax is not enough (for sharp out-of-distribution)</a></p>
+<p><strong>Developments</strong> The authors show that for robust circuits to exist, they must generalize well to arbitrary and valid inputs. They show that as the the number of out-of-distribution tokens increase, the sharpness  decresses and the attention coefficients decrease even if they were appropriately sharp for in-distribution examples. To solve this they propose and adaptive temperature that modifies <span class="arithmatex">\(\theta\)</span> based on the entropy of the input coefficient, motivated by the fact that decreaseing the temperature must decrease the entropy. </p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/39b3d084-f644-4d1b-b1ce-a4a5ef8068d8" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="542" alt="image" src="https://github.com/user-attachments/assets/39b3d084-f644-4d1b-b1ce-a4a5ef8068d8"></a></p>
+<p>Their <em>ad-hoc</em> algorithm is presented as an exxample below, using [JAX]. 
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">def</span> <span class="nf">adaptive_temperature_softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        <span class="n">original_probs</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="n">poly_fit</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.037</span><span class="p">,</span> <span class="mf">0.481</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.3</span><span class="p">,</span> <span class="mf">4.917</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.791</span><span class="p">])</span> <span class="c1"># see Figure 5</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="n">entropy</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="n">original_probs</span> <span class="o">*</span> <span class="n">jnp</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">original_probs</span> <span class="o">+</span> <span class="mf">1e-9</span><span class="p">),</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># compute the Shannon entropy</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">beta</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span> <span class="c1"># beta = 1 / theta</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">entropy</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">,</span> <span class="c1"># don’t overcorrect low-entropy heads</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">jnp</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="n">poly_fit</span><span class="p">,</span> <span class="n">entropy</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">),</span> <span class="c1"># never increase entropy</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="mf">1.0</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="k">return</span> <span class="n">jax</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">logits</span> <span class="o">*</span> <span class="n">beta</span><span class="p">)</span>
+</span></code></pre></div></p>
+<p>An example collab note book is <a href="https://colab.research.google.com/drive/18-2Z4TMua-nwgCpIZo0lsKL6RDxH5Bvo?usp=sharing">here</a></p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Is softmax Off by 1?</p>
 <p>Based on some observations by <a href="https://arxiv.org/pdf/2306.12929.pdf">Qualcom</a>, where "97%+ of outlier activations in LLMs occur in whitespace and punctuation positions.”  there was indication that it is important to have 'no attention' given to some tokens.</p>
