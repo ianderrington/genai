@@ -421,6 +421,33 @@ Semantic layers provide an ability to look up connections between objects, and h
 
 ??? note "[Knowledge Graph Enhanced Language Agents for Recommendation](https://arxiv.org/pdf/2410.19627)"
     The authors show value in using KG to enable improved recommendations with LLMs. 
+
+    **How it works:**
+
+    1. Path representation:
+    - Treating users and items as nodes in KG.
+    - and the relationship between these nodes are represented as paths within the Graphs.
+    
+    2. Agentic Simulation:
+    - It then employs multiple language agents that simulate user and item interactions.
+    - Each agent maintains a memory that records the profiles of users or items.
+    - During the simulation, the agents use KG paths as simple language to interact and understand the reasons for their choices.
+    
+    Example: If a user states, I like monsoon apples.
+    
+    It identifies the knowledge path
+    user->apple->green->monsoon->sweet
+    to understand that users like green monsoon apples because they are sweet in taste.
+    
+    3. Path translation and incorporation:
+    - After the modules have understood the path behind the user's query.
+    - They extract the path which is then translated for Language agents to understand.
+    - Then they employ another module that integrates the translated paths into the agents' decision-making processes.
+     
+    4. Simulating the user thinking and response:
+    - Now the agents simulate a path of how user would think before giving a response with KG.
+    - Now from that path, they would incorporate necessary elements required for more comprehensive answer.
+    - After than, they just output the required answer.
     
     <img width="708" alt="image" src="https://github.com/user-attachments/assets/fc828003-d050-40af-a2b5-e7f2973c41cd">
 
@@ -596,6 +623,39 @@ Knowledge Graph RAG (KG-RAG) consistently enhanced the performance of LLMs acros
 
 
 ## Research and References
+
+??? note "[Foundation Models in Graph & Geometric Deep Learning ( Michael Galkin and Michael Bronstein)](https://towardsdatascience.com/foundation-models-in-graph-geometric-deep-learning-f363e2576f58 )"
+    "Foundation Models in language, vision, and audio have been among the primary research topics in Machine Learning in 2024 whereas FMs for graph-structured data have somewhat lagged behind. In this post, we argue that the era of Graph FMs has already begun and provide a few examples of how one can use them already today.
+    
+    Table of Contents
+    
+    1.	What are Graph Foundation Models and how to build them?
+    
+    2.	Node Classification: GraphAny
+    
+    3.	Link Prediction: Not yet
+    
+    4.	Knowledge Graph Reasoning: ULTRA and UltraQuery
+    
+    5.	Algorithmic Reasoning: Generalist Algorithmic Learner
+    
+    6.	Geometric and AI4Science Foundation Models
+    a. ML Potentials: JMP-1, DPA-2 for molecules, MACE-MP-0 and    
+    MatterSim for inorganic crystals
+    b. Protein LMs: ESM-2
+    c. 2D Molecules: MiniMol and MolGPS
+    
+    7.	Expressivity & Scaling Laws: Do Graph FMs scale?
+    
+    8.	The Data Question: What should be scaled? Is there enough graph data to train Graph FMs?
+    
+    9.	👉 Key Takeaways 👈
+    
+    Since there is a certain degree of ambiguity in what counts as a “foundational” model, it would be appropriate to start with a definition to establish a common ground:
+    
+    “A Graph Foundation Model is a single (neural) model that learns transferable graph representations that can generalize to any new, previously unseen graph”
+    
+ 
 
 ??? note "[Neurosymbolic AI for Reasoning over Knowledge Graphs: A Survey (University of Edinburgh., February 20243](https://arxiv.org/abs/2302.07200)"
     Abstract:
