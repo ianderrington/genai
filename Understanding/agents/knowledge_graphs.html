@@ -8542,7 +8542,7 @@ and
 </div>
 
 <details class="abstract">
-<summary><a href="https://github.com/nju-websoft/KG-ICL.">A Prompt-Based Knowledge Graph Foundation Model for Universal In-Context Reasoning</a></summary>
+<summary><a href="https://github.com/nju-websoft/KG-ICL">A Prompt-Based Knowledge Graph Foundation Model for Universal In-Context Reasoning</a></summary>
 <p><strong>Developments</strong> The author spropose prompt base KG foundation model using ind-context learning, called KG_ICL. The result yield suniversal reasoning with query-related examples and facts. They use a tokenizer to map entities and relations in prompt graphs to predefined tokens. They show that the method outperforms baselines and it enables generalization and knowledge transfer across diverse KGs. </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/a84b553c-a631-4a69-9250-7852fb882b12" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="567" alt="image" src="https://github.com/user-attachments/assets/a84b553c-a631-4a69-9250-7852fb882b12"></a></p>
 </details>
@@ -8749,6 +8749,35 @@ You now have a sophisticated set of tools to construct and query a knowledge gra
 <details class="note">
 <summary><a href="https://arxiv.org/pdf/2410.19627">Knowledge Graph Enhanced Language Agents for Recommendation</a></summary>
 <p>The authors show value in using KG to enable improved recommendations with LLMs. </p>
+<p><strong>How it works:</strong></p>
+<ol>
+<li>Path representation:</li>
+<li>Treating users and items as nodes in KG.</li>
+<li>
+<p>and the relationship between these nodes are represented as paths within the Graphs.</p>
+</li>
+<li>
+<p>Agentic Simulation:</p>
+</li>
+<li>It then employs multiple language agents that simulate user and item interactions.</li>
+<li>Each agent maintains a memory that records the profiles of users or items.</li>
+<li>During the simulation, the agents use KG paths as simple language to interact and understand the reasons for their choices.</li>
+</ol>
+<p>Example: If a user states, I like monsoon apples.</p>
+<p>It identifies the knowledge path
+user-&gt;apple-&gt;green-&gt;monsoon-&gt;sweet
+to understand that users like green monsoon apples because they are sweet in taste.</p>
+<ol>
+<li>Path translation and incorporation:</li>
+<li>After the modules have understood the path behind the user's query.</li>
+<li>They extract the path which is then translated for Language agents to understand.
+- Then they employ another module that integrates the translated paths into the agents' decision-making processes.
+ </li>
+<li>Simulating the user thinking and response:</li>
+<li>Now the agents simulate a path of how user would think before giving a response with KG.</li>
+<li>Now from that path, they would incorporate necessary elements required for more comprehensive answer.</li>
+<li>After than, they just output the required answer.</li>
+</ol>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/fc828003-d050-40af-a2b5-e7f2973c41cd" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="708" alt="image" src="https://github.com/user-attachments/assets/fc828003-d050-40af-a2b5-e7f2973c41cd"></a></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/654b4b76-809a-4e87-9af9-e210d91a36ec" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="582" alt="image" src="https://github.com/user-attachments/assets/654b4b76-809a-4e87-9af9-e210d91a36ec"></a></p>
 </details>
@@ -8876,6 +8905,46 @@ You now have a sophisticated set of tools to construct and query a knowledge gra
 </details>
 <h3 id="financial-analysis">Financial Analysis<a class="headerlink" href="#financial-analysis" title="Permanent link">&para;</a></h3>
 <h2 id="research-and-references">Research and References<a class="headerlink" href="#research-and-references" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary><a href="https://towardsdatascience.com/foundation-models-in-graph-geometric-deep-learning-f363e2576f58">Foundation Models in Graph &amp; Geometric Deep Learning ( Michael Galkin and Michael Bronstein)</a></summary>
+<p>"Foundation Models in language, vision, and audio have been among the primary research topics in Machine Learning in 2024 whereas FMs for graph-structured data have somewhat lagged behind. In this post, we argue that the era of Graph FMs has already begun and provide a few examples of how one can use them already today.</p>
+<p>Table of Contents</p>
+<ol>
+<li>
+<p>What are Graph Foundation Models and how to build them?</p>
+</li>
+<li>
+<p>Node Classification: GraphAny</p>
+</li>
+<li>
+<p>Link Prediction: Not yet</p>
+</li>
+<li>
+<p>Knowledge Graph Reasoning: ULTRA and UltraQuery</p>
+</li>
+<li>
+<p>Algorithmic Reasoning: Generalist Algorithmic Learner</p>
+</li>
+<li>
+<p>Geometric and AI4Science Foundation Models
+a. ML Potentials: JMP-1, DPA-2 for molecules, MACE-MP-0 and  <br />
+MatterSim for inorganic crystals
+b. Protein LMs: ESM-2
+c. 2D Molecules: MiniMol and MolGPS</p>
+</li>
+<li>
+<p>Expressivity &amp; Scaling Laws: Do Graph FMs scale?</p>
+</li>
+<li>
+<p>The Data Question: What should be scaled? Is there enough graph data to train Graph FMs?</p>
+</li>
+<li>
+<p>👉 Key Takeaways 👈</p>
+</li>
+</ol>
+<p>Since there is a certain degree of ambiguity in what counts as a “foundational” model, it would be appropriate to start with a definition to establish a common ground:</p>
+<p>“A Graph Foundation Model is a single (neural) model that learns transferable graph representations that can generalize to any new, previously unseen graph”</p>
+</details>
 <details class="note">
 <summary><a href="https://arxiv.org/abs/2302.07200">Neurosymbolic AI for Reasoning over Knowledge Graphs: A Survey (University of Edinburgh., February 20243</a></summary>
 <p>Abstract:
