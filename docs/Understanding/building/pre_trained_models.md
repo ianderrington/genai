@@ -98,12 +98,11 @@ Below we share important models.
     The OpenAI reveals the next level of generation of improved models by directly integrating 'chain of thought' into the process. This allows it to 'think before it answer' allowing complex reasoning tasks and more transprent explanations to be provided. Importantly, o1 scales its imporformance with increased compute during inference, as opposed to during training. This leads it to SOTA results on anumber of components. 
     
     They also introduce the AGI-benchmark 1.0 to enable AI research and evaluation on 27 distinct categories looking at five major cognitive faculties: Reasoning, Creation & Design, Diagnosis, Reflection and Planning. 
-
    Importantly, they also demonstrate inference time scaling laws that show improved accuracy when more tokens are used at inference/generation time. 
    
     ![image](https://github.com/user-attachments/assets/2a1d10ee-63c4-483f-be67-5170ee5c4d78)
 
-   These appear to be generally reproducable [here](https://github.com/hughbzhang/o1_inference_scaling_laws?tab=readme-ov-file)
+    These appear to be generally reproducable [here](https://github.com/hughbzhang/o1_inference_scaling_laws?tab=readme-ov-file)
    Their system card is [here](https://assets.ctfassets.net/kftzwdyauwt9/67qJD51Aur3eIc96iOfeOP/71551c3d223cd97e591aa89567306912/o1_system_card.pdf)
 
 

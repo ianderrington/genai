@@ -33,7 +33,6 @@
 
 Knowledge graphs are a type of graph database that store data in a structured format. They are used to store and query data in a way that allows for data and their relationships between to be defined, stored, and queried. 
 
-#### Definition and core concepts
 
 #### Key components: entities, relationships, attributes
 
@@ -417,7 +416,26 @@ Semantic layers provide an ability to look up connections between objects, and h
 
 ## Applications
 
-### Recommendation
+### Information Retrieval
+
+#### Query construction
+
+
+#### Retrieval on non-KG Databases
+
+??? abstract "[An interesting study that shows the impact of KGs for question answering on SQL databases.](https://github.com/datadotworld/cwd-benchmark-data)"
+
+    The authors show that the KG representation of the enterprise SQL database improves the performance of GPT-4 for QA: 54% accuracy vs. 16% with instructions directly on SQL databases.
+
+    📝 Paper: https://arxiv.org/pdf/2311.07509
+
+
+### Recommendation Systems
+
+??? abstract "[LLM-movieagent](https://github.com/tomasonjo/llm-movieagent)"
+    This project is designed to implement an agent capable of interacting with a graph database like Neo4j through a semantic layer using OpenAI function calling. The semantic layer equips the agent with a suite of robust tools, allowing it to interact with the graph database based on the user's intent. 
+
+
 
 ??? note "[Knowledge Graph Enhanced Language Agents for Recommendation](https://arxiv.org/pdf/2410.19627)"
     The authors show value in using KG to enable improved recommendations with LLMs. 
@@ -461,22 +479,13 @@ Semantic layers provide an ability to look up connections between objects, and h
 
 ### Knowledge consistent Chat Generation
 
-
-
-??? note "[Knowledge-Consistent Dialogue Generation with Language Models and Knowledge Graphs](https://openreview.net/forum?id=WhWlYzUTJfP)"\
+??? note "[Knowledge-Consistent Dialogue Generation with Language Models and Knowledge Graphs](https://openreview.net/forum?id=WhWlYzUTJfP)"
     Abstract: 
     "Pre-trained language models have achieved impressive performances on dialogue generation tasks. However, when generating responses for a conversation that requires factual knowledge, they are far from perfect, due to the absence of mechanisms to retrieve, encode, and reflect the knowledge in the generated responses. Some knowledge-grounded dialogue generation methods tackle this problem by leveraging the structured knowledge from Knowledge Graphs (KGs). However, existing methods do not guarantee that the model utilizes a relevant piece of knowledge from the KG before generating knowledge-consistent dialogues. To overcome this limitation, we propose SUbgraph Retrieval-augmented GEneration (SURGE), a framework for generating context-relevant and knowledge-consistent dialogues with a KG. Specifically, our method first retrieves the relevant subgraph from the KG, and then enforces consistency across facts by perturbing their word embeddings conditioned on the retrieved subgraph. Then, it learns a latent representation space using contrastive learning which ensures that the generated texts have high similarity to the retrieved subgraphs. We validate the performance of our SURGE framework on the OpendialKG and KOMODIS datasets and show that our method generates high-quality dialogues that faithfully reflect the knowledge from the KG."
 
     <img width="543" alt="image" src="https://github.com/user-attachments/assets/56a9213e-6b0b-41fe-88bb-38a3a35364c9">
 
-
-
-
-## Examples
-
 ### Training LLMs 
-
-
 
 ??? note "[Knowledge Graph Reasoning with Self-supervised Reinforcement Learning (Google Brain, May 2024)](https://arxiv.org/abs/2405.13640)"
 
@@ -497,29 +506,15 @@ Semantic layers provide an ability to look up connections between objects, and h
     Paper: https://arxiv.org/pdf/2309.03685.pdf
 
 
-### Retrieval on other Databases
-
-??? abstract "[An interesting study that shows the impact of KGs for question answering on SQL databases.](https://github.com/datadotworld/cwd-benchmark-data)"
-
-    The authors show that the KG representation of the enterprise SQL database improves the performance of GPT-4 for QA: 54% accuracy vs. 16% with instructions directly on SQL databases.
-
-    📝 Paper: https://arxiv.org/pdf/2311.07509
-
 
 ### Question Answering Systems
+
 #### Factoid QA using KG lookups
+
+Simple QA using KG lookups. 
+
 #### Complex question decomposition and multi-hop reasoning
 
-### Recommender Systems
-#### Leveraging KGs for explainable recommendations
-
-??? abstract "[LLM-movieagent](https://github.com/tomasonjo/llm-movieagent)"
-    This project is designed to implement an agent capable of interacting with a graph database like Neo4j through a semantic layer using OpenAI function calling. The semantic layer equips the agent with a suite of robust tools, allowing it to interact with the graph database based on the user's intent. 
-
-
-#### Addressing cold-start problems with KG-based features
-
-### Research
 
 ??? abstract "[A Prompt-Based Knowledge Graph Foundation Model for Universal In-Context Reasoning](https://github.com/nju-websoft/KG-ICL)"
     The aouthors show in their [paper](https://arxiv.org/pdf/2410.12288) the authors propose Knogledge Graph In-Context-Learning to achieve more unversal reasoning ability. They show quality results over multiple datasets. They construct a prompt graph starting with a fact about a wqyer relation (subject, query relation, object). The consider entity context and relation which is the example subject and object. The other consdiers relation context which considers relation paths between.
@@ -599,6 +594,8 @@ Semantic layers provide an ability to look up connections between objects, and h
 
 
 
+## Domain Examples
+
 #### Drug discovery and repurposing using KGs
 
 #### Literature-based discovery and hypothesis generation
@@ -616,10 +613,6 @@ Knowledge Graph RAG (KG-RAG) consistently enhanced the performance of LLMs acros
 
 
 ### Financial Analysis
-#### Risk assessment using company and market KGs
-#### Fraud detection through relationship analysis
-
-
 
 
 ## Research and References
@@ -677,19 +670,14 @@ Knowledge Graph RAG (KG-RAG) consistently enhanced the performance of LLMs acros
 
     Abstract—Large language models (LLMs), such as ChatGPT and GPT4, are making new waves in the field of natural language processing and artificial intelligence, due to their emergent ability and generalizability. However, LLMs are black-box models, which often fall short of capturing and accessing factual knowledge. In contrast, Knowledge Graphs (KGs), Wikipedia and Huapu for example, are structured knowledge models that explicitly store rich factual knowledge. KGs can enhance LLMs by providing external knowledge for inference and interpretability. Meanwhile, KGs are difficult to construct and evolving by nature, which challenges the existing methods in KGs to generate new facts and represent unseen knowledge. Therefore, it is complementary to unify LLMs and KGs together and simultaneously leverage their advantages. In this article, we present a forward-looking roadmap for the unification of LLMs and KGs. Our roadmap consists of three general frameworks, namely, 1) KG-enhanced LLMs, which incorporate KGs during the pre-training and inference phases of LLMs, or for the purpose of enhancing understanding of the knowledge learned by LLMs; 2) LLM-augmented KGs, that leverage LLMs for different KG tasks such as embedding, completion, construction, graph-to-text generation, and question answering; and 3) Synergized LLMs + KGs, in which LLMs and KGs play equal roles and work in a mutually beneficial way to enhance both LLMs and KGs for bidirectional reasoning driven by both data and knowledge. We review and summarize existing efforts within these three frameworks in our roadmap and pinpoint their future research directions.
     
-??? note "Research to sort"
-    [Towards Foundation Models for Knowledge Graph Reasoning (Intel AI Lab, October 2023)](https://arxiv.org/abs/2310.04562 )
+### Research to sort
 
+??? note "[Towards Foundation Models for Knowledge Graph Reasoning (Intel AI Lab, October 2023)](https://arxiv.org/abs/2310.04562 )"
 
     Abstract:
     "Foundation models in language and vision have the ability to run inference on any textual and visual inputs thanks to the transferable representations such as a vocabulary of tokens in language. Knowledge graphs (KGs) have different entity and relation vocabularies that generally do not overlap. The key challenge of designing foundation models on KGs is to learn such transferable representations that enable inference on any graph with arbitrary entity and relation vocabularies. In this work, we make a step towards such foundation models and present ULTRA, an approach for learning universal and transferable graph representations. ULTRA builds relational representations as a function conditioned on their interactions. Such a conditioning strategy allows a pre-trained ULTRA model to inductively generalize to any unseen KG with any relation vocabulary and to be fine-tuned on any graph. Conducting link prediction experiments on 57 different KGs, we find that the zero-shot inductive inference performance of a single pre-trained ULTRA model on unseen graphs of various sizes is often on par or better than strong baselines trained on specific graphs. Fine-tuning further boosts the performance."
 
     Article: https://towardsdatascience.com/ultra-foundation-models-for-knowledge-graph-reasoning-9f8f4a0d7f09
-
-## Training and Courses
-In this hands-on course, you will learn how to create and query knowledge graphs using Large Language Models (LLMs).
-
-https://graphacademy.neo4j.com/courses/llm-knowledge-graph-construction/
 
 ??? note "[To process]"
 
@@ -705,3 +693,7 @@ https://graphacademy.neo4j.com/courses/llm-knowledge-graph-construction/
     The code is all available on GitHub:
     https://github.com/samschifman/RAG_on_FHIR/tree/main/RAG_on_FHIR_with_KG 
 
+## Training and Courses
+In this hands-on course, you will learn how to create and query knowledge graphs using Large Language Models (LLMs).
+
+[Neo4j Knowledge Graph Construction with LLMs](https://graphacademy.neo4j.com/courses/llm-knowledge-graph-construction/)

@@ -1,5 +1,5 @@
 
-??? [Distributed Path Composition (by Google) ](https://arxiv.org/pdf/2403.10616)
+??? note "[Distributed Path Composition (by Google) ](https://arxiv.org/pdf/2403.10616)"
 
     v/@Ar_Douillard
 

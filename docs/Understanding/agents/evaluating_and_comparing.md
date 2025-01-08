@@ -1,11 +1,10 @@
 Because LLMs generally are part of broader agent systems, it is important to evaluate them. While [model evaluation](../architectures/evaluating_and_comparing.md) and [prompt](#../prompting/index.md) evaluation is essential to understanding optimizing individual components, it is essential to evaluate the higher-level agents and agent systems. 
 
-There is a lot of similarity of [what to evaluate](../architectures/evaluating_and_comparing.md#what-to-evaluate) for models, so we primarily focus on tools and methods of [how to evaluate](#how-to-evaluate) 
+There is a lot of similarity of [what to evaluate](../architectures/evaluating_and_comparing.md#what-to-evaluate) for models, so we primarily focus on tools and methods of [how to evaluate agents](#evaluating-agents) 
 
-## **How to Evaluate**
+## Evaluating Agents
 
-??? abstract "[MLE-BENCH: EVALUATING MACHINE LEARNING AGENTS ON MACHINE LEARNING ENGINEERING](github.com/openai/mle-bench/)
-    
+??? abstract "[MLE-BENCH: EVALUATING MACHINE LEARNING AGENTS ON MACHINE LEARNING ENGINEERING](github.com/openai/mle-bench/)" 
     The authors share in their [paper](https://arxiv.org/pdf/2410.07095) at kaggle-competition environmet for agents surrounding ML challenges. 
     
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/10909e0f-6787-4f6c-a95b-6b1d7210d02a">
@@ -31,7 +30,7 @@ There is a lot of similarity of [what to evaluate](../architectures/evaluating_a
     ![image](https://github.com/mr-gpt/deepeval/blob/main/assets/synthetic-query-generation.png)
     It integrates with Llama index [here](https://docs.confident-ai.com/docs/integrations-llamaindex)
 
-??? note "[API-BLEND: A Comprehensive Corpora for Training and Benchmarking API LLMs](https://arxiv.org/abs/2402.15491)
+??? note "[API-BLEND: A Comprehensive Corpora for Training and Benchmarking API LLMs](https://arxiv.org/abs/2402.15491)"
 
     There is a growing need for Large Language Models (LLMs) to effectively use tools and external Application Programming Interfaces (APIs) to plan and complete tasks. As such, there is tremendous interest in methods that can acquire sufficient quantities of train and test data that involve calls to tools / APIs. Two lines of research have emerged as the predominant strategies for addressing this challenge. The first has focused on synthetic data generation techniques, while the second has involved curating task-adjacent datasets which can be transformed into API / Tool-based tasks. In this paper, we focus on the task of identifying, curating, and transforming existing datasets and, in turn, introduce API-BLEND, a large corpora for training and systematic testing of tool-augmented LLMs. The datasets mimic real-world scenarios involving API-tasks such as API / tool detection, slot filling, and sequencing of the detected APIs. We demonstrate the utility of the API-BLEND dataset for both training and benchmarking purposes.
 

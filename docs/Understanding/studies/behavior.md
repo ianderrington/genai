@@ -26,7 +26,7 @@ Here we share some important research that provide useful manners of looking at 
     <img width="298" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/5de40246-ca47-4166-bfa4-ab4300a786c6">
 
 
-!!! note "[How do How do LLMs recall facts](https://www.alignmentforum.org/.../p/iGuwZTHWb6DFY3sKB)? 
+!!! note "[How do How do LLMs recall facts](https://www.alignmentforum.org/.../p/iGuwZTHWb6DFY3sKB)?" 
 
     v/ Neel Nanda of Google DeepMind 
     "Early MLP layers act as a lookup table, with significant superposition! They recognise entities and produce their attributes as directions. We suggest viewing fact recall as a black box making "multi-token embeddings. 
