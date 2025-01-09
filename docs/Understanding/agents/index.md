@@ -245,3 +245,4 @@ It is possible that limitations fundamental to static agents are not goin to be 
 ### Other
 
 !!! note "[Open AI's bet on a cognitive architecture](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)"
+!!! note "[Huyen Chip's blog](https://huyenchip.com/2025/01/07/agents.html)"

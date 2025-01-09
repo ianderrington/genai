@@ -1,4 +1,5 @@
 # Agent Systems
+
 Just like for people, when we can interact our interactions become a part of a system. When an agent (or model) engages in an interaction with another agent, the result is an agent system. The systems can be ordered or disordered, and interact with varying degrees of regulation as imposed by the environment, which includes other agents. To help steer the systems a person may be essential, though fully autonomous systems are of high intriguing for practical and theoretical reasons. 
 
 !!! quote "Agent systems are integral components of the next stage of AI"

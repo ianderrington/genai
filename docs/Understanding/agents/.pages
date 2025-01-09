@@ -1,7 +1,7 @@
 nav:
     - index.md
     - components
-    - evaluating_and_comparing.md
+    - Optimizing Agents: optimizing
     - systems
     - examples
     - ...

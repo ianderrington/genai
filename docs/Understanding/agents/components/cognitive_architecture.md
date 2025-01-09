@@ -1,28 +1,28 @@
-A cognitive architecture is a higher-level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They are can be focused on both simple and complex tasks. 
+A cognitive architecture is a higher-level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They can be focused on both simple and complex tasks. 
 
-One input call to an LLM output produces output(s) based on their input [prompts](../prompting/index.md).  Cognitive architectures, sometimes also considered [chains](#chains) allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md) in different forms of [environments](./environments.md). Chains can build more complex and integrated systems to enable higher-quality reasoning and results.
+One input call to an LLM output produces output(s) based on their input [prompts](../prompting/index.md). Cognitive architectures, sometimes also considered [chains](#chains), allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md) in different forms of [environments](./environments.md). Chains can build more complex and integrated systems to enable higher-quality reasoning and results.
 
-Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf) considered design system with a connection of a large number but highly connected units to facilitate computational-like behavior seen from Animals. For Gen()AI, however, cognitive architectures can be constructed in more linear [chains](#chains), as in the case of the LLM-enabled chat, or more complex branching [graph topologies](#cognitive-topologies), which have been shown to increase performance. 
+Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf) considered design systems with a connection of a large number of highly connected units to facilitate computational-like behavior seen from Animals. For Gen(AI), however, cognitive architectures can be constructed in more linear [chains](#chains), as in the case of LLM-enabled chat, or more complex branching [graph topologies](#cognitive-topologies), which have been shown to increase performance. 
 
-## Aspects of in Cognitive Architectures
+## Core Activities in Cognitive Architectures
 
 ### Activities
-- **Rephrasing** or reformatting the input in such a way that the next
-- **Observing** or ingesting, intentionally or passively, gaining stored information that may assist in the tasks at hand.
-- **Reasoning** or the ability to create causal connections between input and output. These are often taken care of at the level of the LLM.
-- **Planning** to enable more complicated goals to be broken down into individually accomplishable tasks. May use external tools like memory to keep track of tasks.
+- **Rephrasing** or reformatting the input in such a way that the next component can process it effectively
+- **Observing** or ingesting, intentionally or passively, gaining stored information that may assist in the tasks at hand
+- **Reasoning** or the ability to create causal connections between input and output. These are often taken care of at the level of the LLM
+- **Planning** to enable more complicated goals to be broken down into individually accomplishable tasks. May use external tools like memory to keep track of tasks
 - **Deciding and prioritizing** to select between different options or available components
-- **Summarizing and Abstracting** to compress information into reusable chunks or otherwise abstract information to be more effective.
+- **Summarizing and Abstracting** to compress information into reusable chunks or otherwise abstract information to be more effective
 - **Logging + Remembering: Learning** being the automatic or initiated information storage and recall that is accessed in [memory](./memory.md)
-- **Reflection**, or an internal (or external) evaluation of output, be it thoughts, planning, and thoughts.
-- **Tool use** While overlapping directly with Observing or taking memory actions, tool usage may be part of cognitive patterns (like using a `scratch-pad`) and must be considered as such.
+- **Reflection**, or an internal (or external) evaluation of output, be it thoughts, planning, and thoughts
+- **Tool use** While overlapping directly with Observing or taking memory actions, tool usage may be part of cognitive patterns (like using a `scratch-pad`) and must be considered as such
 
 ### Models
-Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](./prompting/index.md), they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used to help model creation with [Recursive training](../architectures/training/recursive.md).
+Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](../prompting/index.md), they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used to help model creation with [Recursive training](../architectures/training/recursive.md).
 
 ### Cognitive Architectures
 
-???+ important "[Cognitive Architectures for Language Agents](https://arxiv.org/pdf/2309.02427.pdf) is a thoughtful understanding of Cognitive Architectures" cognitive-architectures
+??? important "[Cognitive Architectures for Language Agents](https://arxiv.org/pdf/2309.02427.pdf) is a thoughtful understanding of Cognitive Architectures" cognitive-architectures
     They reveal a number of thoughtful perspectives on how to consider agents, considering much of what we have included here. Going further,
     <img width="549" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/16087788-df56-44cd-91be-8755d17fd7c0">
 
@@ -33,9 +33,9 @@ Models provide the computational core of Agents. Acting like a 'brain' that take
     Prompt engineering as control flow
     <img width="623" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/46c00cc8-6530-4a76-af5d-35e70ae1b1cd">
 
-### Cognitive Topologies
 
-???+ important "[Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts](https://arxiv.org/pdf/2401.14295.pdf) provide excellent ways of thinking about reasoning." topologies-of-reasoning
+
+??? important "[Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts](https://arxiv.org/pdf/2401.14295.pdf) provide excellent ways of thinking about reasoning." topologies-of-reasoning
     
     The authors present topologies of reasoning as ways of thinking about reasoning using LLMs, or 'thoughts' that are called **nodes** and edges are dependencies between the thoughts are **edges**.
     If one thought is reachable from a task statement, that is a solution node, and the route is the **solution topology**. 
@@ -98,7 +98,6 @@ Models provide the computational core of Agents. Acting like a 'brain' that take
 
 
 
-
 ## Important Architectures
 
 Thought systems are chain patterns used by single agents and [systems](./systems.md) to enable more robust responses.
@@ -107,6 +106,7 @@ They can be executed programmatically given frameworks or sometimes done manuall
 Here are some known thought structures that are improving agentic output.
 
 ### Chains
+
 
 ???+ important "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf)"
     
@@ -121,9 +121,9 @@ Here are some known thought structures that are improving agentic output.
     Effectively Observe, Think, Act, Repeat.
     [Paper](https://arxiv.org/pdf/2210.03629.pdf)
 
-???+ abstract "[Self-Refine: Iterative Refinement with Self-Feedback](https://github.com/madaan/self-refine)" self-refine
+??? abstract "[Self-Refine: Iterative Refinement with Self-Feedback](https://github.com/madaan/self-refine)" self-refine
     The authors reveal in their [paper](https://arxiv.org/pdf/2303.17651.pdf) that LLMs can generate feedback on their work, to repeatedly improve the output.
-    ![image](https://github.com/ianderrington/genai/assets/76016868/e680022f-1f52-4cd1-a074-4eba542b2ba4)
+   
 
 
 
@@ -492,7 +492,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
     <img width="676" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/52204bc7-fc1d-467a-9c3c-7fc367ac4b44">
 
 
-???+ tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)"
+??? tip "[Skeleton of Thought](https://arxiv.org/pdf/2307.15337.pdf)"
 
     A nice structure that resembles the thoughtful creation of answers allows for parallelization and hence speedup, with comparable or better results in answer generation.
     <img width="408" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd">

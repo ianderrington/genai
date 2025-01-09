@@ -1,6 +1,10 @@
+# Evaluating Agents so they can be Optimized
+
 Because LLMs generally are part of broader agent systems, it is important to evaluate them. While [model evaluation](../architectures/evaluating_and_comparing.md) and [prompt](#../prompting/index.md) evaluation is essential to understanding optimizing individual components, it is essential to evaluate the higher-level agents and agent systems. 
 
 There is a lot of similarity of [what to evaluate](../architectures/evaluating_and_comparing.md#what-to-evaluate) for models, so we primarily focus on tools and methods of [how to evaluate](#how-to-evaluate) 
+
+Once you have the ability to evaluate, you can use the results to [optimize](./methods.md) the agent or agent systems.
 
 ## **How to Evaluate**
 
