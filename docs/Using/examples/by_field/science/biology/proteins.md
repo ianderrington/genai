@@ -6,22 +6,22 @@ Generating or modifying protein sequences to improve or create novel behavior is
 
 There are two general manners of optimizing proteins: _mutagenic_ and _de-novo_. In mutagenic protein optimization, a target protein is found and altered in a manner to fulfill target requirement. In _de novo_ protein generation, protein sequences are created without direct seeding by initial target proteins. It is important to note that _de novo_ generation is generally more difficult because generated protein sequences may not have originated from evolutionary pressures, so may be existentially dispreferred, but de novo designs can offer a degree of freedom and flexibility beyond directly evolutionarily derived protein sequences. 
 
-## Targets
+## Targets 
 
-There are a number of [targets](#optimization-targets) that protein optimization can focus on. For example, some targets enable primarily basic understanding, such as protein [structure](#structure), and other targets are related to [function](#function), though it is generally considered that structure enables the functions.
+There are a number of targets that protein optimization can focus on. For example, some targets enable primarily basic understanding, such as protein [structure](#structure), and other targets are related to [function](#function), though it is generally considered that structure enables the functions.
 
 In the canon of causal influence, _source_ has --> _sequence_ that creates --> _structure_ --> enables the _function_. We can generally compartmentalize targets based on these, though there is certain crossover between them.
 
 - **Source**
     - [Candidate Identification](#candidate-identification)
-- **[Sequence](#sequence)**
+- **[Sequence](#sequence)** 
     - [Alignment](#candidate-alignment)
     - [Remote cohomology]: Similar function, or structure
-- **[Structure](#structure)**
+- **[Structure](#structure)** 
     - **Contact prediction**
     - **Secondary and tertiary structure**
     - **(mis)Folding (missense)**
-- **[Function](#function)**
+- **[Function](#function)** 
     - **Enzymatic Catalysis:** The ability of an enzyme to accelerate chemical processes
     - **Thermocompatibility** or thermostability, how well a protein remains stable or functions at varying temperatures
     - **Fluorescence** for visualization purposes

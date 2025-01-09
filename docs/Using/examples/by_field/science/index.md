@@ -136,7 +136,7 @@ Autonomous laboratories are controlled by different robotics setups and automati
 
 ## Risks to Consider
 
-Like the use of GenAI in other domains, it is essential to consider the [risks](../../de-risking/index.md) associated with its application, in this case to Science. 
+Like the use of GenAI in other domains, it is essential to consider the [risks](../../../de-risking/index.md) associated with its application, in this case to Science. 
 
 These risks can be considered quite generally, in the following categories
 1. Incorrect output

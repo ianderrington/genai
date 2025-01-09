@@ -1,7 +1,0 @@
-nav:
-  - index.md
-  - training_and_finetuning.md
-  - pre_trained_models.md
-  - back_end.md
-  - front_end.md
-  - ...

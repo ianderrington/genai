@@ -1,11 +1,12 @@
-Here we will discuss the architectural components needed to build Gen()AI models. While it is often useful or essential to use [pre-trained models](../building/pre_trained_models.md), it is likely that such pre-trained models can be further refined for specific use-cases.
+Here we will discuss the architectural components needed to build Gen()AI models. While it is often useful or essential to use [pre-trained models](..building_applicationspre_trained_models.md), it is likely that such pre-trained models can be further refined for specific use-cases.
 
 ???+ tip "**tl;dr**"
 
     - Understand [self-supervised learning](#self-supervised-learning) and [foundation models](#foundation-models)
     - Learn about [models](./models/index.md)
     - [Train](./training/index.md) your models
-    - [Optimize](./optimization/index.md) your models
+    - [Optimize](./optimizing/index.md) your models
+    - [Generate](./generating/index.md) with your models
     - [Evaluate and compare](./evaluating_and_comparing.md) your models
 
 ## Background
@@ -74,6 +75,19 @@ Language models (LMs) are a type of generative model trained to predict the next
 
 
 #### GPT architectures
+
+
+- [Illustrated GPT](http://jalammar.github.io/illustrated-gpt2/)
+- [How GPT3 works](https://jalammar.github.io/how-gpt3-works-visualizations-animations/)
+Excellent summary of the progress of GPT over time, revealing core components, optimizations, and essential variations to the major Foundation model architectures.
+
+
+- [Five years of progress in GPTs](https://finbarrtimbers.substack.com/p/five-years-of-progress-in-gpts?utm_source=substack&utm_medium=email)
+
+- [The Transformer Architecture of GPT Models](https://towardsdatascience.com/the-transformer-architecture-of-gpt-models-b8695b48728b)
+
+https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf
+
 
 Generative AI models are of two general categories: self-supervised, and Externally-supervised, and hybrid models.
 

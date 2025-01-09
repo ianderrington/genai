@@ -48,13 +48,13 @@ Knowledge rests utop the mountains atop the mountains. We will not initially be 
 Our strategy can be separated [project strategy](#project_strategy) and [community strategy](#community_strategy)
 
 
-### Project strategy
+### Project strategy {#project_strategy}
 
 1. **Establish a knowledge core** of information that is heirarchichally related in documentaiton. Expand to Graph-representations, and Knowledge graphs to enable greater flexibility.
 1. **Build with Github Mkdocs - Material**. This will make something that has minimal overhead to provide the needed understanding. It will allow for content generation to be focused while minimizing added complexity of rendering with more dynamic and aesthetic websites and GUIS. Longer-term, with the help of AI, we anticipate being able to re-represent the information contained in this repository in other formats.
 1. **Use Github Workflows** to minimize unecessarily manual processes. While we will enable people to assist in the creation of this site, in a controllably but dynamic fashion
 
-### Community strategy
+### Community strategy {#community_strategy}
 
 1. **Make this interesting and useful** Make this as useful as possible to help people both build and build with Gen()AI.
 1. **Publish, publish, publish** Aim to create content that can be shared, using the information herein as a background.

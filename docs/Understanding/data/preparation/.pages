@@ -2,4 +2,5 @@ nav:
   - index.md
   - collection.md
   - selection.md
-  - augmentation.md
+  - formatting.md
+  - ...

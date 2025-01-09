@@ -4,7 +4,7 @@ In generation models, higher quality is generally found through feedback methods
     The process of generating responses can be likened to navigating through a maze of tokens. The final generation token, 'EOF', signifies the end of the output and the completion of a path through the maze, which is the 'destination'. The quality of this path depends on the individual steps taken while navigating the maze. It is possible to take wrong 'turns' in the maze, resulting in a 'wrong' or suboptimal path when the generation arrives at the final destination. This is where [feedback](#feedback) comes into play, guiding the path through the maze towards a more correct destination. 
 
 
-Feedback can be provided by humans, referred to as [human-feedback (HF)](#feedback), or by AI, known as [AI-feedback (AIF)](#ai-feedback), or a combination of both. 
+Feedback can be provided by humans, referred to as [human-feedback (HF)](#feedback), or by AI, known as [AI-feedback (AIF)](#rlhf), or a combination of both. 
 
 
 [^n1]Note: This is different from [recursive_training](./recursive.md) where a model is used to generate training examples to improve the training of a subsequent model. 

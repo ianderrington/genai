@@ -2,7 +2,6 @@ nav:
     - index.md
     - models
     - training
-    - gpt.md
-    - optimization
-    - evaluating_and_comparing.md
+    - generating
+    - optimizing
     - ...

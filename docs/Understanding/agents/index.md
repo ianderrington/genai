@@ -32,7 +32,7 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
     | # | Process       | Decide Output of Step | Decide Which Steps to Take | Determine What Sequences of Steps are Available |
     |---|---------------|-----------------------|----------------------------|-----------------------------------------------|
     | 1 | Code          | 👩‍💻                   | 👩‍💻                         | 👩‍💻                                          |
-    | 2 | [LLM Call](../architectures/generation.md)      | 🗣️                   | 👩‍💻 (one step)              | 👩‍💻                                          |
+    | 2 | [LLM Call](../architectures/generation/index.md)      | 🗣️                   | 👩‍💻 (one step)              | 👩‍💻                                          |
     | 3 | Chain         | 🗣                   | 👩‍💻 (multiple steps)        | 👩‍💻                                          |
     | 4 | Router        | 🗣️                   | 🗣️  (no cycles)            | 👩‍💻                                          |
     | 5 | State Machine | 🗣️                   | 🗣️  (cycles)               | 👩‍💻                                          |
@@ -102,7 +102,7 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
 At the core of agents are data interpreters such as LLMs [models](../architectures/models/index.md), provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an [environment](./environments.md), with specific [actions and tools](./actions_and_tools.md). To be effective, the data interpretation is best accomplished with [cognitive architectures](./cognitive_architecture.md) that enable reasoning, planning, and interactions with [memory](./memory.md) sources. To coordinate these components effectively [interpreters and executors](./cognitive_architecture.md#interpreters). With one agent is found to work, [systems](./systems.md) of agents allow for multiple agents to interact with other agents and with people. 
 
 
-Agents can be quite different! Here are some [examples](./examples.md) of agents made both in academic and commercial settings.
+Agents can be quite different! Here are some [examples](./examples/index.md) of agents made both in academic and commercial settings.
 
 
 

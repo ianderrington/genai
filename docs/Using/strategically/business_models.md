@@ -55,7 +55,7 @@ Cons:
 ## Embeddings-as-a service
 It seems that outputting the embeddings. 
 
-While next-token generation is immediately useful and valuable, [embeddings](../../Understanding/architectures/models/index.md#embeddings) provide value in enabling vector-based [memory](../../Understanding/agents/memory.md) that enable more effective generations. 
+While next-token generation is immediately useful and valuable, [embeddings](../../Understanding/architectures/models/index.md#embeddings) provide value in enabling vector-based [memory](../../Understanding/agents/components/memory.md) that enable more effective generations. 
 
 
 https://github.com/amansrivastava17/embedding-as-service

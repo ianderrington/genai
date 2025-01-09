@@ -1,12 +1,7 @@
 nav:
     - index.md
-    - examples.md
-    - cognitive_architecture.md
-    - rag.md
-    - memory.md
-    - knowledge_graphs.md
-    - actions_and_tools.md
+    - components
     - evaluating_and_comparing.md
-    - environments.md
-    - systems.md
+    - systems
+    - examples
     - ...

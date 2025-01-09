@@ -1,8 +1,5 @@
 nav:
     - index.md
-    - use_cases.md
-    - challenges.md
-    - chronology.md
-    - ai_and_ml_basics
+    - AI and ML Basics: ai_and_ml_basics
+    - Gen()AI: gen_ai
     - ...
-    - extra_resources.md

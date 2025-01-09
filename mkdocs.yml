@@ -36,7 +36,7 @@ theme:
     # - content.code.annotate
     # - content.tabs.link
     # - header.autohide
-    # # - navigation.expand
+    # - navigation.expand
     # - navigation.indexes
     # - navigation.instant
     # # - navigation.sections
@@ -66,7 +66,7 @@ theme:
     # - navigation.instant.progress
     # - navigation.path
     # - navigation.prune
-    # - navigation.sections
+    - navigation.sections
     - navigation.tabs
     # - navigation.tabs.sticky
     - navigation.top
@@ -107,7 +107,7 @@ plugins:
       
   - awesome-pages
     #- blog
-  - meta
+  # - meta
   # Doesn't build 
   # - rss:
   #   match_path: blog/posts/.*
@@ -133,9 +133,9 @@ plugins:
   # - tags ## NOT cOMPAITLbE WITH shareable_admonition because it rewrites it somehow
       # tags_file: tags.md
   # - section-index # DOES NOT WORK WITH BLOG
+  - macros
   - table-reader:
       data_path: "docs"
-  - macros
   # - social:
   #     cards_layout: default
   - glightbox

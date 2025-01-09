@@ -1,4 +1,3 @@
-
 # Understanding Prompting
 
 Prompts detail the manner in which a Generative AI model should be producing output. Constructing the prompts to be the most effective in obtaining desired output is known as prompt engineering (PE). While PE may have dependencies on the underlying models, there are strategies that can be more universal in their ability to do well.
@@ -7,7 +6,7 @@ Because often an individual query or generation may be insufficient to produce t
 
 This page describes prompting methods that may function with a single call to an LLM. Note that much of what is applicable in single-prompts may transfer to the [cognitive architectures](../agents/cognitive_architecture.md).
 
-It is important to note that while [manual methods](#manual-methods) are helpful, if not essential, [automatic methods](#automatic-prompting-methods) have become common and may help to reduce the burdens of identifying sufficiently optimal prompts for certain models and situations. Because providing additional context through few-shot examples can improve results, [retrieval augmented prompting](#retrieval-augmented-prompting) can be successfully used to extract more effective solutions.
+It is important to note that while [manual methods](#manual-methods) are helpful, if not essential, [automatic methods](optimizing/auto_prompting.md) have become common and may help to reduce the burdens of identifying sufficiently optimal prompts for certain models and situations. Because providing additional context through few-shot examples can improve results, [retrieval augmented prompting](#retrieval-augmented-prompting) can be successfully used to extract more effective solutions.
 
 ## Key Concepts
 
@@ -54,12 +53,12 @@ It has been found that the quality of responses is governed by the quality of th
 
 **Exemplar Selection**: The process of choosing the most appropriate examples for the prompt.
 
-## Manual Prompting Methods
+## Manual Prompting Methods 
 
 ### General Advice
 
 - Give clear instructions, minimizing grammar and language errors.
-- Use a [prompt pattern](#prompt-pattern) to provide useful and necessary information.
+- Use a prompt pattern to provide useful and necessary information.
 - Split complex tasks into simpler subtasks, breaking prompts into smaller prompts that can be later assembled.
 - Structure the instruction to keep the model on task.
 - Prompt the model to explain before answering.
@@ -247,12 +246,12 @@ It can be quite helpful to create prompts that are more human in nature. There a
 
 ### Retrieval Augmented Prompting
 
-Retrieval-based prompting uses [RAG](../agents/rag.md) lookup to identify appropriate prompts that may more successfully generate results.
+Retrieval-based prompting uses [RAG](../agents/components/memory.md) lookup to identify appropriate prompts that may more successfully generate results.
 
 
 ## Optimizations
 
-[Auto prompting](auto_prompting.md) is the process of automatically generating or improving prompts and has the ability to improve performance, rendering much the art of prompting into an engineering problem.
+[Auto prompting](optimizing/auto_prompting.md) is the process of automatically generating or improving prompts and has the ability to improve performance, rendering much the art of prompting into an engineering problem.
 
 ### Prompt Tuning
 
@@ -311,3 +310,19 @@ P-Tuning [8] adds task-specific anchor tokens to the model’s input layer that 
 [8] Liu, Xiao, et al. "GPT understands, too." arXiv preprint arXiv:2103.10385 (2021).
 
 [Self consistency technique](https://arxiv.org/pdf/2203.11171.pdf)
+
+## Automatic Prompting Methods 
+
+[Auto prompting](optimizing/auto_prompting.md) is the process of automatically generating or improving prompts and has the ability to improve performance, rendering much of the art of prompting into an engineering problem. See the [auto prompting guide](optimizing/auto_prompting.md) for detailed techniques and implementations.
+
+### Prompt Pattern 
+
+???+ info "Context, Task, Persona, Tone, Examples, Format"
+    | **Category** | **Description**                                                                                         |
+    |--------------|---------------------------------------------------------------------------------------------------------|
+    | Context      | Be very specific. The better is the context the better will be the output.                             |
+    | Task         | Clearly describe what is the task you ask for.                                                         |
+    | Persona      | (Optional) what is your role and what is the role of the tool.                                         |
+    | Tone         | (Optional) use when special "tone" is relevant, for example: formal, casual, funny …                   |
+    | Examples     | (Optional) providing examples of request, expected output are very useful.                             |
+    | Format       | (Optional) use when you need a special format like producing a table, XML, HTML…                       |

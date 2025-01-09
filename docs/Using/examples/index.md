@@ -1,7 +1,7 @@
 There are many numerous use cases by field and modality, but they tend to follow in the following end-uses.
 
 ### Assistants
-Assistants are those who do complete tasks, much like agents in [baby AGI](../../Understanding/agents/examples.md). Their domain of function may be limited primarly by the [tools and plugins](../../Understanding/agents/actions_and_tools.md).
+Assistants are those who do complete tasks, much like agents in [baby AGI](../../Understanding/agents/examples/index.md). Their domain of function may be limited primarly by the [tools and plugins](../../Understanding/agents/components/actions_and_tools.md).
 
 
 ??? abstract "[Skyvern](https://github.com/Skyvern-AI/skyvern) automates browser-based workflows using LLMs and computer vision. It provides a simple API endpoint to fully automate manual workflows, replacing brittle or unreliable automation solutions."

@@ -202,13 +202,13 @@ What do you need to know?
 ???+ important "See these first" 
     - 🤔 Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it. 
     - 📊 Understand the [**data**](./data/index.md) and collect data that you need. 
-    - 🚢 Consider [**Model Architectures**](./architectures/index.md) use [**pre-trained**](./building/pre_trained_models.md) models if possible. 
+    - 🚢 Consider [**Model Architectures**](./architectures/index.md) use [**pre-trained**](.building_applicationspre_trained_models.md) models if possible. 
     - [💬 Prompts](prompting/index.md) govern how we interact with the models. 
-    - [🔧 Optimize](./architectures/optimization/index.md) your model for better performance and efficiency. 
+    - [🔧 Optimize](./architectures/optimizing/index.md) your model for better performance and efficiency. 
     
     - [🛠️ Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
     - [🧭 Consider Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies. 
-    - 🏗️ [](./building/index.md) your model. 
+    - 🏗️ [](.building_applicationsindex.md) your model. 
     
 
 In the documents you read here, you will be able to see an increasingly consistent and understandable discussion of Gen()AI technologies, enabled by Gen()AI technologies herein described. Like most powerful technology, Gen()AI can be a two-edged sword and effective use requires responsible and thoughtful understanding. ⚖️
@@ -219,7 +219,7 @@ In the documents you read here, you will be able to see an increasingly consiste
 
 ⾾ Competition is fierce to create the 'best' (based on certain metrics) Gen()AI, so much knowledge may not be known to protect IP and other secrets.
 
-Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](./building/pre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made.
+Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](.building_applicationspre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made.
 
 If you are working on commercial projects, be sure to look at the Licenses to ensure you are legally compliant.
 

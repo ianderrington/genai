@@ -1,4 +1,4 @@
-Data preparation is essential for all aspects of GenAI. It spans from [pre-training](../../architectures/training/pre-training.md) to [fine-tuning](../../architectures/training/finetuning.md) to [retrieval-augmented generation](../../agents/rag.md), embodying a multifaceted process that ensures the data is optimized for AI training and application. The journey of data preparation involves several critical steps, each tailored to enhance the quality and effectiveness of the data used.
+Data preparation is essential for all aspects of GenAI. It spans from [pre-training](../../architectures/training/pre-training.md) to [fine-tuning](../../architectures/training/finetuning.md) to [retrieval-augmented generation](../../agents/components/memory.md), embodying a multifaceted process that ensures the data is optimized for AI training and application. The journey of data preparation involves several critical steps, each tailored to enhance the quality and effectiveness of the data used.
 
 Below is a clickable overview of the data preparation process: 
 

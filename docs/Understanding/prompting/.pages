@@ -1,4 +1,6 @@
 nav:
     - index.md
-    - auto_prompting.md
+    - optimizing
+    - security
+    - examples
     - ...
