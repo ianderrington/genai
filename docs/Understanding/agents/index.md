@@ -242,7 +242,6 @@ It is possible that limitations fundamental to static agents are not goin to be 
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/e2b-dev/awesome-ai-agents) [Awesome Agents](https://github.com/e2b-dev/awesome-ai-agents) of a nicely curated list of systems using agents"
 
-### Other
-
 !!! note "[Open AI's bet on a cognitive architecture](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)"
+
 !!! note "[Huyen Chip's blog](https://huyenchip.com/2025/01/07/agents.html)"

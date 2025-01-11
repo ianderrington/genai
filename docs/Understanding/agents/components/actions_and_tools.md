@@ -1,4 +1,4 @@
-Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. Relayed by an [interpreters and routers](#interpeters-and-routers), these have made LLMs one of the most powerful enablers of Agentic AI. 
+Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. Relayed by an [interpreters and routers](#interpeters-and), these have made LLMs one of the most powerful enablers of Agentic AI. 
 
 ## Actions and tools
 
@@ -67,7 +67,7 @@ Actions can be thought of interacting in an environment, this environment can ha
 
 ### Executors
 
-The action that an agent may take is enabled by an `AgentExecutor` or [interpreter](./cognitive_architecture.md/#interpreters) of the LLM output, that coordinates the call to perform the action.
+The action that an agent may take is enabled by an `AgentExecutor` which can also be considered an [environment](./environments.md) of the LLM output, that coordinates the call to perform the action.
 
 !!! abstract "[Langchain Agent Executor](https://github.com/langchain-ai/langchain/blob/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent.py#L637)"
 

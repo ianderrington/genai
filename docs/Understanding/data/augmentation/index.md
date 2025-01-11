@@ -110,6 +110,8 @@ Models Phi# like [Phi-2](https://huggingface.co/microsoft/phi-2) have revealed h
     ```
 
 
+
+
 ## Useful Resources
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/google-research/syn-rep-learn) [StableRep: Synthetic Images from Text-to-Image Models Make Strong Visual Representation Learners](https://github.com/google-research/syn-rep-learn)"
