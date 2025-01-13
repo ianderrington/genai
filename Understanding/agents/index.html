@@ -6437,11 +6437,10 @@ and
 <p>Though, more generally it includes these components: </p>
 <ul>
 <li><a href="../architectures/index.html">LLM models</a> that power information evaluation.</li>
-<li><a href="../prompting/index.html">Prompts</a>,  <a href="./cognitive_architecture.md">chains</a>, <a href="./memory.md">memory</a> connected with <a href="./cognitive_architecture.md">cognition architectures</a>.</li>
-<li><a href="environments.md">Environments</a> where an agent can 'act'.</li>
-<li><a href="./actions_and_tools.md">Tools</a>, or aspects of the environment that can be called upon. </li>
-<li><a href="./cognitive_architecture.md#interpreters">Interpreters and Executors</a> that are used to process input or output.</li>
-<li><a href="systems.md">Systems of Agents</a> that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.</li>
+<li><a href="../prompting/index.html">Prompts</a>,  <a href="components/memory.html">memory</a> connected with <a href="components/cognitive_architecture.html">cognition architectures</a>.</li>
+<li><a href="components/environments.html">Environments</a> where an agent can 'act'.</li>
+<li><a href="components/actions_and_tools.html">Tools</a>, or aspects of the environment that can be called upon. </li>
+<li><a href="systems/index.html">Systems of Agents</a> that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.</li>
 </ul>
 <h2 id="agents-in-in-perspective">Agents in In perspective<a class="headerlink" href="#agents-in-in-perspective" title="Permanent link">&para;</a></h2>
 <p>Based on <a href="https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/">this</a>, Agents can be considered as </p>
@@ -6511,24 +6510,25 @@ and
 
     click Environment "./environments.html"
     Data --&gt;|interpreted &lt;br&gt; with| LLM[LLMs]
-    click Data "../../data/index.html"
+    click Data "../data/index.html"
     LLM &lt;--&gt;|uses| CognitiveArchitectures[Cognitive &lt;br&gt;Architectures]
     click LLM "../architectures/models/index.html"
     CognitiveArchitectures &lt;--&gt; |Find, Create, Read&lt;br&gt;Update, Delete| Memory[Memory]
 
     classDef promptsColor fill:#f0ad4e,stroke:#333,stroke-width:2px;
     class Prompts promptsColor;
-    click Memory "./memory.html"
+    click Memory "./components/memory.html"
     Prompts[Prompts] --&gt;|condition| LLM
     click Prompts "../prompting/index.html"
     Prompts --&gt;|support| CognitiveArchitectures
     click Prompts "../prompting/index.html"
-    LLM --&gt;|decides| Action[Action]
-    click CognitiveArchitectures "./cognitive_architecture.html"
-    Action --&gt;|considered &lt;br&gt; by| Interpreter[Interpreter]
-    click Action "./actions_and_tools.html"
+    CognitiveArchitectures --&gt;|proposes| Action[Action]
+    click CognitiveArchitectures "./components/cognitive_architecture.html"
+    Action --&gt;|uses| Tools[Tools]
+    click Tools "./components/actions_and_tools.html"
+    Tools --&gt;|executed by| Interpreter[Interpreter]
     Interpreter --&gt;|updates| Environment
-    click Interpreter "./interpreters.html"
+
 
     classDef dataColor fill:#ffcc00,stroke:#333,stroke-width:2px;
     classDef environmentColor fill:#ff9999,stroke:#333,stroke-width:2px;
@@ -6536,6 +6536,7 @@ and
     classDef cognitiveColor fill:#cc99ff,stroke:#333,stroke-width:2px;
     classDef memoryColor fill:#99ff99,stroke:#333,stroke-width:2px;
     classDef actionColor fill:#ff9966,stroke:#333,stroke-width:2px;
+    classDef toolsColor fill:#ff99cc,stroke:#333,stroke-width:2px;
     classDef interpreterColor fill:#66ffff,stroke:#333,stroke-width:2px;
     classDef internal fill:#f996,stroke:#333,stroke-width:2px;
     classDef external fill:#9f6,stroke:#333,stroke-width:2px;
@@ -6546,6 +6547,7 @@ and
     class CognitiveArchitectures cognitiveColor;
     class Memory memoryColor;
     class Action actionColor;
+    class Tools toolsColor;
     class Interpreter interpreterColor;
 
     subgraph  
@@ -6554,14 +6556,15 @@ and
     CognitiveArchitectures
     Memory
     Action
+    Tools
     DummyNode[Agent Internals]
     end
-
+    click DummyNode "./components/index.html"
     class DummyNode internal;
     style DummyNode fill:#ff9999,stroke:#fff,color:#000;  
 </code></pre>
 </details>
-<p>At the core of agents are data interpreters such as LLMs <a href="../architectures/models/index.html">models</a>, provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an <a href="./environments.md">environment</a>, with specific <a href="./actions_and_tools.md">actions and tools</a>. To be effective, the data interpretation is best accomplished with <a href="./cognitive_architecture.md">cognitive architectures</a> that enable reasoning, planning, and interactions with <a href="./memory.md">memory</a> sources. To coordinate these components effectively <a href="./cognitive_architecture.md#interpreters">interpreters and executors</a>. With one agent is found to work, <a href="./systems.md">systems</a> of agents allow for multiple agents to interact with other agents and with people. </p>
+<p>At the core of agents are data interpreters such as LLMs <a href="../architectures/models/index.html">models</a>, provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an <a href="components/environments.html">environment</a>, with specific <a href="components/actions_and_tools.html">actions and tools</a>. To be effective, the data interpretation is best accomplished with <a href="components/cognitive_architecture.html">cognitive architectures</a> that enable reasoning, planning, and interactions with <a href="components/memory.html">memory</a> sources. To coordinate these components effectively <a href="components/cognitive_architecture.html#interpreters">interpreters and executors</a>. With one agent is found to work, <a href="systems/index.html">systems</a> of agents allow for multiple agents to interact with other agents and with people. </p>
 <p>Agents can be quite different! Here are some <a href="examples/index.html">examples</a> of agents made both in academic and commercial settings.</p>
 <h3 id="example-agent-diagram">Example Agent Diagram:<a class="headerlink" href="#example-agent-diagram" title="Permanent link">&para;</a></h3>
 <p>To enable that it may require more complicated relations between example components. Below is an example representation.</p>
