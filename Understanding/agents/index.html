@@ -26,7 +26,7 @@
     
     
       
-        <title>Index - ManaGen🔮AI</title>
+        <title>Gen()AI Agents - ManaGen🔮AI</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#generative-ai-agents" class="md-skip">
+        <a href="#genai-agents" class="md-skip">
           Skip to content
         </a>
       
@@ -167,7 +167,7 @@ and
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Gen()AI Agents
             
           </span>
         </div>
@@ -684,11 +684,11 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../overview/gen_ai/challenges.html" class="md-nav__link">
+      <a href="../overview/gen_ai/chronology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Challenges
+    Chronology
   </span>
   
 
@@ -705,11 +705,11 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../overview/gen_ai/chronology.html" class="md-nav__link">
+      <a href="../overview/gen_ai/considerations.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Chronology
+    Considerations
   </span>
   
 
@@ -1548,7 +1548,7 @@ and
         
   
   <span class="md-ellipsis">
-    Mixture of experts
+    Mixture of Experts
   </span>
   
 
@@ -6237,21 +6237,14 @@ and
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#generative-ai-agents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gen(erative) AI Agents
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#agents-in-in-perspective" class="md-nav__link">
@@ -6428,9 +6421,7 @@ and
   
 
 
-  <h1>Index</h1>
-
-<h2 id="generative-ai-agents">Gen(erative) AI Agents<a class="headerlink" href="#generative-ai-agents" title="Permanent link">&para;</a></h2>
+<h1 id="genai-agents">Gen()AI Agents<a class="headerlink" href="#genai-agents" title="Permanent link">&para;</a></h1>
 <p>Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.</p>
 <details class="important" open="open">
 <summary>What are agents?</summary>
@@ -6442,8 +6433,8 @@ and
     D --&gt; E[Observe]
     E --&gt; A</code></pre></p>
 </details>
-<p>What makes an LLM?
-Though, more generally it includes these components: </p>
+<p><em>What makes an LLM?</em></p>
+<p>Though, more generally it includes these components: </p>
 <ul>
 <li><a href="../architectures/index.html">LLM models</a> that power information evaluation.</li>
 <li><a href="../prompting/index.html">Prompts</a>,  <a href="./cognitive_architecture.md">chains</a>, <a href="./memory.md">memory</a> connected with <a href="./cognitive_architecture.md">cognition architectures</a>.</li>
@@ -6516,14 +6507,14 @@ Though, more generally it includes these components: </p>
 <details class="important" open="open">
 <summary>How components interact (clickable)</summary>
 <pre class="mermaid"><code>graph TB
-    Environment[Environment] --&gt;|represented \n by | Data[Data]
+    Environment[Environment] --&gt;|represented &lt;br&gt; by | Data[Data]
 
     click Environment "./environments.html"
-    Data --&gt;|interpreted \n with| LLM[LLMs]
+    Data --&gt;|interpreted &lt;br&gt; with| LLM[LLMs]
     click Data "../../data/index.html"
-    LLM &lt;--&gt;|uses| CognitiveArchitectures[Cognitive \nArchitectures]
+    LLM &lt;--&gt;|uses| CognitiveArchitectures[Cognitive &lt;br&gt;Architectures]
     click LLM "../architectures/models/index.html"
-    CognitiveArchitectures &lt;--&gt; |Find, Create, Read\nUpdate, Delete| Memory[Memory]
+    CognitiveArchitectures &lt;--&gt; |Find, Create, Read&lt;br&gt;Update, Delete| Memory[Memory]
 
     classDef promptsColor fill:#f0ad4e,stroke:#333,stroke-width:2px;
     class Prompts promptsColor;
@@ -6534,7 +6525,7 @@ Though, more generally it includes these components: </p>
     click Prompts "../prompting/index.html"
     LLM --&gt;|decides| Action[Action]
     click CognitiveArchitectures "./cognitive_architecture.html"
-    Action --&gt;|considered \n by| Interpreter[Interpreter]
+    Action --&gt;|considered &lt;br&gt; by| Interpreter[Interpreter]
     click Action "./actions_and_tools.html"
     Interpreter --&gt;|updates| Environment
     click Interpreter "./interpreters.html"
@@ -6817,14 +6808,14 @@ Though, more generally it includes these components: </p>
           <a
             href="components/index.html"
             class="md-footer__link md-footer__link--next"
-            aria-label="Next: Index"
+            aria-label="Next: Components"
           >
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Index
+                Components
               </div>
             </div>
             <div class="md-footer__button md-icon">

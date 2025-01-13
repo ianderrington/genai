@@ -684,11 +684,11 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../overview/gen_ai/challenges.html" class="md-nav__link">
+      <a href="../../overview/gen_ai/chronology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Challenges
+    Chronology
   </span>
   
 
@@ -705,11 +705,11 @@ and
   
   
     <li class="md-nav__item">
-      <a href="../../overview/gen_ai/chronology.html" class="md-nav__link">
+      <a href="../../overview/gen_ai/considerations.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Chronology
+    Considerations
   </span>
   
 
@@ -1550,7 +1550,7 @@ and
         
   
   <span class="md-ellipsis">
-    Mixture of experts
+    Mixture of Experts
   </span>
   
 
@@ -6988,14 +6988,14 @@ and
     style Generator fill:#FAD2E1,stroke:#333,stroke-width:1px
     style Answer fill:#E1FAD2,stroke:#333,stroke-width:1px
 
-    QueryEncoder --&gt; |Retrieve\n from|Retriever
-    Prompt --&gt; Generator[LLM\n Generation]
+    QueryEncoder --&gt; |Retrieve&lt;br&gt; from|Retriever
+    Prompt --&gt; Generator[LLM&lt;br&gt; Generation]
     Query --&gt; Generator
-    Query --&gt; QueryOptimizer1(Query\n Optimizer)
+    Query --&gt; QueryOptimizer1(Query&lt;br&gt; Optimizer)
     QueryOptimizer1 --&gt; QueryEncoder[Encoder]
-    Docs --&gt; QueryOptimizer2(Docs\n Optimizer)
+    Docs --&gt; QueryOptimizer2(Docs&lt;br&gt; Optimizer)
     QueryOptimizer2 --&gt; DocEncoder[Encoder]
-    DocEncoder --&gt; |Index\n to| Retriever[Database]
+    DocEncoder --&gt; |Index&lt;br&gt; to| Retriever[Database]
 
     Retriever --&gt; Context
 
@@ -7123,10 +7123,10 @@ and
     style EmbedDocumentSplits fill:#D2FAFA,stroke:#333,stroke-width:1px
     style StoringData fill:#FADAD2,stroke:#333,stroke-width:1px
 
-    DocumentSelection[Select Documents] --&gt; LoadDocuments[Load \nDocuments]
-    LoadDocuments --&gt; SplitDocuments[Split \n Documents]
-    SplitDocuments --&gt; EmbedDocumentSplits[Embed \n Document \n Splits]
-    EmbedDocumentSplits --&gt; StoringData[Store in \nDatabase]
+    DocumentSelection[Select Documents] --&gt; LoadDocuments[Load &lt;br&gt;Documents]
+    LoadDocuments --&gt; SplitDocuments[Split &lt;br&gt; Documents]
+    SplitDocuments --&gt; EmbedDocumentSplits[Embed &lt;br&gt; Document &lt;br&gt; Splits]
+    EmbedDocumentSplits --&gt; StoringData[Store in &lt;br&gt;Database]
 
     click DocumentSelection "#selecting-data"
     click LoadDocuments "#loading-data"
@@ -7151,7 +7151,7 @@ and
 <p>Once data has been loaded in a way that a model can process it, it must be split. There are several ways of splitting data:</p>
 <ol>
 <li>By the max size a model can handle.</li>
-<li>By some heuristic break, such as <code>.</code> sentences, <code>\n</code> return characters or <code>\p</code> paragraphs or newlines.</li>
+<li>By some heuristic break, such as <code>.</code> sentences, <code>&lt;br&gt;</code> return characters or <code>\p</code> paragraphs or newlines.</li>
 <li>In a manner that maximizes the topic coherence. In this case, splitting and embedding may happen simultaneously.</li>
 </ol>
 <div class="admonition note">
@@ -7212,9 +7212,9 @@ and
 
         C[Query] --&gt; T[Optimize]
         T --&gt; RR[Route]
-        RR --&gt; R[Match and \nRank Documents]
-        R --&gt; F[Combine With\n Context]
-        F --&gt; G[LLM \nGeneration]
+        RR --&gt; R[Match and &lt;br&gt;Rank Documents]
+        R --&gt; F[Combine With&lt;br&gt; Context]
+        F --&gt; G[LLM &lt;br&gt;Generation]
         G --&gt; H[Answer]
 
         click T "#query-optimization"
