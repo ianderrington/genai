@@ -1,3 +1,4 @@
+# Managing
 Managing your GenAI ensures that it is used productively, efficiently, safely, and compliantly. 
 
 You will want to consider means and methods of managing all components and executions in a manner that allows for agility, and flexibility of the components you use.

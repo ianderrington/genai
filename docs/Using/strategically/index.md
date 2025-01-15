@@ -1,5 +1,4 @@
- 
-## Strategy 
+# Strategically
 The strategy for using Generative AI can be broken down into several categories based on how it might be considered. It is first important to consider if the GenAI helps to generate more value, or it helps to improve the efficiency of value that is already generated. These may often overlap, but it is important to consider.
 
 

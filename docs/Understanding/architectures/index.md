@@ -1,3 +1,5 @@
+# Architectures
+
 Here we will discuss the architectural components needed to build Gen()AI models. While it is often useful or essential to use [pre-trained models](..building_applicationspre_trained_models.md), it is likely that such pre-trained models can be further refined for specific use-cases.
 
 ???+ tip "**tl;dr**"

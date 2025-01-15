@@ -1,7 +1,7 @@
 nav:
     - index.md
     - components
-    - Optimizing Agents: optimizing
+    - building_agents
     - systems
     - examples
     - ...

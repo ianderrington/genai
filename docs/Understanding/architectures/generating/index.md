@@ -1,3 +1,5 @@
+# Generating
+
 Generating new data from an input involves selecting the next best token or sets of tokens given an output logit vector.
 
 ## Contrastive Decoding

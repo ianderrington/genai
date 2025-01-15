@@ -23,7 +23,7 @@ graph LR
     click A href "../sources.html" "Data Identification"
     click B href "data_collection.html" "Data Collection"
     click C href "selection.html" "Data Selection and Filtering"
-    click D href "augmentation.html" "Data Augmentation"
+    click D href "../augmentation/index.html" "Data Augmentation"
     click DD href "formatting.html" "Formatting"
     click E href "simulation.html" "Data Simulation"
 
@@ -37,7 +37,7 @@ graph LR
 
 3. **Data Selection and Filtering**: After collecting a substantial dataset, the selection and filtering process begins. This step involves refining the dataset, removing irrelevant, redundant, or low-quality data to ensure the efficiency and effectiveness of the training process. [Learn more](selection.md).
 
-4. **Data Augmentation**: To further enhance the dataset, data augmentation techniques are applied. This involves generating new data points from existing ones through various transformations, thereby increasing the quality, diversity and volume of the training data. [Learn more](augmentation.md).
+4. **Data Augmentation**: To further enhance the dataset, data augmentation techniques are applied. This involves generating new data points from existing ones through various transformations, thereby increasing the quality, diversity and volume of the training data. [Learn more](../augmentation/index.md).
 
 5. **Formatting**: Rewrites the data in a manner that is reduces token-usage or enables better results. [Learn more](formatting.md)
 

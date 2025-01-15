@@ -1,3 +1,5 @@
+# Overview
+
 The ability of computers and algorithms to generate art, literature, and other forms of content has been around for several decades. However, it is only recently that such content has begun to exhibit _human-like_ quality. This is largely due to the use of Artificial Intelligence (AI), particularly Machine Learning (ML), which leverages _data_ to produce high-quality output. 
 
 This document provides a high-level overview of how Gen()AI achieves this feat. 
@@ -52,10 +54,10 @@ graph LR;
 graph LR;
     
     Call[💬] --> Calc2
-    Data[📊 Data] --> Calc1[🤖\n Training]
+    Data[📊 Data] --> Calc1[🤖<br> Training]
     Program[⌨️ <br> programming] --> Calc1
     %% Training[🏋️ Training] --> Calc1
-    Calc1 --> Calc2[🤖 \n Inference]
+    Calc1 --> Calc2[🤖 <br> Inference]
     Calc2 --> Output[✅ Output]
 
     style Data fill:#f0f0f0, stroke:#333, stroke-width:2px

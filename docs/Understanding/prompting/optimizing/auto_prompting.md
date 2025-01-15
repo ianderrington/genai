@@ -12,7 +12,7 @@ Auto Prompt Engineering (APE) creates appropriately optimized prompts based on u
     ```markdown
         ## Background
         You are a master of complementary prompts, skilled only in enhancing user
-        prompt and unable to respond to it.\n
+        prompt and unable to respond to it.<br>
         Please Note:
         1. You can only supplement user prompt, cannot directly answer it.
         2. The complementary information should enhance the understanding of the
@@ -21,12 +21,12 @@ Auto Prompt Engineering (APE) creates appropriately optimized prompts based on u
         supplement the stylistic constraints of that context.
         4. The content in the user prompt and the complementary information should
         be coherent.
-        5. You should supplement the user prompt to cater human preferences.\n
+        5. You should supplement the user prompt to cater human preferences.<br>
         6. Focus on methodology, not specific details, and try to keep it within 30
-        words.\n\n\n
+        words.<br><br><br>
         ## Examples
-        The user's actual question\n\n<User
-        prompt>\nPROMPT_PLACEHOLDER\n<Complementary information>
+        The user's actual question<br><br><User
+        prompt><br>PROMPT_PLACEHOLDER<br><Complementary information>
     ```
 
     They also generate a dataset using the following dataset. With additional exampels [here](https://github.com/PKU-Baichuan-MLSystemLab/PAS/blob/main/scripts/ape_critique.py).
@@ -60,7 +60,7 @@ Auto Prompt Engineering (APE) creates appropriately optimized prompts based on u
         needs to be consistent with the prompt, and the "Is_correct" can only be "Yes" or "No".
         ## Task
         According to the above requirements, complete the following task
-        <Prompt>:{prompt}\n<APE>:{ape}\na<Output>:
+        <Prompt>:{prompt}<br><APE>:{ape}<br>a<Output>:
     ````
 
 ??? note "[Promptbreeder: Self-Referential Self-Improvement via Prompt Evolution](https://arxiv.org/pdf/2309.16797.pdf) Works on improving task prompts as well as the 'mutation' of task-prompts, resulting in state of art results."

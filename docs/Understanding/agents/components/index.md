@@ -1,3 +1,5 @@
+# Components
+
 The primary components of an agent are:
 
 - [Cognitive Architecture](cognitive_architecture.md)

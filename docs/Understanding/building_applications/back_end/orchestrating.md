@@ -91,16 +91,16 @@ Langchain is an open source SDK that allows for creation and management of chat 
 ### Language-like interfaces
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/eth-sri/lmql) [LMQL](https://github.com/eth-sri/lmql) is a query language that enables simplified representations of chats and agents with minimal code. "
     ```
-    "Greet LMQL:[GREETINGS]\n" where stops_at(GREETINGS, ".") and not "\n" in GREETINGS
+    "Greet LMQL:[GREETINGS]<br>" where stops_at(GREETINGS, ".") and not "<br>" in GREETINGS
 
     if "Hi there" in GREETINGS:
         "Can you reformulate your greeting in the speech of \
-         victorian-era English: [VIC_GREETINGS]\n" where stops_at(VIC_GREETINGS, ".")
+         victorian-era English: [VIC_GREETINGS]<br>" where stops_at(VIC_GREETINGS, ".")
 
-    "Analyse what part of this response makes it typically victorian:\n"
+    "Analyse what part of this response makes it typically victorian:<br>"
 
     for i in range(4):
-        "-[THOUGHT]\n" where stops_at(THOUGHT, ".")
+        "-[THOUGHT]<br>" where stops_at(THOUGHT, ".")
 
     "To summarize:[SUMMARY]"
     ```

@@ -1,4 +1,4 @@
-The reverse of the phrase "garbage in, garbage out", is "goodness in, goodness out". While we can use [selection](./selection.md) to improve the quality of data, the  data augmentation can help expand the 'goodness' that can be enabled. Data augmentation can be used in areas where data is specialized, real-world, costly, scarce, or not sufficiently diverse. It can also be used to reformat or improve upon general input data by highlighting particular components about that data. It can also be used to generated higher quality data that can improve the behavior of LLM's in various manners. Large volumes of synthetic data, which can be used to train highly task-specific models.  The use of synthetic data can be considered [recursive](../../architectures/training/recursive.md).
+The reverse of the phrase "garbage in, garbage out", is "goodness in, goodness out". While we can use [selection](../preparation/selection.md) to improve the quality of data, the  data augmentation can help expand the 'goodness' that can be enabled. Data augmentation can be used in areas where data is specialized, real-world, costly, scarce, or not sufficiently diverse. It can also be used to reformat or improve upon general input data by highlighting particular components about that data. It can also be used to generated higher quality data that can improve the behavior of LLM's in various manners. Large volumes of synthetic data, which can be used to train highly task-specific models.  The use of synthetic data can be considered [recursive](../../architectures/training/recursive.md).
 
 ## What is Data Augmentation?
 
@@ -59,7 +59,7 @@ Models Phi# like [Phi-2](https://huggingface.co/microsoft/phi-2) have revealed h
     <img width="556" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/343f2dfa-0ab6-47f0-b695-a5ddefe838c4">
 
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/GAIR-NLP/ReAlign) [Reformatted Alignment](https://github.com/GAIR-NLP/ReAlign) demonstrates that reformatting responses of instruction data with to pre-established criteria and collated evidence improves alignment, factuality, and readability." realign-reformatted-alignment
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/GAIR-NLP/ReAlign) [ReFormatted Alignment](https://github.com/GAIR-NLP/ReAlign) demonstrates that reformatting responses of instruction data with to pre-established criteria and collated evidence improves alignment, factuality, and readability." realign-reformatted-alignment
 
     **Develpoments** By reformatting instruction data in a consistent manner, and connecting it with a Google Search API, the results are able to generate higher quality data that is ReAligned' resulting in improvements over several models, judged both by GPT-4 and people. 
     

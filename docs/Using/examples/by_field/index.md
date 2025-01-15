@@ -1,5 +1,4 @@
-MANAGEN: Describe the multiple components
-
+# Examples by Field
 The use of personal assistance and memory is a notable application that can have impacts on multiple 
 fields. 
 

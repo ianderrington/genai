@@ -1,4 +1,4 @@
-MANGEN: This entire document needs to be reorganized and revised.
+# Models
 
 The models for Generative AI consist of the computational components that are trained to generate outputs conditioned upon given inputs. While computational models may be used to generate impressive new content, as for traditional state-machines that make output choices based on heuristics, they differ from those that are data-informed. 
 

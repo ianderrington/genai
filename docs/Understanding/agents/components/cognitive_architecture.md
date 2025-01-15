@@ -305,7 +305,42 @@ There are other [memory based solutions](memory.md) including [RAG](rag.md) that
     Demonstrates the use of 'scratch pads' to store intermediate results that can be recalled later for improved perfomance. 
     
 
-### Planning and Reflective
+### Planning
+
+Planning is a critical component of agent architecture. According to Huyen, planning involves:
+
+1. **Task Planning**
+   - Breaking complex tasks into manageable actions
+   - Determining tool requirements
+   - Validating feasibility
+   - Setting constraints and goals
+
+2. **Plan Validation**
+   - Heuristic checks for invalid actions
+   - AI-based plan evaluation
+   - Human oversight for critical operations
+
+3. **Plan Execution Patterns**
+   - Sequential: Actions executed one after another
+   - Parallel: Multiple actions executed simultaneously
+   - Conditional: Branching based on previous results
+   - Iterative: Repeated actions until conditions are met
+
+
+### Reflection
+
+Self-reflection is a crucial aspect of agent architecture. It involves:
+
+1. **Self-Assessment**
+   - Evaluating performance and progress
+   - Identifying areas for improvement
+   - Learning from past experiences
+
+2. **Feedback**
+   - Receiving and responding to feedback
+   - Adjusting strategies and actions
+   - Continuous learning and adaptation
+
 
 ??? important "[Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation](https://arxiv.org/pdf/2310.02304v1.pdf)"
 

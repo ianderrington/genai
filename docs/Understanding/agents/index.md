@@ -1,8 +1,8 @@
-## Gen(erative) AI Agents
+# Gen()AI Agents
 
 Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.
 
-???+ important "What are agents?"
+!!! important "What are agents?"
     An computer system that can execute in the general loop 
     ```mermaid
     graph LR
@@ -13,59 +13,59 @@ Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond 
         E --> A
     ```
 
-What makes an LLM?
+_What makes an AI Agent?_
+
 Though, more generally it includes these components: 
 
 * [LLM models](../architectures/index.md) that power information evaluation.
-* [Prompts](../prompting/index.md),  [chains](./cognitive_architecture.md), [memory](./memory.md) connected with [cognition architectures](./cognitive_architecture.md).
-* [Environments](environments.md) where an agent can 'act'.
-* [Tools](./actions_and_tools.md), or aspects of the environment that can be called upon. 
-* [Interpreters and Executors](./cognitive_architecture.md#interpreters) that are used to process input or output.
-* [Systems of Agents](systems.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
+* [Prompts](../prompting/index.md),  [memory](./components/memory.md) connected with [cognition architectures](./components/cognitive_architecture.md) that help to [plan](./components/cognitive_architecture.md#planning).
+* [Environments](./components/environments.md) where an agent can 'act'.
+* [Tools](./components/actions_and_tools.md), or aspects of the environment that can be called upon. 
+* [Systems of Agents](./systems/index.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
+
+See how these components can be put together in [building agents](./building_agents.md).
 
 
-## Agents in In perspective
+Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/),
 
-Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/), Agents can be considered as 
-
-???+ important "How components are related""
-    | # | Process       | Decide Output of Step | Decide Which Steps to Take | Determine What Sequences of Steps are Available |
-    |---|---------------|-----------------------|----------------------------|-----------------------------------------------|
-    | 1 | Code          | 👩‍💻                   | 👩‍💻                         | 👩‍💻                                          |
-    | 2 | [LLM Call](../architectures/generation/index.md)      | 🗣️                   | 👩‍💻 (one step)              | 👩‍💻                                          |
-    | 3 | Chain         | 🗣                   | 👩‍💻 (multiple steps)        | 👩‍💻                                          |
-    | 4 | Router        | 🗣️                   | 🗣️  (no cycles)            | 👩‍💻                                          |
-    | 5 | State Machine | 🗣️                   | 🗣️  (cycles)               | 👩‍💻                                          |
-    | 6 | Agent         | 🗣️                   | 🗣️                         | 🗣️️                                          |
+| # | Process       | Decide Output of Step | Decide Which Steps to Take | Determine What Sequences of Steps are Available |
+|---|---------------|-----------------------|----------------------------|-----------------------------------------------|
+| 1 | Code          | 👩‍💻                   | 👩‍💻                         | 👩‍💻                                          |
+| 2 | [LLM Call](../architectures/generation/index.md)      | 🗣️                   | 👩‍💻 (one step)              | 👩‍💻                                          |
+| 3 | Chain         | 🗣                   | 👩‍💻 (multiple steps)        | 👩‍💻                                          |
+| 4 | Router        | 🗣️                   | 🗣️  (no cycles)            | 👩‍💻                                          |
+| 5 | State Machine | 🗣️                   | 🗣️  (cycles)               | 👩‍💻                                          |
+| 6 | Agent         | 🗣️                   | 🗣️                         | 🗣️️                                          |
 
 
-## Essential Concepts
+## Agent Components
 
 ???+ important "How components interact (clickable)"
     ```mermaid
     graph TB
-        Environment[Environment] -->|represented \n by | Data[Data]
+        Environment[Environment] -->|represented <br> by | Data[Data]
         
         click Environment "./environments.html"
-        Data -->|interpreted \n with| LLM[LLMs]
-        click Data "../../data/index.html"
-        LLM <-->|uses| CognitiveArchitectures[Cognitive \nArchitectures]
+        Data -->|interpreted <br> with| LLM[LLMs]
+        click Data "../data/index.html"
+        LLM <-->|uses| CognitiveArchitectures[Cognitive <br>Architectures]
         click LLM "../architectures/models/index.html"
-        CognitiveArchitectures <--> |Find, Create, Read\nUpdate, Delete| Memory[Memory]
+        CognitiveArchitectures <--> |Find, Create, Read<br>Update, Delete| Memory[Memory]
         
         classDef promptsColor fill:#f0ad4e,stroke:#333,stroke-width:2px;
         class Prompts promptsColor;
-        click Memory "./memory.html"
+        click Memory "./components/memory.html"
         Prompts[Prompts] -->|condition| LLM
         click Prompts "../prompting/index.html"
         Prompts -->|support| CognitiveArchitectures
         click Prompts "../prompting/index.html"
-        LLM -->|decides| Action[Action]
-        click CognitiveArchitectures "./cognitive_architecture.html"
-        Action -->|considered \n by| Interpreter[Interpreter]
-        click Action "./actions_and_tools.html"
+        CognitiveArchitectures -->|proposes| Action[Action]
+        click CognitiveArchitectures "./components/cognitive_architecture.html"
+        Action -->|uses| Tools[Tools]
+        click Tools "./components/actions_and_tools.html"
+        Tools -->|executed by| Interpreter[Interpreter]
         Interpreter -->|updates| Environment
-        click Interpreter "./interpreters.html"
+        
 
         classDef dataColor fill:#ffcc00,stroke:#333,stroke-width:2px;
         classDef environmentColor fill:#ff9999,stroke:#333,stroke-width:2px;
@@ -73,6 +73,7 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
         classDef cognitiveColor fill:#cc99ff,stroke:#333,stroke-width:2px;
         classDef memoryColor fill:#99ff99,stroke:#333,stroke-width:2px;
         classDef actionColor fill:#ff9966,stroke:#333,stroke-width:2px;
+        classDef toolsColor fill:#ff99cc,stroke:#333,stroke-width:2px;
         classDef interpreterColor fill:#66ffff,stroke:#333,stroke-width:2px;
         classDef internal fill:#f996,stroke:#333,stroke-width:2px;
         classDef external fill:#9f6,stroke:#333,stroke-width:2px;
@@ -83,6 +84,7 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
         class CognitiveArchitectures cognitiveColor;
         class Memory memoryColor;
         class Action actionColor;
+        class Tools toolsColor;
         class Interpreter interpreterColor;
 
         subgraph  
@@ -91,15 +93,16 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
         CognitiveArchitectures
         Memory
         Action
+        Tools
         DummyNode[Agent Internals]
         end
-
+        click DummyNode "./components/index.html"
         class DummyNode internal;
         style DummyNode fill:#ff9999,stroke:#fff,color:#000;  
 
     ```
 
-At the core of agents are data interpreters such as LLMs [models](../architectures/models/index.md), provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an [environment](./environments.md), with specific [actions and tools](./actions_and_tools.md). To be effective, the data interpretation is best accomplished with [cognitive architectures](./cognitive_architecture.md) that enable reasoning, planning, and interactions with [memory](./memory.md) sources. To coordinate these components effectively [interpreters and executors](./cognitive_architecture.md#interpreters). With one agent is found to work, [systems](./systems.md) of agents allow for multiple agents to interact with other agents and with people. 
+At the core of agents are data interpreters such as LLMs [models](../architectures/models/index.md), provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an [environment](./components/environments.md), with specific [actions and tools](./components/actions_and_tools.md). To be effective, the data interpretation is best accomplished with [cognitive architectures](./components/cognitive_architecture.md) that enable reasoning, planning, and interactions with [memory](./components/memory.md) sources. To coordinate these components effectively [interpreters and executors](./components/cognitive_architecture.md#interpreters). With one agent is found to work, [systems](./systems/index.md) of agents allow for multiple agents to interact with other agents and with people. 
 
 
 Agents can be quite different! Here are some [examples](./examples/index.md) of agents made both in academic and commercial settings.
@@ -127,29 +130,29 @@ To enable that it may require more complicated relations between example compone
         AgentManager --> |informs and effects| Agent
     ```
 
-## Agent environemtns and purposes
+## Agent environements
 Agents can exist in different 'domains' all
 
-**Environments**
 
 1. Human+Chat-agents
 1. Autonomous chat-agents
 1. Agent-systems
 1. Embodied agents
 
-**Purpose:**
+
+## Agent Purposes
 
 * Do simple/single things: perhaps ephemeral.
 * Do a complex task that may require simple things. Very likely enduring, especially if they are expert systems..
 * Doing a list set of complex tasks, perhaps more continuously enduring.
 
 
-
-
 ## General Concepts
 
 
 ### Task Planning & Management
+
+
 
 **Methods for generating and tracking tasks:** Autonomous agents can create tasks using handcrafted sequences where the designer explicitly chains them, or through emergent methods like Chains of Thought (CoT), where tasks are generated one at a time in response to evolving circumstances. For example, a navigation agent might have a handcrafted sequence to reach a destination, while an AI in a dynamic environment might use CoT to adapt to new obstacles.
 
@@ -199,6 +202,7 @@ Agents can exist in different 'domains' all
     If an agent requests something, then it is able to act based on a 'pull' action. If it is given everything to begin with, it has a 'push' action. From this Langchain [blog](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)
 
 ## The Future 
+
 ### Automated agents and systems
 
 ??? abstract "[Automated Design of Agentic Systems](https://github.com/ShengranHu/ADAS)"

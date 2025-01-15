@@ -1,5 +1,4 @@
-
-### Mixture of Experts
+# Mixture of Experts
 
 MOE provides the ability to use different smaller models that have better performance in certain domains. Their use is notable, as it has been stated that GPT-4 is powered by 8 different agents.
 

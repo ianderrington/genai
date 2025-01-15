@@ -28,14 +28,14 @@ Here is a basic comparison of the two:
             style Generator fill:#FAD2E1,stroke:#333,stroke-width:1px
             style Answer fill:#E1FAD2,stroke:#333,stroke-width:1px
 
-            QueryEncoder --> |Retrieve\n from|Retriever
-            Prompt --> Generator[LLM\n Generation]
+            QueryEncoder --> |Retrieve<br> from|Retriever
+            Prompt --> Generator[LLM<br> Generation]
             Query --> Generator
-            Query --> QueryOptimizer1(Query\n Optimizer)
+            Query --> QueryOptimizer1(Query<br> Optimizer)
             QueryOptimizer1 --> QueryEncoder[Encoder]
-            Docs --> QueryOptimizer2(Docs\n Optimizer)
+            Docs --> QueryOptimizer2(Docs<br> Optimizer)
             QueryOptimizer2 --> DocEncoder[Encoder]
-            DocEncoder --> |Index\n to| Retriever[Database]
+            DocEncoder --> |Index<br> to| Retriever[Database]
             
             Retriever --> Context
             
@@ -156,10 +156,10 @@ The langchain [Blog](https://blog.langchain.dev/syncing-data-sources-to-vector-s
         style EmbedDocumentSplits fill:#D2FAFA,stroke:#333,stroke-width:1px
         style StoringData fill:#FADAD2,stroke:#333,stroke-width:1px
 
-        DocumentSelection[Select Documents] --> LoadDocuments[Load \nDocuments]
-        LoadDocuments --> SplitDocuments[Split \n Documents]
-        SplitDocuments --> EmbedDocumentSplits[Embed \n Document \n Splits]
-        EmbedDocumentSplits --> StoringData[Store in \nDatabase]
+        DocumentSelection[Select Documents] --> LoadDocuments[Load <br>Documents]
+        LoadDocuments --> SplitDocuments[Split <br> Documents]
+        SplitDocuments --> EmbedDocumentSplits[Embed <br> Document <br> Splits]
+        EmbedDocumentSplits --> StoringData[Store in <br>Database]
 
         click DocumentSelection "#selecting-data"
         click LoadDocuments "#loading-data"
@@ -191,7 +191,7 @@ Different data types require different loaders. Raw text, PDFs, spreadsheets, an
 Once data has been loaded in a way that a model can process it, it must be split. There are several ways of splitting data:
 
 1. By the max size a model can handle.
-2. By some heuristic break, such as `.` sentences, `\n` return characters or `\p` paragraphs or newlines.
+2. By some heuristic break, such as `.` sentences, `<br>` return characters or `\p` paragraphs or newlines.
 3. In a manner that maximizes the topic coherence. In this case, splitting and embedding may happen simultaneously.
 
 !!! note "[AST-T5: Structure-Aware Pretraining for Code Generation and Understanding](https://arxiv.org/pdf/2401.03003)"
@@ -255,9 +255,9 @@ It might not always be necessary to retrieve documents. When it is necessary to 
 
             C[Query] --> T[Optimize]
             T --> RR[Route]
-            RR --> R[Match and \nRank Documents]
-            R --> F[Combine With\n Context]
-            F --> G[LLM \nGeneration]
+            RR --> R[Match and <br>Rank Documents]
+            R --> F[Combine With<br> Context]
+            F --> G[LLM <br>Generation]
             G --> H[Answer]
 
             click T "#query-optimization"

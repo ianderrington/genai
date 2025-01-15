@@ -70,7 +70,7 @@ One of the most successful examples of this is [Instruct GPT](https://arxiv.org/
 There are several policy gradient methods to optimize, a common one being [proximal policy optimization](#proximal-policy-optimization), or PPO.
 
 $$
-\hat{g} = \hat{\mathbb{E}}_t \left[ \nabla_\theta \log \pi_\theta(a_t | s_t) \hat{A}_t \right]
+\hat{g} = \hat{\mathbb{E}}_t \left[ <br>abla_\theta \log \pi_\theta(a_t | s_t) \hat{A}_t \right]
 $$
 
 TODO: Expand this based on [Proximal Policy Optimization Algorithms](https://arxiv.org/pdf/1707.06347.pdf)

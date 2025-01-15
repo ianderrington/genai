@@ -16,55 +16,50 @@ Here you'll find what you need to know to understand (eventually) everything you
 
 ## Choose your adventure
 
-???+ tip "How to go about understanding and building"
+!!! tip "How to go about understanding and building"
     ```mermaid
     graph TD
-        subgraph Understand["Understand your"]
-            UC["Use Cases"]
-            CH["Challenges"]
-            BB["Build or Buy"]
+        subgraph Understand["Start Here"]
+            WG["What is Gen()AI?"]
+            Examples["Examples"]
+            CH["Considerations"]
+            BB["Build or<br>Buy"]
         end
 
-        subgraph Build["Build it"]
-            Data["Get Data"]
-            MA["Create\nArchitecture"]
-
-            Deploy["Deploy"]
+        subgraph Build["Build"]
+            Data["Data"]
+            MA["Architecture"]
+            
             AG["Agents"]
         end
 
         subgraph Buy["Buy it"]
-            CM["Commercial Markets"]
-            SL["Solution Licensing"]
-            VI["Vendor Integration"]
+            SL["Evaluating"]
+            VI["Integrating"]
         end
 
         subgraph Use["Use"]
-            Business["Business Considerations"]
-            Ethical["Ethical Considerations"]
-            Examples["Examples & Case Studies"]
-            Interfacing["Interfacing Layers"]
-            Marking["Marking and Detecting"]
+            Deploy["Deploy"]
+            AIX["AI Experience"]
+            Compliance["Being Compliant"]
         end
 
         Understand --> Build --> Use
         Understand --> Buy --> Use
 
-        click UC "./overview/use_cases.html"
-        click CH "./overview/challenges.html"
-        click BB "./overview/building_or_buying.html"
+        click WG "./overview/index.html"
+        click CH "./overview/gen_ai/considerations.html"
+        click BB "../using/strategically/building_or_buying.html"
         click Data "./data/index.html"
         click MA "./architectures/index.html"
         click Deploy "./deploying/index.html"
+        click AIX "./building_applications/front_end/index.html"
         click AG "./agents/index.html"
         click CM "../Using/commercial_markets.html"
         click SL "../Using/solution_licensing.html"
         click VI "../Using/vendor_integration.html"
-        click Business "../Using/business.html"
-        click Ethical "../Using/ethically/index.html"
         click Examples "../Using/examples/index.html"
-        click Interfacing "../Using/interfacing_layers/web_plugins.html"
-        click Marking "../Using/marking_and_detecting.html"
+        click Compliance "../Using/managing/index.html"
 
         classDef warmColor fill:#f9d5e5,stroke:#333,stroke-width:2px;
         classDef midColor fill:#f0e5d8,stroke:#333,stroke-width:2px;
@@ -80,11 +75,11 @@ Here you'll find what you need to know to understand (eventually) everything you
 
 ## Component interactions
 
-???+ tip "Component of LLM-based GenAI (clickable)"
+!!!+ tip "Component of LLM-based GenAI (clickable)"
     ```mermaid
     graph TD
 
-      RawData[High Volume Data] --> DataCleaning[Cleaned Data]
+      RawData[High Volume<br>Data] --> DataCleaning[Cleaned<br>Data]
         DataCleaning --> PreTraining 
         subgraph LLMPreparation[" "]
             Model --> Architecture
@@ -93,7 +88,7 @@ Here you'll find what you need to know to understand (eventually) everything you
             FineTuning <--> Architecture
             Architecture <--> Optimization 
         end
-        BehaviorData[Behavior \n Data] --> FineTuning
+        BehaviorData[Behavior<br>Data] --> FineTuning
         Architecture --> EmbeddingModel
 
         Architecture <--> Orchestration
@@ -108,7 +103,7 @@ Here you'll find what you need to know to understand (eventually) everything you
             Orchestration
             Memory <--> Orchestration
             Prompts --> Orchestration
-            CognitiveArchitectures[Cognitive\n Architectures] --> Orchestration
+            CognitiveArchitectures[Cognitive<br>Architectures] --> Orchestration
             Cache <--> Orchestration        
             Monitor <--> Orchestration        
             Clean <--> Orchestration   
@@ -117,21 +112,21 @@ Here you'll find what you need to know to understand (eventually) everything you
         
         Orchestration <--> Database
         Orchestration <--> Environment
-        Orchestration <--> Tools[Tools and \n Plugins]
+        Orchestration <--> Tools[Tools and<br>Plugins]
         
 
         subgraph memory[" "]
-            RAG[Retrieval \n Augmented \n Generation]
-            DataPipeline[Data\n Preparation] --> EmbeddingModel[Embedding \n Model]         
+            RAG[Retrieval<br>Augmented<br>Generation]
+            DataPipeline[Data<br>Preparation] --> EmbeddingModel[Embedding<br>Model]         
             Orchestration --> EmbeddingModel
-            VectorDatabase --> Orchestration
+            VectorDatabase[Vector<br>Database] --> Orchestration
         end
 
-        ContextData[Context\n Data] --> DataPipeline
+        ContextData[Context<br>Data] --> DataPipeline
 
-        EmbeddingModel --> VectorDatabase[Vector Database]
+        EmbeddingModel --> VectorDatabase
                 Orchestration <--> FrontEnd
-        FrontEnd[Front End] <--> User
+        FrontEnd[Front<br>End] <--> User
 
         
         classDef dataColor fill:#e6e6e6,stroke:#333,stroke-width:2px;
@@ -200,16 +195,13 @@ We created Managen AI 🔮 to help you _understand_ and [_use_](../Using/index.m
 What do you need to know?
 
 ???+ important "See these first" 
-    - 🤔 Evaluate your [**use cases**](./overview/use_cases.md) and think of the [**challenges**](./overview/challenges.md) associated with it. 
+    - 🤔 Understand [**use cases**](../examples/index.md) and think of the [**challenges**](overview/gen_ai/considerations.md) associated with it. 
     - 📊 Understand the [**data**](./data/index.md) and collect data that you need. 
-    - 🚢 Consider [**Model Architectures**](./architectures/index.md) use [**pre-trained**](.building_applicationspre_trained_models.md) models if possible. 
-    - [💬 Prompts](prompting/index.md) govern how we interact with the models. 
-    - [🔧 Optimize](./architectures/optimizing/index.md) your model for better performance and efficiency. 
-    
-    - [🛠️ Agents](agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
-    - [🧭 Consider Ethical concerns](../Using/ethically/index.md) help us to temper the responsible use of these powerful technologies. 
-    - 🏗️ [](.building_applicationsindex.md) your model. 
-    
+    - 🚢 Consider [**Model Architectures**](./architectures/index.md) and use [**pre-trained models**](./architectures/models/index.md) if possible. 
+    - 💬 [**Prompts**](./prompting/index.md) govern how we interact with the models. 
+    - 🛠️ [**Agents**](./agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
+    - 🧭 Consider [**Ethical concerns**](../Using/ethically/index.md) to ensure responsible use of these powerful technologies. 
+    - 🏗️ [**Deploy**](./deploying/index.md) your solution.
 
 In the documents you read here, you will be able to see an increasingly consistent and understandable discussion of Gen()AI technologies, enabled by Gen()AI technologies herein described. Like most powerful technology, Gen()AI can be a two-edged sword and effective use requires responsible and thoughtful understanding. ⚖️
 
@@ -219,7 +211,7 @@ In the documents you read here, you will be able to see an increasingly consiste
 
 ⾾ Competition is fierce to create the 'best' (based on certain metrics) Gen()AI, so much knowledge may not be known to protect IP and other secrets.
 
-Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](.building_applicationspre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made.
+Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](.building_applications/pre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made.
 
 If you are working on commercial projects, be sure to look at the Licenses to ensure you are legally compliant.
 

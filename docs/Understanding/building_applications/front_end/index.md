@@ -1,6 +1,9 @@
 # Front End
 Deploying AI technologies involves a variety of steps, one of which is understanding your visualization needs and implementing effective front ends. This is a crucial aspect as it enables users to interact with the technology in a user-friendly and intuitive manner.
 
+## AIX 
+Like UX, AIX is a way to interact with AI technologies. It is a way to interact with the technology in a user-friendly and intuitive manner. It must be designed to minimize frustration and ensure that the user is able to achieve their goals. It is important, too, to ensure the user is able to understand the technology and its capabilities, including the fact that it is an AI.
+
 ## Understanding Visualization Needs
 
 The first step towards creating an effective front end is understanding your visualization needs. This process involves identifying the key data points and processes that need to be visualized and determining the most effective way to present this information to the user.

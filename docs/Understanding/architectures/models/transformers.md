@@ -1,4 +1,4 @@
-
+# Transformers
 
 Transformers are a powerful type of architecture that allows input sequences to be considered with the whole input context. They are built on the [self-attention](https://arxiv.org/pdf/1706.03762.pdf) mechanism, which performs an $O(N^2)$ computation on the input sequence. In continued stacks, this provides the ability to represent relations between inputs at different levels of abstraction.
 
