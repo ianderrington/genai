@@ -1,3 +1,5 @@
+# Training
+
 Training GenAI will generally be domain/modality specific.
 
 ## Training Generative Language models

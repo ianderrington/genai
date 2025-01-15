@@ -21,7 +21,7 @@ Different model classes of models can often be used with multiple types of model
 
 ## Model Domains
 
-While there is a great deal in several primary domains of Generative AI, Text, Image, sound, video, there are many other modalities that are of interest. Here we share prominent and interesting methods for these domains. These models will often rely on [tokenization](../../data/tokenizing.md). Once tokenized, the transformed projected in some way to an _embedding vector_ that can be used by  downstream LLM's, as well as vector-databases.
+While there is a great deal in several primary domains of Generative AI, Text, Image, sound, video, there are many other modalities that are of interest. Here we share prominent and interesting methods for these domains. These models will often rely on [tokenization](../tokenizing.md). Once tokenized, the transformed projected in some way to an _embedding vector_ that can be used by  downstream LLM's, as well as vector-databases.
 
 ## Multi-Modal Models
 
@@ -95,7 +95,7 @@ $$
 
 
 ## Embeddings
-Embeddings play a key role in AI as they translate [tokens](../../data/tokenizing.md) into numerical representation that can be processed by the AI.
+Embeddings play a key role in AI as they translate [tokens](../models/tokenizing.md) into numerical representation that can be processed by the AI.
 
 'What are Embeddings' is an essential [read](http://vickiboykis.com/what_are_embeddings/) that elucidates the concept of embeddings in a digestible manner. For a deeper dive, check the accompanied [Github](https://github.com/veekaybee/what_are_embeddings/blob/main/README.md) page.
 

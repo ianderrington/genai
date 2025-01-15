@@ -2,9 +2,9 @@
 
 Prompts detail the manner in which a Generative AI model should be producing output. Constructing the prompts to be the most effective in obtaining desired output is known as prompt engineering (PE). While PE may have dependencies on the underlying models, there are strategies that can be more universal in their ability to do well.
 
-Because often an individual query or generation may be insufficient to produce the desired outputs, it may be necessary to use [cognitive architectures](../agents/cognitive_architecture.md) including _chains_ and _graphs_ that consist of multiple, and often different individual prompts and calls to LLM models.
+Because often an individual query or generation may be insufficient to produce the desired outputs, it may be necessary to use [cognitive architectures](../agents/components/cognitive_architecture.md) including _chains_ and _graphs_ that consist of multiple, and often different individual prompts and calls to LLM models.
 
-This page describes prompting methods that may function with a single call to an LLM. Note that much of what is applicable in single-prompts may transfer to the [cognitive architectures](../agents/cognitive_architecture.md).
+This page describes prompting methods that may function with a single call to an LLM. Note that much of what is applicable in single-prompts may transfer to the [cognitive architectures](../agents/components/cognitive_architecture.md).
 
 It is important to note that while [manual methods](#manual-methods) are helpful, if not essential, [automatic methods](optimizing/auto_prompting.md) have become common and may help to reduce the burdens of identifying sufficiently optimal prompts for certain models and situations. Because providing additional context through few-shot examples can improve results, [retrieval augmented prompting](#retrieval-augmented-prompting) can be successfully used to extract more effective solutions.
 
@@ -67,7 +67,7 @@ It has been found that the quality of responses is governed by the quality of th
 - Provide examples to ground it.
   - Good to evaluate this and see if input examples give expected scores. Modify the prompt if it isn't.
 - Use prompt versioning to keep track of outputs more easily.
-- More advanced? Try [cognitive topologies](../agents/cognitive_architecture.md#cognitive-topologies) like Chain of Thought Prompting.
+
 
 ## Reasoning Strategies
 

@@ -2,7 +2,7 @@
 
 Trained and fine-tuned LLMs can generate high quality results, though their generated results will be generally confined to the information they have been trained on. Additionally, responses can suffer from:
 
-* **[Confabulations and Hallucinations](../overview/challenges.md#hallucinations-and-confabulations)** that create false or inaccurate information 
+* **[Confabulations and Hallucinations](../../overview/gen_ai/considerations.md#hallucinations-and-confabulations)** that create false or inaccurate information 
 * Lack of **attributon** making it difficult to ascertain validity
 * **Staleness** due to new or updated information 
 
@@ -59,7 +59,7 @@ Here is a basic comparison of the two:
 
 
         
-Original inceptions of RAG involve queries that involve connecting with [Embedding](../architectures/embedding.md) based lookups, though other lookup mechanisms, including key-word searches and other lookups from [memory](./memory.md) sources may also be possible. 
+Original inceptions of RAG involve queries that involve connecting with [Embedding](../models/embedding.md) based lookups, though other lookup mechanisms, including key-word searches and other lookups from [memory](../../agents/components/memory.md) sources may also be possible. 
 
 !!! warning "RAG is still an area of optimization with a number of components that may be optimized"
    These areas of optimization include:
@@ -70,7 +70,7 @@ Original inceptions of RAG involve queries that involve connecting with [Embeddi
 
 One of the seminal papers on RAG, [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduced a solution for end-to-end training of models involving training document and query encoding, lookup and demosntrated revealing [improved results](https://contextual.ai/introducing-rag2/) over solutions where model components were frozen. For reasons of simplicity, however, a generally standard approach uses models that are frozen to embed and query documents. 
 
-!!! danger "It is important to [Evaluate your system](./evaluating_and_comparing.md) to ensure efficient efforts in using RAG."
+!!! danger "It is important to [Evaluate your system](../../optimizing/index.md) to ensure efficient efforts in using RAG."
    
 ### Why use RAG?
 
@@ -101,7 +101,7 @@ Because finetuning can enable intrisic knowledge to be ingrained in an LLM, it g
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/informagi/RAGvsFT) [Rag vs Finetuning](https://github.com/informagi/RAGvsFT) reveals Fine tuning boosts performance over RAG"  
     [Paper](https://arxiv.org/abs/2403.01432)
 
-That said, it can be seen that using RAG to informe fine tuning, in Retrieval Augmented Fine Tuning (RAFT), as variations are done with [mixture of experts](../architectures/models/mixture_of_experts.md) can lead to even improved performance. 
+That said, it can be seen that using RAG to informe fine tuning, in Retrieval Augmented Fine Tuning (RAFT), as variations are done with [mixture of experts](../models/mixture_of_experts.md) can lead to even improved performance. 
 
 ??? abstract "[🦍 RAFT: Adapting Language Model to Domain Specific RAG](https://github.com/ShishirPatil/gorilla/blob/main/raft/raft.py)" raft
     <img width="676" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/813c5a4e-8a6f-408d-8629-e78df15d6c04">
@@ -277,7 +277,7 @@ In production settings, the queries that users ask are unlikely to be optimal fo
 * Not related to retrieval
 * Are made of multiple questions
 
-**Optimization** of queries, looks to improve these queries in several manners. Here are a several with other greater descriptions written in [Langchain's query analysis](se_cases/query_analysis/). 
+**Optimization** of queries, looks to improve these queries in several manners.
 
 ##### Rewrite-Retrieve-Read
 

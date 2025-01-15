@@ -17,28 +17,29 @@ Building a GenAI application 'from scratch' can be a very daunting process consi
 
 Lets first look at the components that need to be put together. 
 
-## The stack 
+## The stack
+
 | Layer             | Component            | Description                                                                 | 
 |-------------------|----------------------|-----------------------------------------------------------------------------|
 | Layer 4: Management | [**📊 Monitoring**](#monitoring-genai)        | Tools for **monitoring** the AI system's performance and health.            |
-|                   | [**🛡 Compliance**](./compliance.md)            | Uses observability to ensure the system is operating within **legal** and **ethical boundaries**. |                  
-| Layer 3: Application | [**🖥 UI/UX Front ends**](./front_end.md)       |  GUIs and interfaces are specifically designed for **streamlined connection** with GenAI models.         |
-|                   | [**📝 System evaluators**](../agents/evaluating_and_comparing.md)            |Systems for assessing the **performance** and **effectiveness** of AI systems.      |   
-|                   |  [**🧩 Orchestration Tools**](./orchestrating.md)          |  Languages and services to create and coordinate **LLM-chains**, agents workflows involving **memory**.          |
-|                   | [**🗄  Memory **](./memory.md)              | Methods of **storing/indexing** and **retrieving documents**.         |
+|                   | [**🛡 Compliance**](./security_and_compliance/index.md)            | Uses observability to ensure the system is operating within **legal** and **ethical boundaries**. |                  
+| Layer 3: Application | [**🖥 UI/UX Front ends**](./front_end/index.md)       |  GUIs and interfaces are specifically designed for **streamlined connection** with GenAI models.         |
+|                   | [**📝 System evaluators**](../agents/building_agents/evaluating_and_comparing.md)            |Systems for assessing the **performance** and **effectiveness** of AI systems.      |   
+|                   |  [**🧩 Orchestration Tools**](./back_end/orchestrating.md)          |  Languages and services to create and coordinate **LLM-chains**, agents workflows involving **memory**.          |
+|                   | [**🗄  Memory **](./back_end/memory.md)              | Methods of **storing/indexing** and **retrieving documents**.         |
 |                   | [**📊  Prompt Management**](../prompting/index.md)  |Systems to manage and refine the **prompts** used in conversational AI.          |   
 |                   | [**🔧  Model Optimization**](../architectures/optimizing/index.md) | Methods of enabling models to fulfill **customer requirements**. |              
-| Layer 2: Models   | [**🚀  Model Serving**](./model_serving.md) | Services to deploy and coordinate model inference **at scale**.   | 
-|                   | [**💻 Computation**](./computation.md)          | Providers of computational resources, specifically **GPUs**, for AI processing.  |              
-|                   |[**🔄 ML Ops**](./mlops.md)    | ML operations enable efficient coordination around **Model training** and **tracking**. | 
+| Layer 2: Models   | [**🚀  Model Serving**](./back_end/llm_ops.md) | Services to deploy and coordinate model inference **at scale**.   | 
+|                   | [**💻 Computation**](./back_end/computation.md)          | Providers of computational resources, specifically **GPUs**, for AI processing.  |              
+|                   |[**🔄 ML Ops**](./back_end/llm_ops.md)    | ML operations enable efficient coordination around **Model training** and **tracking**. | 
 |                   | [**🏋️ Model Training**](../architectures/training/index.md)          | Tools **safety** of AI systems.            |
-|                   | [**📊 Model comparisons**](../architectures/evaluating_and_comparing.md)|  Methods of **evaluating** and **comparing models** across baselines and benchmarks.| 
-|                   | [**🧠 Pretrained Models**](./pre_trained_models.md)   | Pre-built models offering a range of **capabilities** and **uses**.                  |        
+|                   | [**📊 Model comparisons**](../architectures/optimizing/index.md)|  Methods of **evaluating** and **comparing models** across baselines and benchmarks.| 
+|                   | [**🧠 Pretrained Models**](./back_end/pre_trained_models.md)   | Pre-built models offering a range of **capabilities** and **uses**.                  |        
 |                   | [**📚 AI software libraries**](#ai-software-libraries)   | Higher level languages that enable **AI/ML training**.                 | 
-| Layer 1: Data     | [**🧼 Data Processing**](./data.md)  | Tools for **cleaning**, **normalizing**, and preparing data for analysis.            |   |
-|                   | [**🔄 ETL + Data Pipelines**](./data.md#etl-pipelines) | Tools to **find**, **extract**, **transform**, and **load** data, and to manage **data flow**.    |
+| Layer 1: Data     | [**🧼 Data Processing**](../data/preparation/index.md)  | Tools for **cleaning**, **normalizing**, and preparing data for analysis.            |   |
+|                   | [**🔄 ETL + Data Pipelines**](../data/preparation/index.md#etl-pipelines) | Tools to **find**, **extract**, **transform**, and **load** data, and to manage **data flow**.    |
 |                   | **🗃 Databases**        | Services for **structured data storage** and retrieval. |            |
-|                   | [**📈 Data set solutions**](./../data/sources.md)  | Places where one can obtain data for **training** and **using** models effectively. |
+|                   | [**📈 Data set solutions**](../data/sources.md)  | Places where one can obtain data for **training** and **using** models effectively. |
 
 
 
@@ -73,11 +74,11 @@ However, for wider scale deployment it will be crucial to [optimize](../../Under
 
 ### [Orchestration and Back-end compute](#compute-back-end)
 
-Methods will require [orchestrating](./orchestrating.md) the GenAI interactions, fusing memory and other information. These may work together or independently from [back end](./back_end.md) You may also need additional [tools and libraries](libraries_and_tools.md) for your solution.
+Methods will require [orchestrating](./back_end/orchestrating.md) the GenAI interactions, fusing memory and other information. These may work together or independently from [back end](./back_end/index.md) You may also need additional [tools and libraries](libraries_and_tools.md) for your solution.
 
-### [Front-end Interface](./front_end.md)
+### [Front-end Interface](./front_end/index.md)
 
-Finally, you'll need to present the results to the end-user effectively. Look into our discussion on [front ends](./front_end.md) for best practices and excellent solutions for your model output.
+Finally, you'll need to present the results to the end-user effectively. Look into our discussion on [front ends](./front_end/index.md) for best practices and excellent solutions for your model output.
 
 Remember that needs will evolve as your understanding of all the above factors shifts. So it's crucial to start with a base that you can iterate from, especially if your solution involves a [data flywheel](https://brightdata.com/blog/brightdata-in-practice/using-data-flywheel-to-scale-your-business).
 

@@ -31,7 +31,7 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
 | # | Process       | Decide Output of Step | Decide Which Steps to Take | Determine What Sequences of Steps are Available |
 |---|---------------|-----------------------|----------------------------|-----------------------------------------------|
 | 1 | Code          | 👩‍💻                   | 👩‍💻                         | 👩‍💻                                          |
-| 2 | [LLM Call](../architectures/generation/index.md)      | 🗣️                   | 👩‍💻 (one step)              | 👩‍💻                                          |
+| 2 | [LLM Call](../architectures/generating/index.md)      | 🗣️                   | 👩‍💻 (one step)              | 👩‍💻                                          |
 | 3 | Chain         | 🗣                   | 👩‍💻 (multiple steps)        | 👩‍💻                                          |
 | 4 | Router        | 🗣️                   | 🗣️  (no cycles)            | 👩‍💻                                          |
 | 5 | State Machine | 🗣️                   | 🗣️  (cycles)               | 👩‍💻                                          |

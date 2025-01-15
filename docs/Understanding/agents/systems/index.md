@@ -4,14 +4,14 @@ Just like for people, when we can interact our interactions become a part of a s
 
 !!! quote "Agent systems are integral components of the next stage of AI"
 
-Individual agents are not individually ideal to perform the variety of tasks that are given to them. [Prompt-engineering](../prompting/index.md), [memories](./memory.md) and their derivative personas can enable different quality of output. Working together, different agents have the potential to create more successful outcomes. 
+Individual agents are not individually ideal to perform the variety of tasks that are given to them. [Prompt-engineering](../../prompting/index.md), [memories](../components/memory.md) and their derivative personas can enable different quality of output. Working together, different agents have the potential to create more successful outcomes. 
 
 The challenge is _how_? 
 
 This is an important question and bridges the gaps between complexity organization and process design. 
 
 ## Frameworks
-Agentic Systems require that there is communication with and between AI-agents. To produce complexity management and success-potential, they are enabled through frameworks that permit certain forms of interactions. A _higher level_ [cognitive architecture](./cognitive_architecture.md) that can be built up in various manners to achieve end-goals effectively. 
+Agentic Systems require that there is communication with and between AI-agents. To produce complexity management and success-potential, they are enabled through frameworks that permit certain forms of interactions. A _higher level_ [cognitive architecture](../components/cognitive_architecture.md) that can be built up in various manners to achieve end-goals effectively. 
 
 Here are a few frameworks of importance. 
 
@@ -153,7 +153,7 @@ OpenAI released their ability to integrate or call different [AI assistants](htt
 
      **Co-reasoning** encourages instruction enhancement from their experience pools 
 
-     - This step combines experience pools to generate refined insights in collaborative problem states, using memories to seed few-shot examples for instructions and responses as in [retrieval based prompting](../prompting/index.md#retrieval-augmented-prompting)
+     - This step combines experience pools to generate refined insights in collaborative problem states, using memories to seed few-shot examples for instructions and responses as in [retrieval based prompting](../../prompting/index.md#retrieval-augmented-prompting)
      - With a response to instruction memory $M_I$ encountering the task state $r_j$, a retrieval tool, acesses experiential instructions matching the meaning of the task to provide zerofew-shot examples. to guide the instructors reasoning to share with the assistant. 
      - The assistant with an instruction-to-response memory $M_A$ retrieves optimal responses based on the received instruction, allowing few-shot examples to create the next response.  
 

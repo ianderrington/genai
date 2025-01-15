@@ -16,7 +16,7 @@ As described in the original [Transformer attention paper](https://arxiv.org/pdf
 
 ### Decoder-Only Networks
 
-In decoder-only networks, like [GPT](../gpt.md), the model performs next-token predictions, requiring information only from previously seen words/tokens. The outputs are estimates of the probability of the next word/token. While next-token prediction is singular, this can happen iteratively, and with the proper prompting, the generation of output sequences can perform a variety of sequence-to-sequence tasks, such as language translation.
+In decoder-only networks, like GPT the model performs next-token predictions, requiring information only from previously seen words/tokens. The outputs are estimates of the probability of the next word/token. While next-token prediction is singular, this can happen iteratively, and with the proper prompting, the generation of output sequences can perform a variety of sequence-to-sequence tasks, such as language translation.
 
 ## Key Components of Transformers
 

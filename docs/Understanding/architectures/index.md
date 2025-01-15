@@ -1,15 +1,15 @@
 # Architectures
 
-Here we will discuss the architectural components needed to build Gen()AI models. While it is often useful or essential to use [pre-trained models](..building_applicationspre_trained_models.md), it is likely that such pre-trained models can be further refined for specific use-cases.
+Here we will discuss the architectural components needed to build Gen()AI models. While it is often useful or essential to use [pre-trained models](../building_applications/back_end/pre_trained_models.md), it is likely that such pre-trained models can be further refined for specific use-cases.
 
 ???+ tip "**tl;dr**"
 
     - Understand [self-supervised learning](#self-supervised-learning) and [foundation models](#foundation-models)
     - Learn about [models](./models/index.md)
     - [Train](./training/index.md) your models
-    - [Optimize](./optimizing/index.md) your models
+    - [Evaluate and compare](../optimizing/index.md) your models
+    - [Optimize](./optimizing/methods.md) your models
     - [Generate](./generating/index.md) with your models
-    - [Evaluate and compare](./evaluating_and_comparing.md) your models
 
 ## Background
 

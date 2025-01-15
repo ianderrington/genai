@@ -1,6 +1,6 @@
 A cognitive architecture is a higher-level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They can be focused on both simple and complex tasks. 
 
-One input call to an LLM output produces output(s) based on their input [prompts](../prompting/index.md). Cognitive architectures, sometimes also considered [chains](#chains), allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md) in different forms of [environments](./environments.md). Chains can build more complex and integrated systems to enable higher-quality reasoning and results.
+One input call to an LLM output produces output(s) based on their input [prompts](../../prompting/index.md). Cognitive architectures, sometimes also considered [chains](#chains), allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md) in different forms of [environments](./environments.md). Chains can build more complex and integrated systems to enable higher-quality reasoning and results.
 
 Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf) considered design systems with a connection of a large number of highly connected units to facilitate computational-like behavior seen from Animals. For Gen(AI), however, cognitive architectures can be constructed in more linear [chains](#chains), as in the case of LLM-enabled chat, or more complex branching [graph topologies](#cognitive-topologies), which have been shown to increase performance. 
 
@@ -18,7 +18,7 @@ Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/
 - **Tool use** While overlapping directly with Observing or taking memory actions, tool usage may be part of cognitive patterns (like using a `scratch-pad`) and must be considered as such
 
 ### Models
-Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](../prompting/index.md), they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used to help model creation with [Recursive training](../architectures/training/recursive.md).
+Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](../../prompting/index.md), they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used to help model creation with [Recursive training](../../architectures/training/recursive.md).
 
 ### Cognitive Architectures
 
@@ -100,7 +100,7 @@ Models provide the computational core of Agents. Acting like a 'brain' that take
 
 ## Important Architectures
 
-Thought systems are chain patterns used by single agents and [systems](./systems.md) to enable more robust responses.
+Thought systems are chain patterns used by single agents and [systems](../systems/index.md) to enable more robust responses.
 They can be executed programmatically given frameworks or sometimes done manually in a chat setting.
 
 Here are some known thought structures that are improving agentic output.
@@ -298,7 +298,7 @@ Here are some known thought structures that are improving agentic output.
 
 ### Including Memory
 
-There are other [memory based solutions](memory.md) including [RAG](rag.md) that improve results. Here we reveal a few important ones.
+There are other [memory based solutions](memory.md) including [RAG](./memory.md#rag)that improve results. Here we reveal a few important ones.
 
 ??? important "[Show your work: Scratch Pads for Intermediate Computation with Language Models](https://arxiv.org/pdf/2112.00114.pdf)"
     
@@ -519,7 +519,7 @@ General manners of search.
 
 ### Structural and Task Decomposition
 
-Breaking down the input into a divide-and-conquer approach is a valuable approach to more complex requests. Considering separate perspectives, within the _same_ model, or within separate model calls with different prompt-inceptions as in agent [systems](./systems.md) can improve performance.
+Breaking down the input into a divide-and-conquer approach is a valuable approach to more complex requests. Considering separate perspectives, within the _same_ model, or within separate model calls with different prompt-inceptions as in agent [systems](../systems/index.md) can improve performance.
 
 ??? tip "[ProTIP: Progressive Tool Retrieval Improves Planning](https://arxiv.org/pdf/2312.10332.pdf)" protip-progressive-tool-retrieval
 
