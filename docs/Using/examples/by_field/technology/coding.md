@@ -1,5 +1,7 @@
 ### Code Generation
 
+<img width="490" alt="image" src="https://github.com/user-attachments/assets/0d74317d-bceb-4bd2-bd11-28b4306855fa" />
+
 Very powerfully it can generate code to accomplish a task based on natural language input. 
 
 There are ways areas where AI can enable code-creation, arranged generally from 'easiest' to 'hardest'. 
