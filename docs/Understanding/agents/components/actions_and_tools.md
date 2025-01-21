@@ -80,9 +80,11 @@ Interpreting Such efforts can be used to reduce input complexity, token-count, t
 !!! example "Link Routing"
     A model may not be guaranteed to produce equivalent output based on a complex input string such as an html address. Consequently, pre-parsing the output and substituting a simple name for an address, such as 'html_1', and then re-introducing that within any output, both using RegEx, may enable more effective output.
 
-#### Libraries
 
+### Guardrails
 !!! abstract "[Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts."
+
+#### Libraries
 
 
 !!! abstract "️[Guidance](https://github.com/microsoft/guidance/) Interleaving generation, prompting and logical control to single  continuous flow."

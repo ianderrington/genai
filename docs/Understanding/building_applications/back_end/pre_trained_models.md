@@ -6,9 +6,9 @@ Still, below, we relay several important and foundational ones.
 
 ## Pre trained models
 
-Because of the costs associated with aggregating sufficient data and performing large-scale [training](../architectures/training/index.md) it is often preferrable to start with pre-trained models. They can be both [open source](#open-source) and [closed source](#closed-source) in origin, and choosing between the two of them will be an important decisions related to project requirements. 
+Because of the costs associated with aggregating sufficient data and performing large-scale [training](../../architectures/training/index.md) it is often preferrable to start with pre-trained models. They can be both [open source](#open-source) and [closed source](#closed-source) in origin, and choosing between the two of them will be an important decisions related to project requirements. 
 
-Whatever pre-trained model that you use, to ensure they meet technical, customer, and organizational requirements it is important to  by [compare and evaluate](../../architectures/evaluating_and_comparing.md) them. 
+Whatever pre-trained model that you use, to ensure they meet technical, customer, and organizational requirements it is important to  by [compare and evaluate](../../architectures/optimizing/evaluating_and_comparing.md) them. 
 
 Below we share important models. 
 

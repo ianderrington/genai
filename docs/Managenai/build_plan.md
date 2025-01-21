@@ -77,7 +77,7 @@ We will explore RAG and fine-tuning of chat models models, as well as cognitive 
 
 ### Chatty Oracle
 
-We will first look at using [rag](../Understanding/agents/rag.md) to enable lookup of the components within the database. This will rely on understanding gained from building our [self improvement](#self-improvement) architectures. 
+We will first look at using RAG to enable lookup of the components within the database. This will rely on understanding gained from building our [self improvement](#self-improvement) architectures. 
 
 ## Components
 

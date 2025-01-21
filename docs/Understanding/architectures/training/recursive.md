@@ -1,4 +1,4 @@
-recursive training involves the use of an LLM so improve the selection or variety of data for that LLM. This is well describe in [data augmentation](../../data/preparation/augmentation.md)
+recursive training involves the use of an LLM so improve the selection or variety of data for that LLM. This is well describe in [data augmentation](../../data/augmentation/index.md)
 
 The process of data simulation for AI typically involves two main steps:
 

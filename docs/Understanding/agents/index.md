@@ -23,7 +23,7 @@ Though, more generally it includes these components:
 * [Tools](./components/actions_and_tools.md), or aspects of the environment that can be called upon. 
 * [Systems of Agents](./systems/index.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
 
-See how these components can be put together in [building agents](./building_agents.md).
+See how these components can be put together in [building agents](./building_agents/index.md).
 
 
 Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/),

@@ -1,5 +1,5 @@
 
-In generative AI, the raw data—whether it be in text or binary input is divided into individual units termed as *tokens*. These are then made into IDs that provide a lookup table that can be used in downstream learning that allow for context aware [embedding representations](../architectures/embedding.md).
+In generative AI, the raw data—whether it be in text or binary input is divided into individual units termed as *tokens*. These are then made into IDs that provide a lookup table that can be used in downstream learning that allow for context aware [embedding representations](../models/embedding.md).
 
 ## Understanding Tokenization
 Tokenization is the process of splitting data into these individual units. Broken up as The choice of a token largely depends on the data type and the expected outcome of the AI. In text data, for instance, tokens often correspond to single words or subwords. These tokens can be represented in one-hot encoding, or as an ID.

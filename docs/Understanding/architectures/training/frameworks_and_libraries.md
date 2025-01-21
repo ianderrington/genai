@@ -2,14 +2,12 @@
 
 The big-bang like expansion of AI has led to a surge in services, methods, frameworks, and tools that enhance the creation and deployment of models from start to finish. Although there are end-to-end providers for generating valuable GenAI solutions, there is immense value in implementing and experimenting with your own stacks.
 
-Additionally, there are useful [libraries and tools](./libraries_and_tools.md) worth exploring.
-
 !!! note "**tldr;** Here are the prominent frameworks"
     - [Langchain](#langchain) is an early system with a principled design that allows for extensive applications to be built with it.
     - [Llama Ecosystem](#llama-ecosystem) is a community of Llama-focused modelers, based on the Meta model called Llama, Llama-2, and beyond.
     - [A number of others](#others).
 
-The rapid development in Generative AI tooling makes it challenging to keep up with the development and deprecation of powerful frameworks and tools. Some of the mentioned references may not be fully completed, or even nascent repos to build their intended purposes (described here). Please let us know if we are missing anything [here](../../Managenai/contributing.md).
+The rapid development in Generative AI tooling makes it challenging to keep up with the development and deprecation of powerful frameworks and tools. Some of the mentioned references may not be fully completed, or even nascent repos to build their intended purposes (described here). Please let us know if we are missing anything [here](../../../Managenai/contributing.md).
 
 
 ## Layer 1: Foundation

@@ -1,3 +1,4 @@
 nav:
   - index.md
-  - ...
+  - evaluating_and_comparing.md
+  - methods.md

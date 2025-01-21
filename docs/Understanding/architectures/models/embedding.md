@@ -1,6 +1,6 @@
 Embeddings compress a string of tokens into a high-dimensional representation. They are preferably contextually aware, meaning different strings of tokens will have a different embedding.
 
-Embeddings are can be used used to generate the next-expected token, evaluating text similarities, and with the similarity identification a way to do search is necessary in [RAG](../agents/rag.md)
+Embeddings are can be used used to generate the next-expected token, evaluating text similarities, and with the similarity identification a way to do search is necessary in [RAG](../../agents/components/memory.md#rag)
 
 Embeddings are generally depend on the tokenization methods. 
 
@@ -17,7 +17,7 @@ graph LR
     end
 ```
 
-In order to separate the representation, allowing greater freedom in evaluating downstream architectures and permitting enduring lookup ability with [RAG](../agents/rag.md), these models can be part of a larger and more complex models for sequence generation.
+In order to separate the representation, allowing greater freedom in evaluating downstream architectures and permitting enduring lookup ability with [RAG](../../agents/components/memory.md#rag), these models can be part of a larger and more complex models for sequence generation.
 
 ??? important "[Text and Code Embeddings by Contrastrive Pre-Training](https://cdn.openai.com/papers/Text_and_Code_Embeddings_by_Contrastive_Pre_Training.pdf)"
     The authors demonstrate using contrastive pre-training can yield high-quality vector representations of text and code. 

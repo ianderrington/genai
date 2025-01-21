@@ -70,7 +70,6 @@ Original inceptions of RAG involve queries that involve connecting with [Embeddi
 
 One of the seminal papers on RAG, [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduced a solution for end-to-end training of models involving training document and query encoding, lookup and demosntrated revealing [improved results](https://contextual.ai/introducing-rag2/) over solutions where model components were frozen. For reasons of simplicity, however, a generally standard approach uses models that are frozen to embed and query documents. 
 
-!!! danger "It is important to [Evaluate your system](../../optimizing/index.md) to ensure efficient efforts in using RAG."
    
 ### Why use RAG?
 

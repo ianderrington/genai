@@ -7,7 +7,7 @@ Here we will discuss the architectural components needed to build Gen()AI models
     - Understand [self-supervised learning](#self-supervised-learning) and [foundation models](#foundation-models)
     - Learn about [models](./models/index.md)
     - [Train](./training/index.md) your models
-    - [Evaluate and compare](../optimizing/index.md) your models
+    - [Evaluate and compare](./optimizing/evaluating_and_comparing.md) your models
     - [Optimize](./optimizing/methods.md) your models
     - [Generate](./generating/index.md) with your models
 

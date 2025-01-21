@@ -164,18 +164,18 @@ Here you'll find what you need to know to understand (eventually) everything you
         click Optimization "./architectures/optimization.html"
         click Hosting "./deploying/index.html"
         click APIorCall "./api_call/index.html"
-        click Cache "./deploying/caching.html"
+        click Cache "./building_applications/back_end/memory.html#caching"
         click Monitor "./deploying/monitoring.html"
         click Clean "./cleaning/index.html"
-        click Memory "./agents/memory.html"
+        click Memory "./agents/components/memory.html"
         click Prompts "./prompting/index.html"
-        click CognitiveArchitectures "./agents/cognitive_architecture.html"
+        click CognitiveArchitectures "./agents/components/cognitive_architecture.html"
         click Tools "./agents/actions_and_tools.html"
         click Environment "./agents/environments.html"
-        click Database "./agents/memory.html"
+        click Database "./agents/components/memory.html"
         click DataPipeline "./agents/rag.html#data-preparation"
         click EmbeddingModel "./data/index.html#embedding"
-        click VectorDatabase "./agents/memory.html#vector-databases"
+        click VectorDatabase "./agents/components/memory.html#vector-databases"
         click FrontEnd "./deploying/front_end.html"
         click User "./user/index.html"
         click RAG "./agents/rag.html"
@@ -195,13 +195,13 @@ We created Managen AI 🔮 to help you _understand_ and [_use_](../Using/index.m
 What do you need to know?
 
 ???+ important "See these first" 
-    - 🤔 Understand [**use cases**](../examples/index.md) and think of the [**challenges**](overview/gen_ai/considerations.md) associated with it. 
+    - 🤔 Understand [**use cases**](../Using/examples/index.md) and think of the [**challenges**](overview/gen_ai/considerations.md) associated with it. 
     - 📊 Understand the [**data**](./data/index.md) and collect data that you need. 
     - 🚢 Consider [**Model Architectures**](./architectures/index.md) and use [**pre-trained models**](./architectures/models/index.md) if possible. 
     - 💬 [**Prompts**](./prompting/index.md) govern how we interact with the models. 
     - 🛠️ [**Agents**](./agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
     - 🧭 Consider [**Ethical concerns**](../Using/ethically/index.md) to ensure responsible use of these powerful technologies. 
-    - 🏗️ [**Deploy**](./deploying/index.md) your solution.
+    - 🏗️ [**Building your solution**](./building_applications/index.md)
 
 In the documents you read here, you will be able to see an increasingly consistent and understandable discussion of Gen()AI technologies, enabled by Gen()AI technologies herein described. Like most powerful technology, Gen()AI can be a two-edged sword and effective use requires responsible and thoughtful understanding. ⚖️
 
@@ -211,7 +211,7 @@ In the documents you read here, you will be able to see an increasingly consiste
 
 ⾾ Competition is fierce to create the 'best' (based on certain metrics) Gen()AI, so much knowledge may not be known to protect IP and other secrets.
 
-Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](.building_applications/pre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made.
+Still, these trained foundation models may be used, with varying degrees of open-source licensing, for your project. Open and closed-source pre-trained [models](./building_applications/back_end/pre_trained_models.md) are available in many places that can be used hosted by yourself, or enabled by API services. Because of the cost and challenge involved with creating these models, it will likely be necessary to use the ones already made.
 
 If you are working on commercial projects, be sure to look at the Licenses to ensure you are legally compliant.
 

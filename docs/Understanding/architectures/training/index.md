@@ -9,7 +9,7 @@ Models are generally trained with the following manner:
 - Self-supervised [**pre-training**](pre-training.md) to predict the next token with reasonable likelihoods.
 - Supervised or self-supervised [Finetuning](./finetuning.md) on higher quality data sets, including instruction finetuning to create responses in expected manners. 
 
-The manner that these languag emodels can be done [recursively](./recursive.md) using [simulated data](../../data/preparation/augmentation.md) and in such a way that they can be  [Automatically correcting](#automatic-correction) models to enable models that may be more globally accurate. 
+The manner that these languag emodels can be done [recursively](./recursive.md) using [simulated data](../../data/augmentation/index.md) and in such a way that they can be  [Automatically correcting](#automatic-correction) models to enable models that may be more globally accurate. 
 
 ### Training Objectives
 

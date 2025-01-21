@@ -33,7 +33,7 @@ Lets first look at the components that need to be put together.
 |                   | [**💻 Computation**](./back_end/computation.md)          | Providers of computational resources, specifically **GPUs**, for AI processing.  |              
 |                   |[**🔄 ML Ops**](./back_end/llm_ops.md)    | ML operations enable efficient coordination around **Model training** and **tracking**. | 
 |                   | [**🏋️ Model Training**](../architectures/training/index.md)          | Tools **safety** of AI systems.            |
-|                   | [**📊 Model comparisons**](../architectures/optimizing/index.md)|  Methods of **evaluating** and **comparing models** across baselines and benchmarks.| 
+|                   | [**📊 Model comparisons**](../architectures/optimizing/evaluating_and_comparing.md)|  Methods of **evaluating** and **comparing models** across baselines and benchmarks.| 
 |                   | [**🧠 Pretrained Models**](./back_end/pre_trained_models.md)   | Pre-built models offering a range of **capabilities** and **uses**.                  |        
 |                   | [**📚 AI software libraries**](#ai-software-libraries)   | Higher level languages that enable **AI/ML training**.                 | 
 | Layer 1: Data     | [**🧼 Data Processing**](../data/preparation/index.md)  | Tools for **cleaning**, **normalizing**, and preparing data for analysis.            |   |
@@ -67,14 +67,14 @@ Costs
 
 The models must be capable of delivering the required content with an acceptable latency to meet the requirements. 
 
-You might decide to rely on an API to handle model responses. Alternatively you may use an [pre-trained model](pre_trained_models.md), 
+You might decide to rely on an API to handle model responses. Alternatively you may use an [pre-trained model](back_end/pre_trained_models.md), 
 To reduce development costs using smaller/cheaper models may be preferred to get a working solution. 
 
 However, for wider scale deployment it will be crucial to [optimize](../../Understanding/architectures/optimizing/index.md) your models' serving. Using services that try to optimize this for you, like [OpenRouter](https://openrouter.ai/) may be helpful.
 
 ### [Orchestration and Back-end compute](#compute-back-end)
 
-Methods will require [orchestrating](./back_end/orchestrating.md) the GenAI interactions, fusing memory and other information. These may work together or independently from [back end](./back_end/index.md) You may also need additional [tools and libraries](libraries_and_tools.md) for your solution.
+Methods will require [orchestrating](./back_end/orchestrating.md) the GenAI interactions, fusing memory and other information. These may work together or independently from [back end](./back_end/index.md) 
 
 ### [Front-end Interface](./front_end/index.md)
 
@@ -110,11 +110,11 @@ The allocated budget will affect your tool's monetization strategy.
 
     Important patterns mentioned (references to discussions herein):    
     
-    * [Evaluating and comparing](../architectures/evaluating_and_comparing.md)
-    * [Retreival Augmented Generation (RAG)](../agents/rag.md)
-    * [Fine tuning](../architectures/optimizing/index.md#finetuning)
-    * [Caching](../agents/memory.md#caching) to reduce latency.
-    * [Guardrails](../agents/cognitive_architecture.md#guardrails) to ensure output (and input) quality.
+    * [Evaluating and comparing](../architectures/optimizing/evaluating_and_comparing.md)
+    * [Retreival Augmented Generation (RAG)](../agents/components/memory.md#rag)
+    * [Fine tuning](../architectures/optimizing/methods.md#finetuning)
+    * [Caching](../agents/components/memory.md#caching) to reduce latency.
+    * [Guardrails](../agents/components/actions_and_tools.md#guardrails) to ensure output (and input) quality.
     * Data Flywheel to use data collection and feedback to improve model and experience
     * Cascade Breaking models up into smaller simpler tasks instead of big ones.
     * Monitoring to ensure value is being derived
