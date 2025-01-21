@@ -20,9 +20,9 @@ graph LR
     DD --> F{Use}
     E --> F
 
-    click A href "../sources.html" "Data Identification"
-    click B href "data_collection.html" "Data Collection"
-    click C href "selection.html" "Data Selection and Filtering"
+    click A href "../gathering/index.html" "Data Identification"
+    click B href "../gathering/scraping.html" "Data Collection"
+    click C href "../preparation/selection.html" "Data Selection and Filtering"
     click D href "../augmentation/index.html" "Data Augmentation"
     click DD href "formatting.html" "Formatting"
     click E href "simulation.html" "Data Simulation"
@@ -31,9 +31,9 @@ graph LR
 
 ### Data Preparation Steps:
 
-1. **Data Identification**: The initial stage involves identifying the relevant data sources and types that are essential for training the AI model. This step is foundational, setting the stage for subsequent processes. [Learn more](../sources.md).
+1. **Data Identification**: The initial stage involves identifying the relevant data sources and types that are essential for training the AI model. This step is foundational, setting the stage for subsequent processes.
 
-2. **Data Collection**: Once the necessary data sources are identified, the next step is to collect data from these sources. This phase ensures a robust dataset that reflects the diversity and complexity of real-world scenarios. [Learn more](collection.md).
+2. **Data Collection**: Once the necessary data sources are identified, the next step is to collect data from these sources. This phase ensures a robust dataset that reflects the diversity and complexity of real-world scenarios. [Learn more](../gathering/index.md).
 
 3. **Data Selection and Filtering**: After collecting a substantial dataset, the selection and filtering process begins. This step involves refining the dataset, removing irrelevant, redundant, or low-quality data to ensure the efficiency and effectiveness of the training process. [Learn more](selection.md).
 

@@ -39,7 +39,7 @@ Lets first look at the components that need to be put together.
 | Layer 1: Data     | [**🧼 Data Processing**](../data/preparation/index.md)  | Tools for **cleaning**, **normalizing**, and preparing data for analysis.            |   |
 |                   | [**🔄 ETL + Data Pipelines**](../data/preparation/index.md#etl-pipelines) | Tools to **find**, **extract**, **transform**, and **load** data, and to manage **data flow**.    |
 |                   | **🗃 Databases**        | Services for **structured data storage** and retrieval. |            |
-|                   | [**📈 Data set solutions**](../data/sources.md)  | Places where one can obtain data for **training** and **using** models effectively. |
+|                   | [**📈 Gathering Data**](../data/gathering/index.md)  | Places where one can obtain data for **training** and **using** models effectively. |
 
 
 
