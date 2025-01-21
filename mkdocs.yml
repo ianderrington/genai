@@ -139,7 +139,7 @@ plugins:
   # - social:
   #     cards_layout: default
   - glightbox
-
+  - slides
 
 use_directory_urls: false
 # Customization
