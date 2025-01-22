@@ -237,19 +237,23 @@
          <lastmod>2025-01-22</lastmod>
     </url>
     <url>
-         <loc>https://www.managen.ai/Understanding/building_applications/back_end/llm_ops.html</loc>
-         <lastmod>2025-01-22</lastmod>
-    </url>
-    <url>
-         <loc>https://www.managen.ai/Understanding/building_applications/back_end/memory.html</loc>
-         <lastmod>2025-01-22</lastmod>
-    </url>
-    <url>
          <loc>https://www.managen.ai/Understanding/building_applications/back_end/orchestrating.html</loc>
          <lastmod>2025-01-22</lastmod>
     </url>
     <url>
          <loc>https://www.managen.ai/Understanding/building_applications/back_end/pre_trained_models.html</loc>
+         <lastmod>2025-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://www.managen.ai/Understanding/building_applications/back_end/llm_ops/index.html</loc>
+         <lastmod>2025-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://www.managen.ai/Understanding/building_applications/back_end/llm_ops/caching.html</loc>
+         <lastmod>2025-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://www.managen.ai/Understanding/building_applications/back_end/llm_ops/model_serving.html</loc>
          <lastmod>2025-01-22</lastmod>
     </url>
     <url>
@@ -301,7 +305,23 @@
          <lastmod>2025-01-22</lastmod>
     </url>
     <url>
-         <loc>https://www.managen.ai/Understanding/building_applications/security_and_compliance/index.html</loc>
+         <loc>https://www.managen.ai/Understanding/building_applications/security_compliance_and_governance/index.html</loc>
+         <lastmod>2025-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://www.managen.ai/Understanding/building_applications/security_compliance_and_governance/compliance.html</loc>
+         <lastmod>2025-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://www.managen.ai/Understanding/building_applications/security_compliance_and_governance/governance.html</loc>
+         <lastmod>2025-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://www.managen.ai/Understanding/building_applications/security_compliance_and_governance/monitoring.html</loc>
+         <lastmod>2025-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://www.managen.ai/Understanding/building_applications/security_compliance_and_governance/security.html</loc>
          <lastmod>2025-01-22</lastmod>
     </url>
     <url>
@@ -522,10 +542,6 @@
     </url>
     <url>
          <loc>https://www.managen.ai/Using/examples/by_field/science/chemistry.html</loc>
-         <lastmod>2025-01-22</lastmod>
-    </url>
-    <url>
-         <loc>https://www.managen.ai/Using/examples/by_field/science/healthcare.html</loc>
          <lastmod>2025-01-22</lastmod>
     </url>
     <url>
