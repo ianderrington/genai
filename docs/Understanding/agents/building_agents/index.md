@@ -131,6 +131,7 @@ These frameworks provide different approaches and tools for building AI agents, 
 | Framework | Description |
 |-----------|-------------|
 | [Letta](https://letta.ai/) | Framework for building and deploying AI agents with built-in orchestration |
+| [Open Hands](https://github.com/All-Hands-AI/OpenHands) | Collaborative AI systems |
 | [LangGraph](https://github.com/langchain-ai/langgraph) | LangChain's framework for building structured agents using computational graphs |
 | [AutoGen](https://microsoft.github.io/autogen/) | Microsoft's framework for building multi-agent systems with automated agent orchestration |
 | [LlamaIndex](https://www.llamaindex.ai/) | Framework for building RAG-enabled agents and LLM applications |
@@ -318,7 +319,6 @@ These platforms provide specialized storage solutions for AI applications, inclu
 | [Please AI](https://please.ai/) | Multi-agent systems and orchestration |
 | [Cognition](https://www.cognition-labs.com/) | Cognitive computing and AI reasoning |
 | [Factory](https://www.factory.ai/) | AI automation and manufacturing solutions |
-| [All Hands](https://www.allhandsai.com/) | Collaborative AI systems |
 | [Dosu](https://dosu.ai/) | AI development tools and infrastructure |
 | [Lindy](https://lindy.ai/) | AI systems with long-term learning capabilities |
 | [11x](https://11x.ai/) | AI productivity and automation tools |
