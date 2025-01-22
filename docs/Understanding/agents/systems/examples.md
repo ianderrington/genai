@@ -121,11 +121,72 @@ Examples of agent systems working together to develop software and solutions.
 
 
 ??? abstract "[Agent Laboratory](https://github.com/SamuelSchmidgall/AgentLaboratory)" agentlaboratory
+    A research assistant framework that transforms human research ideas into complete research reports and code repositories. Designed to complement human researchers rather than replace them.
+
+    ### Research Team Structure
+    - **PhD Agent**: Research planning and literature review lead
+    - **Postdoc Agent**: Expert guidance and methodology refinement
+    - **ML Engineer**: Code implementation and technical development
+    - **Professor Agent**: Quality evaluation and research direction
+
+    ### How It Works
+    1. **Literature Review**
+        - Semantic search across research papers
+        - Contextual understanding of related work
+        - Synthesis of key findings and gaps
+        - Automatic citation management
+
+    2. **Experimentation**
+        - Collaborative experimental design
+        - Iterative code development and testing
+        - Results analysis and validation
+        - Documentation of findings
+
+    3. **Report Writing**
+        - Academic paper structure
+        - Integration of results and literature
+        - LaTeX formatting and figure generation
+        - Citation and reference management
+
+    ### Operation Modes
+    1. **Autonomous Mode**
+        - Self-directed research workflow
+        - Internal peer review process
+        - Continuous quality monitoring
+        - Independent decision-making
+
+    2. **Co-Pilot Mode**
+        - Human-AI collaboration
+        - Regular feedback checkpoints
+        - Adjustable interaction levels
+        - Responsive to researcher guidance
+
+    ### Key Tools
+    1. **MLE-Solver**
+        - Machine learning code generation
+        - Self-improving algorithms
+        - Iterative refinement process
+        - Error detection and correction
+
+    2. **Paper-Solver**
+        - Research synthesis
+        - Academic writing
+        - Results visualization
+        - Format compliance
+
+    ### External Integrations
+    - [arXiv](https://arxiv.org/) for literature access
+    - [Hugging Face](https://huggingface.co/) for ML models
+    - Python environment for experiments
+    - LaTeX for document preparation
+
+    ### Resources
+    - [Website](https://agentlaboratory.github.io/)
+    - [Paper](https://arxiv.org/abs/2501.04227)
+    - [GitHub Repository](https://github.com/SamuelSchmidgall/AgentLaboratory)
+
     <img width="649" alt="image" src="https://github.com/user-attachments/assets/b5144cb2-01e1-4ada-b969-e8185bd8f5fb" />
     <img width="612" alt="image" src="https://github.com/user-attachments/assets/117ff003-2d0a-4424-b37c-4cedba197eb5" />
-
-    https://agentlaboratory.github.io/
-    https://arxiv.org/pdf/2501.04227
 
 
 ??? abstract "ChatDev - Collaborative Software Development"
