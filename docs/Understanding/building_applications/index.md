@@ -12,9 +12,10 @@ bullets:
 This guide provides a comprehensive overview of building GenAI applications, from understanding the basic components to deployment. Whether you're building a proof-of-concept or planning an enterprise solution, you'll find practical guidance on:
 
 - Choosing and deploying models
-- Building robust front-end and back-end systems
-- Orchestrating complex AI workflows
-- Monitoring and maintaining GenAI applications
+- Building robust [front-end](./front_end/index.md) and [back-end](./back_end/index.md) systems
+- [Serving models](./back_end/llm_ops/model_serving.md)
+- [Orchestrating complex AI workflows](./back_end/orchestrating.md)
+- [Monitoring and maintaining GenAI applications](./security_compliance_and_governance/monitoring.md)
 
 
 Building a GenAI application 'from scratch' can be a very daunting process considering the [the stack](#the-stack) that is involved. Quite fortunately, many tools, services, and libraries exist to accelerate a full-stack GenAI solution. It would also be worthwhile to consider [building or buying](../../Using/strategically/building_or_buying.md). 
@@ -26,16 +27,16 @@ Lets first look at the components that need to be put together.
 | Layer             | Component            | Description                                                                 | 
 |-------------------|----------------------|-----------------------------------------------------------------------------|
 | Layer 4: Management | [**📊 Monitoring**](#monitoring-genai)        | Tools for **monitoring** the AI system's performance and health.            |
-|                   | [**🛡 Compliance**](./security_and_compliance/index.md)            | Uses observability to ensure the system is operating within **legal** and **ethical boundaries**. |                  
+|                   | [**🛡 Compliance**](./security_compliance_and_governance/index.md)            | Uses observability to ensure the system is operating within **legal** and **ethical boundaries**. |                  
 | Layer 3: Application | [**🖥 UI/UX Front ends**](./front_end/index.md)       |  GUIs and interfaces are specifically designed for **streamlined connection** with GenAI models.         |
 |                   | [**📝 System evaluators**](../agents/building_agents/evaluating_and_comparing.md)            |Systems for assessing the **performance** and **effectiveness** of AI systems.      |   
 |                   |  [**🧩 Orchestration Tools**](./back_end/orchestrating.md)          |  Languages and services to create and coordinate **LLM-chains**, agents workflows involving **memory**.          |
-|                   | [**🗄  Memory **](./back_end/memory.md)              | Methods of **storing/indexing** and **retrieving documents**.         |
+|                   | [**🗄  Caching**](./back_end/llm_ops/caching.md)              | Methods of speeding up model inference by caching results.        |
 |                   | [**📊  Prompt Management**](../prompting/index.md)  |Systems to manage and refine the **prompts** used in conversational AI.          |   
 |                   | [**🔧  Model Optimization**](../architectures/optimizing/index.md) | Methods of enabling models to fulfill **customer requirements**. |              
-| Layer 2: Models   | [**🚀  Model Serving**](./back_end/llm_ops.md) | Services to deploy and coordinate model inference **at scale**.   | 
+| Layer 2: Models   | [**🚀  Model Serving**](./back_end/llm_ops/model_serving.md) | Services to deploy and coordinate model inference **at scale**.   | 
 |                   | [**💻 Computation**](./back_end/computation.md)          | Providers of computational resources, specifically **GPUs**, for AI processing.  |              
-|                   |[**🔄 ML Ops**](./back_end/llm_ops.md)    | ML operations enable efficient coordination around **Model training** and **tracking**. | 
+|                   |[**🔄 ML Ops**](./back_end/llm_ops/index.md)    | ML operations enable efficient coordination around **Model training** and **tracking**. | 
 |                   | [**🏋️ Model Training**](../architectures/training/index.md)          | Tools **safety** of AI systems.            |
 |                   | [**📊 Model comparisons**](../architectures/optimizing/evaluating_and_comparing.md)|  Methods of **evaluating** and **comparing models** across baselines and benchmarks.| 
 |                   | [**🧠 Pretrained Models**](./back_end/pre_trained_models.md)   | Pre-built models offering a range of **capabilities** and **uses**.                  |        
@@ -64,8 +65,6 @@ There are two primary, and often competing factors to consider when when assessi
 
 Keep in mind that the performance will not be evaluated just based on model-computation, but the entire orchestration and end-user UI/UX. 
 
-#### Costs
-Costs
 
 ### 2. [Servable Model](#servable-model)
 
@@ -88,7 +87,11 @@ Remember that needs will evolve as your understanding of all the above factors s
 
 
 
-### Monitoring Gen()AI
+### Security, Compliance, and Governance
+
+
+
+#### Monitoring
 For reasons related to quality, ethics, and regulation, it is both useful, and at times required, to record both inputs, and outputs from an LLM. Particularly in systems that may be used in non low-risk settings, monitoring is an essential component of Gen()AI.  Also known as _LLM observability_, monitoring can people-in-the-loop, as well as automated systems to observe and adapt the system to both inputs and outputs that are undesired or dangerous.
 
 
@@ -101,7 +104,9 @@ It should have been done yesterday, yes. But how soon is the solution actually n
 
 The allocated budget will affect your tool's monetization strategy. 
 
+
 ## Useful References
+
 !!! important "[LLMs from scratch](https://github.com/rasbt/LLMs-from-scratch) provides a quality series of Jupyter notebooks revealing how to build LLMs from scratch."
 
 

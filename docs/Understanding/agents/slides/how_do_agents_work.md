@@ -1,11 +1,3 @@
----
-title: How do Agents Work?
-description: Understanding the operational mechanics of AI agents
-bullets:
-  - Agents operate in a continuous loop of observation, decision, and action
-  - Core processes include information processing, planning, and tool usage
-  - Advanced capabilities enable sophisticated reasoning and self-improvement
----
 
 # How do Agents Work?
 

@@ -1,11 +1,4 @@
----
-title: What are Agents?
-description: Introduction to AI agents and their core capabilities
-bullets:
-  - AI agents are autonomous systems that observe, decide, and act
-  - Key components include cognitive architecture, memory, and tool systems
-  - Different types of agents serve various specialized purposes
----
+
 
 # What are Agents?
 
