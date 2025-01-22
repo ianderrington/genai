@@ -156,10 +156,10 @@ These platforms provide specialized solutions for managing agent memory, enablin
 
 | Platform | Description |
 |----------|-------------|
-| [MemGPT](https://github.com/cpacker/MemGPT) | System for extending LLM context windows with infinite memory via memory management |
+| [Letta](https://github.com/letta-ai/letta) | System for extending LLM context windows with infinite memory via memory management |
 | [Zep](https://www.getzep.com/) | Long-term memory store for LLM applications and agents |
 | [LangMem](https://python.langchain.com/docs/modules/memory/) | LangChain's memory management system for conversational agents |
-| [Memo](https://github.com/memgpt/memgpt) | Memory management and persistence solution for AI agents |
+| [Mem0](https://github.com/mem0ai/mem0) | Memory management and persistence solution for AI assistants and agents |
 
 
 Memory architecture considerations:
