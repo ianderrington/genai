@@ -14,7 +14,9 @@ Examples of agent systems working together to develop software and solutions.
 
 ??? abstract "[TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany)" theagentcompany
     TheAgentCompany provides a multi-agent environment designed for collaborative problem-solving and development, implementing a comprehensive benchmark for evaluating AI agents in realistic workplace scenarios. Built using [OpenHands](https://github.com/All-Hands-AI/OpenHands) agent framework.
+    
     <img width="558" alt="image" src="https://github.com/user-attachments/assets/5a33fda7-ca3a-45de-9f5e-4dfd4d675d72" />
+    
     ### Environment Architecture
     1. **Local Workspace**
         - [Docker](https://www.docker.com/)-based sandboxed environment for safe execution
@@ -117,7 +119,13 @@ Examples of agent systems working together to develop software and solutions.
     - [GitHub Repository](https://github.com/TheAgentCompany/TheAgentCompany)
     - [Evaluation Results](https://github.com/TheAgentCompany/experiments)
 
-   
+
+??? abstract "[Agent Laboratory](https://github.com/SamuelSchmidgall/AgentLaboratory)" agentlaboratory
+    <img width="649" alt="image" src="https://github.com/user-attachments/assets/b5144cb2-01e1-4ada-b969-e8185bd8f5fb" />
+    <img width="612" alt="image" src="https://github.com/user-attachments/assets/117ff003-2d0a-4424-b37c-4cedba197eb5" />
+
+    https://agentlaboratory.github.io/
+    https://arxiv.org/pdf/2501.04227
 
 
 ??? abstract "ChatDev - Collaborative Software Development"
