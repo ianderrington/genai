@@ -1,3 +1,12 @@
+---
+title: GenAI Agents
+description: When AI systems gain the ability to observe, think, and act
+bullets:
+  - AI agents can now observe their environment, make decisions, and take actions autonomously
+  - Modern agents combine LLMs, memory systems, and specialized tools to solve complex tasks
+  - The evolution from simple chains to full agents represents 6 levels of increasing capability
+---
+
 # Gen()AI Agents
 
 Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.

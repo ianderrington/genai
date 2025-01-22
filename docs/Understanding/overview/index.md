@@ -1,3 +1,12 @@
+---
+title: Overview of GenAI
+description: The technology that's rewriting the rules of what's possible
+bullets:
+  - Modern AI systems can write poetry, code software, and design drugs - all with the same underlying architecture
+  - The line between prediction and creation is blurring as AI learns to generate novel content
+  - Today's AI achievements were considered impossible just five years ago, and the pace is accelerating
+---
+
 # Overview
 
 The ability of computers and algorithms to generate art, literature, and other forms of content has been around for several decades. However, it is only recently that such content has begun to exhibit _human-like_ quality. This is largely due to the use of Artificial Intelligence (AI), particularly Machine Learning (ML), which leverages _data_ to produce high-quality output. 

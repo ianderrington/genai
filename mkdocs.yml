@@ -117,9 +117,7 @@ plugins:
   #     - tags
   # - search:
   #     separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  # Doesn't build 
-  # - social:
-  #     cards_layout: default/variant
+ 
   ## Allows for linking like this: This works the same as [a normal link to that heading](../doc1.md#hello-world).
   - autorefs
   - minify:

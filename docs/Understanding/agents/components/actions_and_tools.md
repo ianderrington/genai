@@ -1,3 +1,12 @@
+---
+title: Actions and Tools
+description: The interface mechanisms that enable AI agents to affect their environment
+bullets:
+  - Tools provide specialized capabilities through function calls and APIs
+  - Interpreters and routers ensure safe and effective tool execution
+  - Guardrails and validation systems protect against misuse
+---
+
 Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. Relayed by an [interpreters and routers](#interpeters-and), these have made LLMs one of the most powerful enablers of Agentic AI. 
 
 ## Actions and tools

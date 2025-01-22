@@ -1,4 +1,13 @@
-Thhere are various activities and fields that leverage the capabilities of Generative AI.
+---
+title: GenAI Use Cases
+description: From art to science, AI is breaking boundaries in every field
+bullets:
+  - AI has composed classical music so convincing that experts couldn't distinguish it from Bach
+  - A single AI system can now understand and generate text, images, music, and protein structures
+  - The next breakthrough drug might be discovered by AI analyzing patterns humans never noticed
+---
+
+GenAI is transforming how we create, analyze, and discover - pushing the boundaries of what's possible across an astounding range of fields.
 
 ## General Modalities
 

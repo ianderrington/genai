@@ -1,9 +1,13 @@
 ---
 hide:
-
   - toc
+title: Building AI Applications
+description: From concept to deployment - the complete AI application stack
+bullets:
+  - Modern AI apps combine over 15 specialized components across 4 critical layers
+  - Each layer from data to management requires specific tools and considerations
+  - The right architecture choices can make the difference between success and failure
 ---
-
 
 This guide provides a comprehensive overview of building GenAI applications, from understanding the basic components to deployment. Whether you're building a proof-of-concept or planning an enterprise solution, you'll find practical guidance on:
 

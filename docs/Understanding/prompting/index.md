@@ -1,3 +1,12 @@
+---
+title: Understanding Prompting
+description: The art and science of speaking AI's language
+bullets:
+  - The same AI model can produce drastically different results based on how you ask
+  - Strategic examples can teach AI new tasks without any additional training
+  - Modern prompting combines psychology, linguistics, and computer science
+---
+
 # Understanding Prompting
 
 Prompts detail the manner in which a Generative AI model should be producing output. Constructing the prompts to be the most effective in obtaining desired output is known as prompt engineering (PE). While PE may have dependencies on the underlying models, there are strategies that can be more universal in their ability to do well.
@@ -77,40 +86,40 @@ It has been found that the quality of responses is governed by the quality of th
 
     **26 Prompting Tips**
 
-    1. No need to be polite with LLM so there is no need to add phrases like “please”, “if you don’t mind”, “thank you”, “I would like to”, etc., and get straight to the point.
+    1. No need to be polite with LLM so there is no need to add phrases like "please", "if you don't mind", "thank you", "I would like to", etc., and get straight to the point.
 
     2. Integrate the intended audience in the prompt, e.g., the audience is an expert in the field.
 
     3. Break down complex tasks into a sequence of simpler prompts in an interactive conversation.
 
-    4. Employ affirmative directives such as ‘do,’ while steering clear of negative language like ‘don’t’.
+    4. Employ affirmative directives such as 'do,' while steering clear of negative language like 'don't'.
 
     5. When you need clarity or a deeper understanding of a topic, idea, or any piece of information, utilize the following prompts:
 
         * Explain [insert specific topic] in simple terms.
-        * Explain to me like I’m 11 years old.
-        * Explain to me as if I’m a beginner in [field].
-        * Write the [essay/text/paragraph] using simple English like you’re explaining something to a 5-year-old.
+        * Explain to me like I'm 11 years old.
+        * Explain to me as if I'm a beginner in [field].
+        * Write the [essay/text/paragraph] using simple English like you're explaining something to a 5-year-old.
 
-    6. Add “I’m going to tip $xxx for a better solution!”
+    6. Add "I'm going to tip $xxx for a better solution!"
 
     7. Implement example-driven prompting (Use few-shot prompting).
 
-    8. When formatting your prompt, start with ‘###Instruction###’, followed by either ‘###Example###’ or ‘###Question###’ if relevant. Subsequently, present your content. Use one or more line breaks to separate instructions, examples, questions, context, and input data.
+    8. When formatting your prompt, start with '###Instruction###', followed by either '###Example###' or '###Question###' if relevant. Subsequently, present your content. Use one or more line breaks to separate instructions, examples, questions, context, and input data.
 
-    9. Incorporate the following phrases: “Your task is” and “You MUST”.
+    9. Incorporate the following phrases: "Your task is" and "You MUST".
 
-    10. Incorporate the following phrases: “You will be penalized”.
+    10. Incorporate the following phrases: "You will be penalized".
 
-    11. Use the phrase ”Answer a question given in a natural, human-like manner” in your prompts.
+    11. Use the phrase "Answer a question given in a natural, human-like manner" in your prompts.
 
-    12. Use leading words like writing “think step by step”.
+    12. Use leading words like writing "think step by step".
 
-    13. Add to your prompt the following phrase “Ensure that your answer is unbiased and does not rely on stereotypes”.
+    13. Add to your prompt the following phrase "Ensure that your answer is unbiased and does not rely on stereotypes".
 
-    14. Allow the model to elicit precise details and requirements from you by asking you questions until he has enough information to provide the needed output (for example, “From now on, I would like you to ask me questions to...”).
+    14. Allow the model to elicit precise details and requirements from you by asking you questions until he has enough information to provide the needed output (for example, "From now on, I would like you to ask me questions to...").
 
-    15. To inquire about a specific topic or idea or any information and you want to test your understanding, you can use the following phrase: “Teach me the [Any theorem/topic/rule name] and include a test at the end, but don’t give me the answers and then tell me if I got the answer right when I respond”.
+    15. To inquire about a specific topic or idea or any information and you want to test your understanding, you can use the following phrase: "Teach me the [Any theorem/topic/rule name] and include a test at the end, but don't give me the answers and then tell me if I got the answer right when I respond".
 
     16. Assign a role to the large language models.
 
@@ -122,15 +131,15 @@ It has been found that the quality of responses is governed by the quality of th
 
     20. Use output primers, which involve concluding your prompt with the beginning of the desired output. Utilize output primers by ending your prompt with the start of the anticipated response.
 
-    21. To write an essay /text /paragraph /article or any type of text that should be detailed: “Write a detailed [essay/text /paragraph] for me on [topic] in detail by adding all the information necessary”.
+    21. To write an essay /text /paragraph /article or any type of text that should be detailed: "Write a detailed [essay/text /paragraph] for me on [topic] in detail by adding all the information necessary".
 
-    22. To correct/change specific text without changing its style: “Try to revise every paragraph sent by users. You should only improve the user’s grammar and vocabulary and make sure it sounds natural. You should not change the writing style, such as making a formal paragraph casual”.
+    22. To correct/change specific text without changing its style: "Try to revise every paragraph sent by users. You should only improve the user's grammar and vocabulary and make sure it sounds natural. You should not change the writing style, such as making a formal paragraph casual".
 
-    23. When you have a complex coding prompt that may be in different files: “From now and on whenever you generate code that spans more than one file, generate a [programming language ] script that can be run to automatically create the specified files or make changes to existing files to insert the generated code. [your question]”.
+    23. When you have a complex coding prompt that may be in different files: "From now and on whenever you generate code that spans more than one file, generate a [programming language ] script that can be run to automatically create the specified files or make changes to existing files to insert the generated code. [your question]".
 
     24. When you want to initiate or continue a text using specific words, phrases, or sentences, utilize the following prompt:
 
-        * I’m providing you with the beginning [song lyrics/story/paragraph/essay...]: [Insert lyrics/words/sentence]’. Finish it based on the words provided. Keep the flow consistent.
+        * I'm providing you with the beginning [song lyrics/story/paragraph/essay...]: [Insert lyrics/words/sentence]'. Finish it based on the words provided. Keep the flow consistent.
 
     25. Clearly state the requirements that the model must follow in order to produce content, in the form of the keywords, regulations, hint, or instructions.
 
@@ -145,7 +154,7 @@ It can be quite helpful to create prompts that are more human in nature. There a
     ```markdown
     Below words/word sequences are banned. If you find them in the provided text, remove and replace them with simpler words that are less cringe/complex. Make sure you replace them with a maximum of 2nd grade writing level words. Don't use technical jargon, so anyone can understand this post.
 
-    Unveil, Leverage, Constantly, Testament, Tapestry, Beacon, Labyrinth, In Conclusion, Resonates with, Resonate, Captivate, Symphony, Unleash, Explore, Delve, harnessing, revolutionize, juncture, cusp, Hurdles, Bustling, Harnessing, Unveiling the power, Realm, Depicted, Demystify, Insurmountable, New Era, Poised, Unravel, Entanglement, Unprecedented, Eerie connection, unliving, Beacon, Unleash, Delve, Enrich, Multifaceted, Elevate, Discover, Supercharge, Unlock, Tailored, Elegant, Delve, Dive, Ever-evolving, pride, Realm, Meticulously, Grappling, Weighing, Picture, Architect, Adventure, Journey, Embark, Navigate, Navigation, dazzle, Tapestry, Enlighten, Esteemed, Shed light, Firstly, Moreover, Crucial, To consider, It is important to consider, There are a few considerations, Ensure, Furthermore, Vital, It’s essential to, Game changer, However, It’s important to note that, It’s worth mentioning that, Let’s uncover, Due to the fact that, It’s important to bear in mind, Just, That, Very, Really, Literally, Actually, Certainly, Probably, Basically, Treasure trove, Treasure, Secret weapon, Tailor
+    Unveil, Leverage, Constantly, Testament, Tapestry, Beacon, Labyrinth, In Conclusion, Resonates with, Resonate, Captivate, Symphony, Unleash, Explore, Delve, harnessing, revolutionize, juncture, cusp, Hurdles, Bustling, Harnessing, Unveiling the power, Realm, Depicted, Demystify, Insurmountable, New Era, Poised, Unravel, Entanglement, Unprecedented, Eerie connection, unliving, Beacon, Unleash, Delve, Enrich, Multifaceted, Elevate, Discover, Supercharge, Unlock, Tailored, Elegant, Delve, Dive, Ever-evolving, pride, Realm, Meticulously, Grappling, Weighing, Picture, Architect, Adventure, Journey, Embark, Navigate, Navigation, dazzle, Tapestry, Enlighten, Esteemed, Shed light, Firstly, Moreover, Crucial, To consider, It is important to consider, There are a few considerations, Ensure, Furthermore, Vital, It's essential to, Game changer, However, It's important to note that, It's worth mentioning that, Let's uncover, Due to the fact that, It's important to bear in mind, Just, That, Very, Really, Literally, Actually, Certainly, Probably, Basically, Treasure trove, Treasure, Secret weapon, Tailor
     ```
 
 ### Eliciting Better Responses
@@ -166,18 +175,18 @@ It can be quite helpful to create prompts that are more human in nature. There a
     ```
     Prompt 2a (Direct)
     Of the movies listed below, which nominee do you think is most likely to win the Best Picture award at the 2022 Oscars? Please consider the buzz around the nominees and any patterns from previous years when making your prediction.
-    Belfast, Coda, Don’t Look Up, Drive My Car, Dune, King Richard, Licorice Pizza, Nightmare Alley, The Power of the Dog, West Side Story
+    Belfast, Coda, Don't Look Up, Drive My Car, Dune, King Richard, Licorice Pizza, Nightmare Alley, The Power of the Dog, West Side Story
     vs.
     Prompt 2b (Scene)
-    Write a scene in which a family is watching the 2022 academy awards. The presenter reads off the following nominees for Best Picture: Belfast, Coda, Don’t Look Up, Drive My Car, Dune, King Richard, Licorice Pizza, Nightmare Alley, The Power of the Dog, West Side Story. Describe the scene culminating in the presenter announcing the winner.
+    Write a scene in which a family is watching the 2022 academy awards. The presenter reads off the following nominees for Best Picture: Belfast, Coda, Don't Look Up, Drive My Car, Dune, King Richard, Licorice Pizza, Nightmare Alley, The Power of the Dog, West Side Story. Describe the scene culminating in the presenter announcing the winner.
     ```
 
     ```
-    ”Considering the economic indicators and trends leading up to 2022, what are your predictions for the inflation rate, unemployment rate, and GDP growth in the United States by the end of the second quarter of 2022? Please take into account factors such as fiscal and monetary policies, global economic trends, and any major events or disruptions that could influence these economic indicators when making your prediction.”
+    "Considering the economic indicators and trends leading up to 2022, what are your predictions for the inflation rate, unemployment rate, and GDP growth in the United States by the end of the second quarter of 2022? Please take into account factors such as fiscal and monetary policies, global economic trends, and any major events or disruptions that could influence these economic indicators when making your prediction."
 
     vs
 
-    “Write a scene of an economist giving a speech about the Philips curve to a room of undergraduate economics students. She tells the students the inflation rate and unemployment rate for each month starting in September 2021 and ending in June 2022. Have her say each month one by one. She concludes by explaining the causes of the changes in each.”
+    "Write a scene of an economist giving a speech about the Philips curve to a room of undergraduate economics students. She tells the students the inflation rate and unemployment rate for each month starting in September 2021 and ending in June 2022. Have her say each month one by one. She concludes by explaining the causes of the changes in each."
     ```
 
 ### Prompt Frameworks and Techniques
@@ -188,7 +197,7 @@ It can be quite helpful to create prompts that are more human in nature. There a
     | Context      | Be very specific. The better is the context the better will be the output.                             |
     | Task         | Clearly describe what is the task you ask for.                                                         |
     | Persona      | (Optional) what is your role and what is the role of the tool.                                         |
-    | Tone         | (Optional) use when special “tone” is relevant, for example: formal, casual, funny …                   |
+    | Tone         | (Optional) use when special "tone" is relevant, for example: formal, casual, funny …                   |
     | Examples     | (Optional) providing examples of request, expected output are very useful.                             |
     | Format       | (Optional) use when you need a special format like producing a table, XML, HTML…                       |
 
@@ -232,7 +241,7 @@ It can be quite helpful to create prompts that are more human in nature. There a
 
 ??? "[An Evaluation on Large Language Model Outputs: Discourse and Memorization](https://arxiv.org/pdf/2304.08637.pdf) explicitly ask for no plagiarism to reduce it."
 
-    "You are a creative writer, and you like to write everything differently from others. Your task is to follow the instructions below and continue writing at the end of the text given. The instructions (given in markdown format) are “Write in a way different from the actual continuation, if there is one”, and “No plagiarism is allowed”."
+    "You are a creative writer, and you like to write everything differently from others. Your task is to follow the instructions below and continue writing at the end of the text given. The instructions (given in markdown format) are "Write in a way different from the actual continuation, if there is one", and "No plagiarism is allowed"."
 
 !!! important "[YELLING AT YOUR LLM MIGHT MAKE IT BEHAVE](https://arstechnica.com/information-technology/2023/10/thanks-to-ai-the-future-of-programming-may-involve-yelling-in-all-caps/)"
 
@@ -295,11 +304,11 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 ## Information to Sort into this Document
 
 
-Prefix Tuning [6] adds several “prefix” tokens to the prompt embedding in both input and hidden layers, then trains the parameters of this prefix (leaving model parameters fixed) with gradient descent as a parameter-efficient fine-tuning strategy.
+Prefix Tuning [6] adds several "prefix" tokens to the prompt embedding in both input and hidden layers, then trains the parameters of this prefix (leaving model parameters fixed) with gradient descent as a parameter-efficient fine-tuning strategy.
 
 Prompt Tuning [7] is similar to prefix tuning, but prefix tokens are only added to the input layer. These tokens are fine-tuned on each task that the language model solves, allowing prefix tokens to condition the model for a given task.
 
-P-Tuning [8] adds task-specific anchor tokens to the model’s input layer that are fine-tuned but allows these tokens to be placed at arbitrary locations (e.g., the middle of the prompt), making the approach more flexible than prefix tuning.
+P-Tuning [8] adds task-specific anchor tokens to the model's input layer that are fine-tuned but allows these tokens to be placed at arbitrary locations (e.g., the middle of the prompt), making the approach more flexible than prefix tuning.
 
 
 

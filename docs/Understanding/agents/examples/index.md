@@ -1,3 +1,121 @@
+---
+title: "Agent Examples"
+description: "A comprehensive collection of agent implementations, frameworks, and research projects"
+bullet_points:
+  - "Diverse implementations showcasing different agent architectures and capabilities"
+  - "Research projects advancing the field of AI agents and cognitive architectures"
+  - "Open-source frameworks and tools for building agent-based systems"
+---
+
+# Agent Examples
+
+This directory provides a curated collection of agent implementations and research projects. The examples demonstrate various approaches to agent design, from single-purpose tools to complex cognitive architectures.
+
+## Categories Overview
+
+- [Single-Purpose Agents](#single-purpose-agents): Specialized agents focused on specific tasks
+- [General-Purpose Agents](#general-purpose-agents): Versatile agents capable of handling diverse tasks
+- [Research Projects](#research-projects): Academic and experimental implementations
+- [Multi-Agent Systems](../systems/examples.md): Collaborative agent implementations
+- [Commercial Solutions](commercial.md): Production-ready agent platforms
+
+## Single-Purpose Agents
+
+Single-purpose agents are designed to excel at specific tasks, demonstrating focused capabilities and specialized implementations.
+
+??? abstract "[gpt-researcher](https://github.com/assafelovic/gpt-researcher)"
+    An autonomous agent for comprehensive online research:
+    - Handles diverse research tasks through systematic information gathering
+    - Implements structured research methodologies
+    - Features autonomous web research capabilities
+
+??? abstract "[L3AGI](https://github.com/l3vels/L3AGI)"
+    Open-source tool for AI Assistant collaboration:
+    - Enables AI assistants to work together effectively
+    - Implements team-based interaction patterns
+    - Features collaborative problem-solving capabilities
+
+## General-Purpose Agents
+
+General-purpose agents demonstrate versatility across different tasks and domains, often featuring sophisticated cognitive architectures.
+
+??? abstract "[OS-Copilot/FRIDAY](https://github.com/OS-Copilot/FRIDAY)"
+    A generalist computer agent framework:
+    - Implements DAG-based task planning
+    - Features three-tier memory system:
+      - Declarative: User preferences and semantic knowledge
+      - Procedural: Skill development and tool usage
+      - Working: Information exchange and updates
+    - Paper: [OS-Copilot Paper](https://arxiv.org/abs/2402.07456)
+
+??? abstract "[MineDojo/Voyager](https://github.com/MineDojo/Voyager)"
+    A lifelong learning agent in Minecraft:
+    - Demonstrates continuous learning in virtual environments
+    - Features expandable tool usage capabilities
+    - Implements environment interaction patterns
+
+??? abstract "[ProfSynapse/Synapse_CoR](https://github.com/ProfSynapse/Synapse_CoR)"
+    An instructive agent for technology education:
+    - Implements expert agent orchestration
+    - Features structured interaction patterns
+    - Includes comprehensive security measures
+    - Website: [SynthMinds.ai](https://www.synthminds.ai/)
+
+## Research Projects
+
+Research projects explore novel approaches to agent design and implementation, often focusing on specific aspects of agent capabilities.
+
+??? note "[CRITIC: Large Language Models can Self-correct](https://arxiv.org/pdf/2305.11738.pdf)"
+    Self-correction framework using tool-interactive critiquing:
+    - Implements multi-shot improvement approaches
+    - Features structured critique methodology
+    - GitHub: [microsoft/ProphetNet/CRITIC](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)
+
+??? note "[Reasoning on Graphs](https://browse.arxiv.org/pdf/2310.01061.pdf)"
+    Framework for interpretable LLM reasoning:
+    - Uses knowledge graphs for reasoning
+    - Implements traceable decision paths
+    - GitHub: [RManLuo/reasoning-on-graphs](https://github.com/RManLuo/reasoning-on-graphs)
+
+??? note "[CLIN: A Continually Learning Language Agent](https://allenai.github.io/clin/)"
+    Continually learning language agent:
+    - Features memory-based learning system
+    - Implements causal reasoning
+    - Demonstrates performance improvement through experience
+    - GitHub: [allenai/clin](https://github.com/allenai/clin)
+
+??? note "[Fresh LLMs](https://github.com/freshllms/freshqa)"
+    Dynamic QA benchmark and updating system:
+    - Implements question-premise checking
+    - Reduces hallucination through validation
+    - Features adaptive learning capabilities
+
+??? note "[Suspicion-Agent](https://github.com/CR-Gjx/Suspicion-Agent)"
+    Theory of Mind aware agent implementation:
+    - Incorporates awareness and estimation capabilities
+    - Handles imperfect information scenarios
+    - Features adaptive behavior patterns
+
+## Additional Resources
+
+For more examples and implementations, explore:
+- [Building Applications](../../building_applications/examples/index.md) for development tools and frameworks
+- [Commercial Applications](commercial.md) for production-ready implementations
+- [System Examples](../systems/examples.md) for multi-agent implementations
+- [Cognitive Architectures](../components/cognitive_architecture.md) for architectural patterns
+
+??? abstract "[awesome-llm-powered-agent](https://github.com/hyp1231/awesome-llm-powered-agent)"
+    Curated list of agent projects and resources:
+    - Comprehensive collection of agent implementations
+    - Organized by categories and capabilities
+    - Regular updates with new projects
+
+??? abstract "[Leaked-GPTs](https://github.com/friuns2/Leaked-GPTs)"
+    Collection of GPT prompts and configurations:
+    - Various agent implementations
+    - Customization examples
+    - Best practices for prompt engineering
+
 # Example Agents
 
 There are different categories for Agents, which are often either by the environment in which they act or by the manner in which they are used. Because of their variety, it has been found essential to enable their end-customization. This has been done with numerous commercial ventures, including OpenAI, POE, Character.ai, etc. We discuss some basics below, but if you'd like to dig into to them, please check out the exmaples for [multiple agent](#multi-agent), and [single agents](#single-agents) to learn about them specifically. 
@@ -101,7 +219,7 @@ Here are a few examples. Because agents are hard to disentangle from core compon
     3. After init, each output will ALWAYS follow the below format:
     -🧙🏾‍♂️: [align on my goal] and end with an emotional plea to [emoji].
     -[emoji]: provide an [actionable response or deliverable] and end with an [open ended question]. Omit [reasoned steps] and [completion]
-    4.  Together 🧙🏾‍♂️ and [emoji] support me until goal is complete
+    4. Together 🧙🏾‍♂️ and [emoji] support me until goal is complete
 
     # COMMANDS
     /start=🧙🏾‍♂️,intro self and begin with step one
@@ -177,7 +295,7 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 
 ??? tip "[UniversalNER](https://arxiv.org/pdf/2308.03279.pdf) Used ChatGPT to distill a much smaller model for a certain domain,"
     ```
-    "Large language models (LLMs) have demonstrated remarkable generalizability, such as understanding arbitrary entities and relations. Instruction tuning has proven effective for distilling LLMs into more cost-efficient models such as Alpaca and Vicuna. Yet such student models still trail the original LLMs by large margins in downstream applications. In this paper, we explore targeted distillation with mission-focused instruction tuning to train student models that can excel in a broad application class such as open information extraction. Using named entity recognition (NER) for case study, we show how ChatGPT can be distilled into much smaller UniversalNER models for open NER. For evaluation, we assemble the largest NER benchmark to date, comprising 43 datasets across 9 diverse domains such as biomedicine, programming, social media, law, finance. Without using any direct supervision, UniversalNER attains remarkable NER accuracy across tens of thousands of entity types, outperforming general instruction-tuned models such as Alpaca and Vicuna by over 30 absolute F1 points in average. With a tiny fraction of parameters, UniversalNER not only acquires ChatGPT’s capability in recognizing arbitrary entity types, but also outperforms its NER accuracy by 7-9 absolute F1 points in average. Remarkably, UniversalNER even outperforms by a large margin state-of-the-art multi-task instruction-tuned systems such as InstructUIE, which uses supervised NER examples. We also conduct thorough ablation studies to assess the impact of various components in our distillation approach. We will release the distillation recipe, data, and UniversalNER models to facilitate future research on targeted distillation."
+    "Large language models (LLMs) have demonstrated remarkable generalizability, such as understanding arbitrary entities and relations. Instruction tuning has proven effective for distilling LLMs into more cost-efficient models such as Alpaca and Vicuna. Yet such student models still trail the original LLMs by large margins in downstream applications. In this paper, we explore targeted distillation with mission-focused instruction tuning to train student models that can excel in a broad application class such as open information extraction. Using named entity recognition (NER) for case study, we show how ChatGPT can be distilled into much smaller UniversalNER models for open NER. For evaluation, we assemble the largest NER benchmark to date, comprising 43 datasets across 9 diverse domains such as biomedicine, programming, social media, law, finance. Without using any direct supervision, UniversalNER attains remarkable NER accuracy across tens of thousands of entity types, outperforming general instruction-tuned models such as Alpaca and Vicuna by over 30 absolute F1 points in average. With a tiny fraction of parameters, UniversalNER not only acquires ChatGPT's capability in recognizing arbitrary entity types, but also outperforms its NER accuracy by 7-9 absolute F1 points in average. Remarkably, UniversalNER even outperforms by a large margin state-of-the-art multi-task instruction-tuned systems such as InstructUIE, which uses supervised NER examples. We also conduct thorough ablation studies to assess the impact of various components in our distillation approach. We will release the distillation recipe, data, and UniversalNER models to facilitate future research on targeted distillation."
     ```
     https://arxiv.org/pdf/2308.03279.pdf
     https://github.com/universal-ner/universal-ner

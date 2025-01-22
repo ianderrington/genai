@@ -1,3 +1,8 @@
+---
+title: Additional GenAI Resources
+description: Useful resources for learning about GenAI
+
+---
 
 - [Aman.ai](http://prompt.aman.ai) provides a comprehensive summary important research and libraries
 

@@ -1,3 +1,12 @@
+---
+title: GenAI Chronology
+description: Inside the breakthroughs that shaped modern AI
+bullets:
+  - GPT went from research project to reshaping industries in less than 5 years
+  - Leading AI researchers reveal the behind-the-scenes developments that made it possible
+  - Each major breakthrough rewrites our understanding of what AI can achieve
+---
+
 STUB: 
 This will provide a chronological record of significant advancements of GenAI. 
 

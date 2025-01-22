@@ -1,3 +1,12 @@
+---
+title: AI Architectures
+description: The building blocks that make AI systems think and learn
+bullets:
+  - Foundation models can learn from vast amounts of data without explicit labels
+  - The same architecture can master language, vision, and reasoning tasks
+  - Modern AI combines multiple learning approaches in ways previously thought impossible
+---
+
 # Architectures
 
 Here we will discuss the architectural components needed to build Gen()AI models. While it is often useful or essential to use [pre-trained models](../building_applications/back_end/pre_trained_models.md), it is likely that such pre-trained models can be further refined for specific use-cases.

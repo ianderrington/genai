@@ -1,3 +1,12 @@
+---
+title: Understanding Data in AI
+description: The foundation that powers every AI breakthrough
+bullets:
+  - Modern AI models need 10 times more data tokens than their parameter count
+  - The Chinchilla paper revealed the precise relationship between compute, model size, and data
+  - Data quality and preparation can matter more than model architecture
+---
+
 # Understanding Data in AI
 
 Data is the lifeblood of any AI model. This section explores the fundamental aspects of data throughout its lifecycle, from gathering to training.

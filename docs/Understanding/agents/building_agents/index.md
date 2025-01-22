@@ -1,3 +1,12 @@
+---
+title: Building AI Agents
+description: A comprehensive guide to the architecture, components, and deployment of modern AI agent systems
+bullets:
+  - The agent ecosystem has evolved from basic LLM frameworks to sophisticated architectures with state management and security
+  - Modern agent stacks integrate specialized components for memory, tools, hosting, and observability
+  - Emerging standards and protocols are shaping the future of agent development and deployment
+---
+
 # Building Agents
 
 Building agents shares a degree of overlap with the building of applications, but we write about it here because of its unique importance. The AI agents stack has evolved significantly since 2022-2023, moving beyond simple LLM frameworks to more sophisticated agent architectures.
@@ -349,8 +358,8 @@ These platforms provide specialized storage solutions for AI applications, inclu
          {Tool_name} is a tool that can {General_Purposes}.
          This tool has {Number} multiple built-in functions:
          1. {Function_1} is to {Functionality_of_Function_1} 2. {Function_2} is to ...
-         /* Auto generation of tool description */ {ToolDocumentationof‘AviationWeatherCenter’} Tool usage description:
-         ‘Aviation Weather Center’ is a tool which can provide official aviation weather data...
+         /* Auto generation of tool description */ {ToolDocumentationof'AviationWeatherCenter'} Tool usage description:
+         'Aviation Weather Center' is a tool which can provide official aviation weather data...
          II: Tool Function Guidelines Construction
          /* Task prompt */
          Your task is to create the scenario that will use the tool.
@@ -362,9 +371,9 @@ These platforms provide specialized storage solutions for AI applications, inclu
          {Tool_name} is a tool that can {General_Purposes}. {Function_i} is to {Functionality_of_Function_i} {Parameter List of Function_i}
          One scenario for {Function_i} of {Tool_name} is: {"Scenario": XX, "Parameters":{XX:XX}}
          /* Auto-construction for Tool Function Guidelines */
-         ‘Ebay’ can get products from Ebay in a specific country. ‘Product Details’ in ‘Ebay’ can get the product details for a given product id and a specific country.
-         {Parameter List of ‘Product Details’}
-         One scenario for ‘Product Details’ of ‘Ebay’ is:
+         'Ebay' can get products from Ebay in a specific country. 'Product Details' in 'Ebay' can get the product details for a given product id and a specific country.
+         {Parameter List of 'Product Details'}
+         One scenario for 'Product Details' of 'Ebay' is:
          {"Scenario": "if you want to know the details of the product with product ID 1954 in Germany from Ebay", "Parameters":{"product_id": 1954, "country": "Germany"}}.
     ```
     <img width="418" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/caed1a08-4761-4809-8a05-c2d026e26281">

@@ -1,3 +1,12 @@
+---
+title: Evaluating AI Agents
+description: Comprehensive methods and tools for assessing AI agent capabilities, safety, and performance
+bullets:
+  - Agent evaluation encompasses real-world task completion, tool usage patterns, and system reliability
+  - Industry-standard benchmarks and tools enable systematic testing across diverse environments
+  - Evaluation frameworks support both offline testing and continuous production monitoring
+---
+
 # Evaluating Agents so they can be Optimized
 
 Because LLMs generally are part of broader agent systems, it is important to evaluate them. While [model evaluation](../../architectures/optimizing/evaluating_and_comparing.md) and [prompt](#../prompting/index.md) evaluation is essential to understanding optimizing individual components, it is essential to evaluate the higher-level agents and agent systems. 

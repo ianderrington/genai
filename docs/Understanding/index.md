@@ -1,9 +1,14 @@
 ---
+title: Understanding GenAI
+description: A comprehensive guide to understanding, creating, and using Generative AI
 hide:
-
   - toc
+bullets:
+  - Learn the fundamentals of Generative AI and its key components
+  - Explore practical examples and real-world applications
+  - Understand how to choose between building or buying AI solutions
+  - Ready to start your GenAI journey? Choose your adventure below!
 ---
-
 
 #  Understanding Gen🔮AI! 
 

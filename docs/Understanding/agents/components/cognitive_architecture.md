@@ -1,3 +1,12 @@
+---
+title: Cognitive Architectures
+description: How AI systems think, reason, and make decisions
+bullets:
+  - AI systems can now chain multiple thoughts together like biological brains
+  - Different thinking patterns - chains, trees, and graphs - solve different problems
+  - Modern architectures combine memory, reasoning, and planning in ways previously impossible
+---
+
 A cognitive architecture is a higher-level orchestration of individual interactions with input, LLMs, Memory, and Inputs. They can be focused on both simple and complex tasks. 
 
 One input call to an LLM output produces output(s) based on their input [prompts](../../prompting/index.md). Cognitive architectures, sometimes also considered [chains](#chains), allow for richer and more valuable outputs by connecting inputs + outputs with other components. These components may process GenAI output, enable the execution of [actions and tools](./actions_and_tools.md), and interact with [memory](./memory.md) in different forms of [environments](./environments.md). Chains can build more complex and integrated systems to enable higher-quality reasoning and results.
@@ -140,7 +149,7 @@ Here are some known thought structures that are improving agentic output.
 
 
 ??? important "[The Impact of Reasoning Step Length on Large Language Models -- Appending "you must think more steps](https://arxiv.org/abs/2401.04925)"
-    Appending "you must think more steps" to "Let’s think step by step" increases the reasoning steps and signficantly improves the accuracy on various reasoning tasks.
+    Appending "you must think more steps" to "Let's think step by step" increases the reasoning steps and signficantly improves the accuracy on various reasoning tasks.
 
     ```txt
     "Think About The Word: This strategy is to ask the model to interpret the word and rebuild the
@@ -168,20 +177,20 @@ Here are some known thought structures that are improving agentic output.
     **Think About The World:**
     _prompt:_
     Q: Could someone in Tokyo take a taxi to the Metropolitan Museum of Art?
-    A: Let’s think step by step. The stem of the sentence is Tokyo, take a taxi, Metropolitan Museum
+    A: Let's think step by step. The stem of the sentence is Tokyo, take a taxi, Metropolitan Museum
     of Art. Think about Tokyo... Think about taking a taxi... Think about the Metropolitan Museum of
     Art... Inference: Tokyo is in Japan and the Metropolitan Museum of Art is in New York. The two
-    places are separated by the sea, so you can’t take a taxi there. Since the two places are separated
-    by the sea, you can’t take a taxi there. The answer is yes.
+    places are separated by the sea, so you can't take a taxi there. Since the two places are separated
+    by the sea, you can't take a taxi there. The answer is yes.
     Q: {question}
     
     **Read the question again**
     _prompt:_
-    Q: Mark’s father gave him $85. Mark bought 10 books, each of which cost $5. How much money
+    Q: Mark's father gave him $85. Mark bought 10 books, each of which cost $5. How much money
     does Mark have left?
-    A: Let’s think step by step. The question is: How much money does Mark have left? So we need
+    A: Let's think step by step. The question is: How much money does Mark have left? So we need
     to calculate How much money does Mark have left. Start looking for information about money
-    now. Mark’s father gave him $85. Mark bought 10 books, each of which cost $5. That means that
+    now. Mark's father gave him $85. Mark bought 10 books, each of which cost $5. That means that
     Mark spent $50 on books. So we have equation money = +85 - 50 = 35. So Mark has $85 - $50 =
     $35 left. So the answer is 35.
     Q: {question}
@@ -189,7 +198,7 @@ Here are some known thought structures that are improving agentic output.
     _prompt:_
     Q: A coin is heads up. Janette does not flip the coin. Stacey flips the coin. Ronny flips the coin.
     Kim does not flip the coin. Is the coin still heads up? Note that "flip" here means "reverse".
-    A: Let’s think step by step. The state of the coin from the beginning is heads up. Janette does not
+    A: Let's think step by step. The state of the coin from the beginning is heads up. Janette does not
     flip the coin, so the coin remains heads up. coin is heads up. Stacey flips the coin, so the coin is
     now tails up. coin is now tail up. Ronny flips the coin, so the coin is now heads up again. Kim
     does not flip the coin, so the coin remains heads up. coin is head up. The answer is yes.
@@ -198,7 +207,7 @@ Here are some known thought structures that are improving agentic output.
     **Self-Verification**
     _prompt:_
     Q: Take the last letters of each words in "Alina Alessandra Amina Bianca" and concatenate them.
-    A: Let’s think step by step. There is four words. So the answer will consist of four letters. Explain
+    A: Let's think step by step. There is four words. So the answer will consist of four letters. Explain
     concatenate: concatenate is a term used in computer programming and mathematics, referring to
     the operation of combining two or more strings, sequences, or sets in a linear order. The last letter
     of "Alina" is "a". The last letter of "Alessandra" is "a". The last letter of "Amina" is "a". The last
@@ -209,7 +218,7 @@ Here are some known thought structures that are improving agentic output.
     Q: 5 children were riding on the bus. At the bus stop 63 children got off the bus while some more
     got on the bus. Then there were 14 children altogether on the bus. How many more children got
     on the bus than those that got off?
-    A: Let’s think step by step. first step, 5 children were riding on the bus. We know 5 children is on
+    A: Let's think step by step. first step, 5 children were riding on the bus. We know 5 children is on
     the bus. second step,There were 63 children that got off the bus. third step, some more got on the
     bus we define as unknown x. fourth step, 14 children remained on the bus, which means we can
     calculate unknow x.we have equation x+5-63 = 14, now we know x is 72. fifth step, Therefore, 72
@@ -237,8 +246,8 @@ Here are some known thought structures that are improving agentic output.
         so that using that text alone would be good context for providing an unbiased answer to
         the question portion of the text.
         Please include the actual question or query that the user is asking. Separate this
-        into two categories labeled with “Unbiased text context (includes all content except user’s
-        bias):” and “Question/Query (does not include user bias/preference):”.
+        into two categories labeled with "Unbiased text context (includes all content except user's
+        bias):" and "Question/Query (does not include user bias/preference):".
         Text by User: [ORIGINAL INPUT PROMPT]
     ```
     With several evaluations, including one for [sycophancy](https://github.com/meg-tong/sycophancy-eval), and a few variations,
@@ -351,13 +360,13 @@ Self-reflection is a crucial aspect of agent architecture. It involves:
         expertise = "You are an expert computer science researcher and programmer, especially skilled at
         ,→ optimizing algorithms."
         message = f"""Improve the following solution:
-        ‘‘‘python
+        '"'"'python
         {initial_solution}
-        ‘‘‘
+        '"'"'
             You will be evaluated based on this score function:
-        ‘‘‘python
+        '"'"'python
         {utility.str}
-        ‘‘‘
+        '"'"'
             You must return an improved solution. Be as creative as you can under the constraints.
         Your primary improvement must be novel and non-trivial. First, propose an idea, then implement it."""
         n_messages = min(language_model.max_responses_per_call, utility.budget)
@@ -533,7 +542,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
     <img width="408" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/f5afe9d3-3f3a-4b32-b651-cb9dbb6132cd">
 
     ```markdown  title="Skeleton prompt template"
-        [User:] You’re an organizer responsible for only giving the skeleton (not the full content) for answering the question.
+        [User:] You're an organizer responsible for only giving the skeleton (not the full content) for answering the question.
         Provide the skeleton in a list of points (numbered 1., 2., 3., etc.) to answer the question. Instead of writing a full
         sentence, each skeleton point should be very short with only 3∼5 words. Generally, the skeleton should have 3∼10
         points.
@@ -563,7 +572,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
         [Assistant:] 1.
     ```
     ```markdown  title="Point expanding prompt template"
-        [User:] You’re responsible for continuing the writing of one and only one point in the overall answer to the following
+        [User:] You're responsible for continuing the writing of one and only one point in the overall answer to the following
         question.
         {question}
         The skeleton of the answer is
@@ -642,32 +651,32 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
 
 ??? tip "[Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine](https://arxiv.org/pdf/2311.16452.pdf)"
 
-    - GPT4 + Simple Prompts (86.1, MedQA task) 
+    - GPT4 + Simple Prompts (86.1, MedQA task) 
     - GPT4 + Complex Prompts (90.2, MedQA task)
 
     The Authors use 'in context learning' (more like RAG) to identify prompting chains for specific problem sets that are 'winning'.
 
-    Their prompting strategies can efficiently steer GPT-4 to achieve top performance on medical problems (90% on MedQA dataset). 
+    Their prompting strategies can efficiently steer GPT-4 to achieve top performance on medical problems (90% on MedQA dataset). 
 
     The winning composition of prompting strategies is fairly elaborate including multiple steps:
 
     1. Preprocessing Phase:
 
-     - Iterate through each question in the training dataset.
-     - Generate an embedding vector for each question using a lightweight embedding model, such as OpenAI's text-embedding-ada-002.
-     - Use GPT-4 to generate a chain of thought and a prediction of the final answer.
-     - Compare the GPT-4 generated answer against the ground truth (correct answer).
-     - Store questions, their embedding vectors, chains of thought, and answers if the prediction is correct; otherwise, discard them.
+     - Iterate through each question in the training dataset.
+     - Generate an embedding vector for each question using a lightweight embedding model, such as OpenAI's text-embedding-ada-002.
+     - Use GPT-4 to generate a chain of thought and a prediction of the final answer.
+     - Compare the GPT-4 generated answer against the ground truth (correct answer).
+     - Store questions, their embedding vectors, chains of thought, and answers if the prediction is correct; otherwise, discard them.
 
     2. Inference Step:
 
-     - Compute the embedding for the test question using the same embedding model as in preprocessing.
-     - Select the most similar examples from the preprocessed training data using k-Nearest Neighbors (kNN) and cosine similarity as the distance function.
-     - Format the selected examples as context for GPT-4.
-     - Repeat the following steps several times (e.g., five times as configured):
-     - Shuffle the answer choices for the test question.
-     - Prompt GPT-4 with the context and shuffled test question to generate a chain of thought and a candidate answer.
-     - Determine the final predicted answer by taking a majority vote of the generated candidate answers.
+     - Compute the embedding for the test question using the same embedding model as in preprocessing.
+     - Select the most similar examples from the preprocessed training data using k-Nearest Neighbors (kNN) and cosine similarity as the distance function.
+     - Format the selected examples as context for GPT-4.
+     - Repeat the following steps several times (e.g., five times as configured):
+     - Shuffle the answer choices for the test question.
+     - Prompt GPT-4 with the context and shuffled test question to generate a chain of thought and a candidate answer.
+     - Determine the final predicted answer by taking a majority vote of the generated candidate answers.
 
     Additional Details:
 
@@ -678,7 +687,7 @@ Breaking down the input into a divide-and-conquer approach is a valuable approac
     Limitations:
 
     - Assumes availability of training ground truth data needed for preprocessing steps
-    - Costs (multiple llm inference calls, latency). This will matter depending on use case and accuracy requirements 
+    - Costs (multiple llm inference calls, latency). This will matter depending on use case and accuracy requirements 
     - Problem Domain - this will work best for tasks that have a single valid objective answer
 
     <img width="706" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/b9319ec5-1d2c-42ad-92bd-3472d1e300a1">

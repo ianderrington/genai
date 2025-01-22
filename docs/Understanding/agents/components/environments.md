@@ -1,6 +1,15 @@
-Environments consist of the information that agents have access too as well as 'what can be done' to influence the environment. An environment sends information that an agent can receive.
+---
+title: AI Environments
+description: The operational contexts and interaction spaces for AI agent systems
+bullets:
+  - Environments define the boundaries and capabilities of AI agent operations
+  - Sandboxed environments provide essential safety and control mechanisms
+  - Specialized environments enable diverse applications from chat to virtual worlds
+---
 
-Especially for systems without people-in-the-loop, there is potential for negative things to be done. This could be incorrectly writing files, sending emails/tweets that are inappropriate or spammy, and otherwise corrupt the positive value that an AI-agent may provide. Consequently it is important to have a [sandbox](#sandbox)
+Environments consist of the information that agents have access to as well as 'what can be done' to influence the environment. An environment sends information that an agent can receive.
+
+Especially for systems without people-in-the-loop, there is potential for negative things to be done. This could be incorrectly writing files, sending emails/tweets that are inappropriate or spammy, and otherwise corrupting the positive value that an AI agent may provide. Consequently, it is important to have a [sandbox](#sandbox)
 
 ### Sandbox
 

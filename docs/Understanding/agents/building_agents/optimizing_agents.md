@@ -1,3 +1,12 @@
+---
+title: Optimizing AI Agents
+description: Systematic strategies for enhancing agent performance, reliability, and efficiency
+bullets:
+  - Optimization spans planning, tool usage, error handling, and resource management
+  - Data-driven improvements through continuous monitoring and systematic experimentation
+  - Performance tuning balances model capabilities, resource usage, and operational costs
+---
+
 # Agent Optimization Methods
 
 

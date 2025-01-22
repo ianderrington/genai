@@ -1,3 +1,12 @@
+---
+title: GenAI Considerations
+description: Understanding the technical and ethical challenges in Generative AI
+bullets:
+  - AI models can sometimes "hallucinate" facts that seem real but never existed
+  - Goldman Sachs predicts AI could affect 300M jobs while boosting global GDP by 7%
+  - The race between AI capabilities and AI safety is reshaping how we build systems
+---
+
 GenAI, while promising, presents a variety of challenges at multiple levels. These challenges can also be viewed as _risks_, emphasizing their significance. Although some solutions to these challenges are referenced in this document, it's important to note that these challenges are not fully 'solved'. 
 
 The challenges associated with GenAI can be broadly categorized into [technical challenges](#technical-challenges) and [ethical challenges](#ethical-challenges). Technical challenges pertain to the practical aspects of implementing and using GenAI, while ethical challenges involve the potential risks and moral implications of using GenAI. 
@@ -48,7 +57,7 @@ Upskilling will require training employees to use GenAI to enable their work, or
 
 Related to job-displacement, the content created with GenAI remains in a precarious state with regard's to copyright and IP. While there are indications that content generated purely from AI may not be copyrighted (in the US), it is generally accepted AI can provide the basis for content that may be copyrighted. The evolution of this may take years of debate and resolution of laws to settle before confusion is fully settled.
 
-??? note "[Talkin’ ‘Bout AI Generation](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4523551) A thorough discussion on copyright issues"
+??? note "[Talkin' 'Bout AI Generation](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4523551) A thorough discussion on copyright issues"
     <img width="529" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/75a1b0e9-7d4b-4db2-a0ee-f18890cce403">
 
 
