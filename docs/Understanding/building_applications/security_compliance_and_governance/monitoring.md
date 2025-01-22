@@ -69,9 +69,6 @@ graph LR
     - Performance profiling
 
 
-
-# Monitoring and Observability
-
 ## Monitoring Architecture
 
 ```mermaid

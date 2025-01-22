@@ -4,7 +4,7 @@ hide:
 title: Building AI Applications
 description: From concept to deployment - the complete AI application stack
 bullets:
-  - Modern AI apps combine over 15 specialized components across 4 critical layers
+  - Modern AI apps combine over multiple specialized components across 4 critical layers
   - Each layer from data to management requires specific tools and considerations
   - The right architecture choices can make the difference between success and failure
 ---

@@ -11,7 +11,7 @@ bullet_points:
 
 This directory provides a curated collection of agent implementations and research projects. The examples demonstrate various approaches to agent design, from single-purpose tools to complex cognitive architectures.
 
-## Categories Overview
+## Categories 
 
 - [Single-Purpose Agents](#single-purpose-agents): Specialized agents focused on specific tasks
 - [General-Purpose Agents](#general-purpose-agents): Versatile agents capable of handling diverse tasks
@@ -38,14 +38,6 @@ Single-purpose agents are designed to excel at specific tasks, demonstrating foc
 ## General-Purpose Agents
 
 General-purpose agents demonstrate versatility across different tasks and domains, often featuring sophisticated cognitive architectures.
-
-??? abstract "[TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany)" theagentcompany
-    The TheAgentCompany is a multi-person environment 
-    <img width="558" alt="image" src="https://github.com/user-attachments/assets/5a33fda7-ca3a-45de-9f5e-4dfd4d675d72" />
-    
-    Website https://the-agent-company.com
-    Code https://github.com/TheAgentCompany/TheAgentCompany
-    Evaluations https://github.com/TheAgentCompany/experiments
 
 ??? abstract "[OS-Copilot/FRIDAY](https://github.com/OS-Copilot/FRIDAY)"
     A generalist computer agent framework:
@@ -133,7 +125,7 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 
 ## Examples
 
-
+### Examples
 
 ??? abstract "[Critic: Large Language Models can Self-correct with TOol-INteractive Critiquing](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)"
     [Paper](https://arxiv.org/pdf/2305.11738.pdf)

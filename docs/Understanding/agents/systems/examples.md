@@ -12,6 +12,114 @@ bullets:
 ## Collaborative Development Systems
 Examples of agent systems working together to develop software and solutions.
 
+??? abstract "[TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany)" theagentcompany
+    TheAgentCompany provides a multi-agent environment designed for collaborative problem-solving and development, implementing a comprehensive benchmark for evaluating AI agents in realistic workplace scenarios. Built using [OpenHands](https://github.com/All-Hands-AI/OpenHands) agent framework.
+    <img width="558" alt="image" src="https://github.com/user-attachments/assets/5a33fda7-ca3a-45de-9f5e-4dfd4d675d72" />
+    ### Environment Architecture
+    1. **Local Workspace**
+        - [Docker](https://www.docker.com/)-based sandboxed environment for safe execution
+        - Pre-installed software tools and development environment
+        - Isolated from evaluation machine for security
+        - Browser ([Playwright](https://playwright.dev/)), code editor, and Linux terminal access
+
+    2. **Intranet Services**
+        - **[GitLab](https://about.gitlab.com/)**: Code repositories and tech-oriented wiki pages
+        - **[OwnCloud](https://owncloud.com/)**: Document storage and collaborative editing
+        - **[Plane](https://github.com/makeplane/plane)**: Issue tracking, sprint cycles, product roadmaps
+        - **[RocketChat](https://www.rocket.chat/)**: Internal real-time messaging and collaboration
+        - All services are reproducible and reset-able with mock data
+
+    3. **Simulated Colleagues**
+        - Built on [Sotopia](https://github.com/sotopia-lab/sotopia) platform for human-like interactions
+        - Detailed profiles including name, role, responsibilities, project affiliations
+        - Backed by [Claude-3.5-Sonnet](https://www.anthropic.com/news/claude-3-family) for consistent behavior
+        - Support for direct messages and channel communications
+
+    ### Task Implementation
+    1. **Task Components**
+        - Detailed task intent in natural language
+        - Multiple checkpoints representing milestones
+        - Programmatic evaluators for verification
+        - Environment initialization and cleanup code
+
+    2. **Checkpoint System**
+        - **Action Completion**: Tool usage, navigation, data collection
+        - **Data Accuracy**: Output correctness and completeness
+        - **Collaboration**: Quality of colleague interactions
+        - Point-based scoring for partial completion
+
+    3. **Evaluation Methods**
+        - **Deterministic Evaluators**
+            - Python functions for objective checks
+            - Environment state verification
+            - File system change monitoring
+            - Browser history tracking
+            - Action sequence validation
+        
+        - **LLM-based Evaluators**
+            - Complex deliverable assessment
+            - Predefined evaluation rubrics
+            - Reference output comparison
+            - Subjective quality measurement
+
+    ### Scoring Implementation
+    1. **Full Completion Score**
+        ```
+        Sfull = 1 if all checkpoints passed else 0
+        ```
+
+    2. **Partial Completion Score**
+        ```
+        Spartial = 0.5 * (points_achieved/total_points) + 0.5 * Sfull
+        ```
+
+    3. **Efficiency Metrics**
+        - Number of LLM calls per task
+        - Token usage and associated costs
+        - Step count tracking
+        - Execution time monitoring
+
+        
+    ### Common Failure Categories
+    1. **Common Sense Deficits**
+        - Missing implicit assumptions
+        - File type inference failures
+        - Context understanding issues
+        - Basic workflow comprehension gaps
+
+    2. **Social Interaction Issues**
+        - Incomplete communication flows
+        - Missed social cues
+        - Follow-up failures
+        - Context switching problems
+
+    3. **Technical Challenges**
+        - Complex UI navigation
+        - Popup handling difficulties
+        - Multi-step process management
+        - Tool integration issues
+
+    4. **Task Execution Problems**
+        - Invalid shortcut creation
+        - Critical step omission
+        - Incorrect assumption chains
+        - Resource management issues
+
+    ### Performance Metrics
+    - Success rate across different task types
+    - Platform-specific performance analysis
+    - Cost-efficiency measurements
+    - Step count optimization
+    - Token usage efficiency
+
+    ### Resources
+    - [Website](https://the-agent-company.com)
+    - [GitHub Repository](https://github.com/TheAgentCompany/TheAgentCompany)
+    - [Evaluation Results](https://github.com/TheAgentCompany/experiments)
+
+   
+
+
 ??? abstract "ChatDev - Collaborative Software Development"
     [ChatDev](https://github.com/OpenBMB/ChatDev) is a communicative agent approach for developing solutions using ML models. It works with Camel to create agentic systems and provides a framework for creating systems of agents to produce software-enabled products.
 
