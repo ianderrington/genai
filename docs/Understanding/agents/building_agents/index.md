@@ -306,7 +306,7 @@ These platforms provide specialized storage solutions for AI applications, inclu
 | [Replit](https://replit.com/) | Cloud development environment and AI coding tools |
 | [Perplexity](https://www.perplexity.ai/) | AI-powered search and discovery |
 | [Harvey](https://harvey.ai/) | Legal AI solutions |
-| [MultiOn](https://multion.ai/) | Multi-agent systems and orchestration |
+| [Please AI](https://please.ai/) | Multi-agent systems and orchestration |
 | [Cognition](https://www.cognition-labs.com/) | Cognitive computing and AI reasoning |
 | [Factory](https://www.factory.ai/) | AI automation and manufacturing solutions |
 | [All Hands](https://www.allhandsai.com/) | Collaborative AI systems |

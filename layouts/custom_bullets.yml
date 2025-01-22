@@ -1,0 +1,179 @@
+# -----------------------------------------------------------------------------
+# Configuration
+# -----------------------------------------------------------------------------
+
+# Definitions
+definitions:
+  # Text cleaning function (no macro needed)
+  - &clean_text >-
+    {%- if text is string -%}
+      {{- text | replace("🔮", "") | replace("⚡", "") | replace("🤖", "") | replace("✨", "") | trim | safe -}}
+    {%- else -%}
+      {{- text | default("") -}}
+    {%- endif -%}
+
+  # Background color
+  - &background_color "#0A1929"
+
+  # Text color
+  - &color "#ffffff"
+
+  # Font family
+  - &font_family >-
+    {%- if layout.font_family -%}
+      {{ layout.font_family }}
+    {%- else -%}
+      Roboto
+    {%- endif -%}
+
+  # Site name with cleaned emoji
+  - &site_name >-
+    {{- config.site_name | replace("🔮", "") | replace("⚡", "") | replace("🤖", "") | replace("✨", "") | trim | safe -}}
+
+  # Page title with cleaned emoji
+  - &page_title >-
+    {%- if layout.title -%}
+      {{- layout.title | replace("🔮", "") | replace("⚡", "") | replace("🤖", "") | replace("✨", "") | trim | safe -}}
+    {%- else -%}
+      {{- page.meta.get("title", page.title) | replace("🔮", "") | replace("⚡", "") | replace("🤖", "") | replace("✨", "") | trim | safe -}}
+    {%- endif -%}
+
+  # Page description
+  - &page_description >-
+    {{- page.meta.get("description", config.site_description) | default("") | replace("🔮", "") | replace("⚡", "") | replace("🤖", "") | replace("✨", "") | trim | safe -}}
+
+  # Bullet points with cleaned emoji
+  - &bullet_points >-
+    {%- if page.meta.bullets -%}
+      {% for bullet in page.meta.bullets %}
+      • {{ bullet | replace("🔮", "") | replace("⚡", "") | replace("🤖", "") | replace("✨", "") | trim | safe }}
+      {% endfor %}
+    {%- endif -%}
+
+  # Logo
+  - &logo >-
+    {%- if layout.logo -%}
+      {{ layout.logo }}
+    {%- endif -%}
+
+# Meta tags
+tags:
+  og:type: website
+  og:title: *page_title
+  og:description: *page_description
+  og:image: "{{ image.url }}"
+  og:image:type: "{{ image.type }}"
+  og:image:width: "{{ image.width }}"
+  og:image:height: "{{ image.height }}"
+  og:url: "{{ page.canonical_url }}"
+
+  twitter:card: summary_large_image
+  twitter:title: *page_title
+  twitter:description: *page_description
+  twitter:image: "{{ image.url }}"
+
+# -----------------------------------------------------------------------------
+# Layout
+# -----------------------------------------------------------------------------
+
+size: { width: 1200, height: 630 }
+layers:
+  # Background base
+  - background:
+      color: *background_color
+
+  # Large diamond in background
+  - size: { width: 680, height: 680 }
+    offset: { x: 800, y: -90 }
+    icon:
+      value: material/rhombus
+      color: "#1A2939"
+
+  # Medium diamond
+  - size: { width: 530, height: 530 }
+    offset: { x: 820, y: -20 }
+    icon:
+      value: material/rhombus-outline
+      color: "#2A3949"
+
+  # Small diamond
+  - size: { width: 250, height: 250 }
+    offset: { x: 950, y: 530 }
+    icon:
+      value: material/rhombus
+      color: "#2A394933"
+
+  # Extra small diamond for detail
+  - size: { width: 150, height: 150 }
+    offset: { x: 850, y: 480 }
+    icon:
+      value: material/rhombus-outline
+      color: "#2A394922"
+
+  # Right side logo
+  - size: { width: 340, height: 340 }
+    offset: { x: 915, y: 71 }
+    background:
+      image: *logo
+
+  # Site name
+  - size: { width: 300, height: 80 }
+    offset: { x: 910, y: 500 }
+    typography:
+      content: *site_name
+      align: center
+      color: *color
+      overflow: shrink
+      line:
+        amount: 2
+        height: 1.25
+      font:
+        family: *font_family
+        style: Bold
+        size: 64
+
+  # Page title (left side)
+  - size: { width: 700, height: 200 }
+    offset: { x: 64, y: 120 }
+    typography:
+      content: *page_title
+      align: start
+      color: *color
+      overflow: shrink
+      line:
+        amount: 3
+        height: 1.25
+      font:
+        family: *font_family
+        style: Bold
+        size: 52
+
+  # Page description
+  - size: { width: 700, height: 120 }
+    offset: { x: 64, y: 320 }
+    typography:
+      content: *page_description
+      align: start
+      color: "#E0E7FF"
+      line:
+        amount: 3
+        height: 1.5
+      font:
+        family: *font_family
+        style: Regular
+        size: 24
+
+  # Bullet points
+  - size: { width: 700, height: 160 }
+    offset: { x: 64, y: 440 }
+    typography:
+      content: *bullet_points
+      align: start
+      color: "#E0E7FF"
+      line:
+        amount: 4
+        height: 1.5
+      font:
+        family: *font_family
+        style: Regular
+        size: 20 

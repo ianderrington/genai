@@ -1,3 +1,10 @@
+---
+title: Brainstorming
+description: Brainstorming your way to a better future.
+bullets:
+  - This is important
+---
+
 ## Ideas
 
 !!! idea "Ideas are a dime a dozen."

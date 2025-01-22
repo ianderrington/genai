@@ -95,9 +95,8 @@ theme:
     code: Roboto Mono
   favicon: assets/managen_logo.png
   icon:
-    logo: genai_logo_edited
+    logo: managen_logo
 google_tag: !ENV GOOGLE_ANALYTICS_KEY
-# Plugins
 
 # Plugins
 
@@ -136,8 +135,13 @@ plugins:
   - table-reader:
       data_path: "docs"
   - macros
-  # - social:
-  #     cards_layout: default
+  - social:
+      cards_layout: custom_bullets.yml
+      # cards_layout: default/variant
+      cards_layout_options:
+        background_color: "#0A1929"
+        font_family: Roboto
+        logo: layouts/managen_logo_inverted.svg
   - glightbox
   - slides
 

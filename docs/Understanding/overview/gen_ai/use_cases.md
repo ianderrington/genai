@@ -28,6 +28,7 @@ Because at its core, GenAI works on Information, there are several fundamental w
 At its base, Generative AI is used to create information, such as new text or images. This creation can take several forms:
 
 #### Expansion
+
 - Generating larger outputs from small inputs
 - Writing detailed documentation or articles
 - Brainstorming and ideation
@@ -35,6 +36,7 @@ At its base, Generative AI is used to create information, such as new text or im
 - Creating training data for other AI systems
 
 #### Reasoning
+
 - Evaluating trade-offs between different approaches
 - Analyzing complex scenarios and providing recommendations
 - Conducting risk assessments
@@ -44,6 +46,7 @@ At its base, Generative AI is used to create information, such as new text or im
 ### Converting Information
 
 Generative AI can generate content in one domain with input from another. This includes:
+
 - Translating between languages (natural or programming)
 - Converting data formats (e.g., JSON to CSV)
 - Transforming natural language into structured queries
@@ -53,6 +56,7 @@ Generative AI can generate content in one domain with input from another. This i
 ### Compactifying Information
 
 Generative AI excels at information compression and summarization:
+
 - Creating concise summaries of lengthy documents
 - Extracting key points from meetings or discussions
 - Distilling research papers into core findings
@@ -68,6 +72,7 @@ Generative AI excels at information compression and summarization:
 ### Finding Information 
 
 Generative AI can understand and locate specific information:
+
 - Searching through documents for precise data points
 - Querying knowledge bases or databases
 - Finding relevant information in large datasets
@@ -77,6 +82,7 @@ Generative AI can understand and locate specific information:
 ### Taking Action
 
 Generative AI can trigger and coordinate actions:
+
 - Generating executable commands
 - Orchestrating API calls
 - Managing workflow automation
@@ -86,6 +92,7 @@ Generative AI can trigger and coordinate actions:
 ### Classifying and Predicting Information
 
 While traditionally the domain of AI/ML, Generative AI can also perform:
+
 - Sentiment analysis and classification
 - Pattern recognition and prediction
 - Trend analysis and forecasting
@@ -93,6 +100,7 @@ While traditionally the domain of AI/ML, Generative AI can also perform:
 - Multi-label classification tasks
 
 These activities can be combined to create more complex workflows, such as:
+
 - Finding relevant information, reasoning about it, and taking appropriate action
 - Converting information, compactifying it, and presenting insights
 - Creating new information based on patterns found in existing data

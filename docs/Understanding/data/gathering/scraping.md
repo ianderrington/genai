@@ -41,24 +41,19 @@ Data scraping is the process of automatically extracting information from variou
     - Supporting multiple languages through OCR
     - Handling complex layouts and scientific literature
 
-## Best Practices
+## Scraping Practices
 
 1. **Respect Rate Limits**
-   - Implement delays between requests
-   - Follow robots.txt guidelines
-   - Use appropriate request headers
+    - Implement delays between requests
+    - Follow robots.txt guidelines
+    - Use appropriate request headers
 
 2. **Data Validation**
-   - Verify extracted data integrity
-   - Handle missing or malformed data
-   - Implement error logging
+    - Verify extracted data integrity
+    - Handle missing or malformed data
+    - Implement error logging
 
-3. **Legal Considerations**
-   - Review terms of service
-   - Respect copyright and licensing
-   - Consider data privacy regulations
-
-4. **Performance Optimization**
-   - Use async operations when possible
-   - Implement proper caching
-   - Consider distributed scraping for large datasets
+3. **Performance Optimization**
+    - Use async operations when possible
+    - Implement proper caching
+    - Consider distributed scraping for large datasets
