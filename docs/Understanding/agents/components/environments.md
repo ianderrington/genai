@@ -1,6 +1,6 @@
 ---
-title: AI Environments
-description: The operational contexts and interaction spaces for AI agent systems
+title: Environments
+description: The operational contexts and interaction spaces for AI agents and systems
 bullets:
   - Environments define the boundaries and capabilities of AI agent operations
   - Sandboxed environments provide essential safety and control mechanisms

@@ -177,7 +177,8 @@ Current AI Capabilities:
 - [Aide.dev](https://aide.dev/)
 - [V0.dev](https://v0.dev/)
 - [Bolt.new](https://bolt.new/)
-- [Replit.ai](https://replit.ai/)
+- [Replit](https://replit.com/)
+- [Dosu](https://dosu.dev/)
 ...
 
 ### Open Source Examples

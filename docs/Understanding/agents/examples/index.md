@@ -71,7 +71,7 @@ Research projects explore novel approaches to agent design and implementation, o
     - Features structured critique methodology
     - GitHub: [microsoft/ProphetNet/CRITIC](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)
 
-??? note "[Reasoning on Graphs](https://browse.arxiv.org/pdf/2310.01061.pdf)"
+??? note "[Reasoning on Graphs](https://arxiv.org/abs/2310.01061)"
     Framework for interpretable LLM reasoning:
     - Uses knowledge graphs for reasoning
     - Implements traceable decision paths
@@ -138,7 +138,7 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 
     
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/l3vels/ L3AGI) [L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.](https://github.com/l3vels/ L3AGI)" l3agi
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/l3vels/ L3AGI) [L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.](https://github.com/l3vels/)" l3agi
     
 
 
@@ -187,7 +187,6 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 
 
 !!! abstract "[Sweep Dev (product)](https://github.com/sweepai/sweep) provides a service for improving code-bases."
-    [Example Agent](https://github.com/sweepai/sweep/blob/main/sdk/src/agent.py)
     [Website](https://sweep.dev)
     Cognitive Architecture:  [from their blog](https://docs.sweep.dev/blogs/sweeps-core-algo?ref=blog.langchain.dev).
     ![image](https://docs.sweep.dev/_next/static/media/flowchart.15fed92e.svg)

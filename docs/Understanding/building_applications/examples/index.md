@@ -21,13 +21,6 @@ This section provides practical examples and frameworks for building AI applicat
     Process overview:
     ![DevOpsGPT Process](https://github.com/ianderrington/genai/assets/76016868/5e60c94c-7c03-4667-ae5f-3a9282cf30c4)
 
-??? abstract "[Sweep](https://github.com/sweepai/sweep)"
-    Code improvement and analysis service:
-    - Provides automated code enhancement
-    - Features cognitive architecture for code understanding
-    - Architecture: [Core Algorithm](https://docs.sweep.dev/blogs/sweeps-core-algo)
-    ![Sweep Architecture](https://docs.sweep.dev/_next/static/media/flowchart.15fed92e.svg)
-
 ??? abstract "[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)"
     Code generation and project development framework:
     - Available in two implementations:

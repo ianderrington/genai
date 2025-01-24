@@ -46,8 +46,7 @@ y by an interpreter, though it is not guaranteed that the queries will be accura
 
 !!! references
     For more information on memory implementations and caching, refer to the following resources:
-    - [Langchain `memory`](https://python.langchain.com/docs/modules/memory/)
-    - [Langchain `llm_caching`](https://python.langchain.com/docs/modules/model_io/architectures/llms/integrations/llm_caching)
+    - [Langchain `memory`](https://python.langchain.com/docs/how_to/chatbots_memory/)
     
 
 ### Vector databases

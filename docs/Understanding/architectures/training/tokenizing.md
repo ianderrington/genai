@@ -66,7 +66,7 @@ There are special tokens that are used by high-level interpreters on what next t
 
 ### Multimodal Tokenization
 
-Multimodal tokenization is an area of tokenization that focuses on incorporating multiple data forms or modes. This facet of tokenization has seen remarkable strides. [Bytes are all you need](https://arxiv.org/pdf/2306.00238.pdf)—a study utilizing transformer technology to input file bytes directly—demonstrates that multimodal tokenization can assist in improving the AI's performance accuracy. The researchers in the study developed ByteFormer, a model based on their study’s findings that can be accessed [here](https://github.com/apple/ml-cvnets/examples/byteformer).
+Multimodal tokenization is an area of tokenization that focuses on incorporating multiple data forms or modes. This facet of tokenization has seen remarkable strides. [Bytes are all you need](https://arxiv.org/pdf/2306.00238.pdf)—a study utilizing transformer technology to input file bytes directly—demonstrates that multimodal tokenization can assist in improving the AI's performance accuracy. The researchers in the study developed ByteFormer, a model based on their study’s findings that can be accessed [here](https://github.com/bytedance/ByteTransformer)
 
 ### Tokenizing might not be necessary
 
@@ -93,7 +93,7 @@ It is regarded that tokenizing is a bit arbitrary and has disadvantages. There a
 
 - [Neural Machine Translation of Rare Words with Subword Units](https://arxiv.org/pdf/1508.07909.pdf)
 - [Bytes are all you need](https://arxiv.org/pdf/2306.00238.pdf)
-- [ByteFormer Github](https://github.com/apple/ml-cvnets/examples/byteformer)
+- [ByteFormer Github](https://github.com/bytedance/ByteTransformer)
 - [What are Embeddings](http://vickiboykis.com/what_are_embeddings/)[Github](https://github.com/veekaybee/what_are_embeddings/blob/main/README.md)
 - [Tokenizers](https://huggingface.co/docs/transformers/en/tokenizer_summary)
 

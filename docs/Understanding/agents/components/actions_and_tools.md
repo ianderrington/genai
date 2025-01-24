@@ -91,7 +91,7 @@ Interpreting Such efforts can be used to reduce input complexity, token-count, t
 
 
 ### Guardrails
-!!! abstract "[Guardrails](https://shreyar.github.io/guardrails/) To help format output and prevent improper prompts."
+
 
 #### Libraries
 

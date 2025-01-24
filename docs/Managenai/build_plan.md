@@ -131,4 +131,4 @@ We can make this easier to read
 
 
 ### Business  
-- [ Check out AiE.foundation](https://www.aie.foundation/#projects) for help as ManaGen grow
+

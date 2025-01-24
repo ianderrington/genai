@@ -88,10 +88,9 @@ with some nice examples of successful [Vertical AI Agent Solutions](#vertical-ai
 
 | Platform | Description |
 |----------|-------------|
-| [Letta](https://letta.ai/) | Agent deployment and hosting platform |
+| [Letta](https://letta.com/) | Agent deployment and hosting platform |
 | [LangGraph](https://github.com/langchain-ai/langgraph) | Graph-based orchestration for language model agents |
 | [Assistants API](https://platform.openai.com/docs/assistants/overview) | OpenAI's API for deploying and managing AI assistants |
-| [Agents API](https://agentsapi.dev/) | API platform for deploying and managing autonomous agents |
 | [Amazon Bedrock Agents](https://aws.amazon.com/bedrock/agents/) | AWS-based agent hosting and management service |
 | [LiveKit Agents](https://livekit.io/) | Real-time agent deployment and communication platform |
 
@@ -130,7 +129,7 @@ These frameworks provide different approaches and tools for building AI agents, 
 
 | Framework | Description |
 |-----------|-------------|
-| [Letta](https://letta.ai/) | Framework for building and deploying AI agents with built-in orchestration |
+| [Letta](https://letta.com/) | Framework for building and deploying AI agents with built-in orchestration |
 | [Open Hands](https://github.com/All-Hands-AI/OpenHands) | Collaborative AI systems |
 | [LangGraph](https://github.com/langchain-ai/langgraph) | LangChain's framework for building structured agents using computational graphs |
 | [AutoGen](https://microsoft.github.io/autogen/) | Microsoft's framework for building multi-agent systems with automated agent orchestration |
@@ -158,7 +157,7 @@ These platforms provide specialized solutions for managing agent memory, enablin
 |----------|-------------|
 | [Letta](https://github.com/letta-ai/letta) | System for extending LLM context windows with infinite memory via memory management |
 | [Zep](https://www.getzep.com/) | Long-term memory store for LLM applications and agents |
-| [LangMem](https://python.langchain.com/docs/modules/memory/) | LangChain's memory management system for conversational agents |
+| [LangMem](https://python.langchain.com/docs/how_to/chatbots_memory/) | LangChain's memory management system for conversational agents |
 | [Mem0](https://github.com/mem0ai/mem0) | Memory management and persistence solution for AI assistants and agents |
 
 
@@ -201,7 +200,7 @@ These libraries provide specialized tools and capabilities that can be integrate
 | Library | Description |
 |---------|-------------|
 | [Composio](https://www.composio.dev/) | Tool composition and orchestration library for AI agents |
-| [Browserbase](https://browserbase.io/) | Browser automation and web interaction tools for AI agents |
+| [Browserbase](https://browserbase.com/) | Browser automation and web interaction tools for AI agents |
 | [Exa](https://exa.ai/) | AI-powered search and knowledge tools library |
 | [Model Context Protocol (MCP)](https://modelcontextprotocol.io/tutorials/building-mcp-with-llms) | A protocol for enabling LLMs to use tools |
 
@@ -234,7 +233,7 @@ A key challenge in building agents is standardizing how they interact with tools
 | Protocol | Description |
 |----------|-------------|
 | [OpenAI Function Calling](https://platform.openai.com/docs/guides/function-calling) | JSON Schema-based function definitions |
-| [LangChain Tools](https://python.langchain.com/docs/modules/agents/tools/) | Tool specification format for LangChain agents |
+| [LangChain Tools](https://python.langchain.com/docs/how_to/#tools) | Tool specification format for LangChain agents |
 | [Semantic Kernel Skills](https://github.com/microsoft/semantic-kernel) | Microsoft's approach to defining reusable AI capabilities |
 
 #### Best Practices for Tool Integration
@@ -271,7 +270,6 @@ These platforms provide various solutions for deploying and serving AI models, f
 | [vLLM](https://github.com/vllm-project/vllm) | High-performance inference engine for LLM serving |
 | [Ollama](https://ollama.ai/) | Run and serve open-source LLMs locally |
 | [LM Studio](https://lmstudio.ai/) | Desktop application for running and serving local LLMs |
-| [SGL](https://sgl.ai/) | Scalable graph learning and serving platform |
 | [Together AI](https://www.together.ai/) | Platform for deploying and serving large language models |
 | [Fireworks AI](https://fireworks.ai/) | Infrastructure for serving and fine-tuning LLMs |
 | [Groq](https://groq.com/) | High-performance LLM inference and serving platform |
@@ -298,7 +296,7 @@ These platforms provide specialized storage solutions for AI applications, inclu
 | Platform | Description |
 |----------|-------------|
 | [Chroma](https://www.trychroma.com/) | Open-source embedding database for AI applications |
-| [Drant](https://drant.ai/) | Vector database for AI-powered search and retrieval |
+| [Qdrant](https://qdrant.tech/) | Vector database for AI-powered search and retrieval |
 | [Milvus](https://milvus.io/) | Open-source vector database for scalable similarity search |
 | [Pinecone](https://www.pinecone.io/) | Vector database optimized for machine learning applications |
 | [Weaviate](https://weaviate.io/) | Vector search engine and vector database |
@@ -319,9 +317,9 @@ These platforms provide specialized storage solutions for AI applications, inclu
 | [Please AI](https://please.ai/) | Multi-agent systems and orchestration |
 | [Cognition](https://www.cognition-labs.com/) | Cognitive computing and AI reasoning |
 | [Factory](https://www.factory.ai/) | AI automation and manufacturing solutions |
-| [Dosu](https://dosu.ai/) | AI development tools and infrastructure |
-| [Lindy](https://lindy.ai/) | AI systems with long-term learning capabilities |
-| [11x](https://11x.ai/) | AI productivity and automation tools |
+| [Dosu](https://dosu.dev/) | AI code writing agent and github plugin |
+| [Lindy](https://lindy.ai/) | AI Automated emailing and scheduling|
+| [11x](https://11x.ai/) | Digital Human Workers |
 
 ## Interesting and notabl research and libraries
 

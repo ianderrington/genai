@@ -7,7 +7,7 @@ bullets:
   - The evolution from simple chains to full agents represents 6 levels of increasing capability
 ---
 
-# Gen()AI Agents
+## What is an AI Agents?
 
 Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.
 
@@ -22,20 +22,28 @@ Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond 
         E --> A
     ```
 
-_What makes an AI Agent?_
+_What makes an AI Agent?_ 
 
-Though, more generally it includes these components: 
+[LLM models](../architectures/index.md) that power the core of the agent's information evaluation.
 
-* [LLM models](../architectures/index.md) that power information evaluation.
-* [Prompts](../prompting/index.md),  [memory](./components/memory.md) connected with [cognition architectures](./components/cognitive_architecture.md) that help to [plan](./components/cognitive_architecture.md#planning).
-* [Environments](./components/environments.md) where an agent can 'act'.
-* [Tools](./components/actions_and_tools.md), or aspects of the environment that can be called upon. 
-* [Systems of Agents](./systems/index.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
+Agent Internal [components](./components/index.md) including:
+    - [Prompts](../prompting/index.md)
+    - [Cognitive Architectures](./components/cognitive_architecture.md)
+    - [Memory](./components/memory.md)
+    - [Environments](./components/environments.md) where an agent can 'act'.
+    - [Tools](./components/actions_and_tools.md) or aspects of the environment that can be called upon. 
 
-See how these components can be put together in [building agents](./building_agents/index.md).
+And finally, [Systems of Agents](./systems/index.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
 
+See how these [components](./components/index.md) can be put together in [building agents](./building_agents/index.md).
 
-Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/),
+### AI agents and similar concepts
+
+Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/), one can classify an agent as to whether it can 
+
+1. Decide the output of a step
+2. Decide which steps to take
+3. Determine what sequences of steps are available
 
 | # | Process       | Decide Output of Step | Decide Which Steps to Take | Determine What Sequences of Steps are Available |
 |---|---------------|-----------------------|----------------------------|-----------------------------------------------|
@@ -46,81 +54,30 @@ Based on [this](https://blog.langchain.dev/openais-bet-on-a-cognitive-architectu
 | 5 | State Machine | 🗣️                   | 🗣️  (cycles)               | 👩‍💻                                          |
 | 6 | Agent         | 🗣️                   | 🗣️                         | 🗣️️                                          |
 
-
-## Agent Components
-
-???+ important "How components interact (clickable)"
-    ```mermaid
-    graph TB
-        Environment[Environment] -->|represented <br> by | Data[Data]
-        
-        click Environment "./environments.html"
-        Data -->|interpreted <br> with| LLM[LLMs]
-        click Data "../data/index.html"
-        LLM <-->|uses| CognitiveArchitectures[Cognitive <br>Architectures]
-        click LLM "../architectures/models/index.html"
-        CognitiveArchitectures <--> |Find, Create, Read<br>Update, Delete| Memory[Memory]
-        
-        classDef promptsColor fill:#f0ad4e,stroke:#333,stroke-width:2px;
-        class Prompts promptsColor;
-        click Memory "./components/memory.html"
-        Prompts[Prompts] -->|condition| LLM
-        click Prompts "../prompting/index.html"
-        Prompts -->|support| CognitiveArchitectures
-        click Prompts "../prompting/index.html"
-        CognitiveArchitectures -->|proposes| Action[Action]
-        click CognitiveArchitectures "./components/cognitive_architecture.html"
-        Action -->|uses| Tools[Tools]
-        click Tools "./components/actions_and_tools.html"
-        Tools -->|executed by| Interpreter[Interpreter]
-        Interpreter -->|updates| Environment
-        
-
-        classDef dataColor fill:#ffcc00,stroke:#333,stroke-width:2px;
-        classDef environmentColor fill:#ff9999,stroke:#333,stroke-width:2px;
-        classDef llmColor fill:#99ccff,stroke:#333,stroke-width:2px;
-        classDef cognitiveColor fill:#cc99ff,stroke:#333,stroke-width:2px;
-        classDef memoryColor fill:#99ff99,stroke:#333,stroke-width:2px;
-        classDef actionColor fill:#ff9966,stroke:#333,stroke-width:2px;
-        classDef toolsColor fill:#ff99cc,stroke:#333,stroke-width:2px;
-        classDef interpreterColor fill:#66ffff,stroke:#333,stroke-width:2px;
-        classDef internal fill:#f996,stroke:#333,stroke-width:2px;
-        classDef external fill:#9f6,stroke:#333,stroke-width:2px;
-
-        class Data dataColor;
-        class Environment environmentColor;
-        class LLM llmColor;
-        class CognitiveArchitectures cognitiveColor;
-        class Memory memoryColor;
-        class Action actionColor;
-        class Tools toolsColor;
-        class Interpreter interpreterColor;
-
-        subgraph  
-        LLM
-        Prompts
-        CognitiveArchitectures
-        Memory
-        Action
-        Tools
-        DummyNode[Agent Internals]
-        end
-        click DummyNode "./components/index.html"
-        class DummyNode internal;
-        style DummyNode fill:#ff9999,stroke:#fff,color:#000;  
-
-    ```
-
-At the core of agents are data interpreters such as LLMs [models](../architectures/models/index.md), provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an [environment](./components/environments.md), with specific [actions and tools](./components/actions_and_tools.md). To be effective, the data interpretation is best accomplished with [cognitive architectures](./components/cognitive_architecture.md) that enable reasoning, planning, and interactions with [memory](./components/memory.md) sources. To coordinate these components effectively [interpreters and executors](./components/cognitive_architecture.md#interpreters). With one agent is found to work, [systems](./systems/index.md) of agents allow for multiple agents to interact with other agents and with people. 
+Just like people, Agents can be part of workflows, and systems that act according to procedures and rules. They are different in that they tend to have more leeway in how they process information, and act, allowing them a degree of autonomy that is often not possible in traditional workflows.
 
 
-Agents can be quite different! Here are some [examples](./examples/index.md) of agents made both in academic and commercial settings.
+### Where do Agents exist?
+
+Agents exist in 'environments' where they can act. These environments can be as simple as a chat, a complex as a virtual world (Minecraft), or with an actuator in a robotic system to alter something in the physical world.
 
 
+### What are some types of Agents?
 
-### Example Agent Diagram:
 
-To enable that it may require more complicated relations between example components. Below is an example representation.
+Agents are useful because they can accomplish tasks that are both simple, or complex or difficult to do.
+
+1. Human+Chat-agents
+1. [Computer Using Agents](https://openai.com/index/computer-using-agent/)
+1. Web Browser Agents
+1. Research Agents
+1. Customer Service Agents
+1. Embodied agents (robots)
+
+
+### How does an Agent work?
+
+A little more detail on how an agent works can be found in the [building agents](./building_agents/index.md) and [components](./components/index.md) sections, but below is an example of some of the elements that enable an agent to work.
 
 ??? example "Another view of an Agent's components"
     ```mermaid
@@ -139,29 +96,11 @@ To enable that it may require more complicated relations between example compone
         AgentManager --> |informs and effects| Agent
     ```
 
-## Agent environements
-Agents can exist in different 'domains' all
 
-
-1. Human+Chat-agents
-1. Autonomous chat-agents
-1. Agent-systems
-1. Embodied agents
-
-
-## Agent Purposes
-
-* Do simple/single things: perhaps ephemeral.
-* Do a complex task that may require simple things. Very likely enduring, especially if they are expert systems..
-* Doing a list set of complex tasks, perhaps more continuously enduring.
-
-
-## General Concepts
+##  Essential Concepts for Agents
 
 
 ### Task Planning & Management
-
-
 
 **Methods for generating and tracking tasks:** Autonomous agents can create tasks using handcrafted sequences where the designer explicitly chains them, or through emergent methods like Chains of Thought (CoT), where tasks are generated one at a time in response to evolving circumstances. For example, a navigation agent might have a handcrafted sequence to reach a destination, while an AI in a dynamic environment might use CoT to adapt to new obstacles.
 
@@ -210,9 +149,12 @@ Agents can exist in different 'domains' all
 !!! note "Push vs Pull: how an agent gets its ability to perform the next action"
     If an agent requests something, then it is able to act based on a 'pull' action. If it is given everything to begin with, it has a 'push' action. From this Langchain [blog](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)
 
-## The Future 
+## The Future of Agents
 
-### Automated agents and systems
+It is possible that limitations fundamental to static agents are not going to be universally optimal. Different cognitive architecutres and enabling tools will provide different degrees of success. That is where cognitive agents that are able to able to 'pull' new skills, and ways of working, into their realm of agency, will be able to bypass limitations inherent in in their original configurations.
+
+
+That said, it seems that 2025 will be the year of the AI Agent. These will involve agents that perform tasks that can replace the tasks of what some people can do. They will also involve teams or systems of agents that can work together to accomplish complex tasks.
 
 ??? abstract "[Automated Design of Agentic Systems](https://github.com/ShengranHu/ADAS)"
     The author's show in their [paper](https://arxiv.org/pdf/2408.08435)  Automated Design of Agentic Systems (ADAS), "which aims to automatically create powerful agentic system designs, including inventing novel building blocks and/or combining them in new ways."
@@ -234,11 +176,11 @@ Agents can exist in different 'domains' all
     interesting agentic system design.
     ```
 
-It is possible that limitations fundamental to static agents are not goin to be universally optimal. Different cognitive architecutres and enabling tools will provide different degrees of success. That is where cognitive agents that are able to able to 'pull' new skills, and ways of working, into their realm of agency, will be able to bypass limitations inherent in in their original configurations.
+
 
 ## Useful Resources
 
-??? important "https://arxiv.org/abs/2205.00445"
+
 
 ??? important "[MRKL agents](https://arxiv.org/abs/2205.00445)"
     MRKL

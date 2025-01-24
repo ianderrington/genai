@@ -31,8 +31,7 @@ If you're as excited as we are and wish to contribute, join us!
 
 ## Overview
 
-The goal is to create an AI that can self-improve its documentation and code using tools like [Langchain](https://langchain.com/), [AutoPR](https://github.com/autopr/autopr), etc.
-
+The goal is to create an AI that can self-improve its documentation and code using tools like [Langchain](https://langchain.com/),  
 It will automatically expand markdown documentation using generative models. The AI will also suggest code improvements to streamline documentation generation. This creates a self-referential system that enhances both docs and code.
 
 We want to keep a human in the loop to oversee changes and provide feedback for further improvements.
