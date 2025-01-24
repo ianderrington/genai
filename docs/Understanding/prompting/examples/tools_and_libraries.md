@@ -1,6 +1,10 @@
 
 
 ## Open source libraries and collections
+
+!!! important "[GPT prompts](https://github.com/friuns2/Leaked-GPTs/)"
+
+
 !!! abstract "[Prompt Design](https://research.character.ai/prompt-design-at-character-ai/)"
     A powerful way of using jinja templating to create prompts.
 

@@ -129,9 +129,9 @@ These frameworks provide different approaches and tools for building AI agents, 
 
 | Framework | Description |
 |-----------|-------------|
+| [LangGraph](https://github.com/langchain-ai/langgraph) | LangChain's framework for building structured agents using computational graphs |
 | [Letta](https://letta.com/) | Framework for building and deploying AI agents with built-in orchestration |
 | [Open Hands](https://github.com/All-Hands-AI/OpenHands) | Collaborative AI systems |
-| [LangGraph](https://github.com/langchain-ai/langgraph) | LangChain's framework for building structured agents using computational graphs |
 | [AutoGen](https://microsoft.github.io/autogen/) | Microsoft's framework for building multi-agent systems with automated agent orchestration |
 | [LlamaIndex](https://www.llamaindex.ai/) | Framework for building RAG-enabled agents and LLM applications |
 | [CrewAI](https://github.com/joaomdmoura/crewAI) | Framework for orchestrating role-playing autonomous AI agents |
@@ -139,6 +139,10 @@ These frameworks provide different approaches and tools for building AI agents, 
 | [Phidata](https://github.com/phidatahq/phidata) | AI-first development framework for building production-ready AI applications |
 | [Semantic Kernel](https://github.com/microsoft/semantic-kernel) | Microsoft's orchestration framework for LLMs |
 | [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | Framework for building autonomous AI agents with GPT-4 |
+| [L3AGI](https://github.com/l3vels/L3AGI) | Open-source tool that enables AI Assistants to collaborate together as effectively as human teams. |
+| [Open GPTs](https://github.com/langchain-ai/opengpts) | Provides a similar experience to OpenAI GPTs and assistants, using Langchain components |
+| [CAMEL](https://github.com/camel-ai/camel) | Communicative Agents for "Mind" Exploration of Large Scale Language Model Society |
+
 
 
 Framework selection considerations:

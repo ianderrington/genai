@@ -43,7 +43,6 @@ Models provide the computational core of Agents. Acting like a 'brain' that take
     <img width="623" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/46c00cc8-6530-4a76-af5d-35e70ae1b1cd">
 
 
-
 ??? important "[Topologies of Reasoning: Demystifying Chains, Trees, and Graphs of Thoughts](https://arxiv.org/pdf/2401.14295.pdf) provide excellent ways of thinking about reasoning." topologies-of-reasoning
     
     The authors present topologies of reasoning as ways of thinking about reasoning using LLMs, or 'thoughts' that are called **nodes** and edges are dependencies between the thoughts are **edges**.

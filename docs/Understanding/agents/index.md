@@ -7,9 +7,9 @@ bullets:
   - The evolution from simple chains to full agents represents 6 levels of increasing capability
 ---
 
-## What is an AI Agents?
+## What are AI Agents?
 
-Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.
+Agents in Gen()AI have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.
 
 !!! important "What are agents?"
     An computer system that can execute in the general loop 
@@ -23,15 +23,33 @@ Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond 
     ```
 
 _What makes an AI Agent?_ 
-
+LLMs at are at the core of the agent's information evaluation, but they connect with other components to provide the agent with the ability to act.
 [LLM models](../architectures/index.md) that power the core of the agent's information evaluation.
 
+
+!!! example "LLM Core of Agents"
+    ```mermaid
+    graph LR
+        In(("`**In**`")):::input --> LLM["`**LLM**`"]:::llm
+        LLM <-.->|Query/Results| Retrieval["`**Retrieval**`"]:::component
+        LLM <-.->|Call/Response| Tools["`**Tools**`"]:::component
+        LLM <-.->|Read/Write| Memory["`**Memory**`"]:::component
+        LLM --> Out(("`**Out**`")):::output
+        classDef input fill:#ffefef,stroke:#d49999
+        classDef output fill:#ffefef,stroke:#d49999
+        classDef llm fill:#f0fff0,stroke:#9cd49c
+        classDef component fill:#f0f0ff,stroke:#9999d4
+    ```
+
+
 Agent Internal [components](./components/index.md) including:
-    - [Prompts](../prompting/index.md)
-    - [Cognitive Architectures](./components/cognitive_architecture.md)
-    - [Memory](./components/memory.md)
-    - [Environments](./components/environments.md) where an agent can 'act'.
-    - [Tools](./components/actions_and_tools.md) or aspects of the environment that can be called upon. 
+
+- [Prompts](../prompting/index.md)
+- [Cognitive Architectures](./components/cognitive_architecture.md)
+- [Memory](./components/memory.md)
+- [Tools](./components/actions_and_tools.md) or aspects of the environment that can be called upon. 
+
+Additionally, agents exist in [environments](./components/environments.md) where an agent can 'act'.
 
 And finally, [Systems of Agents](./systems/index.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
 
@@ -61,23 +79,13 @@ Just like people, Agents can be part of workflows, and systems that act accordin
 
 Agents exist in 'environments' where they can act. These environments can be as simple as a chat, a complex as a virtual world (Minecraft), or with an actuator in a robotic system to alter something in the physical world.
 
-
-### What are some types of Agents?
-
-
-Agents are useful because they can accomplish tasks that are both simple, or complex or difficult to do.
-
-1. Human+Chat-agents
-1. [Computer Using Agents](https://openai.com/index/computer-using-agent/)
-1. Web Browser Agents
-1. Research Agents
-1. Customer Service Agents
-1. Embodied agents (robots)
-
+See [types of agents](./examples/examples.md) for examples of different types of agents.
 
 ### How does an Agent work?
 
 A little more detail on how an agent works can be found in the [building agents](./building_agents/index.md) and [components](./components/index.md) sections, but below is an example of some of the elements that enable an agent to work.
+
+
 
 ??? example "Another view of an Agent's components"
     ```mermaid
@@ -99,6 +107,7 @@ A little more detail on how an agent works can be found in the [building agents]
 
 ##  Essential Concepts for Agents
 
+These are the essential concepts for agents and are often implemented in the [components](./components/index.md) of an agent, especially the [cognitive architecture](./components/cognitive_architecture.md).
 
 ### Task Planning & Management
 

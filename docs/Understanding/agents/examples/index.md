@@ -11,6 +11,21 @@ bullet_points:
 
 This directory provides a curated collection of agent implementations and research projects. The examples demonstrate various approaches to agent design, from single-purpose tools to complex cognitive architectures.
 
+## What are some types of Agents?
+
+
+Agents are useful because they can accomplish tasks that are both simple, or complex or difficult to do.
+
+1. Human+Chat-agents
+1. [Computer Using Agents](#computer-using-agents)
+1. Coding Agents
+1. Web Browser Agents
+1. Research Agents
+1. Customer Service Agents
+1. Embodied agents (robots)
+
+
+
 ## Categories 
 
 - [Single-Purpose Agents](#single-purpose-agents): Specialized agents focused on specific tasks
@@ -61,69 +76,23 @@ General-purpose agents demonstrate versatility across different tasks and domain
     - Includes comprehensive security measures
     - Website: [SynthMinds.ai](https://www.synthminds.ai/)
 
-## Research Projects
 
-Research projects explore novel approaches to agent design and implementation, often focusing on specific aspects of agent capabilities.
 
-??? note "[CRITIC: Large Language Models can Self-correct](https://arxiv.org/pdf/2305.11738.pdf)"
-    Self-correction framework using tool-interactive critiquing:
-    - Implements multi-shot improvement approaches
-    - Features structured critique methodology
-    - GitHub: [microsoft/ProphetNet/CRITIC](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)
 
-??? note "[Reasoning on Graphs](https://arxiv.org/abs/2310.01061)"
-    Framework for interpretable LLM reasoning:
-    - Uses knowledge graphs for reasoning
-    - Implements traceable decision paths
-    - GitHub: [RManLuo/reasoning-on-graphs](https://github.com/RManLuo/reasoning-on-graphs)
-
-??? note "[CLIN: A Continually Learning Language Agent](https://allenai.github.io/clin/)"
-    Continually learning language agent:
-    - Features memory-based learning system
-    - Implements causal reasoning
-    - Demonstrates performance improvement through experience
-    - GitHub: [allenai/clin](https://github.com/allenai/clin)
-
-??? note "[Fresh LLMs](https://github.com/freshllms/freshqa)"
-    Dynamic QA benchmark and updating system:
-    - Implements question-premise checking
-    - Reduces hallucination through validation
-    - Features adaptive learning capabilities
-
-??? note "[Suspicion-Agent](https://github.com/CR-Gjx/Suspicion-Agent)"
-    Theory of Mind aware agent implementation:
-    - Incorporates awareness and estimation capabilities
-    - Handles imperfect information scenarios
-    - Features adaptive behavior patterns
-
-## Additional Resources
-
-For more examples and implementations, explore:
-- [Building Applications](../../building_applications/examples/index.md) for development tools and frameworks
-- [Commercial Applications](commercial.md) for production-ready implementations
-- [System Examples](../systems/examples.md) for multi-agent implementations
-- [Cognitive Architectures](../components/cognitive_architecture.md) for architectural patterns
-
-??? abstract "[awesome-llm-powered-agent](https://github.com/hyp1231/awesome-llm-powered-agent)"
-    Curated list of agent projects and resources:
-    - Comprehensive collection of agent implementations
-    - Organized by categories and capabilities
-    - Regular updates with new projects
-
-??? abstract "[Leaked-GPTs](https://github.com/friuns2/Leaked-GPTs)"
-    Collection of GPT prompts and configurations:
-    - Various agent implementations
-    - Customization examples
-    - Best practices for prompt engineering
-
-# Example Agents
+## Example Agents
 
 There are different categories for Agents, which are often either by the environment in which they act or by the manner in which they are used. Because of their variety, it has been found essential to enable their end-customization. This has been done with numerous commercial ventures, including OpenAI, POE, Character.ai, etc. We discuss some basics below, but if you'd like to dig into to them, please check out the exmaples for [multiple agent](#multi-agent), and [single agents](#single-agents) to learn about them specifically. 
 
 
-Here are a few examples. Because agents are hard to disentangle from core components, we describe more throughout, especially in the section on [cognitive architectures](../components/cognitive_architecture.md). We discuss [single agents](#single-agents) here, though there are a number of multi-agent [system examples](../systems/index.md) to consider as well. 
+## Specific Agents
 
-## Examples
+
+## General Agents
+
+### Computer Using Agents
+
+[OpenAI Computer Using Agent](https://openai.com/index/computer-using-agent/)
+
 
 ### Examples
 
@@ -136,45 +105,8 @@ Here are a few examples. Because agents are hard to disentangle from core compon
     ```
     <img width="568" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2f72e4ad-3a49-4bd2-aa1a-e63a57c42343">
 
+
     
-
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/l3vels/ L3AGI) [L3Agi: Open-source tool that enables AI Assistants to collaborate together as effectively as human teams.](https://github.com/l3vels/)" l3agi
-    
-
-
-??? important "[OS-Copilot: Towards Generalist Computer Agents with Self-Improvement](https://github.com/OS-Copilot/FRIDAY)" os-copilot-friday
-   
-   **Developments** 
-
-   [OS-copilot](https://arxiv.org/abs/2402.07456) enables a conceptual framework for generalist computer agents working on Linux and MacOS, with the design of providing a self-improving AI assistent capable of solving general computer tasks. Upon the framework, they built Fully Responsive Intelligence Devoted to Assisting You, FRIDAY, to enable OS-integration.
-
-   **Solution**
-   
-   The OS-copilot framwork uses the following components:
-
-   **Planner** To break down complex tasks, supporting planning methods [Plan-and-Solve]() but uses a _Directed acyclidc graph-based planner__. 
-
-   **Configurator**
-
-   Takes subtasks and configures it to 'help the actor complete the subtask'. It relies on Delarative Memory, procedural memory, and working memory. The _declaritive memory_ records a User's preferences and habits and semantic knowledge, where it stores past-trajectories as ackuired from the Internet, Users, and OS. The _Procedural memory_ enables skill development, and starts off with a small tool-repository that API-POST requests or python files can be used. _Working memory_ exchanges information with other modules (long-term) and external operations. This is responsible for retrieinv information and updating long-term memory. 
-
-   **Actor**
-
-   The actor _executes_ the task and then _self-criticizes_ to asses the successful completion of a given subtask.
-   
-   The [Front end](https://github.com/OS-Copilot/FRIDAY-front)
-   
-   ![image](https://github.com/ianderrington/genai/assets/76016868/806ad549-dc17-4909-90de-034e5ba716d5)
-   
-   ![image](https://github.com/ianderrington/genai/assets/76016868/c663856d-bace-4b0b-9a87-797bd65ce58c)
-
-   **Results**
-   Significant improvement over other methods ([GIAI](https://huggingface.co/spaces/gaia-benchmark/leaderboard)) 
-
-
-
-
-!!! important "![GitHub Repo stars](https://badgen.net/github/stars/langchain-ai/opengpts) [Open GPTs](https://github.com/langchain-ai/opengpts) Provides a similar experience to OpenAI GPTs and assistants, using Langchain components"
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/MineDojo/Voyager) [Voyager from MineDojo](https://github.com/MineDojo/Voyager)"
     Enables expandable tool-usage for a life-long learning agent working within the Minecraft Environment. 
@@ -184,7 +116,24 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher) [GPT researcher](https://github.com/assafelovic/gpt-researcher) is an autonomous agent designed for comprehensive online research on a variety of tasks."
     
 
+### Coding Agents
+!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/gpt-engineer-org/gpt-engineer) [GPT Engineer (gpt-engineer-org)](https://github.com/gpt-engineer-org/gpt-engineer)"
 
+??? tip "![GitHub Repo stars](https://badgen.net/github/stars/kuafuai/DevOpsGPT) [DevOpsGPT](https://github.com/kuafuai/DevOpsGPT)"
+    ```
+    Through the above introduction and Demo demonstration, you must be curious about how DevOpsGPT achieves the entire process of automated requirement development in an existing project. Below is a brief overview of the entire process:
+    ```
+    ![image](https://github.com/ianderrington/genai/assets/76016868/5e60c94c-7c03-4667-ae5f-3a9282cf30c4)
+    ```
+
+
+        Clarify requirement documents: Interact with DevOpsGPT to clarify and confirm details in requirement documents.
+        Generate interface documentation: DevOpsGPT can generate interface documentation based on the requirements, facilitating interface design and implementation for developers.
+        Write pseudocode based on existing projects: Analyze existing projects to generate corresponding pseudocode, providing developers with references and starting points.
+        Refine and optimize code functionality: Developers improve and optimize functionality based on the generated code.
+        Continuous integration: Utilize DevOps tools for continuous integration to automate code integration and testing.
+        Software version release: Deploy software versions to the target environment using DevOpsGPT and DevOps tools.
+    ```
 
 !!! abstract "[Sweep Dev (product)](https://github.com/sweepai/sweep) provides a service for improving code-bases."
     [Website](https://sweep.dev)
@@ -273,24 +222,7 @@ Here are a few examples. Because agents are hard to disentangle from core compon
 
 !!! tip "![GitHub Repo stars](https://badgen.net/github/stars/AntonOsika/gpt-engineer) [GPT Engineer (AntonOsika)](https://github.com/AntonOsika/gpt-engineer)"
 
-!!! tip "![GitHub Repo stars](https://badgen.net/github/stars/gpt-engineer-org/gpt-engineer) [GPT Engineer (gpt-engineer-org)](https://github.com/gpt-engineer-org/gpt-engineer)"
 
-
-??? tip "![GitHub Repo stars](https://badgen.net/github/stars/kuafuai/DevOpsGPT) [DevOpsGPT](https://github.com/kuafuai/DevOpsGPT)"
-    ```
-    Through the above introduction and Demo demonstration, you must be curious about how DevOpsGPT achieves the entire process of automated requirement development in an existing project. Below is a brief overview of the entire process:
-    ```
-    ![image](https://github.com/ianderrington/genai/assets/76016868/5e60c94c-7c03-4667-ae5f-3a9282cf30c4)
-    ```
-
-
-        Clarify requirement documents: Interact with DevOpsGPT to clarify and confirm details in requirement documents.
-        Generate interface documentation: DevOpsGPT can generate interface documentation based on the requirements, facilitating interface design and implementation for developers.
-        Write pseudocode based on existing projects: Analyze existing projects to generate corresponding pseudocode, providing developers with references and starting points.
-        Refine and optimize code functionality: Developers improve and optimize functionality based on the generated code.
-        Continuous integration: Utilize DevOps tools for continuous integration to automate code integration and testing.
-        Software version release: Deploy software versions to the target environment using DevOpsGPT and DevOps tools.
-    ```
 
 ??? tip "[UniversalNER](https://arxiv.org/pdf/2308.03279.pdf) Used ChatGPT to distill a much smaller model for a certain domain,"
     ```
@@ -304,6 +236,7 @@ Here are a few examples. Because agents are hard to disentangle from core compon
     Introduces directly into the prompts a Theory-of-Mind about their awareness and own estimations and will update accordingly."
     <img width="648" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/7d3d171c-5bae-4942-9469-ace20c4ef62b">
     <img width="678" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/c1a762f6-5729-4d4f-8bb8-c288d7d639a0">
+
 
 ??? abstract "[CLIN: A Continually Learning Language Agent for Rapid Task Adaptation and Generalization](https://allenai.github.io/clin/)"
     An agent that stores a memory involving action, rationale, and result so that it can improve doing certain tasks. It uses a lookup to identify things that it needs to do and likely causal relations to decide to work on it.
@@ -335,13 +268,105 @@ Here are a few examples. Because agents are hard to disentangle from core compon
     Article: [https://blog.devgenius.io/coded-example-of-langchain-enabled-cooperative-agents-4859d294b197](https://blog.devgenius.io/coded-example-of-langchain-enabled-cooperative-agents-4859d294b197)
 
 
+## Research
 
-## Libraries
+
+Research projects explore novel approaches to agent design and implementation, often focusing on specific aspects of agent capabilities.
+
+??? note "[CRITIC: Large Language Models can Self-correct](https://arxiv.org/pdf/2305.11738.pdf)"
+    Self-correction framework using tool-interactive critiquing:
+    - Implements multi-shot improvement approaches
+    - Features structured critique methodology
+    - GitHub: [microsoft/ProphetNet/CRITIC](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)
+
+??? note "[Reasoning on Graphs](https://arxiv.org/abs/2310.01061)"
+    Framework for interpretable LLM reasoning:
+    - Uses knowledge graphs for reasoning
+    - Implements traceable decision paths
+    - GitHub: [RManLuo/reasoning-on-graphs](https://github.com/RManLuo/reasoning-on-graphs)
+
+??? note "[CLIN: A Continually Learning Language Agent](https://allenai.github.io/clin/)"
+    Continually learning language agent:
+    - Features memory-based learning system
+    - Implements causal reasoning
+    - Demonstrates performance improvement through experience
+    - GitHub: [allenai/clin](https://github.com/allenai/clin)
+
+??? note "[Fresh LLMs](https://github.com/freshllms/freshqa)"
+    Dynamic QA benchmark and updating system:
+    - Implements question-premise checking
+    - Reduces hallucination through validation
+    - Features adaptive learning capabilities
+
+??? note "[Suspicion-Agent](https://github.com/CR-Gjx/Suspicion-Agent)"
+    Theory of Mind aware agent implementation:
+    - Incorporates awareness and estimation capabilities
+    - Handles imperfect information scenarios
+    - Features adaptive behavior patterns
+
+
+??? important "[OS-Copilot: Towards Generalist Computer Agents with Self-Improvement](https://github.com/OS-Copilot/FRIDAY)" os-copilot-friday
+   
+   **Developments** 
+
+   [OS-copilot](https://arxiv.org/abs/2402.07456) enables a conceptual framework for generalist computer agents working on Linux and MacOS, with the design of providing a self-improving AI assistent capable of solving general computer tasks. Upon the framework, they built Fully Responsive Intelligence Devoted to Assisting You, FRIDAY, to enable OS-integration.
+
+   **Solution**
+   
+   The OS-copilot framwork uses the following components:
+
+   **Planner** To break down complex tasks, supporting planning methods [Plan-and-Solve]() but uses a _Directed acyclidc graph-based planner__. 
+
+   **Configurator**
+
+   Takes subtasks and configures it to 'help the actor complete the subtask'. It relies on Delarative Memory, procedural memory, and working memory. The _declaritive memory_ records a User's preferences and habits and semantic knowledge, where it stores past-trajectories as ackuired from the Internet, Users, and OS. The _Procedural memory_ enables skill development, and starts off with a small tool-repository that API-POST requests or python files can be used. _Working memory_ exchanges information with other modules (long-term) and external operations. This is responsible for retrieinv information and updating long-term memory. 
+
+   **Actor**
+
+   The actor _executes_ the task and then _self-criticizes_ to asses the successful completion of a given subtask.
+   
+   The [Front end](https://github.com/OS-Copilot/FRIDAY-front)
+   
+   ![image](https://github.com/ianderrington/genai/assets/76016868/806ad549-dc17-4909-90de-034e5ba716d5)
+   
+   ![image](https://github.com/ianderrington/genai/assets/76016868/c663856d-bace-4b0b-9a87-797bd65ce58c)
+
+   **Results**
+   Significant improvement over other methods ([GIAI](https://huggingface.co/spaces/gaia-benchmark/leaderboard)) 
+
+
+
+
+## Additional Resources
+
+
+
+For more examples and implementations, explore:
+- [Building Applications](../../building_applications/examples/index.md) for development tools and frameworks
+- [Commercial Applications](commercial.md) for production-ready implementations
+- [System Examples](../systems/examples.md) for multi-agent implementations
+- [Cognitive Architectures](../components/cognitive_architecture.md) for architectural patterns
+
+
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/hyp1231/awesome-llm-powered-agent) [Awesome LLM Powered Agent](https://github.com/hyp1231/awesome-llm-powered-agent)"
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/rokstrnisa/Robo-GPT) [Robo GPT](https://github.com/rokstrnisa/Robo-GPT)"
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/richardyc/Chrome-GPT) [Chrome-GPT](https://github.com/richardyc/Chrome-GPT): an experimental AutoGPT agent that interacts with Chrome"
 
-!!! important "[GPT prompts](https://github.com/friuns2/Leaked-GPTs/)"
 
+
+
+
+
+??? abstract "[awesome-llm-powered-agent](https://github.com/hyp1231/awesome-llm-powered-agent)"
+    Curated list of agent projects and resources:
+    - Comprehensive collection of agent implementations
+    - Organized by categories and capabilities
+    - Regular updates with new projects
+
+??? abstract "[Leaked-GPTs](https://github.com/friuns2/Leaked-GPTs)"
+    Collection of GPT prompts and configurations:
+    - Various agent implementations
+    - Customization examples
+    - Best practices for prompt engineering

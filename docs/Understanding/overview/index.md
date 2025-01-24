@@ -35,49 +35,108 @@ Understanding the similarities and differences between predictive and generative
 
 The distinction is visually represented below.
 
-???+ important "Predictive AI vs Generative AI" predictive-vs-gen-ai
+!!! important "Predictive AI vs Generative AI" predictive-vs-gen-ai
 
     * **Predictive AI** generates predictive data based on existing data
     * **Generative AI** creates new data based on existing data and generation criteria. 
     <img width="100%" alt="image" loading="lazy" src="https://github.com/ianderrington/genai/assets/76016868/821b3315-962a-4956-96cf-ffe863beed3f">
 
 
+
 ### AI vs Traditional programming
 
+Another way of thinking about the difference between AI and traditional programming is to consider the difference between a function call and a program. 
 
+<div class="grid">
+
+<div class="grid-item" markdown>
+
+<h3>Traditional Programming</h3>
 ```mermaid
-graph LR;
-    Program[ ⌨️ <br> programming] --> Robot[🤖 calculation]
-    Programming[💬 call] --> Robot
-    Robot --> Output[✅ <br> output]
-
-    style Program fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Programming fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Robot fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Output fill:#f0f0f0, stroke:#333, stroke-width:2px
-
-```
-
-
-```mermaid
-graph LR;
+graph LR
+    subgraph Input ["Input Layer"]
+        Program[("⌨️<br>Code")]
+        Call[/"💬<br>Function Call"/]
+    end
     
-    Call[💬] --> Calc2
-    Data[📊 Data] --> Calc1[🤖<br> Training]
-    Program[⌨️ <br> programming] --> Calc1
-    %% Training[🏋️ Training] --> Calc1
-    Calc1 --> Calc2[🤖 <br> Inference]
-    Calc2 --> Output[✅ Output]
-
-    style Data fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Call fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Program fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Calc1 fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Program fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Calc2 fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Output fill:#f0f0f0, stroke:#333, stroke-width:2px
+    subgraph Processing ["Processing Layer"]
+        Robot[("🤖<br>Computation")]
+    end
+    
+    subgraph Result ["Result Layer"]
+        Output[["✅<br>Output"]]
+    end
+    
+    Program --> Robot
+    Call --> Robot
+    Robot --> Output
+    
+    classDef input fill:#b3e0ff,stroke:#0277bd,stroke-width:2px
+    classDef funcCall fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
+    classDef process fill:#ce93d8,stroke:#6a1b9a,stroke-width:2px
+    classDef result fill:#a5d6a7,stroke:#2e7d32,stroke-width:2px
+    classDef inputBg fill:#f3f9ff,stroke:#01579b,stroke-width:2px
+    classDef processBg fill:#faf5fc,stroke:#4a148c,stroke-width:2px
+    classDef resultBg fill:#f4faf5,stroke:#1b5e20,stroke-width:2px
+    
+    class Program input
+    class Call funcCall
+    class Robot process
+    class Output result
+    class Input inputBg
+    class Processing processBg
+    class Result resultBg
 ```
 
+</div>
+
+
+<div class="grid-item" markdown>
+
+<h3>AI/ML Programming</h3>
+```mermaid
+graph LR
+    subgraph Input ["Input Layer"]
+        Data[("📊<br>Data")]
+        Program[("⌨️<br>Model Code")]
+        Call[/"💬<br>Inference Call"/]
+    end
+    
+    subgraph Processing ["Processing Layer"]
+        Calc1[("🤖<br>Training")]
+        Calc2[("🤖<br>Inference")]
+    end
+    
+    subgraph Result ["Result Layer"]
+        Output[["✅<br>Output"]]
+    end
+    
+    Data --> Calc1
+    Program --> Calc1
+    Calc1 --> Calc2
+    Call --> Calc2
+    Calc2 --> Output
+    
+    classDef input fill:#b3e0ff,stroke:#0277bd,stroke-width:2px
+    classDef funcCall fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
+    classDef process fill:#ce93d8,stroke:#6a1b9a,stroke-width:2px
+    classDef result fill:#a5d6a7,stroke:#2e7d32,stroke-width:2px
+    classDef inputBg fill:#f3f9ff,stroke:#01579b,stroke-width:2px
+    classDef processBg fill:#faf5fc,stroke:#4a148c,stroke-width:2px
+    classDef resultBg fill:#f4faf5,stroke:#1b5e20,stroke-width:2px
+    
+    class Data,Program input
+    class Call funcCall
+    class Calc1,Calc2 process
+    class Output result
+    class Input inputBg
+    class Processing processBg
+    class Result resultBg
+```
+
+</div>
+
+</div>
 
 ## Creating Gen()AI
 
