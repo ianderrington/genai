@@ -34,28 +34,27 @@
     display: block;
 }
 
-/* Controls container */
+/* Controls container - make it more subtle and consistent */
 .slides-controls {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 40px;  /* Slightly smaller height */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
     background: transparent;
-    opacity: 0;  /* Start fully transparent */
-    transition: all 0.2s ease;
+    opacity: 0;
+    transition: all 0.3s ease;
     z-index: 101;
 }
 
 /* Show controls on hover */
 .slides-deck:hover .slides-controls {
     opacity: 1;
-    background: rgba(248, 249, 250, 0.9);
-    border-top: 1px solid #ddd;
+    background: rgba(0, 0, 0, 0.5);  /* Dark background like mobile */
 }
 
 .nav-controls {
@@ -65,26 +64,20 @@
     margin: 0 auto;
 }
 
-/* Control buttons */
+/* Control buttons - consistent styling */
 .slides-controls button {
-    padding: 0.5rem 1rem;
-    border: 1px solid transparent;
+    padding: 0.5rem;
+    border: none;
     background: transparent;
-    border-radius: 4px;
+    font-size: 20px;  /* Consistent size */
+    color: rgba(255, 255, 255, 0.8);  /* Light text like mobile */
     cursor: pointer;
-    color: transparent;  /* Start with transparent text */
     transition: all 0.2s ease;
 }
 
-/* Button hover states */
-.slides-deck:hover .slides-controls button {
-    border-color: #ddd;
-    background: white;
-    color: #666;  /* Show text on hover */
-}
-
 .slides-controls button:hover {
-    background: #f0f0f0;
+    color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);  /* Subtle grow effect */
 }
 
 /* Progress text */
@@ -92,87 +85,328 @@
     min-width: 4em;
     text-align: center;
     font-size: 0.9rem;
-    color: transparent;
-    transition: all 0.2s ease;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-.slides-deck:hover .slide-progress {
-    color: #666;
-}
-
-/* Fullscreen button */
-.fullscreen-toggle {
-    padding: 0.5rem;
-    font-size: 1.2rem;
+/* Utility buttons container */
+.slides-controls .button-group {
+    display: flex;
+    gap: 0.5rem;
     margin-left: auto;
-    opacity: 0;  /* Start invisible */
 }
 
-.slides-deck:hover .fullscreen-toggle {
-    opacity: 1;
+/* Overview and fullscreen buttons */
+.overview-toggle,
+.fullscreen-toggle {
+    font-size: 20px !important;  /* Force consistent size */
+    padding: 0.5rem !important;
+    opacity: 0.8;
 }
 
-/* Fullscreen mode adjustments */
-.slides-deck.fullscreen .slides-controls {
-    bottom: 20px;
-    opacity: 0;  /* Start invisible in fullscreen too */
-}
-
-.slides-deck.fullscreen:hover .slides-controls {
-    opacity: 1;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .slides-controls {
-        height: 40px;
-    }
-    
-    .slides-controls button {
-        padding: 0.3rem 0.7rem;
-        font-size: 0.9rem;
-    }
-    
-    .slide-progress {
-        font-size: 0.8rem;
-    }
-} 
-
-/* Ensure controls stay visible */
-.slides-controls {
-    z-index: 101;
-} 
-
+/* Base fullscreen mode */
 .slides-deck.fullscreen {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100vw !important;
+    height: 100vh !important;
     max-width: none;
     margin: 0;
+    background: black;
+    z-index: 9999;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .slides-deck {
+        position: relative;
+        background: #f5f5f5;
+        border: none;
+    }
+
+    /* Make fullscreen button more prominent */
+    .slides-deck .fullscreen-toggle {
+        opacity: 1;
+        color: #2196F3;
+        font-size: 1.8rem;
+    }
+
+    /* Mobile fullscreen mode */
+    .slides-deck.fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vh !important;
+        height: 100vw !important;
+        transform-origin: top left;
+        transform: rotate(90deg) translateY(-100%);
+        margin: 0;
+        background: black;
+        z-index: 9999;
+    }
+
+    /* Adjust viewport for rotated view */
+    .slides-deck.fullscreen .slides-viewport {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* Mobile navigation - adjusted positioning */
+    .mobile-nav {
+        position: fixed;
+        bottom: 40px;
+        left: calc(100vw - 40px);
+        transform: translateX(-50%);
+        display: none;  /* Hide by default */
+        gap: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 12px 24px;
+        border-radius: 24px;
+        z-index: 10000;
+        opacity: 1;
+    }
+
+    /* Mobile close button - adjusted positioning */
+    .mobile-close {
+        position: fixed;
+        bottom: 20px;
+        right: calc(100vw - 20px);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        font-size: 36px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 100000;  /* Ensure it's above everything */
+        cursor: pointer;
+        transform: rotate(-90deg);
+        opacity: 1;
+        pointer-events: auto !important;  /* Force pointer events */
+    }
+
+    /* Only show mobile controls in fullscreen mode */
+    .slides-deck.fullscreen .mobile-nav,
+    .slides-deck.fullscreen .mobile-close {
+        display: flex;  /* Show only in fullscreen */
+    }
+
+    /* Hide desktop controls in mobile fullscreen */
+    .slides-deck.fullscreen .slides-controls {
+        display: none !important;
+    }
+
+    /* Adjust slide positioning in fullscreen */
+    .slides-deck.fullscreen .slide {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Make nav buttons more visible */
+    .mobile-nav button {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 28px;  /* Larger buttons */
+        padding: 5px 15px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-nav button:hover {
+        color: white;
+        transform: scale(1.1);
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Consistent mobile/desktop controls in fullscreen */
+.slides-deck.fullscreen .slides-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 20px;
+    opacity: 0;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
+                0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Show on hover */
+.slides-deck.fullscreen:hover .slides-controls {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+.slides-deck.fullscreen .slides-controls:hover {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3),
+                0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Make buttons more visible */
+.slides-deck.fullscreen .slides-controls button {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.slides-deck.fullscreen .slides-controls button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Make progress text more visible */
+.slides-deck.fullscreen .slides-controls .slide-progress {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Overview mode */
+.slides-overview {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;  /* Take up most but not all of viewport */
+    height: 80vh;  /* Leave some space at top and bottom */
+    background: rgba(0, 0, 0, 0.95);
     z-index: 1000;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+/* Dim the background when overview is active */
+.slides-deck.overview-active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.slides-deck.overview-active .slides-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+/* Add a close button */
+.overview-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.overview-close:hover {
+    opacity: 1;
+}
+
+/* Style scrollbar for overview */
+.slides-overview::-webkit-scrollbar {
+    width: 8px;
+}
+
+.slides-overview::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.slides-overview::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.slides-overview::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.overview-slide {
+    position: relative;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.overview-slide:hover {
+    transform: scale(1.05);
+}
+
+.overview-slide iframe {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    pointer-events: none;
     background: white;
 }
 
-/* Make sure the fullscreen button is visible */
-.fullscreen-toggle {
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    margin-left: auto;
-    opacity: 0;  /* Start invisible */
+.overview-number {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
 }
 
-.slides-deck:hover .fullscreen-toggle {
+/* Ensure controls stay visible */
+.slides-controls {
+    z-index: 101;
+}
+
+/* Fullscreen close button */
+.slides-deck.fullscreen .mobile-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    width: 44px;
+    height: 44px;
+    font-size: 36px;
+    display: flex;  /* Always show in fullscreen */
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;  /* Ensure it's above everything */
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.slides-deck.fullscreen .mobile-close:hover {
     opacity: 1;
+    transform: scale(1.1);
 }
 
-/* Fullscreen mode adjustments */
-.slides-deck.fullscreen .slides-controls {
-    bottom: 20px;
-    opacity: 0;  /* Start invisible in fullscreen too */
-}
-
-.slides-deck.fullscreen:hover .slides-controls {
+/* Show controls on hover or touch */
+.slides-deck.fullscreen:hover .slides-controls,
+.slides-deck.fullscreen.show-controls .slides-controls {
     opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
 } 

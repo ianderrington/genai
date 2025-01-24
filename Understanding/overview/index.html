@@ -2421,7 +2421,7 @@ and
   <span class="md-ellipsis">
     
   
-    Knowledge Graphs
+    Knowledge Graphs for Generation
   
 
     
@@ -3420,7 +3420,7 @@ and
   <span class="md-ellipsis">
     
   
-    AI Environments
+    Environments
   
 
     
@@ -7160,7 +7160,7 @@ and
   <span class="md-ellipsis">
     
   
-    Knowledge graphs
+    Building Knowledge Graphs
   
 
     
@@ -8356,41 +8356,103 @@ and
 <div class="copied-popup" id="popup-page-url-1">Link copied!</div>
 </div>
 
-<details class="important" open="open">
-<summary>Predictive AI vs Generative AI</summary>
+<div class="admonition important">
+<p class="admonition-title">Predictive AI vs Generative AI</p>
 <ul>
 <li><strong>Predictive AI</strong> generates predictive data based on existing data</li>
 <li><strong>Generative AI</strong> creates new data based on existing data and generation criteria. 
 <a class="glightbox" href="https://github.com/ianderrington/genai/assets/76016868/821b3315-962a-4956-96cf-ffe863beed3f" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img width="100%" alt="image" loading="lazy" src="https://github.com/ianderrington/genai/assets/76016868/821b3315-962a-4956-96cf-ffe863beed3f"></a></li>
 </ul>
+</div>
 <h3 id="ai-vs-traditional-programming">AI vs Traditional programming<a class="headerlink" href="#ai-vs-traditional-programming" title="Permanent link">&para;</a></h3>
-</details>
-<pre class="mermaid"><code>graph LR;
-    Program[ ⌨️ &lt;br&gt; programming] --&gt; Robot[🤖 calculation]
-    Programming[💬 call] --&gt; Robot
-    Robot --&gt; Output[✅ &lt;br&gt; output]
+<p>Another way of thinking about the difference between AI and traditional programming is to consider the difference between a function call and a program. </p>
+<div class="grid">
 
-    style Program fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Programming fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Robot fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Output fill:#f0f0f0, stroke:#333, stroke-width:2px
-</code></pre>
-<pre class="mermaid"><code>graph LR;
+<div class="grid-item" markdown>
 
-    Call[💬] --&gt; Calc2
-    Data[📊 Data] --&gt; Calc1[🤖&lt;br&gt; Training]
-    Program[⌨️ &lt;br&gt; programming] --&gt; Calc1
-    %% Training[🏋️ Training] --&gt; Calc1
-    Calc1 --&gt; Calc2[🤖 &lt;br&gt; Inference]
-    Calc2 --&gt; Output[✅ Output]
+<h3>Traditional Programming</h3>
+<pre class="mermaid"><code>graph LR
+    subgraph Input ["Input Layer"]
+        Program[("⌨️&lt;br&gt;Code")]
+        Call[/"💬&lt;br&gt;Function Call"/]
+    end
 
-    style Data fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Call fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Program fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Calc1 fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Program fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Calc2 fill:#f0f0f0, stroke:#333, stroke-width:2px
-    style Output fill:#f0f0f0, stroke:#333, stroke-width:2px</code></pre>
+    subgraph Processing ["Processing Layer"]
+        Robot[("🤖&lt;br&gt;Computation")]
+    end
+
+    subgraph Result ["Result Layer"]
+        Output[["✅&lt;br&gt;Output"]]
+    end
+
+    Program --&gt; Robot
+    Call --&gt; Robot
+    Robot --&gt; Output
+
+    classDef input fill:#b3e0ff,stroke:#0277bd,stroke-width:2px
+    classDef funcCall fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
+    classDef process fill:#ce93d8,stroke:#6a1b9a,stroke-width:2px
+    classDef result fill:#a5d6a7,stroke:#2e7d32,stroke-width:2px
+    classDef inputBg fill:#f3f9ff,stroke:#01579b,stroke-width:2px
+    classDef processBg fill:#faf5fc,stroke:#4a148c,stroke-width:2px
+    classDef resultBg fill:#f4faf5,stroke:#1b5e20,stroke-width:2px
+
+    class Program input
+    class Call funcCall
+    class Robot process
+    class Output result
+    class Input inputBg
+    class Processing processBg
+    class Result resultBg</code></pre>
+
+</div>
+
+
+<div class="grid-item" markdown>
+
+<h3>AI/ML Programming</h3>
+<pre class="mermaid"><code>graph LR
+    subgraph Input ["Input Layer"]
+        Data[("📊&lt;br&gt;Data")]
+        Program[("⌨️&lt;br&gt;Model Code")]
+        Call[/"💬&lt;br&gt;Inference Call"/]
+    end
+
+    subgraph Processing ["Processing Layer"]
+        Calc1[("🤖&lt;br&gt;Training")]
+        Calc2[("🤖&lt;br&gt;Inference")]
+    end
+
+    subgraph Result ["Result Layer"]
+        Output[["✅&lt;br&gt;Output"]]
+    end
+
+    Data --&gt; Calc1
+    Program --&gt; Calc1
+    Calc1 --&gt; Calc2
+    Call --&gt; Calc2
+    Calc2 --&gt; Output
+
+    classDef input fill:#b3e0ff,stroke:#0277bd,stroke-width:2px
+    classDef funcCall fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
+    classDef process fill:#ce93d8,stroke:#6a1b9a,stroke-width:2px
+    classDef result fill:#a5d6a7,stroke:#2e7d32,stroke-width:2px
+    classDef inputBg fill:#f3f9ff,stroke:#01579b,stroke-width:2px
+    classDef processBg fill:#faf5fc,stroke:#4a148c,stroke-width:2px
+    classDef resultBg fill:#f4faf5,stroke:#1b5e20,stroke-width:2px
+
+    class Data,Program input
+    class Call funcCall
+    class Calc1,Calc2 process
+    class Output result
+    class Input inputBg
+    class Processing processBg
+    class Result resultBg</code></pre>
+
+</div>
+
+</div>
+
 <h2 id="creating-genai">Creating Gen()AI<a class="headerlink" href="#creating-genai" title="Permanent link">&para;</a></h2>
 <p>Several techniques exist for creating Gen()AI, including rule-based, data-based, and fusion methods. This section provides a brief overview of these techniques, with more detailed discussions to follow.</p>
 <h3 id="data-based-approaches">Data-based Approaches<a class="headerlink" href="#data-based-approaches" title="Permanent link">&para;</a></h3>

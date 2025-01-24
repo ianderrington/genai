@@ -121,7 +121,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#genai-agents" class="md-skip">
+        <a href="#what-are-ai-agents" class="md-skip">
           Skip to content
         </a>
       
@@ -2419,7 +2419,7 @@ and
   <span class="md-ellipsis">
     
   
-    Knowledge Graphs
+    Knowledge Graphs for Generation
   
 
     
@@ -3420,7 +3420,7 @@ and
   <span class="md-ellipsis">
     
   
-    AI Environments
+    Environments
   
 
     
@@ -7160,7 +7160,7 @@ and
   <span class="md-ellipsis">
     
   
-    Knowledge graphs
+    Building Knowledge Graphs
   
 
     
@@ -8191,8 +8191,6 @@ and
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -8201,22 +8199,44 @@ and
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#agent-components" class="md-nav__link">
+  <a href="#what-are-ai-agents" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agent Components
+        What are AI Agents?
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Agent Components">
+    <nav class="md-nav" aria-label="What are AI Agents?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-agent-diagram" class="md-nav__link">
+  <a href="#ai-agents-and-similar-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example Agent Diagram:
+        AI agents and similar concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-do-agents-exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where do Agents exist?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-an-agent-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does an Agent work?
       
     </span>
   </a>
@@ -8229,37 +8249,15 @@ and
 </li>
       
         <li class="md-nav__item">
-  <a href="#agent-environements" class="md-nav__link">
+  <a href="#essential-concepts-for-agents" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agent environements
+        Essential Concepts for Agents
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#agent-purposes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Agent Purposes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        General Concepts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="General Concepts">
+    <nav class="md-nav" aria-label="Essential Concepts for Agents">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -8334,30 +8332,13 @@ and
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-future" class="md-nav__link">
+  <a href="#the-future-of-agents" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Future
+        The Future of Agents
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="The Future">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#automated-agents-and-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automated agents and systems
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8405,8 +8386,10 @@ and
   
 
 
-<h1 id="genai-agents">Gen()AI Agents<a class="headerlink" href="#genai-agents" title="Permanent link">&para;</a></h1>
-<p>Agents in Gen()AI agents have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.</p>
+  <h1>GenAI Agents</h1>
+
+<h2 id="what-are-ai-agents">What are AI Agents?<a class="headerlink" href="#what-are-ai-agents" title="Permanent link">&para;</a></h2>
+<p>Agents in Gen()AI have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.</p>
 <div class="admonition important">
 <p class="admonition-title">What are agents?</p>
 <p>An computer system that can execute in the general loop 
@@ -8417,17 +8400,39 @@ and
     D --&gt; E[Observe]
     E --&gt; A</code></pre></p>
 </div>
-<p><em>What makes an AI Agent?</em></p>
-<p>Though, more generally it includes these components: </p>
+<p><em>What makes an AI Agent?</em> 
+LLMs at are at the core of the agent's information evaluation, but they connect with other components to provide the agent with the ability to act.
+<a href="../architectures/index.html">LLM models</a> that power the core of the agent's information evaluation.</p>
+<div class="admonition example">
+<p class="admonition-title">LLM Core of Agents</p>
+<pre class="mermaid"><code>graph LR
+    In(("`**In**`")):::input --&gt; LLM["`**LLM**`"]:::llm
+    LLM &lt;-.-&gt;|Query/Results| Retrieval["`**Retrieval**`"]:::component
+    LLM &lt;-.-&gt;|Call/Response| Tools["`**Tools**`"]:::component
+    LLM &lt;-.-&gt;|Read/Write| Memory["`**Memory**`"]:::component
+    LLM --&gt; Out(("`**Out**`")):::output
+    classDef input fill:#ffefef,stroke:#d49999
+    classDef output fill:#ffefef,stroke:#d49999
+    classDef llm fill:#f0fff0,stroke:#9cd49c
+    classDef component fill:#f0f0ff,stroke:#9999d4</code></pre>
+</div>
+<p>Agent Internal <a href="components/index.html">components</a> including:</p>
 <ul>
-<li><a href="../architectures/index.html">LLM models</a> that power information evaluation.</li>
-<li><a href="../prompting/index.html">Prompts</a>,  <a href="components/memory.html">memory</a> connected with <a href="components/cognitive_architecture.html">cognition architectures</a> that help to <a href="components/cognitive_architecture.html#planning">plan</a>.</li>
-<li><a href="components/environments.html">Environments</a> where an agent can 'act'.</li>
-<li><a href="components/actions_and_tools.html">Tools</a>, or aspects of the environment that can be called upon. </li>
-<li><a href="systems/index.html">Systems of Agents</a> that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.</li>
+<li><a href="../prompting/index.html">Prompts</a></li>
+<li><a href="components/cognitive_architecture.html">Cognitive Architectures</a></li>
+<li><a href="components/memory.html">Memory</a></li>
+<li><a href="components/actions_and_tools.html">Tools</a> or aspects of the environment that can be called upon. </li>
 </ul>
-<p>See how these components can be put together in <a href="building_agents/index.html">building agents</a>.</p>
-<p>Based on <a href="https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/">this</a>,</p>
+<p>Additionally, agents exist in <a href="components/environments.html">environments</a> where an agent can 'act'.</p>
+<p>And finally, <a href="systems/index.html">Systems of Agents</a> that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.</p>
+<p>See how these <a href="components/index.html">components</a> can be put together in <a href="building_agents/index.html">building agents</a>.</p>
+<h3 id="ai-agents-and-similar-concepts">AI agents and similar concepts<a class="headerlink" href="#ai-agents-and-similar-concepts" title="Permanent link">&para;</a></h3>
+<p>Based on <a href="https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/">this</a>, one can classify an agent as to whether it can </p>
+<ol>
+<li>Decide the output of a step</li>
+<li>Decide which steps to take</li>
+<li>Determine what sequences of steps are available</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -8483,72 +8488,12 @@ and
 </tr>
 </tbody>
 </table>
-<h2 id="agent-components">Agent Components<a class="headerlink" href="#agent-components" title="Permanent link">&para;</a></h2>
-<details class="important" open="open">
-<summary>How components interact (clickable)</summary>
-<pre class="mermaid"><code>graph TB
-    Environment[Environment] --&gt;|represented &lt;br&gt; by | Data[Data]
-
-    click Environment "./environments.html"
-    Data --&gt;|interpreted &lt;br&gt; with| LLM[LLMs]
-    click Data "../data/index.html"
-    LLM &lt;--&gt;|uses| CognitiveArchitectures[Cognitive &lt;br&gt;Architectures]
-    click LLM "../architectures/models/index.html"
-    CognitiveArchitectures &lt;--&gt; |Find, Create, Read&lt;br&gt;Update, Delete| Memory[Memory]
-
-    classDef promptsColor fill:#f0ad4e,stroke:#333,stroke-width:2px;
-    class Prompts promptsColor;
-    click Memory "./components/memory.html"
-    Prompts[Prompts] --&gt;|condition| LLM
-    click Prompts "../prompting/index.html"
-    Prompts --&gt;|support| CognitiveArchitectures
-    click Prompts "../prompting/index.html"
-    CognitiveArchitectures --&gt;|proposes| Action[Action]
-    click CognitiveArchitectures "./components/cognitive_architecture.html"
-    Action --&gt;|uses| Tools[Tools]
-    click Tools "./components/actions_and_tools.html"
-    Tools --&gt;|executed by| Interpreter[Interpreter]
-    Interpreter --&gt;|updates| Environment
-
-
-    classDef dataColor fill:#ffcc00,stroke:#333,stroke-width:2px;
-    classDef environmentColor fill:#ff9999,stroke:#333,stroke-width:2px;
-    classDef llmColor fill:#99ccff,stroke:#333,stroke-width:2px;
-    classDef cognitiveColor fill:#cc99ff,stroke:#333,stroke-width:2px;
-    classDef memoryColor fill:#99ff99,stroke:#333,stroke-width:2px;
-    classDef actionColor fill:#ff9966,stroke:#333,stroke-width:2px;
-    classDef toolsColor fill:#ff99cc,stroke:#333,stroke-width:2px;
-    classDef interpreterColor fill:#66ffff,stroke:#333,stroke-width:2px;
-    classDef internal fill:#f996,stroke:#333,stroke-width:2px;
-    classDef external fill:#9f6,stroke:#333,stroke-width:2px;
-
-    class Data dataColor;
-    class Environment environmentColor;
-    class LLM llmColor;
-    class CognitiveArchitectures cognitiveColor;
-    class Memory memoryColor;
-    class Action actionColor;
-    class Tools toolsColor;
-    class Interpreter interpreterColor;
-
-    subgraph  
-    LLM
-    Prompts
-    CognitiveArchitectures
-    Memory
-    Action
-    Tools
-    DummyNode[Agent Internals]
-    end
-    click DummyNode "./components/index.html"
-    class DummyNode internal;
-    style DummyNode fill:#ff9999,stroke:#fff,color:#000;  
-</code></pre>
-</details>
-<p>At the core of agents are data interpreters such as LLMs <a href="../architectures/models/index.html">models</a>, provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an <a href="components/environments.html">environment</a>, with specific <a href="components/actions_and_tools.html">actions and tools</a>. To be effective, the data interpretation is best accomplished with <a href="components/cognitive_architecture.html">cognitive architectures</a> that enable reasoning, planning, and interactions with <a href="components/memory.html">memory</a> sources. To coordinate these components effectively <a href="components/cognitive_architecture.html#interpreters">interpreters and executors</a>. With one agent is found to work, <a href="systems/index.html">systems</a> of agents allow for multiple agents to interact with other agents and with people. </p>
-<p>Agents can be quite different! Here are some <a href="examples/index.html">examples</a> of agents made both in academic and commercial settings.</p>
-<h3 id="example-agent-diagram">Example Agent Diagram:<a class="headerlink" href="#example-agent-diagram" title="Permanent link">&para;</a></h3>
-<p>To enable that it may require more complicated relations between example components. Below is an example representation.</p>
+<p>Just like people, Agents can be part of workflows, and systems that act according to procedures and rules. They are different in that they tend to have more leeway in how they process information, and act, allowing them a degree of autonomy that is often not possible in traditional workflows.</p>
+<h3 id="where-do-agents-exist">Where do Agents exist?<a class="headerlink" href="#where-do-agents-exist" title="Permanent link">&para;</a></h3>
+<p>Agents exist in 'environments' where they can act. These environments can be as simple as a chat, a complex as a virtual world (Minecraft), or with an actuator in a robotic system to alter something in the physical world.</p>
+<p>See <a href="./examples/examples.md">types of agents</a> for examples of different types of agents.</p>
+<h3 id="how-does-an-agent-work">How does an Agent work?<a class="headerlink" href="#how-does-an-agent-work" title="Permanent link">&para;</a></h3>
+<p>A little more detail on how an agent works can be found in the <a href="building_agents/index.html">building agents</a> and <a href="components/index.html">components</a> sections, but below is an example of some of the elements that enable an agent to work.</p>
 <details class="example">
 <summary>Another view of an Agent's components</summary>
 <pre class="mermaid"><code>graph TB
@@ -8565,21 +8510,8 @@ and
     Agent --&gt; |informs and effects| AgentManager
     AgentManager --&gt; |informs and effects| Agent</code></pre>
 </details>
-<h2 id="agent-environements">Agent environements<a class="headerlink" href="#agent-environements" title="Permanent link">&para;</a></h2>
-<p>Agents can exist in different 'domains' all</p>
-<ol>
-<li>Human+Chat-agents</li>
-<li>Autonomous chat-agents</li>
-<li>Agent-systems</li>
-<li>Embodied agents</li>
-</ol>
-<h2 id="agent-purposes">Agent Purposes<a class="headerlink" href="#agent-purposes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Do simple/single things: perhaps ephemeral.</li>
-<li>Do a complex task that may require simple things. Very likely enduring, especially if they are expert systems..</li>
-<li>Doing a list set of complex tasks, perhaps more continuously enduring.</li>
-</ul>
-<h2 id="general-concepts">General Concepts<a class="headerlink" href="#general-concepts" title="Permanent link">&para;</a></h2>
+<h2 id="essential-concepts-for-agents">Essential Concepts for Agents<a class="headerlink" href="#essential-concepts-for-agents" title="Permanent link">&para;</a></h2>
+<p>These are the essential concepts for agents and are often implemented in the <a href="components/index.html">components</a> of an agent, especially the <a href="components/cognitive_architecture.html">cognitive architecture</a>.</p>
 <h3 id="task-planning-management">Task Planning &amp; Management<a class="headerlink" href="#task-planning-management" title="Permanent link">&para;</a></h3>
 <p><strong>Methods for generating and tracking tasks:</strong> Autonomous agents can create tasks using handcrafted sequences where the designer explicitly chains them, or through emergent methods like Chains of Thought (CoT), where tasks are generated one at a time in response to evolving circumstances. For example, a navigation agent might have a handcrafted sequence to reach a destination, while an AI in a dynamic environment might use CoT to adapt to new obstacles.</p>
 <p><strong>Knowledge graph utilization:</strong> A knowledge graph serves as a structural memory that can greatly enhance an agent's ability to plan and execute tasks by understanding the relationships between different entities and concepts. An AI agent using a knowledge graph might navigate a user query more efficiently by understanding related topics or concepts.</p>
@@ -8608,8 +8540,9 @@ and
 <p class="admonition-title">Push vs Pull: how an agent gets its ability to perform the next action</p>
 <p>If an agent requests something, then it is able to act based on a 'pull' action. If it is given everything to begin with, it has a 'push' action. From this Langchain <a href="https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/">blog</a></p>
 </div>
-<h2 id="the-future">The Future<a class="headerlink" href="#the-future" title="Permanent link">&para;</a></h2>
-<h3 id="automated-agents-and-systems">Automated agents and systems<a class="headerlink" href="#automated-agents-and-systems" title="Permanent link">&para;</a></h3>
+<h2 id="the-future-of-agents">The Future of Agents<a class="headerlink" href="#the-future-of-agents" title="Permanent link">&para;</a></h2>
+<p>It is possible that limitations fundamental to static agents are not going to be universally optimal. Different cognitive architecutres and enabling tools will provide different degrees of success. That is where cognitive agents that are able to able to 'pull' new skills, and ways of working, into their realm of agency, will be able to bypass limitations inherent in in their original configurations.</p>
+<p>That said, it seems that 2025 will be the year of the AI Agent. These will involve agents that perform tasks that can replace the tasks of what some people can do. They will also involve teams or systems of agents that can work together to accomplish complex tasks.</p>
 <details class="abstract">
 <summary><a href="https://github.com/ShengranHu/ADAS">Automated Design of Agentic Systems</a></summary>
 <p>The author's show in their <a href="https://arxiv.org/pdf/2408.08435">paper</a>  Automated Design of Agentic Systems (ADAS), "which aims to automatically create powerful agentic system designs, including inventing novel building blocks and/or combining them in new ways."</p>
@@ -8627,11 +8560,7 @@ and
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>interesting agentic system design.
 </span></code></pre></div>
 </details>
-<p>It is possible that limitations fundamental to static agents are not goin to be universally optimal. Different cognitive architecutres and enabling tools will provide different degrees of success. That is where cognitive agents that are able to able to 'pull' new skills, and ways of working, into their realm of agency, will be able to bypass limitations inherent in in their original configurations.</p>
 <h2 id="useful-resources">Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">&para;</a></h2>
-<details class="important">
-<summary><a href="https://arxiv.org/abs/2205.00445">https://arxiv.org/abs/2205.00445</a></summary>
-</details>
 <details class="important">
 <summary><a href="https://arxiv.org/abs/2205.00445">MRKL agents</a></summary>
 <p>MRKL

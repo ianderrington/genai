@@ -2419,7 +2419,7 @@ and
   <span class="md-ellipsis">
     
   
-    Knowledge Graphs
+    Knowledge Graphs for Generation
   
 
     
@@ -3422,7 +3422,7 @@ and
   <span class="md-ellipsis">
     
   
-    AI Environments
+    Environments
   
 
     
@@ -7162,7 +7162,7 @@ and
   <span class="md-ellipsis">
     
   
-    Knowledge graphs
+    Building Knowledge Graphs
   
 
     
@@ -8196,6 +8196,25 @@ and
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agent-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -8236,6 +8255,70 @@ and
 <li><a href="environments.html">Environments</a> - The contexts in which agents operate</li>
 </ul>
 <p>These components form the foundation of any AI agent system, whether simple or complex. Understanding how they work together is crucial for building effective AI applications.</p>
+<h2 id="agent-components">Agent Components<a class="headerlink" href="#agent-components" title="Permanent link">&para;</a></h2>
+<details class="important" open="open">
+<summary>How components interact (clickable)</summary>
+<pre class="mermaid"><code>graph TB
+    Environment[Environment] --&gt;|represented &lt;br&gt; by | Data[Data]
+
+    click Environment "./environments.html"
+    Data --&gt;|interpreted &lt;br&gt; with| LLM[LLMs]
+    click Data "../data/index.html"
+    LLM &lt;--&gt;|uses| CognitiveArchitectures[Cognitive &lt;br&gt;Architectures]
+    click LLM "../../architectures/models/index.html"
+    CognitiveArchitectures &lt;--&gt; |Find, Create, Read&lt;br&gt;Update, Delete| Memory[Memory]
+
+    classDef promptsColor fill:#f0ad4e,stroke:#333,stroke-width:2px;
+    class Prompts promptsColor;
+    click Memory "./memory.html"
+    Prompts[Prompts] --&gt;|condition| LLM
+    click Prompts "../../prompting/index.html"
+    Prompts --&gt;|support| CognitiveArchitectures
+    click Prompts "../../prompting/index.html"
+    CognitiveArchitectures --&gt;|proposes| Action[Action]
+    click CognitiveArchitectures "./cognitive_architecture.html"
+    Action --&gt;|uses| Tools[Tools]
+    click Tools "./actions_and_tools.html"
+    Tools --&gt;|executed by| Interpreter[Interpreter]
+    Interpreter --&gt;|updates| Environment
+
+
+    classDef dataColor fill:#ffcc00,stroke:#333,stroke-width:2px;
+    classDef environmentColor fill:#ff9999,stroke:#333,stroke-width:2px;
+    classDef llmColor fill:#99ccff,stroke:#333,stroke-width:2px;
+    classDef cognitiveColor fill:#cc99ff,stroke:#333,stroke-width:2px;
+    classDef memoryColor fill:#99ff99,stroke:#333,stroke-width:2px;
+    classDef actionColor fill:#ff9966,stroke:#333,stroke-width:2px;
+    classDef toolsColor fill:#ff99cc,stroke:#333,stroke-width:2px;
+    classDef interpreterColor fill:#66ffff,stroke:#333,stroke-width:2px;
+    classDef internal fill:#f996,stroke:#333,stroke-width:2px;
+    classDef external fill:#9f6,stroke:#333,stroke-width:2px;
+
+    class Data dataColor;
+    class Environment environmentColor;
+    class LLM llmColor;
+    class CognitiveArchitectures cognitiveColor;
+    class Memory memoryColor;
+    class Action actionColor;
+    class Tools toolsColor;
+    class Interpreter interpreterColor;
+
+    subgraph  
+    LLM
+    Prompts
+    CognitiveArchitectures
+    Memory
+    Action
+    Tools
+    DummyNode[Agent Internals]
+    end
+    click DummyNode "./index.html"
+    class DummyNode internal;
+    style DummyNode fill:#ff9999,stroke:#fff,color:#000;  
+</code></pre>
+</details>
+<p>At the core of agents are data interpreters such as LLMs <a href="../architectures/models/index.md">models</a>, provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an <a href="./components/environments.md">environment</a>, with specific <a href="./components/actions_and_tools.md">actions and tools</a>. To be effective, the data interpretation is best accomplished with <a href="./components/cognitive_architecture.md">cognitive architectures</a> that enable reasoning, planning, and interactions with <a href="./components/memory.md">memory</a> sources. To coordinate these components effectively <a href="./components/cognitive_architecture.md#interpreters">interpreters and executors</a>. With one agent is found to work, <a href="./systems/index.md">systems</a> of agents allow for multiple agents to interact with other agents and with people. </p>
+<p>Agents can be quite different! Here are some <a href="./examples/index.md">examples</a> of agents made both in academic and commercial settings.</p>
 
 
 
