@@ -1,0 +1,52 @@
+name: Markdown Link Checker
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+      - 'tools/markdown_link_checker.py'
+      - '.github/workflows/link-checker.yml'
+  pull_request:
+    paths:
+      - '**/*.md'
+      - 'tools/markdown_link_checker.py'
+      - '.github/workflows/link-checker.yml'
+  schedule:
+    - cron: '0 0 * * 0'  # Run weekly on Sunday at midnight
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests beautifulsoup4 markdown
+        
+    - name: Run link checker
+      run: python tools/markdown_link_checker.py . --format json --output link-check-results.json --no-cache-update
+      continue-on-error: true
+      
+    - name: Process results
+      id: process
+      run: |
+        if [ -f link-check-results.json ]; then
+          python .github/scripts/process_results.py link-check-results.json
+        else
+          echo "::error::Link check results file not found"
+          exit 1
+        
+    - name: Upload check results
+      uses: actions/upload-artifact@v3
+      with:
+        name: link-check-results
+        path: link-check-results.json
+        if-no-files-found: error 
