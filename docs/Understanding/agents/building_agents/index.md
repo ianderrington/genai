@@ -293,20 +293,6 @@ These platforms provide various solutions for deploying and serving AI models, f
 
 Note: These platforms provide secure, isolated environments for testing and running AI agents, ensuring safe execution and development of agent capabilities.
 
-### Agent Storage Solutions
-
-These platforms provide specialized storage solutions for AI applications, including vector databases, embedding storage, and traditional databases optimized for AI workloads.
-
-| Platform | Description |
-|----------|-------------|
-| [Chroma](https://www.trychroma.com/) | Open-source embedding database for AI applications |
-| [Qdrant](https://qdrant.tech/) | Vector database for AI-powered search and retrieval |
-| [Milvus](https://milvus.io/) | Open-source vector database for scalable similarity search |
-| [Pinecone](https://www.pinecone.io/) | Vector database optimized for machine learning applications |
-| [Weaviate](https://weaviate.io/) | Vector search engine and vector database |
-| [NEON](https://neon.tech/) | Serverless Postgres platform for AI applications |
-| [Supabase](https://supabase.com/) | Open-source Firebase alternative with vector storage capabilities |
-
 
 
 ### Vertical AI Agent Solutions
