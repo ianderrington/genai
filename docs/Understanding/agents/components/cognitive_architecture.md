@@ -133,9 +133,18 @@ Here are some known thought structures that are improving agentic output.
     The authors reveal in their [paper](https://arxiv.org/pdf/2303.17651.pdf) that LLMs can generate feedback on their work, to repeatedly improve the output.
    
 
+??? note "[Chain-of-Agents](https://research.google/blog/chain-of-agents-large-language-models-collaborating-on-long-context-tasks/)" chain-of-agents
+    Chain of agents breaks down queries into individual components that is passed along to different agent workers. Similar to [systems](../systems/index.md) the solution is able to provide improvements on multi-hop reasoning chains that improve the resulting RAG output. 
+    
+    <img width="586" alt="image" src="https://github.com/user-attachments/assets/5765374a-1d76-45d4-b02b-d439f6e0c61b" />
+    
+    The algorithm is relatively simple but appears do do fairly well 
+    
+    <img width="293" alt="image" src="https://github.com/user-attachments/assets/81e1149f-4bb2-4e7a-b33c-2b18ccba3f6c" />
 
 
-???+ code "![GitHub Repo stars](https://badgen.net/github/stars/noahshinn024/reflexion) [Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
+
+???+ abstract "![GitHub Repo stars](https://badgen.net/github/stars/noahshinn024/reflexion) [Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
 
     ![image](https://github.com/ianderrington/genai/assets/76016868/f289200d-e2d5-453a-9256-af1652573459)
     - [Paper](https://arxiv.org/pdf/2303.11366.pdf)
