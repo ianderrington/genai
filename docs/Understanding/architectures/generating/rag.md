@@ -366,7 +366,9 @@ Small to big look up involves using Smaller Child Chunks Referring to Bigger Par
 
 ??? abstract "[Advanced Rag small to big](https://colab.research.google.com/github/sophiamyang/demos/blob/main/advanced_rag_small_to_big.ipynb)" 
     [Blog](https://towardsdatascience.com/advanced-rag-01-small-to-big-retrieval-172181b396d4)
-    
+
+??? abstract "[Small to big by Gemini](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/gemini/use-cases/retrieval-augmented-generation/small_to_big_rag/small_to_big_rag.ipynb)"
+
 #### Reranking
 
 Reranking is often the final step before generation where it reasseses the doucments to ensure their relevance. This is done with 
