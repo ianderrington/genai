@@ -7,13 +7,13 @@ bullets:
   - Different types of memory - from simple buffers to complex graphs - serve different purposes
 ---
 
-Just like people, memory plays a crucial role in enhancing the efficiency of information generation. Memory can either be _global_ or external to the existence of an agent or an agent-network, or _internal_ to the network, and gained by [experiences](#experiential-memory) it gained during from the agent or agent-network's  efforts. Each of these types of memories are useful to extract information that is then placed into the LLM's [prompt-context](../../prompting/index.md) and allowing a more accurate generation of information. 
+Just like people, memory plays a crucial role in enhancing the efficiency of information generation. Memory can either be _global_ or external to the existence of an agent or an agent-network, or _internal_ to the network, and gained by [experiences](#experiential-memory) it gained during from the agent or agent-network's  efforts. Each of these types of memories are useful to extract information that is then placed into the LLM's [prompt-context](../../prompting/index.md) and allowing a more accurate generation of information, as in [retrieval augmented generation](../../architectures/generating/rag.md). Because of its importance [agentic rag](#agentic-rag) is itself an essential application of agents, and it uses [cognitive architectures](#cognitive-architectures) to improve its results. 
+
+### Experiental-memory
 
 Here we discuss _experiential memory_ based on the activity or action action of one or many agents. 
 
 Recipients of LLM chat-interfaces with multiple sessions may benefit from stored experiential memory. Guarded by any default or manual firewalls, experiential memory may allow focused and enduring `memory tracks` that have more specific focuses. For instance, when a recipient is has used time to create something from scratch in a most effective manner, when that 'effective manner' needs to be understood to minimize the time necessary to do the same thing, or something similar. This is not unlikely why OpenAI enabled [memory for their agents](https://openai.com/blog/memory-and-new-controls-for-chatgpt). The way this memory is managed, and accessed is of prime importance to retention and `experiential transfer`, the sharing of experiences between different Agents without having to 'repeat' information. 
-
-## Experiential Memory
 
 Types of memory include simple aspects such as _conversation buffers_ to keep track of what has been said be employed to keep track of information. These buffers, can be 'private',  can facilitate communication between any agents, storing response stacks that include agent-environment interactions. 
 
@@ -27,6 +27,29 @@ Here are some general types of memory:
 * Action-success lookups 
 
 For example Open AI has launched [memory](https://openai.com/blog/memory-and-new-controls-for-chatgpt) for chatGPT, that stores relevant memory in a manner that allows the user control of what can be stored. It does not, yet, allow for memory compartmentalization of memories into groups that could help to focus relevance to generated content.
+
+## Agentic RAG
+
+Agentic rag refers to dynamic response generation using methods in [rag](../../architecture/generating/rag.md) coupled with [cognitive architectures](./cognitive_architectures.md)
+ that aim to enable: 
+
+* Autonomous Decision Making
+* Iterative Refinement
+* Dynamic workflow optimization
+
+These systems will often involve query-chats to more properly understand the query's intent, if there is any ambiguity or otherwise unanswerable queries especially the 
+
+!!! note "Single agent agentic rag"
+    <img width="676" alt="image" src="https://github.com/user-attachments/assets/ef0842f2-fb41-4dec-bdd9-6122497eaeaf" />
+
+!!! note "Multi-AGent Agentic Rag"
+    <img width="643" alt="image" src="https://github.com/user-attachments/assets/e6325b83-657f-4c3a-b0a0-5c7714e438d6" />
+    From [here](https://arxiv.org/pdf/2501.09136)
+
+Often these systems have feedback observation after generation to detect and correct
+
+* Hallucinations
+* Answer relevance
 
 ## Storage and Retrieval Methods
 
@@ -42,34 +65,13 @@ Graph Databases provide the ability to put information in relational contexts. B
 
 [Neo4j](https://towardsdatascience.com/enhancing-interaction-between-language-models-and-graph-databases-via-a-semantic-layer-0a78ad3eba49) has formed a semantic layer, as shown in the `tomasonjo/llm-movieagent` repository. 
 
-y by an interpreter, though it is not guaranteed that the queries will be accurate. [TODO: Find reference some_reference_on_LLM_SQL]
-
 !!! references
     For more information on memory implementations and caching, refer to the following resources:
     - [Langchain `memory`](https://python.langchain.com/docs/how_to/chatbots_memory/)
-    
-
-### Vector databases
-
-Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milvus, and ScaNN, use embeddings to create query vector databases. These databases allow for efficient semantic searches.
-
-- [Improving language models by retrieving from trillions of tokens](https://arxiv.org/pdf/2112.04426.pdf)
-
-!!! example "Example vector databases"
-
-    Please read this for more information  [Vector Databases (primer by Pinecone.io)](https://www.pinecone.io/learn/vector-database/)
-
-    - https://github.com/Helicone/helicone
-    - [Website](https://www.deeplake.ai/) [Github](https://github.com/activeloopai/deeplake)
+   
 
 
-
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/superlinked/VectorHub) [VectorHub: Evaluation of multiple Vector databases](https://github.com/superlinked/VectorHub)" 
-    "Vector Hub is a free and open-sourced learning hub for people interested in adding vector retrieval to their ML stack. On VectorHub you will find practical resources to help you"
-    [VDB comparisons](https://superlinked.com/vector-db-comparison/)
-
-
-##  Tech stack solutions
+##  Solutions
 
 ??? abstract "[Mem0: provides memory for agents in an ice an easy manner](https://docs.mem0.ai/overview)"
 
@@ -77,7 +79,7 @@ Vector databases, such as Pinecone, Qdrant, Weaviate, Chroma, Faiss, Redis, Milv
     Graphiti ingests both unstructured and structured data, and the resulting graph may be queried using a fusion of time, full-text, semantic, and graph algorithm approaches.
     [GetZep: self-improving memory users, sessions and more](https://help.getzep.com/concepts)"
 
-## Text
+## Research
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/lilakk/BooookScore) [BooookScore: A systematic exploration of book-length summarization in the era of LLMs](https://github.com/lilakk/BooookScore)" BooookScore
     **Developments** The authors reveal an effective manner of providing effective summaries of long books using two methods: 1. Hierarchichal merging of chunk-level summaries, and 2. Incremental update using a running summary. 
