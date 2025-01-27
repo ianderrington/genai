@@ -2,6 +2,7 @@ nav:
     - index.md
     - cognitive_architecture.md
     - memory.md
+    - vector_databases.md
     - actions_and_tools.md
     - environments.md
     
