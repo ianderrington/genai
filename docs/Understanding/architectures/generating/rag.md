@@ -70,6 +70,8 @@ Original inceptions of RAG involve queries that involve connecting with [Embeddi
 
 One of the seminal papers on RAG, [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf) introduced a solution for end-to-end training of models involving training document and query encoding, lookup and demosntrated revealing [improved results](https://contextual.ai/introducing-rag2/) over solutions where model components were frozen. For reasons of simplicity, however, a generally standard approach uses models that are frozen to embed and query documents. 
 
+
+There is also [agentic](./../../agents/components/memory.md) rag that can be used to improve query generation using [cognitive architectures](./../../agents/components/cognitive_architecture.md) or agent [systems](../../agents/systems/index.md) to improve the outcome by allowing dynamic decisions to be made with iterative refinement and adaptive retrieval strategies. 
    
 ### Why use RAG?
 
@@ -93,7 +95,7 @@ The primary challenges regarding rag may be related to organizational or functio
     * You don't want to pay for, or maintain and support a RAG database. 
     * There are ethical or privacy concerns relating to sending data to a third-party API
 
-#### RAG vs Finetuning
+### RAG vs Finetuning
 
 Because finetuning can enable intrisic knowledge to be ingrained in an LLM, it generally leads to improved performance. 
 
@@ -108,30 +110,31 @@ That said, it can be seen that using RAG to informe fine tuning, in Retrieval Au
     [Paper](https://arxiv.org/abs/2403.10131)
 
 ## Types of RAG
-2 Types of RAG:
 
-▪️ Original RAG
-▪️ Graph RAG
-▪️ LongRAG
-▪️ Self-RAG
-▪️ Corrective RAG
-▪️ EfficientRAG
-▪️ Golden-Retriever
-▪️ Adaptive RAG
-▪️ Modular RAG
-▪️ Speculative RAG
-▪️ RankRAG
-▪️ Multi-Head RAG
+While classification is the root of all inaccuracies, there are at least [12 Types of RAG](https://www.turingpost.com/p/12-types-of-rag). They are summarized here: 
 
-Save the list and check this out for more info: https://www.turingpost.com/p/12-types-of-rag
+* Original RAG
+* Graph RAG
+* LongRAG
+* Self-RAG
+* Corrective RAG
+* EfficientRAG
+* Golden-Retriever
+* Adaptive RAG
+* Modular RAG
+* Speculative RAG
+* RankRAG
+* Multi-Head RAG
 
-## Implementing RAg
 
-The RAG process can be divided into two main stages: Preparation (offline) and Retrieval and Generation (online).
 
-### Document Indexing (offline)
+## Implementing RAG
 
-Indexing will involve Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  
+The RAG process can be divided into two main stages: [offline preparation](#offline-preparation), [Retrieval](#retrieval) (online) and then finally, [generation](#generation) (online).
+
+### Offline Preparation 
+
+Before a query is made for RAG to work documents must be indexed. Indexing involves Loading Data, Splitting data, Embedding Data, Adding Metadata, Storing the data.  
 
 It is useful to perform parallel indexing that keeps track of records that are put into vector stores. 
 
@@ -219,7 +222,7 @@ Once data has been loaded in a way that a model can process it, it must be split
 
 Index Building - One of the most useful tricks is multi-representation indexing: decouple what you index for retrieval (e.g., table or image summary) from what you pass to the LLM for answer synthesis (e.g., the raw image, a table). [Read more](https://blog.langchain.dev/semi-structured-multi-modal-rag/.)
 
-##### Adding metadata
+#### Adding metadata
 
 Information such as dates, chapters, or key words can allow for filtering and key-word lookup. 
 
@@ -234,8 +237,8 @@ The embedded data is stored for future retrieval and use. This is done via stand
 
 The retrieval and generation stage involves the following steps:
 
-1. **Retrieving Data:** Retrieve the data based on input in such a way that relevant documents and chunks can be used in downstream chains.
-2. **Generating Output:** Generate an output using a prompt that integrates the query and retrieved data.
+1. **[Retrieving Data](#retrieval):** Retrieve the data based on input in such a way that relevant documents and chunks can be used in downstream chains.
+2. **[Generating Output](#generating-responses):** Generate an output using a prompt that integrates the query and retrieved data.
 
 The decision and act to retrieve the documents will depend on the additional contexts that the agents may need to be aware of.
 
@@ -267,6 +270,7 @@ It might not always be necessary to retrieve documents. When it is necessary to 
             click H "#Answer"
     ```
 
+### Retrieval 
 #### Query Optimization
 
 In production settings, the queries that users ask are unlikely to be optimal for retrieval. This can be due to a combination of challenges such as questions that are. 
@@ -357,12 +361,30 @@ In order to effectively answer some queries, retrieval of evidence from multiple
 
 
 ##### Small to big lookup
-TODO xxx
 
+Small to big look up involves using Smaller Child Chunks Referring to Bigger Parent Chunks, that can be searched heirarchichally to identify the most valuable element of text. 
+
+??? abstract "[Advanced Rag small to big](https://colab.research.google.com/github/sophiamyang/demos/blob/main/advanced_rag_small_to_big.ipynb)" 
+    [Blog](https://towardsdatascience.com/advanced-rag-01-small-to-big-retrieval-172181b396d4)
+    
 #### Reranking
 
-TODO xxx
-Reranking 
+Reranking is often the final step before generation where it reasseses the doucments to ensure their relevance. This is done with 
+
+* Scoring models
+* Ranking Algorithms
+
+There is criteria for document relevance including 
+
+* Semantic Relevance, ensuring the content of the content matches the target of input query, as captured through imbeddings.
+* Document similarity using neural model scores
+* Reliability and applicability of identified content based on meta-data associated with the document. (Like dates, or measures of credibility)
+
+The benefits that content reranking come with the costs of increased complexity and latency.
+
+??? note "[Rerankers, by Pinecone](https://www.pinecone.io/learn/series/rag/rerankers/)
+    <img width="1082" alt="image" src="https://github.com/user-attachments/assets/04fd5fc9-7ef7-4713-a62a-d523cc515e0c" />
+
 
 ### Generating responses
 
@@ -374,12 +396,12 @@ Challenges in generating responses can involve
 * Conflicting information: When retrieved results contain different responses to the same question, a difinitive response may not be possible
 * Stale information: When information is no longer relevant.
 
+
+
 ## Advanced methods
 
 
-
-
-## Multimodal Rag
+### Multimodal Rag
 Natural-language lookup with RAG can be improved by allowing other modalities, such as tables and images, at the same time. There are several ways that this may be accomplished as described in [Langchain's multi modal rag](https://blog.langchain.dev/semi-structured-multi-modal-rag/): 
 
     Option 1:
@@ -547,8 +569,7 @@ Because of the large number of manners of performing RAG, it is important to eva
 
     * Use things like [Llama Guard](https://towardsdatascience.com/safeguarding-your-rag-pipelines-a-step-by-step-guide-to-implementing-llama-guard-with-llamaindex-6f80a2e07756?sk=c6cc48013bac60924548dd4e1363fa9e)
 
-??? abstract "[Advanced Rag small to big](https://colab.research.google.com/github/sophiamyang/demos/blob/main/advanced_rag_small_to_big.ipynb)" 
-    [Blog](https://towardsdatascience.com/advanced-rag-01-small-to-big-retrieval-172181b396d4)
+
     
 ??? abstract "[Advanced Retreival Augmented Generation from Theory to Llamaindex](https://github.com/weaviate/recipes/blob/main/integrations/llamaindex/retrieval-augmented-generation/advanced_rag.ipynb)"
     [Blog](https://towardsdatascience.com/advanced-retrieval-augmented-generation-from-theory-to-llamaindex-implementation-4de1464a9930)
