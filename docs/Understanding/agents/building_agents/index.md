@@ -155,7 +155,7 @@ Framework selection considerations:
 
 ### Agent Memory Solutions
 
-These platforms provide specialized solutions for managing agent memory, enabling long-term context retention and efficient memory management for AI applications.
+Agent memory is based off of [vector databases](../components/vector_databases.md), but can be made easier with platform solutions for managing agent memory, enabling long-term context retention and efficient memory management for AI applications.
 
 | Platform | Description |
 |----------|-------------|
