@@ -142,7 +142,7 @@ Here are some known thought structures that are improving agentic output.
     
     <img width="293" alt="image" src="https://github.com/user-attachments/assets/81e1149f-4bb2-4e7a-b33c-2b18ccba3f6c" />
 
-
+    Their [blog](https://research.google/blog/chain-of-agents-large-language-models-collaborating-on-long-context-tasks/) provides a nice overview. 
 
 ???+ abstract "![GitHub Repo stars](https://badgen.net/github/stars/noahshinn024/reflexion) [Reflexion: an autonomous agent with dynamic memory and self-reflection](https://github.com/noahshinn024/reflexion) an agent with dynamic memory and self-reflection capabilities"
 
