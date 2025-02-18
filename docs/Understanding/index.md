@@ -236,4 +236,4 @@ If you can't get enough here, check out the following resources
 
 !!! important "[Awesome AGI](https://github.com/EmbraceAGI/Awesome-AGI/blob/main/README.md)"
 
-!!! important "[LLLM bootcamp](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/)"
+!!! important "[LLM bootcamp](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/)"

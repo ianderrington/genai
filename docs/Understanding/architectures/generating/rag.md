@@ -458,6 +458,8 @@ Because of the large number of manners of performing RAG, it is important to eva
     The authors reveal that allowing for fine tuning of the models when equipped with RAG improved the results. 
     <img width="598" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/05ffefbd-4fd7-4d4e-9ec4-0719e66e1791">
 
+??? important "![GitHub Repo stars](https://badgen.net/github/stars/NirDiamant/RAG_Techniques) [RAG Techniques](https://github.com/NirDiamant/RAG_Techniques) provides a comprehensive collection of RAG implementation techniques and best practices."
+
 ??? important "[12 RAG Pain Points and Proposed Solutions](https://arxiv.org/pdf/2401.05856.pdf)" 12-rag-pain-points-and-solutions
     Things that might lead to failure of RAG pipeline. Mostly taken from the [blog]( https://towardsdatascience.com/12-rag-pain-points-and-proposed-solutions-43709939a28c)
     
@@ -472,7 +474,7 @@ Because of the large number of manners of performing RAG, it is important to eva
     2: Missed the Top Ranked Documents
 
     * Hyperparameter tuning for `chunk_size` and `similarity_top_k` as in [Hyperparameter Optimization for RAG](https://docs.llamaindex.ai/en/stable/examples/param_optimizer/param_optimizer.html). 
-    * Reranking [notebook](https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/CohereRerank.html) usses [Improving Retrieval Performance by Fine-tuning Cohere Reranker with LlamaIndex](https://blog.llamaindex.ai/improving-retrieval-performance-by-fine-tuning-cohere-reranker-with-llamaindex-16c0c1f9b33b) and `CohereRank` to rerank the results 
+    * Reranking [notebook](https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/CohereRerank.html) usses [Improving Retrieval Performance by Fine-tuning Cohere Reranker with LlamaIndex](https://blog.llamaindex.ai/improving-retrieval-performance-by-fine-tuning-cohere-reranker-with-llamaindex-16c0c1f9b33b) and `CohereRank` to rerank the results 
     ```python
         import os
         from llama_index.postprocessor.cohere_rerank import CohereRerank

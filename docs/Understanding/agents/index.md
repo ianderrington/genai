@@ -15,11 +15,15 @@ Agents in Gen()AI have access to 'tools' to provide them 'agency' beyond the abi
     An computer system that can execute in the general loop 
     ```mermaid
     graph LR
-        A(Observe Environment) --> B[Evaluate]
-        B --> C[Propose action]
-        C --> D[Act]
-        D --> E[Observe]
-        E --> A
+        A((Observe<br> Environment)):::observe --> B[Evaluate]:::evaluate
+        B --> C{Propose<br> action}:::propose
+        C --> D([Act]):::act
+        D --> A
+        
+        classDef observe fill:#90EE90,stroke:#006400
+        classDef evaluate fill:#87CEEB,stroke:#4682B4
+        classDef propose fill:#FFB6C1,stroke:#CD5C5C
+        classDef act fill:#DDA0DD,stroke:#8B008B
     ```
 
 _What makes an AI Agent?_ 
@@ -29,16 +33,35 @@ LLMs at are at the core of the agent's information evaluation, but they connect 
 
 !!! example "LLM Core of Agents"
     ```mermaid
-    graph LR
-        In(("`**In**`")):::input --> LLM["`**LLM**`"]:::llm
-        LLM <-.->|Query/Results| Retrieval["`**Retrieval**`"]:::component
-        LLM <-.->|Call/Response| Tools["`**Tools**`"]:::component
-        LLM <-.->|Read/Write| Memory["`**Memory**`"]:::component
-        LLM --> Out(("`**Out**`")):::output
-        classDef input fill:#ffefef,stroke:#d49999
-        classDef output fill:#ffefef,stroke:#d49999
-        classDef llm fill:#f0fff0,stroke:#9cd49c
-        classDef component fill:#f0f0ff,stroke:#9999d4
+    graph TB
+        subgraph Environment[Environment]
+            In(("`**In**`")):::observe --> LLM
+            
+            subgraph Agent[Agent Components]
+                LLM["`**LLM**`"]:::evaluate
+                
+                subgraph AgentComponents[" "]
+                    direction LR
+                    Retrieval["`**Retrieval**`"]:::propose
+                    Tools["`**Tools**`"]:::propose
+                    Memory["`**Memory**`"]:::propose
+                end
+                
+                LLM <-.->|Query/Results| Retrieval
+                LLM <-.->|Call/Response| Tools
+                LLM <-.->|Read/Write| Memory
+            end
+            
+            LLM --> Out(("`**Out**`")):::act
+        end
+        
+        classDef observe fill:#90EE90,stroke:#006400
+        classDef evaluate fill:#87CEEB,stroke:#4682B4
+        classDef propose fill:#FFB6C1,stroke:#CD5C5C
+        classDef act fill:#DDA0DD,stroke:#8B008B
+        style Agent fill:#F0F8FF,stroke:#4682B4
+        style AgentComponents fill:#FFF0F5,stroke:#CD5C5C
+        style Environment fill:#F0FFF0,stroke:#228B22
     ```
 
 

@@ -1,4 +1,5 @@
 nav:
     - index.md
+    - stack.md
     - evaluating_and_comparing.md
     - optimizing_agents.md

@@ -9,7 +9,11 @@ bullets:
 
 # Building Agents
 
-Building agents shares a degree of overlap with the building of applications, but we write about it here because of its unique importance. The AI agents stack has evolved significantly since 2022-2023, moving beyond simple LLM frameworks to more sophisticated agent architectures.
+Building agents shares a degree of overlap with the building of applications, but we write about it here because of its unique importance. The AI agents stack has multiple frameworks and components to enable sophisticated agent architectures.
+
+We describe the stack in [The AI Agent Stack](./stack.md), how to [evaluate and compare agents](./evaluating_and_comparing.md), and how to [optimize agents](./optimizing_agents.md).
+
+Below you will find a description of the evolution of agents and the different strategies for building them.
 
 ## The Evolution of AI Agents
 
@@ -26,7 +30,106 @@ The AI agent landscape has evolved significantly since the initial release of fr
     - Manage execution environments
     - Process tool results
 
-### Key Architectural Considerations
+## Strategies for Building Agents
+
+### Low/No Code vs Code-Centric Approaches
+
+The development of AI agents can follow two main paths, each with its own advantages and use cases:
+
+| Aspect | Low/No Code 🔌 | Hybrid 🔄 | Code-Centric 💻 |
+|--------|---------------|------------|----------------|
+| **Key Benefits** | Easy to use, rapid deployment | Best of both worlds | Full customization, scalability |
+| **Best For** | Simple agents, chatbots | Evolving projects | Complex systems, enterprise |
+| **Delivery Speed** | Days - Weeks ⚡ | Variable 📅 | Weeks - Months ��️ |
+| **Maintenance Difficulty** | Low (platform handles) 🟢 | Medium (split scope) 🟡 | High (full stack) 🔴 |
+| **Control** | Limited 🔒 | Balanced ⚖️ | Complete 🛠️ |
+| **Examples** | GPTs, Zapier, Bubble 🤖 | GPTs + Custom Backend | LangChain, AutoGen 🚀 |
+
+??? abstract "Low/No Code vs Code-Centric Approaches (expanded)"
+    | Aspect | Low/No Code | Code-Centric | Hybrid |
+    |--------|-------------|--------------|---------|
+    | **Development Speed** | Fast (days/weeks) | Slower (weeks/months) | Medium (varies by component) |
+    | **Technical Expertise** | Minimal | High | Mixed |
+    | **Customization** | Limited | Extensive | Moderate to High |
+    | **Scalability** | Platform-dependent | Highly scalable | Scalable with proper architecture |
+    | **Integration Depth** | Pre-built connectors | Custom integrations | Mix of both |
+    | **Maintenance** | Platform-managed | Team-managed | Split responsibility |
+    | **Cost Structure** | Platform subscriptions | Development resources | Combined costs |
+    | **Use Cases** | • Simple automations<br>• Chatbots<br>• Basic workflows | • Complex agents<br>• Custom solutions<br>• Enterprise systems | • MVP to production<br>• Scaled applications<br>• Enterprise solutions |
+    | **Examples** | • OpenAI GPTs<br>• Zapier<br>• Bubble.io | • LangChain<br>• AutoGen<br>• Custom solutions | • GPTs + custom backend<br>• Visual frontend + coded agents |
+    | **Team Size** | Individual to small team | Development team | Cross-functional team |
+    | **Iteration Speed** | Very fast | Depends on complexity | Fast for no-code components |
+    | **Security Control** | Platform-dependent | Full control | Balanced control |
+
+#### Low/No Code Development
+
+Low/no code platforms provide visual interfaces and pre-built components for building agents without extensive programming:
+
+1. **Benefits**
+    - Rapid prototyping and deployment
+    - Accessible to non-technical users
+    - Visual workflow design
+    - Pre-built integrations
+    - Faster iteration cycles
+
+2. **Popular Platforms**
+    - OpenAI GPTs
+    - Bubble.io with AI integrations
+    - Zapier with AI actions
+    - Microsoft Power Platform
+    - Voiceflow for conversational agents
+
+3. **Best For**
+    - Business users and citizen developers
+    - Quick proof-of-concept development
+    - Simple automation workflows
+    - Standard use cases with common integrations
+
+#### Code-Centric Development
+
+Traditional programming approaches offer maximum flexibility and control:
+
+1. **Benefits**
+    - Complete customization
+    - Advanced functionality
+    - Fine-grained control over agent behavior
+    - Custom integrations
+    - Better performance optimization
+
+2. **Development Frameworks**
+    - LangChain
+    - AutoGen
+    - LlamaIndex
+    - Custom frameworks using LLM APIs
+
+3. **Best For**
+    - Complex agent architectures
+    - Enterprise-grade applications
+    - Novel use cases
+    - High-performance requirements
+    - Deep system integrations
+
+#### Hybrid Approaches
+
+Many organizations adopt a hybrid strategy:
+
+1. **Prototyping with Low Code**
+    - Validate concepts quickly
+    - Test user interactions
+    - Define basic workflows
+
+2. **Production with Code**
+    - Refine and optimize
+    - Add custom features
+    - Scale for production
+
+3. **Integration Patterns**
+    - Low-code for frontend/UI
+    - Code-based backend services
+    - API-driven architecture
+    - Microservices composition
+
+### Architectural Considerations
 
 When building agents, several architectural decisions are crucial:
 
@@ -68,251 +171,7 @@ The agent ecosystem is still in its early stages, with several emerging trends:
     - Authentication and access control frameworks
     - Industry-specific tool collections
 
-
-## The Stack
-
-The modern AI agent stack can be broken down into several key layers, each addressing specific challenges in agent development. These include:
-
-
-- [Agent Hosting & Serving Solutions](#agent-hosting--serving-solutions)
-- [Agent Observability Solutions](#agent-observability-solutions)
-- [Agent Frameworks](#agent-frameworks)
-- [Agent Memory Solutions](#agent-memory-solutions)
-- [Tool Libraries](#tool-libraries)
-- [Model Serving Solutions](#model-serving-solutions)
-
-with some nice examples of successful [Vertical AI Agent Solutions](#vertical-ai-agent-solutions).
-
-
-### Agent Hosting & Serving Solutions
-
-| Platform | Description |
-|----------|-------------|
-| [Letta](https://letta.com/) | Agent deployment and hosting platform |
-| [LangGraph](https://github.com/langchain-ai/langgraph) | Graph-based orchestration for language model agents |
-| [Assistants API](https://platform.openai.com/docs/assistants/overview) | OpenAI's API for deploying and managing AI assistants |
-| [Amazon Bedrock Agents](https://aws.amazon.com/bedrock/agents/) | AWS-based agent hosting and management service |
-| [LiveKit Agents](https://livekit.io/) | Real-time agent deployment and communication platform |
-
-These platforms provide infrastructure and tools for deploying, hosting, and serving AI agents at scale, each with different specializations and integration capabilities.
-
-Additional considerations for hosting solutions:
-
-- Scalability and performance requirements
-- Integration capabilities with existing systems
-- Cost and resource optimization
-- Security and compliance features
-
-### Agent Observability Solutions
-
-| Platform | Description |
-|----------|-------------|
-| [LangSmith](https://smith.langchain.com/) | LangChain's platform for debugging, testing, evaluating, and monitoring LLM applications and agents |
-| [Arize](https://arize.com/) | ML observability platform with LLM monitoring capabilities |
-| [Weave](https://www.weave.ai/) | AI observability and monitoring platform |
-| [Langfuse](https://langfuse.com/) | Open source LLM engineering platform for monitoring and analytics |
-| [AgentOps.ai](https://www.agentops.ai/) | Specialized platform for monitoring and optimizing AI agents |
-| [Braintrust](https://www.braintrustdata.com/) | LLM evaluation and monitoring platform |
-
-These platforms provide specialized tools for monitoring, debugging, and analyzing the performance of AI agents and LLM applications in production environments.
-
-Key observability features to consider:
-
-- Real-time monitoring and alerting
-- Performance analytics and tracing
-- Debug tooling and replay capabilities
-- Cost tracking and optimization
-
-### Agent Frameworks
-
-These frameworks provide different approaches and tools for building AI agents, from simple single-agent systems to complex multi-agent orchestrations. Each has its own strengths and specialized use cases.
-
-| Framework | Description |
-|-----------|-------------|
-| [LangGraph](https://github.com/langchain-ai/langgraph) | LangChain's framework for building structured agents using computational graphs |
-| [Letta](https://letta.com/) | Framework for building and deploying AI agents with built-in orchestration |
-| [Open Hands](https://github.com/All-Hands-AI/OpenHands) | Collaborative AI systems |
-| [AutoGen](https://microsoft.github.io/autogen/) | Microsoft's framework for building multi-agent systems with automated agent orchestration |
-| [LlamaIndex](https://www.llamaindex.ai/) | Framework for building RAG-enabled agents and LLM applications |
-| [CrewAI](https://github.com/joaomdmoura/crewAI) | Framework for orchestrating role-playing autonomous AI agents |
-| [DSPy](https://github.com/stanfordnlp/dspy) | Stanford's framework for programming with foundation models |
-| [Phidata](https://github.com/phidatahq/phidata) | AI-first development framework for building production-ready AI applications |
-| [Semantic Kernel](https://github.com/microsoft/semantic-kernel) | Microsoft's orchestration framework for LLMs |
-| [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | Framework for building autonomous AI agents with GPT-4 |
-| [L3AGI](https://github.com/l3vels/L3AGI) | Open-source tool that enables AI Assistants to collaborate together as effectively as human teams. |
-| [Open GPTs](https://github.com/langchain-ai/opengpts) | Provides a similar experience to OpenAI GPTs and assistants, using Langchain components |
-| [CAMEL](https://github.com/camel-ai/camel) | Communicative Agents for "Mind" Exploration of Large Scale Language Model Society |
-
-
-
-Framework selection considerations:
-
-- State Management: How agent state is serialized and persisted
-- Context Window Management: How data is compiled into LLM context
-- Multi-Agent Communication: Support for agent collaboration
-- Memory Handling: Techniques for managing long-term memory
-- Model Support: Compatibility with open-source models
-
-### Agent Memory Solutions
-
-Agent memory is based off of [vector databases](../components/vector_databases.md), but can be made easier with platform solutions for managing agent memory, enabling long-term context retention and efficient memory management for AI applications.
-
-| Platform | Description |
-|----------|-------------|
-| [Letta](https://github.com/letta-ai/letta) | System for extending LLM context windows with infinite memory via memory management |
-| [Zep](https://www.getzep.com/) | Long-term memory store for LLM applications and agents |
-| [LangMem](https://python.langchain.com/docs/how_to/chatbots_memory/) | LangChain's memory management system for conversational agents |
-| [Mem0](https://github.com/mem0ai/mem0) | Memory management and persistence solution for AI assistants and agents |
-
-
-Memory architecture considerations:
-
-- Persistence strategies
-- Context window optimization
-- Memory retrieval mechanisms
-- Integration with vector stores
-
-### Tool Libraries
-
-Tools can be categorized into three main types:
-
-1. **Knowledge Augmentation**
-    - Text retrievers
-    - Image retrievers
-    - Web browsers
-    - SQL executors
-    - Internal knowledge base access
-    - API integrations (news, weather, stocks)
-
-2. **Capability Extension**
-    - Calculators
-    - Code interpreters
-    - Calendar tools
-    - Unit converters
-    - Language translators
-    - Multimodal converters (text-to-image, speech-to-text)
-
-3. **Write Actions**
-    - Database modifications
-    - Email sending
-    - File system operations
-    - API calls with side effects
-    - Transaction processing
-
-These libraries provide specialized tools and capabilities that can be integrated into AI agents to enhance their ability to interact with various systems and perform specific tasks.
-
-| Library | Description |
-|---------|-------------|
-| [Composio](https://www.composio.dev/) | Tool composition and orchestration library for AI agents |
-| [Browserbase](https://browserbase.com/) | Browser automation and web interaction tools for AI agents |
-| [Exa](https://exa.ai/) | AI-powered search and knowledge tools library |
-| [Model Context Protocol (MCP)](https://modelcontextprotocol.io/tutorials/building-mcp-with-llms) | A protocol for enabling LLMs to use tools |
-
-
-#### Tool Integration Protocols
-
-A key challenge in building agents is standardizing how they interact with tools. Several protocols have emerged to address this
-
-##### Model Context Protocol (MCP)
-
-[Model Context Protocol](https://modelcontextprotocol.io/tutorials/building-mcp-with-llms) provides a standardized way for LLMs to interact with tools and external systems. Key features include:
-
-1. **Resource Management**
-    - Structured exposure of external resources
-    - Schema definitions for data access
-    - Standardized resource querying
-
-2. **Tool Definitions**
-    - Common format for tool specifications
-    - Input/output validation
-    - Error handling patterns
-
-3. **Prompt Templates**
-    - Standardized prompt formats
-    - Context management
-    - Response handling
-
-##### Other Tool Integration Standards
-
-| Protocol | Description |
-|----------|-------------|
-| [OpenAI Function Calling](https://platform.openai.com/docs/guides/function-calling) | JSON Schema-based function definitions |
-| [LangChain Tools](https://python.langchain.com/docs/how_to/#tools) | Tool specification format for LangChain agents |
-| [Semantic Kernel Skills](https://github.com/microsoft/semantic-kernel) | Microsoft's approach to defining reusable AI capabilities |
-
-#### Best Practices for Tool Integration
-
-When implementing tool protocols:
-
-1. **Security Considerations**
-    - Validate all inputs before execution
-    - Implement proper access controls
-    - Monitor tool usage and rate limits
-
-2. **Error Handling**
-    - Graceful failure modes
-    - Clear error messages
-    - Recovery strategies
-
-3. **Documentation**
-    - Clear tool specifications
-    - Usage examples
-    - Integration guides
-
-4. **Testing**
-    - Tool validation
-    - Integration testing
-    - Performance monitoring
-
-
-### Model Serving Solutions
-
-These platforms provide various solutions for deploying and serving AI models, from local deployment to cloud-based infrastructure, with different performance and scaling capabilities.
-
-| Platform | Description |
-|----------|-------------|
-| [vLLM](https://github.com/vllm-project/vllm) | High-performance inference engine for LLM serving |
-| [Ollama](https://ollama.ai/) | Run and serve open-source LLMs locally |
-| [LM Studio](https://lmstudio.ai/) | Desktop application for running and serving local LLMs |
-| [Together AI](https://www.together.ai/) | Platform for deploying and serving large language models |
-| [Fireworks AI](https://fireworks.ai/) | Infrastructure for serving and fine-tuning LLMs |
-| [Groq](https://groq.com/) | High-performance LLM inference and serving platform |
-| [OpenAI](https://openai.com/) | API platform for serving GPT and other AI models |
-| [Anthropic](https://www.anthropic.com/) | Platform for serving Claude and other AI models |
-| [Mistral AI](https://mistral.ai/) | Platform for serving efficient and powerful language models |
-| [Google Gemini](https://deepmind.google/technologies/gemini/) | Google's platform for serving multimodal AI models |
-
-
-
-### Agent Sandboxes
-
-| Platform | Description |
-|----------|-------------|
-| [E2B](https://e2b.dev/) | Secure sandboxed environments for running and testing AI agents |
-| [Modal](https://modal.com/) | Cloud platform for running AI agents in isolated environments |
-
-Note: These platforms provide secure, isolated environments for testing and running AI agents, ensuring safe execution and development of agent capabilities.
-
-
-
-### Vertical AI Agent Solutions
-
-| Company | Description/Focus Area |
-|---------|----------------------|
-| [Decagon](https://decagon.ai/) | AI agent development platform |
-| [Sierra](https://sierra.ai/) | Environmental and sustainability-focused AI solutions |
-| [Replit](https://replit.com/) | Cloud development environment and AI coding tools |
-| [Perplexity](https://www.perplexity.ai/) | AI-powered search and discovery |
-| [Harvey](https://harvey.ai/) | Legal AI solutions |
-| [Please AI](https://please.ai/) | Multi-agent systems and orchestration |
-| [Cognition](https://www.cognition-labs.com/) | Cognitive computing and AI reasoning |
-| [Factory](https://www.factory.ai/) | AI automation and manufacturing solutions |
-| [Dosu](https://dosu.dev/) | AI code writing agent and github plugin |
-| [Lindy](https://lindy.ai/) | AI Automated emailing and scheduling|
-| [11x](https://11x.ai/) | Digital Human Workers |
-
-## Interesting and notabl research and libraries
-
+## Interesting and notable research and libraries
 
 !!! abstract "[Open GPTs](https://github.com/langchain-ai/opengpts) Enables the creation of agents and assistants, using Langchain components"
 
@@ -394,7 +253,7 @@ Note: These platforms provide secure, isolated environments for testing and runn
     
 
 
-## Atomatic building Agents
+## Automatic building Agents
 
 ??? abstract "[Automated Design of Agentic Systems](https://github.com/ShengranHu/ADAS)" adas
     **Developments** In their [paper](https://arxiv.org/pdf/2408.08435) the authors revealmeta-agents that observe adn critique prompting nd efforts to enable better agents. In their own words: 

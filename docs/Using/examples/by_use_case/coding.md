@@ -6,6 +6,16 @@ But how?
 
 <img width="490" alt="image" src="https://github.com/user-attachments/assets/0d74317d-bceb-4bd2-bd11-28b4306855fa" />
 
+### Impact Analysis of AI Coding
+
+| Impact Area | Benefits | Concerns |
+|------------|----------|-----------|
+| 🔄 Requirement Generation | ✅ User and Technical Requirements<br>- Natural language to specs<br>- Automated documentation<br>- Consistency checking | 🤔 Hallucinations<br>- Plausible but incorrect requirements<br>- Extraneous code generation |
+| ✍️ Testing | ✅ Unit Tests<br>✅ End-to-End Tests<br>⚠️ Requirement Verification<br>⚠️ Product Validation | 🐌 Inefficient Code<br>🤨 Tests Building False Confidence<br>- Missing edge cases<br>- Incomplete coverage |
+| 📦 Repo and Package Management | ⚠️ CI/CD Development<br>✅ Package Updates<br>✅ Security Evaluations | 🤖 Needs Agentic Solutions<br>- Complex repo management<br>- Direct access requirements |
+| 🔒 IP | ⚠️ Agentic + Algorithmic Code Evaluations | 🕵️ Defendable?<br>- Ownership unclear<br>- Patent eligibility concerns |
+| 👥 Personnel | ✅ Delivery Speed<br>- Faster development<br>- Automated tasks | 😴 Cognitive Laziness<br>🚀 AI Hubris (more tech debt) |
+
 ### Approaches to AI Code Generation
 
 There are multiple ways AI can enable code-creation when working with people.

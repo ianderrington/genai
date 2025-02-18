@@ -33,8 +33,6 @@ These components form the foundation of any AI agent system, whether simple or c
         click LLM "../../architectures/models/index.html"
         CognitiveArchitectures <--> |Find, Create, Read<br>Update, Delete| Memory[Memory]
         
-        classDef promptsColor fill:#f0ad4e,stroke:#333,stroke-width:2px;
-        class Prompts promptsColor;
         click Memory "./memory.html"
         Prompts[Prompts] -->|condition| LLM
         click Prompts "../../prompting/index.html"
@@ -46,41 +44,38 @@ These components form the foundation of any AI agent system, whether simple or c
         click Tools "./actions_and_tools.html"
         Tools -->|executed by| Interpreter[Interpreter]
         Interpreter -->|updates| Environment
-        
 
-        classDef dataColor fill:#ffcc00,stroke:#333,stroke-width:2px;
-        classDef environmentColor fill:#ff9999,stroke:#333,stroke-width:2px;
-        classDef llmColor fill:#99ccff,stroke:#333,stroke-width:2px;
-        classDef cognitiveColor fill:#cc99ff,stroke:#333,stroke-width:2px;
-        classDef memoryColor fill:#99ff99,stroke:#333,stroke-width:2px;
-        classDef actionColor fill:#ff9966,stroke:#333,stroke-width:2px;
-        classDef toolsColor fill:#ff99cc,stroke:#333,stroke-width:2px;
-        classDef interpreterColor fill:#66ffff,stroke:#333,stroke-width:2px;
-        classDef internal fill:#f996,stroke:#333,stroke-width:2px;
-        classDef external fill:#9f6,stroke:#333,stroke-width:2px;
-
-        class Data dataColor;
-        class Environment environmentColor;
-        class LLM llmColor;
-        class CognitiveArchitectures cognitiveColor;
-        class Memory memoryColor;
-        class Action actionColor;
-        class Tools toolsColor;
-        class Interpreter interpreterColor;
-
-        subgraph  
-        LLM
-        Prompts
-        CognitiveArchitectures
-        Memory
-        Action
-        Tools
-        DummyNode[Agent Internals]
+        subgraph AgentInternals[Agent Internals]
+            LLM
+            Prompts
+            CognitiveArchitectures
+            Memory
+            Action
+            Tools
         end
-        click DummyNode "./index.html"
-        class DummyNode internal;
-        style DummyNode fill:#ff9999,stroke:#fff,color:#000;  
+        click AgentInternals "./index.html"
+        
+        classDef env fill:#FFB6C1,stroke:#CD5C5C
+        classDef data fill:#FFD700,stroke:#DAA520
+        classDef llm fill:#87CEEB,stroke:#4682B4
+        classDef prompts fill:#E6E6FA,stroke:#483D8B
+        classDef cogarch fill:#DDA0DD,stroke:#8B008B
+        classDef memory fill:#90EE90,stroke:#006400
+        classDef action fill:#FFA07A,stroke:#FF6347
+        classDef tools fill:#FFB6C1,stroke:#CD5C5C
+        classDef interpreter fill:#98FB98,stroke:#228B22
+        classDef internals fill:#F0F8FF,stroke:#4682B4
 
+        class Environment env
+        class Data data
+        class LLM llm
+        class Prompts prompts
+        class CognitiveArchitectures cogarch
+        class Memory memory
+        class Action action
+        class Tools tools
+        class Interpreter interpreter
+        class AgentInternals internals
     ```
 
 At the core of agents are data interpreters such as LLMs [models](../architectures/models/index.md), provide the 'brains' that allow for data to be processed, and then acted upon. Actions occur with an [environment](./components/environments.md), with specific [actions and tools](./components/actions_and_tools.md). To be effective, the data interpretation is best accomplished with [cognitive architectures](./components/cognitive_architecture.md) that enable reasoning, planning, and interactions with [memory](./components/memory.md) sources. To coordinate these components effectively [interpreters and executors](./components/cognitive_architecture.md#interpreters). With one agent is found to work, [systems](./systems/index.md) of agents allow for multiple agents to interact with other agents and with people. 

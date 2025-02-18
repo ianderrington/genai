@@ -31,6 +31,36 @@ In a chat environment the GenAI receives text information from a user and then r
 
 ### Web environments
 
+??? abstract "[TheAGenticBrowser](https://github.com/TheAgenticAI/TheAgenticBrowser)"
+    TheAgenticBrowser is an advanced agent-based system designed for web automation and scraping using natural language interfaces. It employs a three-agent architecture to handle complex web interactions:
+
+    1. **Planner Agent**: Acts as the strategist by:
+        - Breaking down user requests into executable steps
+        - Creating and adapting plans based on feedback
+        - Determining action sequences
+    
+    2. **Browser Agent**: Serves as the executor by:
+        - Directly interacting with web pages
+        - Performing actions (clicking, typing, navigation)
+        - Extracting information using browser automation
+        - Managing DOM interactions and screenshots
+    
+    3. **Critique Agent**: Functions as quality control by:
+        - Analyzing actions and verifying results
+        - Guiding workflow progression
+        - Determining task completion status
+
+    **Key Features**:
+    - Web Research and Analysis across academic papers, travel sites & code repositories
+    - Data Extraction for various types (sports, historical, financial data)
+    - E-commerce Information scraping (prices, specifications, availability)
+    - Smart cross-domain navigation with context-aware traversal
+
+    The system operates in a continuous feedback loop:
+    1. Planning Phase: Task analysis and step-by-step execution planning
+    2. Execution Phase: Precise browser actions and result reporting
+    3. Evaluation Phase: Review, analysis, and decision-making for next steps
+
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/web-arena-x/webarena) [Webarena:](https://github.com/web-arena-x/webarena)" webarena
 
     **Developments** "WebArena is a standalone, self-hostable web environment for building autonomous agents. WebArena creates websites from four popular categories with functionality and data mimicking their real-world equivalents. To emulate human problem-solving, WebArena also embeds tools and knowledge resources as independent websites. WebArena introduces a benchmark on interpreting high-level realistic natural language command to concrete web-based interactions. We provide annotated programs designed to programmatically validate the functional correctness of each task."

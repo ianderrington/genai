@@ -16,15 +16,13 @@ Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/
 ## Core Activities in Cognitive Architectures
 
 ### Activities
-- **Rephrasing** or reformatting the input in such a way that the next component can process it effectively
+- **Tool use** Acting on the environment, or using external programs or APIs to assist in the task at hand
+- **Rephrasing and Summarizing** to reformat input for effective processing and compress information into reusable, abstract chunks
 - **Observing** or ingesting, intentionally or passively, gaining stored information that may assist in the tasks at hand
-- **Reasoning** or the ability to create causal connections between input and output. These are often taken care of at the level of the LLM
-- **Planning** to enable more complicated goals to be broken down into individually accomplishable tasks. May use external tools like memory to keep track of tasks
-- **Deciding and prioritizing** to select between different options or available components
-- **Summarizing and Abstracting** to compress information into reusable chunks or otherwise abstract information to be more effective
-- **Logging + Remembering: Learning** being the automatic or initiated information storage and recall that is accessed in [memory](./memory.md)
 - **Reflection**, or an internal (or external) evaluation of output, be it thoughts, planning, and thoughts
-- **Tool use** While overlapping directly with Observing or taking memory actions, tool usage may be part of cognitive patterns (like using a `scratch-pad`) and must be considered as such
+- **Planning and Prioritizing** to break down goals into accomplishable tasks and select between different options, using external tools like memory to track progress
+- **Logging + Remembering: Learning** being the automatic or initiated information storage and recall that is accessed in [memory](./memory.md)
+- **Reasoning** or the ability to create causal connections between input and output to reason about the goals and environment 
 
 ### Models
 Models provide the computational core of Agents. Acting like a 'brain' that takes in input [prompts](../../prompting/index.md), they return outputs. Generally, the models may be considered `frozen` for a given agent, but sometimes, agentic feedback is used to help model creation with [Recursive training](../../architectures/training/recursive.md).
@@ -327,21 +325,21 @@ There are other [memory based solutions](memory.md) including [RAG](./memory.md#
 Planning is a critical component of agent architecture. According to Huyen, planning involves:
 
 1. **Task Planning**
-   - Breaking complex tasks into manageable actions
-   - Determining tool requirements
-   - Validating feasibility
-   - Setting constraints and goals
+    - Breakng complex tasks into manageable actions
+    - Determining tool requirements
+    - Validating feasibility
+    - Setting constraints and goals
 
 2. **Plan Validation**
-   - Heuristic checks for invalid actions
-   - AI-based plan evaluation
-   - Human oversight for critical operations
+    - Heuristic checks for invalid actions
+    - AI-based plan evaluation
+    - Human oversight for critical operations
 
 3. **Plan Execution Patterns**
-   - Sequential: Actions executed one after another
-   - Parallel: Multiple actions executed simultaneously
-   - Conditional: Branching based on previous results
-   - Iterative: Repeated actions until conditions are met
+    - Sequential: Actions executed one after another
+    - Parallel: Multiple actions executed simultaneously
+    - Conditional: Branching based on previous results
+    - Iterative: Repeated actions until conditions are met
 
 
 ### Reflection
@@ -349,14 +347,14 @@ Planning is a critical component of agent architecture. According to Huyen, plan
 Self-reflection is a crucial aspect of agent architecture. It involves:
 
 1. **Self-Assessment**
-   - Evaluating performance and progress
-   - Identifying areas for improvement
-   - Learning from past experiences
+    - Evaluating performance and progress
+    - Identifying areas for improvement
+    - Learning from past experiences
 
 2. **Feedback**
-   - Receiving and responding to feedback
-   - Adjusting strategies and actions
-   - Continuous learning and adaptation
+    - Receiving and responding to feedback
+    - Adjusting strategies and actions
+    - Continuous learning and adaptation
 
 
 ??? important "[Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation](https://arxiv.org/pdf/2310.02304v1.pdf)"

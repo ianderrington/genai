@@ -11,63 +11,75 @@ bullet_points:
 
 This directory provides a curated collection of agent implementations and research projects. The examples demonstrate various approaches to agent design, from single-purpose tools to complex cognitive architectures.
 
-## What are some types of Agents?
-
-
-Agents are useful because they can accomplish tasks that are both simple, or complex or difficult to do.
-
-1. Human+Chat-agents
-1. [Computer Using Agents](#computer-using-agents)
-1. Coding Agents
-1. Web Browser Agents
-1. Research Agents
-1. Customer Service Agents
-1. Embodied agents (robots)
-
-
+Agents are useful because they can accomplish tasks that are both simple, or complex or difficult to do. General-purpose agents are useful because they can accomplish a wide range of tasks, while narrow focus agents are useful because they can accomplish a specific task often with better results than a general-purpose agent.
 
 ## Categories 
 
-- [Single-Purpose Agents](#single-purpose-agents): Specialized agents focused on specific tasks
+- [Narrow Focus Agents](#narrow-focus-agents): Specialized agents focused on specific tasks
 - [General-Purpose Agents](#general-purpose-agents): Versatile agents capable of handling diverse tasks
-- [Research Projects](#research-projects): Academic and experimental implementations
-- [Multi-Agent Systems](../systems/examples.md): Collaborative agent implementations
-- [Commercial Solutions](commercial.md): Production-ready agent platforms
 
-## Single-Purpose Agents
+## General-Purpose Agents
+
+General-purpose agents are useful because they can accomplish a wider range of tasks. Because they are general purpose, they may often be not as good as narrow focus agents at accomplishing a specific task. The [environment](../components/environment.md) they operate in will determine how well they can accomplish a specific task. 'Several domains of general-purpose agents are listed below.
+
+1. [Computer Using Agents](#computer-using-agents)
+1. [Web Browser Agents](#web-browser-agents)
+1. [Human Simulacrum Robots](#human-simulacrum-robots)
+
+### Computer Using Agents
+
+OpenAI announced [operator](https://openai.com/index/introducing-operator/) agent, which are general purpose [Computer Using Agent](https://openai.com/index/computer-using-agent/) 
+
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/simular-ai/Agent-S) [Agent-S](https://github.com/simular-ai/Agent-S)"
+    A general-purpose computer-using agent that can:
+    - Execute terminal commands and interact with the file system
+    - Understand and manipulate code across multiple programming languages
+    - Perform system operations and file management tasks
+    - Navigate and modify complex codebases
+    - Integrate with development workflows and tools
+
+### Web Browser Agents
+
+While still 'narrow' in that they are only able to use the web browser, they are still useful for a wide range of tasks.
+
+### Human Simulacrum Robots
+
+
+
+## Narrow Focus Agents
 
 Single-purpose agents are designed to excel at specific tasks, demonstrating focused capabilities and specialized implementations.
 
-??? abstract "[gpt-researcher](https://github.com/assafelovic/gpt-researcher)"
+1. [Human+Chat-agents](#human-chat-agents)
+1. [Coding Agents](#coding-agents)
+1. [Research Agents](#research-agents)
+1. [Customer Service Agents](#customer-service-agents)
+1. [Agents in Simulated Environments](#agents-in-simulated-environments)
+1. [Embodied agents (robots)](#embodied-agents-robots)
+
+### Human+Chat-agents
+
+### Coding Agents
+
+### Research Agents
+
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher) [GPT researcher](https://github.com/assafelovic/gpt-researcher) is an autonomous agent designed for comprehensive online research on a variety of tasks."
     An autonomous agent for comprehensive online research:
     - Handles diverse research tasks through systematic information gathering
     - Implements structured research methodologies
     - Features autonomous web research capabilities
+    
 
-??? abstract "[L3AGI](https://github.com/l3vels/L3AGI)"
-    Open-source tool for AI Assistant collaboration:
-    - Enables AI assistants to work together effectively
-    - Implements team-based interaction patterns
-    - Features collaborative problem-solving capabilities
+### Agents in Simulated Environments
 
-## General-Purpose Agents
-
-General-purpose agents demonstrate versatility across different tasks and domains, often featuring sophisticated cognitive architectures.
-
-??? abstract "[OS-Copilot/FRIDAY](https://github.com/OS-Copilot/FRIDAY)"
-    A generalist computer agent framework:
-    - Implements DAG-based task planning
-    - Features three-tier memory system:
-      - Declarative: User preferences and semantic knowledge
-      - Procedural: Skill development and tool usage
-      - Working: Information exchange and updates
-    - Paper: [OS-Copilot Paper](https://arxiv.org/abs/2402.07456)
-
-??? abstract "[MineDojo/Voyager](https://github.com/MineDojo/Voyager)"
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/MineDojo/Voyager) [Voyager from MineDojo](https://github.com/MineDojo/Voyager)"
     A lifelong learning agent in Minecraft:
     - Demonstrates continuous learning in virtual environments
     - Features expandable tool usage capabilities
     - Implements environment interaction patterns
+
+    ![image](https://github.com/MineDojo/Voyager/raw/main/images/pull.png)
+
 
 ??? abstract "[ProfSynapse/Synapse_CoR](https://github.com/ProfSynapse/Synapse_CoR)"
     An instructive agent for technology education:
@@ -76,25 +88,6 @@ General-purpose agents demonstrate versatility across different tasks and domain
     - Includes comprehensive security measures
     - Website: [SynthMinds.ai](https://www.synthminds.ai/)
 
-
-
-
-## Example Agents
-
-There are different categories for Agents, which are often either by the environment in which they act or by the manner in which they are used. Because of their variety, it has been found essential to enable their end-customization. This has been done with numerous commercial ventures, including OpenAI, POE, Character.ai, etc. We discuss some basics below, but if you'd like to dig into to them, please check out the exmaples for [multiple agent](#multi-agent), and [single agents](#single-agents) to learn about them specifically. 
-
-
-## Specific Agents
-
-
-## General Agents
-
-### Computer Using Agents
-
-[OpenAI Computer Using Agent](https://openai.com/index/computer-using-agent/)
-
-
-### Examples
 
 ??? abstract "[Critic: Large Language Models can Self-correct with TOol-INteractive Critiquing](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)"
     [Paper](https://arxiv.org/pdf/2305.11738.pdf)
@@ -106,17 +99,8 @@ There are different categories for Agents, which are often either by the environ
     <img width="568" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2f72e4ad-3a49-4bd2-aa1a-e63a57c42343">
 
 
-    
-
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/MineDojo/Voyager) [Voyager from MineDojo](https://github.com/MineDojo/Voyager)"
-    Enables expandable tool-usage for a life-long learning agent working within the Minecraft Environment. 
-    ![image](https://github.com/MineDojo/Voyager/raw/main/images/pull.png)
-
-
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher) [GPT researcher](https://github.com/assafelovic/gpt-researcher) is an autonomous agent designed for comprehensive online research on a variety of tasks."
-    
-
 ### Coding Agents
+
 !!! tip "![GitHub Repo stars](https://badgen.net/github/stars/gpt-engineer-org/gpt-engineer) [GPT Engineer (gpt-engineer-org)](https://github.com/gpt-engineer-org/gpt-engineer)"
 
 ??? tip "![GitHub Repo stars](https://badgen.net/github/stars/kuafuai/DevOpsGPT) [DevOpsGPT](https://github.com/kuafuai/DevOpsGPT)"
@@ -141,7 +125,7 @@ There are different categories for Agents, which are often either by the environ
     ![image](https://docs.sweep.dev/_next/static/media/flowchart.15fed92e.svg)
 
 
-
+### Education Agents
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/ProfSynapse/Synapse_CoR?) [Professor Synapse (ProfSynapse)](https://github.com/ProfSynapse/Synapse_CoR?) is an agent embodying the instructive channel for teaching people about Agents, and LLMs and how to work with new technology"
     Apart from the Github above, Here are several relevant and imporant links related to synth minds. 
     - https://www.synthminds.ai/
@@ -254,18 +238,6 @@ There are different categories for Agents, which are often either by the environ
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/DataBassGit/AgentForge) [Agent Forge: AgentForge is a low-code framework tailored for the rapid development, testing, and iteration of AI-powered autonomous agents and Cognitive Architectures. ](https://github.com/DataBassGit/AgentForge)" agent-forge
 
-## Multi-Agent 
-
-!!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/camel-ai/camel) [CAMEL: Communicative Agents for "Mind" Exploration of Large Scale Language Model Society (King Abdullah University, March 2023)](https://github.com/camel-ai/camel)"
-
-    Paper: [https://arxiv.org/abs/2303.17760](https://arxiv.org/abs/2303.17760)
-
-    Abstract:
-    "The rapid advancement of conversational and chat-based language models has led to remarkable progress in complex task-solving. However, their success heavily relies on human input to guide the conversation, which can be challenging and time-consuming. This paper explores the potential of building scalable techniques to facilitate autonomous cooperation among communicative agents and provide insight into their "cognitive" processes. To address the challenges of achieving autonomous cooperation, we propose a novel communicative agent framework named role-playing. Our approach involves using inception prompting to guide chat agents toward task completion while maintaining consistency with human intentions. We showcase how role-playing can be used to generate conversational data for studying the behaviors and capabilities of chat agents, providing a valuable resource for investigating conversational language models. Our contributions include introducing a novel communicative agent framework, offering a scalable approach for studying the cooperative behaviors and capabilities of multi-agent systems, and open-sourcing our library to support research on communicative agents and beyond. "
-
-    GitHub: [https://github.com/camel-ai/camel](https://github.com/camel-ai/camel)
-
-    Article: [https://blog.devgenius.io/coded-example-of-langchain-enabled-cooperative-agents-4859d294b197](https://blog.devgenius.io/coded-example-of-langchain-enabled-cooperative-agents-4859d294b197)
 
 
 ## Research

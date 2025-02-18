@@ -39,6 +39,15 @@ To ensure models meet technical, customer, and organizational requirements, it i
     Multimodal training:
     ![image](https://github.com/user-attachments/assets/2cc41289-4619-45a7-8d45-02fcba41ebff)
 
+??? abstract "[DeepSeek R1](https://www.interconnects.ai/p/deepseek-r1-recipe-for-o1)"
+    MIT-licensed reasoning language model with a 4-stage training process:
+    - Initial R1-Zero model trained directly with RL from base model
+    - Cold-start SFT using synthetic reasoning data from R1-Zero
+    - Large-scale RL training on reasoning problems
+    - Rejection sampling and final RL polish for general capabilities
+    - Competitive with OpenAI's o1 at significantly lower cost
+    - Includes distilled versions for smaller models
+
 ### Multimodal Models
 
 ??? abstract "[MOLMO](https://molmo.allenai.org/paper.pdf)"
