@@ -48,6 +48,10 @@ Layer normalization observably improves results. For more details, see [On Layer
     A very interesting visual representation of transformers.
     <img width="785" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/ecca4ace-6623-4341-b223-c12be4de3c11">
 
+??? note "[A visual guide of transformer architecture](https://www.hendrik-erz.de/post/the-transformer-architecture-a-visual-guide-pdf-download)"
+    <img width="464" alt="image" src="https://github.com/user-attachments/assets/53f8c461-6760-4118-bee4-f51491bb80d6" />
+
+
 ## Detailed Components
 
 1. **Positional Encoding**
