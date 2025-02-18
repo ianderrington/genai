@@ -39,7 +39,12 @@ To ensure models meet technical, customer, and organizational requirements, it i
     Multimodal training:
     ![image](https://github.com/user-attachments/assets/2cc41289-4619-45a7-8d45-02fcba41ebff)
 
-??? abstract "[DeepSeek R1](https://www.interconnects.ai/p/deepseek-r1-recipe-for-o1)"
+??? abstract "[DeepSeek]"
+    
+    Perplexity just released POST TRAINED DeepSeek R1 for factual and unbiased information - MIT Licensed 🔥
+    [Post Trained](https://huggingface.co/perplexity-ai/r1-1776)
+
+    [DeepSeek R1](https://www.interconnects.ai/p/deepseek-r1-recipe-for-o1)
     MIT-licensed reasoning language model with a 4-stage training process:
     - Initial R1-Zero model trained directly with RL from base model
     - Cold-start SFT using synthetic reasoning data from R1-Zero
