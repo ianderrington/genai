@@ -81,6 +81,18 @@ Graph Databases provide the ability to put information in relational contexts. B
 
 ## Research
 
+??? note "[A-MEM: Agentic Memory for LLM Agents](https://arxiv.org/pdf/2502.12110v1)"
+    The authors generate dynamic memory structuring without static predetermined memory, based on Zettelkasten method. They have memory architectur that
+
+    For each new memory, a comprehensive notes are made, and integrate with structured text attributes and embedding vectors for imilarity matching. it uses historical memory repository to create relevant connections and shared attributes. This allows dynamic evolution when new memories are incorporated. 
+    (1) Link generation between memories with shared attributes/descriptions
+    (2) Evolve existing memories to evolve with higher order patterns. 
+
+    ![image](https://github.com/user-attachments/assets/b93c4368-7d08-45ce-9090-4dafc376aa82)
+
+    Code not yet available here https://github.com/WujiangXu/AgenticMemory
+
+
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/lilakk/BooookScore) [BooookScore: A systematic exploration of book-length summarization in the era of LLMs](https://github.com/lilakk/BooookScore)" BooookScore
     **Developments** The authors reveal an effective manner of providing effective summaries of long books using two methods: 1. Hierarchichal merging of chunk-level summaries, and 2. Incremental update using a running summary. 
     ![image](https://github.com/ianderrington/genai/assets/76016868/2c711b18-d76f-4c75-b7fe-7960d8e7ef93)
