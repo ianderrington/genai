@@ -8,6 +8,7 @@ Data gathering encompasses various approaches:
 
 1. **Automated Collection**
    - [Web scraping and crawling](scraping.md)
+   - [Screen Recording](screen_recording.md)
    - API integrations
    - Sensor data collection
 
