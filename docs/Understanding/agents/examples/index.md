@@ -38,9 +38,21 @@ OpenAI announced [operator](https://openai.com/index/introducing-operator/) agen
     - Navigate and modify complex codebases
     - Integrate with development workflows and tools
 
+
+AI Agents for Computer Use: A Review of Instruction-based Computer Control, GUI Automation, and Operator Assistants
+
+??? note "[AI Agents for Computer Use: A Review of Instruction-based Computer Control, GUI Automation, and Operator Assistants](https://arxiv.org/abs/2501.16150)"
+
+
 ### Web Browser Agents
 
 While still 'narrow' in that they are only able to use the web browser, they are still useful for a wide range of tasks.
+
+??? abstract "[Browser use](https://github.com/gregpr07/browser-use)"
+    A powerful open-source library that lets AI agents naturally interact with websites. Using LangChain and GPT models, it automates complex web tasks from navigation to form-filling, making browser automation seamless.
+
+
+
 
 ### Human Simulacrum Robots
 
@@ -62,6 +74,11 @@ Single-purpose agents are designed to excel at specific tasks, demonstrating foc
 ### Coding Agents
 
 ### Research Agents
+
+??? note "[AI Co Scientist](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/)"
+    [Paper](https://storage.googleapis.com/coscientist_paper/ai_coscientist.pdf)
+    ![image](https://github.com/user-attachments/assets/f33cf1a4-45ad-490f-9d50-be816d5264f1)
+
 
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher) [GPT researcher](https://github.com/assafelovic/gpt-researcher) is an autonomous agent designed for comprehensive online research on a variety of tasks."
     An autonomous agent for comprehensive online research:
