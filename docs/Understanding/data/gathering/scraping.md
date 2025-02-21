@@ -57,3 +57,13 @@ Data scraping is the process of automatically extracting information from variou
     - Use async operations when possible
     - Implement proper caching
     - Consider distributed scraping for large datasets
+
+## Essential Frameworks and Libraries
+
+[Firecrawl](https://www.firecrawl.com/)
+[Firecrawl GitHub](https://github.com/mendableai/firecrawl)
+
+[Scrapy](https://scrapy.org/)
+[Scrapy GitHub](https://github.com/scrapy/scrapy)
+
+

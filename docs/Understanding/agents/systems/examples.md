@@ -216,6 +216,7 @@ Examples of agent systems working together to develop software and solutions.
 
 ??? abstract "Polaris - Healthcare Safety System"
     [Polaris](https://arxiv.org/html/2403.13313v1) is a safety-focused LLM constellation architecture for healthcare, ensuring safe and compliant AI chatbots through multi-agent collaboration.
+    
 
 ??? tip "Showrunner Agents - Content Generation"
     [Showrunner Agents](https://fablestudio.github.io/showrunner-agents/) use LLMs to generate episodic content through a creative and multi-faceted process.

@@ -298,6 +298,8 @@ https://docs.copilotkit.ai/coagents
 
 #### Agent Observability Solutions
 
+These platforms provide specialized tools for monitoring, debugging, and analyzing the performance of AI agents and LLM applications in production environments.
+
 | Platform | Description |
 |----------|-------------|
 | [LangSmith](https://smith.langchain.com/) | LangChain's platform for debugging, testing, evaluating, and monitoring LLM applications and agents |
@@ -307,7 +309,7 @@ https://docs.copilotkit.ai/coagents
 | [AgentOps.ai](https://www.agentops.ai/) | Specialized platform for monitoring and optimizing AI agents |
 | [Braintrust](https://www.braintrustdata.com/) | LLM evaluation and monitoring platform |
 
-These platforms provide specialized tools for monitoring, debugging, and analyzing the performance of AI agents and LLM applications in production environments.
+
 
 Key observability features to consider:
 
