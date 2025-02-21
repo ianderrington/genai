@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Try It Out!</title>
-    <!-- Add highlight.js for syntax highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- Dynamic resource loading -->
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    
+    <!-- Load Mermaid as module if needed -->
+    
+    
     <style>
         :root {
             --slide-width: 1280px;
@@ -140,30 +148,38 @@
             width: 100%;
         }
     </style>
+    
     <script>
-        // Initialize syntax highlighting
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-        });
-
         function scaleContent() {
             const html = document.documentElement;
             const body = document.body;
             
-            // Calculate scale to fit viewport
             const scaleX = (window.innerWidth - 40) / body.offsetWidth;
             const scaleY = (window.innerHeight - 40) / body.offsetHeight;
             const scale = Math.min(scaleX, scaleY, 1);
             
-            // Apply scale to html element to scale everything uniformly
             html.style.transform = `scale(${scale})`;
             html.style.transformOrigin = 'center center';
         }
 
+        // Initialize components when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            
+                
+                    hljs.configure({
+                        ignoreUnescapedHTML: true,
+                        throwUnescapedHTML: false
+                    });
+                    hljs.highlightAll();
+                
+            
+        });
+
         window.addEventListener('load', scaleContent);
         window.addEventListener('resize', scaleContent);
+        
+        // Disable live reload script
+        window.__MKDOCS_LIVE_RELOAD__ = false;
     </script>
 </head>
 <body>

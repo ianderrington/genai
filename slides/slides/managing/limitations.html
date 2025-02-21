@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What are Agents?</title>
-    <!-- Add highlight.js for syntax highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <title>Agent Limitations</title>
+    
+    <!-- Dynamic resource loading -->
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    
+    <!-- Load Mermaid as module if needed -->
+    
+    
     <style>
         :root {
             --slide-width: 1280px;
@@ -140,59 +148,68 @@
             width: 100%;
         }
     </style>
+    
     <script>
-        // Initialize syntax highlighting
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-        });
-
         function scaleContent() {
             const html = document.documentElement;
             const body = document.body;
             
-            // Calculate scale to fit viewport
             const scaleX = (window.innerWidth - 40) / body.offsetWidth;
             const scaleY = (window.innerHeight - 40) / body.offsetHeight;
             const scale = Math.min(scaleX, scaleY, 1);
             
-            // Apply scale to html element to scale everything uniformly
             html.style.transform = `scale(${scale})`;
             html.style.transformOrigin = 'center center';
         }
 
+        // Initialize components when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            
+                
+                    hljs.configure({
+                        ignoreUnescapedHTML: true,
+                        throwUnescapedHTML: false
+                    });
+                    hljs.highlightAll();
+                
+            
+        });
+
         window.addEventListener('load', scaleContent);
         window.addEventListener('resize', scaleContent);
+        
+        // Disable live reload script
+        window.__MKDOCS_LIVE_RELOAD__ = false;
     </script>
 </head>
 <body>
     <div class="slide-content">
-        <h1>What are Agents?</h1>
-<p>AI agents are autonomous systems that can:</p>
-<ul>
-<li>Observe their environment</li>
-<li>Make decisions based on observations</li>
-<li>Take actions to achieve goals</li>
-<li>Learn from experience</li>
-<li>Use tools and APIs</li>
-<li>Store and recall information</li>
-</ul>
-<hr />
-<h1>Key Components</h1>
-<ul>
-<li>Cognitive Architecture (thinking &amp; reasoning)</li>
-<li>Memory Systems (information storage &amp; retrieval)</li>
-<li>Action &amp; Tool Systems (interaction capabilities)</li>
-<li>Environment (operating context)</li>
-</ul>
-<hr />
-<h1>Types of Agents</h1>
+        <h1>Agent Limitations</h1>
 <ol>
-<li>Chat-based Agents</li>
-<li>Autonomous Task Agents</li>
-<li>Multi-Agent Systems</li>
-<li>Embodied Agents</li>
+<li>🎭 <strong>Reliability</strong></li>
+<li>May hallucinate or make mistakes</li>
+<li>
+<p>Needs validation mechanisms</p>
+</li>
+<li>
+<p>🔒 <strong>Security</strong></p>
+</li>
+<li>Access control challenges</li>
+<li>
+<p>Potential vulnerabilities</p>
+</li>
+<li>
+<p>🎯 <strong>Goal Alignment</strong></p>
+</li>
+<li>May misinterpret objectives</li>
+<li>
+<p>Requires clear constraints</p>
+</li>
+<li>
+<p>🤔 <strong>Understanding</strong></p>
+</li>
+<li>Limited common sense</li>
+<li>Context boundaries</li>
 </ol>
     </div>
 </body>

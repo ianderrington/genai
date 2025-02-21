@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How do Agents Work?</title>
-    <!-- Add highlight.js for syntax highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <title>Untitled Slide</title>
+    
+    <!-- Dynamic resource loading -->
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    
+    <!-- Load Mermaid as module if needed -->
+    
+    
     <style>
         :root {
             --slide-width: 1280px;
@@ -140,62 +148,46 @@
             width: 100%;
         }
     </style>
+    
     <script>
-        // Initialize syntax highlighting
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-        });
-
         function scaleContent() {
             const html = document.documentElement;
             const body = document.body;
             
-            // Calculate scale to fit viewport
             const scaleX = (window.innerWidth - 40) / body.offsetWidth;
             const scaleY = (window.innerHeight - 40) / body.offsetHeight;
             const scale = Math.min(scaleX, scaleY, 1);
             
-            // Apply scale to html element to scale everything uniformly
             html.style.transform = `scale(${scale})`;
             html.style.transformOrigin = 'center center';
         }
 
+        // Initialize components when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            
+                
+                    hljs.configure({
+                        ignoreUnescapedHTML: true,
+                        throwUnescapedHTML: false
+                    });
+                    hljs.highlightAll();
+                
+            
+        });
+
         window.addEventListener('load', scaleContent);
         window.addEventListener('resize', scaleContent);
+        
+        // Disable live reload script
+        window.__MKDOCS_LIVE_RELOAD__ = false;
     </script>
 </head>
 <body>
     <div class="slide-content">
-        <h1>How do Agents Work?</h1>
-<p>The Agent Loop:</p>
-<ol>
-<li>Observe Environment</li>
-<li>Process Information</li>
-<li>Make Decisions</li>
-<li>Take Actions</li>
-<li>Learn &amp; Update</li>
-</ol>
-<hr />
-<h1>Core Processes</h1>
-<ul>
-<li>Input Processing</li>
-<li>Decision Making</li>
-<li>Action Planning</li>
-<li>Tool Usage</li>
-<li>Memory Management</li>
-<li>Self-Improvement</li>
-</ul>
-<hr />
-<h1>Advanced Capabilities</h1>
-<ul>
-<li>Chain-of-Thought Reasoning</li>
-<li>Task Decomposition</li>
-<li>Tool Selection &amp; Usage</li>
-<li>Memory Storage &amp; Retrieval</li>
-<li>Error Handling &amp; Recovery</li>
-</ul>
+        <p>🗼 <strong>Cognitive Architecture</strong>
+- Planning &amp; reasoning
+- Decision making
+- Goal management</p>
     </div>
 </body>
 </html> 

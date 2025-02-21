@@ -49,11 +49,11 @@ window.addEventListener('load', function() {
 
         function toggleFullscreen() {
             deck.classList.toggle('fullscreen');
-            activeDeck = deck;  // Set active deck
+            activeDeck = deck;
             if (deck.classList.contains('fullscreen')) {
                 fullscreenBtn.textContent = '⛶';
-                fullscreenBtn.title = 'Exit fullscreen';
-                showControls();  // Now this will work
+                fullscreenBtn.title = 'Exit fullscreen (Esc or click)';
+                showControls();
             } else {
                 fullscreenBtn.textContent = '⛶';
                 fullscreenBtn.title = 'Enter fullscreen';
@@ -77,10 +77,14 @@ window.addEventListener('load', function() {
             activeDeck = deck;
         });
 
-        deck.addEventListener('click', () => {
+        deck.addEventListener('click', (e) => {
+            // Only handle clicks on the deck background, not on slides or controls
+            if (e.target === deck && deck.classList.contains('fullscreen')) {
+                toggleFullscreen();
+            }
             activeDeck = deck;
             if (deck.classList.contains('fullscreen')) {
-                showControls();  // Now this will work
+                showControls();
             }
         });
 
@@ -130,26 +134,19 @@ window.addEventListener('load', function() {
                 e.stopPropagation();
             });
 
-            // Separate mobile close handler - directly exit fullscreen
+            // Separate mobile close handler
             mobileClose?.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                console.log('Mobile close clicked');  // Add debug
-                deck.classList.remove('fullscreen');
-                fullscreenBtn.textContent = '⛶';
-                fullscreenBtn.title = 'Enter fullscreen';
-                window.dispatchEvent(new Event('resize'));
-            }, true);  // Use capture phase
+                toggleFullscreen();
+            });
         }
-    });
 
-    // Prevent clicks on slides from stopping keyboard events
-    document.querySelectorAll('.slide').forEach(slide => {
-        slide.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (activeDeck?.classList.contains('fullscreen')) {
-                showControls();
-            }
+        // Prevent slide content from triggering exit
+        deck.querySelectorAll('.slide-content, .slides-controls, .mobile-nav').forEach(element => {
+            element.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
         });
     });
 
@@ -157,18 +154,7 @@ window.addEventListener('load', function() {
     document.addEventListener('keydown', function(e) {
         if (!activeDeck) return;
 
-        // Only handle keyboard if active deck is visible or in fullscreen
-        const rect = activeDeck.getBoundingClientRect();
-        const isVisible = (
-            activeDeck.classList.contains('fullscreen') || 
-            (rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= window.innerHeight &&
-            rect.right <= window.innerWidth)
-        );
-        
-        if (!isVisible) return;
-
+        // Handle keyboard events even when slides are clicked
         const controls = {
             prevSlide: activeDeck.querySelector('.prev-slide'),
             nextSlide: activeDeck.querySelector('.next-slide')
@@ -195,18 +181,14 @@ window.addEventListener('load', function() {
             case 'Escape':
                 if (activeDeck.classList.contains('overview-active')) {
                     activeDeck.querySelector('.overview-toggle').click();
-                    e.preventDefault();
                 } else if (activeDeck.classList.contains('fullscreen')) {
-                    if (isMobile) {
-                        const mobileClose = activeDeck.querySelector('.mobile-close');
-                        if (mobileClose) {
-                            mobileClose.click();
-                        }
-                    } else {
-                        activeDeck.querySelector('.fullscreen-toggle').click();
-                    }
-                    e.preventDefault();
+                    activeDeck.classList.remove('fullscreen');
+                    const fullscreenBtn = activeDeck.querySelector('.fullscreen-toggle');
+                    fullscreenBtn.textContent = '⛶';
+                    fullscreenBtn.title = 'Enter fullscreen';
+                    window.dispatchEvent(new Event('resize'));
                 }
+                e.preventDefault();
                 break;
             case 'o':
             case 'O':
