@@ -21,13 +21,15 @@ Data scraping is the process of automatically extracting information from variou
 
 ## Tools and Libraries
 
-### Web Scraping
+### General-Purpose Tools
+
+#### Web Scraping
 - BeautifulSoup
-- Scrapy
+- Scrapy ([Website](https://scrapy.org/) | [GitHub](https://github.com/scrapy/scrapy))
 - Selenium
 - Puppeteer
 
-### Document Scraping
+#### Document Scraping
 - MinerU
 - Apache Tika
 - Tabula
@@ -40,6 +42,28 @@ Data scraping is the process of automatically extracting information from variou
     - Extracting images, tables, and formulas
     - Supporting multiple languages through OCR
     - Handling complex layouts and scientific literature
+
+### LLM-Specific Tools
+
+Several specialized tools have been developed specifically for gathering and processing data for Large Language Models:
+
+#### Code Repository Processing
+- [gitingest](https://github.com/cyclotruc/gitingest) - Replace 'hub' with 'ingest' in any GitHub URL to get a prompt-friendly extract of a codebase
+- [repomix](https://github.com/yamadashy/repomix) - Packs your entire repository into a single, AI-friendly file
+- [files-to-prompt](https://github.com/simonw/files-to-prompt) - Concatenates a directory of files into a single LLM-ready prompt
+- [RepoToTextForLLMs](https://github.com/Doriandarko/RepoToTextForLLMs) - Simple Python script for fetching repository content
+
+#### Web Content Processing
+- [llm-scraper](https://github.com/mishushakov/llm-scraper) - Converts webpages into structured data using LLMs
+- [crawl4ai](https://github.com/unclecode/crawl4ai) - LLM-friendly web crawler and scraper
+- [reader](https://github.com/jina-ai/reader) - Convert any URL to LLM-friendly input using https://r.jina.ai/
+- [firecrawl](https://github.com/mendableai/firecrawl) - API to convert websites into LLM-ready markdown or structured data
+- [llmstxt-generator](https://github.com/mendableai/llmstxt-generator) - API to generate llms.txt files from websites
+
+#### Document Processing
+- [marker](https://github.com/VikParuchuri/marker) - Fast PDF to markdown or JSON conversion
+- [trafilatura](https://github.com/adbar/trafilatura) - Python & CLI tool for web text and metadata extraction
+- [docling](https://github.com/DS4SD/docling) - Simplifies processing and parsing of diverse document formats
 
 ## Scraping Practices
 
@@ -66,4 +90,8 @@ Data scraping is the process of automatically extracting information from variou
 [Scrapy](https://scrapy.org/)
 [Scrapy GitHub](https://github.com/scrapy/scrapy)
 
+## Additional Resources
 
+For additional resources and datasets specifically focused on post-training, refer to:
+- [llm-datasets](https://github.com/mlabonne/llm-datasets) - Curated list of datasets and tools for LLM post-training
+- [LLM Data Scrapers Repository](https://github.com/patrickloeber/llm-data-scrapers) - Collection of useful Open Source tools and scrapers for LLMs

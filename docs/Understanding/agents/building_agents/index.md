@@ -32,7 +32,9 @@ The AI agent landscape has evolved significantly since the initial release of fr
 
 ## Strategies for Building Agents
 
-### Low/No Code vs Code-Centric Approaches
+### Development Approaches
+
+#### Low/No Code vs Code-Centric Approaches
 
 The development of AI agents can follow two main paths, each with its own advantages and use cases:
 
@@ -40,7 +42,7 @@ The development of AI agents can follow two main paths, each with its own advant
 |--------|---------------|------------|----------------|
 | **Key Benefits** | Easy to use, rapid deployment | Best of both worlds | Full customization, scalability |
 | **Best For** | Simple agents, chatbots | Evolving projects | Complex systems, enterprise |
-| **Delivery Speed** | Days - Weeks ⚡ | Variable 📅 | Weeks - Months ��️ |
+| **Delivery Speed** | Days - Weeks ⚡ | Variable 📅 | Weeks - Months 🗓️ |
 | **Maintenance Difficulty** | Low (platform handles) 🟢 | Medium (split scope) 🟡 | High (full stack) 🔴 |
 | **Control** | Limited 🔒 | Balanced ⚖️ | Complete 🛠️ |
 | **Examples** | GPTs, Zapier, Bubble 🤖 | GPTs + Custom Backend | LangChain, AutoGen 🚀 |
@@ -61,7 +63,37 @@ The development of AI agents can follow two main paths, each with its own advant
     | **Iteration Speed** | Very fast | Depends on complexity | Fast for no-code components |
     | **Security Control** | Platform-dependent | Full control | Balanced control |
 
-#### Low/No Code Development
+#### Workflow Automation vs AI Agents
+
+A key distinction in modern AI systems is between AI Agents and Workflow Automation approaches:
+
+| Aspect | AI Agents and Teams | Workflow Automation |
+|--------|-------------------|-------------------|
+| **How?** | LLMs direct its own action based on feedback | LLM is embedded in, or controls flow in predefined paths |
+| **Core Functionality** | Language understanding, contextual assistance | Trigger-based actions, workflow automation |
+| **Ease of Use** | Requires setup and training | User-friendly, often no coding needed |
+| **Integration and Customization** | Code-based integration with custom and commercial apps | Manual-integration with multiple apps/services |
+| **Pricing** | LLM API and observability costs | LLM API costs and scale based subscriptions |
+| **Testing and Optimization** | Enabled programmatically | Generally manual |
+| **Tasks** | Complex, open-ended goals and tasks | Simpler and predefined tasks and procedures |
+| **Scalability** | Scalability determined by code efficiency and hosting providers | Scalable through tiered service models |
+| **Options** | LangGraph, AutoGen, Microsoft Copilot | Make, n8n, Zapier, Stack, Voiceflow |
+
+??? abstract "Detailed Comparison of AI Agents vs Workflow Automation"
+    | Aspect | AI Agents and Teams | Workflow Automation |
+    |--------|-------------------|-------------------|
+    | **Decision Making** | • Autonomous reasoning<br>• Self-directed actions<br>• Learning from feedback | • Predefined decision paths<br>• Rule-based triggers<br>• Fixed action sequences |
+    | **Use Cases** | • Complex research tasks<br>• Creative problem solving<br>• Adaptive interactions | • Document processing<br>• Data workflows<br>• Scheduled automations |
+    | **Development** | • Custom code development<br>• API integrations<br>• Advanced configurations | • Visual flow builders<br>• Pre-built templates<br>• No-code interfaces |
+    | **Maintenance** | • Code updates<br>• Model fine-tuning<br>• Performance monitoring | • Visual flow updates<br>• Template modifications<br>• Platform-managed updates |
+    | **Integration** | • Programmatic API access<br>• Custom connectors<br>• Deep system integration | • Pre-built connectors<br>• Visual integrations<br>• Platform limitations |
+    | **Security** | • Custom security policies<br>• Fine-grained access control<br>• Custom audit trails | • Platform security<br>• Predefined permissions<br>• Standard logging |
+    | **Cost Factors** | • API consumption<br>• Infrastructure costs<br>• Development resources | • Platform subscriptions<br>• Usage-based pricing<br>• Integration costs |
+    | **Performance** | • Highly customizable<br>• Infrastructure dependent<br>• Optimization flexibility | • Platform constrained<br>• Tier-based limits<br>• Standard optimization |
+
+#### Development Details
+
+##### Low/No Code Development
 
 Low/no code platforms provide visual interfaces and pre-built components for building agents without extensive programming:
 
@@ -85,7 +117,7 @@ Low/no code platforms provide visual interfaces and pre-built components for bui
     - Simple automation workflows
     - Standard use cases with common integrations
 
-#### Code-Centric Development
+##### Code-Centric Development
 
 Traditional programming approaches offer maximum flexibility and control:
 
@@ -109,7 +141,7 @@ Traditional programming approaches offer maximum flexibility and control:
     - High-performance requirements
     - Deep system integrations
 
-#### Hybrid Approaches
+##### Hybrid Approaches
 
 Many organizations adopt a hybrid strategy:
 
