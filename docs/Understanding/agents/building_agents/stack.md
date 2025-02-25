@@ -75,6 +75,7 @@ These platforms provide various solutions for deploying and serving AI models, f
 | Platform | Description |
 |----------|-------------|
 | [vLLM](https://github.com/vllm-project/vllm) | High-performance inference engine for LLM serving |
+| [AIBrix](https://github.com/vllm-project/aibrix) | Cost-efficient and pluggable infrastructure components for GenAI inference with features like high-density LoRA management, LLM gateway/routing, and distributed inference |
 | [Ollama](https://ollama.ai/) | Run and serve open-source LLMs locally |
 | [LM Studio](https://lmstudio.ai/) | Desktop application for running and serving local LLMs |
 | [Together AI](https://www.together.ai/) | Platform for deploying and serving large language models |
@@ -317,6 +318,30 @@ Key observability features to consider:
 - Performance analytics and tracing
 - Debug tooling and replay capabilities
 - Cost tracking and optimization
+
+#### Front end
+
+Several solutions exist for building and deploying AI agent front-ends, ranging from development tools to complete frameworks:
+
+| Platform | Description |
+|----------|-------------|
+| [Pyspur](https://www.pyspur.dev/) | Visual development environment for building AI agents and applications |
+| [LangGraph Studio](https://github.com/langchain-ai/langgraph) | Visual interface for building and deploying LangGraph agents |
+| [CopilotKit](https://github.com/CopilotKit/open-multi-agent-canvas) | Open-source multi-agent chat interface with Next.js integration |
+| [Streamlit](https://streamlit.io/) | Fast way to build and share data/ML/AI apps |
+| [Gradio](https://gradio.app/) | UI library for deploying ML/AI models with easy-to-build interfaces |
+| [Chainlit](https://chainlit.io/) | Building Python LLM apps with chat interfaces |
+| [LlamaIndex UI](https://github.com/run-llama/llama-index-ui) | React components for building LlamaIndex applications |
+
+Key considerations for front-end solutions:
+
+- Ease of development and deployment
+- Component reusability
+- Real-time chat capabilities
+- Multi-agent support
+- Integration with backend services
+- Customization options
+- Mobile responsiveness
 
 ### Vertical AI Agent Solutions
 

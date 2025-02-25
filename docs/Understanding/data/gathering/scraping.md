@@ -48,22 +48,71 @@ Data scraping is the process of automatically extracting information from variou
 Several specialized tools have been developed specifically for gathering and processing data for Large Language Models:
 
 #### Code Repository Processing
-- [gitingest](https://github.com/cyclotruc/gitingest) - Replace 'hub' with 'ingest' in any GitHub URL to get a prompt-friendly extract of a codebase
-- [repomix](https://github.com/yamadashy/repomix) - Packs your entire repository into a single, AI-friendly file
-- [files-to-prompt](https://github.com/simonw/files-to-prompt) - Concatenates a directory of files into a single LLM-ready prompt
-- [RepoToTextForLLMs](https://github.com/Doriandarko/RepoToTextForLLMs) - Simple Python script for fetching repository content
+??? abstract "https://github.com/cyclotruc/gitingest"
+    [gitingest](https://github.com/cyclotruc/gitingest) - Replace 'hub' with 'ingest' in any GitHub URL to get a prompt-friendly extract of a codebase.
+
+??? abstract "https://github.com/yamadashy/repomix"
+    [repomix](https://github.com/yamadashy/repomix) - Packs your entire repository into a single, AI-friendly file
+
+??? abstract "https://github.com/simonw/files-to-prompt"
+    [files-to-prompt](https://github.com/simonw/files-to-prompt) - Concatenates a directory of files into a single LLM-ready prompt
+
+??? abstract "https://github.com/Doriandarko/RepoToTextForLLMs"
+    [RepoToTextForLLMs](https://github.com/Doriandarko/RepoToTextForLLMs) - Simple Python script for fetching repository content
 
 #### Web Content Processing
-- [llm-scraper](https://github.com/mishushakov/llm-scraper) - Converts webpages into structured data using LLMs
-- [crawl4ai](https://github.com/unclecode/crawl4ai) - LLM-friendly web crawler and scraper
-- [reader](https://github.com/jina-ai/reader) - Convert any URL to LLM-friendly input using https://r.jina.ai/
-- [firecrawl](https://github.com/mendableai/firecrawl) - API to convert websites into LLM-ready markdown or structured data
-- [llmstxt-generator](https://github.com/mendableai/llmstxt-generator) - API to generate llms.txt files from websites
+??? abstract "https://github.com/mishushakov/llm-scraper"
+    [llm-scraper](https://github.com/mishushakov/llm-scraper) - Converts webpages into structured data using LLMs
+
+??? abstract "https://github.com/unclecode/crawl4ai"
+    [crawl4ai](https://github.com/unclecode/crawl4ai) - LLM-friendly web crawler and scraper
+
+??? abstract "https://github.com/jina-ai/reader"
+    [reader](https://github.com/jina-ai/reader) - Convert any URL to LLM-friendly input using https://r.jina.ai/
+
+??? abstract "https://github.com/mendableai/firecrawl"
+    [firecrawl](https://github.com/mendableai/firecrawl) - API to convert websites into LLM-ready markdown or structured data
+    
+    **MCP Server Implementation**: [firecrawl-mcp-server](https://github.com/mendableai/firecrawl-mcp-server)
+    
+    Features:
+    - Scraping single URLs with advanced options (formats, content filtering, timeouts)
+    - Batch scraping with parallel processing and rate limiting
+    - Web search with content extraction
+    - Crawling with depth control and link filtering
+    - Structured data extraction using LLMs
+    - Credit usage monitoring and rate limit handling
+    
+    Configuration options:
+    - Retry behavior with exponential backoff
+    - Credit usage thresholds for warnings
+    - Custom API endpoints for self-hosted instances
+    - Batch processing parameters
+    
+    Available Tools:
+    - `firecrawl_scrape`: Single URL scraping
+    - `firecrawl_batch_scrape`: Multiple URL processing
+    - `firecrawl_search`: Web search with content extraction
+    - `firecrawl_crawl`: Deep crawling with controls
+    - `firecrawl_extract`: Structured data extraction
+    
+    Integrates with:
+    - Cursor
+    - Claude
+    - Other LLM clients supporting Model Context Protocol (MCP)
+
+??? abstract "https://github.com/mendableai/llmstxt-generator"
+    [llmstxt-generator](https://github.com/mendableai/llmstxt-generator) - API to generate llms.txt files from websites
 
 #### Document Processing
-- [marker](https://github.com/VikParuchuri/marker) - Fast PDF to markdown or JSON conversion
-- [trafilatura](https://github.com/adbar/trafilatura) - Python & CLI tool for web text and metadata extraction
-- [docling](https://github.com/DS4SD/docling) - Simplifies processing and parsing of diverse document formats
+??? abstract "https://github.com/VikParuchuri/marker"
+    [marker](https://github.com/VikParuchuri/marker) - Fast PDF to markdown or JSON conversion
+
+??? abstract "https://github.com/adbar/trafilatura"
+    [trafilatura](https://github.com/adbar/trafilatura) - Python & CLI tool for web text and metadata extraction
+
+??? abstract "https://github.com/DS4SD/docling"
+    [docling](https://github.com/DS4SD/docling) - Simplifies processing and parsing of diverse document formats
 
 ## Scraping Practices
 
@@ -82,13 +131,6 @@ Several specialized tools have been developed specifically for gathering and pro
     - Implement proper caching
     - Consider distributed scraping for large datasets
 
-## Essential Frameworks and Libraries
-
-[Firecrawl](https://www.firecrawl.com/)
-[Firecrawl GitHub](https://github.com/mendableai/firecrawl)
-
-[Scrapy](https://scrapy.org/)
-[Scrapy GitHub](https://github.com/scrapy/scrapy)
 
 ## Additional Resources
 
