@@ -2,6 +2,7 @@
 
 Data scraping is the process of automatically extracting information from various sources, typically websites, documents, or other digital formats. This technique is essential for gathering large amounts of data that would be impractical to collect manually.
 
+
 ## Common Scraping Methods
 
 1. **Web Scraping**
@@ -22,6 +23,18 @@ Data scraping is the process of automatically extracting information from variou
 ## Tools and Libraries
 
 ### General-Purpose Tools
+
+
+
+??? abstract "[Scrapegraph AI](https://github.com/ScrapeGraphAI/Scrapegraph-ai)"
+    ScrapeGraphAI is a powerful Python library that leverages LLMs and direct graph logic for web scraping. It can extract information from both websites and local documents (XML, HTML, JSON, Markdown) using natural language prompts. Key features include:
+
+    - Multiple scraping pipelines (single-page, multi-page, search-based)
+    - Support for various LLMs (OpenAI, Groq, Azure, Gemini, Ollama)
+    - Audio generation from scraped content
+    - Python script generation for custom scraping
+    - Parallel LLM processing capabilities
+    - Built-in browser automation with Playwright
 
 #### Web Scraping
 - BeautifulSoup
