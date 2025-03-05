@@ -10,7 +10,7 @@ The integrations with closed source systems are myriad. Because interfacing is k
 
 !!! note "[Mem](https://www.mem.ai)"
 
-!!! important "If you have one, please ask to add it in an [issue](https://github.com/ianderrington/genai/issues) or [contribute](../../Managenai/contributing.md) to the change!"
+!!! important "If you have one, please ask to add it in an [issue](https://github.com/ianderrington/genai/issues) or [contribute](../../../Managenai/contributing.md) to the change!"
 
 ## Open Source
 

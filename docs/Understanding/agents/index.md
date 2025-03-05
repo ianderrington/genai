@@ -102,7 +102,7 @@ Just like people, Agents can be part of workflows, and systems that act accordin
 
 Agents exist in 'environments' where they can act. These environments can be as simple as a chat, a complex as a virtual world (Minecraft), or with an actuator in a robotic system to alter something in the physical world.
 
-See [types of agents](./examples/examples.md) for examples of different types of agents.
+See [types of agents](./examples/index.md) for examples of different types of agents.
 
 ### How does an Agent work?
 

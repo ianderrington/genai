@@ -30,7 +30,7 @@ For example Open AI has launched [memory](https://openai.com/blog/memory-and-new
 
 ## Agentic RAG
 
-Agentic rag refers to dynamic response generation using methods in [rag](../../architecture/generating/rag.md) coupled with [cognitive architectures](./cognitive_architectures.md)
+Agentic rag refers to dynamic response generation using methods in [rag](../../architectures/generating/rag.md) coupled with [cognitive architectures](./cognitive_architecture.md)
  that aim to enable: 
 
 * Autonomous Decision Making

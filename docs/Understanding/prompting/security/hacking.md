@@ -4,7 +4,7 @@ Prompt hacking involves the manner of getting interfaces to do a. Do something t
 
 ## Prompt Hacking Methods and Prompts
 
-Note, please do not use these for illegal purposes or in manners that would violate your Terms-Of-Service. They are here only for educational purposes. It is recommended that you use [red-teaming](../../../Using/de-risking/red_teaming.md) strategies that use and create prompts and strategies like those described below, in order to identfiy manners of better-improving your prompt-security. 
+Note, please do not use these for illegal purposes or in manners that would violate your Terms-Of-Service. They are here only for educational purposes. It is recommended that you use [red-teaming](../../../Using/ethically/de-risking/red_teaming.md) strategies that use and create prompts and strategies like those described below, in order to identfiy manners of better-improving your prompt-security. 
 
 
 !!! important "[Universal and Transferable Adversarial Attacks on Aligned Language Models](https://llm-attacks.org)"

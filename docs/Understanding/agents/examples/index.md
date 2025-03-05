@@ -20,7 +20,7 @@ Agents are useful because they can accomplish tasks that are both simple, or com
 
 ## General-Purpose Agents
 
-General-purpose agents are useful because they can accomplish a wider range of tasks. Because they are general purpose, they may often be not as good as narrow focus agents at accomplishing a specific task. The [environment](../components/environment.md) they operate in will determine how well they can accomplish a specific task. 'Several domains of general-purpose agents are listed below.
+General-purpose agents are useful because they can accomplish a wider range of tasks. Because they are general purpose, they may often be not as good as narrow focus agents at accomplishing a specific task. The [environment](../components/environments.md) they operate in will determine how well they can accomplish a specific task. 'Several domains of general-purpose agents are listed below.
 
 1. [Computer Using Agents](#computer-using-agents)
 1. [Web Browser Agents](#web-browser-agents)

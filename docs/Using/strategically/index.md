@@ -24,7 +24,7 @@ A solution focused approach considers business needs and what needs to be accomp
 3. Decide whether to build or buy the necessary AI tools. [See building or buying guide](./building_or_buying.md).
 4. Ensure your efforts align with the important ethical considerations of using GenAI. [See ethical considerations](../ethically/index.md).
 5. Prepare to manage the use of AI in your operations. [See managing guide](../managing/index.md).
-6. Learn how to [de-risk](../de-risking/index.md). your AI-solutions
+6. Learn how to [de-risk](../ethically/de-risking/index.md) your AI-solutions
 
 #### Wild-west Approach
 
