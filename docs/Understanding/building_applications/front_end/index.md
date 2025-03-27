@@ -87,10 +87,61 @@ Benefits include:
 ## Interface Design
 
 The interface is how information flows between the user and the AI. Common patterns include:
-- Chat interfaces (standalone or integrated)
-- Sidebars or floating bars
-- Full-screen applications
-- Tool augmentation within existing software
+
+### Dedicated Window Interfaces
+- **Standard Chat Window**: Single-purpose applications like ChatGPT
+- **Canvas Pattern**: Advanced interfaces combining chat with dedicated workspaces
+- **Multi-pane Applications**: Full-featured applications with multiple interaction areas
+
+
+#### Canvas Pattern Implementation
+
+??? abstract "[Canvas Callback](https://github.com/ahmad2b/canvas-callback)"
+    [Guide](https://canvascallback.vercel.app/guide)
+    Canvas callback provides an excellent open-source implementation demonstrating:
+    - Canvas UX pattern with dedicated workspace alongside chat
+    - LangGraph's interrupt for human-in-the-loop workflows
+    - Clean separation between UI, state management, and agent logic
+    - Practical implementation for travel planning showcasing:
+        - Interactive destination selection
+        - Itinerary building
+        - Structured user input collection
+    
+    Key architectural components:
+    - Thread.tsx: Chat interface management
+    - Canvas.tsx: Dedicated workspace implementation
+    - InterruptHandler.tsx: Routes different interrupt types
+    - LangGraph integration for workflow management
+
+??? abstract "LangChain Open Canvas"
+    [Open Canvas](https://github.com/langchain-ai/open-canvas) is LangChain's open-source implementation of a document collaboration interface with AI agents:
+    - Built-in memory system for storing style rules and user insights across sessions
+    - Support for both code and markdown editing
+    - Custom and pre-built quick actions for common writing/coding tasks
+    - Artifact versioning for tracking document history
+    - Key features:
+        - Memory-powered reflection agent
+        - Start from existing documents
+        - Multiple LLM model support
+        - Local model support via Ollama
+    
+    The implementation demonstrates advanced patterns for:
+    - Document-centric AI collaboration
+    - Persistent memory across sessions
+    - Flexible content generation workflows
+    - Multi-model orchestration
+
+### Integrated Interfaces
+- **Sidebar/Popup Chat**: Contextual AI assistance (e.g., Merlin, Maxme)
+- **In-software Integration**: Direct embedding in existing tools (e.g., Notion, Google Docs, MS Office)
+- **Tool Augmentation**: Enhancement of existing software features
+
+### Ambient Interfaces
+- **Natural Communication**: Interaction through chat/email like a human colleague
+- **Background Processing**: Autonomous agents working in the background
+- **Multi-channel**: Seamless interaction across different communication channels
+
+
 
 ### Visualization Requirements
 

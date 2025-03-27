@@ -29,7 +29,7 @@ Lets first look at the components that need to be put together.
 | Layer 4: Management | [**📊 Monitoring**](#monitoring-genai)        | Tools for **monitoring** the AI system's performance and health.            |
 |                   | [**🛡 Compliance**](./security_compliance_and_governance/index.md)            | Uses observability to ensure the system is operating within **legal** and **ethical boundaries**. |                  
 | Layer 3: Application | [**🖥 UI/UX Front ends**](./front_end/index.md)       |  GUIs and interfaces are specifically designed for **streamlined connection** with GenAI models.         |
-|                   | [**📝 System evaluators**](../agents/building_agents/evaluating_and_comparing.md)            |Systems for assessing the **performance** and **effectiveness** of AI systems.      |   
+|                   | [**📝 System evaluators**](./building_agents/evaluating_and_comparing.md)            |Systems for assessing the **performance** and **effectiveness** of AI systems.      |   
 |                   |  [**🧩 Orchestration Tools**](./back_end/orchestrating.md)          |  Languages and services to create and coordinate **LLM-chains**, agents workflows involving **memory**.          |
 |                   | [**🗄  Caching**](./back_end/llm_ops/caching.md)              | Methods of speeding up model inference by caching results.        |
 |                   | [**📊  Prompt Management**](../prompting/index.md)  |Systems to manage and refine the **prompts** used in conversational AI.          |   

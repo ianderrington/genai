@@ -13,6 +13,17 @@ One input call to an LLM output produces output(s) based on their input [prompts
 
 Biological [Connectionism and Cognitive Architecture](https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf) considered design systems with a connection of a large number of highly connected units to facilitate computational-like behavior seen from Animals. For Gen(AI), however, cognitive architectures can be constructed in more linear [chains](#chains), as in the case of LLM-enabled chat, or more complex branching [graph topologies](#cognitive-topologies), which have been shown to increase performance. 
 
+## Cognitive Topologies
+
+Different patterns of thought organization can be used to structure reasoning in AI systems:
+
+1. **Linear Chains** - Sequential reasoning steps
+2. **Tree Structures** - Branching exploration of possibilities
+3. **Graph Networks** - Interconnected concepts with multiple pathways
+4. **Hierarchical Structures** - Nested levels of abstraction
+
+These topologies determine how information flows through the system and affect the quality of reasoning and problem-solving capabilities.
+
 ## Core Activities in Cognitive Architectures
 
 ### Activities
@@ -712,4 +723,15 @@ Problems such as Hallucinations can be mitigated through downstream methods of p
     A process to mitigate model hallucination using RAG.
     <img width="602" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/cae43c6d-34d8-4005-bb3e-54f89747dc30">
 
+
+## Interpreters
+
+Interpreters are components that translate between different representations or formats within a cognitive architecture. They serve several key functions:
+
+1. **Input Processing** - Converting raw input into structured representations
+2. **Output Formatting** - Transforming internal representations into user-friendly outputs
+3. **Cross-Modal Translation** - Converting between different modalities (text, images, code)
+4. **Semantic Parsing** - Extracting meaning and intent from natural language
+
+Effective interpreters enable seamless communication between different components of the cognitive architecture and between the AI system and its users or environment.
 

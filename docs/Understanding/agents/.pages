@@ -1,8 +1,6 @@
 nav:
     - index.md
     - components
-    - building_agents
     - systems
     - examples
-    - slide_presentation.md
 

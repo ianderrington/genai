@@ -7,7 +7,7 @@ bullets:
   - Guardrails and validation systems protect against misuse
 ---
 
-Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. Relayed by an [interpreters and routers](#interpeters-and), these have made LLMs one of the most powerful enablers of Agentic AI. 
+Actions and tools, also called 'plugins', can be considered function calls to routines external to the LLM. Relayed by an [interpreters and routers](#interpreters-and-routers), these have made LLMs one of the most powerful enablers of Agentic AI. 
 
 ## Actions and tools
 
@@ -18,26 +18,10 @@ Actions can be thought of interacting in an environment, this environment can ha
 
 **External actions** may be to act on simulated or real environments, or otherwise tracked `state`, or to use a toolthat an agent may be 'equipped with' to run. These can be API calls or local function calls.
 
-
+Important information can be found in building [Tools](../../building_applications/back_end/tools/index.md) including [MCPs](../../building_applications/back_end/tools/mcps.md)
 
 ### Libraries
 
-??? tip "[Model Context Protocol](https://modelcontextprotocol.io/introduction)" mcp
-    MCP is an open protocol that standardizes how applications provide context to LLMs, similar to how USB-C connects devices. It enables seamless integration of LLMs with various data sources and tools, offering pre-built integrations, flexibility in switching LLM providers, and best practices for data security.
-    
-    ```mermaid
-    graph TD
-        A[Your Computer] -->|MCP Protocol| B[MCP Server A]
-        A -->|MCP Protocol| C[MCP Server B]
-        A -->|MCP Protocol| D[MCP Server C]
-        A -->|"MCP Client (Claude, IDEs, Tools)"| E[Host]
-        
-        B -->|Local Data Source A| F[Local Data Source A]
-        C -->|Local Data Source B| G[Local Data Source B]
-        D -->|Web APIs| H[Web APIs]
-        
-        D -->|Internet| I[Remote Service C]
-    ```
 
 
 ??? tip "[ToolGen: Unified Tool Retrieval and Calling via Generation](https://github.com/Reason-Wang/ToolGen?tab=readme-ov-file)" toolgen
@@ -80,7 +64,7 @@ The action that an agent may take is enabled by an `AgentExecutor` which can als
 
 !!! abstract "[Langchain Agent Executor](https://github.com/langchain-ai/langchain/blob/b786335dd10902489f87a536ee074d747b6df370/libs/langchain/langchain/agents/agent.py#L637)"
 
-###  Interpeters and Routers
+###  Interpreters and Routers
 
 Interpreters are programs that facilitate model computation by parsing, formatting, or otherwise preparing the data for effective use. They can also be used to route information to the appropriate reciever, such as a tool or other LLM. 
 

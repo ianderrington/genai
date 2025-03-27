@@ -104,9 +104,27 @@ Auto Prompt Engineering (APE) creates appropriately optimized prompts based on u
 ??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/rutgerswiselab/PAP-REC) [PAP-REC: Personalized Automatic Prompt for Recommendation Language Model](https://github.com/rutgerswiselab/PAP-REC)"
     The authors in their [paper](https://arxiv.org/pdf/2402.00284v1.pdf) reveal a method of automatically generating prompts for recommender language models with better performance results than manually constructed prompts and results baseline recommendation models.
 
+??? share "A Systematic Survey of Automatic Prompt Optimization Techniques" survey-of-automatic-prompt-optimization
+    In their comprehensive [survey paper](https://arxiv.org/html/2502.16923), Ramnath et al. provide a systematic review of Automatic Prompt Optimization (APO) methods for large language models. The authors present:
+    
+    1. A formal definition of APO and a unifying 5-part framework for categorizing techniques
+    2. A thorough analysis of the current landscape of APO methods, including:
+       - **Prompt Initialization**: How initial prompts are created or selected
+       - **Evaluation Mechanisms**: Methods for assessing prompt quality (LLM-based, metric-based, human feedback)
+       - **Candidate Prompt Generation**: Techniques for creating new prompt candidates
+       - **Filtering Strategies**: Approaches to select the most promising prompts
+       - **Termination Criteria**: When to stop the optimization process
+    
+    The survey highlights several key insights:
+    
+    - APO methods can significantly improve LLM performance across various tasks without requiring model parameter access
+    - Different optimization strategies (evolutionary algorithms, gradient-based methods, etc.) offer different trade-offs
+    - Human feedback integration remains important for certain applications
+    - The field is rapidly evolving with new techniques emerging regularly
+    
+    This survey provides an excellent reference for understanding the state-of-the-art in automatic prompt optimization and identifies promising directions for future research.
 
 
-
-AutoPrompt [5] combines the original prompt input with a set of shared (across all input data) “trigger tokens” that are selected via a gradient-based search to improve performance.
+AutoPrompt [5] combines the original prompt input with a set of shared (across all input data) "trigger tokens" that are selected via a gradient-based search to improve performance.
 
 [5] Shin, Taylor, et al. "Autoprompt: Eliciting knowledge from language models with automatically generated prompts." arXiv preprint arXiv:2010.15980 (2020).

@@ -76,7 +76,7 @@ Additionally, agents exist in [environments](./components/environments.md) where
 
 And finally, [Systems of Agents](./systems/index.md) that can allow for multiple agents with different sets of the components above, to interact and create powerful solutions.
 
-See how these [components](./components/index.md) can be put together in [building agents](./building_agents/index.md).
+See how these [components](./components/index.md) can be put together in [building agents](../building_applications/building_agents/index.md).
 
 ### AI agents and similar concepts
 
@@ -106,7 +106,7 @@ See [types of agents](./examples/index.md) for examples of different types of ag
 
 ### How does an Agent work?
 
-A little more detail on how an agent works can be found in the [building agents](./building_agents/index.md) and [components](./components/index.md) sections, but below is an example of some of the elements that enable an agent to work.
+A little more detail on how an agent works can be found in the [building agents](../building_applications/building_agents/index.md) and [components](./components/index.md) sections, but below is an example of some of the elements that enable an agent to work.
 
 
 

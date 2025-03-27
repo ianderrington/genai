@@ -133,6 +133,7 @@ Traditional programming approaches offer maximum flexibility and control:
     - AutoGen
     - LlamaIndex
     - Custom frameworks using LLM APIs
+    - [Mastra](https://github.com/mastra-ai/mastra) - TypeScript agent framework with workflows, RAG, and observability
 
 3. **Best For**
     - Complex agent architectures
@@ -213,6 +214,19 @@ The agent ecosystem is still in its early stages, with several emerging trends:
 ??? abstract "[Agenta-AI](https://github.com/Agenta-AI/agenta) provides end-to-end LLM developer platform. It provides the tools for prompt engineering and management, ⚖️ evaluation, human annotation, and 🚀 deployment. All without imposing any restrictions on your choice of framework, library, or model." 
 
 ??? abstract "[Jarvis](https://github.com/microsoft/JARVIS/) provides essential components to enable LLM-agents to have tools. They provide ToolBench, HuggingGPT, and EasyTool at present." jarvis
+
+??? abstract "[GenAI_Agents](https://github.com/NirDiamant/GenAI_Agents) provides comprehensive tutorials and implementations for various Generative AI Agent techniques, from basic to advanced. The repository includes Jupyter notebooks covering LangChain, LangGraph, self-improving agents, multi-agent systems, and more."
+
+??? abstract "[Mastra](https://github.com/mastra-ai/mastra) is a TypeScript AI agent framework for building and deploying AI applications with modern JavaScript stacks."
+    Mastra provides a comprehensive set of tools for building AI agents in TypeScript:
+    
+    - **Unified Model API**: Integrates with Vercel AI SDK to support multiple LLM providers (OpenAI, Anthropic, Google Gemini)
+    - **Agent Development**: Create agents with memory, tool-calling capabilities, and workflow integration
+    - **Workflow Orchestration**: Build graph-based workflows with control flow, branching, and observability
+    - **RAG Integration**: Process documents, create embeddings, and query vector databases with a unified API
+    - **Local Development**: Chat with agents and debug their state in a local development environment
+    - **Deployment Options**: Deploy as standalone endpoints or integrate with React, Next.js, or Node.js applications
+    - **Evaluation Tools**: Assess agent performance with model-graded, rule-based, and statistical metrics
 
 ??? important "[Easy Tool: Enhancing LLM-based Agents with Concise Tool Instruction](https://arxiv.org/pdf/2401.06201.pdf) provides a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage" easy-tool
 

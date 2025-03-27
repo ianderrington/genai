@@ -26,10 +26,14 @@ Here we share novel and promising architectures that may supplement or supplant 
 
 !!! tip "[Bayesian Flow Networks](https://arxiv.org/pdf/2308.07037.pdf) A new class of generative models for discrete and continuous data and generation"
 
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/louaaron/Score-Entropy-Discrete-Diffusion) [Score Entropy Discrete Diffusion (SEDD)](https://arxiv.org/html/2310.16834)"
+    **Developments** SEDD addresses a key limitation in diffusion models by extending them effectively to discrete data domains like natural language. The authors propose "score entropy," a novel loss function that naturally extends score matching to discrete spaces. SEDD significantly outperforms existing language diffusion models (reducing perplexity by 25-75%) and is competitive with autoregressive models like GPT-2. Compared to autoregressive models, SEDD generates more faithful text without requiring temperature scaling, can trade compute for quality (achieving similar quality with 32× fewer network evaluations), and enables controllable text infilling beyond just left-to-right generation.
+    
+    [GitHub Repository](https://github.com/louaaron/Score-Entropy-Discrete-Diffusion)
 
 !!! tip "[Retentive Network: A successor to Transformer for Large Language Models](https://arxiv.org/pdf/2307.08621.pdf) Important LLM-like system using similar components that may help it to be more scaleable than `O(N^2)` memory and `O(N)` inference complexity."
 
-??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/cosmoquester/memoria) [Memoria](https://github.com/cosmoquester/memoria) stores and retrieves information called engram at multiple memory levels of working memory, short-term memory, and long-term memory, using connection weights that change according to Hebb’s rule. "
+??? abstract "![GitHub Repo stars](https://badgen.net/github/stars/cosmoquester/memoria) [Memoria](https://github.com/cosmoquester/memoria) stores and retrieves information called engram at multiple memory levels of working memory, short-term memory, and long-term memory, using connection weights that change according to Hebb's rule. "
     [Paper](https://arxiv.org/pdf/2310.03052.pdf)
     <img width="778" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/2a0bc1b1-9409-45a3-b8b4-08d363619354">
     <img width="628" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/a2cd82b8-b92a-446e-bc8f-95116dfe15ea">

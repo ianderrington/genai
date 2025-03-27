@@ -9,7 +9,7 @@ bullets:
 
 Just like people, memory plays a crucial role in enhancing the efficiency of information generation. Memory can either be _global_ or external to the existence of an agent or an agent-network, or _internal_ to the network, and gained by [experiences](#experiential-memory) it gained during from the agent or agent-network's  efforts. Each of these types of memories are useful to extract information that is then placed into the LLM's [prompt-context](../../prompting/index.md) and allowing a more accurate generation of information, as in [retrieval augmented generation](../../architectures/generating/rag.md). Because of its importance [agentic rag](#agentic-rag) is itself an essential application of agents, and it uses [cognitive architectures](#cognitive-architectures) to improve its results. 
 
-### Experiental-memory
+### Experiential-memory
 
 Here we discuss _experiential memory_ based on the activity or action action of one or many agents. 
 
@@ -30,7 +30,7 @@ For example Open AI has launched [memory](https://openai.com/blog/memory-and-new
 
 ## Agentic RAG
 
-Agentic rag refers to dynamic response generation using methods in [rag](../../architectures/generating/rag.md) coupled with [cognitive architectures](./cognitive_architecture.md)
+Agentic rag refers to dynamic response generation using methods in [rag](../../architectures/generating/rag.md) coupled with [cognitive architectures](#cognitive-architectures)
  that aim to enable: 
 
 * Autonomous Decision Making
@@ -65,6 +65,18 @@ Graph Databases provide the ability to put information in relational contexts. B
 
 [Neo4j](https://towardsdatascience.com/enhancing-interaction-between-language-models-and-graph-databases-via-a-semantic-layer-0a78ad3eba49) has formed a semantic layer, as shown in the `tomasonjo/llm-movieagent` repository. 
 
+### Vector Databases
+
+Vector databases store and retrieve information based on semantic similarity rather than exact matches. They are essential for implementing efficient retrieval systems in AI applications.
+
+### Caching
+
+Caching involves storing frequently accessed or computationally expensive results to reduce latency and improve performance. In AI systems, caching can significantly reduce response times and computational costs.
+
+## Cognitive Architectures
+
+Cognitive architectures provide structured frameworks for organizing memory, reasoning, and decision-making processes in AI systems. They help in creating more coherent and effective agent behaviors.
+
 !!! references
     For more information on memory implementations and caching, refer to the following resources:
     - [Langchain `memory`](https://python.langchain.com/docs/how_to/chatbots_memory/)
@@ -78,6 +90,16 @@ Graph Databases provide the ability to put information in relational contexts. B
 ??? abstract "[Graphiti](https://github.com/getzep/graphiti?tab=readme-ov-file)  builds dynamic, temporally aware Knowledge Graphs that represent complex, evolving relationships between entities over time."
     Graphiti ingests both unstructured and structured data, and the resulting graph may be queried using a fusion of time, full-text, semantic, and graph algorithm approaches.
     [GetZep: self-improving memory users, sessions and more](https://help.getzep.com/concepts)"
+
+??? abstract "[Memobase](https://github.com/memodb-io/memobase) provides a user profile-based memory system for AI applications."
+    Memobase is designed to bring long-term user memory to GenAI applications with a focus on structured user profiles. Key features include:
+    
+    - Memory focused on users rather than agents
+    - Time-aware memory that prevents outdated information
+    - Controllable memory with flexible configuration
+    - Easy integration with existing LLM stacks via API and SDKs (Python/Node/Go)
+    - Batch processing via non-embedding system and session buffer
+    - Production-ready system tested by partners
 
 ## Research
 

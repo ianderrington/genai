@@ -125,8 +125,22 @@ While classification is the root of all inaccuracies, there are at least [12 Typ
 * Speculative RAG
 * RankRAG
 * Multi-Head RAG
+* Chain-Rag
 
+### Chain-rag
 
+??? abstract "[Chain-of-Retrieval Augmented Generation (CoRAG)](https://arxiv.org/html/2501.14342v1)" corag
+    **Development:** Introduced by Wang et al. (2025), CoRAG enables models to retrieve and reason over relevant information step by step before generating the final answer.
+    
+    **Problem:** Conventional RAG methods typically perform a single retrieval step before generation, which limits their effectiveness for complex queries due to imperfect retrieval results.
+    
+    **Solution:** CoRAG allows the model to dynamically reformulate queries based on the evolving state of information gathering. The approach:
+    
+    1. Uses rejection sampling to automatically generate intermediate retrieval chains
+    2. Augments existing RAG datasets that only provide the correct final answer
+    3. Employs various decoding strategies at test time to scale compute by controlling the length and number of sampled retrieval chains
+    
+    **Results:** Experimental results show significant improvements, particularly in multi-hop question answering tasks, with more than 10 points improvement in Exact Match scores compared to strong baselines. CoRAG established state-of-the-art performance across diverse knowledge-intensive tasks on the KILT benchmark.
 
 ## Implementing RAG
 

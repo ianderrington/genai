@@ -97,7 +97,7 @@ LLM Serving Considerations:
 
 #### Agent Memory Solutions
 
-Agent memory is based off of [vector databases](../components/vector_databases.md), but can be made easier with platform solutions for managing agent memory, enabling long-term context retention and efficient memory management for AI applications.
+Agent memory is based off of [vector databases](../../agents/components/vector_databases.md), but can be made easier with platform solutions for managing agent memory, enabling long-term context retention and efficient memory management for AI applications.
 
 | Platform | Description |
 |----------|-------------|
@@ -122,6 +122,7 @@ These frameworks provide different approaches and tools for building AI agents, 
 
 | Framework | Description |
 |-----------|-------------|
+| [PydanticAI](https://ai.pydantic.dev/) | Built by the Pydantic team, offering a Python-centric design for building production-grade AI applications with type safety and structured responses |
 | [LangGraph](https://github.com/langchain-ai/langgraph) | LangChain's framework for building structured agents using computational graphs |
 | [Letta](https://letta.com/) | Framework for building and deploying AI agents with built-in orchestration |
 | [Open Hands](https://github.com/All-Hands-AI/OpenHands) | Collaborative AI systems |
