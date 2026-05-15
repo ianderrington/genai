@@ -1,5 +1,7 @@
 nav:
     - index.md
     - stack.md
+    - production-deployment.md
     - evaluating_and_comparing.md
+    - security-threats.md
     - optimizing_agents.md

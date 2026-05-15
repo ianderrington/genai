@@ -34,8 +34,9 @@ Here you'll find what you need to know to understand (eventually) everything you
         subgraph Build["Build"]
             Data["Data"]
             MA["Architecture"]
-            
+            RM["Reasoning<br>Models"]
             AG["Agents"]
+            MCP["MCP<br>Protocol"]
         end
 
         subgraph Buy["Buy it"]
@@ -47,6 +48,7 @@ Here you'll find what you need to know to understand (eventually) everything you
             Deploy["Deploy"]
             AIX["AI Experience"]
             Compliance["Being Compliant"]
+            Gov["Governance"]
         end
 
         Understand --> Build --> Use
@@ -57,24 +59,31 @@ Here you'll find what you need to know to understand (eventually) everything you
         click BB "../using/strategically/building_or_buying.html"
         click Data "./data/index.html"
         click MA "./architectures/index.html"
+        click RM "./architectures/reasoning-models.html"
         click Deploy "./deploying/index.html"
         click AIX "./building_applications/front_end/index.html"
         click AG "./agents/index.html"
+        click MCP "./agents/mcp-protocol.html"
         click CM "../Using/commercial_markets.html"
         click SL "../Using/solution_licensing.html"
         click VI "../Using/vendor_integration.html"
         click Examples "../Using/examples/index.html"
         click Compliance "../Using/managing/index.html"
+        click Gov "./governance/index.html"
 
         classDef warmColor fill:#f9d5e5,stroke:#333,stroke-width:2px;
         classDef midColor fill:#f0e5d8,stroke:#333,stroke-width:2px;
         classDef buyColor fill:#f4e7d3,stroke:#333,stroke-width:2px;
         classDef coolColor fill:#d5e8d4,stroke:#333,stroke-width:2px;
+        classDef newColor fill:#e8d5f5,stroke:#333,stroke-width:2px;
 
         class Understand warmColor;
         class Build midColor;
         class Buy buyColor;
         class Use coolColor;
+        class RM newColor;
+        class MCP newColor;
+        class Gov newColor;
 
     ```
 
@@ -203,9 +212,12 @@ What do you need to know?
     - 🤔 Understand [**use cases**](../Using/examples/index.md) and think of the [**challenges**](overview/gen_ai/considerations.md) associated with it. 
     - 📊 Understand the [**data**](./data/index.md) and collect data that you need. 
     - 🚢 Consider [**Model Architectures**](./architectures/index.md) and use [**pre-trained models**](./architectures/models/index.md) if possible. 
+    - 🧠 Understand [**Reasoning Models**](./architectures/reasoning-models.md) — how o3, DeepSeek R1, and Qwen3 use test-time compute to solve harder problems.
     - 💬 [**Prompts**](./prompting/index.md) govern how we interact with the models. 
     - 🛠️ [**Agents**](./agents/index.md) allow for models to be used in more useful, effective, and complex manners. 
+    - 🔌 Learn about [**MCP (Model Context Protocol)**](./agents/mcp-protocol.md) — the open standard connecting LLMs to tools and data sources (97M monthly downloads).
     - 🧭 Consider [**Ethical concerns**](../Using/ethically/index.md) to ensure responsible use of these powerful technologies. 
+    - ⚖️ Review [**AI Governance**](./governance/index.md) — EU AI Act, US executive orders, and compliance obligations in force from 2025.
     - 🏗️ [**Building your solution**](./building_applications/index.md)
 
 In the documents you read here, you will be able to see an increasingly consistent and understandable discussion of Gen()AI technologies, enabled by Gen()AI technologies herein described. Like most powerful technology, Gen()AI can be a two-edged sword and effective use requires responsible and thoughtful understanding. ⚖️

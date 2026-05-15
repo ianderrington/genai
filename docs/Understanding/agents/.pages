@@ -1,5 +1,11 @@
 nav:
     - index.md
+    - mcp-protocol.md
+    - benchmarks.md
+    - frameworks.md
+    - a2a-protocol.md
+    - computer-use.md
+    - agentic-rag.md
     - components
     - systems
     - examples

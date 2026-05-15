@@ -1,34 +1,156 @@
-{#-
-  This file was automatically generated - do not edit
--#}
 {% extends "main.html" %}
+
 {% block htmltitle %}
-  <title>{{ config.site_name }}</title>
+  <title>ManaGen🔮AI — The Living Guide to Generative AI</title>
 {% endblock %}
+
 {% block extrahead %}
   <link rel="me" href="https://www.linkedin.com/in/ian-derrington">
-{% endblock %}
-{% block styles %}
-  {{ super() }}
-  <link rel="stylesheet" href="{{ 'assets/stylesheets/home.ac698b0a.min.css' | url }}">
-  <script>"Apple Computer, Inc."===navigator.vendor&&document.documentElement.classList.add("safari")</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <script>
     window.embeddedChatbotConfig = {
-    chatbotId: "_4uvgKIHWHLB4utX84z8m",
-    domain: "www.chatbase.co"
+      chatbotId: "_4uvgKIHWHLB4utX84z8m",
+      domain: "www.chatbase.co"
     }
-    </script>
-    <script
-    src="https://www.chatbase.co/embed.min.js"
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js"
     chatbotId="_4uvgKIHWHLB4utX84z8m"
     domain="www.chatbase.co"
     defer>
-    </script>
+  </script>
+  <style>
+    .mng-hero, .mng-section, .mng-contribute, .mng-feature-card,
+    .mng-dev-card, .mng-stats, .mng-badge, .mng-btn {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    }
+    /* Remove MkDocs header padding on home */
+    [data-md-component="container"] { padding-top: 0 !important; }
+  </style>
 {% endblock %}
+
+{% block styles %}
+  {{ super() }}
+  <script>"Apple Computer, Inc."===navigator.vendor&&document.documentElement.classList.add("safari")</script>
+{% endblock %}
+
 {% block announce %}{% endblock %}
+
 {% block hero %}
   {% include "partials/parallax.html" %}
 {% endblock %}
+
 {% block tabs %}{% endblock %}
 {% block content %}{% endblock %}
 {% block footer %}{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+  /* ManaGen Neural Constellation Canvas */
+  (function () {
+    var canvas = document.getElementById('mng-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var W, H, nodes = [], animId;
+
+    var CONCEPTS = [
+      'Reasoning','Agents','RAG','LLMs','MCP','Fine-tuning',
+      'Transformers','Multimodal','Safety','Alignment','Context',
+      'Embeddings','Inference','Prompting','Tools','Memory',
+      'Planning','DeepSeek','Claude','GPT-5','Gemini','Llama',
+      'RLHF','DPO','LoRA','MoE','A2A','Sora','Veo','Qwen',
+      'o3','Phi-4','Grok','Mistral','FLUX','Evals','Distill'
+    ];
+
+    function resize() {
+      W = canvas.width = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+
+    function init() {
+      nodes = [];
+      for (var i = 0; i < 58; i++) {
+        nodes.push({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          vx: (Math.random() - 0.5) * 0.28,
+          vy: (Math.random() - 0.5) * 0.28,
+          r: Math.random() * 1.7 + 1.0,
+          label: i < CONCEPTS.length ? CONCEPTS[i] : '',
+          pulse: Math.random() * Math.PI * 2,
+          opacity: Math.random() * 0.38 + 0.52
+        });
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      var i, j, n, dx, dy, d, grad, g;
+
+      /* edges */
+      for (i = 0; i < nodes.length; i++) {
+        for (j = i + 1; j < nodes.length; j++) {
+          dx = nodes[i].x - nodes[j].x;
+          dy = nodes[i].y - nodes[j].y;
+          d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 158) {
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = 'rgba(99,102,241,' + ((1 - d / 158) * 0.2) + ')';
+            ctx.lineWidth = 0.65;
+            ctx.stroke();
+          }
+        }
+      }
+
+      /* nodes */
+      for (i = 0; i < nodes.length; i++) {
+        n = nodes[i];
+        n.pulse += 0.015;
+        g = Math.sin(n.pulse) * 0.11 + 0.89;
+
+        grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 5.5);
+        grad.addColorStop(0, 'rgba(99,102,241,' + (0.28 * g * n.opacity) + ')');
+        grad.addColorStop(1, 'rgba(99,102,241,0)');
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r * 5.5, 0, 6.2832);
+        ctx.fillStyle = grad;
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r * g, 0, 6.2832);
+        ctx.fillStyle = 'rgba(129,140,248,' + (n.opacity * g) + ')';
+        ctx.fill();
+
+        if (n.label) {
+          ctx.font = '10px Inter, system-ui, sans-serif';
+          ctx.fillStyle = 'rgba(148,163,184,' + (n.opacity * 0.46) + ')';
+          ctx.fillText(n.label, n.x + n.r + 5, n.y + 3.5);
+        }
+
+        n.x += n.vx;
+        n.y += n.vy;
+        if (n.x < -32) n.x = W + 32;
+        if (n.x > W + 32) n.x = -32;
+        if (n.y < -32) n.y = H + 32;
+        if (n.y > H + 32) n.y = -32;
+      }
+
+      animId = requestAnimationFrame(draw);
+    }
+
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () { resize(); init(); }, 160);
+    });
+
+    resize();
+    init();
+    draw();
+  }());
+  </script>
+{% endblock %}

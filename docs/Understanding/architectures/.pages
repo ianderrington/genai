@@ -1,5 +1,6 @@
 nav:
     - index.md
+    - reasoning-models.md
     - models
     - training
     - generating

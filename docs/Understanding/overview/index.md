@@ -168,3 +168,36 @@ However, this approach can be less effective on larger volumes of data due to un
 ### Fusion Approaches
 
 Fusion approaches combine the strengths of both data-based and rule-based methods. Fine-tuned models, even those that are smaller in size/cost, may outperform larger models, likely due to the no free lunch theorem. As such, using both hard-coded and ML-generated rules to select between models provides the basis for fusion techniques. For instance, combining traditional algorithms, like a calculator for math processing or regular expressions for text processing, with ML can result in a system that is more explainable, accurate, and designable compared to systems that are predominantly AI-driven.
+
+---
+
+## The 2025–2026 Model Landscape
+
+> **Updated May 2026.** The frontier model landscape has changed dramatically since early 2025. This section provides a current orientation to the models that matter for enterprise GenAI decisions.
+
+### Standard Frontier Models
+
+| Model family | Provider | Notable capabilities |
+|-------------|---------|---------------------|
+| **GPT-5 / GPT-5.5** | OpenAI | Unified fast + deep-think routing; 94.6% AIME 2025; current API flagship (April 2026) |
+| **Claude 4 / 4.6** | Anthropic | Professional coding, 1M token context GA, strong agent workflows |
+| **Gemini 2.5 Pro / Flash** | Google | 2M token context, Deep Think reasoning mode, best multimodal benchmarks |
+| **Llama 4 Scout / Maverick** | Meta | Open-weight, native multimodal, 10M token context (Scout), free to self-host |
+| **DeepSeek V3 / R1** | DeepSeek | Open-source reasoning model, MIT license, <$6M training cost vs $100M+ for closed equivalents |
+
+### Reasoning / "Thinking" Models
+
+A new category of model emerged through 2025: **reasoning models** that allocate additional inference compute to work through problems step by step before answering. Key examples:
+
+- **OpenAI o3 / o4-mini** — first multimodal reasoning models; o3 scored 88% on ARC-AGI (April 2025)
+- **DeepSeek R1** — open-source reasoning milestone; competitive with o1 at a fraction of the cost (January 2025)
+- **Gemini 2.5 Pro Deep Think** — Google's thinking mode, 84.0% MMMU (May 2025)
+- **Qwen3** — hybrid thinking/non-thinking modes in a single model deployment (April 2025)
+
+See [reasoning models](../architectures/training/reasoning_models.md) for full coverage.
+
+!!! important "Which model should I use?"
+    The honest answer in 2026 is: it depends on your task, context-window needs, data sovereignty requirements, and cost tolerance. For a practical decision framework, see [model optimization](../architectures/optimizing/index.md). The key new variable is reasoning model vs. standard model — a dimension that did not exist before 2024.
+
+!!! info "Sources"
+    [GPT-5 release](https://openai.com/blog/gpt-5), August 7, 2025; [Claude 4 family](https://www.anthropic.com/claude), May 2025; [Gemini 2.5 at Google I/O](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/); [Llama 4 release](https://llama.meta.com/), April 2025; [DeepSeek R1](https://arxiv.org/abs/2501.12948), January 2025

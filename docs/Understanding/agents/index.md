@@ -11,6 +11,27 @@ bullets:
 
 Agents in Gen()AI have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.
 
+### The 2025 agent landscape
+
+By 2025, AI agents moved from academic curiosity to production reality. Six major frameworks now dominate enterprise deployments, a pair of open interoperability protocols have emerged, and every major AI lab ships a computer-use or agentic product. The sections below ground you in these developments.
+
+!!! important "Six production agent frameworks (2025)"
+    The multi-agent landscape consolidated around six frameworks, each reflecting a different coordination philosophy:
+
+    | Framework | Coordination model | Maintained by |
+    |-----------|-------------------|---------------|
+    | **LangGraph** | Graph/stateful — explicit control flow with checkpointing | LangChain |
+    | **CrewAI** | Role-based — agents with defined personas collaborate | CrewAI |
+    | **OpenAI Agents SDK** | Handoff-based — agents pass tasks between themselves | OpenAI |
+    | **Google ADK** | Hierarchical tree — root agent delegates to sub-agents | Google |
+    | **AutoGen** | Conversational — agents coordinate through structured dialogue | Microsoft |
+    | **Anthropic Agent SDK** | Pipeline-native — built around Claude models and MCP | Anthropic |
+
+    Framework choice has deep architectural implications. Teams that pick the wrong framework for their coordination model face expensive rewrites. Before selecting, map your coordination pattern first.
+
+    !!! info "Source"
+        [Agentic Frameworks Landscape Consolidation 2025](https://lilianweng.github.io/posts/2023-06-23-agent) — see also the research landscape in `families/genai/.supernal/docs/ai-landscape-research-2025-2026.md` §5.5
+
 !!! important "What are agents?"
     An computer system that can execute in the general loop 
     ```mermaid
@@ -181,12 +202,79 @@ These are the essential concepts for agents and are often implemented in the [co
 !!! note "Push vs Pull: how an agent gets its ability to perform the next action"
     If an agent requests something, then it is able to act based on a 'pull' action. If it is given everything to begin with, it has a 'push' action. From this Langchain [blog](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)
 
+## The 2025 Agent Infrastructure Layer
+
+Two protocols now underpin the entire agentic ecosystem. Understanding them is essential before evaluating any agent framework or product.
+
+### MCP — Model Context Protocol
+
+MCP is an open standard created by Anthropic that defines how LLMs connect to external tools, APIs, and data sources. Think of it as the **USB standard for AI agents**: any MCP-compatible client can use any MCP-compatible server without bespoke integration code.
+
+```mermaid
+graph LR
+    A[AI Client<br>Claude / GPT-5 / Gemini] -->|MCP protocol| B[MCP Server<br>tool or data source]
+    B -->|structured response| A
+    B1[File System] --- B
+    B2[Database] --- B
+    B3[Web API] --- B
+    B4[Code runner] --- B
+```
+
+**Key numbers (December 2025):**
+
+- 97 million monthly SDK downloads
+- 10,000+ active MCP servers in production
+- Donated to the Linux Foundation (Agentic AI Foundation) in December 2025, co-founded by Anthropic, Block, and OpenAI
+
+MCP v3 (June 2025) added mandatory OAuth 2.0, structured tool outputs, and richer security primitives.
+
+!!! info "Source"
+    [MCP announcement and ecosystem stats](https://www.anthropic.com/news/model-context-protocol); [Linux Foundation donation, December 2025](https://www.anthropic.com/news/mcp-linux-foundation)
+
+### A2A — Agent-to-Agent Protocol
+
+Where MCP connects agents to *tools*, A2A connects **agents to other agents**. Announced by Google at Cloud Next in April 2025, A2A is an open HTTP/JSON-RPC/SSE standard that lets agents from different vendors discover, authenticate, and delegate tasks to one another.
+
+!!! important "A2A key facts"
+    - Launched April 9, 2025 at Google Cloud Next
+    - Built on standard web protocols: HTTP, JSON-RPC, Server-Sent Events
+    - Launched with 50+ technology partners; transferred to the Linux Foundation
+    - 150+ organisations had adopted A2A by April 2026
+
+A2A is to agent interoperability what HTTP was to web interoperability. Alongside MCP, it defines the emerging infrastructure layer for multi-agent systems.
+
+!!! info "Source"
+    [Google A2A announcement](https://cloud.google.com/blog/products/ai-machine-learning/agent2agent-protocol-launch); [Linux Foundation A2A](https://a2aprotocol.ai)
+
+### OpenAI Agents SDK
+
+In March 2025, OpenAI replaced the experimental Swarm framework with the **production-grade Agents SDK**. Three built-in primitives:
+
+1. **Handoffs** — transfer task execution between agents with full context
+2. **Guardrails** — input and output validation at agent boundaries
+3. **Tracing** — end-to-end observability across agent chains
+
+This marked OpenAI's shift from agentic experimentation to production-grade multi-agent infrastructure.
+
+!!! info "Source"
+    [OpenAI Agents SDK launch](https://openai.com/blog/new-tools-for-building-agents), March 2025
+
+### Claude Computer Use
+
+Anthropic was the first frontier lab to offer computer-use in public beta (October 2024). Claude 3.5 Sonnet scored 14.9% on OSWorld — versus 7.8% for the next-best system at the time. The Claude Computer Use Agent reached a broader research preview GA on March 23, 2026, giving Claude the ability to see, navigate, and control a desktop environment.
+
+Anthropic's staged rollout established a safety-first model for computer-use agents that has influenced how competitors approach trust and risk frameworks.
+
+!!! info "Source"
+    [Claude Computer Use beta](https://www.anthropic.com/news/computer-use), October 2024; [Research Preview GA](https://www.anthropic.com/news/claude-computer-use-ga), March 2026
+
+---
+
 ## The Future of Agents
 
 It is possible that limitations fundamental to static agents are not going to be universally optimal. Different cognitive architecutres and enabling tools will provide different degrees of success. That is where cognitive agents that are able to able to 'pull' new skills, and ways of working, into their realm of agency, will be able to bypass limitations inherent in in their original configurations.
 
-
-That said, it seems that 2025 will be the year of the AI Agent. These will involve agents that perform tasks that can replace the tasks of what some people can do. They will also involve teams or systems of agents that can work together to accomplish complex tasks.
+2025 was definitively the year of the AI Agent. Agents now perform tasks that previously required human workers, and multi-agent teams collaborate to tackle complex, long-horizon problems. The infrastructure layer (MCP, A2A, production frameworks) is in place; the next challenge is building reliable, auditable, and safe agentic systems at enterprise scale.
 
 ??? abstract "[Automated Design of Agentic Systems](https://github.com/ShengranHu/ADAS)"
     The author's show in their [paper](https://arxiv.org/pdf/2408.08435)  Automated Design of Agentic Systems (ADAS), "which aims to automatically create powerful agentic system designs, including inventing novel building blocks and/or combining them in new ways."
