@@ -32,3 +32,7 @@ node_modules/
 .env.local
 .env.*.local
 npm-debug.log*
+.vercel
+
+# Build-time generated artifacts
+public/graph.json

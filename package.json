@@ -7,6 +7,8 @@
     "node": ">=18.17.0"
   },
   "scripts": {
+    "graph:build": "tsx scripts/build-graph.ts",
+    "prebuild": "npm run graph:build || true",
     "dev": "next dev",
     "dev:with-mermaid": "turbo run render-mermaid dev --parallel",
     "preprocess:content": "node scripts/preprocess-content-simple.js",

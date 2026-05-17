@@ -18,6 +18,49 @@ interface Node {
 
 export default function ConstellationCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  // labelsRef holds the active label array; starts as CONCEPTS, may be replaced
+  // by names from /graph.json once the fire-and-forget fetch completes.
+  const labelsRef = useRef<string[]>(CONCEPTS);
+
+  // Fire-and-forget fetch of /graph.json. Runs once on mount with a 2s timeout.
+  // On success: replaces labelsRef with node names from the graph.
+  // On any failure (missing file, bad JSON, timeout): silently keeps CONCEPTS.
+  useEffect(() => {
+    let cancelled = false;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 2000);
+
+    (async () => {
+      try {
+        const res = await fetch('/graph.json', { signal: controller.signal });
+        if (!res.ok) return;
+        const data = await res.json();
+        if (
+          !cancelled &&
+          data &&
+          Array.isArray(data.nodes) &&
+          data.nodes.length > 0
+        ) {
+          const names: string[] = data.nodes
+            .map((n: { name?: unknown }) => (typeof n.name === 'string' ? n.name : ''))
+            .filter(Boolean);
+          if (names.length > 0) {
+            labelsRef.current = names;
+          }
+        }
+      } catch {
+        // timeout, network error, JSON parse error — stay with CONCEPTS
+      } finally {
+        clearTimeout(timer);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+      controller.abort();
+      clearTimeout(timer);
+    };
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -33,6 +76,9 @@ export default function ConstellationCanvas() {
     }
 
     function init() {
+      // Snapshot the current label array at init time (supports late-loaded graph data
+      // if init is called after the fetch resolves, e.g. on window resize).
+      const labels = labelsRef.current;
       nodes = [];
       for (let i = 0; i < 58; i++) {
         nodes.push({
@@ -41,7 +87,7 @@ export default function ConstellationCanvas() {
           vx: (Math.random() - 0.5) * 0.28,
           vy: (Math.random() - 0.5) * 0.28,
           r: Math.random() * 1.7 + 1.0,
-          label: i < CONCEPTS.length ? CONCEPTS[i] : '',
+          label: i < labels.length ? labels[i] : '',
           pulse: Math.random() * Math.PI * 2,
           opacity: Math.random() * 0.38 + 0.52,
         });
