@@ -1,0 +1,28 @@
+site:
+  title: "ManaGen AI"
+  description: "The Living Guide to Generative AI — enabling generative and general AI to be well understood and effectively used"
+  url: "https://www.managen.ai"
+  language: "en"
+  favicon: "/favicon.ico"
+  copyright: "Ian Derrington"
+
+author:
+  name: "Ian Derrington"
+  email: "ianderrington@gmail.com"
+  link: "https://www.managen.ai"
+  jobTitle: "AI Researcher & Engineer"
+  social:
+    twitter: "https://x.com/ian_derrington"
+    github: "https://github.com/ianderrington"
+    bluesky: "https://bsky.app/profile/sentienti.bsky.social"
+    threads: "https://www.threads.net/@supernalai"
+    linkedin: "https://www.linkedin.com/in/ianderrington"
+
+rss:
+  title: "ManaGen AI Blog"
+  description: "Latest posts from ManaGen AI on generative AI understanding and use"
+  categories:
+    - AI
+    - GenerativeAI
+    - Technology
+  ttl: 60

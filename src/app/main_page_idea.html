@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Welcome to My World | Parnian</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+ <link href="css/chat.css" rel="stylesheet">
+ <style>
+ :root {
+ --bg-color: #000000;
+ --text-color: #ffffff;
+ --accent-color: #6030b1;
+ --secondary-color: #e94d89;
+ --box-bg: rgba(0, 0, 0, 0.95);
+ --box-shadow: rgba(96, 48, 177, 0.15);
+ --border-color: rgba(96, 48, 177, 0.2);
+ --gradient-start: #6030b1;
+ --gradient-end: #e94d89;
+ --star-color: #ffffff;
+ }
+
+ [data-theme="dark"] {
+ --bg-color: #000000;
+ --text-color: #ffffff;
+ --box-bg: rgba(0, 0, 0, 0.95);
+ --box-shadow: rgba(0, 0, 0, 0.3);
+ --border-color: rgba(255, 255, 255, 0.15);
+ --gradient-start: #8050d1;
+ --gradient-end: #ff6da9;
+ }
+
+ [data-theme="light"] {
+ --bg-color: #ffffff;
+ --text-color: #000000;
+ --box-bg: rgba(255, 255, 255, 0.95);
+ --box-shadow: rgba(96, 48, 177, 0.15);
+ --border-color: rgba(96, 48, 177, 0.2);
+ --gradient-start: #6030b1;
+ --gradient-end: #e94d89;
+ }
+
+ @keyframes float {
+ 0% { 
+ transform: perspective(1000px) rotateX(25deg) translateY(100px) translateZ(0) scale(0.6);
+ opacity: 0;
+ }
+ 5% { opacity: 1; }
+ 95% { opacity: 1; }
+ 100% { 
+ transform: perspective(1000px) rotateX(25deg) translateY(-300px) translateZ(400px) scale(0.2);
+ opacity: 0;
+ }
+ }
+
+ @keyframes orbit {
+ 0% {
+ transform: rotateY(0deg) rotateX(45deg) translateZ(300px) rotateY(0deg);
+ }
+ 100% {
+ transform: rotateY(360deg) rotateX(45deg) translateZ(300px) rotateY(-360deg);
+ }
+ }
+
+ @keyframes textGlow {
+ 0%, 100% { text-shadow: 0 0 30px rgba(96, 48, 177, 0.8), 0 0 60px rgba(233, 77, 137, 0.6); }
+ 50% { text-shadow: 0 0 50px rgba(96, 48, 177, 0.9), 0 0 80px rgba(233, 77, 137, 0.8); }
+ }
+
+ .floating-text {
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform-style: preserve-3d;
+ animation: textGlow 3s ease-in-out infinite;
+ color: var(--text-color) !important;
+ font-size: 2rem !important;
+ letter-spacing: 2px;
+ line-height: 1.5;
+ text-align: center;
+ white-space: nowrap;
+ transform: translate(-50%, -50%) rotateY(0deg);
+ text-shadow: 0 0 20px rgba(96, 48, 177, 0.8);
+ }
+
+ .floating-text::before {
+ content: attr(data-text);
+ position: absolute;
+ top: 0;
+ left: 0;
+ transform: translateZ(-10px);
+ opacity: 0.4;
+ filter: blur(4px);
+ color: var(--gradient-start);
+ }
+
+ .floating-text::after {
+ content: attr(data-text);
+ position: absolute;
+ top: 0;
+ left: 0;
+ transform: translateZ(10px);
+ opacity: 0.3;
+ filter: blur(8px);
+ color: var(--gradient-end);
+ }
+
+ .starfield {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: -2;
+ overflow: hidden;
+ background: radial-gradient(ellipse at center, #000000 0%, #000000 100%);
+ }
+
+ .penrose-background {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: -2;
+ overflow: hidden;
+ pointer-events: none;
+ }
+
+ @keyframes fadeInOut {
+ 0% { opacity: 0.1; }
+ 50% { opacity: 0.3; }
+ 100% { opacity: 0.1; }
+ }
+
+ .background-triangle {
+ position: absolute;
+ opacity: 0.1;
+ animation: fadeInOut 4s infinite;
+ }
+
+ .star {
+ position: absolute;
+ background: var(--star-color);
+ border-radius: 50%;
+ animation: starTwinkle 3s infinite ease-in-out;
+ box-shadow: 0 0 4px #fff, 0 0 8px #fff;
+ }
+
+ .shooting-star {
+ position: absolute;
+ width: 3px;
+ height: 3px;
+ background: linear-gradient(to right, rgba(255,255,255,1), transparent);
+ animation: starfall 3s linear infinite;
+ box-shadow: 0 0 20px rgba(255,255,255,0.8);
+ }
+
+ #sphere-container {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ perspective: 1200px;
+ opacity: 0.8;
+ pointer-events: none;
+ }
+
+ #sphere-container canvas {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ }
+
+ .welcome-button {
+ background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+ transition: all 0.3s ease;
+ color: white;
+ position: fixed;
+ bottom: 100px;
+ left: 50%;
+ transform: translateX(-50%);
+ padding: 15px 40px;
+ border: 2px solid rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+ background: linear-gradient(
+ 135deg,
+ rgba(96, 48, 177, 0.2),
+ rgba(233, 77, 137, 0.2)
+ );
+ box-shadow: 
+ 0 0 20px rgba(96, 48, 177, 0.3),
+ 0 0 40px rgba(233, 77, 137, 0.3),
+ inset 0 0 20px rgba(255, 255, 255, 0.1);
+ text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ overflow: hidden;
+ animation: buttonGlow 3s infinite;
+ }
+
+ @keyframes buttonGlow {
+ 0%, 100% {
+ box-shadow: 
+ 0 0 20px rgba(96, 48, 177, 0.3),
+ 0 0 40px rgba(233, 77, 137, 0.3),
+ inset 0 0 20px rgba(255, 255, 255, 0.1);
+ }
+ 50% {
+ box-shadow: 
+ 0 0 30px rgba(96, 48, 177, 0.5),
+ 0 0 60px rgba(233, 77, 137, 0.5),
+ inset 0 0 30px rgba(255, 255, 255, 0.2);
+ }
+ }
+
+ .welcome-button::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(
+ 120deg,
+ transparent,
+ rgba(255, 255, 255, 0.3),
+ transparent
+ );
+ transition: 0.5s;
+ }
+
+ .welcome-button:hover {
+ transform: translateX(-50%) translateY(-5px);
+ background: linear-gradient(
+ 135deg,
+ rgba(96, 48, 177, 0.4),
+ rgba(233, 77, 137, 0.4)
+ );
+ box-shadow: 
+ 0 0 40px rgba(96, 48, 177, 0.5),
+ 0 0 80px rgba(233, 77, 137, 0.5),
+ inset 0 0 40px rgba(255, 255, 255, 0.2);
+ }
+
+ .welcome-button:hover::before {
+ left: 100%;
+ }
+
+ @keyframes holographicShine {
+ 0% {
+ background-position: 0% 50%;
+ }
+ 50% {
+ background-position: 100% 50%;
+ }
+ 100% {
+ background-position: 0% 50%;
+ }
+ }
+
+ .button-container {
+ position: fixed;
+ bottom: 100px;
+ left: 0;
+ right: 0;
+ display: flex;
+ justify-content: center;
+ z-index: 100;
+ }
+
+ .chat-button, .theme-toggle {
+ position: fixed;
+ width: 60px;
+ height: 60px;
+ border-radius: 50%;
+ background: rgba(255, 255, 255, 0.1);
+ border: 1px solid rgba(255, 255, 255, 0.2);
+ backdrop-filter: blur(12px);
+ -webkit-backdrop-filter: blur(12px);
+ box-shadow: 
+ 0 4px 30px rgba(0, 0, 0, 0.1),
+ inset 0 0 20px rgba(255, 255, 255, 0.05);
+ color: white;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ z-index: 1000;
+ font-size: 24px;
+ overflow: hidden;
+ transform-style: preserve-3d;
+ }
+
+ .chat-button::before, .theme-toggle::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: radial-gradient(
+ circle at 30% 30%,
+ rgba(255, 255, 255, 0.4),
+ transparent 70%
+ );
+ border-radius: 50%;
+ opacity: 0.5;
+ }
+
+ .chat-button::after, .theme-toggle::after {
+ content: '';
+ position: absolute;
+ width: 200%;
+ height: 200%;
+ background: linear-gradient(
+ 45deg,
+ transparent,
+ rgba(255, 255, 255, 0.1),
+ transparent
+ );
+ transform: translate(-100%, -100%);
+ transition: transform 0.6s;
+ }
+
+ .chat-button:hover, .theme-toggle:hover {
+ transform: translateY(-2px);
+ background: rgba(255, 255, 255, 0.15);
+ box-shadow: 
+ 0 8px 32px rgba(31, 38, 135, 0.15),
+ inset 0 0 32px rgba(255, 255, 255, 0.1);
+ }
+
+ .chat-button:hover::after, .theme-toggle:hover::after {
+ transform: translate(0, 0);
+ }
+
+ @keyframes float-glow {
+ 0%, 100% {
+ box-shadow: 
+ 0 4px 24px rgba(31, 38, 135, 0.1),
+ inset 0 0 16px rgba(255, 255, 255, 0.05);
+ }
+ 50% {
+ box-shadow: 
+ 0 4px 28px rgba(31, 38, 135, 0.15),
+ inset 0 0 20px rgba(255, 255, 255, 0.1);
+ }
+ }
+
+ .chat-button {
+ bottom: 170px;
+ right: 30px;
+ animation: float-glow 3s infinite;
+ }
+
+ .theme-toggle {
+ top: 20px;
+ right: 30px;
+ animation: float-glow 3s infinite;
+ animation-delay: 1.5s;
+ }
+
+ @media (max-width: 640px) {
+ .chat-button, .theme-toggle {
+ width: 50px;
+ height: 50px;
+ font-size: 20px;
+ }
+ .chat-button {
+ bottom: 160px;
+ right: 20px;
+ }
+ .theme-toggle {
+ top: 20px;
+ right: 20px;
+ }
+ }
+
+ body {
+ background: #000000 !important;
+ color: var(--text-color) !important;
+ transition: all 0.3s ease;
+ min-height: 100vh;
+ margin: 0;
+ padding: 0;
+ perspective: 1000px;
+ }
+
+ /* Override Tailwind classes for theme compatibility */
+ .text-transparent {
+ color: var(--text-color) !important;
+ }
+
+ .bg-gradient-to-r {
+ background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)) !important;
+ -webkit-background-clip: text !important;
+ background-clip: text !important;
+ color: transparent !important;
+ }
+
+ .text-container {
+ transform-style: preserve-3d;
+ position: relative;
+ height: 100vh;
+ width: 100vw;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: visible;
+ perspective: 1200px;
+ }
+
+ .orbit-container {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ transform-style: preserve-3d;
+ animation: orbit 20s linear infinite;
+ }
+ </style>
+</head>
+<body class="min-h-screen flex items-center justify-center overflow-hidden">
+ <div class="penrose-background" id="penrose-background"></div>
+
+ <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+ <div class="text-container">
+ <div class="orbit-container">
+ <h1 class="floating-text bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text" data-text="Are you ready for Super Intelligence?">
+ Are you ready for Super Intelligence?
+ </h1>
+ </div>
+ </div>
+
+ <div class="button-container">
+ <button onclick="window.location.href='home.html'" class="welcome-button text-white text-xl font-semibold">
+ Begin the Journey
+ </button>
+ </div>
+
+ <button class="chat-button" onclick="toggleChat()">💭</button>
+
+ <script>
+ // Theme toggle functionality
+ const html = document.documentElement;
+ const themeToggle = document.querySelector('.theme-toggle');
+ 
+ function setTheme(theme) {
+ html.setAttribute('data-theme', theme);
+ localStorage.setItem('theme', theme);
+ 
+ // Update theme toggle icon and apply theme changes
+ if (theme === 'light') {
+ document.body.style.backgroundColor = '#ffffff';
+ document.body.style.color = '#000000';
+ themeToggle.textContent = '🌙';
+ document.documentElement.style.setProperty('--bg-color', '#ffffff');
+ document.documentElement.style.setProperty('--text-color', '#000000');
+ } else {
+ document.body.style.backgroundColor = '#000000';
+ document.body.style.color = '#ffffff';
+ themeToggle.textContent = '☀️';
+ document.documentElement.style.setProperty('--bg-color', '#000000');
+ document.documentElement.style.setProperty('--text-color', '#ffffff');
+ }
+ }
+
+ // Initialize theme
+ const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+ const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+ 
+ // Theme toggle click handler
+ themeToggle.addEventListener('click', () => {
+ const currentTheme = html.getAttribute('data-theme');
+ const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+ setTheme(newTheme);
+ });
+
+ // Ensure theme is set on page load
+ window.addEventListener('DOMContentLoaded', () => {
+ setTheme(savedTheme);
+ });
+
+ // Enhanced Three.js setup
+ const container = document.getElementById('sphere-container');
+ const scene = new THREE.Scene();
+ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+ const renderer = new THREE.WebGLRenderer({ 
+ antialias: true, 
+ alpha: true,
+ preserveDrawingBuffer: true
+ });
+ 
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ renderer.setClearColor(0x000000, 0);
+ container.appendChild(renderer.domElement);
+
+ // Create impossible triangle
+ function createImpossibleTriangle() {
+ const triangleGroup = new THREE.Group();
+ 
+ // Create materials for different sections
+ const whiteMaterial = new THREE.MeshBasicMaterial({
+ color: 0xFFFFFF,
+ side: THREE.DoubleSide
+ });
+ const greyMaterial = new THREE.MeshBasicMaterial({
+ color: 0x808080,
+ side: THREE.DoubleSide
+ });
+ const blackMaterial = new THREE.MeshBasicMaterial({
+ color: 0x000000,
+ side: THREE.DoubleSide
+ });
+
+ // Create the triangle sections using ExtrudeGeometry
+ const depth = 1;
+ const bevelEnabled = false;
+
+ // First section (white)
+ const shape1 = new THREE.Shape();
+ shape1.moveTo(0, 0);
+ shape1.lineTo(5, 0);
+ shape1.lineTo(2.5, 4.33);
+ shape1.lineTo(0, 0);
+
+ const extrudeSettings1 = {
+ steps: 1,
+ depth: depth,
+ bevelEnabled: bevelEnabled
+ };
+
+ const geometry1 = new THREE.ExtrudeGeometry(shape1, extrudeSettings1);
+ const section1 = new THREE.Mesh(geometry1, whiteMaterial);
+
+ // Second section (grey)
+ const shape2 = new THREE.Shape();
+ shape2.moveTo(5, 0);
+ shape2.lineTo(10, 0);
+ shape2.lineTo(7.5, 4.33);
+ shape2.lineTo(5, 0);
+
+ const geometry2 = new THREE.ExtrudeGeometry(shape2, extrudeSettings1);
+ const section2 = new THREE.Mesh(geometry2, greyMaterial);
+
+ // Third section (black)
+ const shape3 = new THREE.Shape();
+ shape3.moveTo(2.5, 4.33);
+ shape3.lineTo(7.5, 4.33);
+ shape3.lineTo(5, 8.66);
+ shape3.lineTo(2.5, 4.33);
+
+ const geometry3 = new THREE.ExtrudeGeometry(shape3, extrudeSettings1);
+ const section3 = new THREE.Mesh(geometry3, blackMaterial);
+
+ // Add all sections to the group
+ triangleGroup.add(section1);
+ triangleGroup.add(section2);
+ triangleGroup.add(section3);
+
+ // Scale and position the triangle
+ triangleGroup.scale.set(2, 2, 2);
+ triangleGroup.position.set(-10, -8, 0);
+
+ return triangleGroup;
+ }
+
+ const impossibleTriangle = createImpossibleTriangle();
+ scene.add(impossibleTriangle);
+
+ // Position camera
+ camera.position.z = 30;
+ camera.position.y = 0;
+ camera.lookAt(scene.position);
+
+ let targetRotationX = 0;
+ let targetRotationY = 0;
+ let bouncePosition = 0;
+ let bounceDirection = 1;
+ const bounceSpeed = 0.03;
+ const bounceRange = 1.5;
+
+ // Animation
+ function animate() {
+ requestAnimationFrame(animate);
+ 
+ // Rotation animation
+ impossibleTriangle.rotation.x = targetRotationX;
+ impossibleTriangle.rotation.y += 0.005;
+ 
+ // Bouncing animation
+ bouncePosition += bounceSpeed * bounceDirection;
+ if (Math.abs(bouncePosition) >= bounceRange) {
+ bounceDirection *= -1;
+ }
+ impossibleTriangle.position.y = bouncePosition - 8;
+ 
+ renderer.render(scene, camera);
+ }
+
+ // Start animation
+ animate();
+
+ // Handle window resize
+ window.addEventListener('resize', () => {
+ camera.aspect = window.innerWidth / window.innerHeight;
+ camera.updateProjectionMatrix();
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ });
+
+ // Mouse interaction with much faster response
+ let isMouseDown = false;
+ let mouseX = 0;
+ let mouseY = 0;
+
+ document.addEventListener('mousedown', (e) => {
+ isMouseDown = true;
+ mouseX = e.clientX;
+ mouseY = e.clientY;
+ });
+
+ document.addEventListener('mousemove', (e) => {
+ if (!isMouseDown) return;
+ 
+ const deltaX = e.clientX - mouseX;
+ const deltaY = e.clientY - mouseY;
+ 
+ targetRotationY += deltaX * 0.08;
+ targetRotationX += deltaY * 0.08;
+ 
+ mouseX = e.clientX;
+ mouseY = e.clientY;
+ });
+
+ document.addEventListener('mouseup', () => {
+ isMouseDown = false;
+ });
+
+ // Chat toggle functionality
+ function toggleChat() {
+ window.location.href = 'chat.html';
+ }
+
+ // Create background Penrose triangles
+ function createBackgroundTriangles() {
+ const container = document.getElementById('penrose-background');
+ const numTriangles = 20; // Number of background triangles
+ 
+ for (let i = 0; i < numTriangles; i++) {
+ const scene = new THREE.Scene();
+ const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+ const renderer = new THREE.WebGLRenderer({ 
+ alpha: true,
+ antialias: true 
+ });
+ 
+ renderer.setSize(200, 200); // Size of each triangle container
+ renderer.setClearColor(0x000000, 0);
+ 
+ const triangle = createImpossibleTriangle();
+ scene.add(triangle);
+ 
+ camera.position.z = 30;
+ camera.lookAt(scene.position);
+ 
+ const container3D = document.createElement('div');
+ container3D.className = 'background-triangle';
+ container3D.style.left = `${Math.random() * 100}%`;
+ container3D.style.top = `${Math.random() * 100}%`;
+ container3D.style.transform = `rotate(${Math.random() * 360}deg) scale(${0.5 + Math.random() * 1.5})`;
+ container3D.style.animationDelay = `${Math.random() * 4}s`;
+ 
+ container3D.appendChild(renderer.domElement);
+ container.appendChild(container3D);
+ 
+ // Animate each background triangle
+ function animateBackground() {
+ requestAnimationFrame(animateBackground);
+ triangle.rotation.y += 0.002;
+ renderer.render(scene, camera);
+ }
+ 
+ animateBackground();
+ }
+ }
+
+ // Call createBackgroundTriangles after DOM content is loaded
+ document.addEventListener('DOMContentLoaded', () => {
+ createBackgroundTriangles();
+ setTheme(savedTheme);
+ });
+ </script>
+ <script src="js/chat.js"></script>
+ <script src="js/chat-ai.js"></script>
+ <script src="js/knowledge-base.js"></script>
+ <script src="js/cursor-trail.js"></script>
+ <script src="js/corner-bounce.js"></script>
+</body>
+</html>

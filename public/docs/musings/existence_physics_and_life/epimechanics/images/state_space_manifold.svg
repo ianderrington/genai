@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="300" viewBox="0 0 700 300">
+  <defs>
+    <linearGradient id="surfaceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a4a;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#1e1e3a;stop-opacity:0.7"/>
+    </linearGradient>
+    <linearGradient id="tangentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5dade2;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#5dade2;stop-opacity:0.1"/>
+    </linearGradient>
+    <marker id="arrowWhite" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#ecf0f1" stroke-width="1"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#e94560" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowTraj" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="none" stroke="#f39c12" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="300" fill="#1a1a2e"/>
+
+  <!-- Manifold surface — saddle-like curved sheet -->
+  <!-- Back edge of surface -->
+  <path d="M120,60 C220,30 380,25 520,55 C560,63 590,80 620,100
+           C590,130 540,155 480,165
+           C380,185 250,190 160,170
+           C130,163 115,140 110,110 Z"
+        fill="url(#surfaceGrad)" stroke="#5dade2" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Grid lines on surface to show curvature — u-direction -->
+  <path d="M140,75 C230,50 370,48 510,72" fill="none" stroke="#5dade2" stroke-width="0.4" stroke-opacity="0.3"/>
+  <path d="M130,95 C225,68 380,65 530,90" fill="none" stroke="#5dade2" stroke-width="0.4" stroke-opacity="0.3"/>
+  <path d="M120,115 C220,88 385,85 540,110" fill="none" stroke="#5dade2" stroke-width="0.4" stroke-opacity="0.3"/>
+  <path d="M125,135 C225,108 380,105 530,130" fill="none" stroke="#5dade2" stroke-width="0.4" stroke-opacity="0.3"/>
+  <path d="M140,155 C240,130 380,128 510,148" fill="none" stroke="#5dade2" stroke-width="0.4" stroke-opacity="0.3"/>
+
+  <!-- Grid lines — v-direction -->
+  <path d="M190,52 C195,80 200,120 195,168" fill="none" stroke="#5dade2" stroke-width="0.4" stroke-opacity="0.3"/>
+  <path d="M270,42 C272,75 275,115 270,162" fill="none" stroke="#5dade2" stroke-width="0.4" stroke-opacity="0.3"/>
+  <path d="M350,38 C348,72 350,112 348,170" fill="none" stroke="#5dade2" stroke-width="0.4" stroke-opacity="0.3"/>
+  <path d="M430,42 C425,75 428,115 430,168" fill="none" stroke="#5dade2" stroke-width="0.4" stroke-opacity="0.3"/>
+  <path d="M510,55 C505,85 508,125 505,158" fill="none" stroke="#5dade2" stroke-width="0.4" stroke-opacity="0.3"/>
+
+  <!-- Tangent plane at X (parallelogram, semi-transparent) -->
+  <path d="M290,80 L370,68 L400,115 L320,127 Z"
+        fill="url(#tangentGrad)" stroke="#5dade2" stroke-width="0.8" stroke-opacity="0.6"/>
+
+  <!-- Trajectory through X -->
+  <path d="M180,130 C230,115 290,100 345,97 C400,94 450,105 530,130"
+        fill="none" stroke="#f39c12" stroke-width="1.8" stroke-opacity="0.85"
+        marker-end="url(#arrowTraj)"/>
+
+  <!-- Point X -->
+  <circle cx="345" cy="97" r="5" fill="#e94560"/>
+  <circle cx="345" cy="97" r="8" fill="none" stroke="#e94560" stroke-width="0.5" stroke-opacity="0.5"/>
+
+  <!-- Velocity arrow dX/dt at X -->
+  <line x1="345" y1="97" x2="395" y2="88" stroke="#e94560" stroke-width="1.8" marker-end="url(#arrowRed)"/>
+
+  <!-- Labels -->
+  <text x="355" y="88" fill="#ecf0f1" font-family="'Arial','Helvetica',sans-serif" font-size="14" font-style="italic">X</text>
+
+  <text x="405" y="82" fill="#e94560" font-family="'Arial','Helvetica',sans-serif" font-size="12" font-style="italic">dX/dt</text>
+
+  <text x="380" y="62" fill="#5dade2" font-family="'Arial','Helvetica',sans-serif" font-size="12" font-style="italic" opacity="0.85">TxS</text>
+
+  <!-- Surface label -->
+  <text x="460" y="195" fill="#ecf0f1" font-family="'Arial','Helvetica',sans-serif" font-size="15" font-style="italic" opacity="0.9">State Space S</text>
+
+  <!-- Subtitle -->
+  <text x="100" y="250" fill="#ecf0f1" font-family="'Arial','Helvetica',sans-serif" font-size="11" opacity="0.5">A curved manifold with tangent structure at each point</text>
+</svg>

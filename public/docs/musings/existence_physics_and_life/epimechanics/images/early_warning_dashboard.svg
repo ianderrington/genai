@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="riskGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2ecc71"/>
+      <stop offset="35%" stop-color="#f1c40f"/>
+      <stop offset="65%" stop-color="#e67e22"/>
+      <stop offset="100%" stop-color="#e74c3c"/>
+    </linearGradient>
+    <marker id="da" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="none" stroke="#7f8c8d" stroke-width="0.8"/>
+    </marker>
+    <style>
+      text { font-family: 'Helvetica Neue', Arial, sans-serif; fill: #ecf0f1; dominant-baseline: central; }
+      .heading { font-size: 11px; font-weight: bold; text-anchor: middle; }
+      .label { font-size: 9.5px; text-anchor: start; }
+      .label-c { font-size: 9.5px; text-anchor: middle; }
+      .flow { fill: none; stroke: #7f8c8d; stroke-width: 1; marker-end: url(#da); opacity: 0.5; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="20" font-size="14" font-weight="bold" text-anchor="middle">Early-Warning Dashboard for Social Systems</text>
+
+  <!-- ===== LEFT COLUMN: Measurements ===== -->
+  <rect x="16" y="40" width="240" height="345" rx="8" fill="#1e2640" stroke="#34495e" stroke-width="0.8"/>
+  <text x="136" y="58" class="heading" fill="#3498db">Measurements</text>
+
+  <!-- Row 1: Temperature -->
+  <rect x="28" y="74" width="216" height="50" rx="5" fill="#162035" stroke="#2c3e50" stroke-width="0.6"/>
+  <!-- Thermometer icon -->
+  <rect x="42" y="86" width="6" height="26" rx="3" fill="none" stroke="#e74c3c" stroke-width="1.2"/>
+  <circle cx="45" cy="116" r="5" fill="#e74c3c" opacity="0.7"/>
+  <rect x="43" y="98" width="4" height="14" rx="1" fill="#e74c3c" opacity="0.6"/>
+  <text x="60" y="93" class="label" font-weight="bold">Temperature T</text>
+  <text x="60" y="107" class="label" fill="#95a5a6" font-size="8.5">(volatility of discourse)</text>
+
+  <!-- Row 2: Pressure -->
+  <rect x="28" y="132" width="216" height="50" rx="5" fill="#162035" stroke="#2c3e50" stroke-width="0.6"/>
+  <!-- Pressure gauge icon -->
+  <circle cx="45" cy="157" r="11" fill="none" stroke="#f39c12" stroke-width="1.2"/>
+  <line x1="45" y1="157" x2="52" y2="150" stroke="#f39c12" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="60" y="151" class="label" font-weight="bold">Pressure P</text>
+  <text x="60" y="165" class="label" fill="#95a5a6" font-size="8.5">(constraint on agents)</text>
+
+  <!-- Row 3: Correlation Length -->
+  <rect x="28" y="190" width="216" height="50" rx="5" fill="#162035" stroke="#2c3e50" stroke-width="0.6"/>
+  <!-- Expanding circles icon -->
+  <circle cx="45" cy="215" r="4" fill="none" stroke="#1abc9c" stroke-width="0.8"/>
+  <circle cx="45" cy="215" r="8" fill="none" stroke="#1abc9c" stroke-width="0.6" opacity="0.6"/>
+  <circle cx="45" cy="215" r="12" fill="none" stroke="#1abc9c" stroke-width="0.4" opacity="0.3"/>
+  <text x="60" y="209" class="label" font-weight="bold">Correlation Length</text>
+  <text x="60" y="223" class="label" fill="#95a5a6" font-size="8.5">(info propagation distance)</text>
+
+  <!-- Row 4: Reynolds Number -->
+  <rect x="28" y="248" width="216" height="50" rx="5" fill="#162035" stroke="#2c3e50" stroke-width="0.6"/>
+  <!-- Flow lines icon -->
+  <path d="M36,267 C42,263 48,271 54,267" fill="none" stroke="#9b59b6" stroke-width="1"/>
+  <path d="M36,273 C42,269 48,277 54,273" fill="none" stroke="#9b59b6" stroke-width="1" opacity="0.7"/>
+  <path d="M36,279 C42,275 48,283 54,279" fill="none" stroke="#9b59b6" stroke-width="1" opacity="0.4"/>
+  <text x="60" y="267" class="label" font-weight="bold">Reynolds Number Re</text>
+  <text x="60" y="281" class="label" fill="#95a5a6" font-size="8.5">(laminar vs turbulent flow)</text>
+
+  <!-- Row 5: dM/dt -->
+  <rect x="28" y="306" width="216" height="50" rx="5" fill="#162035" stroke="#2c3e50" stroke-width="0.6"/>
+  <!-- Downward arrow icon -->
+  <line x1="45" y1="319" x2="45" y2="343" stroke="#e74c3c" stroke-width="1.5"/>
+  <path d="M39,337 L45,345 L51,337" fill="none" stroke="#e74c3c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="325" class="label" font-weight="bold">dM/dt of institutions</text>
+  <text x="60" y="339" class="label" fill="#95a5a6" font-size="8.5">(institutional mass loss)</text>
+
+  <!-- ===== CENTER COLUMN: Risk Assessment ===== -->
+  <rect x="280" y="40" width="230" height="345" rx="8" fill="#1e2640" stroke="#34495e" stroke-width="0.8"/>
+  <text x="395" y="58" class="heading" fill="#f1c40f">Risk Assessment</text>
+
+  <rect x="300" y="76" width="190" height="280" rx="8" fill="#162035" stroke="#2c3e50" stroke-width="0.8"/>
+  <text x="395" y="100" font-size="13" font-weight="bold" text-anchor="middle">System Risk</text>
+  <text x="395" y="118" font-size="13" font-weight="bold" text-anchor="middle">Level</text>
+
+  <!-- Large gradient bar -->
+  <rect x="318" y="140" width="154" height="22" rx="4" fill="url(#riskGrad)"/>
+  <rect x="318" y="140" width="154" height="22" rx="4" fill="none" stroke="#555" stroke-width="0.5"/>
+
+  <!-- Bar labels -->
+  <text x="330" y="174" class="label-c" font-size="8" fill="#2ecc71">Low</text>
+  <text x="372" y="174" class="label-c" font-size="8" fill="#f1c40f">Moderate</text>
+  <text x="424" y="174" class="label-c" font-size="8" fill="#e67e22">High</text>
+  <text x="462" y="174" class="label-c" font-size="8" fill="#e74c3c">Critical</text>
+
+  <!-- Indicator triangle -->
+  <polygon points="420,138 425,130 415,130" fill="#ecf0f1"/>
+
+  <!-- Diagnostic indicators -->
+  <text x="395" y="200" class="label-c" font-size="9" fill="#95a5a6">Diagnostic Signals</text>
+
+  <rect x="310" y="214" width="170" height="24" rx="4" fill="#1a3a1a" stroke="#2ecc71" stroke-width="0.6"/>
+  <text x="324" y="226" class="label" font-size="8.5">Autocorrelation increase</text>
+
+  <rect x="310" y="244" width="170" height="24" rx="4" fill="#3a2a0a" stroke="#f39c12" stroke-width="0.6"/>
+  <text x="324" y="256" class="label" font-size="8.5">Variance amplification</text>
+
+  <rect x="310" y="274" width="170" height="24" rx="4" fill="#3a1a1a" stroke="#e74c3c" stroke-width="0.6"/>
+  <text x="324" y="286" class="label" font-size="8.5">Flickering between states</text>
+
+  <rect x="310" y="304" width="170" height="24" rx="4" fill="#2a1a3a" stroke="#9b59b6" stroke-width="0.6"/>
+  <text x="324" y="316" class="label" font-size="8.5">Symmetry breaking onset</text>
+
+  <rect x="310" y="334" width="170" height="18" rx="4" fill="#1a2a3a" stroke="#3498db" stroke-width="0.6"/>
+  <text x="324" y="343" class="label" font-size="8.5">Network topology shift</text>
+
+  <!-- ===== RIGHT COLUMN: Interventions ===== -->
+  <rect x="534" y="40" width="252" height="345" rx="8" fill="#1e2640" stroke="#34495e" stroke-width="0.8"/>
+  <text x="660" y="58" class="heading" fill="#2ecc71">Interventions</text>
+
+  <!-- Intervention 1: Cool -->
+  <rect x="548" y="80" width="224" height="62" rx="6" fill="#162035" stroke="#3498db" stroke-width="1"/>
+  <rect x="548" y="80" width="5" height="62" rx="2" fill="#3498db"/>
+  <text x="566" y="100" class="label" font-weight="bold" fill="#3498db" font-size="10">Cool</text>
+  <text x="566" y="115" class="label" fill="#bdc3c7" font-size="9">Stabilize information flows.</text>
+  <text x="566" y="129" class="label" fill="#7f8c8d" font-size="8">Lower T by damping feedback loops.</text>
+
+  <!-- Intervention 2: Release -->
+  <rect x="548" y="152" width="224" height="62" rx="6" fill="#162035" stroke="#2ecc71" stroke-width="1"/>
+  <rect x="548" y="152" width="5" height="62" rx="2" fill="#2ecc71"/>
+  <text x="566" y="172" class="label" font-weight="bold" fill="#2ecc71" font-size="10">Release</text>
+  <text x="566" y="187" class="label" fill="#bdc3c7" font-size="9">Reform before rupture.</text>
+  <text x="566" y="201" class="label" fill="#7f8c8d" font-size="8">Reduce P via controlled transitions.</text>
+
+  <!-- Intervention 3: Viscosity -->
+  <rect x="548" y="224" width="224" height="62" rx="6" fill="#162035" stroke="#f39c12" stroke-width="1"/>
+  <rect x="548" y="224" width="5" height="62" rx="2" fill="#f39c12"/>
+  <text x="566" y="244" class="label" font-weight="bold" fill="#f39c12" font-size="10">Viscosity</text>
+  <text x="566" y="259" class="label" fill="#bdc3c7" font-size="9">Strengthen social cohesion.</text>
+  <text x="566" y="273" class="label" fill="#7f8c8d" font-size="8">Increase effective viscosity, lower Re.</text>
+
+  <!-- Intervention 4: Reinforce -->
+  <rect x="548" y="296" width="224" height="62" rx="6" fill="#162035" stroke="#9b59b6" stroke-width="1"/>
+  <rect x="548" y="296" width="5" height="62" rx="2" fill="#9b59b6"/>
+  <text x="566" y="316" class="label" font-weight="bold" fill="#9b59b6" font-size="10">Reinforce</text>
+  <text x="566" y="331" class="label" fill="#bdc3c7" font-size="9">Shore up institutions.</text>
+  <text x="566" y="345" class="label" fill="#7f8c8d" font-size="8">Prevent dM/dt collapse of mass.</text>
+
+  <!-- ===== FLOW ARROWS: Left → Center ===== -->
+  <path class="flow" d="M256,99 L280,99"/>
+  <path class="flow" d="M256,157 L280,180"/>
+  <path class="flow" d="M256,215 L280,230"/>
+  <path class="flow" d="M256,273 L280,280"/>
+  <path class="flow" d="M256,331 L280,330"/>
+
+  <!-- ===== FLOW ARROWS: Center → Right ===== -->
+  <path class="flow" d="M510,111 L548,111"/>
+  <path class="flow" d="M510,183 L548,183"/>
+  <path class="flow" d="M510,255 L548,255"/>
+  <path class="flow" d="M510,327 L548,327"/>
+</svg>

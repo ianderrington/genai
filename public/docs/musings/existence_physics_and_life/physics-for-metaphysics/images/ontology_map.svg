@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="none" stroke="#ecf0f1" stroke-width="0.8"/>
+    </marker>
+    <marker id="arr-inter" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="none" stroke="#f5c842" stroke-width="0.8"/>
+    </marker>
+    <style>
+      text { font-family: 'Helvetica Neue', Arial, sans-serif; fill: #ecf0f1; font-size: 10px; text-anchor: middle; dominant-baseline: central; }
+      .n { rx: 5; ry: 5; stroke-width: 1.2; }
+      .e { fill: none; stroke: #ecf0f1; stroke-width: 0.8; marker-end: url(#arr); opacity: 0.6; }
+      .ei { fill: none; stroke: #f5c842; stroke-width: 1; stroke-dasharray: 4,3; marker-end: url(#arr-inter); opacity: 0.7; }
+      .group-label { font-size: 12px; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+  <text x="400" y="20" font-size="14" font-weight="bold">Full Ontology Map — Physics for Metaphysics</text>
+
+  <!-- ===== GROUP 1: Mechanics (red tint) ===== -->
+  <rect x="12" y="36" width="195" height="450" rx="8" fill="#e9456010" stroke="#e94560" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="110" y="52" class="group-label" fill="#e94560">Mechanics</text>
+
+  <!-- Nodes -->
+  <rect class="n" x="60" y="68" width="60" height="24" fill="#8b1a2b" stroke="#e94560"/>
+  <text x="90" y="80" font-weight="bold">X</text>
+
+  <rect class="n" x="120" y="68" width="60" height="24" fill="#8b1a2b" stroke="#e94560"/>
+  <text x="150" y="80" font-weight="bold">M</text>
+
+  <rect class="n" x="75" y="108" width="60" height="24" fill="#3a1a2b" stroke="#c0392b"/>
+  <text x="105" y="120">p</text>
+
+  <rect class="n" x="40" y="148" width="60" height="24" fill="#3a1a2b" stroke="#c0392b"/>
+  <text x="70" y="160">F</text>
+
+  <rect class="n" x="120" y="148" width="60" height="24" fill="#3a1a2b" stroke="#c0392b"/>
+  <text x="150" y="160">W</text>
+
+  <rect class="n" x="40" y="198" width="60" height="24" fill="#3a1a2b" stroke="#c0392b"/>
+  <text x="70" y="210">L</text>
+
+  <rect class="n" x="120" y="198" width="70" height="24" fill="#3a1a2b" stroke="#c0392b"/>
+  <text x="155" y="210">Action</text>
+
+  <rect class="n" x="50" y="258" width="70" height="24" fill="#3a1a2b" stroke="#c0392b"/>
+  <text x="85" y="270" font-size="9">κ / T_ij</text>
+
+  <rect class="n" x="50" y="308" width="70" height="24" fill="#3a1a2b" stroke="#c0392b"/>
+  <text x="85" y="320">Φ</text>
+
+  <!-- Mechanics edges -->
+  <line class="e" x1="90" y1="92" x2="100" y2="108"/>
+  <line class="e" x1="150" y1="92" x2="115" y2="108"/>
+  <line class="e" x1="95" y1="132" x2="78" y2="148"/>
+  <line class="e" x1="115" y1="132" x2="142" y2="148"/>
+  <line class="e" x1="70" y1="172" x2="70" y2="198"/>
+  <line class="e" x1="150" y1="172" x2="155" y2="198"/>
+  <line class="e" x1="78" y1="222" x2="82" y2="258"/>
+  <line class="e" x1="155" y1="222" x2="95" y2="258"/>
+  <line class="e" x1="85" y1="282" x2="85" y2="308"/>
+
+  <!-- ===== GROUP 2: Many-Entity (purple tint) ===== -->
+  <rect x="218" y="36" width="175" height="450" rx="8" fill="#53348310" stroke="#533483" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="305" y="52" class="group-label" fill="#9b59b6">Many-Entity</text>
+
+  <rect class="n" x="255" y="78" width="70" height="24" fill="#2d1845" stroke="#8e44ad"/>
+  <text x="290" y="90">Temp</text>
+
+  <rect class="n" x="255" y="118" width="70" height="24" fill="#2d1845" stroke="#8e44ad"/>
+  <text x="290" y="130">Pressure</text>
+
+  <rect class="n" x="255" y="158" width="70" height="24" fill="#2d1845" stroke="#8e44ad"/>
+  <text x="290" y="170">Entropy</text>
+
+  <rect class="n" x="240" y="198" width="100" height="24" fill="#2d1845" stroke="#8e44ad"/>
+  <text x="290" y="210">Free Energy</text>
+
+  <rect class="n" x="240" y="248" width="100" height="24" fill="#2d1845" stroke="#8e44ad"/>
+  <text x="290" y="260">Phase Trans.</text>
+
+  <rect class="n" x="255" y="298" width="70" height="24" fill="#2d1845" stroke="#8e44ad"/>
+  <text x="290" y="310">NS</text>
+
+  <rect class="n" x="255" y="348" width="70" height="24" fill="#2d1845" stroke="#8e44ad"/>
+  <text x="290" y="360">Re</text>
+
+  <!-- Many-Entity edges -->
+  <line class="e" x1="290" y1="102" x2="290" y2="118"/>
+  <line class="e" x1="290" y1="142" x2="290" y2="158"/>
+  <line class="e" x1="290" y1="182" x2="290" y2="198"/>
+  <line class="e" x1="290" y1="222" x2="290" y2="248"/>
+  <line class="e" x1="290" y1="272" x2="290" y2="298"/>
+  <line class="e" x1="290" y1="322" x2="290" y2="348"/>
+
+  <!-- Φ → Temp (inter-group) -->
+  <path class="ei" d="M120,320 C180,320 220,90 255,90"/>
+
+  <!-- ===== GROUP 3: Entities (blue tint) ===== -->
+  <rect x="404" y="36" width="175" height="450" rx="8" fill="#0f346010" stroke="#0f3460" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="492" y="52" class="group-label" fill="#3498db">Entities</text>
+
+  <rect class="n" x="457" y="78" width="70" height="24" fill="#0a1f3a" stroke="#2980b9"/>
+  <text x="492" y="90">Entity</text>
+
+  <rect class="n" x="440" y="138" width="104" height="24" fill="#0a1f3a" stroke="#2980b9"/>
+  <text x="492" y="150">Meta-Entity</text>
+
+  <rect class="n" x="440" y="198" width="104" height="24" fill="#0a1f3a" stroke="#2980b9"/>
+  <text x="492" y="210">Intelligence</text>
+
+  <rect class="n" x="435" y="268" width="114" height="24" fill="#0a1f3a" stroke="#2980b9"/>
+  <text x="492" y="280">Consciousness</text>
+
+  <rect class="n" x="457" y="338" width="70" height="24" fill="#0a1f3a" stroke="#2980b9"/>
+  <text x="492" y="350">Agency</text>
+
+  <!-- Entities edges -->
+  <line class="e" x1="492" y1="102" x2="492" y2="138"/>
+  <line class="e" x1="492" y1="162" x2="492" y2="198"/>
+  <line class="e" x1="492" y1="222" x2="492" y2="268"/>
+  <line class="e" x1="492" y1="292" x2="492" y2="338"/>
+
+  <!-- X → Entity (inter-group) -->
+  <path class="ei" d="M120,80 C200,50 400,50 457,86"/>
+
+  <!-- ===== GROUP 4: Time & Soul (green tint) ===== -->
+  <rect x="590" y="36" width="198" height="450" rx="8" fill="#1abc9c10" stroke="#1abc9c" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="689" y="52" class="group-label" fill="#1abc9c">Time &amp; Soul</text>
+
+  <rect class="n" x="645" y="88" width="70" height="24" fill="#0a2a1f" stroke="#1abc9c"/>
+  <text x="680" y="100" font-size="9">κ_s</text>
+
+  <rect class="n" x="640" y="148" width="80" height="24" fill="#0a2a1f" stroke="#1abc9c"/>
+  <text x="680" y="160" font-size="9">T_local</text>
+
+  <rect class="n" x="640" y="208" width="90" height="24" fill="#0a2a1f" stroke="#1abc9c"/>
+  <text x="685" y="220" font-size="9">R(E, t)</text>
+
+  <rect class="n" x="635" y="278" width="100" height="24" fill="#0a2a1f" stroke="#1abc9c"/>
+  <text x="685" y="290" font-size="9">T_nonlocal</text>
+
+  <rect class="n" x="655" y="348" width="60" height="24" fill="#0a2a1f" stroke="#1abc9c"/>
+  <text x="685" y="360" font-weight="bold">Soul</text>
+
+  <!-- Time & Soul edges -->
+  <line class="e" x1="680" y1="112" x2="680" y2="148"/>
+  <line class="e" x1="680" y1="172" x2="685" y2="208"/>
+  <line class="e" x1="685" y1="232" x2="685" y2="278"/>
+  <line class="e" x1="685" y1="302" x2="685" y2="348"/>
+
+  <!-- M → κ_s (inter-group) -->
+  <path class="ei" d="M180,80 C200,36 620,36 660,88"/>
+
+  <!-- Agency → R(E,t) (inter-group) -->
+  <path class="ei" d="M527,350 C570,350 600,240 640,224"/>
+
+  <!-- Legend -->
+  <line x1="30" y1="495" x2="50" y2="495" stroke="#f5c842" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="90" y="495" font-size="9" text-anchor="start" fill="#aaa">Inter-group dependency</text>
+  <line x1="160" y1="495" x2="180" y2="495" stroke="#ecf0f1" stroke-width="0.8"/>
+  <text x="220" y="495" font-size="9" text-anchor="start" fill="#aaa">Intra-group dependency</text>
+</svg>

@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#e94560">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="axis-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" fill="#ecf0f1">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+    <linearGradient id="landscape-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16213e" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f3460" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft-glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Axes -->
+  <line x1="80" y1="430" x2="760" y2="430" stroke="#ecf0f1" stroke-width="1.2" marker-end="url(#axis-arrow)"/>
+  <line x1="80" y1="430" x2="80" y2="40" stroke="#ecf0f1" stroke-width="1.2" marker-end="url(#axis-arrow)"/>
+
+  <!-- Axis labels -->
+  <text x="420" y="470" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#ecf0f1" font-weight="300">State X</text>
+  <text x="30" y="235" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#ecf0f1" font-weight="300" transform="rotate(-90, 30, 235)">Energy</text>
+
+  <!-- Axis tick context -->
+  <text x="85" y="448" font-family="sans-serif" font-size="10" fill="#7f8c8d">0</text>
+
+  <!-- Potential landscape V(X) — filled region beneath curve -->
+  <path d="M 100,280
+           C 130,275 150,270 180,310
+           C 210,350 230,370 270,370
+           C 310,370 330,350 350,310
+           C 370,270 380,200 400,160
+           C 420,120 440,115 460,130
+           C 480,145 490,170 500,200
+           C 510,230 520,250 540,260
+           C 560,270 575,265 590,250
+           C 605,235 615,215 630,200
+           C 645,185 660,180 680,195
+           C 700,210 720,250 740,280
+           L 740,430 L 100,430 Z"
+        fill="url(#landscape-grad)" opacity="0.4"/>
+
+  <!-- Potential landscape V(X) — the curve itself -->
+  <path d="M 100,280
+           C 130,275 150,270 180,310
+           C 210,350 230,370 270,370
+           C 310,370 330,350 350,310
+           C 370,270 380,200 400,160
+           C 420,120 440,115 460,130
+           C 480,145 490,170 500,200
+           C 510,230 520,250 540,260
+           C 560,270 575,265 590,250
+           C 605,235 615,215 630,200
+           C 645,185 660,180 680,195
+           C 700,210 720,250 740,280"
+        fill="none" stroke="#ecf0f1" stroke-width="2" stroke-linecap="round" filter="url(#soft-glow)"/>
+
+  <!-- V(X) label on the curve -->
+  <text x="115" y="268" font-family="sans-serif" font-size="13" fill="#ecf0f1" font-style="italic" opacity="0.85">V(X)</text>
+
+  <!-- Basin labels -->
+  <!-- Deep basin (stable equilibrium) at ~X=270, Y=370 -->
+  <line x1="270" y1="375" x2="270" y2="400" stroke="#7f8c8d" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <text x="270" y="418" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3498db" font-weight="400">Stable equilibrium</text>
+
+  <!-- Shallow basin (local minimum) at ~X=545, Y=262 -->
+  <line x1="545" y1="267" x2="545" y2="292" stroke="#7f8c8d" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <text x="545" y="308" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3498db" font-weight="400">Local minimum</text>
+
+  <!-- Unstable maximum (hilltop) at ~X=400, Y=160 -->
+  <line x1="400" y1="155" x2="400" y2="130" stroke="#7f8c8d" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <text x="400" y="120" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e67e22" font-weight="400">Unstable maximum</text>
+
+  <!-- Potential energy dashed line at entity position (V level) -->
+  <!-- Entity is on the right slope descending into the shallow basin, at ~X=620, V~=205 -->
+  <line x1="80" y1="205" x2="620" y2="205" stroke="#3498db" stroke-width="0.8" stroke-dasharray="5,4" opacity="0.6"/>
+  <text x="83" y="200" font-family="sans-serif" font-size="10" fill="#3498db" opacity="0.8">V(X)</text>
+
+  <!-- Total energy E_total dashed line -->
+  <line x1="80" y1="145" x2="740" y2="145" stroke="#e94560" stroke-width="0.9" stroke-dasharray="8,5" opacity="0.55"/>
+  <text x="745" y="149" font-family="sans-serif" font-size="11" fill="#e94560" opacity="0.85" font-style="italic">E</text>
+  <text x="745" y="149" font-family="sans-serif" font-size="11" fill="#e94560" opacity="0.85" font-style="italic" dx="8">
+    <tspan font-size="8" dy="3">total</tspan>
+  </text>
+  <text x="85" y="140" font-family="sans-serif" font-size="10" fill="#e94560" opacity="0.7">E</text>
+  <text x="93" y="143" font-family="sans-serif" font-size="8" fill="#e94560" opacity="0.7">total</text>
+  <text x="110" y="140" font-family="sans-serif" font-size="10" fill="#e94560" opacity="0.7">= T + V</text>
+
+  <!-- Kinetic energy bracket between V line and E_total line at entity position -->
+  <!-- V=205, E_total=145, so T spans 145..205 at X=615 -->
+  <line x1="615" y1="148" x2="615" y2="202" stroke="#e94560" stroke-width="1" opacity="0.5"/>
+  <line x1="611" y1="148" x2="619" y2="148" stroke="#e94560" stroke-width="1" opacity="0.5"/>
+  <line x1="611" y1="202" x2="619" y2="202" stroke="#e94560" stroke-width="1" opacity="0.5"/>
+  <text x="622" y="180" font-family="sans-serif" font-size="9" fill="#e94560" opacity="0.7">T</text>
+
+  <!-- Potential energy bracket between curve and V line at entity -->
+  <line x1="625" y1="208" x2="625" y2="427" stroke="#3498db" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
+
+  <!-- Entity — bright circle on the landscape slope -->
+  <!-- Position: descending right side of hill toward shallow basin, X=620, on curve ~Y=200 -->
+  <circle cx="620" cy="200" r="8" fill="#e94560" filter="url(#glow)"/>
+  <circle cx="620" cy="200" r="4" fill="#fff" opacity="0.6"/>
+
+  <!-- Velocity arrow (dX/dt) — entity moving to the right and downward along the slope -->
+  <line x1="628" y1="200" x2="668" y2="220" stroke="#e94560" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Velocity label -->
+  <text x="672" y="218" font-family="sans-serif" font-size="11" fill="#e94560" font-style="italic">dX/dt</text>
+
+  <!-- Kinetic energy label near entity -->
+  <text x="635" y="250" font-family="sans-serif" font-size="12" fill="#ecf0f1" opacity="0.9">
+    <tspan font-style="italic">T</tspan>
+    <tspan> = </tspan>
+    <tspan font-size="13">&#189;</tspan>
+    <tspan font-style="italic" font-family="serif">&#x1D4DC;</tspan>
+    <tspan>|d</tspan>
+    <tspan font-style="italic">X</tspan>
+    <tspan>/dt|</tspan>
+    <tspan font-size="9" dy="-5">2</tspan>
+  </text>
+
+  <!-- Small trajectory dots showing past path of entity -->
+  <circle cx="480" cy="145" r="2.5" fill="#e94560" opacity="0.15"/>
+  <circle cx="500" cy="155" r="2.5" fill="#e94560" opacity="0.2"/>
+  <circle cx="520" cy="170" r="2.5" fill="#e94560" opacity="0.25"/>
+  <circle cx="540" cy="180" r="2.5" fill="#e94560" opacity="0.3"/>
+  <circle cx="555" cy="185" r="2.5" fill="#e94560" opacity="0.35"/>
+  <circle cx="570" cy="190" r="2.5" fill="#e94560" opacity="0.4"/>
+  <circle cx="585" cy="193" r="2.5" fill="#e94560" opacity="0.45"/>
+  <circle cx="598" cy="196" r="2.5" fill="#e94560" opacity="0.55"/>
+  <circle cx="609" cy="198" r="2.5" fill="#e94560" opacity="0.65"/>
+
+  <!-- Trajectory curve (faint) showing entity's path above the landscape -->
+  <path d="M 460,132 C 480,140 500,155 520,170 C 540,180 560,188 580,193 C 600,197 610,199 620,200"
+        fill="none" stroke="#e94560" stroke-width="1" stroke-dasharray="4,3" opacity="0.35"/>
+
+</svg>

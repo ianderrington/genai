@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <style>
+      text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#1a1a2e"/>
+
+  <!-- Dividing line -->
+  <line x1="400" y1="30" x2="400" y2="360" stroke="#555577" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- ==================== LEFT PANEL: LAMINAR ==================== -->
+
+  <!-- Axis labels (left panel) -->
+  <text x="200" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#3498db">Laminar Flow (Low Re)</text>
+  <text x="200" y="370" text-anchor="middle" font-size="9" fill="#8899aa">State dimension 1</text>
+  <text x="18" y="200" text-anchor="middle" font-size="9" fill="#8899aa" transform="rotate(-90, 18, 200)">State dimension 2</text>
+
+  <!-- Subtle grid (left) -->
+  <line x1="30" y1="40" x2="380" y2="40" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="30" y1="80" x2="380" y2="80" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="30" y1="120" x2="380" y2="120" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="30" y1="160" x2="380" y2="160" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="30" y1="200" x2="380" y2="200" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="30" y1="240" x2="380" y2="240" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="30" y1="280" x2="380" y2="280" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="30" y1="320" x2="380" y2="320" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="75" y1="35" x2="75" y2="345" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="145" y1="35" x2="145" y2="345" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="215" y1="35" x2="215" y2="345" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="285" y1="35" x2="285" y2="345" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="355" y1="35" x2="355" y2="345" stroke="#2a2a4e" stroke-width="0.5"/>
+
+  <!-- Laminar streamlines: smooth, gently curved, parallel -->
+  <path d="M 35,60 C 120,58 220,65 380,62" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M 35,95 C 130,90 240,100 380,96" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M 35,125 C 100,128 250,120 380,127" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M 35,158 C 140,155 260,163 380,159" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M 35,190 C 110,193 230,186 380,191" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M 35,222 C 150,218 270,228 380,223" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M 35,255 C 120,258 240,250 380,256" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M 35,287 C 140,283 260,292 380,288" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M 35,318 C 110,322 230,315 380,320" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M 35,345 C 130,342 250,348 380,346" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.7"/>
+
+  <!-- Laminar entities (dots along streamlines) -->
+  <!-- Line 1 -->
+  <circle cx="80" cy="59" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="190" cy="62" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="310" cy="63" r="3" fill="#5dade2" opacity="0.9"/>
+  <!-- Line 2 -->
+  <circle cx="110" cy="92" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="250" cy="97" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="350" cy="96" r="3" fill="#5dade2" opacity="0.9"/>
+  <!-- Line 3 -->
+  <circle cx="70" cy="127" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="200" cy="122" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="330" cy="126" r="3" fill="#5dade2" opacity="0.9"/>
+  <!-- Line 4 -->
+  <circle cx="100" cy="156" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="230" cy="161" r="3" fill="#5dade2" opacity="0.9"/>
+  <!-- Line 5 -->
+  <circle cx="150" cy="192" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="290" cy="188" r="3" fill="#5dade2" opacity="0.9"/>
+  <!-- Line 6 -->
+  <circle cx="90" cy="220" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="220" cy="224" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="340" cy="223" r="3" fill="#5dade2" opacity="0.9"/>
+  <!-- Line 7 -->
+  <circle cx="170" cy="254" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="300" cy="253" r="3" fill="#5dade2" opacity="0.9"/>
+  <!-- Line 8 -->
+  <circle cx="60" cy="285" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="210" cy="289" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="360" cy="288" r="3" fill="#5dade2" opacity="0.9"/>
+  <!-- Line 9 -->
+  <circle cx="130" cy="320" r="3" fill="#5dade2" opacity="0.9"/>
+  <circle cx="280" cy="317" r="3" fill="#5dade2" opacity="0.9"/>
+
+  <!-- Arrow heads (laminar, right side) -->
+  <polygon points="378,58 385,62 378,66" fill="#3498db" opacity="0.7"/>
+  <polygon points="378,92 385,96 378,100" fill="#3498db" opacity="0.7"/>
+  <polygon points="378,123 385,127 378,131" fill="#3498db" opacity="0.7"/>
+  <polygon points="378,155 385,159 378,163" fill="#3498db" opacity="0.7"/>
+  <polygon points="378,187 385,191 378,195" fill="#3498db" opacity="0.7"/>
+  <polygon points="378,219 385,223 378,227" fill="#3498db" opacity="0.7"/>
+  <polygon points="378,252 385,256 378,260" fill="#3498db" opacity="0.7"/>
+  <polygon points="378,284 385,288 378,292" fill="#3498db" opacity="0.7"/>
+  <polygon points="378,316 385,320 378,324" fill="#3498db" opacity="0.7"/>
+
+  <!-- Left panel labels -->
+  <text x="200" y="385" text-anchor="middle" font-size="9" fill="#3498db">Low Re: orderly, predictable</text>
+  <text x="200" y="397" text-anchor="middle" font-size="8" fill="#667799" font-style="italic">High viscosity &#956; (strong norms)</text>
+
+  <!-- ==================== RIGHT PANEL: TURBULENT ==================== -->
+
+  <!-- Axis labels (right panel) -->
+  <text x="600" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">Turbulent Flow (High Re)</text>
+  <text x="600" y="370" text-anchor="middle" font-size="9" fill="#8899aa">State dimension 1</text>
+  <text x="418" y="200" text-anchor="middle" font-size="9" fill="#8899aa" transform="rotate(-90, 418, 200)">State dimension 2</text>
+
+  <!-- Subtle grid (right) -->
+  <line x1="420" y1="40" x2="780" y2="40" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="420" y1="80" x2="780" y2="80" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="420" y1="120" x2="780" y2="120" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="420" y1="160" x2="780" y2="160" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="420" y1="200" x2="780" y2="200" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="420" y1="240" x2="780" y2="240" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="420" y1="280" x2="780" y2="280" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="420" y1="320" x2="780" y2="320" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="465" y1="35" x2="465" y2="345" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="535" y1="35" x2="535" y2="345" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="605" y1="35" x2="605" y2="345" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="675" y1="35" x2="675" y2="345" stroke="#2a2a4e" stroke-width="0.5"/>
+  <line x1="745" y1="35" x2="745" y2="345" stroke="#2a2a4e" stroke-width="0.5"/>
+
+  <!-- Turbulent streamlines: chaotic, looping, crossing -->
+  <!-- Line 1: starts upper, swoops down, loops up, exits mid -->
+  <path d="M 425,55 C 450,50 470,80 490,110 C 510,140 500,70 530,55 C 560,40 580,100 610,130 C 640,160 660,60 690,80 C 720,100 750,65 775,70" stroke="#e74c3c" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+  <!-- Line 2: wild oscillation -->
+  <path d="M 425,90 C 445,130 460,50 490,85 C 520,120 530,160 555,100 C 580,40 600,140 630,90 C 660,40 700,150 730,110 C 760,70 770,120 775,105" stroke="#e74c3c" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+  <!-- Line 3: vortex loop in the middle -->
+  <path d="M 425,140 C 455,135 475,170 500,200 C 525,230 540,160 555,130 C 570,100 560,180 580,210 C 600,240 630,150 660,140 C 690,130 720,180 775,155" stroke="#e74c3c" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+  <!-- Line 4: crossing downward then up sharply -->
+  <path d="M 425,180 C 450,220 470,260 500,230 C 530,200 520,140 550,170 C 580,200 590,280 620,240 C 650,200 670,160 700,220 C 730,280 760,190 775,200" stroke="#e74c3c" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+  <!-- Line 5: tight spiral eddy -->
+  <path d="M 425,220 C 445,190 465,250 485,210 C 505,170 520,260 545,230 C 570,200 560,290 590,260 C 620,230 640,300 670,250 C 700,200 740,280 775,260" stroke="#e74c3c" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+  <!-- Line 6: erratic zigzag -->
+  <path d="M 425,270 C 440,240 460,310 480,280 C 500,250 515,330 540,290 C 565,250 575,310 600,280 C 625,250 645,340 680,300 C 715,260 740,330 775,310" stroke="#e74c3c" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+  <!-- Line 7: sweeps across broadly -->
+  <path d="M 425,310 C 455,280 470,340 500,300 C 530,260 545,330 570,345 C 595,360 610,280 640,310 C 670,340 690,270 720,330 C 750,350 765,310 775,340" stroke="#e74c3c" stroke-width="1.5" fill="none" opacity="0.7"/>
+
+  <!-- Line 8: enters low, goes high, returns -->
+  <path d="M 425,340 C 445,310 460,260 490,300 C 520,340 535,240 560,280 C 585,320 600,200 630,260 C 660,320 680,240 710,290 C 740,340 760,280 775,300" stroke="#e74c3c" stroke-width="1.5" fill="none" opacity="0.7"/>
+
+  <!-- Line 9: high frequency chaos -->
+  <path d="M 425,50 C 435,80 445,35 460,70 C 475,105 485,45 500,80 C 515,115 530,50 550,90 C 570,130 585,60 610,100 C 635,140 650,70 680,110 C 710,150 730,80 775,120" stroke="#e74c3c" stroke-width="1.5" fill="none" opacity="0.7"/>
+
+  <!-- Line 10: broad sweeping vortex -->
+  <path d="M 425,160 C 450,100 480,220 510,150 C 540,80 560,230 590,170 C 620,110 640,250 670,180 C 700,110 730,220 775,170" stroke="#e74c3c" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- Turbulent entities (dots scattered along chaotic paths) -->
+  <circle cx="490" cy="110" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="610" cy="130" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="720" cy="95" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="460" cy="65" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="555" cy="100" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="700" cy="145" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="500" cy="200" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="580" cy="210" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="660" cy="140" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="470" cy="260" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="550" cy="170" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="700" cy="220" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="485" cy="210" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="590" cy="260" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="670" cy="250" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="540" cy="290" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="680" cy="300" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="500" cy="300" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="630" cy="260" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="510" cy="150" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="640" cy="310" r="3" fill="#f1948a" opacity="0.9"/>
+  <circle cx="460" cy="310" r="3" fill="#f1948a" opacity="0.9"/>
+
+  <!-- Right panel labels -->
+  <text x="600" y="385" text-anchor="middle" font-size="9" fill="#e74c3c">High Re: chaotic, unpredictable</text>
+  <text x="600" y="397" text-anchor="middle" font-size="8" fill="#667799" font-style="italic">Low viscosity &#956; (weak norms)</text>
+
+  <!-- ==================== BOTTOM CENTER EQUATION ==================== -->
+  <!-- Positioned just above the very bottom, spanning both panels -->
+  <!-- Using a semi-transparent box for readability -->
+  <rect x="220" y="378" width="360" height="20" rx="3" fill="#1a1a2e" opacity="0.9"/>
+  <text x="400" y="393" text-anchor="middle" font-size="11" fill="#ccccdd" font-weight="bold">
+    Re = &#961;vL/&#956;  &#8594;  Critical threshold Re<tspan font-size="8" dy="2">c</tspan>
+  </text>
+</svg>

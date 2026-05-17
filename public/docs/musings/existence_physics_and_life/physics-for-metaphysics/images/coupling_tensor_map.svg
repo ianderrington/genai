@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="280" viewBox="0 0 700 280">
+  <defs>
+    <marker id="arrowInput" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#e94560" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowOutput" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#5dade2" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowMap" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="none" stroke="#ecf0f1" stroke-width="1"/>
+    </marker>
+    <marker id="arrowNote" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <path d="M0,0 L6,2 L0,4" fill="none" stroke="#f39c12" stroke-width="0.8"/>
+    </marker>
+  </defs>
+
+  <rect width="700" height="280" fill="#1a1a2e"/>
+
+  <!-- === TOP SECTION: Coordinate-free map === -->
+
+  <!-- Input: cotangent vector (left) -->
+  <line x1="60" y1="70" x2="140" y2="70" stroke="#e94560" stroke-width="2" marker-end="url(#arrowInput)"/>
+  <!-- Cotangent space label -->
+  <text x="45" y="55" fill="#e94560" font-family="'Helvetica Neue','Arial',sans-serif" font-size="11" opacity="0.85">Force covector</text>
+  <text x="70" y="92" fill="#e94560" font-family="'Helvetica Neue','Arial',sans-serif" font-size="10" opacity="0.65" font-style="italic">(input)</text>
+
+  <!-- Arrow from input to tensor box -->
+  <line x1="155" y1="70" x2="235" y2="70" stroke="#ecf0f1" stroke-width="1" stroke-opacity="0.5" marker-end="url(#arrowMap)"/>
+
+  <!-- Tensor box (center) -->
+  <rect x="245" y="42" width="200" height="56" rx="6" fill="none" stroke="#ecf0f1" stroke-width="1.2" stroke-opacity="0.7"/>
+  <text x="270" y="68" fill="#ecf0f1" font-family="'Latin Modern Math','Cambria Math','Georgia',serif" font-size="14" font-style="italic" font-weight="bold" opacity="0.9">T</text>
+  <text x="283" y="72" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="10" opacity="0.7">: T*</text>
+  <text x="305" y="75" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="7" opacity="0.7" font-style="italic">X</text>
+  <text x="312" y="72" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="10" opacity="0.7">S &#x2192; T</text>
+  <text x="347" y="75" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="7" opacity="0.7" font-style="italic">X</text>
+  <text x="354" y="72" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="10" opacity="0.7">S</text>
+  <text x="270" y="86" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="9" opacity="0.45">(bilinear map / inverse inertia)</text>
+
+  <!-- Arrow from tensor box to output -->
+  <line x1="455" y1="70" x2="530" y2="70" stroke="#ecf0f1" stroke-width="1" stroke-opacity="0.5" marker-end="url(#arrowMap)"/>
+
+  <!-- Output: tangent vector (right) -->
+  <line x1="545" y1="70" x2="635" y2="70" stroke="#5dade2" stroke-width="2" marker-end="url(#arrowOutput)"/>
+  <text x="545" y="55" fill="#5dade2" font-family="'Helvetica Neue','Arial',sans-serif" font-size="11" opacity="0.85">Response vector</text>
+  <text x="565" y="92" fill="#5dade2" font-family="'Helvetica Neue','Arial',sans-serif" font-size="10" opacity="0.65" font-style="italic">(output)</text>
+
+  <!-- === BOTTOM SECTION: Matrix in coordinates === -->
+
+  <!-- Divider line -->
+  <line x1="80" y1="120" x2="620" y2="120" stroke="#ecf0f1" stroke-width="0.4" stroke-opacity="0.2"/>
+  <text x="290" y="142" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="10" opacity="0.4">In coordinates:</text>
+
+  <!-- Matrix bracket left -->
+  <path d="M195,155 L185,155 L185,255 L195,255" fill="none" stroke="#ecf0f1" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- Matrix bracket right -->
+  <path d="M430,155 L440,155 L440,255 L430,255" fill="none" stroke="#ecf0f1" stroke-width="1" stroke-opacity="0.6"/>
+
+  <!-- Row/Column labels -->
+  <text x="244" y="166" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="9" opacity="0.5" text-anchor="middle">econ</text>
+  <text x="314" y="166" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="9" opacity="0.5" text-anchor="middle">psych</text>
+  <text x="384" y="166" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="9" opacity="0.5" text-anchor="middle">phys</text>
+
+  <text x="180" y="195" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="9" opacity="0.5" text-anchor="end">econ</text>
+  <text x="180" y="220" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="9" opacity="0.5" text-anchor="end">psych</text>
+  <text x="180" y="245" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="9" opacity="0.5" text-anchor="end">phys</text>
+
+  <!-- Matrix cells — diagonal (self-coupling, brighter) -->
+  <rect x="215" y="178" width="58" height="24" rx="2" fill="#5dade2" fill-opacity="0.2" stroke="#5dade2" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="244" y="195" fill="#ecf0f1" font-family="'Latin Modern Math','Cambria Math','Georgia',serif" font-size="12" opacity="0.8" text-anchor="middle" font-style="italic">T&#xB9;&#xB9;</text>
+
+  <rect x="285" y="203" width="58" height="24" rx="2" fill="#5dade2" fill-opacity="0.2" stroke="#5dade2" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="314" y="220" fill="#ecf0f1" font-family="'Latin Modern Math','Cambria Math','Georgia',serif" font-size="12" opacity="0.8" text-anchor="middle" font-style="italic">T&#xB2;&#xB2;</text>
+
+  <rect x="355" y="228" width="58" height="24" rx="2" fill="#5dade2" fill-opacity="0.2" stroke="#5dade2" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="384" y="245" fill="#ecf0f1" font-family="'Latin Modern Math','Cambria Math','Georgia',serif" font-size="12" opacity="0.8" text-anchor="middle" font-style="italic">T&#xB3;&#xB3;</text>
+
+  <!-- Off-diagonal cells (cross-coupling, highlighted differently) -->
+  <rect x="285" y="178" width="58" height="24" rx="2" fill="#e94560" fill-opacity="0.12" stroke="#e94560" stroke-width="0.4" stroke-opacity="0.25"/>
+  <text x="314" y="195" fill="#ecf0f1" font-family="'Latin Modern Math','Cambria Math','Georgia',serif" font-size="12" opacity="0.55" text-anchor="middle" font-style="italic">T&#xB9;&#xB2;</text>
+
+  <rect x="355" y="178" width="58" height="24" rx="2" fill="#e94560" fill-opacity="0.08" stroke="#e94560" stroke-width="0.4" stroke-opacity="0.15"/>
+  <text x="384" y="195" fill="#ecf0f1" font-family="'Latin Modern Math','Cambria Math','Georgia',serif" font-size="12" opacity="0.4" text-anchor="middle" font-style="italic">T&#xB9;&#xB3;</text>
+
+  <rect x="215" y="203" width="58" height="24" rx="2" fill="#e94560" fill-opacity="0.12" stroke="#e94560" stroke-width="0.4" stroke-opacity="0.25"/>
+  <text x="244" y="220" fill="#ecf0f1" font-family="'Latin Modern Math','Cambria Math','Georgia',serif" font-size="12" opacity="0.55" text-anchor="middle" font-style="italic">T&#xB2;&#xB9;</text>
+
+  <rect x="355" y="203" width="58" height="24" rx="2" fill="#e94560" fill-opacity="0.1" stroke="#e94560" stroke-width="0.4" stroke-opacity="0.2"/>
+  <text x="384" y="220" fill="#ecf0f1" font-family="'Latin Modern Math','Cambria Math','Georgia',serif" font-size="12" opacity="0.45" text-anchor="middle" font-style="italic">T&#xB2;&#xB3;</text>
+
+  <rect x="215" y="228" width="58" height="24" rx="2" fill="#e94560" fill-opacity="0.08" stroke="#e94560" stroke-width="0.4" stroke-opacity="0.15"/>
+  <text x="244" y="245" fill="#ecf0f1" font-family="'Latin Modern Math','Cambria Math','Georgia',serif" font-size="12" opacity="0.4" text-anchor="middle" font-style="italic">T&#xB3;&#xB9;</text>
+
+  <rect x="285" y="228" width="58" height="24" rx="2" fill="#e94560" fill-opacity="0.1" stroke="#e94560" stroke-width="0.4" stroke-opacity="0.2"/>
+  <text x="314" y="245" fill="#ecf0f1" font-family="'Latin Modern Math','Cambria Math','Georgia',serif" font-size="12" opacity="0.45" text-anchor="middle" font-style="italic">T&#xB3;&#xB2;</text>
+
+  <!-- Arrow from matrix to annotation -->
+  <line x1="450" y1="215" x2="490" y2="215" stroke="#f39c12" stroke-width="1" stroke-opacity="0.6" marker-end="url(#arrowNote)"/>
+
+  <!-- Annotation -->
+  <text x="500" y="200" fill="#f39c12" font-family="'Helvetica Neue','Arial',sans-serif" font-size="10" opacity="0.75" font-style="italic">Domain labels =</text>
+  <text x="500" y="214" fill="#f39c12" font-family="'Helvetica Neue','Arial',sans-serif" font-size="10" opacity="0.75" font-style="italic">coordinate choice,</text>
+  <text x="500" y="228" fill="#f39c12" font-family="'Helvetica Neue','Arial',sans-serif" font-size="10" opacity="0.75" font-style="italic">not fundamental</text>
+  <text x="500" y="242" fill="#f39c12" font-family="'Helvetica Neue','Arial',sans-serif" font-size="10" opacity="0.75" font-style="italic">structure</text>
+
+  <!-- Legend for off-diagonal -->
+  <rect x="500" y="160" width="12" height="12" rx="1" fill="#e94560" fill-opacity="0.15" stroke="#e94560" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="518" y="171" fill="#ecf0f1" font-family="'Helvetica Neue','Arial',sans-serif" font-size="9" opacity="0.5">off-diagonal = cross-domain coupling</text>
+</svg>

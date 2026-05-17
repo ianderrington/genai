@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <style>
+      text { font-family: 'Arial', 'Helvetica', sans-serif; fill: #e0e0e0; }
+      .axis-label { font-size: 13px; fill: #b0b0b0; }
+      .tick-label { font-size: 10px; fill: #808090; }
+      .curve-label { font-size: 11.5px; font-weight: 500; }
+      .annotation { font-size: 9.5px; fill: #a0a0b0; font-style: italic; }
+      .legend-text { font-size: 11px; }
+      .title-text { font-size: 15px; font-weight: 600; fill: #e8e8f0; }
+      .start-label { font-size: 10px; fill: #c8c8d8; }
+    </style>
+    <!-- Glow filter for curves -->
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Arrowhead markers -->
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#3498db" stroke-width="1"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#2ecc71" stroke-width="1"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#e74c3c" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#1a1a2e" rx="4"/>
+
+  <!-- Plot area: x=80..740, y=50..350 -->
+  <!-- Subtle grid lines -->
+  <g stroke="#2a2a45" stroke-width="0.5">
+    <!-- Vertical grid -->
+    <line x1="80" y1="50" x2="80" y2="350"/>
+    <line x1="212" y1="50" x2="212" y2="350"/>
+    <line x1="344" y1="50" x2="344" y2="350"/>
+    <line x1="476" y1="50" x2="476" y2="350"/>
+    <line x1="608" y1="50" x2="608" y2="350"/>
+    <line x1="740" y1="50" x2="740" y2="350"/>
+    <!-- Horizontal grid -->
+    <line x1="80" y1="350" x2="740" y2="350"/>
+    <line x1="80" y1="290" x2="740" y2="290"/>
+    <line x1="80" y1="230" x2="740" y2="230"/>
+    <line x1="80" y1="170" x2="740" y2="170"/>
+    <line x1="80" y1="110" x2="740" y2="110"/>
+    <line x1="80" y1="50" x2="740" y2="50"/>
+  </g>
+
+  <!-- Axes -->
+  <g stroke="#505070" stroke-width="1.2">
+    <line x1="80" y1="350" x2="740" y2="350"/>
+    <line x1="80" y1="350" x2="80" y2="50"/>
+  </g>
+
+  <!-- Axis tick marks -->
+  <g stroke="#505070" stroke-width="1">
+    <line x1="212" y1="350" x2="212" y2="355"/>
+    <line x1="344" y1="350" x2="344" y2="355"/>
+    <line x1="476" y1="350" x2="476" y2="355"/>
+    <line x1="608" y1="350" x2="608" y2="355"/>
+    <line x1="740" y1="350" x2="740" y2="355"/>
+    <line x1="75" y1="290" x2="80" y2="290"/>
+    <line x1="75" y1="230" x2="80" y2="230"/>
+    <line x1="75" y1="170" x2="80" y2="170"/>
+    <line x1="75" y1="110" x2="80" y2="110"/>
+  </g>
+
+  <!-- Tick labels -->
+  <g class="tick-label" text-anchor="middle">
+    <text x="212" y="370">1</text>
+    <text x="344" y="370">2</text>
+    <text x="476" y="370">3</text>
+    <text x="608" y="370">4</text>
+    <text x="740" y="370">5</text>
+  </g>
+  <g class="tick-label" text-anchor="end">
+    <text x="73" y="294">1</text>
+    <text x="73" y="234">2</text>
+    <text x="73" y="174">3</text>
+    <text x="73" y="114">4</text>
+  </g>
+
+  <!-- Axis labels -->
+  <text class="axis-label" x="410" y="393" text-anchor="middle">Time t</text>
+  <text class="axis-label" x="30" y="200" text-anchor="middle" transform="rotate(-90, 30, 200)">State X</text>
+
+  <!-- ============================================================ -->
+  <!-- TRAJECTORIES                                                  -->
+  <!-- All start at (100, 330) with the same initial slope           -->
+  <!-- ============================================================ -->
+
+  <!-- 1. Constant mass (blue): steady parabolic arc — moderate curve -->
+  <path d="M 100,330 C 220,280 440,180 720,120"
+        fill="none" stroke="#3498db" stroke-width="2" stroke-linecap="round"
+        filter="url(#glow)" marker-end="url(#arrow-blue)"/>
+
+  <!-- 2. Gaining mass (green): decelerates, flattens out -->
+  <path d="M 100,330 C 220,280 420,230 720,210"
+        fill="none" stroke="#2ecc71" stroke-width="2" stroke-linecap="round"
+        filter="url(#glow)" marker-end="url(#arrow-green)"/>
+
+  <!-- 3. Losing mass (red): accelerates, steepens -->
+  <path d="M 100,330 C 200,290 350,160 720,55"
+        fill="none" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"
+        filter="url(#glow)" marker-end="url(#arrow-red)"/>
+
+  <!-- ============================================================ -->
+  <!-- Starting point                                                -->
+  <!-- ============================================================ -->
+  <circle cx="100" cy="330" r="4.5" fill="#ffffff" stroke="#1a1a2e" stroke-width="1.5"/>
+  <circle cx="100" cy="330" r="2" fill="#1a1a2e"/>
+  <text class="start-label" x="108" y="348" text-anchor="start">Same initial state, same force F</text>
+
+  <!-- ============================================================ -->
+  <!-- Curve endpoint labels                                         -->
+  <!-- ============================================================ -->
+
+  <!-- Blue label -->
+  <text class="curve-label" x="715" y="110" text-anchor="end" fill="#3498db">Constant M: F = M·a</text>
+
+  <!-- Green label -->
+  <text class="curve-label" x="715" y="200" text-anchor="end" fill="#2ecc71">Gaining M: decelerating (snowball)</text>
+
+  <!-- Red label -->
+  <text class="curve-label" x="715" y="48" text-anchor="end" fill="#e74c3c">Losing M: accelerating (rocket / unraveling)</text>
+
+  <!-- ============================================================ -->
+  <!-- Cross-term annotations near endpoints                         -->
+  <!-- ============================================================ -->
+
+  <!-- Blue annotation -->
+  <text class="annotation" x="680" y="138">
+    <tspan>dM/dt = 0</tspan>
+    <tspan x="680" dy="13">&#x2192; no cross-term</tspan>
+  </text>
+
+  <!-- Green annotation -->
+  <text class="annotation" x="680" y="228">
+    <tspan>dM/dt &gt; 0, dX/dt &gt; 0</tspan>
+    <tspan x="680" dy="13">&#x2192; cross-term resists motion</tspan>
+  </text>
+
+  <!-- Red annotation -->
+  <text class="annotation" x="590" y="68">
+    <tspan>dM/dt &lt; 0, dX/dt &gt; 0</tspan>
+    <tspan x="590" dy="13">&#x2192; cross-term boosts motion</tspan>
+  </text>
+
+  <!-- ============================================================ -->
+  <!-- Legend box (upper-left area)                                   -->
+  <!-- ============================================================ -->
+  <rect x="120" y="56" width="280" height="78" rx="4" fill="#1a1a2e" fill-opacity="0.85" stroke="#3a3a55" stroke-width="0.8"/>
+
+  <!-- Legend title -->
+  <text class="title-text" x="260" y="75" text-anchor="middle">Variable-Mass Trajectories</text>
+
+  <!-- Legend entries -->
+  <line x1="132" y1="92" x2="158" y2="92" stroke="#3498db" stroke-width="2"/>
+  <text class="legend-text" x="164" y="96" fill="#3498db">dM/dt = 0 (constant mass)</text>
+
+  <line x1="132" y1="108" x2="158" y2="108" stroke="#2ecc71" stroke-width="2"/>
+  <text class="legend-text" x="164" y="112" fill="#2ecc71">dM/dt &gt; 0 (gaining mass)</text>
+
+  <line x1="132" y1="124" x2="158" y2="124" stroke="#e74c3c" stroke-width="2"/>
+  <text class="legend-text" x="164" y="128" fill="#e74c3c">dM/dt &lt; 0 (losing mass)</text>
+
+  <!-- ============================================================ -->
+  <!-- Cross-term equation, bottom-right                             -->
+  <!-- ============================================================ -->
+  <text x="720" y="380" text-anchor="end" font-size="11" fill="#707090" font-family="'Arial', 'Helvetica', sans-serif">
+    F = M·(dX/dt) + (dM/dt)·(dX/dt)
+  </text>
+
+</svg>

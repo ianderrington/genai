@@ -1,0 +1,20 @@
+version: 1
+project:
+  name: managen-web
+  emoji: "🧠"
+  kind: [repo, docs-site]
+  description: ManaGen AI — The Living Guide to Generative AI. Next.js docs site powered by Supernal Intelligence.
+  url: https://www.managen.ai
+  docs_dir: .supernal/docs
+  requirements_dir: .supernal/docs/requirements
+documentation:
+  planning_dir: .supernal/docs/planning
+  specs_dir: .supernal/docs/specs
+  adr_dir: .supernal/docs/adr
+content:
+  source: docs/
+  framework: nextjs
+  docs_kit: "@supernal/docs-kit"
+attribution:
+  built_with: Supernal Intelligence
+  built_with_url: https://si42.ai

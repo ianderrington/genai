@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="280" viewBox="0 0 700 280">
+  <defs>
+    <marker id="arrowBlue" markerWidth="9" markerHeight="6" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6" fill="none" stroke="#5dade2" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowRedF" markerWidth="9" markerHeight="6" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6" fill="none" stroke="#e94560" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowTrajF" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="none" stroke="#ecf0f1" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <rect width="700" height="280" fill="#1a1a2e"/>
+
+  <!-- Original trajectory (before force point) -->
+  <path d="M80,200 C140,185 200,160 280,140 C320,130 350,122 380,118"
+        fill="none" stroke="#ecf0f1" stroke-width="1.8" stroke-opacity="0.85"/>
+
+  <!-- Dashed continuation — what would have happened without force -->
+  <path d="M380,118 C440,105 500,92 600,70"
+        fill="none" stroke="#ecf0f1" stroke-width="1" stroke-opacity="0.3"
+        stroke-dasharray="6,4"/>
+
+  <!-- Actual deflected trajectory (after force) -->
+  <path d="M380,118 C420,120 470,135 530,165 C570,182 600,200 640,220"
+        fill="none" stroke="#ecf0f1" stroke-width="1.8" stroke-opacity="0.85"
+        marker-end="url(#arrowTrajF)"/>
+
+  <!-- Force application point -->
+  <circle cx="380" cy="118" r="5" fill="#e94560"/>
+  <circle cx="380" cy="118" r="9" fill="none" stroke="#e94560" stroke-width="0.6" stroke-opacity="0.4"/>
+
+  <!-- Momentum vector p — tangent to trajectory at the point -->
+  <line x1="380" y1="118" x2="460" y2="100" stroke="#5dade2" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Force vector F — at angle to trajectory -->
+  <line x1="380" y1="118" x2="410" y2="175" stroke="#e94560" stroke-width="2.2" marker-end="url(#arrowRedF)"/>
+
+  <!-- Small curved arrow showing deflection -->
+  <path d="M450,100 A60,60 0 0,1 465,135" fill="none" stroke="#ecf0f1" stroke-width="0.7" stroke-opacity="0.35" stroke-dasharray="3,2"/>
+
+  <!-- Labels -->
+  <!-- p label -->
+  <text x="462" y="93" fill="#5dade2" font-family="'Arial','Helvetica',sans-serif" font-size="14" font-style="italic" font-weight="bold">p</text>
+  <text x="478" y="93" fill="#5dade2" font-family="'Arial','Helvetica',sans-serif" font-size="12" opacity="0.8"> = M·dX/dt</text>
+
+  <!-- F label -->
+  <text x="418" y="178" fill="#e94560" font-family="'Arial','Helvetica',sans-serif" font-size="14" font-style="italic" font-weight="bold">F</text>
+  <text x="432" y="178" fill="#e94560" font-family="'Arial','Helvetica',sans-serif" font-size="12" opacity="0.8"> = dp/dt</text>
+
+  <!-- Dashed line label -->
+  <text x="530" y="62" fill="#ecf0f1" font-family="'Arial','Helvetica',sans-serif" font-size="10" opacity="0.4" font-style="italic">undeflected path</text>
+
+  <!-- Deflected path label -->
+  <text x="555" y="230" fill="#ecf0f1" font-family="'Arial','Helvetica',sans-serif" font-size="10" opacity="0.5" font-style="italic">actual path</text>
+
+  <!-- Explanatory label -->
+  <text x="100" y="255" fill="#ecf0f1" font-family="'Arial','Helvetica',sans-serif" font-size="11" opacity="0.5">Force deflects the trajectory by changing momentum</text>
+
+  <!-- Small coordinate hint — faint axes in background -->
+  <line x1="60" y1="240" x2="60" y2="30" stroke="#ecf0f1" stroke-width="0.4" stroke-opacity="0.15"/>
+  <line x1="60" y1="240" x2="670" y2="240" stroke="#ecf0f1" stroke-width="0.4" stroke-opacity="0.15"/>
+</svg>

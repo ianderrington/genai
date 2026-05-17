@@ -1,0 +1,258 @@
+.navigation-container {
+  position: fixed;
+  left: calc(50% - 48rem); /* Position on left side of content */
+  top: 1.5rem; /* Reduced from 5rem to position higher when header disappears */
+  transition: top 0.3s ease;
+  z-index: 100;
+  width: 20rem; /* Set fixed width for container */
+}
+
+/* Add a new class for when header is visible */
+.navigation-container-with-header {
+  top: calc(var(--header-height) + 1.5rem);
+}
+
+/* Default state - just the button */
+.nav-button {
+  position: absolute; /* Changed from relative to absolute for consistent positioning */
+  right: 1rem; /* Maintain same position in all states */
+  top: 0.75rem; /* Keep consistent with active state */
+  
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  z-index: 121;
+}
+
+:global(.dark) .nav-button {
+  background-color: rgb(31, 41, 55);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Panel styling */
+.nav-panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width of container */
+  overflow: hidden;
+  z-index: 101; /* Below the button */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When active, show panel and modify button */
+.nav-button.active {
+  position: absolute; /* Keep absolute positioning */
+  right: 1rem; /* Keep right alignment */
+  top: 0.75rem; /* Align with header */
+  border-radius: 50%;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  transform: none;
+  z-index: 122;
+  color: #3b82f6; /* Blue color when active */
+}
+
+:global(.dark) .nav-button.active {
+  color: #60a5fa;
+}
+
+.nav-button.active:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.nav-button.active + .nav-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  z-index: 120;
+}
+
+:global(.dark) .nav-panel {
+  background: rgb(31, 41, 55);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-panel-header {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  padding-right: 4rem; /* Make space for the button */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+:global(.dark) .nav-panel-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(31, 41, 55);
+}
+
+.nav-panel-content {
+  overflow-y: auto;
+  max-height: calc(100vh - 8rem); /* Adjusted to be more consistent */
+  padding: 1rem;
+  scroll-behavior: smooth; /* Ensure smooth scrolling within TOC */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.nav-panel-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.nav-panel-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.nav-panel-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+:global(.dark) .nav-panel-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Floating nav specific styles */
+.floatingNav {
+  position: sticky;
+  top: 1.5rem; /* Adjusted to match navigation-container */
+  transition: opacity 0.3s ease, top 0.3s ease;
+  z-index: 50;
+}
+
+/* Larger screens */
+@media (min-width: 1536px) {
+  .navigation-container {
+    left: calc(50% - 48rem);
+  }
+}
+
+/* Medium-large screens */
+@media (max-width: 1535px) and (min-width: 1280px) {
+  .navigation-container {
+    left: 2rem;
+  }
+}
+
+/* This breakpoint removed - now handled by max-width: 1199px rule */
+
+/* Mobile and medium screens - properly centered with safe margins */
+@media (max-width: 1199px) {
+  .navigation-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: calc(var(--header-height) + 0.5rem);
+    bottom: auto;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .nav-button {
+    position: relative;
+    right: auto;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    margin-left: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+  }
+  
+  .nav-panel {
+    position: fixed;
+    top: calc(var(--header-height) + 3.5rem);
+    left: 0;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    max-height: calc(100vh - var(--header-height) - 4rem);
+    transform: translateY(-20px);
+    overflow-y: auto;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+
+
+  .nav-button.active {
+    position: relative;
+    right: auto;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
+  .nav-button.active + .nav-panel {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-panel-content {
+    max-height: calc(100vh - var(--header-height) - 6rem);
+    padding-bottom: 2rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Small mobile screens - tighter but still equal margins */
+@media (max-width: 480px) {
+  .navigation-container {
+    padding: 0 0.5rem;
+  }
+  
+  .nav-panel {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Very small screens (iPhone SE, etc.) - minimal margins */
+@media (max-width: 375px) {
+  .navigation-container {
+    padding: 0 0.25rem;
+  }
+  
+  .nav-panel {
+    padding: 0 0.25rem;
+  }
+} 

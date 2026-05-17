@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto" fill="#ecf0f1" opacity="0.5">
+      <polygon points="0 0, 8 3, 0 6"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#ecf0f1" font-weight="bold" opacity="0.7">Series Concept Flow</text>
+
+  <!-- Box dimensions: 220w x 90h, gap 30 -->
+  <!-- Row 1: y=42, boxes at x=35, 285, 535 -->
+  <!-- Row 2: y=168, boxes at x=35, 285, 535 -->
+
+  <!-- Box 1: Part 1 Mechanics -->
+  <g filter="url(#shadow)">
+    <rect x="35" y="42" width="220" height="90" rx="8" ry="8" fill="#e94560"/>
+    <text x="145" y="66" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#fff" font-weight="bold">Part 1: Mechanics</text>
+    <text x="145" y="86" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" fill="#fff" opacity="0.85">X, M, p, F, W, L, &#x3A6;, Thermo</text>
+  </g>
+
+  <!-- Box 2: Part 1b Complications -->
+  <g filter="url(#shadow)">
+    <rect x="285" y="42" width="220" height="90" rx="8" ry="8" fill="#c0392b"/>
+    <text x="395" y="66" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#fff" font-weight="bold">Part 1b: Complications</text>
+    <text x="395" y="86" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" fill="#fff" opacity="0.85">Uncertainty, Coordinates, Frames</text>
+  </g>
+
+  <!-- Box 3: Part 2 Meta-Entities -->
+  <g filter="url(#shadow)">
+    <rect x="535" y="42" width="220" height="90" rx="8" ry="8" fill="#8e44ad"/>
+    <text x="645" y="66" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#fff" font-weight="bold">Part 2: Meta-Entities</text>
+    <text x="645" y="86" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" fill="#fff" opacity="0.85">Causal Emergence, 3 Substrates</text>
+  </g>
+
+  <!-- Box 4: Part 3 Mind -->
+  <g filter="url(#shadow)">
+    <rect x="35" y="168" width="220" height="90" rx="8" ry="8" fill="#2980b9"/>
+    <text x="145" y="192" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#fff" font-weight="bold">Part 3: Mind</text>
+    <text x="145" y="212" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" fill="#fff" opacity="0.85">Intelligence, Consciousness, Agency</text>
+  </g>
+
+  <!-- Box 5: Part 4 Time & Soul -->
+  <g filter="url(#shadow)">
+    <rect x="285" y="168" width="220" height="90" rx="8" ry="8" fill="#27ae60"/>
+    <text x="395" y="192" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#fff" font-weight="bold">Part 4: Time &amp; Soul</text>
+    <text x="395" y="212" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" fill="#fff" opacity="0.85">T_local, R(E,t), Soul</text>
+  </g>
+
+  <!-- Box 6: Part 5 Synthesis -->
+  <g filter="url(#shadow)">
+    <rect x="535" y="168" width="220" height="90" rx="8" ry="8" fill="#f39c12"/>
+    <text x="645" y="192" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#fff" font-weight="bold">Part 5: Synthesis</text>
+    <text x="645" y="212" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" fill="#fff" opacity="0.85">Ontology, Predictions, Open Questions</text>
+  </g>
+
+  <!-- Arrows (thin white, partial opacity) -->
+  <!-- Box centers: B1(145,87) B2(395,87) B3(645,87) B4(145,213) B5(395,213) B6(645,213) -->
+  <!-- Box edges: top=y, bottom=y+90, left=x, right=x+220 -->
+
+  <!-- B1 -> B2: right edge of B1 to left edge of B2 -->
+  <line x1="255" y1="87" x2="283" y2="87" stroke="#ecf0f1" stroke-width="1.5" opacity="0.45" marker-end="url(#arrow)"/>
+
+  <!-- B1 -> B3: B1 right-top to B3 left -->
+  <path d="M 255 67 Q 395 42, 533 77" fill="none" stroke="#ecf0f1" stroke-width="1.5" opacity="0.35" marker-end="url(#arrow)"/>
+
+  <!-- B1 -> B4: B1 bottom to B4 top -->
+  <line x1="145" y1="132" x2="145" y2="166" stroke="#ecf0f1" stroke-width="1.5" opacity="0.45" marker-end="url(#arrow)"/>
+
+  <!-- B3 -> B4: B3 bottom-left to B4 right-top -->
+  <path d="M 575 132 Q 400 155, 257 185" fill="none" stroke="#ecf0f1" stroke-width="1.5" opacity="0.35" marker-end="url(#arrow)"/>
+
+  <!-- B4 -> B5: right edge of B4 to left edge of B5 -->
+  <line x1="255" y1="213" x2="283" y2="213" stroke="#ecf0f1" stroke-width="1.5" opacity="0.45" marker-end="url(#arrow)"/>
+
+  <!-- B1 -> B5: B1 bottom-right to B5 top-left -->
+  <path d="M 235 132 Q 310 155, 340 166" fill="none" stroke="#ecf0f1" stroke-width="1.5" opacity="0.35" marker-end="url(#arrow)"/>
+
+  <!-- B5 -> B6: right edge of B5 to left edge of B6 -->
+  <line x1="505" y1="213" x2="533" y2="213" stroke="#ecf0f1" stroke-width="1.5" opacity="0.45" marker-end="url(#arrow)"/>
+
+  <!-- B1 -> B6: B1 bottom-right to B6 top-left -->
+  <path d="M 255 120 Q 450 170, 533 195" fill="none" stroke="#ecf0f1" stroke-width="1.5" opacity="0.3" marker-end="url(#arrow)"/>
+
+</svg>

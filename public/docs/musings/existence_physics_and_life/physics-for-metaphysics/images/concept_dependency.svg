@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#ecf0f1" stroke-width="1"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#4a9eff" stroke-width="1"/>
+    </marker>
+    <style>
+      text { font-family: 'Helvetica Neue', Arial, sans-serif; fill: #ecf0f1; font-size: 11px; text-anchor: middle; dominant-baseline: central; }
+      .node { rx: 6; ry: 6; stroke-width: 1.5; }
+      .edge { fill: none; stroke: #ecf0f1; stroke-width: 1; marker-end: url(#arrow); opacity: 0.7; }
+      .edge-derives { fill: none; stroke: #4a9eff; stroke-width: 1; stroke-dasharray: 4,3; marker-end: url(#arrow-blue); opacity: 0.7; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="20" font-size="14" font-weight="bold" fill="#ecf0f1">Concept Dependency Graph — Every Quantity Derives from X and M</text>
+
+  <!-- ===== LEVEL 0: X ===== -->
+  <rect class="node" x="355" y="36" width="90" height="28" fill="#e94560" stroke="#ff6b81"/>
+  <text x="400" y="50" font-size="12" font-weight="bold">X ∈ S</text>
+
+  <!-- ===== LEVEL 1: dX/dt and M ===== -->
+  <rect class="node" x="235" y="90" width="90" height="28" fill="#2c3e6d" stroke="#4a6fa5"/>
+  <text x="280" y="104">dX/dt</text>
+
+  <rect class="node" x="475" y="90" width="90" height="28" fill="#e94560" stroke="#ff6b81"/>
+  <text x="520" y="104" font-weight="bold">M</text>
+
+  <!-- X → dX/dt -->
+  <line class="edge" x1="378" y1="64" x2="302" y2="90"/>
+  <!-- X → M -->
+  <line class="edge" x1="422" y1="64" x2="498" y2="90"/>
+
+  <!-- ===== LEVEL 2: p ===== -->
+  <rect class="node" x="355" y="144" width="110" height="28" fill="#2c3e6d" stroke="#4a6fa5"/>
+  <text x="410" y="158">p = M · dX/dt</text>
+
+  <!-- dX/dt → p -->
+  <line class="edge" x1="302" y1="118" x2="382" y2="144"/>
+  <!-- M → p -->
+  <line class="edge" x1="498" y1="118" x2="438" y2="144"/>
+
+  <!-- ===== LEVEL 3: F, T, V ===== -->
+  <rect class="node" x="335" y="198" width="100" height="28" fill="#2c3e6d" stroke="#4a6fa5"/>
+  <text x="385" y="212">F = dp/dt</text>
+
+  <rect class="node" x="140" y="198" width="130" height="28" fill="#2c3e6d" stroke="#4a6fa5"/>
+  <text x="205" y="212">T = ½M|dX/dt|²</text>
+
+  <rect class="node" x="560" y="198" width="80" height="28" fill="#2c3e6d" stroke="#4a6fa5"/>
+  <text x="600" y="212">V(X)</text>
+
+  <!-- p → F -->
+  <line class="edge" x1="405" y1="172" x2="392" y2="198"/>
+  <!-- M → T -->
+  <line class="edge" x1="498" y1="118" x2="232" y2="198"/>
+  <!-- dX/dt → T -->
+  <line class="edge" x1="258" y1="118" x2="218" y2="198"/>
+  <!-- X → V -->
+  <line class="edge" x1="435" y1="64" x2="582" y2="198"/>
+
+  <!-- ===== LEVEL 4: L, W ===== -->
+  <rect class="node" x="265" y="252" width="100" height="28" fill="#2c3e6d" stroke="#4a6fa5"/>
+  <text x="315" y="266">L = T − V</text>
+
+  <rect class="node" x="460" y="252" width="110" height="28" fill="#2c3e6d" stroke="#4a6fa5"/>
+  <text x="515" y="266">W = ∫F · dX</text>
+
+  <!-- T → L -->
+  <line class="edge" x1="228" y1="226" x2="292" y2="252"/>
+  <!-- V → L -->
+  <line class="edge" x1="578" y1="226" x2="342" y2="252"/>
+  <!-- F → W -->
+  <line class="edge" x1="412" y1="226" x2="492" y2="252"/>
+
+  <!-- ===== LEVEL 5: Action, Noether ===== -->
+  <rect class="node" x="195" y="306" width="110" height="28" fill="#0f3460" stroke="#1a5276"/>
+  <text x="250" y="320" font-weight="bold">δ∫L dt = 0</text>
+
+  <rect class="node" x="365" y="306" width="80" height="28" fill="#0f3460" stroke="#1a5276"/>
+  <text x="405" y="320">Noether</text>
+
+  <!-- L → Action -->
+  <line class="edge" x1="298" y1="280" x2="268" y2="306"/>
+  <!-- Action → Noether -->
+  <line class="edge" x1="305" y1="320" x2="365" y2="320"/>
+  <!-- Action derives F (back-arrow) -->
+  <path class="edge-derives" d="M195,316 C130,316 130,212 335,212"/>
+  <text x="115" y="270" font-size="9" fill="#4a9eff">derives</text>
+
+  <!-- ===== LEVEL 5 also: κ, T^i_j ===== -->
+  <rect class="node" x="550" y="306" width="80" height="28" fill="#2c3e6d" stroke="#4a6fa5"/>
+  <text x="590" y="320" font-size="10">κ, T^i_j</text>
+
+  <!-- X → κ -->
+  <line class="edge" x1="445" y1="50" x2="720" y2="50"/>
+  <line class="edge" x1="720" y1="50" x2="720" y2="306"/>
+  <line class="edge" x1="720" y1="316" x2="630" y2="316"/>
+
+  <!-- ===== LEVEL 6: Fields, V_field ===== -->
+  <rect class="node" x="500" y="360" width="100" height="28" fill="#2c3e6d" stroke="#4a6fa5"/>
+  <text x="550" y="374">Φ(x) Fields</text>
+
+  <rect class="node" x="650" y="360" width="110" height="28" fill="#2c3e6d" stroke="#4a6fa5"/>
+  <text x="705" y="374" font-size="10">V = ∫φρ dX'</text>
+
+  <!-- κ → Φ -->
+  <line class="edge" x1="580" y1="334" x2="558" y2="360"/>
+  <!-- Φ → V_field -->
+  <line class="edge" x1="600" y1="374" x2="650" y2="374"/>
+
+  <!-- ===== LEVEL 7: Thermo ===== -->
+  <rect class="node" x="310" y="414" width="140" height="28" fill="#533483" stroke="#6c5ce7"/>
+  <text x="380" y="428" font-weight="bold">Thermo: T, P, S, F</text>
+
+  <!-- Fields → Thermo -->
+  <line class="edge" x1="522" y1="388" x2="428" y2="414"/>
+  <!-- M → Thermo -->
+  <line class="edge" x1="520" y1="118" x2="760" y2="118"/>
+  <line class="edge" x1="760" y1="118" x2="760" y2="400"/>
+  <line class="edge" x1="760" y1="400" x2="450" y2="420"/>
+
+  <!-- ===== LEVEL 8: NS, Re ===== -->
+  <rect class="node" x="200" y="460" width="120" height="28" fill="#533483" stroke="#6c5ce7"/>
+  <text x="260" y="474" font-weight="bold">Navier–Stokes</text>
+
+  <rect class="node" x="370" y="460" width="60" height="28" fill="#533483" stroke="#6c5ce7"/>
+  <text x="400" y="474">Re</text>
+
+  <!-- Thermo → NS -->
+  <line class="edge" x1="348" y1="442" x2="282" y2="460"/>
+  <!-- NS → Re -->
+  <line class="edge" x1="320" y1="474" x2="370" y2="474"/>
+
+  <!-- Legend -->
+  <rect x="16" y="460" width="8" height="8" fill="#e94560"/>
+  <text x="60" y="465" font-size="9" text-anchor="start">Primitives</text>
+  <rect x="16" y="474" width="8" height="8" fill="#0f3460"/>
+  <text x="60" y="479" font-size="9" text-anchor="start">Variational</text>
+  <rect x="16" y="488" width="8" height="8" fill="#533483"/>
+  <text x="60" y="493" font-size="9" text-anchor="start">Many-body</text>
+</svg>

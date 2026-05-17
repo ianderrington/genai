@@ -1,0 +1,19 @@
+# Folder-level defaults for Projects section
+# These settings will be inherited by all markdown files in this directory
+
+defaults:
+  # TTS Configuration - Voice optimized for professional/technical content
+  tts:
+    enabled: true
+    provider: openai
+    voice: onyx  # Deep, authoritative voice for project descriptions
+    enableSpeed: true
+    enableProgress: true
+    apiUrl: https://tts.supernal.ai
+  
+  categories:
+    - Projects
+  
+  tags:
+    - projects
+

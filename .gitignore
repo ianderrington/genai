@@ -26,3 +26,9 @@ lib/
 models/*
 
 node_modules/
+
+# Next.js
+.next/
+.env.local
+.env.*.local
+npm-debug.log*

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="350" viewBox="0 0 800 350">
+  <defs>
+    <marker id="arrow-down" markerWidth="8" markerHeight="6" refX="4" refY="6" orient="auto" fill="#e74c3c">
+      <polygon points="0 0, 8 0, 4 6"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="24" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#ecf0f1" font-weight="bold" opacity="0.7">Coupling Comparison: Response to External Shock</text>
+
+  <!-- Shock box -->
+  <g filter="url(#shadow)">
+    <rect x="300" y="38" width="200" height="36" rx="6" ry="6" fill="#e74c3c"/>
+    <text x="400" y="61" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#fff" font-weight="bold">Economic Shock (F_field)</text>
+  </g>
+
+  <!-- Arrows from shock to columns -->
+  <line x1="330" y1="74" x2="200" y2="104" stroke="#e74c3c" stroke-width="1.5" opacity="0.6" marker-end="url(#arrow-down)"/>
+  <line x1="470" y1="74" x2="600" y2="104" stroke="#e74c3c" stroke-width="1.5" opacity="0.6" marker-end="url(#arrow-down)"/>
+
+  <!-- Left Column: Compartmentalized Entity -->
+  <text x="200" y="122" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#ecf0f1" font-weight="bold">Compartmentalized Entity</text>
+
+  <!-- Bar area left: labels at x=70, bars start x=170, max bar width=180 -->
+  <!-- Economic bar: 90% = 162px -->
+  <text x="78" y="160" text-anchor="start" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ecf0f1" opacity="0.85">Economic</text>
+  <rect x="170" y="146" width="162" height="20" rx="3" ry="3" fill="#e67e22" opacity="0.9"/>
+  <text x="340" y="160" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ecf0f1" opacity="0.6">90%</text>
+
+  <!-- Psychological bar: 15% = 27px -->
+  <text x="58" y="192" text-anchor="start" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ecf0f1" opacity="0.85">Psychological</text>
+  <rect x="170" y="178" width="27" height="20" rx="3" ry="3" fill="#f1c40f" opacity="0.9"/>
+  <text x="205" y="192" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ecf0f1" opacity="0.6">15%</text>
+
+  <!-- Physical bar: 5% = 9px -->
+  <text x="90" y="224" text-anchor="start" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ecf0f1" opacity="0.85">Physical</text>
+  <rect x="170" y="210" width="9" height="20" rx="2" ry="2" fill="#2ecc71" opacity="0.9"/>
+  <text x="187" y="224" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ecf0f1" opacity="0.6">5%</text>
+
+  <!-- Label -->
+  <text x="200" y="258" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ecf0f1" opacity="0.55" font-style="italic">Small off-diagonal T&#x2071;&#x2C7C;</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="108" x2="400" y2="280" stroke="#ecf0f1" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Right Column: Integrated Entity -->
+  <text x="600" y="122" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#ecf0f1" font-weight="bold">Integrated Entity</text>
+
+  <!-- Bar area right: labels at x=478, bars start x=570, max bar width=180 -->
+  <!-- Economic bar: 90% = 162px -->
+  <text x="478" y="160" text-anchor="start" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ecf0f1" opacity="0.85">Economic</text>
+  <rect x="570" y="146" width="162" height="20" rx="3" ry="3" fill="#e74c3c" opacity="0.9"/>
+  <text x="740" y="160" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ecf0f1" opacity="0.6">90%</text>
+
+  <!-- Psychological bar: 70% = 126px -->
+  <text x="458" y="192" text-anchor="start" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ecf0f1" opacity="0.85">Psychological</text>
+  <rect x="570" y="178" width="126" height="20" rx="3" ry="3" fill="#e74c3c" opacity="0.9"/>
+  <text x="704" y="192" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ecf0f1" opacity="0.6">70%</text>
+
+  <!-- Physical bar: 50% = 90px -->
+  <text x="490" y="224" text-anchor="start" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ecf0f1" opacity="0.85">Physical</text>
+  <rect x="570" y="210" width="90" height="20" rx="3" ry="3" fill="#e67e22" opacity="0.9"/>
+  <text x="668" y="224" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ecf0f1" opacity="0.6">50%</text>
+
+  <!-- Label -->
+  <text x="600" y="258" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ecf0f1" opacity="0.55" font-style="italic">Large off-diagonal T&#x2071;&#x2C7C;</text>
+
+  <!-- Bottom annotation -->
+  <text x="400" y="295" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ecf0f1" opacity="0.4">Cross-substrate coupling determines how perturbations propagate through an entity's internal degrees of freedom</text>
+
+  <!-- Bar background tracks -->
+  <rect x="170" y="146" width="180" height="20" rx="3" ry="3" fill="#ecf0f1" opacity="0.06"/>
+  <rect x="170" y="178" width="180" height="20" rx="3" ry="3" fill="#ecf0f1" opacity="0.06"/>
+  <rect x="170" y="210" width="180" height="20" rx="3" ry="3" fill="#ecf0f1" opacity="0.06"/>
+  <rect x="570" y="146" width="180" height="20" rx="3" ry="3" fill="#ecf0f1" opacity="0.06"/>
+  <rect x="570" y="178" width="180" height="20" rx="3" ry="3" fill="#ecf0f1" opacity="0.06"/>
+  <rect x="570" y="210" width="180" height="20" rx="3" ry="3" fill="#ecf0f1" opacity="0.06"/>
+
+</svg>

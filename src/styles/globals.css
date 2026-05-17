@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* RSS Subscribe dropdown styles */
+.rss-dropdown {
+  @apply absolute right-0 mt-2 w-72 rounded-lg shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 z-50 p-4;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RSS button styles */
+.rss-button {
+  @apply flex items-center space-x-1 px-3 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-white transition-colors;
+}
+
+/* RSS input styles */
+.rss-input {
+  @apply flex-1 text-sm p-2 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-md;
+}
+
+/* RSS reader link styles */
+.rss-reader-link {
+  @apply flex items-center space-x-2 text-sm p-2 bg-gray-50 dark:bg-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600;
+}
+
+/* RSS format link styles */
+.rss-format-link {
+  @apply ml-2 text-blue-500 hover:text-blue-600 dark:text-blue-400;
+}
+
+/* Site title styles */
+.site-title {
+  @apply text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300;
+} 
