@@ -120,7 +120,7 @@ const CollectionDisplay: React.FC<CollectionDisplayProps> = ({
   };
 
   return (
-    <div className="max-w-[1600px] mx-auto px-1 sm:px-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div className="max-w-[1600px] mx-auto px-4 sm:px-6 bg-[#0a0b1a] text-gray-100">
       {/* Render Breadcrumbs */}
       {!indexPost?.metadata?.hide?.includes('breadcrumbs') && (
         <div className="breadcrumb-container">

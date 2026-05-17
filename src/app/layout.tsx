@@ -91,7 +91,7 @@ export default async function RootLayout({
         <PersonSchema />
         <WebSiteSchema />
       </head>
-      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100" suppressHydrationWarning>
+      <body className="bg-[#0a0b1a] text-gray-100" suppressHydrationWarning>
         <Analytics />
         <div className={inter.className}>
           <Providers>

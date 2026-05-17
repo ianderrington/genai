@@ -311,14 +311,6 @@ html, body {
   z-index: 60;
 }
 
-@media (max-width: 768px) {
-  .theme-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 4rem;
-  }
-}
-
 /* Post layout styles */
 .post-container {
   max-width: 800px;
@@ -1417,23 +1409,9 @@ img {
   object-fit: contain;
 }
 
-/* Article content spacing */
-.prose > * {
-  margin-top: 0.75rem !important;
-  margin-bottom: 0.75rem !important;
-}
-
-.prose > *:first-child {
-  margin-top: 0 !important;
-}
-
-.prose > *:last-child {
-  margin-bottom: 0 !important;
-}
-
 /* Ensure proper content spacing after header */
 header.mb-6 + div {
-  margin-top: 0.5rem !important;
+  margin-top: 0.5rem;
 }
 
 /* Remove any background from image containers */

@@ -13,13 +13,10 @@ export default function SectionCards() {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {SECTIONS.map(({ href, label, desc }) => (
         <Link key={href} href={href}
-          className="group rounded-2xl p-7 flex flex-col gap-3 transition-all duration-300 hover:-translate-y-1"
-          style={{ border: '1px solid rgba(99,102,241,0.2)', background: 'rgba(99,102,241,0.05)' }}
-          onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(99,102,241,0.5)')}
-          onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(99,102,241,0.2)')}>
+          className="group rounded-xl p-7 flex flex-col gap-3 transition-all duration-300 hover:-translate-y-1 border border-indigo-500/20 bg-indigo-500/5 hover:border-indigo-500/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f0f23]">
           <h3 className="text-lg font-semibold text-white">{label}</h3>
-          <p className="text-sm leading-relaxed" style={{ color: 'rgba(148,163,184,0.7)' }}>{desc}</p>
-          <span className="text-sm font-medium mt-auto" style={{ color: '#818cf8' }}>Explore →</span>
+          <p className="text-sm leading-relaxed text-slate-400/70">{desc}</p>
+          <span className="text-sm font-medium mt-auto text-indigo-400">Explore →</span>
         </Link>
       ))}
     </div>

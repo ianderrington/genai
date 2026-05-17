@@ -1,19 +1,56 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 const CONCEPTS = [
-  'Reasoning', 'Agents', 'RAG', 'LLMs', 'MCP', 'Fine-tuning',
-  'Transformers', 'Multimodal', 'Safety', 'Alignment', 'Context',
-  'Embeddings', 'Inference', 'Prompting', 'Tools', 'Memory',
-  'Planning', 'DeepSeek', 'Claude', 'GPT-5', 'Gemini', 'Llama',
-  'RLHF', 'DPO', 'LoRA', 'MoE', 'A2A', 'Sora', 'Veo', 'Qwen',
-  'o3', 'Phi-4', 'Grok', 'Mistral', 'FLUX', 'Evals', 'Distill',
+  "Reasoning",
+  "Agents",
+  "RAG",
+  "LLMs",
+  "MCP",
+  "Fine-tuning",
+  "Transformers",
+  "Multimodal",
+  "Safety",
+  "Alignment",
+  "Context",
+  "Embeddings",
+  "Inference",
+  "Prompting",
+  "Tools",
+  "Memory",
+  "Planning",
+  "DeepSeek",
+  "Claude",
+  "GPT-5",
+  "Gemini",
+  "Llama",
+  "RLHF",
+  "DPO",
+  "LoRA",
+  "MoE",
+  "A2A",
+  "Sora",
+  "Veo",
+  "Qwen",
+  "o3",
+  "Phi-4",
+  "Grok",
+  "Mistral",
+  "FLUX",
+  "Evals",
+  "Distill",
 ];
 
 interface Node {
-  x: number; y: number; vx: number; vy: number;
-  r: number; label: string; pulse: number; opacity: number;
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  r: number;
+  label: string;
+  pulse: number;
+  opacity: number;
 }
 
 export default function ConstellationCanvas() {
@@ -32,7 +69,7 @@ export default function ConstellationCanvas() {
 
     (async () => {
       try {
-        const res = await fetch('/graph.json', { signal: controller.signal });
+        const res = await fetch("/graph.json", { signal: controller.signal });
         if (!res.ok) return;
         const data = await res.json();
         if (
@@ -42,7 +79,9 @@ export default function ConstellationCanvas() {
           data.nodes.length > 0
         ) {
           const names: string[] = data.nodes
-            .map((n: { name?: unknown }) => (typeof n.name === 'string' ? n.name : ''))
+            .map((n: { name?: unknown }) =>
+              typeof n.name === "string" ? n.name : "",
+            )
             .filter(Boolean);
           if (names.length > 0) {
             labelsRef.current = names;
@@ -65,10 +104,13 @@ export default function ConstellationCanvas() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let W = 0, H = 0, nodes: Node[] = [], animId = 0;
+    let W = 0,
+      H = 0,
+      nodes: Node[] = [],
+      animId = 0;
 
     function resize() {
       W = canvas!.width = canvas!.offsetWidth;
@@ -87,7 +129,7 @@ export default function ConstellationCanvas() {
           vx: (Math.random() - 0.5) * 0.28,
           vy: (Math.random() - 0.5) * 0.28,
           r: Math.random() * 1.7 + 1.0,
-          label: i < labels.length ? labels[i] : '',
+          label: i < labels.length ? labels[i] : "",
           pulse: Math.random() * Math.PI * 2,
           opacity: Math.random() * 0.38 + 0.52,
         });
@@ -117,9 +159,16 @@ export default function ConstellationCanvas() {
         n.pulse += 0.015;
         const g = Math.sin(n.pulse) * 0.11 + 0.89;
 
-        const grad = ctx!.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 5.5);
+        const grad = ctx!.createRadialGradient(
+          n.x,
+          n.y,
+          0,
+          n.x,
+          n.y,
+          n.r * 5.5,
+        );
         grad.addColorStop(0, `rgba(99,102,241,${0.28 * g * n.opacity})`);
-        grad.addColorStop(1, 'rgba(99,102,241,0)');
+        grad.addColorStop(1, "rgba(99,102,241,0)");
         ctx!.beginPath();
         ctx!.arc(n.x, n.y, n.r * 5.5, 0, 6.2832);
         ctx!.fillStyle = grad;
@@ -131,7 +180,7 @@ export default function ConstellationCanvas() {
         ctx!.fill();
 
         if (n.label) {
-          ctx!.font = '10px Inter, system-ui, sans-serif';
+          ctx!.font = "10px Inter, system-ui, sans-serif";
           ctx!.fillStyle = `rgba(148,163,184,${n.opacity * 0.46})`;
           ctx!.fillText(n.label, n.x + n.r + 5, n.y + 3.5);
         }
@@ -150,25 +199,39 @@ export default function ConstellationCanvas() {
     let resizeTimer: ReturnType<typeof setTimeout>;
     const onResize = () => {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => { resize(); init(); }, 160);
+      resizeTimer = setTimeout(() => {
+        resize();
+        init();
+      }, 160);
     };
-    window.addEventListener('resize', onResize);
+    window.addEventListener("resize", onResize);
 
     resize();
     init();
-    draw();
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (!prefersReduced) {
+      draw();
+    }
 
     return () => {
       cancelAnimationFrame(animId);
       clearTimeout(resizeTimer);
-      window.removeEventListener('resize', onResize);
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' }}
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        display: "block",
+      }}
       aria-hidden="true"
     />
   );

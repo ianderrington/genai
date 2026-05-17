@@ -381,19 +381,19 @@ export default function PostComponent({ post }: PostComponentProps) {
         </div>
       )}
 
-      <article className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden xl:overflow-visible shadow-sm">
+      <article className="bg-[#0a0b1a] rounded-xl overflow-hidden xl:overflow-visible shadow-sm">
         <div className="post-header">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-50">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-50">
             {post.metadata.title}
           </h1>
           
           {post.metadata.subheader && (
-            <h2 className="text-xl sm:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-300 italic">
+            <h2 className="text-xl sm:text-2xl font-medium mb-6 text-gray-300 italic">
               {post.metadata.subheader}
             </h2>
           )}
           
-          <div className="text-sm text-gray-600 dark:text-gray-300">
+          <div className="text-sm text-gray-300">
             <div className="mb-1">
               <Link 
                 href={post.metadata.authorUrl || '/about'} 
@@ -417,7 +417,7 @@ export default function PostComponent({ post }: PostComponentProps) {
               )}
             </div>
             {post.metadata.date && (
-              <span className="text-gray-500 dark:text-gray-400">
+              <span className="text-gray-400">
                 {formatDate(post.metadata.date)}
               </span>
             )}
@@ -443,7 +443,7 @@ export default function PostComponent({ post }: PostComponentProps) {
 
         {/* Content */}
         <div
-          className={`post-content prose prose-lg dark:prose-invert ${post.metadata.tts?.enabled ? 'supernal-tts-widget' : ''} ${post.metadata.contentType === 'essay' ? 'essay-prose' : ''}`}
+          className={`post-content prose prose-lg prose-invert ${post.metadata.tts?.enabled ? 'supernal-tts-widget' : ''} ${post.metadata.contentType === 'essay' ? 'essay-prose' : ''}`}
           data-text={post.metadata.tts?.enabled ? post.content : undefined}
           data-voice={post.metadata.tts?.voice}
           data-voices={post.metadata.tts?.voices?.join(',')}

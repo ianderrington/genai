@@ -99,7 +99,7 @@ export default async function Page({ params }: PageProps) {
           <div className="breadcrumb-container">
             <Breadcrumb path={renderData.breadcrumbPath} />
           </div>
-          <div className="max-w-[1600px] mx-auto px-1 sm:px-6 py-4">
+          <div className="max-w-[1600px] mx-auto px-4 sm:px-6 py-4">
             <PostComponent post={renderData.indexPost} />
           </div>
         </>

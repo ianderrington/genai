@@ -39,6 +39,9 @@ const config: Config = {
       },
       colors: {
         white: '#FAF9F6',
+        'site-bg': '#0a0b1a',
+        'site-surface': '#0d0e20',
+        'site-raised': '#13143a',
         primary: {
           50: '#f0f9ff',
           100: '#e0f2fe',
