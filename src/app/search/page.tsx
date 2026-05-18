@@ -1,72 +1,23 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { BlogContext } from '@/app/providers';
 import Link from 'next/link';
-import { Post } from '@/lib/content';
-import { Suspense } from 'react';
-import { getBlogUrl } from '@/lib/urlUtils';
 import { Search } from 'lucide-react';
+import { useContentSearch } from '@/lib/search/useContentSearch';
 
 function SearchContent() {
-  const { posts } = React.useContext(BlogContext);
   const params = useSearchParams();
   const router = useRouter();
-  const [searchQuery, setSearchQuery] = React.useState(params?.get('q') || '');
-  const [searchResults, setSearchResults] = React.useState<Post[]>([]);
-  const [isLoading, setIsLoading] = React.useState(false);
+  const initialQuery = params?.get('q') || '';
+  const [searchQuery, setSearchQuery] = React.useState(initialQuery);
 
-  const performSearch = React.useCallback(async (query: string) => {
-    if (!query.trim()) {
-      setSearchResults([]);
-      return;
-    }
-
-    setIsLoading(true);
-    try {
-      console.log(`SearchPage: Searching through ${posts.length} posts for: "${query}"`);
-      
-      const trimmedQuery = query.toLowerCase().trim();
-      
-      // Simple search strategy that prioritizes finding matches over ranking them
-      const results = posts.filter(post => {
-        if (!post || !post.metadata) return false;
-        
-        const title = (post.metadata.title || '').toLowerCase();
-        const description = (post.metadata.description || '').toLowerCase();
-        const content = (post.content || '').toLowerCase();
-        const excerpt = (post.excerpt || '').toLowerCase();
-        const tags = Array.isArray(post.metadata.tags) 
-          ? post.metadata.tags.map(tag => (tag || '').toLowerCase()).join(' ')
-          : '';
-          
-        // Check for matches anywhere in post data
-        return (
-          title.includes(trimmedQuery) ||
-          description.includes(trimmedQuery) ||
-          content.includes(trimmedQuery) ||
-          excerpt.includes(trimmedQuery) ||
-          tags.includes(trimmedQuery)
-        );
-      });
-      
-      setSearchResults(results);
-    } catch (error) {
-      console.error('Error performing search:', error);
-      setSearchResults([]);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [posts]);
-
+  // Sync input when URL param changes (e.g. back/forward navigation)
   React.useEffect(() => {
-    const query = params?.get('q') || '';
-    setSearchQuery(query);
-    if (posts.length > 0) {
-      performSearch(query);
-    }
-  }, [params, performSearch, posts]);
+    setSearchQuery(params?.get('q') || '');
+  }, [params]);
+
+  const { results, isLoading, error } = useContentSearch(initialQuery, 50);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -76,75 +27,98 @@ function SearchContent() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6 text-center sm:text-left">Search</h1>
-      
-      <form onSubmit={handleSearch} className="mb-8 w-full max-w-2xl mx-auto">
-        <div className="flex flex-col sm:flex-row gap-2 w-full">
-          <div className="relative flex-1">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search posts..."
-              className="w-full p-3 pl-10 border rounded-lg dark:bg-gray-800 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              autoFocus
-            />
-            <Search className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
-          </div>
-          <button 
-            type="submit"
-            className="p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-          >
-            Search
-          </button>
-        </div>
-      </form>
+    <div className="min-h-screen bg-[#0a0b1a] text-gray-100">
+      <div className="container mx-auto px-4 py-12 max-w-4xl">
+        <h1 className="text-3xl font-bold mb-8 text-white">Search</h1>
 
-      {posts.length === 0 ? (
-        <div className="text-center py-8">Loading posts...</div>
-      ) : isLoading ? (
-        <div className="text-center py-8">Searching...</div>
-      ) : searchResults.length > 0 ? (
-        <div className="grid gap-6 max-w-4xl mx-auto">
-          {searchResults.map((post) => (
-            <article key={post.slug} className="border rounded-lg p-4 sm:p-6 dark:border-gray-700 hover:shadow-md transition-shadow duration-200">
-              <Link href={getBlogUrl(post)} className="block">
-                <h2 className="text-lg sm:text-xl font-semibold mb-2">{post.metadata.title}</h2>
-                {post.metadata.description && (
-                  <p className="text-gray-600 dark:text-gray-400 mb-2 text-sm sm:text-base">{post.metadata.description}</p>
-                )}
-                <div className="text-sm text-gray-500">
-                  {post.metadata.date && (
-                    <time dateTime={post.metadata.date} className="text-xs sm:text-sm">
-                      {new Date(post.metadata.date).toLocaleDateString()}
-                    </time>
-                  )}
-                  {post.metadata.tags && post.metadata.tags.length > 0 && (
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {post.metadata.tags.map(tag => (
-                        <span key={tag} className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-xs">
+        <form onSubmit={handleSearch} className="mb-10">
+          <div className="flex gap-3">
+            <div className="relative flex-1">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+                placeholder="Search the guide…"
+                className="w-full px-4 py-3 pl-11 rounded-lg bg-gray-800/60 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
+                autoFocus
+              />
+              <Search className="absolute left-3.5 top-3.5 h-5 w-5 text-gray-500" />
+            </div>
+            <button
+              type="submit"
+              className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+
+        {error && (
+          <div className="mb-6 px-4 py-3 rounded-lg bg-red-900/40 border border-red-700/50 text-red-300 text-sm">
+            {error}
+          </div>
+        )}
+
+        {isLoading ? (
+          <div className="text-center py-16 text-gray-500">Searching…</div>
+        ) : results.length > 0 ? (
+          <>
+            <p className="text-sm text-gray-500 mb-6">
+              {results.length} result{results.length !== 1 ? 's' : ''} for &ldquo;{initialQuery}&rdquo;
+            </p>
+            <div className="space-y-4">
+              {results.map(hit => (
+                <Link
+                  key={hit.slug}
+                  href={`/${hit.slug}`}
+                  className="block rounded-xl border border-gray-700/60 bg-gray-800/40 hover:bg-gray-800/80 hover:border-indigo-500/40 px-6 py-5 transition-all group"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="min-w-0">
+                      <h2 className="text-lg font-semibold text-white group-hover:text-indigo-300 transition-colors truncate">
+                        {hit.title}
+                      </h2>
+                      {hit.description && (
+                        <p className="mt-1 text-sm text-gray-400 line-clamp-2">{hit.description}</p>
+                      )}
+                      {hit.excerpt && hit.excerpt !== hit.description && (
+                        <p className="mt-2 text-xs text-gray-500 line-clamp-2 font-mono">{hit.excerpt}</p>
+                      )}
+                    </div>
+                    <span className="shrink-0 text-xs text-gray-600 bg-gray-700/50 rounded-full px-2 py-1 capitalize">
+                      {hit.section}
+                    </span>
+                  </div>
+                  {hit.tags.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {hit.tags.slice(0, 5).map(tag => (
+                        <span
+                          key={tag}
+                          className="text-xs bg-indigo-900/40 text-indigo-300 border border-indigo-700/40 rounded-full px-2 py-0.5"
+                        >
                           {tag}
                         </span>
                       ))}
                     </div>
                   )}
-                </div>
-              </Link>
-            </article>
-          ))}
-        </div>
-      ) : searchQuery ? (
-        <div className="text-center py-8">No results found</div>
-      ) : null}
+                </Link>
+              ))}
+            </div>
+          </>
+        ) : initialQuery ? (
+          <div className="text-center py-16 text-gray-500">
+            No results found for &ldquo;{initialQuery}&rdquo;
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }
 
 export default function SearchPage() {
   return (
-    <Suspense fallback={<div className="container mx-auto px-4 py-8">Loading...</div>}>
+    <Suspense fallback={<div className="min-h-screen bg-[#0a0b1a] flex items-center justify-center text-gray-500">Loading…</div>}>
       <SearchContent />
     </Suspense>
   );
-} 
+}

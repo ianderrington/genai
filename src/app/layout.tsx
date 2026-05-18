@@ -15,6 +15,7 @@ import { PersonSchema, WebSiteSchema } from '@supernal/docs-kit';
 // AIChat disabled - no LLM budget allocated for supernal interface chat
 // import { AIChat } from '@/components/chat/AIChat';
 import TTSInit from '@/components/TTSInitializer';
+import LeadCapture from '@/components/LeadCapture';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -101,6 +102,7 @@ export default async function RootLayout({
           </Providers>
         </div>
         <TTSInit />
+        <LeadCapture />
       </body>
     </html>
   );

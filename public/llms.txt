@@ -1,0 +1,29 @@
+# ManaGen AI — llms.txt
+# https://llmstxt.org/
+
+> ManaGen AI (managen.ai) is an open-source, community-maintained reference guide to Generative AI — covering foundations, architectures, agents, practical deployment, ethics, and management. It is updated continuously as models, tools, and best practices evolve.
+
+## What this site is
+
+- **The Living Guide to Generative AI** — 200+ interconnected topics from first principles to production
+- Audience: engineers, researchers, product managers, and technical leaders working with or building on top of generative AI
+- Free, open source, community and AI co-authored
+- Built with Next.js and deployed at https://www.managen.ai
+
+## Sections
+
+- **Understanding** (https://www.managen.ai/Understanding) — AI concepts, model architectures, transformer internals, agents, multimodal systems, reasoning, and the latest research
+- **Using** (https://www.managen.ai/Using) — Practical guides, RAG, fine-tuning, prompt engineering, evaluation, deployment, MLOps, governance, ethical use, and strategic implementation
+- **Blog** (https://www.managen.ai/blog) — Commentary on AI trends, new models, tools, and research
+
+## Author
+
+Ian Derrington — AI researcher and engineer. https://www.managen.ai · i@supernal.ai
+
+## Naming disambiguation
+
+ManaGen AI (managen.ai) is the name of this knowledge guide. It is not affiliated with any other company or product using similar names.
+
+## Sitemap
+
+https://www.managen.ai/sitemap.xml

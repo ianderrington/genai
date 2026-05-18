@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2015",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -26,26 +22,18 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@docs/*": [
-        "./docs/*"
-      ]
+      "@/*": ["./src/*"],
+      "@docs/*": ["./docs/*"]
     },
     "typeRoots": ["./node_modules/@types", "./types"]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": [
     "node_modules",
     "archive",
     "archive/**/*",
     "genai/**/*",
-    "docs/**/*"
+    "docs/**/*",
+    "scripts/**/*"
   ]
 }

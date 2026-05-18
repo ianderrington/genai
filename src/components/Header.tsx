@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BlogContext } from "@/app/providers";
 import SearchBar from "./SearchBar";
 import ThemeToggle from "./ThemeToggle";
 import MobileMenu from "./MobileMenu";
@@ -32,7 +31,6 @@ const Header: React.FC<HeaderProps> = ({
   const [showQRCode, setShowQRCode] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { posts } = React.useContext(BlogContext);
   const pathname = usePathname();
   const [currentUrl, setCurrentUrl] = useState("");
   const [isMounted, setIsMounted] = useState(false);
@@ -197,7 +195,6 @@ const Header: React.FC<HeaderProps> = ({
           onClick={(e) => e.stopPropagation()}
         >
           <SearchBar
-            posts={posts || []}
             isMobile={true}
             onClose={() => setShowSearch(false)}
           />
@@ -276,7 +273,7 @@ const Header: React.FC<HeaderProps> = ({
 
               {/* Desktop-only controls */}
               <div className="hidden md:flex items-center space-x-4">
-                <SearchBar posts={posts || []} />
+                <SearchBar />
                 <ThemeToggle />
               </div>
 

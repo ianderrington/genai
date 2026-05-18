@@ -36,3 +36,10 @@ npm-debug.log*
 
 # Build-time generated artifacts
 public/graph.json
+public/search-index.json
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
+# Local agent state
+.supernal-local/

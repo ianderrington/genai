@@ -3,9 +3,9 @@
 import Link from 'next/link';
 
 const SECTIONS = [
-  { href: '/Understanding', label: 'Understanding', desc: 'Foundations, architectures, agents, and the latest research.' },
-  { href: '/Using', label: 'Using', desc: 'Practical guides, strategic deployment, and real-world patterns.' },
-  { href: '/Managenai', label: 'ManaGen AI', desc: 'About the project, contributing, and the road ahead.' },
+  { href: '/Understanding', label: 'Understanding', desc: 'Core concepts, model architectures, agents, RAG, and the latest research — from first principles to cutting edge.' },
+  { href: '/Using', label: 'Using', desc: 'Practical guides for building, evaluating, and deploying Gen AI in production — tools, patterns, and real-world examples.' },
+  { href: '/blog', label: 'Blog', desc: 'Latest thinking on AI trends, tools, and research.' },
 ];
 
 export default function SectionCards() {

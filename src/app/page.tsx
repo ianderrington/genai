@@ -12,6 +12,9 @@ export async function generateMetadata(): Promise<Metadata> {
     title: { default: site.title, template: `%s | ${site.title}` },
     description: site.description,
     metadataBase: new URL(site.url),
+    alternates: {
+      canonical: "/",
+    },
     openGraph: {
       title: site.title,
       description: site.description,
@@ -19,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: site.title,
       images: [
         {
-          url: "/images/og-image.jpg",
+          url: `/og?title=${encodeURIComponent(site.title)}&description=${encodeURIComponent(site.description)}`,
           width: 1200,
           height: 630,
           alt: site.title,
@@ -32,7 +35,9 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: site.title,
       description: site.description,
-      images: ["/images/twitter-image.jpg"],
+      images: [
+        `/og?title=${encodeURIComponent(site.title)}&description=${encodeURIComponent(site.description)}`,
+      ],
     },
   };
 }
@@ -146,7 +151,7 @@ export default function Home() {
             {[
               { num: "200+", label: "Topics" },
               { num: "50+", label: "Models Tracked" },
-              { num: new Date().getFullYear().toString(), label: "Up to Date" },
+              { num: "Weekly", label: "Stays Current" },
               { num: "Free", label: "Always Open" },
             ].map(({ num, label }) => (
               <div key={label} className="flex flex-col items-center">
@@ -228,14 +233,14 @@ export default function Home() {
             continuously as models, tools, and best practices evolve.
           </p>
           <Link
-            href="/Understanding"
+            href="/Using"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white transition-all duration-200 hover:-translate-y-0.5"
             style={{
               background: "linear-gradient(135deg, #4f46e5, #7c3aed)",
               boxShadow: "0 0 20px rgba(124,58,237,0.4)",
             }}
           >
-            Start Exploring →
+            Browse Practical Guides →
           </Link>
         </div>
       </section>
