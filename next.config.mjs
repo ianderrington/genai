@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Transpile @supernal/docs-kit from TypeScript source (no prebuilt dist)
-  transpilePackages: ["@supernal/docs-kit"],
-  outputFileTracingRoot: "/Users/saiterminal/git/supernal/families/genai",
   // Skip ESLint during builds (ajv version conflict with eslint-config-next)
   eslint: {
     ignoreDuringBuilds: true,
