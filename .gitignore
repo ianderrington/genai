@@ -19,7 +19,7 @@ actions-runner/
 
 *downloads*
 
-lib/
+/lib/
 
 *.egg-info
 

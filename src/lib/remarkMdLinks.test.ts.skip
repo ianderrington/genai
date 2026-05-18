@@ -1,0 +1,95 @@
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkStringify from 'remark-stringify';
+import remarkMdLinks from './remarkMdLinks';
+import fs from 'fs';
+import path from 'path';
+import { logger } from './logger';
+
+// Mock fs.existsSync
+jest.mock('fs', () => ({
+  existsSync: jest.fn()
+}));
+
+// Mock logger
+jest.mock('./logger', () => ({
+  logger: {
+    error: jest.fn(),
+    info: jest.fn(),
+    debug: jest.fn()
+  }
+}));
+
+describe.skip('remarkMdLinks', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should replace .md links with .html links', async () => {
+    // Mock fs.existsSync to return true for all files
+    jest.spyOn(fs, 'existsSync').mockReturnValue(true);
+
+    const markdown = `
+# Test Document
+
+Here is a [link to another document](./another-doc.md).
+
+And here is [another link](../parent-dir/doc.md).
+
+This [external link](https://example.com/doc.md) should not be changed.
+
+This [absolute link](/docs/doc.md) should not be changed.
+`;
+
+    const result = await unified()
+      .use(remarkParse)
+      .use(remarkMdLinks, { 
+        rootDir: '/root', 
+        currentFilePath: '/root/docs/test.md' 
+      })
+      .use(remarkStringify)
+      .process(markdown);
+
+    const output = String(result);
+    
+    // Check that relative .md links were replaced with .html
+    expect(output).toContain('[link to another document](./another-doc.html)');
+    expect(output).toContain('[another link](../parent-dir/doc.html)');
+    
+    // Check that external and absolute links were not changed
+    expect(output).toContain('[external link](https://example.com/doc.md)');
+    expect(output).toContain('[absolute link](/docs/doc.md)');
+    
+    // Check that fs.existsSync was called with the correct paths
+    expect(fs.existsSync).toHaveBeenCalledWith(path.resolve('/root/docs', './another-doc.md'));
+    expect(fs.existsSync).toHaveBeenCalledWith(path.resolve('/root/docs', '../parent-dir/doc.md'));
+    
+    // Check that logger.error was not called (no missing files)
+    expect(logger.error).not.toHaveBeenCalled();
+  });
+
+  it('should provide warnings for missing files', async () => {
+    // Mock fs.existsSync to return false for all files
+    jest.spyOn(fs, 'existsSync').mockReturnValue(false);
+
+    const markdown = `
+# Test Document
+
+Here is a [link to a missing document](./missing-doc.md).
+`;
+
+    await unified()
+      .use(remarkParse)
+      .use(remarkMdLinks, { 
+        rootDir: '/root', 
+        currentFilePath: '/root/docs/test.md' 
+      })
+      .use(remarkStringify)
+      .process(markdown);
+    
+    // Check that logger.error was called with the correct message
+    expect(logger.error).toHaveBeenCalledWith(
+      expect.stringContaining('Missing markdown file: ./missing-doc.md')
+    );
+  });
+}); 

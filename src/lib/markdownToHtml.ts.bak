@@ -1,0 +1,45 @@
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
+import { visit } from 'unist-util-visit';
+import remarkMdLinks from './remarkMdLinks';
+import rehypeReact from 'rehype-react';
+import * as prod from 'react/jsx-runtime';
+import { createElement, Fragment } from 'react';
+
+export async function markdownToReact(markdown: string, filePath: string) {
+  const rootDir = process.cwd();
+  
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkMdLinks, { rootDir, currentFilePath: filePath })
+    .use(() => (tree) => {
+      visit(tree, 'code', (node: any) => {
+        if (node.lang === 'mermaid') {
+          const fileHash = Buffer.from(filePath).toString('base64').replace(/[/+=]/g, '_');
+          const diagramName = `${fileHash}-${node.position?.start.offset}`;
+          node.type = 'element';
+          node.tagName = 'img';
+          node.properties = {
+            src: `/diagrams/${diagramName}.svg`,
+            alt: 'Mermaid diagram',
+            className: ['my-4', 'mx-auto']
+          };
+        }
+      });
+    })
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeSlug)
+    .use(rehypeReact, {
+      createElement,
+      Fragment,
+      // Pass through all HTML elements as-is
+      passNode: true
+    })
+    .process(markdown);
+
+  return result.result;
+} 
