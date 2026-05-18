@@ -34,9 +34,8 @@ node_modules/
 npm-debug.log*
 .vercel
 
-# Build-time generated artifacts
+# Build-time generated artifacts (graph regenerated on deploy, search index committed)
 public/graph.json
-public/search-index.json
 
 # TypeScript build info
 tsconfig.tsbuildinfo

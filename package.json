@@ -14,7 +14,7 @@
     "dev:with-mermaid": "turbo run render-mermaid dev --parallel",
     "preprocess:content": "node scripts/preprocess-content-simple.js",
     "build": "npm run graph:build || true && npm run search:build || true && next build",
-    "vercel-build": "npm run search:build || true && next build",
+    "vercel-build": "next build",
     "build:optimized": "next build",
     "build:clear": "node scripts/optimize-build.js --clear-cache",
     "start": "next start",
