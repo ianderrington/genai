@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useFloatingVisibility } from '@supernal/docs-kit';
+import { useFloatingVisibility } from '@/lib/docs-kit';
 import SocialShare from './SocialShare';
 
 interface FloatingShareButtonProps {

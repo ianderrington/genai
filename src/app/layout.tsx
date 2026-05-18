@@ -11,7 +11,7 @@ import { siteConfig } from '@/config/site';
 import { Analytics } from '@/components/Analytics';
 import { loadSiteConfig } from '@/lib/server/config';
 import ErrorBoundary from '@/components/ErrorBoundary';
-import { PersonSchema, WebSiteSchema } from '@supernal/docs-kit';
+import { PersonSchema, WebSiteSchema } from '@/lib/docs-kit';
 // AIChat disabled - no LLM budget allocated for supernal interface chat
 // import { AIChat } from '@/components/chat/AIChat';
 import TTSInit from '@/components/TTSInitializer';

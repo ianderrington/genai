@@ -8,7 +8,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { resolveImagePath } from "@/lib/imageUtils";
 import CollectionDisplay from "@/components/CollectionDisplay";
 import { prepareCollectionRenderData } from "@/lib/content/collectionRenderer";
-import { ArticleSchema, BreadcrumbSchema } from "@supernal/docs-kit";
+import { ArticleSchema, BreadcrumbSchema } from "@/lib/docs-kit";
 
 // Force dynamic rendering to avoid SSR issues with client components
 export const dynamic = "force-dynamic";
