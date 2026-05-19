@@ -28,20 +28,25 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ config }, ref) => {
   };
 
   return (
-    <footer ref={ref} className="bg-[#0a0b1a] border-t border-indigo-500/10">
+    <footer
+      ref={ref}
+      className="bg-gray-50 dark:bg-[#0a0b1a] border-t border-gray-200 dark:border-indigo-500/10"
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="font-bold text-white text-lg mb-2">ManaGen AI</div>
-            <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
+            <div className="font-bold text-gray-900 dark:text-white text-lg mb-2">
+              ManaGen AI
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 max-w-xs leading-relaxed">
               The Living Guide to Generative AI — updated continuously as
               models, tools, and best practices evolve.
             </p>
           </div>
           {/* Nav links */}
           <div>
-            <div className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-3">
+            <div className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-3">
               Explore
             </div>
             <ul className="space-y-2">
@@ -53,7 +58,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ config }, ref) => {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-gray-400 hover:text-indigo-400 transition-colors"
+                    className="text-sm text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                   >
                     {label}
                   </Link>
@@ -63,14 +68,14 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ config }, ref) => {
           </div>
         </div>
         {/* Bottom bar */}
-        <div className="border-t border-indigo-500/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="border-t border-gray-200 dark:border-indigo-500/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-6">
             {/* Twitter/X */}
             <a
               href={config.author.social.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-blue-400 transition-colors"
+              className="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               aria-label="Twitter"
             >
               <span className="sr-only">Twitter</span>
@@ -84,7 +89,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ config }, ref) => {
               href={config.author.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-100 transition-colors"
+              className="text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               aria-label="GitHub"
             >
               <span className="sr-only">GitHub</span>
@@ -98,7 +103,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ config }, ref) => {
               href={config.author.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-blue-400 transition-colors"
+              className="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               aria-label="LinkedIn"
             >
               <span className="sr-only">LinkedIn</span>
@@ -112,7 +117,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ config }, ref) => {
               href={config.author.social.bluesky}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-blue-400 transition-colors"
+              className="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               aria-label="Bluesky"
             >
               <span className="sr-only">Bluesky</span>
@@ -135,7 +140,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ config }, ref) => {
               href={config.author.social.threads}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-100 transition-colors"
+              className="text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               aria-label="Threads"
             >
               <span className="sr-only">Threads</span>
@@ -151,7 +156,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ config }, ref) => {
             {/* RSS Feed */}
             <button
               onClick={handleCopyFeed}
-              className="text-gray-500 hover:text-orange-400 transition-all duration-300"
+              className="text-gray-400 dark:text-gray-500 hover:text-orange-500 dark:hover:text-orange-400 transition-all duration-300"
               aria-label="Copy RSS Feed URL"
             >
               <span className="sr-only">Copy RSS Feed URL</span>
@@ -165,16 +170,16 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ config }, ref) => {
             </button>
           </div>
           <div className="flex flex-col items-center sm:items-end gap-1">
-            <div className="text-sm text-gray-500">
+            <div className="text-sm text-gray-400 dark:text-gray-500">
               © {currentYear} ManaGen AI · All rights reserved
             </div>
-            <div className="text-xs text-gray-600">
+            <div className="text-xs text-gray-400 dark:text-gray-600">
               Built with{" "}
               <a
                 href="https://si42.ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-indigo-400 transition-colors"
+                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
                 Supernal Intelligence
               </a>

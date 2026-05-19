@@ -153,7 +153,7 @@ html, body {
 }
 
 .search-modal-content {
-  background: rgb(17, 24, 39);
+  background: white;
   border-radius: 1rem;
   padding: 1rem;
   width: 100%;
@@ -163,6 +163,10 @@ html, body {
   max-height: calc(100vh - 4rem);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.dark .search-modal-content {
+  background: rgb(17, 24, 39);
 }
 
 @media (max-width: 640px) {

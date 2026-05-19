@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { ThemeProvider } from 'next-themes';
-import React, { useEffect, useState } from 'react';
-import { Post } from '@/lib/content';
-import { MobileMenuProvider } from '@/contexts/MobileMenuContext';
-import { cachedFetch } from '@/lib/clientCache';
+import { ThemeProvider } from "next-themes";
+import React, { useEffect, useState } from "react";
+import { Post } from "@/lib/content";
+import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
+import { cachedFetch } from "@/lib/clientCache";
 // ChatProvider disabled - no LLM budget allocated
 // import { ChatProvider } from '@/architecture/ChatProvider';
 
@@ -15,7 +15,7 @@ interface BlogContextType {
 
 export const BlogContext = React.createContext<BlogContextType>({
   posts: [],
-  setPosts: () => {}
+  setPosts: () => {},
 });
 
 // Posts loader component
@@ -27,13 +27,13 @@ function PostsLoader({ children }: { children: React.ReactNode }) {
       try {
         // Use cached fetch with 10 minute cache for initial posts load
         const data = await cachedFetch<any>(
-          '/api/blog/posts?limit=500',
+          "/api/blog/posts?limit=500",
           undefined,
-          10 * 60 * 1000 // 10 minutes cache
+          10 * 60 * 1000, // 10 minutes cache
         );
         setPosts(data.posts);
       } catch (error) {
-        console.error('Error loading posts:', error);
+        console.error("Error loading posts:", error);
       }
     }
     loadPosts();
@@ -47,12 +47,10 @@ function ThemeWrapper({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    // Force a re-render of the theme on mount
-    document.documentElement.classList.remove('light', 'dark');
   }, []);
 
   if (!mounted) {
-    return <div style={{ visibility: 'hidden' }}>{children}</div>;
+    return <div style={{ visibility: "hidden" }}>{children}</div>;
   }
 
   return children;
@@ -67,7 +65,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="light"
+      defaultTheme="dark"
       storageKey="blog-theme-preference"
       enableSystem={false}
       disableTransitionOnChange
@@ -75,12 +73,10 @@ export function Providers({ children }: { children: React.ReactNode }) {
       <ThemeWrapper>
         <MobileMenuProvider>
           <BlogContext.Provider value={contextValue}>
-              <PostsLoader>
-                {children}
-              </PostsLoader>
+            <PostsLoader>{children}</PostsLoader>
           </BlogContext.Provider>
         </MobileMenuProvider>
       </ThemeWrapper>
     </ThemeProvider>
   );
-} 
+}

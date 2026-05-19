@@ -48,7 +48,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0a0b1a] text-gray-100 w-full overflow-x-hidden m-0 p-0">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-[#0a0b1a] text-gray-900 dark:text-gray-100 w-full overflow-x-hidden m-0 p-0">
       <Header sections={sections} />
       <main className="flex-grow w-full flex flex-col p-0 m-0 pt-16">
         {children}

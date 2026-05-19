@@ -36,41 +36,34 @@ const Header: React.FC<HeaderProps> = ({
   const [isMounted, setIsMounted] = useState(false);
   const { isOpen, toggleMenu, closeMenu, isMobile } = useMobileMenu();
 
-  // Set mounted state for portal rendering
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  // Scroll listener for transparent→blurred header
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Get current section from pathname
   const currentSection = pathname?.split("/")[1];
 
-  // Set current URL - update whenever pathname changes
   useEffect(() => {
     if (typeof window !== "undefined") {
       setCurrentUrl(window.location.href);
     }
   }, [pathname]);
 
-  // Close modals when route changes and notify parent
   React.useEffect(() => {
     setShowQRCode(false);
     setShowSearch(false);
     onMenuToggle?.(false);
   }, [pathname, onMenuToggle]);
 
-  // Notify parent when mobile menu state changes
   useEffect(() => {
     onMenuToggle?.(isOpen);
   }, [isOpen, onMenuToggle]);
 
-  // Add keyboard event handler for ESC key
   React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -78,7 +71,6 @@ const Header: React.FC<HeaderProps> = ({
         setShowSearch(false);
       }
     };
-
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
@@ -105,16 +97,13 @@ const Header: React.FC<HeaderProps> = ({
     toggleMenu();
   };
 
-  // QR Code Modal Component
   const QRCodeModal = () => {
     if (!showQRCode) return null;
 
-    // Get page title from document or fallback to derived title from URL
     const getPageTitle = () => {
       if (typeof document !== "undefined" && document.title) {
         return document.title;
       }
-      // Extract title from pathname as fallback
       const path = pathname || "";
       if (path === "/") return "Home";
       const segment = path.split("/").pop() || "";
@@ -123,7 +112,6 @@ const Header: React.FC<HeaderProps> = ({
       );
     };
 
-    // Ensure we have a valid URL
     const qrCodeUrl =
       currentUrl || (typeof window !== "undefined" ? window.location.href : "");
 
@@ -138,10 +126,7 @@ const Header: React.FC<HeaderProps> = ({
         aria-modal="true"
         aria-labelledby="qr-code-title"
       >
-        <div
-          className="qr-content"
-          onClick={(e) => e.stopPropagation()} // Prevent clicks inside from closing
-        >
+        <div className="qr-content" onClick={(e) => e.stopPropagation()}>
           <button
             className="qr-close-button"
             onClick={() => setShowQRCode(false)}
@@ -177,7 +162,6 @@ const Header: React.FC<HeaderProps> = ({
     );
   };
 
-  // Search Modal Component
   const SearchModal = () => {
     if (!showSearch) return null;
 
@@ -194,10 +178,7 @@ const Header: React.FC<HeaderProps> = ({
           className="search-modal-content"
           onClick={(e) => e.stopPropagation()}
         >
-          <SearchBar
-            isMobile={true}
-            onClose={() => setShowSearch(false)}
-          />
+          <SearchBar isMobile={true} onClose={() => setShowSearch(false)} />
         </div>
       </div>
     );
@@ -208,7 +189,7 @@ const Header: React.FC<HeaderProps> = ({
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 m-0 p-0 ${
           scrolled
-            ? "bg-[#0a0b1a]/90 backdrop-blur-md border-b border-indigo-500/10"
+            ? "bg-white/90 dark:bg-[#0a0b1a]/90 backdrop-blur-md border-b border-gray-200 dark:border-indigo-500/10"
             : "bg-transparent border-b border-transparent"
         }`}
       >
@@ -217,18 +198,18 @@ const Header: React.FC<HeaderProps> = ({
             {/* Logo/Home link */}
             <div className="flex items-center h-full">
               <Link href="/" className="site-title flex items-center h-full">
-                {/* Mobile: Show short title */}
                 <div className="md:hidden flex items-center">
-                  <span className="text-lg font-bold text-white">ManaGen</span>
+                  <span className="text-lg font-bold text-gray-900 dark:text-white">
+                    ManaGen
+                  </span>
                 </div>
-                {/* Desktop: Show full text */}
-                <span className="hidden md:block text-lg md:text-xl font-bold truncate text-white">
+                <span className="hidden md:block text-lg md:text-xl font-bold truncate text-gray-900 dark:text-white">
                   ManaGen AI
                 </span>
               </Link>
             </div>
 
-            {/* Desktop menu */}
+            {/* Desktop nav */}
             <nav className="hidden md:flex items-center space-x-6">
               {sections.map((section) => {
                 const isActive = section.id === currentSection;
@@ -238,8 +219,8 @@ const Header: React.FC<HeaderProps> = ({
                     href={`/${section.id}`}
                     className={`text-base font-medium transition-colors ${
                       isActive
-                        ? "text-indigo-400"
-                        : "text-gray-300 hover:text-white"
+                        ? "text-indigo-600 dark:text-indigo-400"
+                        : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                     }`}
                   >
                     {section.title}
@@ -252,44 +233,41 @@ const Header: React.FC<HeaderProps> = ({
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base font-medium transition-colors text-gray-300 hover:text-white"
+                  className="text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 >
                   {link.title}
                 </a>
               ))}
             </nav>
 
-            {/* Desktop controls */}
+            {/* Controls */}
             <div className="flex items-center space-x-2 md:space-x-4">
-              {/* QR code button - always visible */}
               <button
                 type="button"
                 onClick={handleQRCodeClick}
-                className="p-1 md:p-2 text-gray-400 hover:text-gray-200"
+                className="p-1 md:p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                 aria-label="Show QR code"
               >
                 <QrCode size={20} />
               </button>
 
-              {/* Desktop-only controls */}
               <div className="hidden md:flex items-center space-x-4">
                 <SearchBar />
                 <ThemeToggle />
               </div>
 
-              {/* Mobile-only controls */}
               <div className="md:hidden flex items-center space-x-2">
                 <button
                   type="button"
                   onClick={handleSearchClick}
-                  className="p-1 md:p-2 text-gray-400 hover:text-gray-200"
+                  className="p-1 md:p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                   aria-label="Search"
                 >
                   <Search size={20} />
                 </button>
                 <button
                   onClick={handleMenuButtonClick}
-                  className="p-1 md:p-2 rounded-md text-gray-400 hover:text-gray-200"
+                  className="p-1 md:p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                   aria-label="Toggle navigation menu"
                 >
                   <Menu size={24} />
@@ -300,7 +278,6 @@ const Header: React.FC<HeaderProps> = ({
         </div>
       </header>
 
-      {/* Render modals via portal to avoid DOM nesting issues */}
       {isMounted && typeof document !== "undefined" && (
         <>
           {createPortal(<QRCodeModal />, document.body)}
