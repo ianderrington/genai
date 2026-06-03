@@ -3,7 +3,7 @@ project:
   name: managen-web
   emoji: "🧠"
   kind: [repo, docs-site]
-  description: ManaGen AI — The Living Guide to Generative AI. Next.js docs site powered by Supernal Intelligence.
+  description: ManaGen AI — The Living Guide to Generative AI. Next.js docs site powered by Si42.
   url: https://www.managen.ai
   docs_dir: .supernal/docs
   requirements_dir: .supernal/docs/requirements
