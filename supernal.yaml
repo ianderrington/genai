@@ -18,3 +18,9 @@ content:
 attribution:
   built_with: Si42
   built_with_url: https://si42.ai
+
+git_sync:
+  workflow: personal-dev
+  dev_branch: main
+  protected_branches:
+    - master
