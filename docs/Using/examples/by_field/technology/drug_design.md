@@ -1,5 +1,5 @@
 
-Drug design is applicable to [chemistry]() and [proteins](), though has interesting notions that it connects directly with biologics, clinical decistions, and lifestyle effects. 
+Drug design is applicable to [chemistry](../science/chemistry.md) and [proteins](../science/biology/proteins.md), though has interesting notions that it connects directly with biologics, clinical decisions, and lifestyle effects. 
 
 
 ??? note "[A foundation model for clinician-centered drug repurposing](https://github.com/mims-harvard/TxGNN)"
