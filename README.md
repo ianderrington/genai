@@ -4,26 +4,7 @@ See the [website](https://www.managen.ai)
 
 **Our Mission**: Simplify and demystify Gen()AI to make it accessible and understandable and increase our ability to manage it.
 
-## 👥 Project Authors
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/ianderrington">
-        <img src="https://github.com/ianderrington.png" width="100px;" alt="Ian Derrington"/><br />
-        <sub><b>Ian Derrington</b></sub>
-      </a><br />
-      <sub>Co-Author & Creator</sub>
-    </td>
-    <td align="center">
-      <a href="https://github.com/Awesome-as-always">
-        <img src="https://github.com/Awesome-as-always.png" width="100px;" alt="Parnian Barekatain"/><br />
-        <sub><b>Parnian Barekatain</b></sub>
-      </a><br />
-      <sub>Co-Author</sub>
-    </td>
-  </tr>
-</table>
+This project is created and maintained by [Ian Derrington](https://github.com/ianderrington) and [Parnian Barekatain](https://github.com/Awesome-as-always), who share a vision of building *living documentation* that evolves alongside the rapidly advancing field of generative AI.
 
 Our **open-source project** on [**Managing Generative AI**](https://www.managen.ai) 🤖 will help people to stay on top of understanding and effectively working with the increasingly complex world of Generative AI.
 
@@ -56,6 +37,35 @@ If you're as excited as we are and wish to contribute, join us!
 The goal is to create an AI that can self-improve its documentation and code using tools like [Langchain](https://langchain.com/). It will automatically expand markdown documentation using generative models. The AI will also suggest code improvements to streamline documentation generation. This creates a self-referential system that enhances both docs and code.
 
 We want to keep a human in the loop to oversee changes and provide feedback for further improvements.
+
+## 🔮 Future Directions
+
+Based on our analysis of the current AI landscape and gaps in existing documentation, we're exploring:
+
+### Frontier Model Architectures
+- **State Space Models (Mamba, S4)**: Efficient alternatives to transformers for long sequences
+- **Mixture of Experts at Scale**: How sparse architectures enable trillion-parameter models
+- **Test-Time Compute**: Scaling inference rather than just training
+
+### AI Safety & Alignment
+- **Constitutional AI & RLAIF**: Self-supervised alignment techniques
+- **Interpretability Research**: Understanding what models actually learn
+- **Recursive Self-Improvement Safety**: Harnesses and guardrails for self-modifying systems
+
+### Agentic AI
+- **Multi-Agent Orchestration**: Coordinating specialized agents for complex tasks
+- **Tool Use & Computer Use**: Agents that interact with real software and APIs
+- **Long-Horizon Planning**: Agents that reason over extended timeframes
+
+### AI for Science
+- **Protein Design**: Beyond AlphaFold to de novo protein engineering
+- **Materials Discovery**: AI-driven discovery of new materials
+- **Mathematical Reasoning**: AI that can prove theorems and discover mathematics
+
+### Infrastructure & Deployment
+- **Efficient Inference**: Quantization, speculative decoding, KV-cache optimization
+- **Edge AI**: Running capable models on devices
+- **AI Ops**: Production monitoring, evaluation, and continuous improvement
 
 ## Getting Started
 
