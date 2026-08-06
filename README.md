@@ -95,7 +95,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-A heartfelt thank you to [Awesome-as-always](https://github.com/Awesome-as-always) for the rich discussions and generative thinking that have helped shape this project. Their shared commitment to building *living understanding* — knowledge that evolves alongside the field rather than freezing it in place — resonates deeply with what we're trying to do here.
+A heartfelt thank you to [Awesome-as-always](https://github.com/Awesome-as-always) for the rich discussions and generative thinking that have helped shape this project. Their shared commitment to building *living understanding* — knowledge that evolves alongside the field rather than freezing it in place — became a core of what we are building here.
 
 We especially appreciate their work on:
 
