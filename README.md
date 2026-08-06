@@ -71,3 +71,12 @@ We welcome contributions! Please check out the [contributing guidelines](contrib
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+A heartfelt thank you to [Awesome-as-always](https://github.com/Awesome-as-always) for the rich discussions and generative thinking that have helped shape this project. Their shared commitment to building *living understanding* — knowledge that evolves alongside the field rather than freezing it in place — resonates deeply with what we're trying to do here. That spirit is part of what this guide strives to embody.
+
+We especially appreciate their work on:
+
+- [Awesome General Agents Leaderboard](https://github.com/supernalintelligence/Awesome-General-Agents-Leaderboard)
+- [Awesome General Agents Benchmark](https://github.com/supernalintelligence/Awesome-General-Agents-Benchmark)
