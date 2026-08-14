@@ -3,7 +3,7 @@ project:
   name: managen-web
   emoji: "🧠"
   kind: [repo, docs-site]
-  description: ManaGen AI — The Living Guide to Generative AI. Next.js docs site powered by Si42.
+  description: ManaGen AI — The Living Guide to Generative AI. Next.js docs site powered by SI 42.
   url: https://www.managen.ai
   docs_dir: .supernal/docs
   requirements_dir: .supernal/docs/requirements
@@ -16,7 +16,7 @@ content:
   framework: nextjs
   docs_kit: "@supernal/docs-kit"
 attribution:
-  built_with: Si42
+  built_with: SI 42
   built_with_url: https://si42.ai
 
 git_sync:
