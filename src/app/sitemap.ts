@@ -15,10 +15,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .map((post) => {
       const url = `${baseUrl}/${post.slug}`;
       const lastModified = post.metadata.dateModified || post.metadata.date;
+      const parsed = lastModified ? new Date(lastModified) : null;
 
       return {
         url,
-        lastModified: lastModified ? new Date(lastModified) : new Date(),
+        lastModified:
+          parsed && !isNaN(parsed.getTime()) ? parsed : new Date(),
         changeFrequency: post.isIndex
           ? ("daily" as const)
           : ("weekly" as const),
