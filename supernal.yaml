@@ -2,8 +2,9 @@ version: 1
 project:
   name: managen-web
   emoji: "🧠"
-  kind: [repo, docs-site]
-  description: ManaGen AI — The Living Guide to Generative AI. Next.js docs site powered by SI 42.
+  kind: [ repo, docs-site ]
+  description: ManaGen AI — The Living Guide to Generative AI. Next.js docs site
+    powered by SI 42.
   url: https://www.managen.ai
   docs_dir: .supernal/docs
   requirements_dir: .supernal/docs/requirements
@@ -24,3 +25,11 @@ git_sync:
   dev_branch: main
   protected_branches:
     - master
+company:
+  slug: managen
+  display_name: ManaGen AI
+  type: product
+  company_id: 4b6c5f73-9ad5-42e4-b8a3-5bf983c50b02
+modules:
+  boards:
+    - marketing
