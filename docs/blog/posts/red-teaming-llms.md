@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-26
-  updated: 2025-02-26
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Safety
   - Evaluation
-authors:
-  - parnian
+authors: parnian
 ---
 
 # Red Teaming LLMs: Adversarial Testing for AI Safety

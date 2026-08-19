@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-08
-  updated: 2025-03-08
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - 3D Generation
   - Computer Vision
-authors:
-  - parnian
+authors: parnian
 ---
 
 # NeRF: Neural Radiance Fields for View Synthesis

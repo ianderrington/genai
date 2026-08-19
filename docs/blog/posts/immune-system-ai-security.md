@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-20
-  updated: 2025-02-20
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Immune Systems
   - AI Security
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Artificial Immune Systems for AI Security

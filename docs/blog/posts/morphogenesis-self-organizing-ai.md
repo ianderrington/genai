@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-22
-  updated: 2025-02-22
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Development
   - Self-Organization
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Morphogenesis: Self-Organizing AI Systems

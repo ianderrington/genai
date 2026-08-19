@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-01-22
-  updated: 2025-01-22
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Evolution
   - Optimization
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Fitness Landscapes in AI Optimization

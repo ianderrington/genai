@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-01
-  updated: 2025-02-01
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Protein Folding
   - GenAI
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # AlphaFold and the Revolution in Protein Structure Prediction

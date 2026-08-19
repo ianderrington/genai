@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-25
-  updated: 2025-02-25
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Robotics
   - Applications
-authors:
-  - parnian
+authors: parnian
 ---
 
 # Embodied AI: Language Models Meet Physical World

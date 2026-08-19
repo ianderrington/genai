@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-13
-  updated: 2025-03-13
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - World Models
   - Video
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # World Models: AI That Simulates Reality

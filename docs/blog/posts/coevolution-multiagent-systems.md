@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-01-28
-  updated: 2025-01-28
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Evolution
   - Multi-Agent Systems
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Co-evolution in Multi-Agent AI Systems

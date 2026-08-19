@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-25
-  updated: 2025-02-25
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Genomics
   - Deep Learning
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Genomics Meets Deep Learning

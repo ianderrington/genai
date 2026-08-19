@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-12
-  updated: 2025-03-12
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Agents
   - Reasoning
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # ReAct Agents: Synergizing Reasoning and Acting

@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-27
-  updated: 2025-02-27
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Security
   - Safety
-authors:
-  - parnian
+authors: parnian
 ---
 
 # Prompt Injection: The Security Crisis of LLM Applications

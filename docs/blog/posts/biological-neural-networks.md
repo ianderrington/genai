@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-01-25
-  updated: 2025-01-25
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Neuroscience
   - Neural Networks
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Biological vs. Artificial Neural Networks

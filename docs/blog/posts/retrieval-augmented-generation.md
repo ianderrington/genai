@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-03
-  updated: 2025-03-03
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Applications
   - Architecture
-authors:
-  - parnian
+authors: parnian
 ---
 
 # RAG: Retrieval-Augmented Generation Deep Dive

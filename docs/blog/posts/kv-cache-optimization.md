@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-18
-  updated: 2025-03-18
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Inference
   - Memory
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # KV Cache Optimization: Scaling to Million-Token Contexts

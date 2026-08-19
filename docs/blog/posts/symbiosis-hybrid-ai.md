@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-05
-  updated: 2025-03-05
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Symbiosis
   - Hybrid Systems
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Symbiosis: Lessons for Hybrid AI Systems

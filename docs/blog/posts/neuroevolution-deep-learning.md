@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-01-18
-  updated: 2025-01-18
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Evolution
   - Neural Networks
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Neuroevolution: Evolving Neural Networks

@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-11
-  updated: 2025-03-11
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - 3D Generation
   - Computer Vision
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # 3D Gaussian Splatting: Real-Time Neural Rendering Revolution

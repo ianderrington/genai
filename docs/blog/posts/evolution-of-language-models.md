@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-15
-  updated: 2025-02-15
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Evolution
   - Language Models
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # The Evolution of Language Models: A Biological Lens

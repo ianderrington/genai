@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-14
-  updated: 2025-03-14
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Training
   - Alignment
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # DPO: Direct Preference Optimization Explained

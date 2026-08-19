@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-02
-  updated: 2025-03-02
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Neuroscience
   - Continual Learning
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Neuroplasticity and Continual Learning in AI

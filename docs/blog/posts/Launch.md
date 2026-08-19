@@ -1,14 +1,12 @@
 ---
+date: '2026-08-06'
+dateModified: '2026-08-06'
 draft: true 
-date:
-  created: 2024-07-22
-  updated: 2024-07-22
 
 categories:
   - Launching
   - Managen
-authors: 
-  - ianderrington
+authors: ianderrington
 ---
 
 # Hello world!

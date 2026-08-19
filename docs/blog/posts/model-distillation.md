@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-04
-  updated: 2025-03-04
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Efficiency
   - Training
-authors:
-  - parnian
+authors: parnian
 ---
 
 # Knowledge Distillation: Teaching Small Models to Think Big

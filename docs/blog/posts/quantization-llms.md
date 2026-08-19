@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-05
-  updated: 2025-03-05
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Efficiency
   - Deployment
-authors:
-  - parnian
+authors: parnian
 ---
 
 # LLM Quantization: Running Giants on Consumer Hardware

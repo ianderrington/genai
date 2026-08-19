@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-18
-  updated: 2025-02-18
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Swarm Intelligence
   - Distributed AI
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Swarm Intelligence: Collective Computation in AI

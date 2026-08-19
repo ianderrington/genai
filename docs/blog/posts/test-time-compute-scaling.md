@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-09
-  updated: 2025-03-09
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Reasoning
   - Scaling
-authors:
-  - parnian
+authors: parnian
 ---
 
 # Test-Time Compute Scaling: Thinking Longer, Not Bigger

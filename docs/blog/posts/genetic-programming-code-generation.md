@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-01-20
-  updated: 2025-01-20
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Evolution
   - Code Generation
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Genetic Programming and Code Generation

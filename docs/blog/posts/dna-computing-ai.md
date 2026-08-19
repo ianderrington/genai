@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-08
-  updated: 2025-02-08
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - DNA Computing
   - Future Tech
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # DNA Computing: Biological Hardware for AI

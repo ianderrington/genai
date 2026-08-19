@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-05
-  updated: 2025-02-05
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Evolution
   - Open-Ended Systems
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Open-Ended Evolution: The Quest for Endless Innovation

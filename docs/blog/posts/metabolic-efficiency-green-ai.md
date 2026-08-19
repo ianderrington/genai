@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-08
-  updated: 2025-03-08
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Energy Efficiency
   - Sustainable AI
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Metabolic Efficiency: Lessons for Green AI

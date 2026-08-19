@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-01-15
-  updated: 2025-01-15
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Evolution
   - GenAI
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Evolutionary Algorithms in Generative AI

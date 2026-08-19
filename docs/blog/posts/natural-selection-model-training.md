@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-28
-  updated: 2025-02-28
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Evolution
   - Training
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Natural Selection in Model Training

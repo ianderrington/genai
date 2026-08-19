@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-22
-  updated: 2025-02-22
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Multimodal
   - Architecture
-authors:
-  - parnian
+authors: parnian
 ---
 
 # Multimodal Fusion: Unifying Vision, Language, and Beyond

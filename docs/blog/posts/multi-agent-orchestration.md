@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-07
-  updated: 2025-03-07
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Agents
   - Systems
-authors:
-  - parnian
+authors: parnian
 ---
 
 # Multi-Agent Orchestration: Coordinating AI Collectives

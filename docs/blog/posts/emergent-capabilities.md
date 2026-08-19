@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-21
-  updated: 2025-02-21
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Scaling
   - Theory
-authors:
-  - parnian
+authors: parnian
 ---
 
 # Emergent Capabilities: When Scale Creates Surprise

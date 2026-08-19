@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-02-10
-  updated: 2025-02-10
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Biology
   - Evolution
   - Game Theory
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Evolutionary Game Theory in AI Systems

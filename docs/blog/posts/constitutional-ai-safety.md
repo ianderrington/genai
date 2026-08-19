@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-10
-  updated: 2025-03-10
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Alignment
   - Safety
-authors:
-  - parnian
+authors: parnian
 ---
 
 # Constitutional AI: Principles-Based Alignment

@@ -1,13 +1,11 @@
 ---
-date:
-  created: 2025-03-17
-  updated: 2025-03-17
+date: '2026-08-06'
+dateModified: '2026-08-06'
 categories:
   - Research
   - Inference
   - Efficiency
-authors: 
-  - parnian
+authors: parnian
 ---
 
 # Speculative Decoding: Faster LLM Inference Through Speculation
