@@ -9,6 +9,7 @@ import PageLayout from "@/components/PageLayout";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Analytics } from "@/components/Analytics";
+import { PostHogProvider } from "@/components/PostHogProvider";
 import { loadSiteConfig } from "@/lib/server/config";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { PersonSchema, WebSiteSchema } from "@/lib/docs-kit";
@@ -101,13 +102,15 @@ export default async function RootLayout({
         suppressHydrationWarning
       >
         <Analytics />
-        <div className={inter.className}>
-          <Providers>
-            <PageLayout sections={orderedSections} config={config}>
-              {children}
-            </PageLayout>
-          </Providers>
-        </div>
+        <PostHogProvider>
+          <div className={inter.className}>
+            <Providers>
+              <PageLayout sections={orderedSections} config={config}>
+                {children}
+              </PageLayout>
+            </Providers>
+          </div>
+        </PostHogProvider>
         <TTSInit />
         <LeadCapture />
       </body>
