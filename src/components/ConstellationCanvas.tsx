@@ -42,6 +42,8 @@ const CONCEPTS = [
   "Distill",
 ];
 
+const NODE_COUNT = 58;
+
 interface Node {
   x: number;
   y: number;
@@ -51,6 +53,29 @@ interface Node {
   label: string;
   pulse: number;
   opacity: number;
+}
+
+/**
+ * Fisher-Yates partial shuffle: returns up to `count` labels sampled
+ * uniformly at random from `labels`, with no repeats. Replaces the previous
+ * `labels[0..57]` fixed-array-order take, which always showed the same
+ * filesystem-walk-order-first labels (graph.json's nodes come out
+ * alphabetical from build-graph.ts) and silently hid every label after
+ * position 57 from ever rendering.
+ *
+ * Guards `count > labels.length` explicitly (e.g. the 37-item CONCEPTS
+ * fallback vs. NODE_COUNT=58) — takes min(count, labels.length) so the
+ * fallback path still shows all 37 labels instead of a truncated/negative
+ * slice.
+ */
+function sampleLabels(labels: string[], count: number): string[] {
+  const take = Math.min(count, labels.length);
+  const pool = labels.slice();
+  for (let i = 0; i < take; i++) {
+    const j = i + Math.floor(Math.random() * (pool.length - i));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, take);
 }
 
 export default function ConstellationCanvas() {
@@ -118,18 +143,21 @@ export default function ConstellationCanvas() {
     }
 
     function init() {
-      // Snapshot the current label array at init time (supports late-loaded graph data
-      // if init is called after the fetch resolves, e.g. on window resize).
-      const labels = labelsRef.current;
+      // Snapshot + randomly sample the current label array at init time
+      // (supports late-loaded graph data if init is called after the fetch
+      // resolves, e.g. on window resize — re-samples on every resize, which
+      // is consistent with positions/velocities already being fully
+      // re-randomized on every resize today).
+      const sampled = sampleLabels(labelsRef.current, NODE_COUNT);
       nodes = [];
-      for (let i = 0; i < 58; i++) {
+      for (let i = 0; i < NODE_COUNT; i++) {
         nodes.push({
           x: Math.random() * W,
           y: Math.random() * H,
           vx: (Math.random() - 0.5) * 0.28,
           vy: (Math.random() - 0.5) * 0.28,
           r: Math.random() * 1.7 + 1.0,
-          label: i < labels.length ? labels[i] : "",
+          label: i < sampled.length ? sampled[i] : "",
           pulse: Math.random() * Math.PI * 2,
           opacity: Math.random() * 0.38 + 0.52,
         });

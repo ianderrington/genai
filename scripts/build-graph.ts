@@ -1,54 +1,121 @@
 /**
  * build-graph.ts
  *
- * Exports the qmd-entity knowledge graph to public/graph.json at build time.
- * Safe to run before any QMD data exists — no-ops gracefully.
+ * Exports a content-derived concept graph to public/graph.json at build time,
+ * sourced directly from docs/**\/*.md frontmatter/headings -- NOT from the
+ * optional qmd-entity SQLite cache (removed entirely: that cache may or may
+ * not exist on a given machine, which made the constellation canvas
+ * non-reproducible across environments, and never exists in CI/Vercel).
  *
  * Usage:
- *   npx tsx scripts/build-graph.ts
+ *   npx tsx scripts/build-graph.ts [--verbose]
  *
  * Output format:
- *   public/graph.json — {generated, nodes[], edges[]}
+ *   public/graph.json -- {generated, nodes[], edges[]}
+ *   (edges is always [] -- ConstellationCanvas.tsx does not read graph.json's
+ *   edges at all; it draws proximity lines between animated node positions at
+ *   runtime. Kept in the schema for forward compatibility.)
  *
- * API used from @supernal/qmd-entity:
- *   - getDbPath()        — resolve DB path (env QMD_DB_PATH or ~/.cache/qmd/index.sqlite)
- *   - listEntities(type) — list all entities, optionally filtered by EntityType
- *   - getDb()            — open DB connection (throws if file doesn't exist and allowCreate=false)
+ * Uses the real `gray-matter` (already genai's own direct dependency) rather
+ * than @supernal/docs-kit's or genai's own markdown.ts's parseFrontmatter --
+ * both of those eagerly require() the entire unified/remark/rehype/katex
+ * pipeline (confirmed in docs-kit's built dist/lib/index.js) just to read one
+ * title field. gray-matter alone has no heavy transitive deps.
  */
 
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
-import { join, dirname } from 'path';
+import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
+import matter from 'gray-matter';
+
+import { getContentDirectory, readDirectoryRecursively, readMarkdownFile } from '../src/lib/content/filesystem';
+import { logger } from '../src/lib/logger';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = join(__dirname, '..', 'public', 'graph.json');
+const VERBOSE = process.argv.includes('--verbose');
 
 // ---------------------------------------------------------------------------
-// Attempt to load @supernal/qmd-entity. Try npm package first, then fall back
-// to the sibling path in the monorepo (dev environment).
+// Content filter
 // ---------------------------------------------------------------------------
-async function loadQmdEntity() {
-  // 1. Try the npm package (works when installed)
-  try {
-    return await import('@supernal/qmd-entity');
-  } catch {
-    // not installed as npm dep
+
+// Path-based denylist, checked FIRST (before any title-derivation logic) so
+// a file can never land in two buckets at once -- e.g. docs/Managenai/index.md
+// has no frontmatter and would otherwise also match the
+// index-without-frontmatter-title rule below; denylist wins, unconditionally.
+const DENY_PREFIXES = ['Managenai/']; // genai's own "managing this docs project" section -- not AI content
+const DENY_SUBSTRINGS = ['/leaked/']; // raw leaked-prompt captures -- not concepts
+
+function isDenylisted(relPath: string): boolean {
+  if (DENY_PREFIXES.some((p) => relPath.startsWith(p))) return true;
+  const withSlash = `/${relPath}`;
+  return DENY_SUBSTRINGS.some((s) => withSlash.includes(s));
+}
+
+// Strips emoji / pictographs / dingbats / regional-indicator flags / variation
+// selectors -- defense-in-depth for H1 fallbacks that bypass a clean
+// frontmatter title (the one confirmed hit in this corpus, Managenai/contributing.md,
+// is already excluded by the denylist above; kept for future content).
+const DECORATIVE_RE = /[\u{1F1E6}-\u{1F1FF}\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu;
+
+// Matches raw dated-capture filenames like "Claude_2024-07-11.md" -- only
+// consulted when the title source is the filename fallback tier (i.e. no
+// frontmatter title and no H1), so a real article that happens to have a
+// date in its own filename (docs/Understanding/prompting/examples/coding/Claude_2024-07-20.md,
+// which HAS real content and would derive its title from an H1 or frontmatter,
+// not the filename) is never affected by this rule.
+const DATE_IN_FILENAME_RE = /\d{4}-\d{2}-\d{2}/;
+
+const H1_RE = /^#\s+(.+)$/m;
+
+function toTitleCase(slug: string): string {
+  return slug
+    .split(/[-_]+/)
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
+function sanitizeTitle(raw: string): string {
+  return raw.replace(DECORATIVE_RE, '').replace(/\s+/g, ' ').trim();
+}
+
+type TitleSource = 'frontmatter' | 'h1' | 'filename';
+
+interface TitleResult {
+  title: string;
+  source: TitleSource;
+}
+
+/**
+ * Title precedence: frontmatter `title` (trimmed -- catches whitespace-only
+ * values like docs/index.md's `title: " "`) > H1 (non-index files only) >
+ * filename. Index pages (index.md/index.mdx) without a real, non-blank
+ * frontmatter title are skipped outright rather than falling back to H1/
+ * folder name -- their bare H1 ("Examples", "Blog", "Ethically") reads as
+ * meaningless once it's floating alone on a homepage canvas instead of under
+ * its section breadcrumb.
+ */
+function deriveTitle(relPath: string, fmTitle: unknown, body: string): TitleResult | null {
+  const base = basename(relPath);
+  const isIndex = base === 'index.md' || base === 'index.mdx';
+
+  const fmTitleStr = typeof fmTitle === 'string' ? fmTitle.trim() : '';
+  if (fmTitleStr) {
+    return { title: fmTitleStr, source: 'frontmatter' };
   }
 
-  // 2. Try sibling monorepo path (local dev)
-  const siblingPath = join(
-    __dirname,
-    '../../supernal-coding/packages/qmd-entity/dist/index.js'
-  );
-  if (existsSync(siblingPath)) {
-    try {
-      return await import(siblingPath);
-    } catch {
-      // dist not built or incompatible
-    }
+  if (isIndex) {
+    return null;
   }
 
-  return null;
+  const h1Match = body.match(H1_RE);
+  if (h1Match) {
+    return { title: h1Match[1].trim(), source: 'h1' };
+  }
+
+  const slug = base.replace(/\.(md|mdx)$/i, '');
+  return { title: toTitleCase(slug), source: 'filename' };
 }
 
 interface GraphNode {
@@ -70,102 +137,105 @@ interface GraphJson {
   edges: GraphEdge[];
 }
 
+type SkipReason = 'denylist' | 'index-without-frontmatter-title' | 'empty-after-sanitize' | 'dated-filename-fallback';
+
+interface SkipLogEntry {
+  relPath: string;
+  reason: SkipReason;
+}
+
 async function main() {
-  // -------------------------------------------------------------------------
-  // Load qmd-entity. If unavailable, emit an empty graph and exit 0.
-  // -------------------------------------------------------------------------
-  const qmd = await loadQmdEntity();
-  if (!qmd) {
-    console.log('[build-graph] @supernal/qmd-entity not available — skipping graph export');
+  const contentDir = getContentDirectory();
+  if (!existsSync(contentDir)) {
+    logger.warn(`[build-graph] No docs directory found at ${contentDir} -- writing empty graph`);
+    writeGraph([]);
     return;
   }
 
-  const { getDbPath, listEntities, getDb } = qmd as {
-    getDbPath: () => string;
-    listEntities: (type?: string) => Array<{
-      id: string;
-      name: string;
-      type: string;
-      description?: string | null;
-      factCount: number;
-      relationCount: number;
-      aliases: string[];
-      firstSeen: string;
-      lastSeen: string;
-    }>;
-    getDb: (allowCreate?: boolean) => {
-      prepare: (sql: string) => { all: (...args: unknown[]) => unknown[] };
-    };
-  };
-
-  // -------------------------------------------------------------------------
-  // Check whether the QMD SQLite database exists before trying to open it.
-  // First-run environments (CI, fresh Vercel deploy) won't have it yet.
-  // -------------------------------------------------------------------------
-  const dbPath = getDbPath();
-  if (!existsSync(dbPath)) {
-    console.log(`[build-graph] No QMD database found at ${dbPath} — skipping graph export`);
+  const relPaths = await readDirectoryRecursively(contentDir);
+  if (relPaths.length === 0) {
+    logger.warn(`[build-graph] docs directory ${contentDir} contains no .md/.mdx files -- writing empty graph`);
+    writeGraph([]);
     return;
   }
 
-  // -------------------------------------------------------------------------
-  // Query entities. We prefer type="concept" (AI topic nodes) but fall back
-  // to all entity types if the DB contains no concepts.
-  // -------------------------------------------------------------------------
-  let entities: ReturnType<typeof listEntities>;
-  try {
-    entities = listEntities('concept');
-    if (entities.length === 0) {
-      // No concept-typed entities yet — grab everything
-      entities = listEntities();
+  const nodes: GraphNode[] = [];
+  const skipped: SkipLogEntry[] = [];
+
+  for (const relPath of relPaths) {
+    // Denylist is checked FIRST and unconditionally -- a file can only ever
+    // land in exactly one skip bucket, never both (see comment on DENY_PREFIXES).
+    if (isDenylisted(relPath)) {
+      skipped.push({ relPath, reason: 'denylist' });
+      continue;
     }
-  } catch (err) {
-    console.log(`[build-graph] Could not query entities: ${(err as Error).message} — skipping`);
-    return;
+
+    const raw = await readMarkdownFile(join(contentDir, relPath));
+    if (!raw) continue; // read error already logged by readMarkdownFile
+
+    // gray-matter throws a real YAML parse error on malformed frontmatter
+    // (e.g. an unclosed opening "---" fence) -- confirmed present in this
+    // corpus (2 files under docs/Understanding/agents/slides/basics/). Fall
+    // back to treating the whole file as body (no frontmatter) rather than
+    // aborting the entire build over one bad file.
+    let parsed: { data: Record<string, unknown>; content: string };
+    try {
+      parsed = matter(raw);
+    } catch (err) {
+      logger.warn(
+        `[build-graph] Malformed frontmatter in ${relPath} (${(err as Error).message.split('\n')[0]}) -- treating as no frontmatter`,
+      );
+      parsed = { data: {}, content: raw };
+    }
+
+    const result = deriveTitle(relPath, parsed.data?.title, parsed.content);
+
+    if (!result) {
+      skipped.push({ relPath, reason: 'index-without-frontmatter-title' });
+      continue;
+    }
+
+    const cleanTitle = sanitizeTitle(result.title);
+    if (!cleanTitle) {
+      skipped.push({ relPath, reason: 'empty-after-sanitize' });
+      continue;
+    }
+
+    if (result.source === 'filename' && DATE_IN_FILENAME_RE.test(basename(relPath))) {
+      skipped.push({ relPath, reason: 'dated-filename-fallback' });
+      continue;
+    }
+
+    const id = relPath.replace(/\.(md|mdx)$/i, '');
+    const weight = parsed.content.trim().split(/\s+/).filter(Boolean).length;
+
+    nodes.push({ id, name: cleanTitle, type: 'concept', weight });
+
+    if (VERBOSE) {
+      console.log(`[build-graph] KEEP  ${result.source.padEnd(11)} "${cleanTitle}"  <- ${relPath}`);
+    }
   }
 
-  if (entities.length === 0) {
-    console.log('[build-graph] No entities found in QMD database — writing empty graph');
+  if (VERBOSE) {
+    for (const s of skipped) {
+      console.log(`[build-graph] SKIP  ${s.reason.padEnd(32)} ${s.relPath}`);
+    }
+    const byReason: Record<string, number> = {};
+    for (const s of skipped) byReason[s.reason] = (byReason[s.reason] ?? 0) + 1;
+    console.log(`[build-graph] Skip breakdown: ${JSON.stringify(byReason)}`);
   }
 
-  // -------------------------------------------------------------------------
-  // Build nodes. weight = factCount + relationCount (measures importance).
-  // -------------------------------------------------------------------------
-  const nodes: GraphNode[] = entities.map((e) => ({
-    id: e.id,
-    name: e.name,
-    type: e.type,
-    // weight drives node size in the canvas — sum of all linked facts + relationships
-    weight: (e.factCount ?? 0) + (e.relationCount ?? 0),
-  }));
+  console.log(
+    `[build-graph] ${nodes.length} kept, ${skipped.length} skipped ` +
+    `(${relPaths.length} total .md/.mdx files under ${contentDir})`
+  );
 
-  // Build a fast id set for edge filtering
-  const nodeIds = new Set(nodes.map((n) => n.id));
+  writeGraph(nodes);
+}
 
-  // -------------------------------------------------------------------------
-  // Query relationships directly from SQLite. There is no standalone
-  // listRelationships() function in the public API, so we use getDb().
-  // -------------------------------------------------------------------------
-  let edges: GraphEdge[] = [];
-  try {
-    const db = getDb();
-    const rows = db
-      .prepare(
-        `SELECT source_entity_id as source, target_entity_id as target, relation_type as type
-         FROM relationships`
-      )
-      .all() as Array<{ source: string; target: string; type: string }>;
+function writeGraph(nodes: GraphNode[]) {
+  const edges: GraphEdge[] = []; // no content-derived relationship graph yet; frontend doesn't read this today
 
-    // Only include edges where both endpoints are in our node set
-    edges = rows.filter((r) => nodeIds.has(r.source) && nodeIds.has(r.target));
-  } catch (err) {
-    // relationships table may not exist on a fresh schema — non-fatal
-    console.log(`[build-graph] Could not query relationships: ${(err as Error).message}`);
-  }
-
-  // -------------------------------------------------------------------------
-  // Write public/graph.json
-  // -------------------------------------------------------------------------
   const graph: GraphJson = {
     generated: new Date().toISOString(),
     nodes,
@@ -178,9 +248,7 @@ async function main() {
   }
 
   writeFileSync(OUTPUT_PATH, JSON.stringify(graph, null, 2), 'utf-8');
-  console.log(
-    `[build-graph] Wrote ${nodes.length} nodes, ${edges.length} edges → public/graph.json`
-  );
+  console.log(`[build-graph] Wrote ${nodes.length} nodes, ${edges.length} edges -> public/graph.json`);
 }
 
 main().catch((err) => {
