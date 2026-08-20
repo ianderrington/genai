@@ -56,7 +56,7 @@
     "@orama/orama": "3.1.18",
     "@orama/plugin-data-persistence": "3.1.18",
     "@supabase/supabase-js": "^2.49.4",
-    "@supernal/docs-kit": "^0.2.1",
+    "@supernal/docs-kit": "^0.2.2",
     "@supernal/interface": "^1.0.8",
     "@supernal/tts-widget": "1.0.1",
     "@tremor/react": "^3.18.7",

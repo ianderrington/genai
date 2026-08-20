@@ -3,7 +3,7 @@ import type { Metadata, ResolvingMetadata } from "next";
 import { loadConfig } from "@/lib/content/resolver";
 import { DEFAULT_IMAGES } from "@/lib/constants";
 import PostComponent from "@/components/PostComponent";
-import { FloatingShareButton } from "@supernal/docs-kit/components";
+import FloatingShareButton from "@/components/TrackedFloatingShareButton";
 import Breadcrumb from "@/components/Breadcrumb";
 import { resolveImagePath } from "@/lib/imageUtils";
 import CollectionDisplay from "@/components/CollectionDisplay";

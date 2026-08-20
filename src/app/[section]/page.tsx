@@ -3,7 +3,7 @@ import { getCachedSectionContent, getCachedSections } from "@/lib/content";
 import SafeHTML from "@/components/SafeHTML";
 import type { Metadata, ResolvingMetadata } from "next";
 import { loadConfig } from "@/lib/content/resolver";
-import { FloatingShareButton } from "@supernal/docs-kit/components";
+import FloatingShareButton from "@/components/TrackedFloatingShareButton";
 import { resolveImagePath } from "@/lib/imageUtils";
 import CollectionDisplay from "@/components/CollectionDisplay";
 import { prepareCollectionRenderData } from "@/lib/content/collectionRenderer";

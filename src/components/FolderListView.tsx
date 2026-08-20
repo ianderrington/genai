@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import SafeImage from './SafeImage';
 import { SocialShare } from '@supernal/docs-kit/components';
+import { trackShare } from '@/lib/trackShare';
 import { Post } from '@/lib/content';
 import { FolderItem } from '@/lib/content/collectionUtils';
 import { formatDate } from '@/lib/utils/dates';
@@ -100,6 +101,7 @@ const FolderListView: React.FC<FolderListViewProps> = ({
                     isCircular={true}
                     isCompact={true}
                     url={url}
+                    onShare={trackShare}
                   />
                 </div>
               </div>

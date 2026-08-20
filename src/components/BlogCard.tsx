@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils/dates';
 import { SocialShare } from '@supernal/docs-kit/components';
+import { trackShare } from '@/lib/trackShare';
 import { BlogPostProps } from '@/lib/getBlogPosts';
 
 interface BlogCardProps {
@@ -52,6 +53,7 @@ export default function BlogCard({ post, compact = false, showDate = true }: Blo
             shareBlurbs={post.shareBlurbs}
             isCompact={true}
             url={url}
+            onShare={trackShare}
           />
         </div>
       </div>

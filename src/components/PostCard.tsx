@@ -5,6 +5,7 @@ import Link from 'next/link';
 import SafeImage from './SafeImage';
 import { formatDate } from '@/lib/utils/dates';
 import { SocialShare } from '@supernal/docs-kit/components';
+import { trackShare } from '@/lib/trackShare';
 import { Post } from '@/lib/content';
 import { DEFAULT_IMAGES } from '@/lib/constants';
 import { markdownToHtml } from '@/lib/content/markdown';
@@ -75,6 +76,7 @@ export default function PostCard({ post, section, showDate = true, imagePath, pr
           isCircular={true}
           isCompact={true}
           url={url}
+          onShare={trackShare}
         />
       </div>
     </div>

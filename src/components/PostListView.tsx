@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import SafeImage from './SafeImage';
 import { SocialShare } from '@supernal/docs-kit/components';
+import { trackShare } from '@/lib/trackShare';
 import { Post } from '@/lib/content';
 import { formatDate } from '@/lib/utils/dates';
 
@@ -92,6 +93,7 @@ const PostListView: React.FC<PostListViewProps> = ({
                     isCircular={true}
                     isCompact={true}
                     url={url}
+                    onShare={trackShare}
                   />
                 </div>
               </div>
