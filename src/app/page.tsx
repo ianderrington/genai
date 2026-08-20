@@ -2,12 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Github } from "lucide-react";
 import { loadSiteConfig } from "@/lib/server/config";
+import { twitterHandleFromUrl } from "@/lib/urlUtils";
 import ConstellationCanvasLoader from "@/components/ConstellationCanvasLoader";
 import SectionCards from "@/components/home/SectionCards";
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = loadSiteConfig();
-  const { site } = config;
+  const { site, author } = config;
+  const twitterHandle = twitterHandleFromUrl(author.social.twitter);
   return {
     title: { default: site.title, template: `%s | ${site.title}` },
     description: site.description,
@@ -38,6 +40,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [
         `/og?title=${encodeURIComponent(site.title)}&description=${encodeURIComponent(site.description)}`,
       ],
+      site: twitterHandle,
+      creator: twitterHandle,
     },
   };
 }

@@ -12,4 +12,11 @@ export function getBlogUrl(post: { slug: string; sectionId?: string }) {
   
   // The slug already contains the section, so we just need to add the leading slash
   return `/${post.slug}`;
-} 
+}
+
+// Extracts an "@handle" from a twitter.com/x.com profile URL, for Twitter Card
+// twitter:site / twitter:creator meta tags. Returns '' if the URL doesn't match.
+export function twitterHandleFromUrl(url: string): string {
+  const match = url.match(/(?:twitter\.com|x\.com)\/([^/?#]+)/i);
+  return match ? `@${match[1]}` : '';
+}

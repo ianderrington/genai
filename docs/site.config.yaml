@@ -5,6 +5,9 @@ site:
   language: "en"
   favicon: "/favicon.ico"
   copyright: "Ian Derrington"
+  social:
+    twitter:
+      handle: "@ian_derrington"
 
 author:
   name: "Ian Derrington"

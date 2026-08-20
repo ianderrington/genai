@@ -217,6 +217,8 @@ export async function generateMetadata(
       title: title,
       description: twitterDescription,
       images: [ogImageUrl],
+      site: site.social.twitter.handle,
+      creator: site.social.twitter.handle,
     },
   };
 }

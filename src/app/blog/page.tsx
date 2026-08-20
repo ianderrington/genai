@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { getCachedAllContent } from '@/lib/content';
 import blogConfig from '@/lib/content/blog-config';
 import { getAllTags } from '@/lib/content/tags';
+import { loadSiteConfig } from '@/lib/server/config';
+import { twitterHandleFromUrl } from '@/lib/urlUtils';
 import nextDynamic from 'next/dynamic';
 
 // Dynamically import client components with loading state
@@ -23,6 +25,10 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
+  const { author } = loadSiteConfig();
+  const twitterHandle = twitterHandleFromUrl(author.social.twitter);
+  const ogImageUrl = `/og?title=${encodeURIComponent(blogConfig.title)}&description=${encodeURIComponent(blogConfig.description)}&section=Blog`;
+
   return {
     title: blogConfig.title,
     description: blogConfig.description,
@@ -31,11 +37,15 @@ export async function generateMetadata(): Promise<Metadata> {
       description: blogConfig.description,
       url: '/blog',
       type: 'website',
+      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: blogConfig.title }],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: blogConfig.title,
       description: blogConfig.description,
+      images: [ogImageUrl],
+      site: twitterHandle,
+      creator: twitterHandle,
     },
   };
 }
