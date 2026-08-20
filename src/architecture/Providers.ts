@@ -33,7 +33,6 @@ import {
   Subscribe,
   TagFilter,
   FeaturedPosts,
-  StoryGraphTimeline,
 } from './ComponentNames';
 
 /**
@@ -526,27 +525,6 @@ export class FeaturedPostsProvider {
 }
 
 /**
- * StoryGraphTimeline Tool Provider
- *
- * Auto-generated from discovered interactive elements
- */
-@ToolProvider({
-  name: 'StoryGraphTimelineProvider',
-  description: 'Tools for StoryGraphTimeline component',
-})
-export class StoryGraphTimelineProvider {
-  @Tool({
-    elementId: StoryGraphTimeline.input,
-    description: 'type input',
-  })
-  async input() {
-    // TODO: Implement input tool
-    // This tool will type the input element
-    await this.page.locator(testId(StoryGraphTimeline.input)).fill('text');
-  }
-}
-
-/**
  * Export all providers
  */
 export const AllProviders = [
@@ -569,5 +547,4 @@ export const AllProviders = [
   SubscribeProvider,
   TagFilterProvider,
   FeaturedPostsProvider,
-  StoryGraphTimelineProvider,
 ];

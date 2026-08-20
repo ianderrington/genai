@@ -7,7 +7,6 @@ export const Routes = {
   sectionSlug: (section: string, slug: string) => `/${section}/${slug}`,
   section: (section: string) => `/${section}`,
   blog: '/blog',
-  devStory_graph: '/dev/story-graph',
   root: '/',
   search: '/search',
 } as const;

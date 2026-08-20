@@ -14,8 +14,8 @@
  * // In test:
  * await page.locator(testId(Blog.submitButton)).click();
  *
- * Generated from: 20 components
- * Total interactive elements: 29
+ * Generated from: 19 components
+ * Total interactive elements: 28
  */
 
 import { createNames } from '@supernal/interface/browser';
@@ -179,12 +179,4 @@ export const TagFilter = createNames('tagFilter', {
  */
 export const FeaturedPosts = createNames('featuredPosts', {
   link: 'link',
-});
-
-/**
- * StoryGraphTimeline Component Names
- * Prefix: storyGraphTimeline
- */
-export const StoryGraphTimeline = createNames('storyGraphTimeline', {
-  input: 'input',
 });
