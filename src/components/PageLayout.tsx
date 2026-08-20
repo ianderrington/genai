@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import { useFloatingVisibility } from "@/hooks/useFloatingVisibility";
+import { useFloatingVisibility } from "@supernal/docs-kit/hooks";
 import Header from "./Header";
 import Footer from "./Footer";
 import { SiteConfig } from "@/lib/server/config";

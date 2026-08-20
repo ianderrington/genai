@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { List } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Navigation.module.css';
-import { useFloatingVisibility } from '@/lib/docs-kit';
+import { useFloatingVisibility } from '@supernal/docs-kit/hooks';
 
 interface NavigationProps {
   type: 'toc' | 'chat';

@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import SafeImage from './SafeImage';
 import { formatDate } from '@/lib/utils/dates';
-import SocialShare from './SocialShare';
+import { SocialShare } from '@supernal/docs-kit/components';
 import { Post } from '@/lib/content';
 import { DEFAULT_IMAGES } from '@/lib/constants';
 import { markdownToHtml } from '@/lib/content/markdown';

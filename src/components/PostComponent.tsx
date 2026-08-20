@@ -8,7 +8,7 @@ import SafeHTML from "@/components/SafeHTML";
 import TableOfContents from "@/components/TableOfContents";
 import DynamicChatRenderer from "@/components/DynamicChatRenderer";
 import { DEFAULT_IMAGES } from "@/lib/constants";
-import { useFloatingVisibility } from "@/hooks/useFloatingVisibility";
+import { useFloatingVisibility } from "@supernal/docs-kit/hooks";
 import { Navigation } from "@/components/Navigation";
 import styles from "@/components/Navigation.module.css";
 import { MediaResolver } from "@/lib/utils/mediaResolver";

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils/dates';
-import SocialShare from './SocialShare';
+import { SocialShare } from '@supernal/docs-kit/components';
 import { BlogPostProps } from '@/lib/getBlogPosts';
 
 interface BlogCardProps {
