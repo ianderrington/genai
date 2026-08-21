@@ -207,15 +207,32 @@ export async function GET(request: Request) {
             }}
           />
 
-          <span
+          <div
             style={{
-              fontSize: 18,
-              color: 'rgba(148,163,184,0.6)',
-              fontWeight: 400,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 2,
             }}
           >
-            managen.ai
-          </span>
+            <span
+              style={{
+                fontSize: 18,
+                color: 'rgba(148,163,184,0.6)',
+                fontWeight: 400,
+              }}
+            >
+              managen.ai
+            </span>
+            <span
+              style={{
+                fontSize: 13,
+                color: 'rgba(148,163,184,0.4)',
+                fontWeight: 400,
+              }}
+            >
+              Managed by SI 42
+            </span>
+          </div>
 
           <span
             style={{

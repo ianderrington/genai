@@ -2,6 +2,8 @@
 
 See the [website](https://www.managen.ai)
 
+Managed by [SI 42](https://si42.ai).
+
 **Our Mission**: Simplify and demystify Gen()AI to make it accessible and understandable and increase our ability to manage it.
 
 This project is created and maintained by [Ian Derrington](https://github.com/ianderrington), who did the bulk of the foundational work, with collaboration from [Parnian Barekatain](https://github.com/Awesome-as-always). Together they share a vision of building *living documentation* that evolves alongside the rapidly advancing field of recursive generative AI.

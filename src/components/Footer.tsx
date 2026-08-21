@@ -174,14 +174,14 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ config }, ref) => {
               © {currentYear} ManaGen AI · All rights reserved
             </div>
             <div className="text-xs text-gray-400 dark:text-gray-600">
-              Built with{" "}
+              Managed by{" "}
               <a
                 href="https://si42.ai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
-                Supernal Intelligence
+                SI 42
               </a>
             </div>
           </div>
