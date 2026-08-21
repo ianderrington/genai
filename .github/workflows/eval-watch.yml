@@ -59,8 +59,16 @@ jobs:
           git commit -m "chore: eval-watch post ${{ steps.generate.outputs.slug }}"
           git push "https://x-access-token:${GH_PUSH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
 
-      # Phase 3 adds a social-announce step here (LinkedIn/X), and Phase 4
-      # adds a Substack-draft step — both land as separate commits.
+      - name: Announce (LinkedIn / X)
+        if: steps.generate.outputs.result == 'published'
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          EVAL_PIPELINE_SLUG: ${{ steps.generate.outputs.slug }}
+        run: npm run evals:announce
+
+      # Phase 4 adds a Substack-draft step here — lands as its own commit.
 
       - name: Notify Telegram
         if: always()
