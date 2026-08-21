@@ -11,6 +11,7 @@
     "search:build": "tsx scripts/build-search-index.ts",
     "evals:check": "tsx scripts/eval-pipeline/fetch-releases.ts --dry-run",
     "evals:generate": "tsx scripts/eval-pipeline/generate.ts",
+    "evals:notify": "tsx scripts/eval-pipeline/notify-telegram.ts",
     "prebuild": "npm run graph:build || true",
     "dev": "next dev",
     "dev:with-mermaid": "turbo run render-mermaid dev --parallel",
