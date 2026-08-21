@@ -3,6 +3,7 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import { postToLinkedIn } from './linkedin';
 import { postToX } from './x';
+import { draftToSubstack } from './substack';
 import type { AnnounceResult } from './types';
 
 const SITE_URL = 'https://www.managen.ai';
@@ -12,14 +13,20 @@ interface PostFrontmatter {
   description?: string;
 }
 
-function loadPostMeta(slug: string): { title: string; description: string; url: string } {
+function loadPost(slug: string): {
+  title: string;
+  description: string;
+  url: string;
+  body: string;
+} {
   const postPath = join(__dirname, '..', '..', '..', 'docs', 'blog', 'posts', `${slug}.md`);
   const raw = readFileSync(postPath, 'utf8');
-  const { data } = matter(raw) as { data: PostFrontmatter };
+  const { data, content } = matter(raw) as { data: PostFrontmatter; content: string };
   return {
     title: data.title ?? slug,
     description: data.description ?? '',
     url: `${SITE_URL}/blog/posts/${slug}`,
+    body: content,
   };
 }
 
@@ -38,18 +45,22 @@ async function main(): Promise<void> {
     return;
   }
 
-  const meta = loadPostMeta(slug);
+  const meta = loadPost(slug);
   const commentary = `New eval tooling comparison: ${meta.title}\n\n${meta.description}\n\nMethodology: scored from release notes and code diffs, not hands-on testing.`;
   const tweetText = `${meta.title}\n\n${meta.url}`;
+  const substackBody = `${meta.body}\n\n[Read on managen.ai](${meta.url})`;
 
   const results: AnnounceResult[] = await Promise.all([
     postToLinkedIn(commentary, meta.url, meta.title),
     postToX(tweetText),
+    draftToSubstack(meta.title, substackBody),
   ]);
 
   for (const r of results) {
     if (r.skipped) {
       console.log(`[eval-pipeline] ${r.platform}: skipped (${r.reason})`);
+    } else if (r.platform === 'substack') {
+      console.log('[eval-pipeline] substack: draft created — review and publish manually');
     } else {
       console.log(`[eval-pipeline] ${r.platform}: posted${r.url ? ` — ${r.url}` : ''}`);
     }

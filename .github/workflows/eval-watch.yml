@@ -59,16 +59,20 @@ jobs:
           git commit -m "chore: eval-watch post ${{ steps.generate.outputs.slug }}"
           git push "https://x-access-token:${GH_PUSH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
 
-      - name: Announce (LinkedIn / X)
+      - name: Announce (LinkedIn / X / Substack draft)
         if: steps.generate.outputs.result == 'published'
         env:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          SUBSTACK_POST_ADDRESS: ${{ secrets.SUBSTACK_POST_ADDRESS }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
           EVAL_PIPELINE_SLUG: ${{ steps.generate.outputs.slug }}
         run: npm run evals:announce
-
-      # Phase 4 adds a Substack-draft step here — lands as its own commit.
 
       - name: Notify Telegram
         if: always()
@@ -79,7 +83,7 @@ jobs:
           RESULT="${{ steps.generate.outputs.result }}"
           SLUG="${{ steps.generate.outputs.slug }}"
           if [ "$RESULT" = "published" ]; then
-            MSG="Eval Watch: published a new comparison post ($SLUG). https://www.managen.ai/blog/posts/$SLUG"
+            MSG="Eval Watch: published a new comparison post ($SLUG). https://www.managen.ai/blog/posts/$SLUG — Substack draft created if configured, review and publish manually."
           elif [ "$RESULT" = "skipped" ]; then
             MSG="Eval Watch: no post this cycle (quality gate declined — see workflow log for the exact reason)."
           else
