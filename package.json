@@ -9,6 +9,7 @@
   "scripts": {
     "graph:build": "tsx scripts/build-graph.ts",
     "search:build": "tsx scripts/build-search-index.ts",
+    "evals:check": "tsx scripts/eval-pipeline/fetch-releases.ts --dry-run",
     "prebuild": "npm run graph:build || true",
     "dev": "next dev",
     "dev:with-mermaid": "turbo run render-mermaid dev --parallel",

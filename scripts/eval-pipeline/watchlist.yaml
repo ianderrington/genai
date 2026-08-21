@@ -1,0 +1,23 @@
+# Watchlist for the AI eval/benchmark-tooling comparison pipeline.
+# Hand-edit this list to add/remove tracked repos. Verify a new owner/repo slug
+# resolves (GET https://api.github.com/repos/{owner}/{repo}) before adding it —
+# org names shift; e.g. explodinggradients/ragas moved to vibrantlabsai/ragas.
+repos:
+  - owner: promptfoo
+    repo: promptfoo
+    category: llm-eval-cli
+  - owner: confident-ai
+    repo: deepeval
+    category: llm-eval-framework
+  - owner: vibrantlabsai
+    repo: ragas
+    category: rag-eval
+  - owner: EleutherAI
+    repo: lm-evaluation-harness
+    category: benchmark-harness
+  - owner: openai
+    repo: evals
+    category: benchmark-harness
+  - owner: braintrustdata
+    repo: autoevals
+    category: eval-scoring-library
