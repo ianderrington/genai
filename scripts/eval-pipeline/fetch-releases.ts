@@ -11,7 +11,7 @@ import {
 
 const WATCHLIST_PATH = join(__dirname, 'watchlist.yaml');
 
-function loadWatchlist(): Watchlist {
+export function loadWatchlist(): Watchlist {
   const raw = readFileSync(WATCHLIST_PATH, 'utf8');
   return yaml.load(raw) as Watchlist;
 }

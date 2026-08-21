@@ -9,3 +9,7 @@ authors:
     description: >
       Parnian Barekatain is a researcher exploring the intersection of biology, evolution, and artificial intelligence, with a focus on bio-inspired approaches to generative AI systems.
     avatar: https://github.com/Awesome-as-always.png
+  evalwatch:
+    name: Eval Watch (automated)
+    description: >
+      An automated pipeline that reads new releases of AI eval/benchmark tools and publishes a scored, source-linked comparison. See the methodology note at the top of each post.
