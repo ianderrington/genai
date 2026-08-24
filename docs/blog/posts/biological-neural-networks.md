@@ -6,6 +6,7 @@ categories:
   - Neuroscience
   - Neural Networks
 authors: parnian
+coverImage: /images/blog/biological-neural-networks.png
 ---
 
 # Biological vs. Artificial Neural Networks

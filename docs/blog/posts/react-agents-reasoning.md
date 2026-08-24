@@ -6,6 +6,7 @@ categories:
   - Agents
   - Reasoning
 authors: parnian
+coverImage: /images/blog/react-agents-reasoning.png
 ---
 
 # ReAct Agents: Synergizing Reasoning and Acting

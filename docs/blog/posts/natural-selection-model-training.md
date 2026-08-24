@@ -6,6 +6,7 @@ categories:
   - Evolution
   - Training
 authors: parnian
+coverImage: /images/blog/natural-selection-model-training.png
 ---
 
 # Natural Selection in Model Training

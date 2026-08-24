@@ -6,6 +6,7 @@ categories:
   - Security
   - Safety
 authors: parnian
+coverImage: /images/blog/prompt-injection-security.png
 ---
 
 # Prompt Injection: The Security Crisis of LLM Applications

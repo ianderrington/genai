@@ -6,6 +6,7 @@ categories:
   - Efficiency
   - Training
 authors: parnian
+coverImage: /images/blog/model-distillation.png
 ---
 
 # Knowledge Distillation: Teaching Small Models to Think Big

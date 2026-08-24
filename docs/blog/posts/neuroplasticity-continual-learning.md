@@ -6,6 +6,7 @@ categories:
   - Neuroscience
   - Continual Learning
 authors: parnian
+coverImage: /images/blog/neuroplasticity-continual-learning.png
 ---
 
 # Neuroplasticity and Continual Learning in AI

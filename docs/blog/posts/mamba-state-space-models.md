@@ -6,6 +6,7 @@ categories:
   - Architecture
   - Efficiency
 authors: parnian
+coverImage: /images/blog/mamba-state-space-models.png
 ---
 
 # Mamba: State Space Models Challenge Transformers

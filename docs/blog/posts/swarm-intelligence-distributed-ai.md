@@ -6,6 +6,7 @@ categories:
   - Swarm Intelligence
   - Distributed AI
 authors: parnian
+coverImage: /images/blog/swarm-intelligence-distributed-ai.png
 ---
 
 # Swarm Intelligence: Collective Computation in AI

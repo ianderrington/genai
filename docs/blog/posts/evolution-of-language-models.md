@@ -6,6 +6,7 @@ categories:
   - Evolution
   - Language Models
 authors: parnian
+coverImage: /images/blog/evolution-of-language-models.png
 ---
 
 # The Evolution of Language Models: A Biological Lens

@@ -6,6 +6,7 @@ categories:
   - Inference
   - Memory
 authors: parnian
+coverImage: /images/blog/kv-cache-optimization.png
 ---
 
 # KV Cache Optimization: Scaling to Million-Token Contexts

@@ -6,6 +6,7 @@ categories:
   - Efficiency
   - Deployment
 authors: parnian
+coverImage: /images/blog/quantization-llms.png
 ---
 
 # LLM Quantization: Running Giants on Consumer Hardware

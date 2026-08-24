@@ -6,6 +6,7 @@ categories:
   - Agents
   - Systems
 authors: parnian
+coverImage: /images/blog/multi-agent-orchestration.png
 ---
 
 # Multi-Agent Orchestration: Coordinating AI Collectives

@@ -6,6 +6,7 @@ categories:
   - Evolution
   - Optimization
 authors: parnian
+coverImage: /images/blog/fitness-landscapes-optimization.png
 ---
 
 # Fitness Landscapes in AI Optimization

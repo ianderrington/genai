@@ -6,6 +6,7 @@ categories:
   - Artificial Life
   - Emergence
 authors: parnian
+coverImage: /images/blog/artificial-life-emergence.png
 ---
 
 # Artificial Life and Emergent Intelligence

@@ -6,6 +6,7 @@ categories:
   - Evolution
   - Game Theory
 authors: parnian
+coverImage: /images/blog/evolutionary-game-theory-ai.png
 ---
 
 # Evolutionary Game Theory in AI Systems

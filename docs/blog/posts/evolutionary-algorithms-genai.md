@@ -6,6 +6,7 @@ categories:
   - Evolution
   - GenAI
 authors: parnian
+coverImage: /images/blog/evolutionary-algorithms-genai.png
 ---
 
 # Evolutionary Algorithms in Generative AI

@@ -6,6 +6,7 @@ categories:
   - World Models
   - Video
 authors: parnian
+coverImage: /images/blog/world-models-ai.png
 ---
 
 # World Models: AI That Simulates Reality

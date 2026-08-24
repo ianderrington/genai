@@ -6,6 +6,7 @@ categories:
   - Alignment
   - Safety
 authors: parnian
+coverImage: /images/blog/constitutional-ai-safety.png
 ---
 
 # Constitutional AI: Principles-Based Alignment

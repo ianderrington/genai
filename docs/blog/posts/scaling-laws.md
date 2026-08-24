@@ -6,6 +6,7 @@ categories:
   - Training
   - Theory
 authors: parnian
+coverImage: /images/blog/scaling-laws.png
 ---
 
 # Scaling Laws: The Mathematics of AI Progress

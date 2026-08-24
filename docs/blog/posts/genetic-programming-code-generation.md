@@ -6,6 +6,7 @@ categories:
   - Evolution
   - Code Generation
 authors: parnian
+coverImage: /images/blog/genetic-programming-code-generation.png
 ---
 
 # Genetic Programming and Code Generation

@@ -6,6 +6,7 @@ categories:
   - Genomics
   - Deep Learning
 authors: parnian
+coverImage: /images/blog/genomics-meets-deep-learning.png
 ---
 
 # Genomics Meets Deep Learning

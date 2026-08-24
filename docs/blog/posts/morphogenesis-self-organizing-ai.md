@@ -6,6 +6,7 @@ categories:
   - Development
   - Self-Organization
 authors: parnian
+coverImage: /images/blog/morphogenesis-self-organizing-ai.png
 ---
 
 # Morphogenesis: Self-Organizing AI Systems

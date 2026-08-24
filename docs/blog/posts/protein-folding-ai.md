@@ -6,6 +6,7 @@ categories:
   - Protein Folding
   - GenAI
 authors: parnian
+coverImage: /images/blog/protein-folding-ai.png
 ---
 
 # AlphaFold and the Revolution in Protein Structure Prediction

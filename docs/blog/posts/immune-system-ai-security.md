@@ -6,6 +6,7 @@ categories:
   - Immune Systems
   - AI Security
 authors: parnian
+coverImage: /images/blog/immune-system-ai-security.png
 ---
 
 # Artificial Immune Systems for AI Security

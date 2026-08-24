@@ -6,6 +6,7 @@ categories:
   - DNA Computing
   - Future Tech
 authors: parnian
+coverImage: /images/blog/dna-computing-ai.png
 ---
 
 # DNA Computing: Biological Hardware for AI

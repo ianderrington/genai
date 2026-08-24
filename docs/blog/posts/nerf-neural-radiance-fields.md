@@ -6,6 +6,7 @@ categories:
   - 3D Generation
   - Computer Vision
 authors: parnian
+coverImage: /images/blog/nerf-neural-radiance-fields.png
 ---
 
 # NeRF: Neural Radiance Fields for View Synthesis

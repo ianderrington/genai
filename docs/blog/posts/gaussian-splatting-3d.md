@@ -6,6 +6,7 @@ categories:
   - 3D Generation
   - Computer Vision
 authors: parnian
+coverImage: /images/blog/gaussian-splatting-3d.png
 ---
 
 # 3D Gaussian Splatting: Real-Time Neural Rendering Revolution

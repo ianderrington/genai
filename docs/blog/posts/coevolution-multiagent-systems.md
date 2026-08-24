@@ -6,6 +6,7 @@ categories:
   - Evolution
   - Multi-Agent Systems
 authors: parnian
+coverImage: /images/blog/coevolution-multiagent-systems.png
 ---
 
 # Co-evolution in Multi-Agent AI Systems

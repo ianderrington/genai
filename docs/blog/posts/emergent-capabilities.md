@@ -6,6 +6,7 @@ categories:
   - Scaling
   - Theory
 authors: parnian
+coverImage: /images/blog/emergent-capabilities.png
 ---
 
 # Emergent Capabilities: When Scale Creates Surprise

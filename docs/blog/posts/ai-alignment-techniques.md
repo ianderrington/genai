@@ -6,6 +6,7 @@ categories:
   - Alignment
   - Safety
 authors: parnian
+coverImage: /images/blog/ai-alignment-techniques.png
 ---
 
 # AI Alignment Techniques: Building AI That Does What We Want

@@ -6,6 +6,7 @@ categories:
   - Training
   - Alignment
 authors: parnian
+coverImage: /images/blog/dpo-preference-learning.png
 ---
 
 # DPO: Direct Preference Optimization Explained

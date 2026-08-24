@@ -6,6 +6,7 @@ categories:
   - Symbiosis
   - Hybrid Systems
 authors: parnian
+coverImage: /images/blog/symbiosis-hybrid-ai.png
 ---
 
 # Symbiosis: Lessons for Hybrid AI Systems

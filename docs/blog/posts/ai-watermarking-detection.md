@@ -6,6 +6,7 @@ categories:
   - Safety
   - Detection
 authors: parnian
+coverImage: /images/blog/ai-watermarking-detection.png
 ---
 
 # AI Watermarking: Invisible Signatures for Generated Content

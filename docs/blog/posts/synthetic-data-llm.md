@@ -6,6 +6,7 @@ categories:
   - Training
   - Data
 authors: parnian
+coverImage: /images/blog/synthetic-data-llm.png
 ---
 
 # Synthetic Data for LLM Training: When AI Teaches AI

@@ -6,6 +6,7 @@ categories:
   - Evolution
   - Neural Networks
 authors: parnian
+coverImage: /images/blog/neuroevolution-deep-learning.png
 ---
 
 # Neuroevolution: Evolving Neural Networks

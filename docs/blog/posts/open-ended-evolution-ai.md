@@ -6,6 +6,7 @@ categories:
   - Evolution
   - Open-Ended Systems
 authors: parnian
+coverImage: /images/blog/open-ended-evolution-ai.png
 ---
 
 # Open-Ended Evolution: The Quest for Endless Innovation

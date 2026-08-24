@@ -6,6 +6,7 @@ categories:
   - Inference
   - Efficiency
 authors: parnian
+coverImage: /images/blog/speculative-decoding.png
 ---
 
 # Speculative Decoding: Faster LLM Inference Through Speculation

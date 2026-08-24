@@ -6,6 +6,7 @@ categories:
   - Energy Efficiency
   - Sustainable AI
 authors: parnian
+coverImage: /images/blog/metabolic-efficiency-green-ai.png
 ---
 
 # Metabolic Efficiency: Lessons for Green AI
