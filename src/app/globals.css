@@ -3570,4 +3570,34 @@ details.admonition > .admonition-body {
 .dark .admonition-danger,    .dark .admonition-failure, .dark .admonition-bug { background: rgba(255, 23, 68, 0.12); }
 .dark .admonition-abstract,  .dark .admonition-example    { background: rgba(170, 0, 255, 0.12); }
 .dark .admonition-quote      { background: rgba(158, 158, 158, 0.12); }
+
+/* MkDocs attr_list buttons — [text](url){ .md-button } — matches the
+   homepage's own primary/secondary CTA look. "a.md-button" (element +
+   class), not just ".md-button", to match the specificity of the Tailwind
+   Typography ".prose a" rule this competes with — a bare class selector
+   loses that tie-break regardless of source order. */
+a.md-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+  transition: transform 0.2s ease;
+}
+a.md-button:hover { transform: translateY(-1px); }
+.dark a.md-button { color: #a5b4fc; }
+
+a.md-button.md-button--primary {
+  color: #fff;
+  border: none;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+.dark a.md-button.md-button--primary { color: #fff; }
 /* === END ESSAY PROSE STYLES === */

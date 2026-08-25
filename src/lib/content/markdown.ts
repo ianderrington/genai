@@ -421,7 +421,13 @@ function preprocessMkDocsAdmonitions(content: string): string {
   while (i < lines.length) {
     const line = lines[i];
 
-    const admonitionMatch = line.match(/^(!!!|\?\?\?[+]?)\s+(.*)/);
+    // Real MkDocs only allows the collapsible "+" suffix on "???", never on
+    // "!!!" — but authors write "!!!+ " by analogy often enough that a
+    // strict-spec regex silently dumps the whole admonition (marker, mermaid
+    // fence, everything) as raw visible text instead of rendering it. Accept
+    // "!!!+ " as a plain, non-collapsible admonition rather than failing to
+    // match at all.
+    const admonitionMatch = line.match(/^(!!![+]?|\?\?\?[+]?)\s+(.*)/);
 
     if (admonitionMatch && admonitionMatch[2].trim()) {
       const marker = admonitionMatch[1];
@@ -462,6 +468,16 @@ function preprocessMkDocsAdmonitions(content: string): string {
         output.push(`<div class="admonition-body">\n\n${bodyContent}\n\n</div>`);
         output.push(`</div>`);
       }
+      // The body-collection loop above consumes any blank line that follows
+      // the admonition in the source (it can't tell "still part of the body"
+      // from "separator before the next block" while scanning). Without
+      // re-emitting one here, the closing </div> glues directly onto
+      // whatever comes next with no blank line between them — and per
+      // CommonMark an HTML block only terminates at a blank line, so the
+      // next block (e.g. a "## Heading") gets silently swallowed into the
+      // same raw-HTML block and rendered as literal text instead of parsed
+      // markdown. Always emit the separator explicitly.
+      output.push('');
 
       i = j;
       continue;
@@ -472,6 +488,31 @@ function preprocessMkDocsAdmonitions(content: string): string {
   }
 
   return output.join('\n');
+}
+
+/**
+ * MkDocs "attr_list" extension attaches CSS classes to the preceding markdown
+ * element with a trailing `{ .class1 .class2 }`. This pipeline never
+ * implemented attr_list, so a link like `[Text](url){ .md-button }` rendered
+ * the real link followed by the literal, unparsed `{ .md-button }` text —
+ * previously the only usage on the site was the `.md-button`/
+ * `.md-button--primary` pattern, so this only needs to handle that one case
+ * (a link immediately followed by an attr_list of `.md-button` classes),
+ * converting it into a real styled button anchor.
+ */
+function preprocessMkDocsButtonLinks(content: string): string {
+  return content.replace(
+    /\[([^\]]+)\]\(([^)]+)\)\{\s*((?:\.[\w-]+\s*)+)\}/g,
+    (_match, text: string, href: string, rawClasses: string) => {
+      const classes = rawClasses
+        .trim()
+        .split(/\s+/)
+        .map((c) => c.replace(/^\./, ''))
+        .join(' ');
+      const safeHref = href.replace(/[<>"]/g, '');
+      return `<a href="${safeHref}" class="${classes}">${text}</a>`;
+    }
+  );
 }
 
 /**
@@ -528,8 +569,9 @@ export async function markdownToHtml(content: string, filePath?: string): Promis
       return cachedHtml;
     }
 
-    // Preprocess MkDocs admonitions (!!! / ???) into raw HTML before the AST is built
-    const preprocessed = preprocessMkDocsAdmonitions(content);
+    // Preprocess MkDocs button-link attr_list syntax, then admonitions
+    // (!!! / ???), into raw HTML before the AST is built.
+    const preprocessed = preprocessMkDocsAdmonitions(preprocessMkDocsButtonLinks(content));
 
     // Removed excessive logging - only log errors and warnings
 
@@ -616,7 +658,10 @@ export async function markdownToHtml(content: string, filePath?: string): Promis
           ],
           blockquote: [
             ...(defaultSchema.attributes?.blockquote || []),
-            'class',
+            // hast represents the HTML "class" attribute as a "className"
+            // property — 'class' here was never a real match and silently
+            // dropped any class hast-util-sanitize was asked to keep.
+            'className',
             'data-type'
           ],
           code: [
@@ -634,6 +679,15 @@ export async function markdownToHtml(content: string, filePath?: string): Promis
             'id'
           ],
           a: [
+            // 'className' must come BEFORE the defaultSchema spread:
+            // hast-util-sanitize's findDefinition() returns the FIRST
+            // matching entry for a property name, and defaultSchema.a
+            // already has a value-restricted `['className',
+            // 'data-footnote-backref']` tuple (GFM footnotes only) later
+            // in the merged array — appended after the spread, this bare
+            // 'className' was unreachable dead code, silently stripping
+            // every class value (including "md-button") down to "".
+            'className',
             ...(defaultSchema.attributes?.a || []),
             'id',
             'href',
