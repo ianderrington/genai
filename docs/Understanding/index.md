@@ -18,6 +18,7 @@ Here you'll find what you need to know about how Gen()AI works, how it's built, 
 [Choose your adventure!](#choose-your-adventure){ .md-button .md-button--primary }
 [See the primary components!](#component-interactions){ .md-button .md-button--primary }
 [What is this about?](#what-is-this-about){ .md-button  }
+[Look up a term](./glossary.md){ .md-button }
 
 ## Choose your adventure
 
