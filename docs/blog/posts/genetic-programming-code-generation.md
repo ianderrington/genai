@@ -58,6 +58,14 @@ As generative AI systems become more capable, GP offers mechanisms for:
 
 - [Genetic Programming: On the Programming of Computers by Means of Natural Selection (Koza, 1992) — the foundational text](https://archive.org/details/geneticprogrammi0000koza)
 
+## Where GP Actually Still Wins
+
+It's worth being direct about GP's real position today: for general-purpose code generation, it has lost to large language models, and the reason is specific, not just "LLMs are bigger."
+
+GP searches a space of program trees using only a fitness score — does this candidate program pass the test cases, more or less. An LLM trained on billions of lines of real code brings a completely different kind of information to the same problem: a learned prior over what code that solves a given description tends to look like, extracted from how millions of human programmers actually wrote it. That prior is what lets an LLM often produce a working solution in one or two attempts, where GP has to discover the same structure through blind mutation and crossover across a much larger number of evaluations.
+
+GP's genuine remaining edge is narrower and more specific than "code generation" — it's symbolic regression and formula discovery in low-dimensional, well-specified search spaces, where there is no large corpus of human-written examples for an LLM to draw a prior from, and where GP's guarantee of syntactic validity (for typed GP) is worth more than a learned prior with no such guarantee. Discovering a novel physical equation from data, or finding an unconventional closed-form expression, are real, current uses where GP is still the better tool. Treating it as a general competitor to LLM code generation, as this post's framing implies, oversells where the field's evidence actually points.
+
 ---
 
 *The evolution of code mirrors the evolution of life—both are fundamentally about information propagation and adaptation.*

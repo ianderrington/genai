@@ -64,6 +64,14 @@ This suggests these are fundamental solutions, not accidents.
 3. **Modularity**: Reusable components will emerge
 4. **Extinction events**: Paradigm shifts will eliminate lineages
 
+## The Convergent-Evolution Framing Doesn't Quite Fit
+
+Real convergent evolution means independent lineages, isolated from each other, arriving at similar solutions on their own — eyes evolved separately more than 40 times across the animal kingdom because there was no gene flow between the lineages doing it. Applied to language models, that framing is weaker than it looks.
+
+Since the 2017 "Attention Is All You Need" paper, nearly the entire field converged onto one architecture, the transformer, not through independent parallel discovery but because every subsequent lab built directly on the same published design. GPT, BERT, T5, and their successors are not separate lineages that independently rediscovered attention — they are descendants of the same paper, adopting the same mechanism because it was public and it worked. That's not convergent evolution. It's closer to one successful mutation getting copied by every competitor, which biology doesn't have a clean analogue for since genes don't move that freely between species.
+
+The actual driver of progress since 2017 has been scaling one dominant architecture with more compute and data, not many independent lineages discovering similar solutions. That's a real and important distinction for a reader trying to predict what comes next: a genuine test of convergent evolution would be whether a fundamentally different architecture, developed with no knowledge of the transformer, arrives at attention-like mechanisms on its own. State-space models and other transformer alternatives are the closer real test of that claim today, and it's still an open question whether they converge toward attention or genuinely diverge from it.
+
 ## References
 
 - [Efficient Estimation of Word Representations in Vector Space (Mikolov et al., 2013) — word2vec](https://arxiv.org/abs/1301.3781)

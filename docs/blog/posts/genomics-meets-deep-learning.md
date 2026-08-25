@@ -68,6 +68,14 @@ Genomes represent optimization results:
 3. Evolving AI systems using genetic principles
 4. Cross-species transfer learning
 
+## The Sharper Version of the Redundancy Parallel
+
+This post's "Compression and Redundancy" section gestures at a vague implication — "importance of non-obvious regulatory parameters" — where a much sharper, citable parallel actually exists on the AI side, and it's worth stating precisely instead of vaguely.
+
+Frankle and Carbin (2019) showed that a randomly-initialized, densely-connected network typically contains a much smaller subnetwork that, trained in isolation from the same starting weights, reaches comparable accuracy to the full network — the Lottery Ticket Hypothesis. In practice, over 90% of a trained network's parameters are often prunable after the fact with minimal accuracy loss. That is a strikingly direct echo of the genome's own structure: only about 1.5% of the human genome directly codes for proteins, and yet the rest is not simply waste — much of it performs the regulatory role that, in the network analogy, corresponds to the specific subset of parameters the lottery ticket actually needs, rather than the overwhelming majority that turns out to be redundant given the right subset.
+
+The honest limit of this parallel matters too: biology's "redundant" 98.5% still does real regulatory and structural work across an organism's entire lifetime and environment, while a pruned network's discarded 90% is genuinely discardable for the one task it was trained on. The redundancy looks similar at the level of "most of the parameters aren't strictly necessary for a given output," but the reason each system tolerates that redundancy is different: biology's redundancy buys robustness across unpredictable future environments, while a network's redundancy is mostly a byproduct of overparameterized optimization being easier to train, not something the network is using for a future purpose. That distinction is the actual research question worth asking, not the vague implication the original framing leaves unstated.
+
 ## References
 
 - [DNABERT: Pre-Trained Bidirectional Encoder Representations from Transformers Model for DNA-Language in Genome (Ji et al., 2021)](https://academic.oup.com/bioinformatics/article/37/15/2112/6128680)
