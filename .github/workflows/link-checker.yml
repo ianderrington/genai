@@ -43,7 +43,8 @@ jobs:
         else
           echo "::error::Link check results file not found"
           exit 1
-        
+        fi
+
     - name: Upload check results
       uses: actions/upload-artifact@v3
       with:
