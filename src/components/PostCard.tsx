@@ -25,7 +25,11 @@ interface PostCardProps {
 }
 
 export default function PostCard({ post, section, showDate = true, imagePath, priority = false }: PostCardProps) {
-  const { title, description, date, tags } = post.metadata;
+  const { title, date, tags } = post.metadata;
+  // Fall back to the auto-generated excerpt when the post has no explicit
+  // frontmatter description — most posts don't declare one, so without this
+  // fallback the card renders with a blank gap where the subtitle should be.
+  const description = post.metadata.description || post.excerpt;
   const formattedDate = date ? new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',

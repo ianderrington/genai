@@ -847,14 +847,28 @@ function remarkProcessWarnings() {
  * @returns The generated excerpt
  */
 export async function generateExcerpt(content: string, maxLength: number = 160, filePath?: string): Promise<string> {
-  // Strip a leading "# Title" heading (and the blank line after it) before
-  // looking for the first paragraph. Without this, a post whose H1 is
-  // immediately followed by a blank line — which is normal, correct
-  // markdown — has its excerpt captured as just the heading text itself:
-  // the "first paragraph" regex below stops at the first "\n\n", and for
-  // "# Ethically\n\n..." that's the heading alone, producing a card
-  // subtitle that's a verbatim duplicate of the title.
-  content = content.replace(/^#\s+.+\n+/, '');
+  // Strip every leading heading line (and the blank line after each one)
+  // before looking for the first paragraph. Without this, a post whose
+  // heading is immediately followed by a blank line — which is normal,
+  // correct markdown — has its excerpt captured as just the heading text
+  // itself: the "first paragraph" regex below stops at the first "\n\n",
+  // and for "# Title\n\n..." that's the heading alone. Some docs stack a
+  // second heading right under the first ("# Code of Conduct\n\n##
+  // Our Pledge\n\n..."), so this strips ALL leading headings, not just one.
+  content = content.replace(/^(#{1,6}\s+.+\n+)+/, '');
+  // Also strip a leading MkDocs snippet-include directive ("--8<--
+  // "file.html""), which is raw build syntax, not prose. Some files are
+  // nothing but this directive, in which case there's honestly no excerpt
+  // to show — that's correct, not a bug to work around further.
+  // "\n*" (not "\n+") — a file that's nothing but this one directive line
+  // has no trailing newline at all, and the strip must still apply to it.
+  content = content.replace(/^--8<--.*\n*/, '');
+  // Also strip a leading MkDocs admonition block ("!!! type \"title\"" /
+  // "???[+] type \"title\"" followed by its indented body) — the same
+  // "first block isn't prose" problem as headings above. Without this, a
+  // post that opens with a quote/tip box before any real paragraph gets no
+  // excerpt at all rather than the real prose that follows the box.
+  content = content.replace(/^(!!!|\?\?\?[+]?)\s+.*\n(?:(?:[ \t]+.*)?\n)*/, '');
 
   // Check for the more tag (handle both formats: <!--more--> and <!-- more -->)
   let moreTagIndex = content.indexOf('<!--more-->');
