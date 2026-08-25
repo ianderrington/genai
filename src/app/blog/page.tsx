@@ -20,9 +20,11 @@ const BlogGridClient = nextDynamic(() => import('@/components/BlogGridClient'), 
   )
 });
 
-// Force dynamic rendering to avoid SSR issues with client components
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+// Content is markdown checked into the repo and only changes on deploy, so
+// ISR with a long revalidate window is safe and avoids re-rendering on every
+// single request (force-dynamic previously meant zero caching). A new deploy
+// invalidates the cache anyway, so this never serves stale post content.
+export const revalidate = 3600;
 
 export async function generateMetadata(): Promise<Metadata> {
   const { author } = loadSiteConfig();

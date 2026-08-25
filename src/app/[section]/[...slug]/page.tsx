@@ -10,9 +10,10 @@ import CollectionDisplay from "@/components/CollectionDisplay";
 import { prepareCollectionRenderData } from "@/lib/content/collectionRenderer";
 import { ArticleSchema, BreadcrumbSchema } from "@/lib/docs-kit";
 
-// Force dynamic rendering to avoid SSR issues with client components
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// Content is markdown checked into the repo and only changes on deploy, so
+// ISR with a long revalidate window is safe and avoids re-parsing markdown
+// on every single request (force-dynamic previously meant zero caching).
+export const revalidate = 3600;
 
 interface PageProps {
   params: Promise<{
