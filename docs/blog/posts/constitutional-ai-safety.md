@@ -206,16 +206,7 @@ class ConstitutionalTrainer:
 
 ## Red-Teaming Results
 
-Constitutional AI models show improved robustness:
-
-```
-Attack Type          | Base Model | CAI Model
----------------------|------------|----------
-Direct harmful ask   | 15% refuse | 95% refuse
-Jailbreak prompts    | 40% refuse | 85% refuse
-Roleplay attacks     | 25% refuse | 80% refuse
-Encoded requests     | 30% refuse | 75% refuse
-```
+Bai et al. (2022) evaluated harmlessness using crowdworker Elo comparisons rather than a fixed refusal-rate benchmark: human raters judged pairs of model responses head-to-head across a pool of over 180,000 red-team prompts (roughly 42,500 human-written, the rest model-generated), and each model's harmlessness was scored by its resulting Elo rating rather than a percentage. The paper's central finding: models trained with the full two-phase process (SL-CAI followed by RL-CAI) scored significantly more harmless than both a standard RLHF baseline and the SL-CAI-only intermediate model, and did so without becoming more evasive, a failure mode simpler harmlessness training tends to produce. See the [paper](https://arxiv.org/abs/2212.08073) directly for the full Elo curves and evaluation methodology rather than a single summary number, since that's the more accurate way to represent what a head-to-head preference comparison actually measures.
 
 ## Future Directions
 

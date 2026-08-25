@@ -410,11 +410,6 @@ header {
   justify-content: center;
 }
 
-/* Remove any extra spacing when breadcrumbs are present */
-main:has(.breadcrumb-container) {
-  padding-top: 0;
-}
-
 /* Mobile-specific breadcrumb adjustments */
 @media (max-width: 768px) {
   .breadcrumb-container {

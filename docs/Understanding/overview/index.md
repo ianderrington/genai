@@ -47,11 +47,8 @@ The distinction is visually represented below.
 
 Another way of thinking about the difference between AI and traditional programming is to consider the difference between a function call and a program. 
 
-<div class="grid">
+### Traditional Programming
 
-<div class="grid-item" markdown>
-
-<h3>Traditional Programming</h3>
 ```mermaid
 graph LR
     subgraph Input ["Input Layer"]
@@ -88,12 +85,8 @@ graph LR
     class Result resultBg
 ```
 
-</div>
+### AI/ML Programming
 
-
-<div class="grid-item" markdown>
-
-<h3>AI/ML Programming</h3>
 ```mermaid
 graph LR
     subgraph Input ["Input Layer"]
@@ -133,10 +126,6 @@ graph LR
     class Processing processBg
     class Result resultBg
 ```
-
-</div>
-
-</div>
 
 ## Creating Gen()AI
 

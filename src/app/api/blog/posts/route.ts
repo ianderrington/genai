@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCachedAllContent } from '@/lib/content';
 import blogConfig from '@/lib/content/blog-config';
+import { filterPostsByTags } from '@/lib/content/tags';
 
 // Force dynamic to avoid static generation errors
 export const dynamic = 'force-dynamic';
@@ -42,12 +43,11 @@ export async function GET(request: NextRequest) {
       return true;
     });
 
-    // Filter by tags if provided
+    // Filter by tags if provided (matches against both metadata.tags and
+    // metadata.categories, normalized/slugified the same way getAllTags()
+    // builds the tag list the UI shows counts for)
     if (tags && tags.length > 0) {
-      filteredPosts = filteredPosts.filter(post => {
-        const postTags = post.metadata.tags || [];
-        return tags.some(tag => postTags.includes(tag));
-      });
+      filteredPosts = filterPostsByTags(filteredPosts, tags);
     }
 
     // Search functionality
