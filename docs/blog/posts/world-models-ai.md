@@ -269,6 +269,16 @@ def contrastive_loss(model, real_sequence, imagined_sequence):
 3. **Compositional world models**: Combine learned components
 4. **World models for reasoning**: Beyond physical simulation to abstract reasoning
 
+## Why "Learns Physics" Is the Contested Claim, Not a Settled Fact
+
+This post's opening line states plainly that Sora learns physics, persistence, and causality. That's the central open question in this research area right now, not a settled result, and it's worth citing the actual evidence rather than the marketing framing.
+
+Kang et al. (2024), from ByteDance, built a controlled 2D physics testbed specifically to test this claim quantitatively — objects moving and colliding under deterministic classical mechanics, with unlimited ground-truth data. Their finding: video generation models track physical laws reasonably well on in-distribution scenarios similar to their training data, but degrade sharply on out-of-distribution and combinatorial cases, which is exactly the pattern you'd expect from sophisticated pattern-matching and interpolation, not genuine physical law discovery. A model that had actually learned Newtonian mechanics wouldn't need the test case to resemble something in its training set.
+
+Physics-IQ (2025), a Google DeepMind benchmark built from 396 real, camera-captured physical scenarios spanning fluid dynamics, collisions, magnetism, and optics, tested Sora and several other leading video models directly and found severely limited physical understanding across the board — visual realism and physical correctness turned out to be almost separate axes. Sora, rated among the most visually convincing outputs, did not correspondingly rank well on whether its videos obeyed physics. The benchmark's own stated conclusion is worth quoting directly: visual realism does not imply physical understanding.
+
+None of this means world models are a dead end — the architectures and training approaches this post covers (Dreamer's latent dynamics, RSSMs, diffusion transformers) are real and improving. But "the foundation for systems like Sora" and "learns... physics... causality" in this post's opening framing overstate where the evidence currently sits. The more accurate, defensible claim is: these systems produce physically plausible output on scenarios resembling their training distribution, and current benchmarks specifically designed to test physical generalization show that plausibility breaking down exactly where genuine understanding would need to hold.
+
 ## References
 
 - [World Models (Ha & Schmidhuber, 2018)](https://worldmodels.github.io/)
