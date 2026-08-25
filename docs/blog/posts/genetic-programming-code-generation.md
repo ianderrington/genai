@@ -54,6 +54,10 @@ As generative AI systems become more capable, GP offers mechanisms for:
 - Automated software optimization
 - Discovery of novel programming paradigms
 
+## References
+
+- [Genetic Programming: On the Programming of Computers by Means of Natural Selection (Koza, 1992) — the foundational text](https://archive.org/details/geneticprogrammi0000koza)
+
 ---
 
 *The evolution of code mirrors the evolution of life—both are fundamentally about information propagation and adaptation.*

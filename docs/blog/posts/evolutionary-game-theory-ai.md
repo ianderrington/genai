@@ -66,6 +66,10 @@ Maintaining diverse agent populations that:
 3. Diversity prevents catastrophic failures
 4. Evolution finds solutions game theory proves exist
 
+## References
+
+- [The Logic of Animal Conflict (Maynard Smith & Price, 1973) — the founding paper of evolutionary game theory](https://www.nature.com/articles/246015a0)
+
 ---
 
 *The games life plays teach us how AI systems can coexist and cooperate.*

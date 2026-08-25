@@ -40,6 +40,11 @@ Modern evolutionary algorithms like MAP-Elites maintain diverse archives of high
 
 The integration of evolutionary algorithms with large language models opens exciting possibilities for self-improving AI systems that can evolve their own prompts, architectures, and training strategies.
 
+## References
+
+- [Population Based Training of Neural Networks (Jaderberg et al., 2017)](https://arxiv.org/abs/1711.09846)
+- [Illuminating Search Spaces by Mapping Elites (Mouret & Clune, 2015)](https://arxiv.org/abs/1504.04909)
+
 ---
 
 *This post is part of a series exploring bio-inspired approaches to generative AI.*

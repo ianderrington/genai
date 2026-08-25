@@ -62,6 +62,10 @@ Understanding fitness landscapes helps:
 3. Predict training difficulty
 4. Understand loss surface geometry
 
+## References
+
+- [The Roles of Mutation, Inbreeding, Crossbreeding and Selection in Evolution (Wright, 1932) — the original fitness-landscape paper](https://www.sfipress.org/03-wright-1932)
+
 ---
 
 *The topology of solution spaces shapes the paths AI systems can take toward intelligence.*

@@ -64,6 +64,12 @@ This suggests these are fundamental solutions, not accidents.
 3. **Modularity**: Reusable components will emerge
 4. **Extinction events**: Paradigm shifts will eliminate lineages
 
+## References
+
+- [Efficient Estimation of Word Representations in Vector Space (Mikolov et al., 2013) — word2vec](https://arxiv.org/abs/1301.3781)
+- [Attention Is All You Need (Vaswani et al., 2017)](https://arxiv.org/abs/1706.03762)
+- [Emergent Abilities of Large Language Models (Wei et al., 2022)](https://arxiv.org/abs/2206.07682)
+
 ---
 
 *Understanding how language models evolve helps us guide their future development.*
