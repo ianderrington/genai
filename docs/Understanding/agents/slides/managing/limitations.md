@@ -1,4 +1,3 @@
----
 # Agent Limitations
 
 1. 🎭 **Reliability**

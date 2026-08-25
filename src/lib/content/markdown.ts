@@ -138,9 +138,16 @@ export function parseFrontmatter(content: string): {
   excerpt: string;
 } {
   try {
-    // Check if the content contains frontmatter (starts with ---)
-    const hasFrontmatter = content.trim().startsWith('---');
-    
+    // Check if the content contains REAL frontmatter — starts with "---" AND
+    // has a matching closing "---" line. A bare leading "---" with no close
+    // (a real, recurring authoring mistake — a stray delimiter left in from
+    // a template, with no frontmatter fields ever added) used to make this
+    // check pass anyway, so gray-matter tried to parse the entire rest of
+    // the file as YAML and threw, breaking the whole page. Requiring a real
+    // closing delimiter here means that mistake now degrades gracefully
+    // (treated as "no frontmatter") instead of crashing page load.
+    const hasFrontmatter = /^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/.test(content.trim());
+
     if (!hasFrontmatter) {
       // Return with empty metadata for files without frontmatter
       logger.warn('Content has no frontmatter');

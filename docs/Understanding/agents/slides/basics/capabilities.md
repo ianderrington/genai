@@ -1,4 +1,3 @@
----
 # Agent Capabilities
 <div class="grid cards" markdown="1">
 - :material-target: **Goal-Oriented**

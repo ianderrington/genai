@@ -1,5 +1,3 @@
----
-
 # Types of Agents
 
 Types of agents are defined by their capabilities and the environment they operate in.
