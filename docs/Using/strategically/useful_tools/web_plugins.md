@@ -1,16 +1,14 @@
 ## Plugins
-Plugins are can enable connection of GenAI with input media, often via web interfaces
 
-- [Mini Wob++](http://miniwob.farama.org/) For web interactive environments for accomplishing different tasks. Quite useful.
+Plugins connect GenAI to the input media people already use, often via web interfaces.
 
-- ️[Prompt Genius](https://chrome.google.com/webstore/detail/chatgpt-prompt-genius/jjdnakkfjnnbbckhifcfchagnpofjffo)
-
-- [FastChat Conversation]( https://github.com/lm-sys/FastChat/blob/main/fastchat/conversation.py) This very nice 'multi model' chat interface class allows for effective translation between different models.
+- [MiniWoB++](http://miniwob.farama.org/) — a benchmark of web interaction environments for training and evaluating agents on real browser tasks.
+- [Prompt Genius](https://chrome.google.com/webstore/detail/chatgpt-prompt-genius/jjdnakkfjnnbbckhifcfchagnpofjffo) — a Chrome extension for prompt management.
+- [FastChat Conversation](https://github.com/lm-sys/FastChat/blob/main/fastchat/conversation.py) — a conversation-template class that handles the format differences between models, useful for building a "multi-model" chat interface without hand-writing a template per model.
 
 ## Back-End
 
-- [MaxAI.me](https://app.maxai.me/my-plan) A nice chrome pluging + eventual system that makes your openAI connect to data more directly.
+- [MaxAI.me](https://app.maxai.me/my-plan) — a Chrome extension connecting an OpenAI-backed assistant more directly to your browsing data.
 
-!!! "[Page Assist](https://github.com/n4ze3m/page-assist)"
-    Page Assist is an open-source browser extension that provides a sidebar and web UI for your local AI model. It allows you to interact with your model from any webpage.
-
+!!! tip "[Page Assist](https://github.com/n4ze3m/page-assist)"
+    An open-source browser extension providing a sidebar and web UI for a locally-run model, letting you interact with it from any webpage.
