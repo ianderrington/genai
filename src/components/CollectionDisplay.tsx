@@ -189,9 +189,21 @@ const CollectionDisplay: React.FC<CollectionDisplayProps> = ({
                       : item.metadata?.image;
                   const imageSlug =
                     "posts" in item ? `${item.fullSlug}/index` : item.slug;
+                  // Cards with no explicit cover/image would otherwise all
+                  // fall back to the same static defaultImage, making every
+                  // uncustomized topic card in a grid look identical. Use
+                  // the site's own title-rendering OG image generator
+                  // instead - it's already proven (used for social-share
+                  // previews) and produces a genuinely distinct card per
+                  // item since it renders the item's real title.
+                  const itemTitle =
+                    "posts" in item ? item.title : item.metadata?.title;
+                  const dynamicFallback = itemTitle
+                    ? `/og?title=${encodeURIComponent(itemTitle)}&section=${encodeURIComponent(section)}`
+                    : defaultImage;
                   acc[fullSlug] = getImagePath(
                     coverImage,
-                    fallbackImage || defaultImage,
+                    fallbackImage || dynamicFallback,
                     section,
                     imageSlug,
                   );
