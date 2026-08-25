@@ -19,6 +19,7 @@ These three terms get used almost interchangeably, but they describe different l
 | **Framework** | A development-time library for assembling agent logic, tool wiring, and routing by hand | LangGraph, CrewAI - see [Agentic AI Orchestration Frameworks](./frameworks.md) |
 | **Orchestration** | The sub-problem of coordinating multiple agents or steps, which a framework requires you to code and a harness exposes as configuration | Subagent definitions, workflow YAML |
 | **Harness** | The production runtime that actually executes the loop: tool-call dispatch, permissions, sandboxing, context management, observability | Claude Code, Cursor, Devin |
+| **Communication Layer** | How an agent stays reachable across messaging channels and persists between sessions, rather than running once and exiting | OpenClaw - see [Agent Communication Layers](./communication-layers.md) |
 
 Several 2026 industry write-ups (Arize, Atlan, Cursor's own engineering blog, which describes "Cursor's agent harness" in its own documentation) converge on this distinction, though it isn't a formal standard. The practical difference that matters most: a framework is a library you import and wire up yourself; a harness is a product you run, and its permission model is the thing standing between an agent's mistake and your filesystem.
 
@@ -39,19 +40,31 @@ Several 2026 industry write-ups (Arize, Atlan, Cursor's own engineering blog, wh
 
 ## Permission and Sandboxing Models
 
-This is the dimension that actually defines a harness, and the approaches diverge sharply:
+This is the dimension that actually defines a harness, and the approaches diverge sharply.
 
-**Claude Code** evaluates allow/ask/deny rules per tool call (Bash, Read, Edit, WebFetch, MCP) before execution. A sandboxed Bash mode restricts writes to the working directory while allowing broader reads. Background subagents pre-declare every permission they'll need up front, then auto-deny anything outside that set once running.
+### Claude Code
 
-**Cursor** introduced "Auto-review" in version 3.6 (May 2026): a three-stage filter (allowlist, sandbox, classifier subagent) that Cursor says cuts approval prompts by roughly 84%, with sandboxed agents stopping less often than unsandboxed ones. A documented weakness exists too: certain shell built-ins can bypass the allowlist under prompt injection, a reminder that a permission system is only as strong as its narrowest gap.
+Evaluates allow/ask/deny rules per tool call (Bash, Read, Edit, WebFetch, MCP) before execution. A sandboxed Bash mode restricts writes to the working directory while allowing broader reads. Background subagents pre-declare every permission they'll need up front, then auto-deny anything outside that set once running.
 
-**Codex CLI** keeps sandbox mode and approval policy as two independent settings rather than one combined toggle: three sandbox levels (read-only, workspace-write, danger-full-access) crossed with three approval policies (untrusted, on-request, never). Being open source, this configuration is fully auditable in `config.toml` rather than described only in documentation.
+### Cursor
 
-**Devin** runs each session in an OS-level isolated VM with network and command access denied by default, unless explicitly whitelisted per project. Session-level permission grants now propagate to sibling subagents, so a multi-agent Devin session doesn't re-prompt for something already approved.
+Introduced "Auto-review" in version 3.6 (May 2026): a three-stage filter (allowlist, sandbox, classifier subagent) that Cursor says cuts approval prompts by roughly 84%, with sandboxed agents stopping less often than unsandboxed ones. A documented weakness exists too: certain shell built-ins can bypass the allowlist under prompt injection, a reminder that a permission system is only as strong as its narrowest gap.
 
-**Cline** takes the simplest approach: a hard split between Plan mode (read and reason only, cannot edit) and Act mode (executes with per-step approval). There's no auto-approve spectrum to configure, just two distinct modes.
+### Codex CLI
 
-**Aider** sidesteps interactive approval almost entirely: every AI edit is auto-committed as its own semantically-messaged Git commit. The repository's commit history functions as the audit trail instead of a permission dialog, which only works because Aider assumes you're already reviewing diffs the way you'd review any other commit.
+Keeps sandbox mode and approval policy as two independent settings rather than one combined toggle: three sandbox levels (read-only, workspace-write, danger-full-access) crossed with three approval policies (untrusted, on-request, never). Being open source, this configuration is fully auditable in `config.toml` rather than described only in documentation.
+
+### Devin
+
+Runs each session in an OS-level isolated VM with network and command access denied by default, unless explicitly whitelisted per project. Session-level permission grants now propagate to sibling subagents, so a multi-agent Devin session doesn't re-prompt for something already approved.
+
+### Cline
+
+Takes the simplest approach: a hard split between Plan mode (read and reason only, cannot edit) and Act mode (executes with per-step approval). There's no auto-approve spectrum to configure, just two distinct modes.
+
+### Aider
+
+Sidesteps interactive approval almost entirely: every AI edit is auto-committed as its own semantically-messaged Git commit. The repository's commit history functions as the audit trail instead of a permission dialog, which only works because Aider assumes you're already reviewing diffs the way you'd review any other commit.
 
 !!! warning "Valuation and capability aren't the same signal"
     Devin's most recent funding round valued Cognition at $26 billion (May 2026), yet its last *published* SWE-bench score remains 13.86%, from the original March 2024 announcement. No updated official benchmark has been released since. That gap is worth knowing before treating funding size as a proxy for how well a harness actually performs on real coding tasks.
