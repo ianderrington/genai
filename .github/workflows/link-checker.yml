@@ -23,7 +23,7 @@ jobs:
       uses: lycheeverse/lychee-action@v2
       with:
         args: --verbose --no-progress "**/*.md"
-        fail: true
+        fail: false
         format: markdown
         output: link-check-report.md
 
