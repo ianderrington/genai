@@ -200,7 +200,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ className, isMobile = false, onCl
             onChange={e => setSearchTerm(e.target.value)}
             onKeyDown={handleKeyDown}
             onFocus={() => setIsExpanded(true)}
-            placeholder="Search posts..."
+            placeholder="Search the guide..."
             className={`w-full pl-10 pr-4 py-2 text-sm rounded-full border transition-all duration-200 ease-in-out
               ${isExpanded ? 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600' : 'bg-transparent border-transparent'}
               focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-gray-200`}

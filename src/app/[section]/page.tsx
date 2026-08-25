@@ -3,6 +3,7 @@ import { getCachedSectionContent, getCachedSections } from "@/lib/content";
 import SafeHTML from "@/components/SafeHTML";
 import type { Metadata, ResolvingMetadata } from "next";
 import { loadConfig } from "@/lib/content/resolver";
+import { humanizeSlug } from "@/lib/content/slugs";
 import FloatingShareButton from "@/components/TrackedFloatingShareButton";
 import { resolveImagePath } from "@/lib/imageUtils";
 import CollectionDisplay from "@/components/CollectionDisplay";
@@ -63,8 +64,7 @@ export async function generateMetadata(
   const metadataBase = parentMetadata.metadataBase || new URL(site.url);
 
   // Use section name or capitalize the section ID
-  const sectionTitle =
-    sectionInfo.name || section.charAt(0).toUpperCase() + section.slice(1);
+  const sectionTitle = sectionInfo.name || humanizeSlug(section);
 
   // Use root post description or a default
   const description =

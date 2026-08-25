@@ -10,6 +10,7 @@ import { QRCodeSVG } from "qrcode.react";
 import { Search, QrCode, Menu, X } from "lucide-react";
 import { createPortal } from "react-dom";
 import { useMobileMenu } from "@/contexts/MobileMenuContext";
+import { humanizeSlug } from "@/lib/content/slugs";
 
 interface HeaderProps {
   sections: Array<{
@@ -107,9 +108,7 @@ const Header: React.FC<HeaderProps> = ({
       const path = pathname || "";
       if (path === "/") return "Home";
       const segment = path.split("/").pop() || "";
-      return (
-        segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, " ")
-      );
+      return humanizeSlug(segment);
     };
 
     const qrCodeUrl =
