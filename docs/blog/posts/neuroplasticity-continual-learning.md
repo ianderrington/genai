@@ -73,6 +73,16 @@ Minimizing interference:
 3. Efficient online adaptation
 4. Biological-scale continual learning
 
+## Neither "Solution" Actually Solves It
+
+This post lists Elastic Weight Consolidation and Progressive Neural Networks under "Bio-Inspired Solutions" to catastrophic forgetting. Both are real, useful, and neither has actually solved the problem — it's worth being specific about how each one fails, because the failure mode changes what a reader should expect from them.
+
+EWC works by penalizing changes to parameters the network judged important for earlier tasks. Over a long sequence of many tasks, those penalties accumulate: each new task adds its own set of protected parameters, and eventually so much of the network is penalized against change that it can no longer learn new tasks at all. That's not catastrophic forgetting anymore — it's the mirror-image failure, catastrophic rigidity, and it's a direct, unavoidable consequence of how the method works, not an edge case.
+
+Progressive Neural Networks avoid forgetting by never overwriting anything: each new task gets its own new column of the network, connected laterally to the columns before it. That genuinely eliminates forgetting, but only by making network size grow without bound as tasks accumulate — the "always-learning AI systems" this post's future directions section describes would need infinite capacity under this approach, which is not a workable path to the goal it's describing.
+
+The honest state of the field: an approach that avoids both catastrophic forgetting and unbounded growth, at once, is still an open research problem, not something either bio-inspired method listed here has delivered. Each method solves one side of the trade-off by accepting the other, and a reader evaluating either for a real system needs to know which failure mode they're choosing, not just that biology "inspired" a fix.
+
 ## References
 
 - [Overcoming Catastrophic Forgetting in Neural Networks (Kirkpatrick et al., 2017) — Elastic Weight Consolidation](https://www.pnas.org/doi/10.1073/pnas.1611835114)

@@ -67,6 +67,14 @@ Recent work on Neural Cellular Automata (NCA) demonstrates:
 3. Development-inspired architecture search
 4. Biological-scale self-organization
 
+## The Scale Gap Nobody's Closed Yet
+
+The Growing Neural Cellular Automata work cited above is real and the self-repair results are genuinely striking, but this post's "Future Directions" section — "biological-scale self-organization" — glosses over a scaling gap that is currently unaddressed, not just unfinished.
+
+Mordvintsev et al.'s demonstrations operate over small pixel grids: cellular automata with dozens to a few hundred cells, each running an update rule with roughly 8,000 parameters. A real organism's morphogenesis coordinates trillions of cells. Going from "self-repairing pixel patterns on a small grid" to "biological-scale self-organization" isn't a matter of running the same technique longer or on a bigger machine — nothing in the current NCA formulation has been shown to preserve its self-repair and coherence properties as the cell count scales by many orders of magnitude, and there's no existing result establishing that it would.
+
+This matters for how to read the post's "Implications for GenAI" section: "networks that grow their own architecture" and "self-repairing deployed models" are reasonable long-term research directions, grounded in a real, working small-scale demonstration, but the honest state today is a promising proof of concept at a scale several orders of magnitude below anything resembling "self-organizing AI at scale." Treating the current NCA results as evidence the scaling problem is close to solved would be a mistake a careful reader of this post should avoid.
+
 ## References
 
 - [Growing Neural Cellular Automata (Mordvintsev et al., 2020)](https://distill.pub/2020/growing-ca/)

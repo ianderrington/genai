@@ -73,6 +73,14 @@ Reducing communication costs:
 3. Sparse, modular architectures
 4. Energy-aware training and deployment
 
+## The Comparison That Actually Matters Is Different
+
+The "brain runs on 20 watts, GPT-4 training took gigawatt-hours" comparison this post opens with is popular, and it's comparing two different things. The brain's 20 watts is its running (inference) cost. The gigawatt-hours are overwhelmingly training cost — the one-time process of arriving at the weights, not the cost of using them afterward. Comparing a system's steady-state running cost to another system's one-time construction cost isn't a fair efficiency comparison, even though it's the comparison almost every "AI vs. the brain" piece reaches for.
+
+The fair comparison is inference to inference: what does it cost to run a trained model once, versus what a brain costs to run for the same span of time. Framed that way, the honest picture is more mixed than "biology wins" — per-token inference cost for modern models has fallen sharply as techniques like the KV-cache optimizations and quantization covered elsewhere on this site have matured, and the actual energy-per-useful-output gap between a running LLM and a running brain is narrower than the training-cost comparison suggests, though a real, carefully-measured head-to-head is genuinely hard to construct given how differently the two systems represent and produce output.
+
+None of this weakens the real, well-supported parts of this post — sparse activation, event-driven computation, and neuromorphic hardware are genuine, demonstrated efficiency wins, and the Loihi citation above is real production research, not speculation. The correction is narrower and more useful than "AI needs to learn efficiency from biology" as a broad claim: it's that the specific 20-watts-versus-gigawatt-hours framing this post opens with compares the wrong two numbers, and a reader repeating that comparison elsewhere should know it doesn't hold up to scrutiny.
+
 ## References
 
 - [The Remarkable, Yet Not Extraordinary, Human Brain as a Scaled-Up Primate Brain and Its Associated Cost (Herculano-Houzel, 2012)](https://www.pnas.org/doi/10.1073/pnas.1201895109)
