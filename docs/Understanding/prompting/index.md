@@ -82,6 +82,9 @@ It has been found that the quality of responses is governed by the quality of th
 
 !!! tip "Add this to the end of tricky questions 'Before you answer, make a list of wrong assumptions people sometimes make about the concepts included in the question.'"
 
+!!! warning "Read critically, not as settled fact"
+    The 26 tips below come from one paper testing older models (LLaMA-1/2, GPT-3.5/4). Several — politeness having no effect, offering a tip, threatening penalties, using all-caps — are widely circulated but contested claims rather than robust, model-general findings; results on this kind of prompt-phrasing effect vary across models and haven't consistently replicated. Treat structural advice (breaking tasks down, few-shot examples, chain-of-thought) as the solid core, and test phrasing-level tricks against your own actual model and task before relying on them.
+
 ???+ important "[Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4](https://arxiv.org/pdf/2312.16171.pdf)"
 
     **26 Prompting Tips**
@@ -264,8 +267,11 @@ Retrieval-based prompting uses [RAG](../agents/components/memory.md) lookup to i
 
 ### Prompt Tuning
 
-Uses a layer to not change prompts but change the embedding of the prompts.
-- [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/pdf/2104.08691.pdf)
+Uses a layer to not change prompts but change the embedding of the prompts. Three related, easily-confused techniques:
+
+- **Prefix Tuning**: adds several "prefix" tokens to the prompt embedding in both input and hidden layers, then trains the prefix's parameters with gradient descent while leaving the base model's own parameters fixed — [Li & Liang, 2021](https://arxiv.org/abs/2101.00190).
+- **Prompt Tuning**: similar to prefix tuning, but prefix tokens are added only to the input layer, fine-tuned per-task — [Lester, Al-Rfou & Constant, 2021](https://arxiv.org/abs/2104.08691).
+- **P-Tuning**: adds task-specific anchor tokens that can be placed anywhere in the prompt, not just as a fixed prefix, making it more flexible than either of the above — [Liu et al., 2021](https://arxiv.org/abs/2103.10385).
 
 ## Guides and Surveys of Best Practices
 
@@ -299,39 +305,4 @@ Uses a layer to not change prompts but change the embedding of the prompts.
 
 !!! tip "[A good description of advanced prompt tuning](https://cameronrwolfe.substack.com/p/advanced-prompt-engineering)"
 
-## Interesting Research
-
-## Information to Sort into this Document
-
-
-Prefix Tuning [6] adds several "prefix" tokens to the prompt embedding in both input and hidden layers, then trains the parameters of this prefix (leaving model parameters fixed) with gradient descent as a parameter-efficient fine-tuning strategy.
-
-Prompt Tuning [7] is similar to prefix tuning, but prefix tokens are only added to the input layer. These tokens are fine-tuned on each task that the language model solves, allowing prefix tokens to condition the model for a given task.
-
-P-Tuning [8] adds task-specific anchor tokens to the model's input layer that are fine-tuned but allows these tokens to be placed at arbitrary locations (e.g., the middle of the prompt), making the approach more flexible than prefix tuning.
-
-
-
-[6] Li, Xiang Lisa, and Percy Liang. "Prefix-tuning: Optimizing continuous prompts for a generation." arXiv preprint arXiv:2101.00190 (2021).
-
-[7] Lester, Brian, Rami Al-Rfou, and Noah Constant. "The power of scale for parameter-efficient prompt tuning." arXiv preprint arXiv:2104.08691 (2021).
-
-[8] Liu, Xiao, et al. "GPT understands, too." arXiv preprint arXiv:2103.10385 (2021).
-
-[Self consistency technique](https://arxiv.org/pdf/2203.11171.pdf)
-
-## Automatic Prompting Methods 
-
-[Auto prompting](optimizing/auto_prompting.md) is the process of automatically generating or improving prompts and has the ability to improve performance, rendering much of the art of prompting into an engineering problem. See the [auto prompting guide](optimizing/auto_prompting.md) for detailed techniques and implementations.
-
-### Prompt Pattern 
-
-???+ info "Context, Task, Persona, Tone, Examples, Format"
-    | **Category** | **Description**                                                                                         |
-    |--------------|---------------------------------------------------------------------------------------------------------|
-    | Context      | Be very specific. The better is the context the better will be the output.                             |
-    | Task         | Clearly describe what is the task you ask for.                                                         |
-    | Persona      | (Optional) what is your role and what is the role of the tool.                                         |
-    | Tone         | (Optional) use when special "tone" is relevant, for example: formal, casual, funny …                   |
-    | Examples     | (Optional) providing examples of request, expected output are very useful.                             |
-    | Format       | (Optional) use when you need a special format like producing a table, XML, HTML…                       |
+- [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)
