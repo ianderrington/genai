@@ -67,6 +67,11 @@ Creating AI that continuously innovates:
 3. ALife-inspired architecture search
 4. Living AI that adapts in real-time
 
+## References
+
+- [An Approach to the Synthesis of Life (Ray, 1991) — the original Tierra paper](http://tomray.me/pubs/alife2/Ray1991AnApproachToTheSynthesisOfLife.pdf)
+- [Emergent Abilities of Large Language Models (Wei et al., 2022)](https://arxiv.org/abs/2206.07682)
+
 ---
 
 *Life is the universe's proof of concept for intelligence—ALife lets us study how.*

@@ -59,6 +59,12 @@ Traditional fitness measures fail when the opponent also changes.
 3. **League Training**: Structured opponent selection
 4. **Minimum Viable Fitness**: Baseline requirements prevent collapse
 
+## References
+
+- [Generative Adversarial Networks (Goodfellow et al., 2014)](https://arxiv.org/abs/1406.2661)
+- [Emergent Tool Use From Multi-Agent Autocurricula (Baker et al., 2019)](https://arxiv.org/abs/1909.07528)
+- [Mastering the Game of Go with Deep Neural Networks and Tree Search (Silver et al., 2016)](https://www.nature.com/articles/nature16961)
+
 ---
 
 *Co-evolution reminds us that intelligence emerges through interaction, not isolation.*

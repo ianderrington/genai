@@ -64,6 +64,11 @@ DNA computing represents a radical alternative to silicon-based computation, usi
 3. Integration: Interfaces with electronic systems
 4. Programming: Better abstractions required
 
+## References
+
+- [Molecular Computation of Solutions to Combinatorial Problems (Adleman, 1994)](https://www.science.org/doi/10.1126/science.7973651)
+- [DNA Fountain Enables a Robust and Efficient Storage Architecture (Erlich & Zielinski, 2017)](https://www.science.org/doi/10.1126/science.aaj2038)
+
 ---
 
 *DNA has been computing life for billions of years—perhaps it can compute intelligence too.*

@@ -57,6 +57,12 @@ Neuromorphic computing and spiking neural networks aim to bridge this gap, poten
 - Real-time learning
 - More robust generalization
 
+## References
+
+- [The Remarkable, Yet Not Extraordinary, Human Brain as a Scaled-Up Primate Brain and Its Associated Cost (Herculano-Houzel, 2012)](https://www.pnas.org/doi/10.1073/pnas.1201895109)
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [Emergence of Simple-Cell Receptive Field Properties by Learning a Sparse Code for Natural Images (Olshausen & Field, 1996)](https://www.nature.com/articles/381607a0)
+
 ---
 
 *The brain remains our best proof that general intelligence is achievable—studying it reveals paths forward for AI.*

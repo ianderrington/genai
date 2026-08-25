@@ -175,6 +175,13 @@ class WatermarkKeyManager:
 3. **Hardware-bound**: Watermarks tied to generating device
 4. **Standards**: Industry-wide watermarking standards
 
+## References
+
+- [A Watermark for Large Language Models (Kirchenbauer et al., 2023)](https://arxiv.org/abs/2301.10226)
+- [The Stable Signature: Rooting Watermarks in Latent Diffusion Models (Fernandez et al., 2023)](https://arxiv.org/abs/2303.15435)
+- [Tree-Ring Watermarks: Fingerprints for Diffusion Images that are Invisible and Robust (Wen et al., 2023)](https://arxiv.org/abs/2305.20030)
+- [DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature (Mitchell et al., 2023)](https://arxiv.org/abs/2301.11305)
+
 ---
 
 *Watermarking isn't about controlling AI—it's about maintaining trust in an age where seeing isn't believing.*
