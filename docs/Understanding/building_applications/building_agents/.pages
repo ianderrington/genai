@@ -5,3 +5,6 @@ nav:
     - evaluating_and_comparing.md
     - security-threats.md
     - optimizing_agents.md
+    - libraries_and_tools.md
+    - agent_infrastructure.md
+    - ethically.md
