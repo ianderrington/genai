@@ -65,6 +65,16 @@ Traditional fitness measures fail when the opponent also changes.
 - [Emergent Tool Use From Multi-Agent Autocurricula (Baker et al., 2019)](https://arxiv.org/abs/1909.07528)
 - [Mastering the Game of Go with Deep Neural Networks and Tree Search (Silver et al., 2016)](https://www.nature.com/articles/nature16961)
 
+## Why Frontier LLM Training Mostly Avoids Pure Co-evolution
+
+It is worth stating plainly: the labs training today's most capable language models do not rely on pure co-evolutionary self-play, and that choice is informative, not incidental.
+
+Self-play works cleanly in domains with an unambiguous win condition an environment can score automatically — Go, chess, poker, the hide-and-seek physics sandbox. Language quality has no such referee. "Better" is a moving, ambiguous target that depends on human judgment, so a purely co-evolving generator-and-critic pair in language has nothing stable to converge toward — exactly the cycling and complexity-collapse failure modes this post lists as challenges, not edge cases.
+
+The methods that actually shaped frontier LLMs — RLHF and Constitutional AI — sidestep this by deliberately breaking the co-evolutionary loop. A reward model trained once on human preference data (or a fixed set of written principles, in Constitutional AI's case) acts as a mostly-static target, not a co-evolving adversary. The model optimizes against a fixed judge, then the judge is periodically refreshed offline, rather than the two racing each other in real time. That is closer to supervised learning with an unusual loss function than to a Red Queen's race.
+
+The practical takeaway for anyone designing a multi-agent training or evaluation setup: pure co-evolution is a strong choice only when you can specify an objective, automatable win condition. Where the true goal is a fuzzy human preference, a fixed or slowly-updated judge — sacrificing the theoretical elegance of a true arms race — is usually the more stable engineering choice, and the industry's own architecture choices already reflect that trade-off.
+
 ---
 
 *Co-evolution reminds us that intelligence emerges through interaction, not isolation.*

@@ -72,6 +72,14 @@ We can guide model evolution:
 3. Apply selection at multiple levels
 4. Design for evolvability
 
+## Where the Metaphor Misleads
+
+The evolutionary framing above is a useful vocabulary for describing what happens to AI models after release, but it quietly implies something false: that better-performing models reliably win, the way fitter organisms reliably outreproduce weaker ones over enough generations.
+
+That implication does not hold in the AI market, and the gap matters for anyone trying to predict which model or approach will dominate. Biological selection acts on a mostly impartial environment — a trait either helps an organism survive and reproduce, or it does not, and the physics of that environment does not change based on who has more capital. Model "selection" is not judged by an impartial environment. It is shaped by distribution advantage (which model ships inside a product billions of people already use), switching costs (a company's existing prompts, evals, and integrations built around one vendor's API), and capital allocation that can keep a technically inferior model in the market far longer than fitness alone would predict. None of these are fitness in the evolutionary sense — they are closer to incumbency effects, which biology has no clean analogue for.
+
+The honest version of the "evolutionary pressures" framing, then, is narrower than the post above suggests: it describes model selection reasonably well in exactly one setting — an open, low-switching-cost environment like open-weight model downloads or benchmark leaderboards, where a genuinely better model can displace an incumbent quickly because nothing but merit is gating the choice. It describes frontier commercial model competition badly, because incumbency, ecosystem lock-in, and marketing spend routinely outweigh raw capability differences that would decide the outcome in a true selection environment. Treating the metaphor as literal risks the specific mistake of assuming "the best model always wins eventually" — a claim evolutionary biology would only license under conditions the AI market frequently does not meet.
+
 ## References
 
 - [Distilling the Knowledge in a Neural Network (Hinton, Vinyals & Dean, 2015)](https://arxiv.org/abs/1503.02531)

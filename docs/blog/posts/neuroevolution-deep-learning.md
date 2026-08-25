@@ -46,6 +46,16 @@ Recent work has applied neuroevolution to:
 3. Inherent parallelization
 4. Ability to optimize discrete architectural choices
 
+## An Honest Accounting of Where Neuroevolution Actually Stands
+
+The framing above — "neuroevolution represents a paradigm shift" — overstates where this field sits today, and a reader deciding whether to invest time in it deserves the sharper, less flattering version.
+
+Neuroevolution has lost the race against gradient-based methods for the overwhelming majority of problems that matter in practice, and the reason is a simple information-theoretic one, not a fad or a funding accident. A gradient tells you, for every one of a network's billions of parameters, which direction to move it — one backward pass extracts enormous information from a single batch of data. A fitness score in an evolutionary method returns exactly one scalar per candidate, no matter how many parameters that candidate has. As parameter counts grow into the billions, that gap in information-per-sample becomes decisive: population-based black-box search simply cannot compete with gradient descent's sample efficiency at LLM scale, and no amount of algorithmic cleverness in the evolutionary loop changes that fundamental asymmetry.
+
+Even in architecture search, neuroevolution's strongest historical claim to relevance, the field has been substantially displaced. DARTS (Liu et al., 2018) reformulated architecture search as a continuous, differentiable relaxation solvable by gradient descent, and it found competitive architectures orders of magnitude faster than the evolutionary NAS methods that preceded it — because it could use gradients where evolutionary NAS could only use fitness scores.
+
+None of this means neuroevolution is dead; it means its real niche is narrower and more specific than "paradigm shift" suggests. It genuinely still earns its place where the objective truly has no usable gradient — sparse-reward reinforcement learning, non-differentiable simulators, or discrete combinatorial choices where DARTS's continuous relaxation does not apply cleanly. Anyone evaluating neuroevolution for a new project should ask one question first: does a gradient exist for what I'm optimizing? If yes, gradient descent will very likely beat neuroevolution outright, not just on speed but on final quality. If no, neuroevolution remains one of the few tools that works at all.
+
 ## References
 
 - [Evolving Neural Networks Through Augmenting Topologies (Stanley & Miikkulainen, 2002) — NEAT](https://dl.acm.org/doi/10.1162/106365602320169811)
