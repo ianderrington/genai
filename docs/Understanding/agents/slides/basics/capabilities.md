@@ -1,30 +1,17 @@
 # Agent Capabilities
-<div class="grid cards" markdown="1">
-- :material-target: **Goal-Oriented**
 
-  ---
+- **Goal-Oriented**
+    - Sets and pursues objectives
+    - Adapts strategies as needed
 
-  - Sets and pursues objectives
-  - Adapts strategies as needed
+- **Autonomous**
+    - Self-directed operation
+    - Independent decision making
 
-- :material-autorenew: **Autonomous**
+- **Interactive**
+    - Communicates with users/systems
+    - Responds to feedback
 
-  ---
-  
-  - Self-directed operation
-  - Independent decision making
-
-- :material-handshake: **Interactive**
-
-  ---
-
-  - Communicates with users/systems
-  - Responds to feedback
-    
-- :material-book-open: **Learning**
-
-  ---
-
-  - Improves from experience
-  - Updates knowledge base
-</div>
+- **Learning**
+    - Improves from experience
+    - Updates knowledge base
