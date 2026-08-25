@@ -22,7 +22,7 @@ jobs:
     - name: Check links
       uses: lycheeverse/lychee-action@v2
       with:
-        args: --verbose --no-progress --exclude-mail "**/*.md"
+        args: --verbose --no-progress "**/*.md"
         fail: true
         format: markdown
         output: link-check-report.md
