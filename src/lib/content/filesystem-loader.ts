@@ -4,12 +4,47 @@
  */
 
 import { readDirectoryRecursively, readMarkdownFile, getContentDirectory, getAbsolutePath } from './filesystem';
-import { parseFrontmatter, markdownToHtml, generateExcerpt, splitMarkdownIntoSegments } from './markdown';
+import { parseFrontmatter, markdownToHtml, generateExcerpt, splitMarkdownIntoSegments, Author } from './markdown';
 import { generateSlug } from './slugs';
 import { logger } from '../logger';
 import { collectFolderConfigs } from './pages-config';
 import { mergeFrontmatter } from './frontmatter-merge';
 import { Post, ChatSegmentData } from './types';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+import yaml from 'js-yaml';
+
+interface AuthorsConfig {
+  authors: Record<string, { name: string; description?: string; avatar?: string }>;
+}
+
+// docs/blog/.authors.yml holds real author bios (MkDocs blog-plugin convention).
+// A post's frontmatter only stores the short key ("authors: parnian"), so this
+// resolves that key against the real name/bio on every load rather than
+// letting the raw key string leak through as the displayed byline.
+let cachedAuthors: AuthorsConfig['authors'] | null = null;
+function loadBlogAuthors(): AuthorsConfig['authors'] {
+  if (cachedAuthors) return cachedAuthors;
+  try {
+    const authorsPath = join(getContentDirectory(), 'blog', '.authors.yml');
+    const parsed = yaml.load(readFileSync(authorsPath, 'utf8')) as AuthorsConfig;
+    cachedAuthors = parsed?.authors ?? {};
+  } catch {
+    cachedAuthors = {};
+  }
+  return cachedAuthors;
+}
+
+function resolveAuthor(authorsField: unknown): Author | undefined {
+  // Blog posts write `authors: parnian` (a plain string); some other pages
+  // write it as a YAML list (`authors:\n  - parnian`). Resolve the first
+  // name either way — Author only carries a single name/image today.
+  const rawKey = Array.isArray(authorsField) ? authorsField[0] : authorsField;
+  if (typeof rawKey !== 'string' || !rawKey.trim()) return undefined;
+  const entry = loadBlogAuthors()[rawKey.trim()];
+  if (!entry) return undefined;
+  return { name: entry.name, image: entry.avatar };
+}
 
 /**
  * Process a single markdown file into a Post object (filesystem version)
@@ -80,6 +115,16 @@ export async function processMarkdownFile(filePath: string): Promise<Post | null
     }
 
     const metadata = mergedMetadata;
+
+    // Resolve a raw "authors: <key>" frontmatter value against docs/blog/.authors.yml
+    // into a real display name/avatar, unless the post already sets metadata.author
+    // itself (e.g. the homepage/section-index posts, which don't have a blog author).
+    if (!metadata.author && metadata.authors) {
+      const resolved = resolveAuthor(metadata.authors);
+      if (resolved) {
+        metadata.author = resolved;
+      }
+    }
 
     logger.info(`[Metadata Check: ${filePath}] Parsed render_as: '${metadata.render_as}'`);
     const excerpt = await generateExcerpt(markdownContent, 160, filePath);
