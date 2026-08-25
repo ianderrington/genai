@@ -18,7 +18,7 @@ The shift happened for several reasons:
 1. **AI entered high-stakes domains** — healthcare decisions, credit scoring, hiring, law enforcement — where errors have concrete human costs.
 2. **Agentic AI raised the stakes further** — agents that can take actions (book flights, send emails, execute code, move money) carry liability implications that passive chatbots did not.
 3. **Regulation caught up** — the EU AI Act passed, the US established a national AI framework, and China extended its AI content regulations. The era of regulatory silence ended.
-4. **Security incidents accumulated** — 2025 set new records for AI-related security incidents, including $2.3B+ in documented financial losses from GenAI breaches between 2023–2025.
+4. **Security incidents accumulated** — 2025 set new records for AI-related security incidents, including \$2.3B+ in documented financial losses from GenAI breaches between 2023–2025 ([source](https://wald.ai/blog/gen-ai-security-breaches-timeline-20232025-recurring-mistakes-are-the-real-threat)).
 
 ## Key Regulatory Frameworks
 
@@ -48,7 +48,7 @@ The NIST AI RMF (and its companion NIST AI 600-1 for generative AI) provides a v
 
 Governance is not only about external regulation — it also includes the internal practices organisations use to evaluate and control their AI systems before deployment.
 
-**Prompt injection and adversarial inputs** are the most common attack vector against deployed AI systems. In 2025, prompt-based exploits accounted for 35% of all documented AI security incidents. Organisations deploying AI in customer-facing or agentic contexts need red-teaming protocols before launch.
+**Prompt injection and adversarial inputs** are the most common attack vector against deployed AI systems. Around 35% of real-world AI security incidents in 2025 were triggered by a simple prompt alone, with no traditional exploit code involved, per Adversa AI's 2025 threat report. Organisations deploying AI in customer-facing or agentic contexts need red-teaming protocols before launch.
 
 **Alignment techniques** — RLHF, DPO, constitutional AI, and process reward models — shape how models behave relative to intended values. Understanding alignment is increasingly relevant not only for model developers but for organisations doing fine-tuning.
 

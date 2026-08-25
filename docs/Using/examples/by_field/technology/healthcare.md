@@ -31,7 +31,7 @@ graph TD
     D --> D2[Health Digital Twins]
     D --> D3[Patient Monitoring]
 
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px,color:#111;
 ```
 
 ### LLM-based Agentic Systems in Healthcare

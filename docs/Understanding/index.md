@@ -10,9 +10,9 @@ bullets:
   - Ready to start your GenAI journey? Choose your adventure below!
 ---
 
-#  Understanding Gen🔮AI! 
+# Understanding GenAI
 
-Here you'll find what you need to know to understand (eventually) everything you need to know about creating and using Gen()AI. 
+Here you'll find what you need to know about how Gen()AI works, how it's built, and how to use it.
 
 
 [Choose your adventure!](#choose-your-adventure){ .md-button .md-button--primary }
@@ -70,11 +70,11 @@ Here you'll find what you need to know to understand (eventually) everything you
         click Compliance "/using/managing"
         click Gov "/understanding/governance"
 
-        classDef warmColor fill:#f9d5e5,stroke:#333,stroke-width:2px;
-        classDef midColor fill:#f0e5d8,stroke:#333,stroke-width:2px;
-        classDef buyColor fill:#f4e7d3,stroke:#333,stroke-width:2px;
-        classDef coolColor fill:#d5e8d4,stroke:#333,stroke-width:2px;
-        classDef newColor fill:#e8d5f5,stroke:#333,stroke-width:2px;
+        classDef warmColor fill:#f9d5e5,stroke:#333,stroke-width:2px,color:#111;
+        classDef midColor fill:#f0e5d8,stroke:#333,stroke-width:2px,color:#111;
+        classDef buyColor fill:#f4e7d3,stroke:#333,stroke-width:2px,color:#111;
+        classDef coolColor fill:#d5e8d4,stroke:#333,stroke-width:2px,color:#111;
+        classDef newColor fill:#e8d5f5,stroke:#333,stroke-width:2px,color:#111;
 
         class Understand warmColor;
         class Build midColor;
@@ -142,11 +142,11 @@ Here you'll find what you need to know to understand (eventually) everything you
         FrontEnd[Front<br>End] <--> User
 
         
-        classDef dataColor fill:#e6e6e6,stroke:#333,stroke-width:2px;
-        classDef llmColor fill:#add8e6,stroke:#333,stroke-width:2px;
-        classDef orchestrationColor fill:#f9d5e5,stroke:#333,stroke-width:2px;
-        classDef hostingColor fill:#fada5e,stroke:#333,stroke-width:2px;
-        classDef finalColor fill:#d4edda,stroke:#333,stroke-width:2px;
+        classDef dataColor fill:#e6e6e6,stroke:#333,stroke-width:2px,color:#111;
+        classDef llmColor fill:#add8e6,stroke:#333,stroke-width:2px,color:#111;
+        classDef orchestrationColor fill:#f9d5e5,stroke:#333,stroke-width:2px,color:#111;
+        classDef hostingColor fill:#fada5e,stroke:#333,stroke-width:2px,color:#111;
+        classDef finalColor fill:#d4edda,stroke:#333,stroke-width:2px,color:#111;
         
         class RawData dataColor;
         class DataCleaning dataColor;
@@ -230,7 +230,7 @@ If you are working on commercial projects, be sure to look at the Licenses to en
 
 🚨 And please, whatever you do, be cognisant of the [ethical concerns](../Using/ethically/index.md) 
 
-Generative AI is a subset of machine learning that aim to creates new data samples or information based on an input. This technology has gained significant attention recently because they have been able to produce high-quality, realistic data across various domains, from images and videos to text and audio. 🌈
+Generative AI is a subset of machine learning that aims to create new data samples or information based on an input. This technology has gained significant attention recently because it has been able to produce high-quality, realistic data across various domains, from images and videos to text and audio.
 
 !!! warning "Presentation bias"
     This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managenai/contributing.md)

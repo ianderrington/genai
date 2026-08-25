@@ -3,7 +3,7 @@ Allow: /
 
 Sitemap: https://www.managen.ai/sitemap.xml
 
-# Allow citation/retrieval bots (drive LLM visibility — keep them)
+# Allow citation/retrieval bots (drive LLM visibility, keep them)
 User-agent: ClaudeBot
 Allow: /
 
@@ -16,11 +16,18 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# Block training scrapers (model training, not citation)
-User-agent: GPTBot
-Disallow: /
+# OAI-SearchBot indexes for ChatGPT Search; ChatGPT-User fetches a page live
+# when a person asks ChatGPT to browse or cite it. Neither trains a model,
+# both are citation/retrieval bots like the ones above, not training
+# scrapers, so they belong in the allow list, not the block list below.
+User-agent: OAI-SearchBot
+Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+# Block training scrapers (model training, not citation)
+User-agent: GPTBot
 Disallow: /
 
 User-agent: CCBot

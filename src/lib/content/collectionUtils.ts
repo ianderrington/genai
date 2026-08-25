@@ -2,6 +2,7 @@ import { Post } from '@/lib/content';
 import { readPagesConfig, sortByPagesConfig } from '@/lib/content/pages-config';
 import path from 'path';
 import { getContentDirectory } from '@/lib/content/filesystem';
+import { humanizeSlug } from '@/lib/content/slugs';
 import { logger } from '../logger';
 
 export interface FolderItem {
@@ -122,7 +123,7 @@ export async function prepareGridItems(
       slug: folderName,
       fullSlug: folderSlug, // Keep the full slug for proper path resolution
       section,
-      title: indexPost?.metadata.title || folderName,
+      title: indexPost?.metadata.title || humanizeSlug(folderName),
       description: indexPost?.metadata.description,
       path: `/${section}/${folderSlug}`, // Keep the full path for proper routing
       metadata: indexPost?.metadata,
@@ -139,7 +140,7 @@ export async function prepareGridItems(
       slug: folderName,
       fullSlug: folderSlug, // Keep the full slug for proper path resolution
       section,
-      title: indexPost.metadata.title || folderName,
+      title: indexPost.metadata.title || humanizeSlug(folderName),
       description: indexPost.metadata.description,
       path: `/${section}/${folderSlug}`, // Keep the full path for proper routing
       metadata: indexPost.metadata,

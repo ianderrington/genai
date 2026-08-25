@@ -186,7 +186,13 @@ const SearchBar: React.FC<SearchBarProps> = ({ className, isMobile = false, onCl
   return (
     <div className={`relative group ${className}`} ref={searchRef}>
       <form onSubmit={handleSubmit}>
-        <div className={`flex items-center transition-all duration-200 ease-in-out ${isExpanded ? 'w-96' : 'w-10'}`}>
+        <div
+          className={`flex items-center transition-all duration-200 ease-in-out ${
+            isExpanded
+              ? 'absolute right-0 top-1/2 -translate-y-1/2 w-[min(24rem,calc(100vw-2rem))] z-10'
+              : 'relative w-10'
+          }`}
+        >
           <input
             ref={inputRef}
             type="text"

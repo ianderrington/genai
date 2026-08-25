@@ -1,9 +1,9 @@
 # Examples
 
-There are many numerous use cases by field and modality, but they tend to follow in the following end-uses.
+There are many use cases across different fields and content types, but most fall into a small set of end-uses.
 
 ### Assistants
-Assistants are those who do complete tasks, much like agents in [baby AGI](../../Understanding/agents/examples/index.md). Their domain of function may be limited primarily by the [tools and plugins](../../Understanding/agents/components/actions_and_tools.md).
+An assistant completes tasks on your behalf, the way a [production agent framework](../../Understanding/agents/index.md) does today. What it can actually do is set by the [tools and plugins](../../Understanding/agents/components/actions_and_tools.md) it has access to.
 
 
 ??? abstract "[Skyvern](https://github.com/Skyvern-AI/skyvern) automates browser-based workflows using LLMs and computer vision. It provides a simple API endpoint to fully automate manual workflows, replacing brittle or unreliable automation solutions."
