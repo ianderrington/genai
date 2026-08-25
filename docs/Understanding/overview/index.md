@@ -13,6 +13,9 @@ The ability of computers and algorithms to generate art, literature, and other f
 
 This document provides a high-level overview of how Gen()AI achieves this feat. 
 
+!!! tip "New to AI entirely?"
+    This page assumes you already know roughly what a model is. If you don't, or terms like "parameter" and "training" aren't yet familiar, start with [AI and ML Basics](ai_and_ml_basics/index.md) instead, it explains everything from zero, with no assumed background.
+
 Before delving into the details, let's first understand what Gen()AI is.
 
 ## Defining Gen()AI
