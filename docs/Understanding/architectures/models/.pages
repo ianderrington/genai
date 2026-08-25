@@ -3,6 +3,8 @@ nav:
     - transformers.md
     - multimodal.md
     - diffusion_models.md
+    - world_models.md
+    - small_models.md
     - developing_architectures.md
     - gans.md
     - ...

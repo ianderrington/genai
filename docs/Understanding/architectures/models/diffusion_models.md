@@ -170,6 +170,8 @@ Fine-grained control over generation:
 - DiT (Diffusion Transformer) architecture
 - Impressive temporal consistency
 
+See [World Models and Video Generation](./world_models.md) for the full landscape: Sora 2, Veo, Kling, and the distinct, interactive category (Genie) that generates a navigable world rather than a fixed clip.
+
 ## Sampling Algorithms
 
 | Sampler | Steps | Quality | Notes |
