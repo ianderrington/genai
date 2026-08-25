@@ -8,7 +8,21 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { resolveImagePath } from "@/lib/imageUtils";
 import CollectionDisplay from "@/components/CollectionDisplay";
 import { prepareCollectionRenderData } from "@/lib/content/collectionRenderer";
-import { ArticleSchema, BreadcrumbSchema } from "@/lib/docs-kit";
+import { ArticleSchema, BreadcrumbSchema, DefinedTermSetSchema } from "@/lib/docs-kit";
+
+// Parses "**Term**: definition" entries out of the glossary's raw markdown so
+// its structured data doesn't need a second, hand-maintained copy of every
+// term. Only ever called for the one glossary page (see the isGlossaryPage
+// check below), so it doesn't need to be general-purpose.
+function parseGlossaryTerms(markdown: string): Array<{ term: string; definition: string }> {
+  const terms: Array<{ term: string; definition: string }> = [];
+  const termRe = /^\*\*(.+?)\*\*:\s*(.+)$/gm;
+  let match: RegExpExecArray | null;
+  while ((match = termRe.exec(markdown)) !== null) {
+    terms.push({ term: match[1].trim(), definition: match[2].trim() });
+  }
+  return terms;
+}
 
 // Content is markdown checked into the repo and only changes on deploy, so
 // ISR with a long revalidate window is safe and avoids re-parsing markdown
@@ -97,6 +111,13 @@ export default async function Page({ params }: PageProps) {
             keywords={renderData.indexPost.metadata.tags}
           />
           <BreadcrumbSchema items={breadcrumbItems} />
+          {section === "understanding" && slug.join("/") === "glossary" && (
+            <DefinedTermSetSchema
+              name={renderData.indexPost.metadata.title}
+              url={fullUrl}
+              terms={parseGlossaryTerms(renderData.indexPost.content)}
+            />
+          )}
         </>
       )}
 
