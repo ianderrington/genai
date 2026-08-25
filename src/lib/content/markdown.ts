@@ -847,6 +847,15 @@ function remarkProcessWarnings() {
  * @returns The generated excerpt
  */
 export async function generateExcerpt(content: string, maxLength: number = 160, filePath?: string): Promise<string> {
+  // Strip a leading "# Title" heading (and the blank line after it) before
+  // looking for the first paragraph. Without this, a post whose H1 is
+  // immediately followed by a blank line — which is normal, correct
+  // markdown — has its excerpt captured as just the heading text itself:
+  // the "first paragraph" regex below stops at the first "\n\n", and for
+  // "# Ethically\n\n..." that's the heading alone, producing a card
+  // subtitle that's a verbatim duplicate of the title.
+  content = content.replace(/^#\s+.+\n+/, '');
+
   // Check for the more tag (handle both formats: <!--more--> and <!-- more -->)
   let moreTagIndex = content.indexOf('<!--more-->');
   if (moreTagIndex === -1) {
