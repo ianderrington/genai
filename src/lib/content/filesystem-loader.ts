@@ -34,11 +34,20 @@ export async function processMarkdownFile(filePath: string): Promise<Post | null
 
     // Derive title from file path if not provided (support MkDocs-style docs without title)
     if (!fileFrontmatter.title) {
-      const pathParts = filePath.replace(/\.(md|mdx)$/, '').split('/');
-      const lastPart = pathParts[pathParts.length - 1];
-      (fileFrontmatter as any).title = lastPart === 'index'
-        ? pathParts[pathParts.length - 2]?.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) || 'Index'
-        : lastPart.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+      // Prefer the post's own first H1 heading — authors write real casing
+      // there (e.g. "AI", not "Ai"), and it carries the full title including
+      // any subtitle after a colon, neither of which the filename can. Only
+      // fall back to a filename-derived title when no H1 exists.
+      const h1Match = markdownContent.match(/^#\s+(.+)$/m);
+      if (h1Match) {
+        (fileFrontmatter as any).title = h1Match[1].trim();
+      } else {
+        const pathParts = filePath.replace(/\.(md|mdx)$/, '').split('/');
+        const lastPart = pathParts[pathParts.length - 1];
+        (fileFrontmatter as any).title = lastPart === 'index'
+          ? pathParts[pathParts.length - 2]?.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) || 'Index'
+          : lastPart.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+      }
       logger.warn(`Auto-derived title for ${filePath}: "${(fileFrontmatter as any).title}"`);
     }
 
