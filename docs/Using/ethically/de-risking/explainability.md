@@ -1,3 +1,4 @@
-Explainability can be very useful in anticipating failures identifying solutions to GenAI models and their effective alignment.
+Explainability can be very useful in anticipating failures, identifying solutions to GenAI model problems, and effective alignment.
 
-!!! important "[Transformer Debugger, but OpenAI Superalignment's team](https://github.com/openai/transformer-debugger?) provides an important tool to answer the question 'Why' a model acted in certain ways."
+!!! important "[Transformer Debugger (OpenAI Superalignment)](https://github.com/openai/transformer-debugger)"
+    An interpretability tool combining automated interpretability techniques with sparse autoencoders, letting you inspect individual neurons and attention heads to answer "why" a model produced a given output.
