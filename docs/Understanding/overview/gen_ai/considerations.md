@@ -67,4 +67,4 @@ The technology may be found to have dual-use, or that which is harmful, _instead
 
 ## References
 
-!!! note "[Open challenges in LLM research](LLMhttps://huyenchip.com/2023/08/16/llm-research-open-challenges.html#5_design_a_new_model_architecture)"
+!!! note "[Open challenges in LLM research](https://huyenchip.com/2023/08/16/llm-research-open-challenges.html#5_design_a_new_model_architecture)"
