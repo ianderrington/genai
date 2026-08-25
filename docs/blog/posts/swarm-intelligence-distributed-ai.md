@@ -69,6 +69,11 @@ Murmurations emerge from simple rules:
 - Graceful degradation
 - Self-organization
 
+## References
+
+- [The Ant System: Optimization by a Colony of Cooperating Agents (Dorigo, Maniezzo & Colorni, 1996)](https://iridia.ulb.ac.be/~mdorigo/Published_papers/All_Dorigo_papers/DorDic1999cec.pdf)
+- [Flocks, Herds, and Schools: A Distributed Behavioral Model (Reynolds, 1987)](https://www.red3d.com/cwr/papers/1987/boids.html)
+
 ---
 
 *The wisdom of crowds, computationally implemented, may exceed any individual genius.*

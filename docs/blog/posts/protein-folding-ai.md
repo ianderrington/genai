@@ -55,6 +55,10 @@ AlphaFold demonstrates that:
 3. Domain expertise combined with ML yields breakthroughs
 4. Iteration and competition (CASP) drive progress
 
+## References
+
+- [Highly Accurate Protein Structure Prediction with AlphaFold (Jumper et al., 2021)](https://www.nature.com/articles/s41586-021-03819-2)
+
 ---
 
 *AlphaFold shows that AI can accelerate scientific discovery by orders of magnitude—what other 50-year problems await?*

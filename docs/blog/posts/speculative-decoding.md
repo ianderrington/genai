@@ -217,6 +217,11 @@ outputs = model.generate(
 )
 ```
 
+## References
+
+- [Fast Inference from Transformers via Speculative Decoding (Leviathan et al., 2023)](https://arxiv.org/abs/2211.17192)
+- [Efficient Memory Management for Large Language Model Serving with PagedAttention (Kwon et al., 2023) — vLLM](https://arxiv.org/abs/2309.06180)
+
 ---
 
 *Speculative decoding exemplifies a key principle: the hardest problems often have solutions that exploit structure we didn't know we had.*

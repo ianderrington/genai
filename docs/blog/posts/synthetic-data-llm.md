@@ -215,6 +215,13 @@ Generation N: Collapsed to single mode
 | Mix with real data | Go fully synthetic |
 | Monitor for collapse | Iterate blindly |
 
+## References
+
+- [Self-Instruct: Aligning Language Models with Self-Generated Instructions (Wang et al., 2022)](https://arxiv.org/abs/2212.10560)
+- [WizardLM: Empowering Large Language Models to Follow Complex Instructions (Xu et al., 2023) — Evol-Instruct](https://arxiv.org/abs/2304.12244)
+- [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073)
+- [The Curse of Recursion: Training on Generated Data Makes Models Forget (Shumailov et al., 2023) — model collapse](https://arxiv.org/abs/2305.17493)
+
 ---
 
 *Synthetic data is not a replacement for human data—it's an amplifier that lets us extract more value from the human data we have.*
