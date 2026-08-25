@@ -168,12 +168,20 @@ class WatermarkKeyManager:
         return None
 ```
 
+## Industry Standards and Deployment (2026)
+
+The academic techniques above are now backed by two deployed, cross-industry provenance systems, not just research papers:
+
+- **C2PA / Content Credentials**: ratified as C2PA 2.1 in 2025, now an ISO standard (ISO/IEC 22144). It attaches a cryptographically signed provenance record to a file (who created it, what tools touched it, whether AI generated or edited it) instead of hiding a signal in the content itself. Adoption by 2026: Microsoft 365 embeds it automatically, LinkedIn shows a clickable "CR" badge on credentialed images, TikTok has labeled over 1.3 billion AI-generated videos through it, and Google's Pixel 10 is the first smartphone to hit the top tier of the C2PA Conformance Program.
+- **Google SynthID**: an embedded, imperceptible watermark (the technique family covered above), not a metadata record, so it survives re-encoding and cropping in ways a metadata-only approach can't. Google DeepMind reports over 100 billion images, videos, and audio files watermarked since its 2023 launch. OpenAI, Kakao, ElevenLabs, and Nvidia adopted it as of May 2026.
+
+The two are complementary, not competing: C2PA is verifiable provenance metadata, SynthID is a robust embedded signal, and platforms increasingly ship both together. C2PA and SynthID detection are rolling out into Google Search and Chrome (already live in the Gemini app), which is the first time watermark verification has reached mainstream consumer surfaces rather than staying a research or platform-internal tool.
+
 ## Future Directions
 
 1. **Semantic watermarks**: Survive paraphrasing
 2. **Zero-knowledge proofs**: Verify without revealing key
-3. **Hardware-bound**: Watermarks tied to generating device
-4. **Standards**: Industry-wide watermarking standards
+3. **Hardware-bound**: Watermarks tied to generating device, as Pixel 10's C2PA-at-capture already does for video
 
 ## References
 
@@ -181,6 +189,8 @@ class WatermarkKeyManager:
 - [The Stable Signature: Rooting Watermarks in Latent Diffusion Models (Fernandez et al., 2023)](https://arxiv.org/abs/2303.15435)
 - [Tree-Ring Watermarks: Fingerprints for Diffusion Images that are Invisible and Robust (Wen et al., 2023)](https://arxiv.org/abs/2305.20030)
 - [DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature (Mitchell et al., 2023)](https://arxiv.org/abs/2301.11305)
+- [C2PA Adoption Status 2026: Content Credentials, OpenAI & Google](https://www.eyesift.com/faq/c2pa-content-credentials-2026-cryptographic-provenance-adoption/)
+- [OpenAI and Google Align on C2PA and SynthID: A Turning Point for Content Provenance](https://c2paviewer.com/articles/openai-google-c2pa-synthid-2026)
 
 ---
 
