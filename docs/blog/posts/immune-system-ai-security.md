@@ -72,6 +72,14 @@ Applications:
 3. Immune-inspired architectures
 4. Self-supervised threat detection
 
+## Why AIS Lost to Ordinary Anomaly Detection
+
+Negative selection is an elegant algorithm, and it's worth being honest that elegance hasn't translated into adoption. Production security systems today overwhelmingly do not run artificial immune systems.
+
+The reason is a practical one, not a conceptual flaw in the biological idea. Negative selection generates random detectors and discards those matching "self," which means detector quality depends entirely on how well-sampled and complete the "self" definition is up front — a static baseline that has to be periodically regenerated as normal system behavior legitimately drifts. Ordinary supervised and unsupervised anomaly detection (autoencoders trained to reconstruct normal traffic, isolation forests, modern deep-learning-based intrusion detection) instead learns a continuous, updatable model of what normal looks like directly from data, and on real intrusion-detection benchmarks these methods routinely outperform negative-selection AIS on both detection rate and false-positive rate.
+
+This doesn't make the immune-system framing worthless — the vocabulary (self/non-self discrimination, diversity of detectors, adaptive memory) is a genuinely useful way to reason about what a defense-in-depth security architecture needs to do. But it's worth being precise about which part of the analogy paid off: the *concepts* (distributed detection, no single point of failure, adaptive memory) have been absorbed into how security engineers think about the problem, while the *specific algorithm* (negative selection as originally proposed) has been outcompeted by methods that borrow none of its biological mechanics. That's a common and underreported pattern in bio-inspired AI: the metaphor survives as a way of thinking long after the literal algorithm it inspired has been replaced by something that works better and looks nothing like biology.
+
 ## References
 
 - [Self-Nonself Discrimination in a Computer (Forrest et al., 1994) — the original negative-selection algorithm paper](https://ieeexplore.ieee.org/document/1202865/)

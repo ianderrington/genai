@@ -69,6 +69,14 @@ DNA computing represents a radical alternative to silicon-based computation, usi
 - [Molecular Computation of Solutions to Combinatorial Problems (Adleman, 1994)](https://www.science.org/doi/10.1126/science.7973651)
 - [DNA Fountain Enables a Robust and Efficient Storage Architecture (Erlich & Zielinski, 2017)](https://www.science.org/doi/10.1126/science.aaj2038)
 
+## Thirty Years, Still a Proof of Concept
+
+It's worth naming the actual state of this field honestly, because the "Future Vision" section above (hybrid silicon-DNA systems, DNA for specific AI subroutines) reads as a near-term roadmap, and the field's own track record says otherwise.
+
+Adleman's original demonstration, solving a seven-node Hamiltonian path problem with DNA, was in 1994. Thirty years on, DNA computing has never scaled to a problem interesting enough to beat conventional silicon at speed on any practical task. This isn't a failure of individual demonstrations; each of the applications this post lists (combinatorial problem solving, pattern recognition, molecular classifiers) is real and has been shown to work in a lab. The consistent pattern is that none of them have scaled past small proof-of-concept instances into something faster or cheaper than a laptop for the same task, and the field has stayed at that stage for three decades, not a few years.
+
+The "hours to days per computation" limitation this post lists under "Limitations" is doing more work than a bullet point suggests: it means DNA computing has never been in the running for latency-sensitive AI workloads, and its actual demonstrated niche, ultra-dense archival data storage where speed doesn't matter, is a genuinely real and useful application (this site's own [DNA Fountain reference](#references) below is real, working, commercially relevant work). Reading this post's "AI subroutines" framing as an imminent AI computing substrate, rather than the narrow archival-storage niche the field has actually delivered on, is the mistake worth avoiding.
+
 ---
 
 *DNA has been computing life for billions of years—perhaps it can compute intelligence too.*

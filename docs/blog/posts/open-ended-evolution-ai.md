@@ -68,6 +68,14 @@ If we could harness open-ended evolution:
 - Automatic generation of training curricula
 - Discovery of solutions we couldn't imagine
 
+## Why POET's Open-Endedness Is Bounded, Not Genuine
+
+This post's own phrase — POET's process "appears open-ended (for a time)" — is the most honest sentence in the piece, and it's worth explaining precisely why that qualifier is doing so much work, because it names the field's actual unsolved core problem rather than a minor caveat.
+
+POET generates new environments by varying a fixed set of parameters researchers chose in advance: terrain roughness, obstacle placement, gap width. What looks like unbounded complexity growth is really the system exhausting a large but ultimately finite designed search space. Once the environment generator has produced every meaningfully different combination its parameterization allows, novelty necessarily stops, no matter how sophisticated the agents solving those environments become. That is a fundamentally different kind of limit than what biological evolution faced: nothing in Earth's early environment "asked for" or parameterized the possibility of multicellularity, sexual reproduction, or a nervous system. Those were not points in a pre-defined search space being explored; they were qualitatively new kinds of structure that changed what the search space even was.
+
+This is the actual distinction between optimization and genuine open-endedness, and it is still unsolved, not a solved problem this post's optimistic framing suggests. A system is only as open-ended as the representation its designers chose to vary — and every representation, no matter how large, is finite. The real research frontier isn't "make POET's environment generator bigger" (that only delays the plateau, it doesn't remove it); it's finding a mechanism where the system can invent genuinely new kinds of variation nobody parameterized in advance, which is precisely the property that made biological evolution open-ended and that no artificial system has yet demonstrated at any meaningful scale.
+
 ## References
 
 - [Paired Open-Ended Trailblazer (POET) (Wang et al., 2019)](https://arxiv.org/abs/1901.01753)

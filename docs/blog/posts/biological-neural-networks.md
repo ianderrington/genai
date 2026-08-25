@@ -57,6 +57,14 @@ Neuromorphic computing and spiking neural networks aim to bridge this gap, poten
 - Real-time learning
 - More robust generalization
 
+## The Field's Winning Strategy Was the Opposite of Biological Realism
+
+This post's framing implies AI needs to catch up to biological realism: more dendritic complexity, spike timing, energy efficiency. It's worth stating the historical counter-fact plainly, because it changes what "the gap" this post describes actually means.
+
+Cybenko proved in 1989 that a network with a single hidden layer of simple point neurons — no dendritic computation, no spike timing, no biological realism at all — can approximate any continuous function to arbitrary precision, given enough units. The raw expressive-power argument for needing biological realism was settled, mathematically, decades before deep learning worked. It was never the bottleneck. What actually made AI work was the opposite move from the one this post's "future directions" section points toward: strip biological detail away, keep a simple point neuron and backpropagation, and pour in scale — more parameters, more data, more compute.
+
+Spiking neural networks, the direct attempt to build the biological realism this post recommends, have existed alongside deep learning for just as long, and after decades of work they still do not outperform simple point-neuron networks on nearly any task that matters in practice — image recognition, language modeling, game-playing. Biological realism turned out to buy energy efficiency in specific low-power edge hardware (this is real, and it's where neuromorphic chips like Loihi earn their keep), not general capability. The honest lesson from the brain is narrower than "AI should be more brain-like": it's that scale plus a crude computational abstraction beat biological fidelity for capability, and biological fidelity only wins on the specific axis of energy per operation.
+
 ## References
 
 - [The Remarkable, Yet Not Extraordinary, Human Brain as a Scaled-Up Primate Brain and Its Associated Cost (Herculano-Houzel, 2012)](https://www.pnas.org/doi/10.1073/pnas.1201895109)
