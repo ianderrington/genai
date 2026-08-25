@@ -87,6 +87,13 @@ Here you'll find what you need to know about how Gen()AI works, how it's built, 
 
     ```
 
+    **How to read this**: pick a path based on what you already know, not the diagram's shape.
+
+    - **Start Here** (pink) assumes no background. If any of these nodes are unfamiliar, begin with [AI and ML Basics](overview/ai_and_ml_basics/index.md) first, it's not on this diagram but it's the actual zero-background starting point.
+    - **Build** (tan) assumes you already know the basics and want the technical detail behind building your own models or applications, this is the deepest, most technical path.
+    - **Buy it** (cream) assumes you're evaluating existing tools and vendors rather than building from scratch, no deep technical background needed.
+    - **Use** (green) covers deployment, governance, and compliance, relevant once something is built or bought and needs to run in production.
+
 ## Component interactions
 
 !!!+ tip "Component of LLM-based GenAI (clickable)"
