@@ -3549,6 +3549,25 @@ details.admonition > .admonition-body {
 .admonition-abstract, .admonition-example  { border-left-color: #aa00ff; background: rgba(170, 0, 255, 0.06); }
 .admonition-quote    { border-left-color: #9e9e9e; background: rgba(158, 158, 158, 0.06); }
 
+/* Type icons — the color-coding above was already correct but subtle (only
+   a 4px border), so every admonition looked visually flat regardless of
+   type. These key off the same .admonition-{type} classes docs-kit already
+   emits; no markdown or component change needed. Scoped to `p.admonition-
+   title` only (the non-collapsible `!!!` case) — the collapsible `???` case
+   renders its title on a <summary class="admonition-title">, which already
+   owns its own ::before for the open/closed triangle (see
+   `details.admonition > summary::before` above); a second ::before rule on
+   the same element would silently replace the triangle instead of adding
+   to it, so summary is deliberately left alone here. */
+p.admonition-title::before { margin-right: 0.4em; }
+.admonition-note p.admonition-title::before,     .admonition-info p.admonition-title::before     { content: "ℹ️"; }
+.admonition-tip p.admonition-title::before,      .admonition-success p.admonition-title::before   { content: "💡"; }
+.admonition-warning p.admonition-title::before,  .admonition-question p.admonition-title::before,
+.admonition-important p.admonition-title::before,.admonition-caution p.admonition-title::before   { content: "⚠️"; }
+.admonition-danger p.admonition-title::before,   .admonition-failure p.admonition-title::before, .admonition-bug p.admonition-title::before { content: "🛑"; }
+.admonition-abstract p.admonition-title::before, .admonition-example p.admonition-title::before   { content: "📄"; }
+.admonition-quote p.admonition-title::before     { content: "❝"; }
+
 /* Inline images inside admonition titles (e.g. GitHub badge shields) */
 .admonition-title-img {
   display: inline;
