@@ -854,6 +854,14 @@ function remarkProcessWarnings() {
  * @returns The generated excerpt
  */
 export async function generateExcerpt(content: string, maxLength: number = 160, filePath?: string): Promise<string> {
+  // gray-matter's `content` field keeps the blank line that normally follows
+  // the closing frontmatter fence, so content typically starts with "\n#
+  // Heading...". Every regex below is anchored with `^` and `.` never
+  // matches `\n`, so that leading newline made both the heading-strip and
+  // the first-paragraph match fail silently, leaving excerpt empty for any
+  // post without an explicit frontmatter `description:` (most blog posts).
+  content = content.trimStart();
+
   // Strip every leading heading line (and the blank line after each one)
   // before looking for the first paragraph. Without this, a post whose
   // heading is immediately followed by a blank line — which is normal,
