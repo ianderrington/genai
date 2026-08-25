@@ -67,6 +67,10 @@ Recent work on Neural Cellular Automata (NCA) demonstrates:
 3. Development-inspired architecture search
 4. Biological-scale self-organization
 
+## References
+
+- [Growing Neural Cellular Automata (Mordvintsev et al., 2020)](https://distill.pub/2020/growing-ca/)
+
 ---
 
 *A cell doesn't know it's building a brain—yet brains reliably emerge. Can we achieve similar miracles in AI?*

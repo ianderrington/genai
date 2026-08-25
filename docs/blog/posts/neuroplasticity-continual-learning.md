@@ -73,6 +73,11 @@ Minimizing interference:
 3. Efficient online adaptation
 4. Biological-scale continual learning
 
+## References
+
+- [Overcoming Catastrophic Forgetting in Neural Networks (Kirkpatrick et al., 2017) — Elastic Weight Consolidation](https://www.pnas.org/doi/10.1073/pnas.1611835114)
+- [Progressive Neural Networks (Rusu et al., 2016)](https://arxiv.org/abs/1606.04671)
+
 ---
 
 *The brain never stops learning—our AI should aspire to the same adaptability.*

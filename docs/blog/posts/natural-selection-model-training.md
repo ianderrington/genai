@@ -72,6 +72,10 @@ We can guide model evolution:
 3. Apply selection at multiple levels
 4. Design for evolvability
 
+## References
+
+- [Distilling the Knowledge in a Neural Network (Hinton, Vinyals & Dean, 2015)](https://arxiv.org/abs/1503.02531)
+
 ---
 
 *Understanding the evolutionary dynamics of AI development helps us steer toward beneficial outcomes.*

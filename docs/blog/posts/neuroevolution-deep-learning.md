@@ -46,6 +46,11 @@ Recent work has applied neuroevolution to:
 3. Inherent parallelization
 4. Ability to optimize discrete architectural choices
 
+## References
+
+- [Evolving Neural Networks Through Augmenting Topologies (Stanley & Miikkulainen, 2002) — NEAT](https://dl.acm.org/doi/10.1162/106365602320169811)
+- [A Hypercube-Based Encoding for Evolving Large-Scale Neural Networks (Stanley et al., 2009) — HyperNEAT](https://direct.mit.edu/artl/article-abstract/15/2/185/2634/A-Hypercube-Based-Encoding-for-Evolving-Large)
+
 ---
 
 *Understanding the biological roots of AI helps us build more robust and creative systems.*

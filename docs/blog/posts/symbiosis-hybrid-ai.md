@@ -83,6 +83,10 @@ Partnerships persist over time:
 3. Self-organizing hybrid systems
 4. Evolution of AI-AI symbioses
 
+## References
+
+- [On the Origin of Mitosing Cells (Sagan/Margulis, 1967) — the founding endosymbiotic theory paper](https://embryo.asu.edu/pages/origin-mitosing-cells-1967-lynn-sagan)
+
 ---
 
 *The most successful organisms aren't loners—they're collaborators. So should be our AI.*
