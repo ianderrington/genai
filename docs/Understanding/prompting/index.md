@@ -26,41 +26,27 @@ It has been found that the quality of responses is governed by the quality of th
 
 ### General Terms
 
-**Prompt**: A prompt is an input or instruction given to a generative AI model to produce a specific output.
-
-**Prompt Template**: A structured format for prompts that can be reused with different variables or inputs.
-
-**Prompt Chain**: A sequence of prompts where the output of one prompt is used as the input for the next.
-
-**Prompting, Prompting Frameworks, Prompting Techniques**: The methods and strategies used to create and structure prompts to achieve desired outputs from AI models.
-
-**Prompt Engineering and Prompt Engineering Techniques**: The practice of designing and refining prompts to optimize the performance and accuracy of AI models.
-
-### Components
+- **Prompt**: an input or instruction given to a generative AI model to produce a specific output.
+- **Prompt Template**: a structured format for prompts that can be reused with different variables or inputs.
+- **Prompt Chain**: a sequence of prompts where the output of one prompt is used as the input for the next.
+- **Prompting, Prompting Frameworks, Prompting Techniques**: the methods and strategies used to create and structure prompts to achieve desired outputs from AI models.
+- **Prompt Engineering and Prompt Engineering Techniques**: the practice of designing and refining prompts to optimize the performance and accuracy of AI models.
 
 ### Content
 
-**Directive (purpose)**: The main goal or objective of the prompt.
-
-**Formatting**: The structure and layout of the prompt to ensure clarity and effectiveness.
-
-**Style**: The tone and manner in which the prompt is written.
-
-**Role**: The perspective or persona the AI model should adopt when generating the output.
-
-**Augmentations**: Additional elements to enhance the prompt, such as emotion prompting or `System 2 prompting`.
+- **Directive (purpose)**: the main goal or objective of the prompt.
+- **Formatting**: the structure and layout of the prompt to ensure clarity and effectiveness.
+- **Style**: the tone and manner in which the prompt is written.
+- **Role**: the perspective or persona the AI model should adopt when generating the output.
+- **Augmentations**: additional elements to enhance the prompt, such as emotion prompting or `System 2 prompting`.
 
 #### In-Context Learning
 
-**One-shot and Multishot**: Providing one or multiple examples within the prompt to guide the AI model.
-
-**Exemplars**: Specific examples used within the prompt to illustrate the desired output.
-
-**Exemplar Quantity**: The number of examples provided in the prompt.
-
-**Exemplar Quality**: The relevance and effectiveness of the examples provided.
-
-**Exemplar Selection**: The process of choosing the most appropriate examples for the prompt.
+- **One-shot and Multishot**: providing one or multiple examples within the prompt to guide the AI model.
+- **Exemplars**: specific examples used within the prompt to illustrate the desired output.
+- **Exemplar Quantity**: the number of examples provided in the prompt.
+- **Exemplar Quality**: the relevance and effectiveness of the examples provided.
+- **Exemplar Selection**: the process of choosing the most appropriate examples for the prompt.
 
 ## Manual Prompting Methods 
 
