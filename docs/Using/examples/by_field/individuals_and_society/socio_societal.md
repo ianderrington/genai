@@ -5,7 +5,5 @@
 
 ## Societal simulations
 
-- [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf):
-  They gave 25 AI agents motivations & memory, and put them in a simulated town. Not only did they engage in complex behavior.The actions were rated more human than humans roleplaying.
-  Demo: https://t.co/pYNF4BBveG
+- [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf) — gave 25 AI agents motivations and memory, then placed them in a simulated town. The agents engaged in complex, emergent behavior, and their actions were rated by human evaluators as more believably human than humans roleplaying the same characters. [Interactive demo](https://reverie.herokuapp.com/arXiv_Demo/)
 

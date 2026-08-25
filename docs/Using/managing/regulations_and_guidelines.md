@@ -8,4 +8,4 @@
 
 !!! important "[AI Risk-Management Standards Profile for General-Purpose AI Systems (GPAIS) and Foundation Models](https://cltc.berkeley.edu/wp-content/uploads/2023/11/Berkeley-GPAIS-Foundation-Model-Risk-Management-Standards-Profile-v1.0.pdf)"
 
-!!! important [https://www.ncsc.gov.uk/files/Guidelines-for-secure-AI-system-development.pdf]
+!!! important "[Guidelines for Secure AI System Development (UK NCSC)](https://www.ncsc.gov.uk/files/Guidelines-for-secure-AI-system-development.pdf)"
