@@ -26,3 +26,11 @@ The long-term effects of AI confabulation are profound:
 
 ## What to do?
 
+There's no way to guarantee an LLM never confabulates, but the risk drops sharply with a few concrete practices:
+
+- **Ground answers in retrieval.** [Retrieval-augmented generation](../../Understanding/architectures/generating/rag.md) lets the model cite real source documents instead of generating from parametric memory alone, so a wrong answer is at least traceable to a specific passage.
+- **Ask for citations, then check them.** A model asked to cite its source will sometimes fabricate a plausible-looking reference. Verify any citation independently before trusting it.
+- **Lower the temperature for factual tasks.** Higher sampling temperature increases variety, but also increases the odds of an unsupported claim; factual lookups should run near-deterministic.
+- **Use a second model, or a human, to check high-stakes output.** For medicine, finance, and legal use, treat the model's answer as a first draft that a domain expert reviews, never as a final answer on its own.
+- **Prefer a narrow, well-scoped prompt over an open-ended one.** A model asked "what do you know about X" has more room to invent than one asked to summarize a specific document you provide.
+

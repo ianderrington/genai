@@ -1,4 +1,4 @@
-
+# Prompting Tools and Libraries
 
 ## Open source libraries and collections
 
@@ -14,9 +14,8 @@
 
 !!! abstract "![GitHub Repo stars](https://badgen.net/github/stars/meistrari/prompts-royale) [Prompt Royale](https://github.com/meistrari/prompts-royale) Provides the ability to automatically generate prompts to test around the same general theme."
 
-!!! tip "[Llangchain prompthub](https://smith.langchain.com/hub)"
-!!! tip"[Awesome Prompts](https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md)
-!!! tip "[Prompt Hub](https://app.prompthub.studio/) For Generating image prompts"
+!!! tip "[LangChain prompt hub](https://smith.langchain.com/hub)"
+!!! tip "[Awesome Prompts](https://github.com/f/awesome-chatgpt-prompts/blob/main/README.md)"
 !!! tip "[Wolfram Prompt Repo](https://writings.stephenwolfram.com/2023/06/prompts-for-work-play-launching-the-wolfram-prompt-repository/?mibextid=Zxz2cZ)"
 !!! tip "[Notion.io plugin](https://haonmade.gumroad.com/l/ozuvb)"
 !!! tip "[PROMPT generator](https://huggingface.co/spaces/merve/ChatGPT-prompt-generator) To save a few words by just entering a persona and gives prompt output."
