@@ -16,6 +16,13 @@
 - **Using** (https://www.managen.ai/Using) — Practical guides, RAG, fine-tuning, prompt engineering, evaluation, deployment, MLOps, governance, ethical use, and strategic implementation
 - **Blog** (https://www.managen.ai/blog) — Commentary on AI trends, new models, tools, and research
 
+## Programmatic Access
+
+- **Full-text search API** — `GET https://www.managen.ai/api/search?q=<query>&limit=<n>`
+  Returns JSON: `{ query, count, results: [{ slug, section, title, description, tags, url, score }] }`.
+  Queries the same 200+ topic index the human-facing search bar uses, so an agent can
+  retrieve the most relevant pages on a topic directly instead of crawling HTML.
+
 ## Author
 
 Ian Derrington — AI researcher and engineer. https://www.managen.ai · i@supernal.ai
