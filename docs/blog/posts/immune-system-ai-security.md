@@ -72,6 +72,10 @@ Applications:
 3. Immune-inspired architectures
 4. Self-supervised threat detection
 
+## References
+
+- [Self-Nonself Discrimination in a Computer (Forrest et al., 1994) — the original negative-selection algorithm paper](https://ieeexplore.ieee.org/document/1202865/)
+
 ---
 
 *The immune system solves many problems AI security faces—pattern recognition, adaptation, and defense without central control.*

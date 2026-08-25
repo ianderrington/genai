@@ -68,6 +68,11 @@ If we could harness open-ended evolution:
 - Automatic generation of training curricula
 - Discovery of solutions we couldn't imagine
 
+## References
+
+- [Paired Open-Ended Trailblazer (POET) (Wang et al., 2019)](https://arxiv.org/abs/1901.01753)
+- [Abandoning Objectives: Evolution Through the Search for Novelty Alone (Lehman & Stanley, 2011)](https://www.cs.swarthmore.edu/~meeden/DevelopmentalRobotics/lehman_ecj11.pdf)
+
 ---
 
 *Open-ended evolution may be the key to AI systems that surprise us—and themselves.*

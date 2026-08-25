@@ -73,6 +73,12 @@ Reducing communication costs:
 3. Sparse, modular architectures
 4. Energy-aware training and deployment
 
+## References
+
+- [The Remarkable, Yet Not Extraordinary, Human Brain as a Scaled-Up Primate Brain and Its Associated Cost (Herculano-Houzel, 2012)](https://www.pnas.org/doi/10.1073/pnas.1201895109)
+- [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer (Shazeer et al., 2017)](https://arxiv.org/abs/1701.06538)
+- [Loihi 2 Neuromorphic Computing (Intel Labs)](https://www.intel.com/content/www/us/en/research/neuromorphic-computing-loihi-2-technology-brief.html)
+
 ---
 
 *Nature achieves intelligence sustainably. If AI is to scale globally, it must learn biology's energy discipline.*

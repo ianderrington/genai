@@ -68,6 +68,11 @@ Genomes represent optimization results:
 3. Evolving AI systems using genetic principles
 4. Cross-species transfer learning
 
+## References
+
+- [DNABERT: Pre-Trained Bidirectional Encoder Representations from Transformers Model for DNA-Language in Genome (Ji et al., 2021)](https://academic.oup.com/bioinformatics/article/37/15/2112/6128680)
+- [Effective Gene Expression Prediction from Sequence by Integrating Long-Range Interactions (Avsec et al., 2021) — Enformer](https://www.nature.com/articles/s41592-021-01252-x)
+
 ---
 
 *The genome is the most successful program ever written—reading it teaches us to write better AI.*

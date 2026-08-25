@@ -189,6 +189,12 @@ LLaMA-3-70B Long Context:
 Result: 1M+ tokens feasible on single GPU
 ```
 
+## References
+
+- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints (Ainslie et al., 2023)](https://arxiv.org/abs/2305.13245)
+- [Efficient Streaming Language Models with Attention Sinks (Xiao et al., 2023) — StreamingLLM](https://arxiv.org/abs/2309.17453)
+- [Efficient Memory Management for Large Language Model Serving with PagedAttention (Kwon et al., 2023) — vLLM](https://arxiv.org/abs/2309.06180)
+
 ---
 
 *The KV cache is where the rubber meets the road for long-context LLMs—these optimizations make million-token contexts practical.*
