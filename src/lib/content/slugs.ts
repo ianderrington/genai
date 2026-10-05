@@ -33,6 +33,31 @@ export function generateSlug(filePath: string): string {
   return slug;
 }
 
+const TITLE_CASE_LOWERCASE_WORDS = new Set([
+  'a', 'an', 'the', 'and', 'or', 'but', 'nor', 'for', 'so', 'yet',
+  'as', 'at', 'by', 'in', 'of', 'on', 'to', 'up', 'via', 'vs',
+]);
+
+/**
+ * Turn a raw folder/file slug (e.g. "building_agents", "by_use_case") into a
+ * readable display title ("Building Agents", "By Use Case"), used only as a
+ * fallback when a page has no explicit `title:` in its frontmatter.
+ * @param slug The raw slug to humanize
+ * @returns A title-cased, space-separated string
+ */
+export function humanizeSlug(slug: string): string {
+  const words = slug.replace(/[_-]+/g, ' ').trim().split(/\s+/);
+  return words
+    .map((word, index) => {
+      const lower = word.toLowerCase();
+      if (index > 0 && TITLE_CASE_LOWERCASE_WORDS.has(lower)) {
+        return lower;
+      }
+      return lower.charAt(0).toUpperCase() + lower.slice(1);
+    })
+    .join(' ');
+}
+
 /**
  * Generate all possible variations of a slug for matching
  * @param slug The slug to generate variations for

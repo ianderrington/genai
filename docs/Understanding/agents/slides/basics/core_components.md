@@ -1,4 +1,3 @@
----
 # Core Components
 
 1. 🛠️ Tools that the agent can use to perform tasks

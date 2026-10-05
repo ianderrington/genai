@@ -28,6 +28,9 @@ For details about frameworks and tools for managing AI workflows, see our [orche
 ### Data Processing
 For information about data handling in backend systems, see our [data processing guide](data.md).
 
+### Hosting
+For the decision framework on where a model should actually run, managed API, self-hosted, or managed self-hosted, see our [hosting guide](hosting.md).
+
 ## Deployment Solutions
 
 ### Open Source Libraries
@@ -76,5 +79,6 @@ For information about data handling in backend systems, see our [data processing
 - [Pre-trained Models](pre_trained_models.md)
 - [Orchestration](orchestrating.md)
 - [Data Processing](data.md)
+- [Hosting](hosting.md)
 
 

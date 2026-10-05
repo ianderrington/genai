@@ -8,6 +8,9 @@ authors:
 
 # Agent Harnesses for Safe Self-Improvement
 
+!!! note "Looking for Claude Code, Cursor, Devin, or similar tools?"
+    See [Agent Harnesses](../harnesses.md) instead. This page uses "harness" in a narrower, safety-specific sense: containment infrastructure for a self-modifying agent, not the everyday coding-agent runtime.
+
 A **harness** is the critical safety infrastructure that wraps around a self-improving AI agent, providing boundaries, monitoring, and control mechanisms that make recursive improvement safe.
 
 ## Why Harnesses Are Essential

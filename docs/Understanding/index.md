@@ -10,14 +10,15 @@ bullets:
   - Ready to start your GenAI journey? Choose your adventure below!
 ---
 
-#  Understanding Gen🔮AI! 
+# Understanding GenAI
 
-Here you'll find what you need to know to understand (eventually) everything you need to know about creating and using Gen()AI. 
+Here you'll find what you need to know about how Gen()AI works, how it's built, and how to use it.
 
 
 [Choose your adventure!](#choose-your-adventure){ .md-button .md-button--primary }
 [See the primary components!](#component-interactions){ .md-button .md-button--primary }
 [What is this about?](#what-is-this-about){ .md-button  }
+[Look up a term](./glossary.md){ .md-button }
 
 ## Choose your adventure
 
@@ -54,28 +55,27 @@ Here you'll find what you need to know to understand (eventually) everything you
         Understand --> Build --> Use
         Understand --> Buy --> Use
 
-        click WG "./overview/index.html"
-        click CH "./overview/gen_ai/considerations.html"
-        click BB "../using/strategically/building_or_buying.html"
-        click Data "./data/index.html"
-        click MA "./architectures/index.html"
-        click RM "./architectures/reasoning-models.html"
-        click Deploy "./deploying/index.html"
-        click AIX "./building_applications/front_end/index.html"
-        click AG "./agents/index.html"
-        click MCP "./agents/mcp-protocol.html"
-        click CM "../Using/commercial_markets.html"
-        click SL "../Using/solution_licensing.html"
-        click VI "../Using/vendor_integration.html"
-        click Examples "../Using/examples/index.html"
-        click Compliance "../Using/managing/index.html"
-        click Gov "./governance/index.html"
+        click WG "/understanding/overview"
+        click CH "/understanding/overview/gen_ai/considerations"
+        click BB "/using/strategically/building_or_buying"
+        click Data "/understanding/data"
+        click MA "/understanding/architectures"
+        click RM "/understanding/architectures/reasoning-models"
+        click Deploy "/understanding/building_applications/back_end/hosting"
+        click AIX "/understanding/building_applications/front_end"
+        click AG "/understanding/agents"
+        click MCP "/understanding/agents/mcp-protocol"
+        click SL "/using/strategically/building_or_buying"
+        click VI "/using/strategically/building_or_buying"
+        click Examples "/using/examples"
+        click Compliance "/using/managing"
+        click Gov "/understanding/governance"
 
-        classDef warmColor fill:#f9d5e5,stroke:#333,stroke-width:2px;
-        classDef midColor fill:#f0e5d8,stroke:#333,stroke-width:2px;
-        classDef buyColor fill:#f4e7d3,stroke:#333,stroke-width:2px;
-        classDef coolColor fill:#d5e8d4,stroke:#333,stroke-width:2px;
-        classDef newColor fill:#e8d5f5,stroke:#333,stroke-width:2px;
+        classDef warmColor fill:#f9d5e5,stroke:#333,stroke-width:2px,color:#111;
+        classDef midColor fill:#f0e5d8,stroke:#333,stroke-width:2px,color:#111;
+        classDef buyColor fill:#f4e7d3,stroke:#333,stroke-width:2px,color:#111;
+        classDef coolColor fill:#d5e8d4,stroke:#333,stroke-width:2px,color:#111;
+        classDef newColor fill:#e8d5f5,stroke:#333,stroke-width:2px,color:#111;
 
         class Understand warmColor;
         class Build midColor;
@@ -86,6 +86,13 @@ Here you'll find what you need to know to understand (eventually) everything you
         class Gov newColor;
 
     ```
+
+    **How to read this**: pick a path based on what you already know, not the diagram's shape.
+
+    - **Start Here** (pink) assumes no background. If any of these nodes are unfamiliar, begin with [AI and ML Basics](overview/ai_and_ml_basics/index.md) first, it's not on this diagram but it's the actual zero-background starting point.
+    - **Build** (tan) assumes you already know the basics and want the technical detail behind building your own models or applications, this is the deepest, most technical path.
+    - **Buy it** (cream) assumes you're evaluating existing tools and vendors rather than building from scratch, no deep technical background needed.
+    - **Use** (green) covers deployment, governance, and compliance, relevant once something is built or bought and needs to run in production.
 
 ## Component interactions
 
@@ -143,11 +150,11 @@ Here you'll find what you need to know to understand (eventually) everything you
         FrontEnd[Front<br>End] <--> User
 
         
-        classDef dataColor fill:#e6e6e6,stroke:#333,stroke-width:2px;
-        classDef llmColor fill:#add8e6,stroke:#333,stroke-width:2px;
-        classDef orchestrationColor fill:#f9d5e5,stroke:#333,stroke-width:2px;
-        classDef hostingColor fill:#fada5e,stroke:#333,stroke-width:2px;
-        classDef finalColor fill:#d4edda,stroke:#333,stroke-width:2px;
+        classDef dataColor fill:#e6e6e6,stroke:#333,stroke-width:2px,color:#111;
+        classDef llmColor fill:#add8e6,stroke:#333,stroke-width:2px,color:#111;
+        classDef orchestrationColor fill:#f9d5e5,stroke:#333,stroke-width:2px,color:#111;
+        classDef hostingColor fill:#fada5e,stroke:#333,stroke-width:2px,color:#111;
+        classDef finalColor fill:#d4edda,stroke:#333,stroke-width:2px,color:#111;
         
         class RawData dataColor;
         class DataCleaning dataColor;
@@ -169,31 +176,28 @@ Here you'll find what you need to know to understand (eventually) everything you
         class FrontEnd finalColor;
         class User finalColor;
 
-        click RawData "./data/index.html"
-        click DataCleaning "./data/selection.html"
-        click Architecture "./architectures/index.html"
-        click PreTraining "./architectures/training/pre-training.html"
-        click Model "./architectures/models/index.html"
-        click FineTuning "./architectures/training/finetuning.html"
-        click Optimization "./architectures/optimization.html"
-        click Hosting "./deploying/index.html"
-        click APIorCall "./api_call/index.html"
-        click Cache "./building_applications/back_end/memory.html#caching"
-        click Monitor "./deploying/monitoring.html"
-        click Clean "./cleaning/index.html"
-        click Memory "./agents/components/memory.html"
-        click Prompts "./prompting/index.html"
-        click CognitiveArchitectures "./agents/components/cognitive_architecture.html"
-        click Tools "./agents/actions_and_tools.html"
-        click Environment "./agents/environments.html"
-        click Database "./agents/components/memory.html"
-        click DataPipeline "./agents/rag.html#data-preparation"
-        click EmbeddingModel "./data/index.html#embedding"
-        click VectorDatabase "./agents/components/memory.html#vector-databases"
-        click FrontEnd "./deploying/front_end.html"
-        click User "./user/index.html"
-        click RAG "./agents/rag.html"
-        click Agent "./agents/index.html"
+        click RawData "/understanding/data"
+        click DataCleaning "/understanding/data"
+        click Architecture "/understanding/architectures"
+        click PreTraining "/understanding/architectures/training/pre-training"
+        click Model "/understanding/architectures/models"
+        click FineTuning "/understanding/architectures/training/finetuning"
+        click Optimization "/understanding/architectures/optimizing"
+        click Hosting "/understanding/building_applications/back_end/hosting"
+        click Cache "/understanding/building_applications/back_end/llm_ops/caching"
+        click Monitor "/understanding/building_applications/security_compliance_and_governance/monitoring"
+        click Memory "/understanding/agents/components/memory"
+        click Prompts "/understanding/prompting"
+        click CognitiveArchitectures "/understanding/agents/components/cognitive_architecture"
+        click Tools "/understanding/agents/components/actions_and_tools"
+        click Environment "/understanding/agents/components/environments"
+        click Database "/understanding/agents/components/memory"
+        click DataPipeline "/understanding/architectures/generating/rag"
+        click EmbeddingModel "/understanding/data"
+        click VectorDatabase "/understanding/agents/components/memory"
+        click FrontEnd "/understanding/building_applications/front_end"
+        click RAG "/understanding/architectures/generating/rag"
+        click Agent "/understanding/agents"
     ```
 
 
@@ -234,7 +238,7 @@ If you are working on commercial projects, be sure to look at the Licenses to en
 
 🚨 And please, whatever you do, be cognisant of the [ethical concerns](../Using/ethically/index.md) 
 
-Generative AI is a subset of machine learning that aim to creates new data samples or information based on an input. This technology has gained significant attention recently because they have been able to produce high-quality, realistic data across various domains, from images and videos to text and audio. 🌈
+Generative AI is a subset of machine learning that aims to create new data samples or information based on an input. This technology has gained significant attention recently because it has been able to produce high-quality, realistic data across various domains, from images and videos to text and audio.
 
 !!! warning "Presentation bias"
     This is presently highly [transformer-based large-language models](architectures/models/transformers.md) because language is presently more versatile than other modalities. Other models are discussed [here](architectures/models/index.md). Many other techniques and technologies may not have entered into this yet. If you'd like to help us build this right, please consider [contributing](../Managenai/contributing.md)

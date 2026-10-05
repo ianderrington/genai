@@ -51,7 +51,7 @@ DeepSeek released R1 on January 20, 2025 under the MIT License. It was a watersh
 
 - 671B parameter Mixture-of-Experts model (37B active parameters per forward pass)
 - Directly competitive with OpenAI o1 on math and coding benchmarks
-- **Trained for under $6 million** — versus $100M+ for comparable closed models
+- **Trained for under \$6 million** — versus \$100M+ for comparable closed models
 - MIT License: fully open, commercially usable
 
 **Why it matters for reasoning:** DeepSeek's technical report (section 8.2 below) revealed that strong reasoning can emerge from reinforcement learning alone, without supervised chain-of-thought data as scaffolding. The R1-Zero variant, trained with pure RL, developed reasoning behaviours spontaneously.

@@ -138,9 +138,16 @@ export function parseFrontmatter(content: string): {
   excerpt: string;
 } {
   try {
-    // Check if the content contains frontmatter (starts with ---)
-    const hasFrontmatter = content.trim().startsWith('---');
-    
+    // Check if the content contains REAL frontmatter — starts with "---" AND
+    // has a matching closing "---" line. A bare leading "---" with no close
+    // (a real, recurring authoring mistake — a stray delimiter left in from
+    // a template, with no frontmatter fields ever added) used to make this
+    // check pass anyway, so gray-matter tried to parse the entire rest of
+    // the file as YAML and threw, breaking the whole page. Requiring a real
+    // closing delimiter here means that mistake now degrades gracefully
+    // (treated as "no frontmatter") instead of crashing page load.
+    const hasFrontmatter = /^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/.test(content.trim());
+
     if (!hasFrontmatter) {
       // Return with empty metadata for files without frontmatter
       logger.warn('Content has no frontmatter');
@@ -421,7 +428,13 @@ function preprocessMkDocsAdmonitions(content: string): string {
   while (i < lines.length) {
     const line = lines[i];
 
-    const admonitionMatch = line.match(/^(!!!|\?\?\?[+]?)\s+(.*)/);
+    // Real MkDocs only allows the collapsible "+" suffix on "???", never on
+    // "!!!" — but authors write "!!!+ " by analogy often enough that a
+    // strict-spec regex silently dumps the whole admonition (marker, mermaid
+    // fence, everything) as raw visible text instead of rendering it. Accept
+    // "!!!+ " as a plain, non-collapsible admonition rather than failing to
+    // match at all.
+    const admonitionMatch = line.match(/^(!!![+]?|\?\?\?[+]?)\s+(.*)/);
 
     if (admonitionMatch && admonitionMatch[2].trim()) {
       const marker = admonitionMatch[1];
@@ -462,6 +475,16 @@ function preprocessMkDocsAdmonitions(content: string): string {
         output.push(`<div class="admonition-body">\n\n${bodyContent}\n\n</div>`);
         output.push(`</div>`);
       }
+      // The body-collection loop above consumes any blank line that follows
+      // the admonition in the source (it can't tell "still part of the body"
+      // from "separator before the next block" while scanning). Without
+      // re-emitting one here, the closing </div> glues directly onto
+      // whatever comes next with no blank line between them — and per
+      // CommonMark an HTML block only terminates at a blank line, so the
+      // next block (e.g. a "## Heading") gets silently swallowed into the
+      // same raw-HTML block and rendered as literal text instead of parsed
+      // markdown. Always emit the separator explicitly.
+      output.push('');
 
       i = j;
       continue;
@@ -472,6 +495,31 @@ function preprocessMkDocsAdmonitions(content: string): string {
   }
 
   return output.join('\n');
+}
+
+/**
+ * MkDocs "attr_list" extension attaches CSS classes to the preceding markdown
+ * element with a trailing `{ .class1 .class2 }`. This pipeline never
+ * implemented attr_list, so a link like `[Text](url){ .md-button }` rendered
+ * the real link followed by the literal, unparsed `{ .md-button }` text —
+ * previously the only usage on the site was the `.md-button`/
+ * `.md-button--primary` pattern, so this only needs to handle that one case
+ * (a link immediately followed by an attr_list of `.md-button` classes),
+ * converting it into a real styled button anchor.
+ */
+function preprocessMkDocsButtonLinks(content: string): string {
+  return content.replace(
+    /\[([^\]]+)\]\(([^)]+)\)\{\s*((?:\.[\w-]+\s*)+)\}/g,
+    (_match, text: string, href: string, rawClasses: string) => {
+      const classes = rawClasses
+        .trim()
+        .split(/\s+/)
+        .map((c) => c.replace(/^\./, ''))
+        .join(' ');
+      const safeHref = href.replace(/[<>"]/g, '');
+      return `<a href="${safeHref}" class="${classes}">${text}</a>`;
+    }
+  );
 }
 
 /**
@@ -528,8 +576,9 @@ export async function markdownToHtml(content: string, filePath?: string): Promis
       return cachedHtml;
     }
 
-    // Preprocess MkDocs admonitions (!!! / ???) into raw HTML before the AST is built
-    const preprocessed = preprocessMkDocsAdmonitions(content);
+    // Preprocess MkDocs button-link attr_list syntax, then admonitions
+    // (!!! / ???), into raw HTML before the AST is built.
+    const preprocessed = preprocessMkDocsAdmonitions(preprocessMkDocsButtonLinks(content));
 
     // Removed excessive logging - only log errors and warnings
 
@@ -616,7 +665,10 @@ export async function markdownToHtml(content: string, filePath?: string): Promis
           ],
           blockquote: [
             ...(defaultSchema.attributes?.blockquote || []),
-            'class',
+            // hast represents the HTML "class" attribute as a "className"
+            // property — 'class' here was never a real match and silently
+            // dropped any class hast-util-sanitize was asked to keep.
+            'className',
             'data-type'
           ],
           code: [
@@ -634,6 +686,15 @@ export async function markdownToHtml(content: string, filePath?: string): Promis
             'id'
           ],
           a: [
+            // 'className' must come BEFORE the defaultSchema spread:
+            // hast-util-sanitize's findDefinition() returns the FIRST
+            // matching entry for a property name, and defaultSchema.a
+            // already has a value-restricted `['className',
+            // 'data-footnote-backref']` tuple (GFM footnotes only) later
+            // in the merged array — appended after the spread, this bare
+            // 'className' was unreachable dead code, silently stripping
+            // every class value (including "md-button") down to "".
+            'className',
             ...(defaultSchema.attributes?.a || []),
             'id',
             'href',
@@ -793,6 +854,37 @@ function remarkProcessWarnings() {
  * @returns The generated excerpt
  */
 export async function generateExcerpt(content: string, maxLength: number = 160, filePath?: string): Promise<string> {
+  // gray-matter's `content` field keeps the blank line that normally follows
+  // the closing frontmatter fence, so content typically starts with "\n#
+  // Heading...". Every regex below is anchored with `^` and `.` never
+  // matches `\n`, so that leading newline made both the heading-strip and
+  // the first-paragraph match fail silently, leaving excerpt empty for any
+  // post without an explicit frontmatter `description:` (most blog posts).
+  content = content.trimStart();
+
+  // Strip every leading heading line (and the blank line after each one)
+  // before looking for the first paragraph. Without this, a post whose
+  // heading is immediately followed by a blank line — which is normal,
+  // correct markdown — has its excerpt captured as just the heading text
+  // itself: the "first paragraph" regex below stops at the first "\n\n",
+  // and for "# Title\n\n..." that's the heading alone. Some docs stack a
+  // second heading right under the first ("# Code of Conduct\n\n##
+  // Our Pledge\n\n..."), so this strips ALL leading headings, not just one.
+  content = content.replace(/^(#{1,6}\s+.+\n+)+/, '');
+  // Also strip a leading MkDocs snippet-include directive ("--8<--
+  // "file.html""), which is raw build syntax, not prose. Some files are
+  // nothing but this directive, in which case there's honestly no excerpt
+  // to show — that's correct, not a bug to work around further.
+  // "\n*" (not "\n+") — a file that's nothing but this one directive line
+  // has no trailing newline at all, and the strip must still apply to it.
+  content = content.replace(/^--8<--.*\n*/, '');
+  // Also strip a leading MkDocs admonition block ("!!! type \"title\"" /
+  // "???[+] type \"title\"" followed by its indented body) — the same
+  // "first block isn't prose" problem as headings above. Without this, a
+  // post that opens with a quote/tip box before any real paragraph gets no
+  // excerpt at all rather than the real prose that follows the box.
+  content = content.replace(/^(!!!|\?\?\?[+]?)\s+.*\n(?:(?:[ \t]+.*)?\n)*/, '');
+
   // Check for the more tag (handle both formats: <!--more--> and <!-- more -->)
   let moreTagIndex = content.indexOf('<!--more-->');
   if (moreTagIndex === -1) {

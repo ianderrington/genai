@@ -85,7 +85,7 @@ const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
   }, [isFixed]);
 
   return (
-    <div className={`md:hidden fixed bottom-0 left-0 right-0 z-[9999] flex justify-between items-center transition-all duration-300 ease-in-out ${isHeaderVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`md:hidden fixed bottom-0 left-0 right-0 z-[9999] flex justify-between items-center transition-all duration-300 ease-in-out ${isHeaderVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       <div className="flex justify-between items-center w-full px-6 py-4 bg-white/95 dark:bg-gray-800/95 border-t border-gray-200 dark:border-gray-700 backdrop-blur-sm">
       {/* Menu button - left side */}
       <button 

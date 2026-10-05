@@ -1,3 +1,4 @@
+Planning is the task of decomposing a goal into an ordered sequence of steps before acting, distinct from single-turn generation or reactive chat. It's the capability most agent frameworks lean on for anything beyond a single tool call, and it's also one of the weaker points for current LLMs on genuinely novel, multi-step problems.
 
-!!! tip "[What’s the Plan? Evaluating and Developing Planning-Aware Techniques for LLMs](https://arxiv.org/pdf/2402.11489.pdf)"
-    <img width="922" alt="image" src="https://github.com/ianderrington/genai/assets/76016868/d9ad42c4-1ca7-4bec-8855-657fce86d0c0">
+!!! tip "[What's the Plan? Evaluating and Developing Planning-Aware Techniques for LLMs](https://arxiv.org/pdf/2402.11489.pdf)"
+    Surveys how well LLMs actually plan versus how well they merely sound like they're planning, and covers techniques (explicit plan-then-execute prompting, self-verification of intermediate steps) that measurably improve real planning performance over naive single-pass generation.

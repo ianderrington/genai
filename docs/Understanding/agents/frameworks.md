@@ -218,5 +218,5 @@ See [Model Context Protocol](./mcp-protocol.md) for how MCP fits into the overal
 - [Model Context Protocol (MCP)](./mcp-protocol.md) — the tool integration standard all frameworks use
 - [Agent2Agent Protocol (A2A)](./a2a-protocol.md) — cross-framework agent communication
 - [Agent Components: Actions and Tools](./components/actions_and_tools.md) — how tools are used inside the agent loop
-- [Building Agents: Libraries and Tools](./building_agents/libraries_and_tools.md) — hands-on framework setup
+- [Building Agents: Libraries and Tools](../building_applications/building_agents/libraries_and_tools.md) — hands-on framework setup
 - [Multi-Agent Systems](./systems/index.md) — patterns for combining agents into systems

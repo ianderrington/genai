@@ -6,6 +6,7 @@ categories:
   - Safety
   - Evaluation
 authors: parnian
+coverImage: /images/blog/red-teaming-llms.png
 ---
 
 # Red Teaming LLMs: Adversarial Testing for AI Safety

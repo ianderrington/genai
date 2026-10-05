@@ -1,7 +1,14 @@
 'use client';
 
 import React from 'react';
-import dynamic from 'next/dynamic';
+// This component is already lazy-loaded via next/dynamic({ ssr: false }) from
+// every caller (SafeHTML, SafeContent), so it never reaches the server
+// bundle. A static top-level import here lets webpack bundle mermaid into
+// that SAME client-only chunk, instead of the previous pattern (a raw
+// import() inside useEffect) which forced a SECOND sequential network
+// round-trip after this chunk had already loaded and mounted, doubling the
+// "Loading diagram..." stall a reader actually sees.
+import mermaid from 'mermaid';
 
 interface MermaidDiagramProps {
   chart: string;
@@ -15,9 +22,6 @@ const MermaidDiagram: React.FC<MermaidDiagramProps> = ({ chart }) => {
   React.useEffect(() => {
     const renderDiagram = async () => {
       try {
-        // Dynamically import mermaid only on the client side
-        const mermaid = (await import('mermaid')).default;
-        
         mermaid.initialize({
           startOnLoad: false,
           theme: document.documentElement.classList.contains('dark') ? 'dark' : 'default',

@@ -80,14 +80,14 @@ export default function Home() {
               background: "rgba(99,102,241,0.1)",
             }}
           >
-            Open Source &nbsp;·&nbsp; Community-Powered &nbsp;·&nbsp; Built with{" "}
+            Open Source &nbsp;·&nbsp; Community-Powered &nbsp;·&nbsp; Managed by{" "}
             <a
               href="https://si42.ai"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#a5b4fc", textDecoration: "underline" }}
             >
-              Supernal Intelligence
+              SI 42
             </a>
           </div>
 

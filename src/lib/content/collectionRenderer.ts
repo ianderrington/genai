@@ -1,5 +1,6 @@
 import { Post, getCachedChildPosts, getCachedSectionContent, getCachedSections } from '@/lib/content';
 import { prepareGridItems, CombinedItem } from '@/lib/content/collectionUtils';
+import { humanizeSlug } from '@/lib/content/slugs';
 
 export interface CollectionRenderData {
   indexPost: Post | null;
@@ -15,7 +16,7 @@ export async function prepareCollectionRenderData(
 ): Promise<CollectionRenderData> {
   const sections = await getCachedSections();
   const sectionInfo = sections.find(s => s.id === section);
-  const sectionName = sectionInfo?.name || section.charAt(0).toUpperCase() + section.slice(1);
+  const sectionName = sectionInfo?.name || humanizeSlug(section);
 
   // If no slug provided, this is a top-level section collection
   if (!slug || slug.length === 0) {

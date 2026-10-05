@@ -14,6 +14,14 @@ export const SECTION_IMAGES = {
   musings: DEFAULT_MUSINGS_IMAGE,
   projects: DEFAULT_PROJECTS_IMAGE,
   about: DEFAULT_ABOUT_IMAGE,
+  // "understanding" and "using" are the site's two primary reference
+  // sections (200+ pages). Without an entry here, every one of those
+  // pages fell through to DEFAULT_IMAGES.post, a placeholder image with
+  // the literal text "Blog Post" baked in, on pages that are not blog
+  // posts. Reusing the existing generic collection image rather than
+  // generating new art for this fix.
+  understanding: DEFAULT_COLLECTION_IMAGE,
+  using: DEFAULT_COLLECTION_IMAGE,
 } as const;
 
 export const DEFAULT_IMAGES = {

@@ -6,6 +6,7 @@ categories:
   - Applications
   - Architecture
 authors: parnian
+coverImage: /images/blog/retrieval-augmented-generation.png
 ---
 
 # RAG: Retrieval-Augmented Generation Deep Dive

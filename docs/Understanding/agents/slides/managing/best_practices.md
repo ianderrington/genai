@@ -1,4 +1,3 @@
----
 # Best Practices
 
 1. 🛡️ **Safety First**

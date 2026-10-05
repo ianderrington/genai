@@ -6,6 +6,7 @@ categories:
   - Optimization
   - Efficiency
 authors: parnian
+coverImage: /images/blog/flash-attention-optimization.png
 ---
 
 # Flash Attention: IO-Aware Exact Attention

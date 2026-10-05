@@ -1,4 +1,4 @@
-# Using Gen()AI (GENAI)
+# Using Gen()AI
 
 This guide provides strategic insights into effectively managing GenAI, focusing on fostering innovation and productivity while adapting to the evolving technology landscape. 
 

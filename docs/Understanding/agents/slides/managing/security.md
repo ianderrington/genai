@@ -17,10 +17,10 @@ Agents differ from traditional software in their attack surface:
 - **Indirect instruction** — attackers embed instructions in web pages, emails, or documents that the agent will process
 
 !!! warning "2025 statistics"
-    Prompt-based exploits accounted for 35% of all documented AI incidents in 2025. Agentic AI caused the most dangerous failures — including crypto thefts, API abuses, and legal disasters. Financial losses from GenAI security breaches exceeded $2.3B across 2023–2025.
+    Around 35% of real-world AI security incidents in 2025 were triggered by a simple prompt alone, no exploit code required, per Adversa AI's threat report. Agentic AI caused the most dangerous failures — including crypto thefts, API abuses, and legal disasters. Documented financial losses from GenAI security breaches exceeded \$2.3B across 2023–2025.
 
     !!! info "Source"
-        Research compiled May 2026; see `families/genai/.supernal/docs/ai-landscape-research-2025-2026.md` §6.5
+        [Gen AI Security Breaches Timeline 2023–2025](https://wald.ai/blog/gen-ai-security-breaches-timeline-20232025-recurring-mistakes-are-the-real-threat); Adversa AI 2025 threat report
 
 ## Prompt Injection Defences
 

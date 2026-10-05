@@ -13,6 +13,9 @@ The ability of computers and algorithms to generate art, literature, and other f
 
 This document provides a high-level overview of how Gen()AI achieves this feat. 
 
+!!! tip "New to AI entirely?"
+    This page assumes you already know roughly what a model is. If you don't, or terms like "parameter" and "training" aren't yet familiar, start with [AI and ML Basics](ai_and_ml_basics/index.md) instead, it explains everything from zero, with no assumed background.
+
 Before delving into the details, let's first understand what Gen()AI is.
 
 ## Defining Gen()AI
@@ -23,8 +26,24 @@ Recent advancements in Generative AI have positioned it as a potential stepping 
 
 Generative AI is a subset of [AI in general](ai_and_ml_basics/index.md), as illustrated in the diagram below.
 
-???+ important "Heirarchy of GenAI" heirarchy-of-genai
-    <img width="100%" alt="image" loading="lazy" src="https://github.com/ianderrington/genai/assets/76016868/0b344719-b998-43f7-92fb-725797324af9">
+???+ important "Hierarchy of GenAI" hierarchy-of-genai
+    Generative AI is a subset of Machine Learning, itself a subset of AI as a whole. Two architecture families power most of today's generative systems, and each shows up in current, widely used products:
+
+    ```mermaid
+    graph TD
+        AI["Artificial Intelligence"] --> ML["Machine Learning"]
+        ML --> Pred["Predictive AI<br>(forecasting, classification, recommendation)"]
+        ML --> Gen["Generative AI"]
+        Gen --> Trans["Transformer architecture<br>(GPT-5, Claude, Gemini)"]
+        Gen --> Diff["Diffusion architecture<br>(Midjourney, Stable Diffusion 3, Sora)"]
+
+        classDef root fill:#b3e0ff,stroke:#0277bd,stroke-width:2px
+        classDef mid fill:#ce93d8,stroke:#6a1b9a,stroke-width:2px
+        classDef leaf fill:#a5d6a7,stroke:#2e7d32,stroke-width:2px
+        class AI root
+        class ML,Pred mid
+        class Gen,Trans,Diff leaf
+    ```
 
 Traditionally, predictive AI has been widely used in virtually every domain where data exists. But how does predictive AI differ from generative AI?
 
@@ -47,11 +66,8 @@ The distinction is visually represented below.
 
 Another way of thinking about the difference between AI and traditional programming is to consider the difference between a function call and a program. 
 
-<div class="grid">
+### Traditional Programming
 
-<div class="grid-item" markdown>
-
-<h3>Traditional Programming</h3>
 ```mermaid
 graph LR
     subgraph Input ["Input Layer"]
@@ -88,12 +104,8 @@ graph LR
     class Result resultBg
 ```
 
-</div>
+### AI/ML Programming
 
-
-<div class="grid-item" markdown>
-
-<h3>AI/ML Programming</h3>
 ```mermaid
 graph LR
     subgraph Input ["Input Layer"]
@@ -133,10 +145,6 @@ graph LR
     class Processing processBg
     class Result resultBg
 ```
-
-</div>
-
-</div>
 
 ## Creating Gen()AI
 
@@ -183,7 +191,7 @@ Fusion approaches combine the strengths of both data-based and rule-based method
 | **Claude 4 / 4.6** | Anthropic | Professional coding, 1M token context GA, strong agent workflows |
 | **Gemini 2.5 Pro / Flash** | Google | 2M token context, Deep Think reasoning mode, best multimodal benchmarks |
 | **Llama 4 Scout / Maverick** | Meta | Open-weight, native multimodal, 10M token context (Scout), free to self-host |
-| **DeepSeek V3 / R1** | DeepSeek | Open-source reasoning model, MIT license, <$6M training cost vs $100M+ for closed equivalents |
+| **DeepSeek V3 / R1** | DeepSeek | Open-source reasoning model, MIT license, under \$6M training cost vs \$100M+ for closed equivalents |
 
 ### Reasoning / "Thinking" Models
 

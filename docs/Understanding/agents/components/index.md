@@ -55,16 +55,16 @@ These components form the foundation of any AI agent system, whether simple or c
         end
         click AgentInternals "./index.html"
         
-        classDef env fill:#FFB6C1,stroke:#CD5C5C
-        classDef data fill:#FFD700,stroke:#DAA520
-        classDef llm fill:#87CEEB,stroke:#4682B4
-        classDef prompts fill:#E6E6FA,stroke:#483D8B
-        classDef cogarch fill:#DDA0DD,stroke:#8B008B
-        classDef memory fill:#90EE90,stroke:#006400
-        classDef action fill:#FFA07A,stroke:#FF6347
-        classDef tools fill:#FFB6C1,stroke:#CD5C5C
-        classDef interpreter fill:#98FB98,stroke:#228B22
-        classDef internals fill:#F0F8FF,stroke:#4682B4
+        classDef env fill:#FFB6C1,stroke:#CD5C5C,color:#111
+        classDef data fill:#FFD700,stroke:#DAA520,color:#111
+        classDef llm fill:#87CEEB,stroke:#4682B4,color:#111
+        classDef prompts fill:#E6E6FA,stroke:#483D8B,color:#111
+        classDef cogarch fill:#DDA0DD,stroke:#8B008B,color:#111
+        classDef memory fill:#90EE90,stroke:#006400,color:#111
+        classDef action fill:#FFA07A,stroke:#FF6347,color:#111
+        classDef tools fill:#FFB6C1,stroke:#CD5C5C,color:#111
+        classDef interpreter fill:#98FB98,stroke:#228B22,color:#111
+        classDef internals fill:#F0F8FF,stroke:#4682B4,color:#111
 
         class Environment env
         class Data data

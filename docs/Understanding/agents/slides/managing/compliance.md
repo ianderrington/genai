@@ -33,12 +33,12 @@ For regulated decisions, design **explicit human review checkpoints** into agent
 
 2025 set records for AI security incidents. Key statistics relevant to agent compliance:
 
-- Prompt-based exploits: 35% of all documented AI incidents
+- Prompt-based exploits: around 35% of real-world AI security incidents, per Adversa AI's 2025 threat report
 - Agentic AI caused the most dangerous failures (crypto thefts, API abuses, legal disasters)
-- Financial losses from GenAI security breaches exceeded $2.3B across 2023–2025
+- Documented financial losses from GenAI security breaches exceeded \$2.3B across 2023–2025
 
 !!! info "Source"
-    [AI security incident statistics 2025, from ManaGen.ai research](../../../.supernal/docs/ai-landscape-research-2025-2026.md)
+    [Gen AI Security Breaches Timeline 2023–2025](https://wald.ai/blog/gen-ai-security-breaches-timeline-20232025-recurring-mistakes-are-the-real-threat); Adversa AI 2025 threat report
 
 ## Checklist for Agent Compliance Reviews
 

@@ -6,6 +6,7 @@ categories:
   - Protein Folding
   - GenAI
 authors: parnian
+coverImage: /images/blog/protein-folding-ai.png
 ---
 
 # AlphaFold and the Revolution in Protein Structure Prediction
@@ -53,6 +54,10 @@ AlphaFold demonstrates that:
 2. Multi-modal learning (sequence + structure) is powerful
 3. Domain expertise combined with ML yields breakthroughs
 4. Iteration and competition (CASP) drive progress
+
+## References
+
+- [Highly Accurate Protein Structure Prediction with AlphaFold (Jumper et al., 2021)](https://www.nature.com/articles/s41586-021-03819-2)
 
 ---
 

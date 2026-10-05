@@ -6,6 +6,7 @@ categories:
   - Reasoning
   - Scaling
 authors: parnian
+coverImage: /images/blog/test-time-compute-scaling.png
 ---
 
 # Test-Time Compute Scaling: Thinking Longer, Not Bigger

@@ -42,7 +42,7 @@ export default function PersonSchema({
   alumniOf = 'University of Washington',
   worksFor = 'Supernal Intelligence',
   founder = [
-    { name: 'Supernal Intelligence', url: 'https://supernal.ai' },
+    { name: 'Supernal Intelligence', url: 'https://si42.ai' },
     { name: 'Managen.ai', url: 'https://www.managen.ai' },
     { name: 'Make Truth Matter', url: 'https://www.maketruthmatter.com' },
   ],

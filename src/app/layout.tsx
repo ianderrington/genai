@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { getCachedSections } from "@/lib/content";
 import { getRootPagesConfig } from "@/lib/content/pages-config";
+import { humanizeSlug } from "@/lib/content/slugs";
 import PageLayout from "@/components/PageLayout";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
@@ -78,10 +79,7 @@ export default async function RootLayout({
         const routeId = matched?.id ?? cleanId;
 
         // Display title: explicit from .pages > auto-capitalised from folder name
-        const title =
-          displayTitle ??
-          matched?.title ??
-          cleanId.charAt(0).toUpperCase() + cleanId.slice(1);
+        const title = displayTitle ?? matched?.title ?? humanizeSlug(cleanId);
 
         return [{ id: routeId, title }];
       })

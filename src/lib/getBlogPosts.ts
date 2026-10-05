@@ -6,6 +6,7 @@ import { markdownToHtml } from './content/markdown';
 import { getContentDirectory } from './content/filesystem';
 import { processPostContent } from './postUtils';
 import { logger } from './logger';
+import { humanizeSlug } from './content/slugs';
 
 export interface BlogPostProps {
   slug: string;
@@ -114,7 +115,7 @@ export async function getBlogPosts(section: string = 'blog') {
       // Create a proper section-specific slug for the root index
       rootIndex = {
         slug: `${section}`,  // Changed from ${section}/index to just ${section}
-        title: data.title || section.charAt(0).toUpperCase() + section.slice(1),
+        title: data.title || humanizeSlug(section),
         date: data.date || new Date().toISOString().split('T')[0],
         content: markdownContent,
         htmlContent,
@@ -138,7 +139,7 @@ export async function getBlogPosts(section: string = 'blog') {
       logger.error(`Error reading root index for ${section}: ${e}`);
       
       // If no index.md exists, create a default one with a better title and content
-      const sectionTitle = section.charAt(0).toUpperCase() + section.slice(1).replace(/-/g, ' ');
+      const sectionTitle = humanizeSlug(section);
       
       rootIndex = {
         slug: section,

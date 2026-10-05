@@ -189,15 +189,35 @@ Long-horizon agent tasks consume tokens in ways that are difficult to predict fr
 
 Understanding why production agents fail is as important as understanding why demos succeed.
 
-**Silent failure:** The agent produces output but the output is wrong. No error is raised. This is the hardest failure mode to catch. Defense: output validation and regular automated evaluation runs against known-good test cases.
+### Silent Failure
 
-**Runaway loops:** The agent enters a retry or reasoning loop and consumes resources until it hits a timeout or cost limit. Defense: maximum step counts, cost limits, and loop detection in the agent runtime.
+The agent produces output but the output is wrong. No error is raised. This is the hardest failure mode to catch.
 
-**Permission creep over time:** Permissions are added to solve specific problems and never removed. Over months, an agent accumulates far more access than it needs. Defense: quarterly permission review as part of governance.
+*Defense:* output validation and regular automated evaluation runs against known-good test cases.
 
-**Stale tool schemas:** An API changes; the agent's tool schema does not. The agent starts producing malformed calls or misinterpreting responses. Defense: schema validation in the tool integration layer with version pinning.
+### Runaway Loops
 
-**Context overflow in long tasks:** Long-horizon tasks accumulate context until the agent's reasoning degrades. Defense: context summarization at checkpoints, and monitoring for degraded output quality on long runs.
+The agent enters a retry or reasoning loop and consumes resources until it hits a timeout or cost limit.
+
+*Defense:* maximum step counts, cost limits, and loop detection in the agent runtime.
+
+### Permission Creep Over Time
+
+Permissions are added to solve specific problems and never removed. Over months, an agent accumulates far more access than it needs.
+
+*Defense:* quarterly permission review as part of governance.
+
+### Stale Tool Schemas
+
+An API changes; the agent's tool schema does not. The agent starts producing malformed calls or misinterpreting responses.
+
+*Defense:* schema validation in the tool integration layer with version pinning.
+
+### Context Overflow in Long Tasks
+
+Long-horizon tasks accumulate context until the agent's reasoning degrades.
+
+*Defense:* context summarization at checkpoints, and monitoring for degraded output quality on long runs.
 
 ---
 

@@ -6,6 +6,7 @@ categories:
   - Interpretability
   - Safety
 authors: parnian
+coverImage: /images/blog/mechanistic-interpretability.png
 ---
 
 # Mechanistic Interpretability: Reverse-Engineering Neural Networks

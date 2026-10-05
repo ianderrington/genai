@@ -6,6 +6,7 @@ categories:
   - Training
   - Alignment
 authors: parnian
+coverImage: /images/blog/instruction-tuning.png
 ---
 
 # Instruction Tuning: Teaching Models to Follow Directions

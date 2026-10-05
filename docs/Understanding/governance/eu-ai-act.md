@@ -94,22 +94,26 @@ There are no mandatory conformity assessments or registration requirements for l
 
 ## What You Need to Do Now
 
-**If you are a foundation model provider serving EU users:**
+### If You Are a Foundation Model Provider Serving EU Users
+
 - GPAI documentation requirements are live (August 2025)
 - Establish incident reporting procedures to the European AI Office
 - Red-teaming reports should be in place for systemic-risk models
 
-**If you are deploying a high-risk application:**
-- Start your risk management system and technical documentation now — the December 2027 deadline is closer than it looks for complex systems
+### If You Are Deploying a High-Risk Application
+
+- Start your risk management system and technical documentation now, the December 2027 deadline is closer than it looks for complex systems
 - Map your system against the Annex III categories honestly
 - Begin logging and audit trail infrastructure
 
-**If you are building a general AI product (chatbot, assistant, recommendation system):**
+### If You Are Building a General AI Product (Chatbot, Assistant, Recommendation System)
+
 - Ensure users know they are interacting with AI
 - Label AI-generated content
 - Review your training data for copyright provenance
 
-**If you are uncertain about your risk tier:**
+### If You Are Uncertain About Your Risk Tier
+
 - The European AI Office has published guidance and a self-assessment tool
 - Many law firms and compliance consultancies now offer EU AI Act risk assessments
 - The Act's risk classification guidance is available at [digital-strategy.ec.europa.eu](https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence)

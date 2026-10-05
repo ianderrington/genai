@@ -182,6 +182,7 @@ Current AI Capabilities:
 
 ### Commercial Examples
 
+- [Claude Code](https://claude.com/claude-code) - Anthropic's agentic coding CLI, works directly in the terminal
 - [Cursor](https://www.cursor.com/)
 - [Windsurf](https://www.windsurf.com/)
 - [Aide.dev](https://aide.dev/)

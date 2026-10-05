@@ -1,6 +1,7 @@
 nav:
     - index.md
     - overview
+    - glossary.md
     - data
     - architectures
     - prompting

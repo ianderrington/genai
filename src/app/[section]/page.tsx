@@ -3,14 +3,16 @@ import { getCachedSectionContent, getCachedSections } from "@/lib/content";
 import SafeHTML from "@/components/SafeHTML";
 import type { Metadata, ResolvingMetadata } from "next";
 import { loadConfig } from "@/lib/content/resolver";
+import { humanizeSlug } from "@/lib/content/slugs";
 import FloatingShareButton from "@/components/TrackedFloatingShareButton";
 import { resolveImagePath } from "@/lib/imageUtils";
 import CollectionDisplay from "@/components/CollectionDisplay";
 import { prepareCollectionRenderData } from "@/lib/content/collectionRenderer";
 
-// Force dynamic rendering to avoid SSR issues with client components
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// Content is markdown checked into the repo and only changes on deploy, so
+// ISR with a long revalidate window is safe and avoids re-rendering on every
+// single request (force-dynamic previously meant zero caching).
+export const revalidate = 3600;
 
 // Add type definitions at the top of the file
 interface SectionPageProps {
@@ -62,8 +64,7 @@ export async function generateMetadata(
   const metadataBase = parentMetadata.metadataBase || new URL(site.url);
 
   // Use section name or capitalize the section ID
-  const sectionTitle =
-    sectionInfo.name || section.charAt(0).toUpperCase() + section.slice(1);
+  const sectionTitle = sectionInfo.name || humanizeSlug(section);
 
   // Use root post description or a default
   const description =

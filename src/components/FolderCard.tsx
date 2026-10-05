@@ -8,6 +8,7 @@ import { trackShare } from '@/lib/trackShare';
 import { Post } from '@/lib/content';
 import { DEFAULT_IMAGES } from '@/lib/constants';
 import { markdownToHtml } from '@/lib/content/markdown';
+import { humanizeSlug } from '@/lib/content/slugs';
 
 interface CoverImage {
   url: string;
@@ -28,8 +29,7 @@ interface FolderCardProps {
 
 export default function FolderCard({ item, section, defaultImage, priority = false }: FolderCardProps & { priority?: boolean }) {
   const [excerptHtml, setExcerptHtml] = React.useState<string>('');
-  const folderTitle = item.indexPost?.metadata.title || 
-    item.slug.charAt(0).toUpperCase() + item.slug.slice(1).replace(/-/g, ' ');
+  const folderTitle = item.indexPost?.metadata.title || humanizeSlug(item.slug);
   
   const postCount = item.posts.length;
   const folderExcerpt = item.indexPost?.excerpt || item.indexPost?.metadata.description;

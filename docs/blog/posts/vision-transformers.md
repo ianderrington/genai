@@ -6,6 +6,7 @@ categories:
   - Computer Vision
   - Architecture
 authors: parnian
+coverImage: /images/blog/vision-transformers.png
 ---
 
 # Vision Transformers: Attention Is All You Need for Images

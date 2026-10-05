@@ -8,6 +8,7 @@ import { trackShare } from '@/lib/trackShare';
 import { Post } from '@/lib/content';
 import { FolderItem } from '@/lib/content/collectionUtils';
 import { formatDate } from '@/lib/utils/dates';
+import { humanizeSlug } from '@/lib/content/slugs';
 
 interface FolderListViewProps {
   items: FolderItem[];
@@ -30,8 +31,7 @@ const FolderListView: React.FC<FolderListViewProps> = ({
   return (
     <div className="space-y-3">
       {items.map((item, index) => {
-        const folderTitle = item.indexPost?.metadata.title || 
-          item.slug.charAt(0).toUpperCase() + item.slug.slice(1).replace(/-/g, ' ');
+        const folderTitle = item.indexPost?.metadata.title || humanizeSlug(item.slug);
         
         const postCount = item.posts.length;
         const folderExcerpt = item.indexPost?.excerpt || item.indexPost?.metadata.description;

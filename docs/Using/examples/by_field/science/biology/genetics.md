@@ -1,12 +1,18 @@
-Genetics Language models 
+# Genetics Language Models
 
-[Genetics Language Models](https://arxiv.org/pdf/2311.07621.pdf)
+Language models trained on DNA, RNA, and protein sequences instead of natural-language text. The same transformer architecture that predicts the next word can predict the next base pair or amino acid, letting a model learn the statistical structure of genomes the way an LLM learns the structure of language.
+
+[Genetics Language Models](https://arxiv.org/pdf/2311.07621.pdf) surveys the field.
 
 ### Applications
 
+- Predicting gene function and co-regulation from genomic context, without needing a labeled dataset for every gene.
+- Designing cis-regulatory elements (promoters, enhancers) for biomanufacturing and gene-therapy applications.
+- Modeling protein structure and function jointly with the genomic sequence that encodes it.
 
 ### Targets
 
+Most models in this space operate on one of three sequence types: raw DNA (nucleotide-level), protein sequences (amino-acid-level), or a joint genomic-and-protein representation that links a gene's sequence to what it produces.
 
 ## Research 
 

@@ -6,6 +6,7 @@ categories:
   - Robotics
   - Applications
 authors: parnian
+coverImage: /images/blog/embodied-ai-robotics.png
 ---
 
 # Embodied AI: Language Models Meet Physical World

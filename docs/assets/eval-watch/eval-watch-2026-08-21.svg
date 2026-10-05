@@ -1,0 +1,38 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="freshGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0a0b1a" />
+  <text x="56" y="72" font-size="32" font-weight="700" fill="white">Eval Tooling Comparison</text>
+  <text x="56" y="104" font-size="16" fill="rgba(148,163,184,0.7)">Scored 0-10 from release notes and code diffs - not hands-on testing</text>
+
+    <text x="56" y="195" font-size="20" font-weight="700" fill="white">EleutherAI/lm-evaluation-harness</text>
+    <rect x="320" y="176" width="620" height="24" rx="8" fill="rgba(99,102,241,0.12)" />
+    <rect x="320" y="176" width="452.59999999999997" height="24" rx="8" fill="url(#freshGradient)" />
+    <text x="956" y="195" font-size="20" font-weight="700" fill="#a5b4fc">7.3</text>
+
+    <text x="56" y="265" font-size="20" font-weight="700" fill="white">vibrantlabsai/ragas</text>
+    <rect x="320" y="246" width="620" height="24" rx="8" fill="rgba(99,102,241,0.12)" />
+    <rect x="320" y="246" width="372" height="24" rx="8" fill="url(#freshGradient)" />
+    <text x="956" y="265" font-size="20" font-weight="700" fill="#a5b4fc">6.0</text>
+
+    <text x="56" y="335" font-size="20" font-weight="700" fill="white">promptfoo/promptfoo</text>
+    <rect x="320" y="316" width="620" height="24" rx="8" fill="rgba(99,102,241,0.12)" />
+    <rect x="320" y="316" width="279" height="24" rx="8" fill="url(#freshGradient)" />
+    <text x="956" y="335" font-size="20" font-weight="700" fill="#a5b4fc">4.5</text>
+
+    <text x="56" y="405" font-size="20" font-weight="700" fill="white">confident-ai/deepeval</text>
+    <rect x="320" y="386" width="620" height="24" rx="8" fill="rgba(99,102,241,0.12)" />
+    <rect x="320" y="386" width="266.6" height="24" rx="8" fill="url(#freshGradient)" />
+    <text x="956" y="405" font-size="20" font-weight="700" fill="#a5b4fc">4.3</text>
+
+    <text x="56" y="475" font-size="20" font-weight="700" fill="white">braintrustdata/autoevals</text>
+    <rect x="320" y="456" width="620" height="24" rx="8" fill="rgba(99,102,241,0.12)" />
+    <rect x="320" y="456" width="217" height="24" rx="8" fill="url(#freshGradient)" />
+    <text x="956" y="475" font-size="20" font-weight="700" fill="#a5b4fc">3.5</text>
+  <text x="56" y="598" font-size="16" fill="rgba(148,163,184,0.6)">managen.ai</text>
+  <text x="1144" y="598" font-size="16" fill="rgba(148,163,184,0.6)" text-anchor="end">Highlighted bars = updated this cycle</text>
+</svg>

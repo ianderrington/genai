@@ -1,5 +1,6 @@
+## Comics
 
-https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory
+- [AI Comic Factory](https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory) — generates full comic strips (panels, art, and dialogue) from a text prompt.
 
 ## Writing
 

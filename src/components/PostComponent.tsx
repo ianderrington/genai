@@ -309,10 +309,18 @@ export default function PostComponent({ post }: PostComponentProps) {
       : coverImage
     : post.metadata.image;
 
+  // Fall back to a section-specific default (e.g. the generic reference
+  // cover for "understanding"/"using") rather than always DEFAULT_IMAGES.post
+  // — the plain hardcoded default previously showed a placeholder image
+  // whose baked-in text literally reads "Blog Post" on every non-blog page.
+  const sectionDefaultImage =
+    DEFAULT_IMAGES.section[section as keyof typeof DEFAULT_IMAGES.section] ??
+    DEFAULT_IMAGES.post;
+
   const resolvedImageUrl = MediaResolver.resolveUrl(
     imageUrl,
     mediaContext,
-    DEFAULT_IMAGES.post,
+    sectionDefaultImage,
   );
 
   // Then handle media if it exists

@@ -3,6 +3,9 @@ nav:
     - mcp-protocol.md
     - benchmarks.md
     - frameworks.md
+    - harnesses.md
+    - communication-layers.md
+    - voice-realtime-apis.md
     - a2a-protocol.md
     - computer-use.md
     - agentic-rag.md

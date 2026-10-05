@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import SafeImage from './SafeImage';
 import { FolderItem } from '@/lib/content/collectionUtils';
+import { humanizeSlug } from '@/lib/content/slugs';
 
 interface FolderIconViewProps {
   items: FolderItem[];
@@ -26,8 +27,7 @@ const FolderIconView: React.FC<FolderIconViewProps> = ({
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
       {items.map((item, index) => {
-        const folderTitle = item.indexPost?.metadata.title || 
-          item.slug.charAt(0).toUpperCase() + item.slug.slice(1).replace(/-/g, ' ');
+        const folderTitle = item.indexPost?.metadata.title || humanizeSlug(item.slug);
         
         const postCount = item.posts.length;
         const coverImage = item.indexPost?.metadata.coverImage;

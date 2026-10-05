@@ -3,6 +3,7 @@ import { logger } from '../logger';
 import { cache } from 'react';
 import NodeCache from 'node-cache';
 import fs from 'fs';
+import { humanizeSlug } from './slugs';
 
 // Re-export types
 export type { Post, ChatSegmentData } from './types';
@@ -222,13 +223,21 @@ export async function getSections(): Promise<{ id: string; name: string }[]> {
       }
     });
 
-    // Convert to array of section objects
+    // Convert to array of section objects. Prefer the section's own index
+    // page title (real content, e.g. "About ManaGen AI") over deriving a
+    // name from the raw slug — the slug-derived fallback only splits on
+    // hyphens, so an index page with no title and a one-word slug like
+    // "managenai" rendered as the literal, unsplit slug ("Managenai") in
+    // every breadcrumb and nav entry for that section.
     return Array.from(sectionIds)
       .filter(id => id) // Filter out empty strings
-      .map(id => ({
-        id,
-        name: id.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
-      }));
+      .map(id => {
+        const indexPost = allContent.find(post => post.isIndex && post.slug === id);
+        return {
+          id,
+          name: indexPost?.metadata?.title || humanizeSlug(id),
+        };
+      });
   } catch (error) {
     logger.error(`Error getting sections: ${error}`);
     return [];

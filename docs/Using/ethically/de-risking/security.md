@@ -10,6 +10,6 @@ Security for LLMs involves the protection of proprietary information, or persona
     This means that while those high-dimensional embedding vectors can be used to reconstructed the text that led to them.
     This includes important personal information (as in from a dataset of clinical notes).
 
-## To Integrate
+### Further Reading
 
--[Breaking Down the Defenses: A Comparative Survey of Attacks on Large Language Models](https://arxiv.org/pdf/2403.04786.pdf)
+- [Breaking Down the Defenses: A Comparative Survey of Attacks on Large Language Models](https://arxiv.org/pdf/2403.04786.pdf)

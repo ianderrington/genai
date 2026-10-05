@@ -1,5 +1,6 @@
 ## Content Framing
-Content framing involves the alteration of content in a manner that may be more undrstood by an individual. while perhaps ethically debatable, people too use re-framing techniques to cater their presentation of information to different audiences. 
+Content framing involves altering content so it's more easily understood by a given individual or audience. While ethically debatable in some applications, people also use re-framing techniques legitimately, tailoring how the same information is presented to different audiences.
 
-??? abstract "[FoxVox](https://github.com/PalisadeResearch/foxvox) alters online content with a plugin to present information in different lights" foxvox
+??? abstract "[FoxVox](https://github.com/PalisadeResearch/foxvox)"
+    A browser plugin that alters online content in place, letting you see the same underlying information presented in a different framing or tone.
 

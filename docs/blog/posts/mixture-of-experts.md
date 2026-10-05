@@ -6,6 +6,7 @@ categories:
   - Architecture
   - Efficiency
 authors: parnian
+coverImage: /images/blog/mixture-of-experts.png
 ---
 
 # Mixture of Experts: Scaling Beyond Dense Models

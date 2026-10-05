@@ -63,5 +63,5 @@ The third major version of the spec added mandatory OAuth for authentication, st
 
 - [Agent Components: Actions and Tools](./components/actions_and_tools.md) — how tools are used inside the agent loop
 - [Agent Infrastructure](./building_agents/agent_infrastructure.md) — MCP alongside A2A and other infrastructure standards
-- [Building Agents: Libraries and Tools](./building_agents/libraries_and_tools.md) — frameworks that support MCP natively
+- [Building Agents: Libraries and Tools](../building_applications/building_agents/libraries_and_tools.md) — frameworks that support MCP natively
 - [Official MCP Specification](https://spec.modelcontextprotocol.io) — the full protocol reference

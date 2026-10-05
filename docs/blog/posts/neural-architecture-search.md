@@ -6,6 +6,7 @@ categories:
   - Architecture
   - AutoML
 authors: parnian
+coverImage: /images/blog/neural-architecture-search.png
 ---
 
 # Neural Architecture Search: AI That Designs AI

@@ -6,6 +6,7 @@ categories:
   - Multimodal
   - Architecture
 authors: parnian
+coverImage: /images/blog/multimodal-fusion.png
 ---
 
 # Multimodal Fusion: Unifying Vision, Language, and Beyond

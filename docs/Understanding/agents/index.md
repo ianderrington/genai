@@ -9,7 +9,7 @@ bullets:
 
 ## What are AI Agents?
 
-Agents in Gen()AI have access to 'tools' to provide them 'agency' beyond the ability to act, such as in the generation of texts, or controls of other functions or variables. Similar to bots, or other computerized automata, they may have the ability to run discretely, separately from chat interfaces, though it may be preferable and perhaps legally required to have people-in-the-loop to correct, or stop any processes the agent's are pursuing. components.
+An AI agent is a model given **tools** (functions it can call — search the web, run code, edit a file, send a message) and **agency** (the ability to decide, on its own, which tool to use and when). That's the core difference from a plain chatbot: a chatbot only generates text back to you; an agent can act on your systems and the world. Because an agent can take real actions, many production deployments keep a human in the loop, someone who reviews or can stop what the agent is doing, and in some regulated domains this human oversight is a legal requirement, not just good practice.
 
 ### The 2025 agent landscape
 
@@ -30,10 +30,10 @@ By 2025, AI agents moved from academic curiosity to production reality. Six majo
     Framework choice has deep architectural implications. Teams that pick the wrong framework for their coordination model face expensive rewrites. Before selecting, map your coordination pattern first.
 
     !!! info "Source"
-        [Agentic Frameworks Landscape Consolidation 2025](https://lilianweng.github.io/posts/2023-06-23-agent) — see also the research landscape in `families/genai/.supernal/docs/ai-landscape-research-2025-2026.md` §5.5
+        Each framework's own documentation and public adoption data, as of 2025: [LangGraph](https://langchain-ai.github.io/langgraph/), [CrewAI](https://docs.crewai.com/), [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/), [Google ADK](https://google.github.io/adk-docs/), [AutoGen](https://microsoft.github.io/autogen/), [Anthropic Agent SDK](https://docs.anthropic.com/en/api/agent-sdk).
 
 !!! important "What are agents?"
-    An computer system that can execute in the general loop 
+    A computer system that can execute in the general loop 
     ```mermaid
     graph LR
         A((Observe<br> Environment)):::observe --> B[Evaluate]:::evaluate
@@ -41,10 +41,10 @@ By 2025, AI agents moved from academic curiosity to production reality. Six majo
         C --> D([Act]):::act
         D --> A
         
-        classDef observe fill:#90EE90,stroke:#006400
-        classDef evaluate fill:#87CEEB,stroke:#4682B4
-        classDef propose fill:#FFB6C1,stroke:#CD5C5C
-        classDef act fill:#DDA0DD,stroke:#8B008B
+        classDef observe fill:#90EE90,stroke:#006400,color:#111
+        classDef evaluate fill:#87CEEB,stroke:#4682B4,color:#111
+        classDef propose fill:#FFB6C1,stroke:#CD5C5C,color:#111
+        classDef act fill:#DDA0DD,stroke:#8B008B,color:#111
     ```
 
 _What makes an AI Agent?_ 
@@ -76,10 +76,10 @@ LLMs at are at the core of the agent's information evaluation, but they connect 
             LLM --> Out(("`**Out**`")):::act
         end
         
-        classDef observe fill:#90EE90,stroke:#006400
-        classDef evaluate fill:#87CEEB,stroke:#4682B4
-        classDef propose fill:#FFB6C1,stroke:#CD5C5C
-        classDef act fill:#DDA0DD,stroke:#8B008B
+        classDef observe fill:#90EE90,stroke:#006400,color:#111
+        classDef evaluate fill:#87CEEB,stroke:#4682B4,color:#111
+        classDef propose fill:#FFB6C1,stroke:#CD5C5C,color:#111
+        classDef act fill:#DDA0DD,stroke:#8B008B,color:#111
         style Agent fill:#F0F8FF,stroke:#4682B4
         style AgentComponents fill:#FFF0F5,stroke:#CD5C5C
         style Environment fill:#F0FFF0,stroke:#228B22
@@ -310,7 +310,7 @@ It is possible that limitations fundamental to static agents are not going to be
 
 !!! important "![GitHub Repo stars](https://badgen.net/github/stars/WooooDyy/LLM-Agent-Paper-List) [LLM-Agent-Papers](https://github.com/WooooDyy/LLM-Agent-Paper-List)"
 
-??? note "[The Rise and Potential of Large Language Model Based Agents:A Survey](https://arxiv.org/pdf/2309.07864.pdf) Providess a comprehensive overview of thoughtful ways of considering LLMs."
+??? note "[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/pdf/2309.07864.pdf) provides a comprehensive overview of thoughtful ways of considering LLMs."
 
 ??? tip "[Agents overview by Lilian Weng](https://lilianweng.github.io/posts/2023-06-23-agent)"
      As usual, a splendid post by Lilian Weng

@@ -10,11 +10,10 @@ description: Useful resources for learning about GenAI
 
 
 - [Lex Fridman](https://www.youtube.com/@lexfridman)
-- [David Shapiro](https://www.youtube.com/@DavidShapiroAutomator)
-- [AI Explained](https://www.youtube.com/@ai-explained-)
+- [David Shapiro](https://www.youtube.com/@DaveShap)
+- [AI Explained](https://www.youtube.com/@AIExplained)
 - [Yannic Kilcher](https://www.youtube.com/@YannicKilcher)
 
-
-### Expansive Datasets
+### Reference Sites
 
 - [Prompting Guide](https://www.promptingguide.ai/)

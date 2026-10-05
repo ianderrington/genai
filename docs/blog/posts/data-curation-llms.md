@@ -6,6 +6,7 @@ categories:
   - Training
   - Data
 authors: parnian
+coverImage: /images/blog/data-curation-llms.png
 ---
 
 # Data Curation: The Hidden Art Behind Great LLMs
